@@ -10,6 +10,16 @@ analytics: true
 design:
   $ref: ./config/design.yaml
 
+# Authentication — needed for the admin console (/_admin) and the design-system
+# console on a dev server. No public sign-up: accounts are created by an admin
+# (first one via AUTH_ADMIN_EMAIL / AUTH_ADMIN_PASSWORD in .env, or `sovrium admin create`).
+# Inert on the static GitHub Pages build.
+auth:
+  strategies:
+    - type: emailAndPassword
+  allowSignUp: false
+  defaultRole: member
+
 components:
   - $ref: ./config/components/site-footer.yaml
   - $ref: ./config/components/event-date-row.yaml
