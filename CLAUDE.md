@@ -1,7 +1,7 @@
 # mercipourtonnon
 
 A [Sovrium](https://sovrium.com) application — a self-hosted, **configuration-driven**
-platform. The entire app (data model, auth, pages, theme, i18n) is declared in one or more
+platform. The entire app (data model, auth, pages, design, i18n) is declared in one or more
 YAML config files (a single `app.yaml` to start, split via `$ref` as the app grows) and
 served by the `sovrium` runtime. There is no hand-written
 server or UI code to maintain.
@@ -13,10 +13,17 @@ server or UI code to maintain.
 - **Validate before running:** `sovrium validate app.yaml` checks the config against the
   schema and reports errors with paths. Always validate after editing.
 - **Start with the minimum, grow as needed.** The schema supports progressive complexity —
-  add tables, pages, auth, and theme incrementally.
-- **The authoritative contract is the schema itself:** run `sovrium schema` to print the
-  full JSON Schema (Draft-07) for `app.yaml`. When unsure about a property or field type,
-  consult the schema rather than guessing.
+  add tables, pages, auth, and design incrementally.
+- **The manual ships inside the binary:** `sovrium docs <section>/<slug>` reads an article,
+  `sovrium docs search <topic>` finds one, `sovrium docs config <path>` documents a single
+  config key (e.g. `sovrium docs config design.typeScale.families`). It is offline and
+  version-exact — consult it rather than guessing. `sovrium schema` prints the full JSON
+  Schema (Draft-07) as a fallback.
+- **The brand charter lives in `design`, not in a page.** `DESIGN.md` at the repo root is
+  the agent-readable export (`sovrium design-system app.yaml --output DESIGN.md`); read it
+  before writing any page so tokens, voice and imagery rules are respected. Regenerate it
+  whenever `config/design.yaml` changes. On a dev server the same charter renders at
+  `/_admin/design-system` (admin login required; not part of the static build).
 
 ## Commands
 
@@ -26,6 +33,9 @@ sovrium start app.yaml --watch # Hot-reload on config changes
 sovrium validate app.yaml      # Validate the config against the schema
 sovrium schema                 # Print the full JSON Schema for app.yaml
 sovrium build app.yaml         # Build static output
+sovrium docs search <topic>    # Search the built-in manual (offline)
+sovrium docs config <path>     # Document one config key, e.g. design.colorRoles
+sovrium design-system app.yaml --output DESIGN.md  # Export the brand charter
 ```
 
 ## Scaling the config
@@ -40,7 +50,7 @@ has more than one member; don't pre-split a single-table or single-page app.
 
 ```
 app.yaml                              # entry point — stays at the project root
-config/theme.yaml                     # singleton — all theming
+config/design.yaml                    # singleton — design tokens + brand charter
 config/auth.yaml                      # singleton — auth config
 config/i18n.yaml                      # singleton — all i18n strings
 config/analytics.yaml                 # singleton — analytics
@@ -57,7 +67,7 @@ config/agents/support-bot.yaml        # one file per AI agent
 config/actions/send-slack.yaml        # one file per reusable action template
 ```
 
-In `app.yaml`: `theme: { $ref: './config/theme.yaml' }`. Collections list
+In `app.yaml`: `design: { $ref: './config/design.yaml' }`. Collections list
 their entities: `tables: [{ $ref: './config/tables/contacts.yaml' }, …]`.
 Paths resolve relative to the file containing the `$ref`.
 
@@ -66,7 +76,7 @@ Paths resolve relative to the file containing the `$ref`.
 - **Collections** (`tables`, `pages`, `forms`, `components`, `connections`,
   `actions`, `automations`, `agents`, `buckets`, `env`) → one file per entity
   under `config/<collection>/`.
-- **Singletons** (`auth`, `theme`, `analytics`, `languages`, `scripts`) →
+- **Singletons** (`auth`, `design`, `analytics`, `languages`, `scripts`) →
   one file per singleton at `config/<singleton>.yaml`. Never split
   these by sub-key.
 - **Scalars** (`name`, `version`, `description`) → stay inline in `app.yaml`.
@@ -87,8 +97,8 @@ type-checking.
 
 ## The `app.yaml` schema
 
-Root properties include: `name`, `description`, `tables`, `auth`, `pages`, `theme`,
-`i18n`, `analytics`, `connections`, and `agents`. Highlights:
+Root properties include: `name`, `description`, `badge`, `tables`, `auth`, `pages`,
+`design`, `i18n`, `analytics`, `connections`, and `agents`. Highlights:
 
 - **`tables`** — your data model. Each table has `fields`; field `type` spans many
   categories (text, number, date/time, select, relation, attachment, rich-text, code,
@@ -97,7 +107,11 @@ Root properties include: `name`, `description`, `tables`, `auth`, `pages`, `them
   (`admin`, `member`, `viewer`) and field-level permissions.
 - **`pages`** — composed from many built-in component types (forms, tables, kanban,
   calendar, charts, rich content, …). Server-rendered.
-- **`theme`** — colors, fonts, spacing, radii, shadows, animations, breakpoints.
+- **`design`** — tokens (`colors`, `darkColors`, `typeScale.families` / `typeScale.steps`,
+  `spacing`, `radius`, `elevation`, `motion`, `breakpoints`) plus the brand charter
+  (`principles`, `logo`, `colorRoles`, `voice`, `imagery`). There is no `theme` key since
+  Sovrium 0.27. Docs: `sovrium docs theming/design`.
+- **`badge`** — `false` hides the "Built with Sovrium" pill (set in this app).
 - **`i18n`** — multi-language content (RTL supported).
 
 ## Runtime data
@@ -110,6 +124,15 @@ in `app.yaml`.
 
 ## Documentation
 
-- Docs: https://sovrium.com/docs
-- LLM-oriented overview: https://sovrium.com/llms.txt
-- Local schema reference: `sovrium schema`
+The manual is embedded in the `sovrium` binary — offline and exact for the installed
+version. Prefer it over the website.
+
+- `sovrium docs <section>/<slug>` — read an article (e.g. `sovrium docs theming/design`,
+  `sovrium docs theming/design-type-scale`, `sovrium docs app-schema/app-metadata`).
+- `sovrium docs search <topic>` — find the article for a topic.
+- `sovrium docs config <path>` — document one config key (e.g. `design.colorRoles`).
+- `sovrium schema` — full JSON Schema (Draft-07), as a fallback.
+- `DESIGN.md` — this app's brand charter, exported with
+  `sovrium design-system app.yaml --output DESIGN.md`; also rendered at
+  `/_admin/design-system` on a dev server.
+- Web: https://sovrium.com/docs (may describe a different version than the one installed).

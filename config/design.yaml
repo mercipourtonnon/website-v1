@@ -1,0 +1,136 @@
+# Design system — tokens + brand charter (replaces the former /charte page).
+# Rendered by /_admin/design-system and exported by `sovrium design-system app.yaml`.
+# Color names match the original Tailwind theme so classNames like
+# bg-pourpre-light or text-bleu-fonce carry over unchanged.
+baseline: extend
+colorScheme: light
+
+colors:
+  pourpre: '#F5004F'
+  pourpre-hover: '#D10042'
+  pourpre-light: '#FFF0F5'
+  pourpre-lighter: '#FFE0EA'
+
+  orange: '#FFAF00'
+  orange-hover: '#E69E00'
+  orange-light: '#FFF8E6'
+  orange-lighter: '#FFF0D1'
+  orange-vif: '#FF7000'
+  orange-vif-light: '#FFF4E6'
+
+  mauve: '#7B01FE'
+  mauve-hover: '#6A01DB'
+  mauve-light: '#F3E6FF'
+  mauve-lighter: '#E6D1FF'
+
+  cyan: '#12A19D'
+  cyan-hover: '#0F8A87'
+  cyan-light: '#E6F9F8'
+  cyan-lighter: '#D1F2F0'
+
+  # Bleu foncé — remplace le noir pour plus de cohérence avec la palette
+  bleu-fonce: '#130077'
+  bleu-fonce-light: '#E6E0FF'
+  # Alpha variants (the renderer's class merge drops `/50`-style opacity
+  # modifiers on link components, so they get dedicated tokens)
+  bleu-fonce-50: '#13007780'
+  bleu-fonce-70: '#130077B3'
+
+typeScale:
+  families:
+    title:
+      family: Bely Display
+      fallback: Archivo Black, cursive
+      transform: lowercase
+      letterSpacing: 0.05em
+      # Local stylesheet carrying the @font-face rules (and global site styles).
+      # Rendered as a <link rel="stylesheet"> on every page.
+      url: /assets/site.css
+    body:
+      family: Neue Machina
+      fallback: Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif
+      # The three @font-face weights (300 / 400 / 800) are declared in site.css.
+  # Hiérarchie des titres / corps de texte
+  steps:
+    h1: { size: '4.5rem', lineHeight: 1.1, font: title } # 72px
+    h2: { size: '3rem', lineHeight: 1.15, font: title } # 48px
+    h3: { size: '2.25rem', lineHeight: 1.2, font: title } # 36px
+    body: { size: '1.125rem', lineHeight: 1.7, weight: 400, font: body } # 16–18px, interlignage 1.6–1.8
+    bodySmall: { size: '0.9375rem', lineHeight: 1.6, weight: 300, font: body } # "texte léger" 14–16px
+    caption: { size: '0.875rem', lineHeight: 1.5, weight: 300, font: body } # légendes, métadonnées
+
+# Nos principes (ordonnés)
+principles:
+  - "Authenticité — design sincère et transparent, pas de surenchère visuelle ni de promesses exagérées."
+  - "Respect et accessibilité — hiérarchie claire, contrastes élevés, espaces généreux pour tou·tes."
+  - "Dialogue et ouverture — un ton chaleureux qui invite à l'échange plutôt qu'à la performance."
+  - "Simplicité engagée — épuré sans être froid, chaleureux sans être infantilisant ; associatif assumé, loin des codes startup et corporate."
+
+# Logo & identité
+logo:
+  src: /logo.svg
+  alt: Merci pour ton non
+  misuse:
+    - "Ne jamais recolorer le logo : chaque mot garde sa couleur (pourpre merci, orange pour, mauve ton, cyan non)."
+    - Ne jamais l'étirer, le tourner ou lui ajouter des effets.
+    - Le poser uniquement sur fond blanc, fond coloré clair ou fond sombre.
+  # clearSpace / minWidth omitted: the charte never stated them (do not invent).
+
+# Règles d'usage des couleurs — keys MUST be declared in `colors`
+colorRoles:
+  pourpre:
+    usage: "Émotion, authenticité, découverte. Témoignages, sections émotionnelles. Jamais en fond de grande section : utiliser pourpre-light."
+    pairsWith: pourpre-light
+  orange:
+    usage: "Action, engagement, chaleur. Boutons d'inscription, CTAs principaux, liens actifs. Jamais pour une action contradictoire (annuler ET confirmer)."
+    pairsWith: orange-light
+  orange-vif:
+    usage: "Variante chaude, en opposition au violet. Accent ponctuel uniquement."
+    pairsWith: orange-vif-light
+  mauve:
+    usage: "Exploration, apprentissage, créativité. Sections pédagogiques, titres secondaires, invitations à la réflexion."
+    pairsWith: mauve-light
+  cyan:
+    usage: "Validation, calme, ressources. Confirmations, ressources, sections factuelles. Pas en petit texte sur fond blanc (contraste)."
+    pairsWith: cyan-light
+  bleu-fonce:
+    usage: "Texte principal et titres ; remplace le noir partout."
+    pairsWith: pourpre-light
+
+# Tonalité & voix
+voice:
+  pronoun: tu
+  personality:
+    - Bienveillant mais pas moralisateur.
+    - Pédagogue mais pas condescendant.
+    - Engagé mais pas militant.
+    - Accessible mais pas simpliste.
+  prefer:
+    - "Tutoyer systématiquement et utiliser l'écriture inclusive (·e, ·es)."
+    - "Vocabulaire : consentement, limites, authenticité, écoute, co-construction ; poser ses limites, accueillir le non, explorer, construire ensemble."
+    - "Formuler comme une invitation : « Rejoins-nous pour explorer… », « Cet atelier t'invite à… », « Ensemble, on construit… »."
+    - Privilégier la clarté à l'effet de style.
+  avoid:
+    - "Jargon corporate : solution, optimisation, performance, ROI, levier."
+    - "Ton marketing : révolutionnaire, unique, certifiant, garantie, « maximisez votre potentiel », « devenez un expert »."
+    - "Vocabulaire thérapeutique : guérison, trauma, diagnostic."
+    - Vouvoiement, ton moralisateur, promesses de résultat.
+
+# Photographie & visuels + Motifs
+imagery:
+  iconSet: lucide
+  principles:
+    - Des photos de vrais ateliers, jamais d'illustrations génériques ; mieux vaut attendre une vraie photo qu'un visuel qui ne nous représente pas.
+    - "Les couleurs de marque sont réservées aux éléments stratégiques : logo, titres, boutons, icônes."
+    - "Hiérarchie : icônes colorées pour les concepts et actions, photos authentiques pour les personnes."
+  photography:
+    - "Tout visuel est consenti : accord explicite avant d'utiliser une photo de personne identifiable."
+    - Moments spontanés ; mains, gestes, interactions non verbales, expressions sincères.
+    - Lumière naturelle, tons chauds ; proximité, cercles, petits groupes.
+    - Représentation variée des âges, origines, corps et genres.
+    - "À éviter : stock lisse, esthétique corporate, postures figées, groupes homogènes, éclairage dur."
+  patterns:
+    - "Icônes Lucide (trait 2px, 16/24/32–48px) dans les 4 couleurs de marque, pour l'humain et les émotions (heart, ear, shield, hands) — jamais d'emojis, pas de look SaaS."
+    - Cercles qui se chevauchent (rencontres, co-construction) en fond subtil.
+    - Lignes ondulées (fluidité, respect des limites) en filigrane très léger.
+    - "Formes géométriques colorées et dégradés clairs (pourpre-light, orange-light, mauve-light, cyan-light) comme fonds ; jamais les teintes vives en fond de section."

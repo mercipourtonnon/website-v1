@@ -1,11 +1,14 @@
 name: mercipourtonnon
 description: Ateliers de consentement à prix libre à Strasbourg
 
+# Hide the "Built with Sovrium" pill rendered bottom-right on every page
+badge: false
+
 # Built-in privacy-friendly analytics (server-side; inert on static hosting)
 analytics: true
 
-theme:
-  $ref: ./config/theme.yaml
+design:
+  $ref: ./config/design.yaml
 
 components:
   - $ref: ./config/components/site-footer.yaml
@@ -19,4 +22,3 @@ pages:
   - $ref: ./config/pages/home.yaml
   - $ref: ./config/pages/mentions-legales.yaml
   - $ref: ./config/pages/newsletter.yaml
-  - $ref: ./config/pages/charte.yaml

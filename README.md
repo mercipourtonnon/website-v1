@@ -3,7 +3,7 @@
 Site de l'association [Merci pour ton non](https://mercipourtonnon.fr) —
 ateliers de consentement à prix libre à Strasbourg.
 
-Le site est une application [Sovrium](https://sovrium.com) : tout (pages, thème,
+Le site est une application [Sovrium](https://sovrium.com) : tout (pages, design,
 SEO) est déclaré dans `app.yaml` + `config/`, sans code serveur ni UI à
 maintenir. Les ressources statiques (polices, images, scripts d'intégration
 Brevo/Billetweb) vivent dans `public/`.
@@ -13,6 +13,8 @@ Brevo/Billetweb) vivent dans `public/`.
 ```bash
 sovrium start app.yaml --watch   # serveur de dev avec hot-reload
 sovrium validate app.yaml        # valider la configuration
+sovrium docs search <sujet>      # manuel intégré au binaire (hors ligne)
+sovrium design-system app.yaml   # charte graphique (tokens, principes, voix) → DESIGN.md
 ```
 
 ## Build statique (GitHub Pages)
