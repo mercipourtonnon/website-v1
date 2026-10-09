@@ -16,13 +16,13 @@ sitemap:
 meta:
   lang: fr-FR
   title: Atelier consentement, $record.date_label
-  description: Atelier de consentement de 3h à $record.venue_city, $record.date_label à $record.time_label. Prix libre, 15 places. Apprends à poser tes limites.
+  description: Atelier de consentement de 3h à $record.venue_city, $record.date_label à $record.time_label. Gratuit, don libre, 15 places. Apprends à poser tes limites.
   robots: index, follow
   canonical: https://mercipourtonnon.fr/ateliers/$record.slug
   openGraph:
     type: website
     title: Atelier de consentement, $record.date_label
-    description: 3h pour explorer le consentement à $record.venue_city, $record.date_label à $record.time_label. Prix libre.
+    description: 3h pour explorer le consentement à $record.venue_city, $record.date_label à $record.time_label. Gratuit — don libre pour soutenir l'association.
     url: https://mercipourtonnon.fr/ateliers/$record.slug
     image: https://mercipourtonnon.fr/social.png
     imageAlt: Atelier sur le consentement - Merci pour ton non
@@ -36,7 +36,7 @@ meta:
       '@context': https://schema.org
       '@type': EducationEvent
       name: Atelier de consentement - Niveau 1 - $record.date_label à $record.time_label
-      description: Un atelier de 3h pour explorer le consentement dans un cadre bienveillant et participatif. Apprends à dire non, à poser tes limites et à construire des relations plus authentiques. Prix libre.
+      description: Un atelier de 3h pour explorer le consentement dans un cadre bienveillant et participatif. Apprends à dire non, à poser tes limites et à construire des relations plus authentiques. Gratuit — don libre pour soutenir l'association.
       url: https://mercipourtonnon.fr/ateliers/$record.slug
       startDate: $record.starts_at
       endDate: $record.ends_at
@@ -73,7 +73,7 @@ meta:
         priceCurrency: EUR
         availability: https://schema.org/InStock
         url: $record.booking_url
-        description: Prix libre - personne n'est refusé·e par manque d'argent
+        description: Gratuit — don libre pour soutenir l'association
   favicons:
     icon: /favicon/favicon-32x32.png
     appleTouchIcon: /favicon/apple-touch-icon.png
@@ -207,8 +207,8 @@ components:
                       - type: container
                         children:
                           - { type: text, element: p, props: { className: text-sm text-gray-600 }, content: Participation }
-                          - { type: text, element: p, props: { className: font-bold text-bleu-fonce }, content: 'Prix libre, $record.capacity places' }
-                          - { type: text, element: p, props: { className: text-sm text-gray-600 }, content: Tu donnes ce que tu veux et ce que tu peux. Personne n'est refusé·e par manque d'argent. }
+                          - { type: text, element: p, props: { className: font-bold text-bleu-fonce }, content: 'Gratuit, $record.capacity places' }
+                          - { type: text, element: p, props: { className: text-sm text-gray-600 }, content: Personne ne paie pour participer. Un don libre est possible pour soutenir l'association. }
 
               - type: container
                 props:

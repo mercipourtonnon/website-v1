@@ -37,7 +37,7 @@ children:
             element: p
             props:
               className: type-small text-bleu-fonce-70 max-w-sm
-            content: On anime des ateliers de consentement à prix libre à Strasbourg. En 3h, on apprend à poser ses limites, à dire non et à accueillir celui des autres — dans un cadre bienveillant, ouvert à tou·te·s.
+            content: On anime des ateliers de consentement gratuits à Strasbourg. En 3h, on apprend à poser ses limites, à dire non et à accueillir celui des autres — dans un cadre bienveillant, ouvert à tou·te·s.
           - type: link
             props:
               href: mailto:mercipourtonnon@gmail.com

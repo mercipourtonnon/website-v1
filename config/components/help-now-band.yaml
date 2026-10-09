@@ -1,0 +1,118 @@
+# "Besoin d'aide maintenant ?" band — the orientation block the BPS asks for on
+# every surface that talks about the workshop (review of 2026-10-09). No vars:
+# the numbers are national and the copy is the same everywhere. Placed at the
+# end of /nos-ateliers#cadre and at the top of /ressources. Modelled on the
+# `bg-orange-light rounded-media` CTA band of /notre-mission#agir, in the cyan
+# accent (ressources, calme) with a life-buoy icon. Two columns from `lg` only:
+# at 768 px the 7/12 list column is too narrow for the long tchat row. Full
+# class tokens only.
+name: help-now-band
+type: container
+element: aside
+props:
+  aria-labelledby: help-now-title
+  className: max-w-7xl mx-auto bg-cyan-light border border-cyan-lighter rounded-media p-8 md:p-12 grid lg:grid-cols-12 gap-8 items-start
+children:
+  - type: container
+    props:
+      className: lg:col-span-5 flex flex-col gap-4
+    children:
+      - type: container
+        props:
+          className: w-12 h-12 rounded-pill bg-white flex items-center justify-center
+        children:
+          - type: icon
+            props: { name: life-buoy, size: 24, strokeWidth: 2, className: text-cyan-ink, aria-hidden: 'true' }
+      - type: text
+        element: h2
+        props:
+          id: help-now-title
+          className: type-section text-bleu-fonce
+        content: besoin d'aide maintenant ?
+      - type: text
+        element: p
+        props:
+          className: type-lead text-bleu-fonce
+        content: "Nos ateliers ne sont pas un lieu d'accompagnement. Si tu vis ou as vécu des violences, ou si tu t'inquiètes pour quelqu'un, ces services sont là — gratuits, anonymes."
+  - type: container
+    props:
+      className: lg:col-span-7 flex flex-col gap-4
+    children:
+      - type: container
+        element: div
+        props:
+          role: list
+          className: flex flex-col gap-3 text-bleu-fonce
+        children:
+          - type: container
+            element: div
+            props: { role: listitem, className: flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-1 }
+            children:
+              - type: link
+                props:
+                  href: tel:3919
+                  className: title-font text-h4 text-cyan-ink underline decoration-cyan decoration-2 underline-offset-4 shrink-0
+                content: '3919'
+              - type: text
+                element: span
+                props: { className: type-small text-bleu-fonce-70 }
+                content: Violences Femmes Info, 24h/24, 7j/7
+          - type: container
+            element: div
+            props: { role: listitem, className: flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-1 }
+            children:
+              - type: link
+                props:
+                  href: tel:0800059595
+                  className: title-font text-h4 text-cyan-ink underline decoration-cyan decoration-2 underline-offset-4 shrink-0
+                content: 0 800 05 95 95
+              - type: text
+                element: span
+                props: { className: type-small text-bleu-fonce-70 }
+                content: Viols Femmes Informations (Collectif féministe contre le viol), lun.–ven. 10h–19h
+          - type: container
+            element: div
+            props: { role: listitem, className: flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-1 }
+            children:
+              - type: link
+                props:
+                  href: tel:17
+                  className: title-font text-h4 text-cyan-ink underline decoration-cyan decoration-2 underline-offset-4 shrink-0
+                content: '17'
+              - type: text
+                element: span
+                props: { className: type-small text-bleu-fonce-70 }
+                content: police ou gendarmerie, en cas d'urgence
+          - type: container
+            element: div
+            props: { role: listitem, className: flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-1 }
+            children:
+              - type: link
+                props:
+                  href: https://arretonslesviolences.gouv.fr/besoin-d-aide/violences-sexuelles
+                  target: _blank
+                  rel: noopener noreferrer
+                  className: font-bold text-cyan-ink underline decoration-cyan decoration-2 underline-offset-4 break-all sm:break-normal
+                content: arretonslesviolences.gouv.fr
+              - type: text
+                element: span
+                props: { className: type-small text-bleu-fonce-70 }
+                content: tchat 24h/24 avec des policier·es et gendarmes formé·es
+          - type: container
+            element: div
+            props: { role: listitem, className: flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-1 }
+            children:
+              - type: link
+                props:
+                  href: tel:0800235236
+                  className: title-font text-h4 text-cyan-ink underline decoration-cyan decoration-2 underline-offset-4 shrink-0
+                content: 0 800 235 236
+              - type: text
+                element: span
+                props: { className: type-small text-bleu-fonce-70 }
+                content: Fil Santé Jeunes, 12–25 ans
+      - type: text
+        element: p
+        props:
+          className: type-caption text-bleu-fonce-70
+        content: En atelier, on t'oriente aussi vers des structures spécialisées (CIDFF, Solidarité Femmes 67).

@@ -1,6 +1,7 @@
 # /nos-ateliers — everything about the Niveau 1 workshop: what it is, who it
 # is for, the programme (with the two techniques moved from /le-consentement),
-# the practical facts, testimonials, FAQ and the upcoming dates (#events).
+# the practical facts, our frame (#cadre, with the help band), testimonials,
+# FAQ and the upcoming dates (#events).
 # Split out of the one-page home (review of 2026-10-09). The section ids are
 # the home's old anchors, so /nos-ateliers#programme, #faq, #events… work.
 name: nos-ateliers
@@ -11,13 +12,13 @@ sitemap:
 meta:
   lang: fr-FR
   title: "Atelier de consentement à Strasbourg - Merci pour ton non"
-  description: "Atelier de consentement à prix libre à Strasbourg : 3h pour apprendre à dire non et poser ses limites. Programme, infos pratiques, FAQ et prochaines dates."
+  description: "Atelier de consentement gratuit à Strasbourg : 3h pour apprendre à dire non et poser ses limites. Programme, infos pratiques, FAQ et prochaines dates."
   author: Merci pour ton non
   robots: index, follow
   canonical: https://mercipourtonnon.fr/nos-ateliers
   openGraph:
     type: website
-    title: "Atelier de consentement à prix libre à Strasbourg | Merci pour ton non"
+    title: "Atelier de consentement gratuit à Strasbourg | Merci pour ton non"
     description: "3 heures pour apprendre à dire non, poser tes limites et accueillir celles des autres. Programme, infos pratiques et prochaines dates."
     url: https://mercipourtonnon.fr/nos-ateliers
     image: https://mercipourtonnon.fr/social.png
@@ -26,10 +27,10 @@ meta:
     locale: fr_FR
   twitter:
     card: summary_large_image
-    title: "Atelier de consentement à prix libre à Strasbourg | Merci pour ton non"
+    title: "Atelier de consentement gratuit à Strasbourg | Merci pour ton non"
     description: "3 heures pour apprendre à dire non, poser tes limites et accueillir celles des autres. Programme, infos pratiques et prochaines dates."
     image: https://mercipourtonnon.fr/social.png
-  keywords: atelier consentement, atelier consentement strasbourg, formation consentement, apprendre dire non, poser limites, atelier prix libre strasbourg
+  keywords: atelier consentement, atelier consentement strasbourg, formation consentement, apprendre dire non, poser limites, atelier consentement gratuit strasbourg
   # FAQ JSON-LD — moved from the home with the FAQ it describes. It earns no
   # rich result since 2026; kept because it matches visible content.
   schema:
@@ -57,12 +58,12 @@ meta:
           name: Je ne peux pas me le permettre
           acceptedAnswer:
             '@type': Answer
-            text: Prix libre = 0€ si nécessaire. Aucune justification demandée, aucun jugement. L'argent ne doit jamais être un obstacle à ta participation.
+            text: C'est gratuit. Si tu veux et peux, tu fais un don pour soutenir l'association — jamais obligatoire.
         - '@type': Question
-          name: Comment fonctionne le prix libre ?
+          name: C'est vraiment gratuit ?
           acceptedAnswer:
             '@type': Answer
-            text: Le prix libre signifie que tu donnes ce que tu veux et peux. Tu peux participer sans rien payer si c'est difficile pour toi. Si tu veux et peux soutenir l'association, ta contribution est bienvenue mais ne sera jamais obligatoire. Chacun·e participe selon ses moyens.
+            text: "Oui. L'atelier est gratuit : personne ne paie pour y participer. Si tu veux et peux soutenir l'association, tu peux faire un don sur HelloAsso — c'est lui, et seulement lui, qui ouvre droit à un reçu fiscal (la participation à l'atelier, non). Deux tiers des participant·es ne donnent rien, et c'est très bien."
         - '@type': Question
           name: C'est uniquement sur le consentement sexuel ?
           acceptedAnswer:
@@ -940,7 +941,7 @@ components:
                       - type: text
                         element: p
                         props: { className: type-caption text-bleu-fonce-70 }
-                        content: Adresse communiquée aux inscrit·es
+                        content: Adresse communiquée aux inscrit·es · accessible PMR
                   - type: container
                     props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-2 }
                     children:
@@ -972,15 +973,15 @@ components:
                       - type: text
                         element: h3
                         props: { className: type-h4 text-bleu-fonce }
-                        content: prix libre
+                        content: gratuit
                       - type: text
                         element: p
                         props: { className: font-bold text-bleu-fonce }
-                        content: À partir de 0€
+                        content: 0 €, pour tout le monde
                       - type: text
                         element: p
                         props: { className: type-caption text-bleu-fonce-70 }
-                        content: Tu donnes ce que tu veux/peux
+                        content: Un don libre est possible pour soutenir l'association
               # Bon à savoir + photo
               - type: container
                 props:
@@ -1039,10 +1040,10 @@ components:
                                   - type: text
                                     element: span
                                     props: { className: font-bold }
-                                    content: 'Participation aux exercices libre'
+                                    content: 'Lieux accessibles PMR'
                                   - type: text
                                     element: span
-                                    content: ' — tu peux juste observer si tu préfères'
+                                    content: ', vérifiés avant chaque atelier'
                           - type: container
                             element: div
                             props: { role: listitem, className: flex items-start gap-3 }
@@ -1055,10 +1056,108 @@ components:
                                   - type: text
                                     element: span
                                     props: { className: font-bold }
-                                    content: 'Cadre bienveillant et confidentiel'
+                                    content: 'En français uniquement'
                                   - type: text
                                     element: span
-                                    content: ' — ce qui se dit en atelier reste en atelier'
+                                    content: ' pour l''instant'
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-1 text-cyan-ink }
+                              - type: text
+                                element: span
+                                children:
+                                  - type: text
+                                    element: span
+                                    props: { className: font-bold }
+                                    content: 'Pas de garde d''enfants'
+                                  - type: text
+                                    element: span
+                                    content: ' — on sait que le besoin existe'
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-1 text-cyan-ink }
+                              - type: text
+                                element: span
+                                children:
+                                  - type: text
+                                    element: span
+                                    props: { className: font-bold }
+                                    content: 'Le soir ou le samedi'
+                                  - type: text
+                                    element: span
+                                    content: ', dans des lieux centraux'
+
+      # Section: Notre cadre (#cadre) — the safety frame from the BPS (review of
+      # 2026-10-09): opt-in exercises, confidentiality, no one put on the spot,
+      # punctuality and the two-person minimum; then the help band.
+      - type: container
+        element: section
+        props:
+          id: cadre
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Notre cadre
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: notre cadre
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Ce qu'on s'engage à tenir, pour que chacun·e puisse explorer à son rythme.
+              - type: container
+                props:
+                  className: grid sm:grid-cols-2 lg:grid-cols-4 gap-6
+                children:
+                  - component: audience-card
+                    vars:
+                      icon: hand
+                      iconBg: bg-mauve-light
+                      accent: text-mauve
+                      title: tu participes si tu veux
+                      text: "Chaque exercice est facultatif. Observer est une façon de participer, et tu peux sortir quand tu veux."
+                  - component: audience-card
+                    vars:
+                      icon: lock
+                      iconBg: bg-mauve-light
+                      accent: text-mauve
+                      title: ce qui se dit reste ici
+                      text: "Confidentialité : rien de ce qui se partage en atelier n'en sort."
+                  - component: audience-card
+                    vars:
+                      icon: shield-check
+                      iconBg: bg-mauve-light
+                      accent: text-mauve
+                      title: personne n'est mis·e en défaut
+                      text: "On ne te demande ni de raconter ton vécu, ni de te justifier. L'atelier n'est ni un espace thérapeutique ni un tribunal : on est des facilitateur·ices formé·es, pas des thérapeutes."
+                  - component: audience-card
+                    vars:
+                      icon: clock
+                      iconBg: bg-mauve-light
+                      accent: text-mauve
+                      title: on protège le groupe
+                      text: "On commence à l'heure : au-delà de 20 minutes de retard, on ne peut plus t'accueillir. Si deux personnes ou moins sont inscrites, on annule et on te prévient."
+              - component: help-now-band
 
       # Section: Testimonials (#temoignages) — each testimonial exists once.
       # Three featured quotes (larger), then one CSS-columns list.
@@ -1311,7 +1410,7 @@ components:
                         children:
                           - type: text
                             element: span
-                            content: Comment fonctionne le prix libre ?
+                            content: C'est vraiment gratuit ?
                           - type: icon
                             props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
                       - type: container
@@ -1323,14 +1422,14 @@ components:
                             children:
                               - type: text
                                 element: span
-                                content: 'Le prix libre signifie que tu donnes ce que tu veux et peux. Tu peux participer sans rien payer si c''est difficile pour toi. Si tu veux et peux soutenir l''association, ta contribution est bienvenue mais ne sera jamais obligatoire. '
+                                content: 'Oui. L''atelier est gratuit : personne ne paie pour y participer. Si tu veux et peux soutenir l''association, tu peux faire un don sur HelloAsso — '
                               - type: text
                                 element: span
                                 props: { className: font-bold }
-                                content: 'C''est un principe fondamental de l''association : les moyens financiers ne doivent jamais être un frein à ta participation.'
+                                content: 'c''est lui, et seulement lui, qui ouvre droit à un reçu fiscal'
                               - type: text
                                 element: span
-                                content: ' Chacun·e participe selon ses moyens.'
+                                content: ' (la participation à l''atelier, non). Deux tiers des participant·es ne donnent rien, et c''est très bien.'
                   - type: container
                     props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
                     children:
@@ -1434,7 +1533,7 @@ components:
                     element: p
                     props:
                       className: type-lead text-bleu-fonce-70
-                    content: Choisis la date qui te convient. Chaque atelier est à prix libre.
+                    content: Choisis la date qui te convient. Chaque atelier est gratuit — tu peux faire un don si tu le souhaites.
               # Workshop card — one card, six dates, one registration URL.
               - type: container
                 props:
@@ -1484,7 +1583,7 @@ components:
                                 props: { name: coins, className: w-5 h-5 text-orange }
                               - type: text
                                 element: span
-                                content: prix libre
+                                content: gratuit, don libre
 
                       # Upcoming dates, chronological, drawn on the server. Past
                       # and cancelled dates drop out on their own ($today is the

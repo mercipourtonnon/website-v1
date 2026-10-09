@@ -136,6 +136,16 @@ components:
                       alt: Deux mains tiennent le flyer « Le consentement, ça te parle ? » au milieu des plantes
                       className: w-full h-auto rounded-media shadow-raised object-cover aspect-[3/2]
 
+      # Help band — block 1 of the page (review of 2026-10-09): the numbers to
+      # call come before the downloads.
+      - type: container
+        element: section
+        props:
+          id: besoin-d-aide
+          className: px-4 sm:px-6 pt-band-sm md:pt-band
+        children:
+          - component: help-now-band
+
       # Resources, in two groups (#telechargements kept as the anchor of the list)
       - type: container
         element: section

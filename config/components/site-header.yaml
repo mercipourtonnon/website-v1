@@ -58,7 +58,7 @@ children:
               - { label: Notre mission, href: /notre-mission }
               - label: Nos actions
                 children:
-                  - { label: Nos ateliers, href: /nos-ateliers, description: '3 heures pour explorer le consentement, à prix libre' }
+                  - { label: Nos ateliers, href: /nos-ateliers, description: '3 heures pour explorer le consentement, gratuitement' }
                   - { label: Nos stands de sensibilisation, href: /nos-stands, description: 'Des cartes et des échanges, en festival ou en événement' }
                   - { label: Nos interventions, href: /nos-interventions, description: 'Auprès des entreprises, des assos et des établissements' }
               - { label: Ressources, href: /ressources }

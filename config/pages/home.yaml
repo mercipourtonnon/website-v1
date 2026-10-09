@@ -10,8 +10,8 @@ sitemap:
 meta:
   lang: fr-FR
   title: Merci pour ton non - Consentement à Strasbourg
-  description: Ateliers de sensibilisation et de consentement à prix libre à Strasbourg, stands et interventions. Apprendre à dire non et poser ses limites.
-  keywords: atelier consentement, atelier consentement strasbourg, formation consentement, apprendre dire non, poser limites, merci pour ton non, atelier prix libre strasbourg, culture consentement
+  description: Ateliers de consentement gratuits à Strasbourg, stands et interventions. Apprendre à dire non et poser ses limites — don libre pour soutenir l'association.
+  keywords: atelier consentement, atelier consentement strasbourg, formation consentement, apprendre dire non, poser limites, merci pour ton non, atelier consentement gratuit strasbourg, culture consentement
   author: Merci pour ton non
   robots: index, follow
   canonical: https://mercipourtonnon.fr
@@ -19,7 +19,7 @@ meta:
   openGraph:
     type: website
     title: Ateliers de sensibilisation et de consentement à Strasbourg | Merci pour ton non
-    description: Ateliers à prix libre, stands et interventions sur le consentement à Strasbourg. Apprends à dire non, pose tes limites.
+    description: Ateliers gratuits, stands et interventions sur le consentement à Strasbourg. Apprends à dire non, pose tes limites.
     url: https://mercipourtonnon.fr
     image: https://mercipourtonnon.fr/social.png
     imageAlt: Atelier sur le consentement - Merci pour ton non
@@ -29,7 +29,7 @@ meta:
   twitter:
     card: summary_large_image
     title: Consentement à Strasbourg | Merci pour ton non
-    description: Ateliers à prix libre, stands et interventions sur le consentement à Strasbourg. Apprendre à dire non et poser ses limites.
+    description: Ateliers gratuits, stands et interventions sur le consentement à Strasbourg. Apprendre à dire non et poser ses limites.
     image: https://mercipourtonnon.fr/social.png
     imageAlt: Atelier sur le consentement - Merci pour ton non
     site: '@mercipourtonnon'
@@ -42,7 +42,7 @@ meta:
       '@context': https://schema.org
       '@type': Organization
       name: Merci pour ton non
-      description: Organisation d'ateliers de consentement à prix libre à Strasbourg. Formation pratique pour apprendre à dire non et développer des relations saines.
+      description: Organisation d'ateliers de consentement gratuits à Strasbourg — don libre pour soutenir l'association. Formation pratique pour apprendre à dire non et développer des relations saines.
       url: https://mercipourtonnon.fr
       logo: https://mercipourtonnon.fr/logo.svg
       sameAs:
@@ -58,15 +58,15 @@ meta:
       '@context': https://schema.org
       '@type': LocalBusiness
       name: Merci pour ton non
-      description: Ateliers de consentement à prix libre à Strasbourg. Formation pratique pour apprendre à dire non et développer des relations saines.
+      description: Ateliers de consentement gratuits à Strasbourg — don libre pour soutenir l'association. Formation pratique pour apprendre à dire non et développer des relations saines.
       url: https://mercipourtonnon.fr
       logo: https://mercipourtonnon.fr/logo.svg
       email: mercipourtonnon@gmail.com
-      priceRange: Prix libre (0€ - participation libre)
+      priceRange: Gratuit (don libre)
       address:
         '@type': PostalAddress
         addressLocality: Strasbourg
-        addressRegion: Grand Est
+        addressRegion: Alsace
         addressCountry: FR
       geo:
         '@type': GeoCoordinates
@@ -199,7 +199,7 @@ components:
                     element: p
                     props:
                       className: type-overline text-mauve
-                    content: Ateliers à prix libre · Strasbourg
+                    content: Ateliers gratuits · Strasbourg et Alsace
                   # Brand-coloured title, as in the logo. "de sensibilisation" is
                   # bleu foncé: orange text fails contrast even at display size (1.8:1).
                   # type-page, not type-hero: the longer title (F1) overflows the
@@ -267,7 +267,7 @@ components:
                             props: { name: heart, size: 18, strokeWidth: 2, className: text-mauve }
                           - type: text
                             element: span
-                            content: Prix libre
+                            content: Gratuit, don libre
                       - type: container
                         element: div
                         props: { role: listitem, className: inline-flex items-center gap-2 }
@@ -519,7 +519,7 @@ components:
                         element: p
                         props:
                           className: type-small text-bleu-fonce-70 flex-1
-                        content: "3 heures à prix libre, en petit groupe, pour pratiquer le consentement : dire non, l'accueillir, changer d'avis."
+                        content: "3 heures, gratuites, en petit groupe, pour pratiquer le consentement : dire non, l'accueillir, changer d'avis."
                       - type: text
                         element: span
                         props:

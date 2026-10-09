@@ -11,14 +11,14 @@ sitemap:
 meta:
   lang: fr-FR
   title: "Notre mission et l'équipe - Merci pour ton non"
-  description: "Merci pour ton non diffuse une culture du consentement à Strasbourg et dans le Grand Est : notre mission, nos valeurs, l'équipe cœur et nos partenaires."
+  description: "Merci pour ton non diffuse une culture du consentement à Strasbourg et en Alsace : notre mission, nos valeurs, l'équipe cœur et nos partenaires."
   author: Merci pour ton non
   robots: index, follow
   canonical: https://mercipourtonnon.fr/notre-mission
   openGraph:
     type: website
     title: "Notre mission | Merci pour ton non"
-    description: "Diffuser une culture du consentement à Strasbourg et dans le Grand Est : notre mission, nos valeurs et l'équipe cœur."
+    description: "Diffuser une culture du consentement à Strasbourg et en Alsace : notre mission, nos valeurs et l'équipe cœur."
     url: https://mercipourtonnon.fr/notre-mission
     image: https://mercipourtonnon.fr/social.png
     imageAlt: "Merci pour ton non — notre mission"
@@ -27,7 +27,7 @@ meta:
   twitter:
     card: summary_large_image
     title: "Notre mission | Merci pour ton non"
-    description: "Diffuser une culture du consentement à Strasbourg et dans le Grand Est : notre mission, nos valeurs et l'équipe cœur."
+    description: "Diffuser une culture du consentement à Strasbourg et en Alsace : notre mission, nos valeurs et l'équipe cœur."
     image: https://mercipourtonnon.fr/social.png
   schema:
     '@context': https://schema.org
@@ -114,7 +114,7 @@ components:
                         element: p
                         props:
                           className: type-h4 font-bold text-bleu-fonce
-                        content: Diffuser une culture du consentement à Strasbourg et dans le Grand Est
+                        content: Diffuser une culture du consentement à Strasbourg et en Alsace
                       - type: text
                         element: p
                         props:
@@ -233,14 +233,14 @@ components:
                             children:
                               - type: text
                                 element: span
-                                content: 'Nos ateliers sont à '
+                                content: 'Nos ateliers sont '
                               - type: text
                                 element: span
                                 props: { className: font-bold text-bleu-fonce }
-                                content: prix libre
+                                content: gratuits
                               - type: text
                                 element: span
-                                content: ' — personne n''est refusé·e par manque d''argent. On croit que le consentement doit être '
+                                content: ' — un don libre soutient l''association, et personne n''est refusé·e par manque d''argent. On croit que le consentement doit être '
                               - type: text
                                 element: span
                                 props: { className: font-bold text-bleu-fonce }
@@ -425,18 +425,15 @@ components:
                       accent: text-mauve
                       title: intégrité et clarté
                       text: On encourage l'écoute de soi, l'alignement entre ce que l'on ressent, ce que l'on pense et ce que l'on dit et une expression sincère et transparente.
-                  - component: value-card
-                    vars:
-                      icon: sprout
-                      accent: text-mauve
-                      title: culture du consentement
-                      text: Le respect des limites, des désaccords et des "non" est une forme élevée de soin et de reconnaissance de l'autre conduisant à des relations plus authentiques et respectueuses.
+                  # Five values, as in the BPS (review of 2026-10-09): « réflexivité et
+                  # doute » folded into « esprit critique »; « culture du consentement »
+                  # is the mission itself (hero above), not a value beside it.
                   - component: value-card
                     vars:
                       icon: search
                       accent: text-mauve
-                      title: réflexivité et doute
-                      text: L'examen de nos croyances, automatismes, biais et privilèges est un levier essentiel pour agir de façon plus juste.
+                      title: esprit critique
+                      text: On examine nos croyances, nos automatismes, nos biais et nos privilèges — avec de la réflexivité et du doute, parce que c'est ce qui permet d'agir plus juste.
                   - component: value-card
                     vars:
                       icon: sparkles
@@ -616,7 +613,7 @@ components:
                     element: p
                     props:
                       className: type-lead text-bleu-fonce
-                    content: Rejoins l'équipe bénévole pour tenir un stand, accueillir un atelier ou faire connaître l'association. Tu peux aussi nous soutenir par un don, pour que nos ateliers restent à prix libre.
+                    content: Rejoins l'équipe bénévole pour tenir un stand, accueillir un atelier ou faire connaître l'association. Tu peux aussi nous soutenir par un don, pour que nos ateliers restent gratuits.
               - type: container
                 props:
                   className: md:col-span-5 flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 md:items-end lg:justify-end

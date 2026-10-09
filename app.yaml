@@ -1,5 +1,5 @@
 name: mercipourtonnon
-description: Ateliers de consentement à prix libre à Strasbourg
+description: Ateliers de consentement gratuits à Strasbourg
 
 # Hide the "Built with Sovrium" pill rendered bottom-right on every page
 badge: false
@@ -110,6 +110,8 @@ components:
   - $ref: ./config/components/resource-card.yaml
   - $ref: ./config/components/knowledge-card.yaml
   - $ref: ./config/components/term-card.yaml
+  # « Besoin d'aide maintenant ? » — on /nos-ateliers#cadre and /ressources.
+  - $ref: ./config/components/help-now-band.yaml
   - $ref: ./config/components/espace-shell.yaml
   # Espace bénévole cards (row templates over events, news and members).
   - $ref: ./config/components/event-card.yaml
@@ -162,7 +164,7 @@ forms:
   # Espace bénévole: member profile and event sign-up.
   - $ref: ./config/forms/member-profile.yaml
   - $ref: ./config/forms/event-participation.yaml
-  # On /espace/suivi/:id: a walk-in, and the first entry of the on-site prix libre.
+  # On /espace/suivi/:id: a walk-in, and the first entry of the dons sur place (form prix-libre-sur-place).
   - $ref: ./config/forms/ajout-sur-place.yaml
   - $ref: ./config/forms/prix-libre-sur-place.yaml
 
