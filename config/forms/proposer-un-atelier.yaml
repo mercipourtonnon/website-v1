@@ -1,6 +1,8 @@
 # A facilitator proposes one workshop date. Writes a `workshop_proposals` row
-# (status defaults to `proposed`; capacity, duration and venue keep the table
-# defaults and are set by an admin at review). Embedded on /espace/proposer
+# (status defaults to `proposed`; capacity and duration keep the table defaults
+# and are set by an admin at review). The venue is optional: left empty, the
+# coordination sets it at review, and build-workshop-payload falls back to its
+# DEFAULT_PLACE when it is still empty at publication. Embedded on /espace/proposer
 # with formRef; also reachable at /forms/proposer-un-atelier under the same
 # access rule.
 id: 1
@@ -46,6 +48,17 @@ fields:
       displayField: display_name
       filter: [{ field: active, operator: eq, value: true }]
       sort: [{ field: display_name, direction: asc }]
+  # Venue names already carry the place (e.g. "La Plage Digitale"); displayField
+  # takes a single column, so the city is not shown next to it. Options are
+  # resolved with the form's own authority, so no venues read grant is needed.
+  - kind: table-field
+    column: venue
+    label: Lieu (facultatif)
+    helpText: "Laisse vide si tu ne sais pas encore : l'équipe le fixera."
+    optionsSource:
+      table: venues
+      displayField: name
+      sort: [{ field: name, direction: asc }]
   - kind: table-field
     column: note_to_team
     label: Un mot pour l'équipe (facultatif)
