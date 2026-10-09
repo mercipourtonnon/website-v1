@@ -1,0 +1,72 @@
+# Keeps events.date_label in step with starts_at: « lun. 20 oct. · 19:00 »,
+# Europe/Paris, French. Cards print it instead of the raw datetime (which the
+# record-field component renders in English). When the title changes, it also
+# rewrites option_label (« besoin — titre ») on the event's needs.
+#
+# Loop check: watches starts_at and title, writes date_label on events and
+# option_label on event_needs (label-need watches label/event, not this).
+name: label-event-date
+description: Écrit la date d'un événement en français (« lun. 20 oct. · 19:00 »).
+trigger:
+  type: record
+  table: events
+  events: [create, update]
+  watchFields: [starts_at, title]
+timeout: 30000
+actions:
+  - name: label
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 5000
+      inputData:
+        startsAt: '{{trigger.data.record.starts_at}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const d = new Date(String(input.startsAt || ''));
+          if (Number.isNaN(d.getTime())) return { label: '' };
+          const part = (opts: Intl.DateTimeFormatOptions) =>
+            new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', ...opts }).format(d);
+          const day = part({ weekday: 'short', day: 'numeric', month: 'short' });
+          const time = part({ hour: '2-digit', minute: '2-digit' });
+          return { label: `${day} · ${time}` };
+        }
+  - name: save
+    type: record
+    operator: update
+    props:
+      table: events
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{trigger.data.record.id}}' }
+      data:
+        date_label: '{{label.label}}'
+  - name: relabel_needs
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 20000
+      inputData:
+        eventId: '{{trigger.data.record.id}}'
+        title: '{{trigger.data.record.title}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const eventId = String(input.eventId || '');
+          const title = String(input.title || '').trim();
+          const res = (await context.actions.record.list({
+            table: 'event_needs',
+            filter: { conditions: [{ field: 'event', operator: 'equals', value: eventId }] },
+            limit: 500,
+          })) as unknown as { records?: Array<Record<string, unknown>> };
+          let updated = 0;
+          for (const need of (res && res.records) || []) {
+            const fields = ((need.fields as Record<string, unknown>) || need) as Record<string, unknown>;
+            const label = `${String(fields.label || '').trim()} — ${title}`;
+            if (fields.option_label === label) continue;
+            await context.actions.record.update({ table: 'event_needs', id: String(need.id), data: { option_label: label } });
+            updated += 1;
+          }
+          return { updated };
+        }

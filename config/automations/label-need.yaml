@@ -1,0 +1,30 @@
+# Keeps event_needs.option_label = « <label> — <titre de l'événement> », the
+# choice text of the event-participation form. A change of the event's title
+# is handled by label-event-date, which relabels all its needs.
+#
+# Loop check: watches label and event, writes option_label only.
+name: label-need
+description: Écrit le libellé « besoin — événement » d'un besoin pour le formulaire d'inscription.
+trigger:
+  type: record
+  table: event_needs
+  events: [create, update]
+  watchFields: [label, event]
+timeout: 30000
+actions:
+  - name: event
+    type: record
+    operator: read
+    props:
+      table: events
+      id: '{{trigger.data.record.event}}'
+  - name: save
+    type: record
+    operator: update
+    props:
+      table: event_needs
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{trigger.data.record.id}}' }
+      data:
+        option_label: '{{trigger.data.record.label}} — {{event.record.title}}'

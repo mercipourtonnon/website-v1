@@ -1,0 +1,39 @@
+# Member card — one validated `members` row, in the /espace/membres directory.
+# Place it as the row template of a list bound to `members` (filter status =
+# validated). Photo (initials when there is none), name, pronoun, and a link to
+# the profile, /espace/membres/<id>. Email and phone are never drawn here: the
+# table keeps them for the coordination. No vars.
+name: member-card
+type: container
+element: article
+props:
+  className: flex h-full items-center gap-4 rounded-lg border border-mauve-lighter bg-white p-4
+children:
+  # Two avatars so an empty photo never yields src="": the photo when there is
+  # one, else initials from the name.
+  - type: avatar
+    visibility: { record: { field: photo, isNotEmpty: true } }
+    src: $record.photo
+    label: $record.display_name
+    alt: ''
+    size: lg
+  - type: avatar
+    visibility: { record: { field: photo, isEmpty: true } }
+    label: $record.display_name
+    alt: ''
+    size: lg
+  - type: container
+    props:
+      className: flex min-w-0 flex-col
+    children:
+      - type: link
+        props:
+          href: /espace/membres/$record.id
+          className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve focus-visible:ring-2 focus-visible:ring-bleu-fonce
+        content: $record.display_name
+      - type: text
+        element: span
+        visibility: { record: { field: pronoun, isNotEmpty: true } }
+        props:
+          className: text-sm text-bleu-fonce-70
+        content: $record.pronoun

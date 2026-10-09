@@ -4,11 +4,11 @@
 # status, venue, HelloAsso checklist) at /espace/propositions/:id.
 name: espace-validation
 path: /espace/validation
-access: { require: [admin], redirectTo: /connexion }
+access: { require: [admin, coordination], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR
-  title: À valider - Espace facilitateur·ices
+  title: À valider - Espace bénévole
   description: Les propositions de dates à relire, approuver et publier.
   noindex: true
   robots: noindex, nofollow

@@ -1,0 +1,139 @@
+# A members row becomes `validated` (validate-member, or an admin in the grid):
+#   1. the account gets the `member` role. Sovrium 0.33 does not expose an
+#      account's role to an automation, so this cannot check it: validate only
+#      candidat·es (the Valider button shows on pending / refused rows), and
+#      give facilitateur or coordination AFTER validation, never before;
+#   2. the person joins the Brevo bénévoles list (create-contact with
+#      updateEnabled: idempotent, safe to retry and to replay);
+#   3. the Brevo id and the validation date are saved;
+#   4. a welcome email with the WhatsApp community link goes out (last: it is
+#      the one step that cannot be taken back).
+# A failure fails the run, so notify-espace-failure tells the coordination;
+# replaying it resumes from the failed step.
+#
+# Loop check: watches status only; writes brevo_contact_id and validated_at.
+name: on-member-validated
+description: Donne l'accès bénévole, inscrit à la liste Brevo et envoie le mail de bienvenue.
+trigger:
+  type: record
+  table: members
+  events: [update]
+  watchFields: [status]
+  condition:
+    logic: and
+    conditions:
+      - { field: '{{trigger.data.record.status}}', operator: equals, value: validated }
+      - { field: '{{trigger.data.previousRecord.status}}', operator: notEquals, value: validated }
+timeout: 120000
+actions:
+  - name: member
+    type: record
+    operator: read
+    props:
+      table: members
+      id: '{{trigger.data.record.id}}'
+  - name: still_validated
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: '{{member.record.status}}', operator: equals, value: validated }
+
+  # 1. Role member.
+  - name: role
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 10000
+      inputData:
+        account: '{{member.record.account}}'
+        # The account's address, through the trigger's user field (id, email
+        # and name only — no role).
+        accountEmail: '{{trigger.data.record.account.email}}'
+        contactEmail: '{{member.record.contact_email}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const account = String(input.account || '').trim();
+          const email = String(input.contactEmail || '').trim() || String(input.accountEmail || '').trim();
+          const links = {
+            espace: `${String(context.env.BASE_URL || '').replace(/\/+$/, '')}/espace`,
+            whatsapp: String(context.env.WHATSAPP_COMMUNITY_URL || ''),
+          };
+          if (!account) {
+            context.log.warn('Fiche sans compte : aucun rôle à donner.');
+            return { promoted: false, email, ...links };
+          }
+          await context.actions.auth.assignRole({ userId: account, role: 'member' });
+          return { promoted: true, email, ...links };
+        }
+
+  # 2. Brevo list. 201 → { id }; 204 (contact updated) → no body.
+  - name: brevo
+    type: code
+    operator: runTypescript
+    retry: { maxAttempts: 3, delayMs: 5000, strategy: exponential }
+    props:
+      timeout: 30000
+      inputData:
+        email: '{{role.email}}'
+        name: '{{member.record.display_name}}'
+        known: '{{member.record.brevo_contact_id}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const email = String(input.email || '').trim().toLowerCase();
+          if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+            throw new Error(`Adresse email absente ou invalide pour Brevo : "${email}"`);
+          }
+          const listId = Number(context.env.BREVO_LIST_BENEVOLES_ID);
+          if (!Number.isInteger(listId) || listId <= 0) {
+            throw new Error('BREVO_LIST_BENEVOLES_ID doit être un nombre entier.');
+          }
+          const parts = String(input.name || '').trim().split(/\s+/);
+          const res = (await context.actions.connection.call({
+            connection: 'brevo',
+            operation: 'create-contact',
+            params: {
+              email,
+              listIds: [listId],
+              updateEnabled: true,
+              attributes: { FIRSTNAME: parts[0] || '', LASTNAME: parts.slice(1).join(' ') },
+            },
+            timeout: 20000,
+          })) as unknown as { data?: Record<string, unknown> };
+          const id = res && res.data && res.data.id ? String(res.data.id) : String(input.known || '');
+          context.log.info(`contact Brevo ${id || '(mis à jour)'}`);
+          return { contactId: id };
+        }
+
+  # 3. Save what we learned.
+  - name: save
+    type: record
+    operator: update
+    props:
+      table: members
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{member.record.id}}' }
+      data:
+        brevo_contact_id: '{{brevo.contactId}}'
+        validated_at: '{{now}}'
+
+  # 4. Welcome.
+  - name: welcome
+    type: email
+    operator: send
+    props:
+      to: '{{role.email}}'
+      subject: Bienvenue dans l'équipe de Merci pour ton non !
+      body: |
+        <p>Salut {{member.record.display_name}},</p>
+        <p>Ta candidature est validée : bienvenue parmi les bénévoles de Merci pour ton non !</p>
+        <p>Ton espace bénévole t'attend : l'agenda des rencontres et des événements, les actualités de l'asso et l'annuaire de l'équipe.<br>
+        <a href="{{role.espace}}">Ouvrir mon espace bénévole</a></p>
+        <p>Rejoins aussi notre communauté WhatsApp, c'est là que circulent les infos du quotidien :<br>
+        <a href="{{role.whatsapp}}">Rejoindre la communauté WhatsApp</a></p>
+        <p>Ensemble, on construit une culture du consentement. Au plaisir de te croiser très vite,</p>
+        <p>L'équipe de Merci pour ton non</p>

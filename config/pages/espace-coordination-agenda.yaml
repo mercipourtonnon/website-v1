@@ -1,0 +1,145 @@
+# /espace/coordination/agenda — the coordination edits events and their needs
+# in grids (in-cell editing, « Nouvel enregistrement », the row panel for the
+# rich-text fields), and reads who signed up to what. Every status shows here,
+# drafts included. Publishing = setting the status to Publié.
+name: espace-coordination-agenda
+path: /espace/coordination/agenda
+access: { require: [coordination, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Agenda à gérer - Espace bénévole
+  description: Créer, publier et suivre les rendez-vous des bénévoles.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: agenda à gérer
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: "Crée un rendez-vous en brouillon, ajoute ses besoins, puis passe-le en « Publié » : il apparaît alors dans l'agenda des bénévoles."
+          - type: container
+            element: section
+            props:
+              aria-labelledby: evenements-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: evenements-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: rendez-vous
+              - type: table
+                caption: Rendez-vous
+                classes: { parts: { caption: sr-only } }
+                phoneLayout: rows
+                dataSource:
+                  table: events
+                  sort: [{ field: starts_at, direction: desc }]
+                  pagination: { pageSize: 25 }
+                toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
+                emptyMessage: Aucun rendez-vous pour l'instant. Crée le premier avec « Nouvel enregistrement ».
+                rowExpand:
+                  title: Rendez-vous
+                  fields: [title, type, status, starts_at, ends_at, location, video_url, purpose, programme, practical_info, image]
+                columns:
+                  - { field: title, label: Titre }
+                  - field: status
+                    label: Statut
+                    badgeForm: outline-dot
+                    valueLabels: { draft: Brouillon, published: Publié, cancelled: Annulé }
+                    cellStyle:
+                      - { when: { eq: draft }, tone: warning }
+                      - { when: { eq: published }, tone: success }
+                      - { when: { eq: cancelled }, tone: muted }
+                  - { field: type, label: Type }
+                  - { field: starts_at, label: Début, format: datetime }
+                  - { field: ends_at, label: Fin, format: datetime }
+                  - { field: location, label: Lieu }
+                  - { field: video_url, label: Visio }
+          - type: container
+            element: section
+            props:
+              aria-labelledby: besoins-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: besoins-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: besoins
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Ce dont chaque rendez-vous a besoin (« Tenir le stand 14h–16h », « Apporter à manger »), avec le nombre de places. Les places restantes se calculent toutes seules.
+              - type: table
+                caption: Besoins
+                classes: { parts: { caption: sr-only } }
+                phoneLayout: rows
+                dataSource:
+                  table: event_needs
+                  sort: [{ field: event, direction: desc }, { field: position, direction: asc }]
+                  pagination: { pageSize: 50 }
+                toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
+                emptyMessage: Aucun besoin pour l'instant. Ajoute-en un avec « Nouvel enregistrement » et choisis son rendez-vous.
+                columns:
+                  - { field: event, label: Rendez-vous }
+                  - { field: label, label: Besoin }
+                  - { field: description, label: Description, truncate: true }
+                  - { field: slots, label: Places, align: right }
+                  - { field: signed_up, label: Inscrit·es, align: right }
+                  - field: remaining
+                    label: Restantes
+                    align: right
+                    cellStyle:
+                      - { when: { lte: 0 }, tone: muted }
+                  - { field: position, label: Ordre, align: right }
+          - type: container
+            element: section
+            props:
+              aria-labelledby: inscriptions-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: inscriptions-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: qui vient à quoi
+              - type: table
+                caption: Inscriptions des bénévoles
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: rows
+                dataSource:
+                  table: event_participations
+                  sort: [{ field: event, direction: desc }, { field: created_at, direction: asc }]
+                  pagination: { pageSize: 50 }
+                toolbar: { search: true, filters: true, sort: false, export: true, refresh: true }
+                emptyMessage: Aucune inscription pour l'instant.
+                columns:
+                  - { field: event, label: Rendez-vous }
+                  - { field: member, label: Bénévole }
+                  - { field: need, label: Besoin }
+                  - { field: comment, label: Commentaire, truncate: true }
+                  - { field: created_at, label: Inscrit·e le, format: short-date }

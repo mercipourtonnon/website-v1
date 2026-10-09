@@ -1,0 +1,68 @@
+# /espace/profil — the signed-in bénévole edits her own profile with the
+# member-profile form (save-member-profile upserts her own `members` row; an
+# answer left empty keeps the saved value). The page binds her row
+# (account = current user) so the form opens with her current answers
+# (inlinePrefill, $record.<field>). The photo cannot be prefilled: leaving the
+# picker empty keeps the stored photo.
+name: espace-profil
+path: /espace/profil
+access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+sitemap: false
+dataSource:
+  table: members
+  mode: single
+  filter:
+    - { field: account, operator: eq, value: $currentUser.id }
+meta:
+  lang: fr-FR
+  title: Mon profil - Espace bénévole
+  description: Ta fiche bénévole, visible par les autres bénévoles.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-2xl flex-col gap-6
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-2
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: mon profil
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Ta fiche est visible par les autres bénévoles, sauf ton téléphone, réservé à la coordination. Un champ laissé vide garde la réponse déjà enregistrée.
+              - type: link
+                props:
+                  href: /espace/membres/$record.id
+                  className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                content: Voir ma fiche comme les autres la voient
+          - type: form
+            formRef: member-profile
+            props:
+              headingLevel: h2
+              label: Enregistrer ma fiche
+            inlinePrefill:
+              prefill:
+                display_name: $record.display_name
+                pronoun: $record.pronoun
+                image_rights: $record.image_rights
+                why: $record.why
+                intentions: $record.intentions
+                wishes: $record.wishes
+                fears: $record.fears
+                resources: $record.resources
+                skills: $record.skills
+                dislikes: $record.dislikes
+                work_style: $record.work_style
+                preferred_slots: $record.preferred_slots

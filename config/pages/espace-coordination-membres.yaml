@@ -1,0 +1,133 @@
+# /espace/coordination/membres — the coordination's view of every bénévole.
+# Pending applications come first, in their own grid; the second grid lists
+# everyone else. The Valider / Refuser / Archiver columns are the members
+# table's own button fields (validate, refuse, archive): each shows on the
+# statuses its field declares and runs validate-member / refuse-member /
+# archive-member on its row (gated to coordination+, status re-checked).
+# A grid action column calling the same automations sent no request for the
+# coordination in 0.33, so the button fields are used; they ask no
+# confirmation. The row opens the full profile.
+# Status chips: option labels with the table's valueLabels, toned by cellStyle
+# (warning = waiting, success = validated, muted = refused / archived); the
+# word carries the meaning, never the colour alone.
+name: espace-coordination-membres
+path: /espace/coordination/membres
+access: { require: [coordination, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Bénévoles - Espace bénévole
+  description: Valider les candidatures et suivre les bénévoles.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: bénévoles
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Les candidatures à relire, puis toute l'équipe. Ouvre une ligne pour lire la fiche complète.
+          - type: container
+            element: section
+            props:
+              aria-labelledby: attente-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: attente-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: candidatures en attente
+              - type: table
+                caption: Candidatures en attente
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: rows
+                dataSource:
+                  table: members
+                  filter:
+                    - { field: status, operator: eq, value: pending }
+                  sort: [{ field: joined_at, direction: asc }]
+                  pagination: { pageSize: 25 }
+                toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
+                emptyMessage: Aucune candidature en attente. Les nouvelles inscriptions arrivent ici.
+                rowExpand:
+                  title: Fiche bénévole
+                  fields: [display_name, pronoun, contact_email, phone, image_rights, why, intentions, wishes, fears, resources, skills, dislikes, work_style, preferred_slots, facilitator, validated_at, joined_at]
+                columns:
+                  - { field: display_name, label: Nom }
+                  - field: status
+                    label: Statut
+                    badgeForm: outline-dot
+                    valueLabels: { pending: En attente, validated: Validé·e, refused: Refusé·e, archived: Archivé·e }
+                    cellStyle:
+                      - { when: { eq: pending }, tone: warning }
+                      - { when: { eq: validated }, tone: success }
+                      - { when: { in: [refused, archived] }, tone: muted }
+                  - { field: contact_email, label: Email }
+                  - { field: phone, label: Téléphone }
+                  - { field: joined_at, label: Inscrit·e le, format: short-date }
+                  - { field: validate, label: Valider }
+                  - { field: refuse, label: Refuser }
+                  - { field: archive, label: Archiver }
+          - type: container
+            element: section
+            props:
+              aria-labelledby: equipe-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: equipe-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: toute l'équipe
+              - type: table
+                caption: Toute l'équipe
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: rows
+                dataSource:
+                  table: members
+                  filter:
+                    - { field: status, operator: neq, value: pending }
+                  sort: [{ field: display_name, direction: asc }]
+                  pagination: { pageSize: 25 }
+                toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
+                emptyMessage: Personne pour l'instant.
+                rowExpand:
+                  title: Fiche bénévole
+                  fields: [display_name, pronoun, contact_email, phone, image_rights, why, intentions, wishes, fears, resources, skills, dislikes, work_style, preferred_slots, facilitator, validated_at, joined_at]
+                columns:
+                  - { field: display_name, label: Nom }
+                  - field: status
+                    label: Statut
+                    badgeForm: outline-dot
+                    valueLabels: { pending: En attente, validated: Validé·e, refused: Refusé·e, archived: Archivé·e }
+                    cellStyle:
+                      - { when: { eq: pending }, tone: warning }
+                      - { when: { eq: validated }, tone: success }
+                      - { when: { in: [refused, archived] }, tone: muted }
+                  - { field: contact_email, label: Email }
+                  - { field: phone, label: Téléphone }
+                  - { field: joined_at, label: Inscrit·e le, format: short-date }
+                  - { field: validate, label: Valider }
+                  - { field: refuse, label: Refuser }
+                  - { field: archive, label: Archiver }

@@ -1,14 +1,16 @@
-# /connexion — sign-in for the Espace facilitateur·ices.
+# /connexion — sign-in for the Espace bénévole.
 # Adapted from library block/auth-sign-in@0.33.0 (French, brand tokens).
-# No sign-up link: accounts are created by invitation (auth.allowSignUp: false),
-# and the block's alternatives are gated on what auth declares.
+# After sign-in, `role-landing` sends the session to auth.landingPath
+# (/espace/arrivee), which redirects to its role's defaultLanding: a candidat
+# to /espace/en-attente, everyone else to /espace. The sign-up link is gated on
+# auth.signUp, so it disappears if sign-up is closed again.
 name: espace-connexion
 path: /connexion
 sitemap: false
 meta:
   lang: fr-FR
-  title: Connexion - Espace facilitateur·ices
-  description: Connexion à l'espace des facilitateur·ices de Merci pour ton non.
+  title: Connexion - Espace bénévole
+  description: Connexion à l'espace bénévole de Merci pour ton non.
   noindex: true
   robots: noindex, nofollow
   favicon: ./favicon/favicon-32x32.png
@@ -20,7 +22,7 @@ components:
     children:
       - type: container
         props:
-          className: flex w-full max-w-md flex-col gap-6 self-start sm:self-auto sm:rounded-lg sm:border sm:border-gray-200 sm:bg-white sm:p-8
+          className: flex w-full max-w-md flex-col gap-6 self-start sm:self-auto sm:rounded-lg sm:border sm:border-mauve-lighter sm:bg-white sm:p-8
         children:
           - type: link
             props:
@@ -40,12 +42,12 @@ components:
                 element: h1
                 props:
                   className: text-3xl title-font text-bleu-fonce
-                content: espace facilitateur·ices
+                content: espace bénévole
               - type: text
                 element: p
                 props:
                   className: text-bleu-fonce
-                content: Connecte-toi avec l'adresse email de ton invitation pour proposer des dates d'atelier et suivre tes propositions.
+                content: Connecte-toi pour retrouver l'agenda de l'équipe, les actualités de l'asso et les autres bénévoles.
           - type: form
             action:
               type: auth
@@ -56,7 +58,7 @@ components:
               fields:
                 - { name: email, label: Adresse email, placeholder: toi@exemple.fr }
                 - { name: password, label: Mot de passe }
-              onSuccess: { navigate: /espace }
+              onSuccess: { type: role-landing }
           - type: link
             props:
               href: /reset-password
@@ -64,8 +66,15 @@ components:
             content: Mot de passe oublié ?
             visibility:
               declares: auth.passwordReset
-          - type: text
-            element: p
+          - type: container
+            visibility:
+              declares: auth.signUp
             props:
-              className: border-t border-gray-200 pt-4 text-sm text-gray-700
-            content: Pas encore de compte ? L'espace est réservé aux personnes qui animent nos ateliers. Écris-nous à mercipourtonnon@gmail.com pour recevoir une invitation.
+              className: flex flex-wrap gap-1 border-t border-mauve-lighter pt-4 text-sm text-bleu-fonce
+            children:
+              - { type: text, element: span, content: Pas encore de compte ? }
+              - type: link
+                props:
+                  href: /inscription
+                  className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                content: Rejoindre l'équipe bénévole

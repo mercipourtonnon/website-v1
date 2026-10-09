@@ -1,0 +1,81 @@
+# Someone signs up to an event (event-participation form): she receives a
+# confirmation with the event's practical details. One email per sign-up, to
+# the one person concerned (transactional; no digest needed).
+name: on-participation
+description: Confirme par email l'inscription d'un·e bénévole à un événement.
+trigger:
+  type: record
+  table: event_participations
+  events: [create]
+timeout: 60000
+actions:
+  - name: event
+    type: record
+    operator: read
+    props:
+      table: events
+      id: '{{trigger.data.record.event}}'
+  - name: details
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 10000
+      inputData:
+        email: '{{trigger.data.record.member.email}}'
+        name: '{{trigger.data.record.member.name}}'
+        needId: '{{trigger.data.record.need}}'
+        eventId: '{{event.record.id}}'
+        startsAt: '{{event.record.starts_at}}'
+        endsAt: '{{event.record.ends_at}}'
+        location: '{{event.record.location}}'
+        videoUrl: '{{event.record.video_url}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const email = String(input.email || '').trim();
+          if (!email) throw new Error('Inscription sans adresse email de bénévole.');
+          let need = '';
+          const needId = String(input.needId || '').trim();
+          if (needId) {
+            const res = (await context.actions.record.read({ table: 'event_needs', id: needId })) as unknown as {
+              record?: Record<string, unknown>;
+            };
+            need = res && res.record ? String(res.record.label || '') : '';
+          }
+          const fmt = (iso: unknown, opts: Intl.DateTimeFormatOptions): string => {
+            const d = new Date(String(iso || ''));
+            return Number.isNaN(d.getTime()) ? '' : new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', ...opts }).format(d);
+          };
+          const day = fmt(input.startsAt, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+          const from = fmt(input.startsAt, { hour: '2-digit', minute: '2-digit' });
+          const to = fmt(input.endsAt, { hour: '2-digit', minute: '2-digit' });
+          const when = day ? `${day}, ${to ? `de ${from} à ${to}` : `à ${from}`}` : '';
+          const base = String(context.env.BASE_URL || '').replace(/\/+$/, '');
+          return {
+            email,
+            name: String(input.name || '').trim() || 'toi',
+            need,
+            when,
+            where: String(input.location || '').trim(),
+            video: String(input.videoUrl || '').trim(),
+            link: `${base}/espace/agenda/${encodeURIComponent(String(input.eventId || ''))}`,
+          };
+        }
+  - name: confirm
+    type: email
+    operator: send
+    props:
+      to: '{{details.email}}'
+      subject: 'C''est noté : {{event.record.title}}'
+      body: |
+        <p>Salut {{details.name}},</p>
+        <p>Merci pour ton inscription à <strong>{{event.record.title}}</strong>{{#if details.need}} — pour « {{details.need}} »{{/if}} !</p>
+        <ul>
+          {{#if details.when}}<li>Quand : {{details.when}}</li>{{/if}}
+          {{#if details.where}}<li>Où : {{details.where}}</li>{{/if}}
+          {{#if details.video}}<li>En visio : <a href="{{details.video}}">{{details.video}}</a></li>{{/if}}
+        </ul>
+        <p>Toutes les infos pratiques et la liste des personnes qui viennent sont sur ton espace :<br>
+        <a href="{{details.link}}">Voir l'événement</a></p>
+        <p>Un empêchement ? Tu peux annuler ta participation depuis la même page.</p>
+        <p>À très vite,<br>L'équipe de Merci pour ton non</p>

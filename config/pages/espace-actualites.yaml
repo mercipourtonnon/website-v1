@@ -1,0 +1,50 @@
+# /espace/actualites — the published news, newest first. Drafts never reach a
+# bénévole (news row rule); the explicit status filter keeps them off the
+# coordination's reading list too (they edit them on /espace/coordination/actualites).
+name: espace-actualites
+path: /espace/actualites
+access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Actualités - Espace bénévole
+  description: Les nouvelles de Merci pour ton non pour son équipe bénévole.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-5xl flex-col gap-6
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: actualités
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Ce qui bouge dans l'asso. Les actualités importantes arrivent aussi dans ta boîte mail.
+          - type: list
+            props:
+              aria-label: Actualités
+              className: list-none m-0 grid grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3
+            dataSource:
+              table: news
+              filter:
+                - { field: status, operator: eq, value: published }
+              sort: [{ field: published_at, direction: desc }]
+              pagination: { pageSize: 12 }
+            listDisplay:
+              emptyMessage: Pas encore d'actualité. Les nouvelles de l'asso arriveront ici (et par email).
+            children:
+              - component: news-card

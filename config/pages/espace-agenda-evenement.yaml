@@ -1,0 +1,233 @@
+# /espace/agenda/:id — one event: when and where, its purpose, programme and
+# practical info, what the team needs (places left per need), the « Je
+# participe » form, and who is coming.
+#
+# The page binds the event; a draft answers 404 to a bénévole (events row rule).
+# Nested lists filter on the route segment ($param.id: a nested `$record.id`
+# does not resolve there in 0.33). The sign-up form locks `event` to this page's record
+# (inlinePrefill + lockPrefill), and fills `member` from the session.
+name: espace-agenda-evenement
+path: /espace/agenda/:id
+access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+sitemap: false
+dataSource:
+  table: events
+  mode: single
+  param: id
+meta:
+  lang: fr-FR
+  title: Rendez-vous - Espace bénévole
+  description: Le programme d'un rendez-vous de l'équipe et comment y participer.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-3xl flex-col gap-8
+        children:
+          - type: link
+            props:
+              href: /espace/agenda
+              className: self-start text-sm text-bleu-fonce underline underline-offset-4
+            content: ← Agenda
+
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-3
+            children:
+              - type: container
+                props:
+                  className: flex flex-wrap items-center gap-2
+                children:
+                  - type: text
+                    element: span
+                    props:
+                      className: rounded-full bg-mauve-light px-3 py-0.5 text-sm font-medium text-bleu-fonce
+                    content: $record.type
+                  - type: text
+                    element: span
+                    visibility: { record: { field: status, eq: cancelled } }
+                    props:
+                      className: rounded-full bg-bleu-fonce-light px-3 py-0.5 text-sm font-medium text-bleu-fonce
+                    content: Annulé
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: $record.title
+              - type: description-list
+                layout: stacked
+                items:
+                  - { term: Début, field: starts_at }
+                  - { term: Fin, field: ends_at }
+                  - { term: Lieu, field: location }
+              - type: link
+                visibility: { record: { field: video_url, isNotEmpty: true } }
+                props:
+                  href: $record.video_url
+                  target: _blank
+                  rel: noopener noreferrer
+                  className: inline-flex items-center gap-2 self-start font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                children:
+                  - type: icon
+                    props: { name: video, className: w-4 h-4, aria-hidden: 'true' }
+                  - { type: text, element: span, content: Rejoindre en visio (nouvel onglet) }
+
+          - type: alert
+            alertVariant: warning
+            visibility: { record: { field: status, eq: cancelled } }
+            content: Ce rendez-vous est annulé. La coordination te tient au courant s'il est reprogrammé.
+
+          - type: container
+            element: section
+            visibility: { record: { field: purpose, isNotEmpty: true } }
+            props:
+              aria-labelledby: intention-titre
+              className: flex flex-col gap-2
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: intention-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: intention
+              - type: record-field
+                props: { field: purpose }
+          - type: container
+            element: section
+            visibility: { record: { field: programme, isNotEmpty: true } }
+            props:
+              aria-labelledby: programme-titre
+              className: flex flex-col gap-2
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: programme-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: programme
+              - type: record-field
+                props: { field: programme }
+          - type: container
+            element: section
+            visibility: { record: { field: practical_info, isNotEmpty: true } }
+            props:
+              aria-labelledby: infos-titre
+              className: flex flex-col gap-2 rounded-lg bg-orange-light p-5
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: infos-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: infos pratiques
+              - type: record-field
+                props: { field: practical_info }
+
+          # What the team needs, with the places left (event_needs.remaining).
+          - type: container
+            element: section
+            props:
+              aria-labelledby: besoins-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: besoins-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: on a besoin de toi pour…
+              # Drawn from an item template (rows fetched through the records
+              # API): a server-drawn row template over event_needs comes back
+              # empty for non-admins in 0.33 (its row rule reads event.status
+              # through the relationship, which the page read does not apply
+              # as the API does).
+              - type: list
+                props:
+                  aria-label: Besoins de l'équipe
+                  className: rounded-lg border border-mauve-lighter
+                dataSource:
+                  table: event_needs
+                  filter:
+                    - { field: event, operator: eq, value: $param.id }
+                  sort: [{ field: position, direction: asc }]
+                classes:
+                  parts:
+                    title: font-bold text-bleu-fonce
+                    subtitle: text-bleu-fonce-70
+                listDisplay:
+                  itemLayout: stacked
+                  itemTemplate:
+                    title: $record.label
+                    subtitle: $record.description
+                    badge: $record.remaining place(s) restante(s) sur $record.slots
+                  emptyMessage: Pas de besoin particulier pour ce rendez-vous. Viens simplement si tu peux !
+
+          # « Je participe » — only on a published (not cancelled) event.
+          - type: container
+            element: section
+            visibility: { record: { field: status, eq: published } }
+            props:
+              aria-labelledby: participe-titre
+              className: rounded-lg border border-mauve-lighter border-t-4 border-t-orange p-5 sm:p-6
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: participe-titre
+                  className: mb-3 text-2xl title-font text-bleu-fonce
+                content: je participe
+              # The need picker lists the needs of every published event (no
+              # filter on the page's event exists in 0.33, and a formRef embed
+              # takes no field overrides), so the hint names this event.
+              - type: container
+                props:
+                  className: mb-4 flex items-start gap-2 rounded-md bg-warning-bg px-3 py-2 text-sm text-warning-fg
+                children:
+                  - type: icon
+                    props: { name: info, className: w-4 h-4 shrink-0 mt-0.5, aria-hidden: 'true' }
+                  - type: text
+                    element: p
+                    content: "Choisis le besoin de cet évènement : « $record.title ». La liste montre aussi ceux des autres rendez-vous ; les besoins de celui-ci sont listés juste au-dessus."
+              - type: form
+                formRef: event-participation
+                showHeader: false
+                props:
+                  label: Je participe
+                inlinePrefill:
+                  prefill: { event: $parent.id }
+                  lockPrefill: true
+
+          # Who is coming (every sign-up of this event; readable by member+).
+          - type: container
+            element: section
+            props:
+              aria-labelledby: qui-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: qui-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: qui vient ?
+              - type: list
+                props:
+                  aria-label: Bénévoles inscrit·es
+                  className: rounded-lg border border-mauve-lighter
+                dataSource:
+                  table: event_participations
+                  filter:
+                    - { field: event, operator: eq, value: $param.id }
+                  sort: [{ field: created_at, direction: asc }]
+                  limit: 50
+                listDisplay:
+                  itemLayout: stacked
+                  itemTemplate:
+                    title: $record.member
+                    subtitle: $record.need
+                  emptyMessage: Personne n'est encore inscrit·e. Lance-toi !

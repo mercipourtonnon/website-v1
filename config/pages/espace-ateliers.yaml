@@ -3,11 +3,11 @@
 # page and /ateliers/:slug at once (both filter status = published).
 name: espace-ateliers
 path: /espace/ateliers
-access: { require: [admin], redirectTo: /connexion }
+access: { require: [admin, coordination], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR
-  title: Ateliers en ligne - Espace facilitateur·ices
+  title: Ateliers en ligne - Espace bénévole
   description: Les dates publiées sur le site, avec leur lien d'inscription.
   noindex: true
   robots: noindex, nofollow

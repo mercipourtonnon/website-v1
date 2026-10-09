@@ -1,0 +1,44 @@
+# "Valider" (coordination): pending or refused → validated. The status change
+# starts on-member-validated (role member, Brevo list, welcome email).
+#
+# Pressing it runs with the presser's rights: the coordination may write any
+# members row (row rule on editor_role) and its status. Only the status is
+# written here; the record automation does the rest as the system.
+name: validate-member
+description: Valide une candidature de bénévole (statut validé) ; on-member-validated donne l'accès.
+trigger:
+  type: manual
+  label: Valider
+  # requiredRole takes ONE role name (an admin satisfies any of them);
+  # permissions.trigger spells out who may press it and can only narrow it.
+  requiredRole: coordination
+permissions:
+  trigger: [coordination, admin]
+timeout: 30000
+actions:
+  # Table button → {{trigger.input.recordId}}. A page button must pass `recordId` too.
+  - name: member
+    type: record
+    operator: read
+    props:
+      table: members
+      id: '{{trigger.input.recordId}}'
+  - name: only_pending_or_refused
+    type: filter
+    operator: continue
+    props:
+      condition:
+        logic: or
+        conditions:
+          - { field: '{{member.record.status}}', operator: equals, value: pending }
+          - { field: '{{member.record.status}}', operator: equals, value: refused }
+  - name: set_status
+    type: record
+    operator: update
+    props:
+      table: members
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{member.record.id}}' }
+      data:
+        status: validated

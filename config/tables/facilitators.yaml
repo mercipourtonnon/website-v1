@@ -6,7 +6,7 @@ name: facilitators
 fields:
   - { id: 1, name: display_name, label: Nom affiché, type: single-line-text, required: true, unique: true }
   - { id: 2, name: short_name, label: Prénom, type: single-line-text }
-  # The sign-in account of this facilitator (member role), once invited.
+  # The sign-in account of this facilitator (facilitateur role), once invited.
   - { id: 3, name: account, label: Compte, type: user, unique: true }
   - { id: 4, name: contact_email, label: Email de contact, type: email }
   - { id: 5, name: phone, label: Téléphone, type: phone-number }

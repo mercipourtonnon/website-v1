@@ -1,0 +1,75 @@
+# Event card — one `events` row, as drawn on /espace (« Prochains rendez-vous »).
+# Place it as the row template of a list bound to `events`:
+#   - type: list
+#     dataSource: { table: events, filter: [...], sort: [...] }
+#     children:
+#       - component: event-card
+# It reads the row through $record (title, type, date_label, location) and
+# links to the event page, /espace/agenda/<id>. No vars.
+name: event-card
+type: container
+element: article
+props:
+  className: flex h-full flex-col gap-3 rounded-lg border border-mauve-lighter bg-white p-4
+children:
+  - type: container
+    props:
+      className: flex flex-wrap items-center gap-2
+    children:
+      - type: text
+        element: span
+        props:
+          className: rounded-full bg-mauve-light px-3 py-0.5 text-sm font-medium text-bleu-fonce
+        content: $record.type
+      - type: text
+        element: span
+        visibility: { record: { field: status, eq: cancelled } }
+        props:
+          className: rounded-full bg-bleu-fonce-light px-3 py-0.5 text-sm font-medium text-bleu-fonce
+        content: Annulé
+  - type: text
+    element: h3
+    props:
+      className: text-lg font-bold text-bleu-fonce
+    children:
+      - type: link
+        props:
+          href: /espace/agenda/$record.id
+          className: underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve focus-visible:ring-2 focus-visible:ring-bleu-fonce
+        content: $record.title
+  - type: container
+    props:
+      className: mt-auto flex flex-col gap-1 text-sm text-bleu-fonce
+    children:
+      - type: container
+        props:
+          className: flex items-center gap-2
+        children:
+          - type: icon
+            props: { name: calendar, className: w-4 h-4 shrink-0 text-orange-ink, aria-hidden: 'true' }
+          # date_label is the French text of starts_at (« mar. 20 oct. · 19:00 »),
+          # written by label-event-date: a record-field in a row template
+          # prints English dates in 0.33.
+          - type: text
+            element: span
+            content: $record.date_label
+      - type: container
+        visibility: { record: { field: location, isNotEmpty: true } }
+        props:
+          className: flex items-center gap-2
+        children:
+          - type: icon
+            props: { name: map-pin, className: w-4 h-4 shrink-0 text-orange-ink, aria-hidden: 'true' }
+          - type: text
+            element: span
+            content: $record.location
+      - type: container
+        visibility: { record: { field: video_url, isNotEmpty: true } }
+        props:
+          className: flex items-center gap-2
+        children:
+          - type: icon
+            props: { name: video, className: w-4 h-4 shrink-0 text-orange-ink, aria-hidden: 'true' }
+          - type: text
+            element: span
+            content: En visio aussi

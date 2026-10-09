@@ -1,0 +1,74 @@
+# /espace/coordination/actualites — the coordination writes and publishes
+# news. Ticking « Envoyer par email » before publishing sends one Brevo
+# campaign to the bénévoles list (on-news-published); the send status and its
+# error are written by that automation and shown read-only here.
+name: espace-coordination-actualites
+path: /espace/coordination/actualites
+access: { require: [coordination, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Actualités à publier - Espace bénévole
+  description: Écrire, publier et envoyer les actualités aux bénévoles.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: actualités à publier
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Écris une actualité en brouillon, coche « Envoyer par email » si elle doit partir dans les boîtes mail, puis passe-la en « Publiée ». L'email ne part qu'une fois.
+          - type: alert
+            alertVariant: info
+            content: "Publier avec « Envoyer par email » coché envoie tout de suite une campagne à toute la liste des bénévoles. Relis le titre, le chapô et l'article avant de changer le statut."
+          - type: table
+            caption: Actualités
+            classes: { parts: { caption: sr-only } }
+            phoneLayout: rows
+            dataSource:
+              table: news
+              sort: [{ field: published_at, direction: desc }]
+              pagination: { pageSize: 25 }
+            toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
+            emptyMessage: Aucune actualité pour l'instant. Écris la première avec « Nouvel enregistrement ».
+            rowExpand:
+              title: Actualité
+              fields: [title, summary, body, image, status, published_at, send_email, send_status, send_error]
+            columns:
+              - { field: title, label: Titre }
+              - field: status
+                label: Statut
+                badgeForm: outline-dot
+                valueLabels: { draft: Brouillon, published: Publiée }
+                cellStyle:
+                  - { when: { eq: draft }, tone: warning }
+                  - { when: { eq: published }, tone: success }
+              - { field: published_at, label: Publiée le, format: datetime }
+              - { field: send_email, label: Envoyer par email, format: yes-no }
+              - field: send_status
+                label: Envoi email
+                badgeForm: outline-dot
+                editable: false
+                valueLabels: { sending: En cours, sent: Envoyé, failed: Échec }
+                cellStyle:
+                  - { when: { eq: sending }, tone: warning }
+                  - { when: { eq: sent }, tone: success }
+                  - { when: { eq: failed }, tone: error }
+              - { field: send_error, label: Erreur d'envoi, editable: false, truncate: true }

@@ -7,27 +7,27 @@ badge: false
 # Built-in privacy-friendly analytics (server-side; inert on static hosting)
 analytics:
   # The private Espace and sign-in pages are not audience traffic.
-  excludedPaths: [/_admin/*, /api/*, /connexion, /espace, /espace/*]
+  excludedPaths: [/_admin/*, /api/*, /connexion, /inscription, /espace, /espace/*]
 
 design:
   $ref: ./config/design.yaml
 
-# Data model — workshop catalogue and the facilitators' proposal workflow.
+# Data model — workshop catalogue and the facilitators' proposal workflow,
+# then the espace bénévole (members, agenda, needs, sign-ups, news).
 tables:
   - $ref: ./config/tables/facilitators.yaml
   - $ref: ./config/tables/venues.yaml
   - $ref: ./config/tables/workshop_proposals.yaml
   - $ref: ./config/tables/workshops.yaml
+  - $ref: ./config/tables/members.yaml
+  - $ref: ./config/tables/events.yaml
+  - $ref: ./config/tables/event_needs.yaml
+  - $ref: ./config/tables/event_participations.yaml
+  - $ref: ./config/tables/news.yaml
 
-# Authentication — needed for the admin console (/_admin) and the design-system
-# console on a dev server. No public sign-up: accounts are created by an admin
-# (first one via AUTH_ADMIN_EMAIL / AUTH_ADMIN_PASSWORD in .env, or `sovrium admin create`).
-# Inert on the static GitHub Pages build.
+# Authentication and roles (candidat → member / facilitateur → coordination → admin).
 auth:
-  strategies:
-    - type: emailAndPassword
-  allowSignUp: false
-  defaultRole: member
+  $ref: ./config/auth.yaml
 
 # Environment the app needs (values live in .env, names in .env.example).
 # HELLOASSO_BILLETERIE_PLUS_API_KEY is deliberately NOT declared: it only serves
@@ -44,9 +44,20 @@ env:
     secret: false
   - { key: HELLOASSO_CONTACT_EMAIL, description: Contact email shown on each HelloAsso event, secret: false }
   - { key: ADMIN_NOTIFY_EMAIL, description: Who is emailed when a HelloAsso automation fails (optional), required: false, secret: false }
+  # Espace bénévole — Brevo contacts and campaigns (the same key also serves
+  # EMAIL_PROVIDER=brevo for transactional mail), and the WhatsApp community.
+  - { key: BREVO_API_KEY, description: Brevo API key (contacts and email campaigns) }
+  - { key: BREVO_LIST_BENEVOLES_ID, description: Id of the Brevo list of validated bénévoles (a number), secret: false }
+  - { key: BREVO_SENDER_EMAIL, description: Sender address of the news campaigns (a verified Brevo sender), secret: false }
+  - { key: BREVO_SENDER_NAME, description: Sender name of the news campaigns (e.g. Merci pour ton non), secret: false }
+  - { key: WHATSAPP_COMMUNITY_URL, description: Invitation link to the bénévoles' WhatsApp community, secret: false }
+  - key: BASE_URL
+    description: Public origin of the app (https://mercipourtonnon.fr), used for links in emails
+    secret: false
 
 connections:
   - $ref: ./config/connections/helloasso.yaml
+  - $ref: ./library/connection/brevo.yaml
 
 # Reusable automation steps.
 actions:
@@ -59,6 +70,20 @@ automations:
   - $ref: ./config/automations/retry-helloasso.yaml
   - $ref: ./config/automations/publish-workshop-on-site.yaml
   - $ref: ./config/automations/notify-helloasso-failure.yaml
+  # Espace bénévole.
+  - $ref: ./config/automations/save-member-profile.yaml
+  - $ref: ./config/automations/on-sign-up.yaml
+  - $ref: ./config/automations/validate-member.yaml
+  - $ref: ./config/automations/refuse-member.yaml
+  - $ref: ./config/automations/archive-member.yaml
+  - $ref: ./config/automations/on-member-validated.yaml
+  - $ref: ./config/automations/on-member-archived.yaml
+  - $ref: ./config/automations/on-news-published.yaml
+  - $ref: ./config/automations/on-participation.yaml
+  - $ref: ./config/automations/label-event-date.yaml
+  - $ref: ./config/automations/label-news-date.yaml
+  - $ref: ./config/automations/label-need.yaml
+  - $ref: ./config/automations/notify-espace-failure.yaml
 
 components:
   - $ref: ./config/components/site-footer.yaml
@@ -73,6 +98,11 @@ components:
   - $ref: ./config/components/knowledge-card.yaml
   - $ref: ./config/components/term-card.yaml
   - $ref: ./config/components/espace-shell.yaml
+  # Espace bénévole cards (row templates over events, news and members).
+  - $ref: ./config/components/event-card.yaml
+  - $ref: ./config/components/news-card.yaml
+  - $ref: ./config/components/member-card.yaml
+  - $ref: ./config/components/whatsapp-card.yaml
 
 pages:
   - $ref: ./config/pages/home.yaml
@@ -82,17 +112,35 @@ pages:
   - $ref: ./config/pages/ressources.yaml
   # One page per published workshop date (/ateliers/:slug).
   - $ref: ./config/pages/atelier.yaml
-  # Espace facilitateur·ices (private, noindex, out of the sitemap).
+  # Espace facilitateur·ices and coordination (private, noindex, out of the sitemap).
   - $ref: ./config/pages/espace-connexion.yaml
   - $ref: ./config/pages/espace-accueil.yaml
   - $ref: ./config/pages/espace-proposer.yaml
   - $ref: ./config/pages/espace-proposition.yaml
   - $ref: ./config/pages/espace-validation.yaml
   - $ref: ./config/pages/espace-ateliers.yaml
+  # Espace bénévole (private, noindex, out of the sitemap).
+  - $ref: ./config/pages/espace-inscription.yaml
+  - $ref: ./config/pages/espace-arrivee.yaml
+  - $ref: ./config/pages/espace-en-attente.yaml
+  - $ref: ./config/pages/espace-agenda.yaml
+  - $ref: ./config/pages/espace-agenda-evenement.yaml
+  - $ref: ./config/pages/espace-actualites.yaml
+  - $ref: ./config/pages/espace-actualite.yaml
+  - $ref: ./config/pages/espace-membres.yaml
+  - $ref: ./config/pages/espace-membre.yaml
+  - $ref: ./config/pages/espace-profil.yaml
+  - $ref: ./config/pages/espace-coordination-membres.yaml
+  - $ref: ./config/pages/espace-coordination-agenda.yaml
+  - $ref: ./config/pages/espace-coordination-actualites.yaml
 
-# Facilitators propose a workshop date (embedded on /espace/proposer).
+# Standalone forms, embedded in pages with formRef.
 forms:
+  # Facilitators propose a workshop date (embedded on /espace/proposer).
   - $ref: ./config/forms/proposer-un-atelier.yaml
+  # Espace bénévole: member profile and event sign-up.
+  - $ref: ./config/forms/member-profile.yaml
+  - $ref: ./config/forms/event-participation.yaml
 
 # URLs of the retired static (GitHub Pages) export.
 redirects:
