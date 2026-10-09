@@ -12,10 +12,6 @@ analytics:
 design:
   $ref: ./config/design.yaml
 
-# French only (built-in UI strings, date formats).
-languages:
-  $ref: ./config/languages.yaml
-
 # Data model — workshop catalogue and the facilitators' proposal workflow.
 tables:
   - $ref: ./config/tables/facilitators.yaml
