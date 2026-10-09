@@ -2,8 +2,9 @@
 # Notion « Évènements » database). « Atelier Niveau 1 » sessions are NOT here:
 # they live in `workshops`, and the agenda reads both.
 #
-# member+ read published (and cancelled) events; drafts are seen by the
-# coordination only. The coordination creates, edits and publishes.
+# member+ read published (and cancelled) events; drafts are read by the Cercle
+# Cœur and above. Logistique and communication (groups) and the Cercle Gardien
+# create, edit and publish.
 id: 6
 name: events
 fields:
@@ -46,19 +47,20 @@ fields:
       - { value: cancelled, label: Annulé }
   - { id: 12, name: created_by, label: Créé par, type: created-by }
   - { id: 13, name: created_at, label: Créé le, type: created-at }
-  # Technical, same role as members.editor_role: lets the coordination through
-  # the read rule on drafts.
-  - { id: 14, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+  # Technical, same role as members.editor_role: lets the Cercle Cœur through
+  # the read rule on drafts (a row rule reads the role, never a group). The
+  # gardien role is admin-equivalent and bypasses row rules.
+  - { id: 14, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coeur }
   # French label of starts_at for cards, e.g. « lun. 20 oct. · 19:00 »
   # (Europe/Paris). Written by label-event-date; like workshops.date_label.
   - { id: 15, name: date_label, label: Date (texte), type: single-line-text }
 permissions:
-  read: [member, facilitateur, coordination, admin]
-  create: [coordination, admin]
-  update: [coordination, admin]
-  delete: [coordination, admin]
+  read: [member, coeur, gardien, admin]
+  create: ['group:logistique', 'group:communication', gardien, admin]
+  update: ['group:logistique', 'group:communication', gardien, admin]
+  delete: ['group:logistique', 'group:communication', gardien, admin]
   fields:
-    - { field: editor_role, read: [coordination, admin], write: [admin] }
+    - { field: editor_role, read: [gardien, admin], write: [admin] }
     - { field: date_label, write: [admin] }
 rowLevelPermissions:
   read:

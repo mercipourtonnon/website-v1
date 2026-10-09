@@ -2,12 +2,17 @@
 # approval workflow (proposed → approved → helloasso_draft → published, plus
 # rejected, withdrawn and sync_error). The public catalogue is `workshops`.
 #
-# A facilitateur·ice reads only the proposals she made, creates them as
-# `proposed`, and edits or deletes them only while they are still `proposed`.
-# The coordination reads and updates every proposal (row rules on editor_role)
-# and runs Approuver / Publier / Réessayer. Status, review and HelloAsso fields
-# are written by the coordination, an admin or the automations — never by a
+# A facilitateur·ice (group facilitation) reads only the proposals she made,
+# creates them as `proposed`, and edits or deletes them only while they are
+# still `proposed`. The Cercle Gardien reads and updates every proposal and runs
+# Approuver / Publier / Réessayer. Status, review and HelloAsso fields are
+# written by the Cercle Gardien, an admin or the automations — never by a
 # facilitateur·ice.
+#
+# Why not the logistique group: a button's automation and a field `write` grant
+# read the caller's role only (Sovrium 0.34.1), and a facilitator holds the same
+# role (coeur) as a logisticien·ne. Opening approval to a role would open it to
+# every facilitator, on her own dates too.
 id: 3
 name: workshop_proposals
 fields:
@@ -91,25 +96,26 @@ fields:
     action: automation
     automation: retry-helloasso
     visibleWhen: { field: status, eq: sync_error }
-  # Technical: holds `coordination` on every row so the row rules below let
-  # that role through (a row rule cannot name a role). Never shown; admins only.
+  # Technical: holds `gardien` on every row so the row rules below let
+  # that role through (a row rule cannot name a role; gardien also bypasses
+  # row rules, being admin-equivalent). Never shown; admins only.
   # Existing rows: see the note at the end of this file.
-  - { id: 18, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+  - { id: 18, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: gardien }
 permissions:
-  read: [admin, coordination, facilitateur]
-  create: [admin, coordination, facilitateur]
-  update: [admin, coordination, facilitateur]
-  delete: [admin, coordination, facilitateur]
+  read: ['group:facilitation', gardien, admin]
+  create: ['group:facilitation', gardien, admin]
+  update: ['group:facilitation', gardien, admin]
+  delete: ['group:facilitation', gardien, admin]
   fields:
-    - { field: status, write: [admin, coordination] }
-    - { field: reviewer_note, write: [admin, coordination] }
-    - { field: helloasso_form_slug, write: [admin, coordination] }
-    - { field: helloasso_url, write: [admin, coordination] }
-    - { field: sync_error, write: [admin, coordination] }
-    - { field: capacity, write: [admin, coordination] }
-    - { field: venue, write: [admin, coordination] }
-    - { field: duration_minutes, write: [admin, coordination] }
-    - { field: editor_role, read: [admin, coordination], write: [admin] }
+    - { field: status, write: [gardien, admin] }
+    - { field: reviewer_note, write: [gardien, admin] }
+    - { field: helloasso_form_slug, write: [gardien, admin] }
+    - { field: helloasso_url, write: [gardien, admin] }
+    - { field: sync_error, write: [gardien, admin] }
+    - { field: capacity, write: [gardien, admin] }
+    - { field: venue, write: [gardien, admin] }
+    - { field: duration_minutes, write: [gardien, admin] }
+    - { field: editor_role, read: [gardien, admin], write: [admin] }
 # Admins bypass these rules (auth-access/auth-roles-rbac); automations started
 # by a record event write as the system.
 rowLevelPermissions:
@@ -148,5 +154,7 @@ rowLevelPermissions:
         - { field: status, operator: eq, value: proposed }
 # editor_role on existing rows: Sovrium 0.33 fills the new column's default
 # into rows already there when the app starts (checked on SQLite: proposals
-# created before the column read back `coordination`). No migration step;
-# if a row ever reads empty, `PATCH editor_role: coordination` as an admin.
+# created before the column read back `coordination`). Since the 2026-10
+# governance roles, rows created before hold `coordination`: harmless (the
+# gardien role bypasses row rules), and scripts/migrate-governance-roles.sh
+# rewrites them to `gardien`.

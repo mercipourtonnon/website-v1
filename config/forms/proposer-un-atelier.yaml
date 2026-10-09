@@ -1,7 +1,7 @@
 # A facilitator proposes one workshop date. Writes a `workshop_proposals` row
 # (status defaults to `proposed`; capacity and duration keep the table defaults
 # and are set by an admin at review). The venue is optional: left empty, the
-# coordination sets it at review, and build-workshop-payload falls back to its
+# Cercle Gardien sets it at review, and build-workshop-payload falls back to its
 # DEFAULT_PLACE when it is still empty at publication. Embedded on /espace/proposer
 # with formRef; also reachable at /forms/proposer-un-atelier under the same
 # access rule.
@@ -10,7 +10,7 @@ name: proposer-un-atelier
 title: Proposer une date d'atelier
 description: Propose une date pour un atelier de consentement de niveau 1. L'équipe la relit avant de la mettre en ligne, et tu suis son avancée dans **Mes propositions**.
 access:
-  require: [admin, coordination, facilitateur]
+  require: ['group:facilitation', gardien, admin]
   redirectTo: /connexion
 submitTo:
   table: workshop_proposals

@@ -1,0 +1,89 @@
+# « Rôles bénévoles » ticked on a members row → the account's groups.
+# The account is in group:<value> for each ticked role while the row is
+# `validated`, and in none otherwise (archived, refused, pending).
+#
+# Every team is visited: add the wanted ones, remove the others. Both calls
+# answer 400 when there is nothing to do (already in / not in the team), which
+# is the idempotent outcome, so those are logged and skipped. Any other failure
+# fails the run and notify-espace-failure tells the Cercle Gardien.
+#
+# Groups only give rights through `group:` grants, so ticking a role on an
+# Abeille (role member) gives her that role's tools. The governance reserves
+# volunteer roles to the Cercle Cœur: move the account to `coeur` first.
+#
+# Skipped (with a warning) while SOVRIUM_ADMIN_API_KEY is unset, and it cannot
+# run on localhost: see config/connections/sovrium-admin.yaml.
+#
+# Loop check: watches volunteer_roles and status; writes nothing to members.
+name: sync-member-groups
+description: Applique les rôles bénévoles cochés sur une fiche aux groupes du compte.
+trigger:
+  type: record
+  table: members
+  events: [create, update]
+  watchFields: [volunteer_roles, status]
+timeout: 60000
+actions:
+  - name: member
+    type: record
+    operator: read
+    props:
+      table: members
+      id: '{{trigger.data.record.id}}'
+  - name: sync
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 45000
+      inputData:
+        account: '{{member.record.account}}'
+        status: '{{member.record.status}}'
+        roles: '{{member.record.volunteer_roles}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const account = String(input.account || '').trim();
+          if (!account) {
+            context.log.warn('Fiche sans compte : aucun groupe à synchroniser.');
+            return { skipped: 'no-account' };
+          }
+          if (!String(context.env.SOVRIUM_ADMIN_API_KEY || '').trim()) {
+            context.log.warn('SOVRIUM_ADMIN_API_KEY absente : groupes non synchronisés.');
+            return { skipped: 'no-api-key' };
+          }
+          // A multi-select may reach the step as an array, a JSON string or "a,b".
+          const raw = input.roles;
+          let list: unknown[] = [];
+          if (Array.isArray(raw)) list = raw;
+          else if (typeof raw === 'string' && raw.trim().startsWith('[')) list = JSON.parse(raw);
+          else if (typeof raw === 'string') list = raw.split(',');
+          const wanted = new Set(
+            String(input.status) === 'validated' ? list.map((v) => String(v).trim()).filter(Boolean) : [],
+          );
+
+          type Res = { status?: number; data?: any };
+          const call = (operation: string, params: Record<string, unknown> = {}) =>
+            context.actions.connection.call({ connection: 'sovrium-admin', operation, params, timeout: 10000 }) as unknown as Promise<Res>;
+
+          const teams: Array<{ id: string; name: string; organizationId: string }> =
+            ((await call('list-teams')).data?.teams) ?? [];
+          if (teams.length === 0) throw new Error('Aucun groupe renvoyé par list-teams.');
+
+          const done: string[] = [];
+          for (const team of teams) {
+            const operation = wanted.has(team.name) ? 'add-team-member' : 'remove-team-member';
+            try {
+              await call(operation, { teamId: team.id, userId: account, organizationId: team.organizationId });
+              done.push(`${operation === 'add-team-member' ? '+' : '-'}${team.name}`);
+            } catch (error) {
+              const message = String(error);
+              // "already a member" / "not a member": nothing to change.
+              if (/\b400\b|already|not a member|not found/i.test(message)) continue;
+              throw error;
+            }
+          }
+          const unknown = [...wanted].filter((name) => !teams.some((t) => t.name === name));
+          if (unknown.length) context.log.warn(`Rôles sans groupe déclaré : ${unknown.join(', ')}`);
+          context.log.info(`groupes : ${done.join(' ') || 'inchangés'}`);
+          return { groups: [...wanted], changed: done };
+        }

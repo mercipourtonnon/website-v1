@@ -78,12 +78,13 @@ fields:
     default: unknown
     options: [unknown, yes, no]
 permissions:
-  # Facilitators and coordination. Never `all`, never `member` (a member is any
-  # bénévole, who has no business reading participants' data).
-  read: [admin, coordination, facilitateur]
+  # Facilitation and logistique (groups), the Cercle Gardien. Never `all`, never
+  # a circle (any bénévole has no business reading participants' data); the
+  # trésorerie reads the figures on `workshops`, not the people.
+  read: ['group:facilitation', 'group:logistique', gardien, admin]
   # On-site walk-ins (the form locks source, status and attendance).
-  create: [admin, coordination, facilitateur]
-  update: [admin, coordination, facilitateur]
+  create: ['group:facilitation', 'group:logistique', gardien, admin]
+  update: ['group:facilitation', 'group:logistique', gardien, admin]
   delete: [admin]
   fields:
     - { field: external_id, write: [admin] }

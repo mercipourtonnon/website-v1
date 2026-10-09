@@ -1,14 +1,15 @@
 # One row per bénévole (replaces the Notion « 👯 Membres » database). Created
 # as `pending` by on-sign-up when someone opens an account, filled in through
-# the member-profile form, then validated or refused by the coordination
+# the member-profile form, then validated or refused by the Cercle Gardien
 # (validate-member / refuse-member / archive-member buttons).
 #
 # Who sees what:
 #   - member+ read the validated profiles (the directory) and their own row;
-#     the coordination also reads pending, refused and archived rows.
-#   - email, phone and the Brevo id are read by the coordination and admins only.
+#     the Cercle Gardien also reads pending, refused and archived rows.
+#   - email, phone and the Brevo id are read by the Cercle Gardien and admins only.
 #   - each person edits only their own row; status, validation date and the
-#     facilitator link are written by the coordination (or the automations).
+#     facilitator link and the volunteer roles are written by the Cercle
+#     Gardien (or the automations).
 #   - a candidat has no table access at all: her profile goes through the
 #     member-profile form (→ save-member-profile).
 id: 5
@@ -56,15 +57,29 @@ fields:
     relationType: many-to-one
     displayField: display_name
     onDelete: set-null
+  # Volunteer roles held (Notion « 🦸 Rôles »). The source of truth for the
+  # account's groups: sync-member-groups mirrors it to the group:<value>
+  # memberships on every change. Written by the Cercle Gardien. The circle
+  # itself is the account role, changed in the console.
+  - id: 26
+    name: volunteer_roles
+    label: Rôles bénévoles
+    type: multi-select
+    options:
+      - { value: facilitation, label: Facilitation, color: '#7B01FE' }
+      - { value: logistique, label: Logistique, color: '#12A19D' }
+      - { value: communication, label: Communication, color: '#FF7000' }
+      - { value: tresorerie, label: Trésorerie, color: '#130077' }
+      - { value: polyvalent, label: Contribution polyvalente, color: '#F5004F' }
   # Written by on-member-validated (Brevo contact id, as text).
   - { id: 20, name: brevo_contact_id, label: Contact Brevo, type: single-line-text }
   - { id: 21, name: joined_at, label: Inscrit·e le, type: created-at }
-  # Technical: holds `coordination` on every row so the row rules below can
-  # let that role through (a row rule only compares a field with the caller;
+  # Technical: holds `gardien` on every row so the row rules below can
+  # let that role through (it also bypasses them, being admin-equivalent) (a row rule only compares a field with the caller;
   # it cannot name a role on its own). Never shown, written by admins only.
-  - { id: 22, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+  - { id: 22, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: gardien }
   # Row actions. Visibility only; each automation gates who may run it
-  # (requiredRole coordination), and pressing one needs write access to the row.
+  # (requiredRole gardien), and pressing one needs write access to the row.
   - id: 23
     name: validate
     type: button
@@ -87,21 +102,22 @@ fields:
     automation: archive-member
     visibleWhen: { field: status, eq: validated }
 permissions:
-  read: [member, facilitateur, coordination, admin]
+  read: [member, coeur, gardien, admin]
   create: [admin]
-  update: [member, facilitateur, coordination, admin]
+  update: [member, coeur, gardien, admin]
   delete: [admin]
   fields:
     - { field: account, write: [admin] }
-    - { field: contact_email, read: [coordination, admin], write: [coordination, admin] }
+    - { field: contact_email, read: [gardien, admin], write: [gardien, admin] }
     # Suggestion-box shape: a bénévole may set her own phone without reading
     # anyone else's.
-    - { field: phone, read: [coordination, admin], write: [member, facilitateur, coordination, admin] }
-    - { field: status, write: [coordination, admin] }
+    - { field: phone, read: [gardien, admin], write: [member, coeur, gardien, admin] }
+    - { field: status, write: [gardien, admin] }
     - { field: validated_at, write: [admin] }
-    - { field: facilitator, write: [coordination, admin] }
-    - { field: brevo_contact_id, read: [coordination, admin], write: [admin] }
-    - { field: editor_role, read: [coordination, admin], write: [admin] }
+    - { field: facilitator, write: [gardien, admin] }
+    - { field: volunteer_roles, write: [gardien, admin] }
+    - { field: brevo_contact_id, read: [gardien, admin], write: [admin] }
+    - { field: editor_role, read: [gardien, admin], write: [admin] }
 # Admins bypass these rules; automations write as the system.
 rowLevelPermissions:
   read:

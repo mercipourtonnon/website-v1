@@ -114,21 +114,21 @@ fields:
   - { id: 30, name: cash_entries, label: Saisie sur place, type: count, relationshipField: cash }
 permissions:
   read: all
-  # Coordination: publish-workshop-on-site upserts the row with the presser's rights.
-  create: [admin, coordination]
-  update: [admin, coordination]
+  # Cercle Gardien: publish-workshop-on-site upserts the row with the presser's rights.
+  create: [gardien, admin]
+  update: [gardien, admin]
   delete: [admin]
   fields:
-    - { field: proposal, read: [admin, coordination], write: [admin, coordination] }
-    - { field: helloasso_form_slug, read: [admin, coordination], write: [admin, coordination] }
-    - { field: registrations, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: cash, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: registrations_count, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: present_count, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: revenue_online, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: revenue_on_site, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: revenue_total, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: last_synced_at, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: revenue_online_eur, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: revenue_on_site_eur, read: [admin, coordination, facilitateur], write: [admin] }
-    - { field: cash_entries, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: proposal, read: [gardien, admin], write: [gardien, admin] }
+    - { field: helloasso_form_slug, read: [gardien, admin], write: [gardien, admin] }
+    - { field: registrations, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: cash, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: registrations_count, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: present_count, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: revenue_online, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: revenue_on_site, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: revenue_total, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: last_synced_at, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: revenue_online_eur, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: revenue_on_site_eur, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
+    - { field: cash_entries, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }

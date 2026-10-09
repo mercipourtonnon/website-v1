@@ -19,7 +19,7 @@ fields:
   - { id: 4, name: updated_by, label: Saisi par, type: updated-by }
   - { id: 5, name: updated_at, label: Saisi le, type: updated-at }
 permissions:
-  read: [admin, coordination, facilitateur]
-  create: [admin, coordination, facilitateur]
-  update: [admin, coordination, facilitateur]
-  delete: [admin]
+  read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin]
+  create: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin]
+  update: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin]
+  delete: [gardien, admin]

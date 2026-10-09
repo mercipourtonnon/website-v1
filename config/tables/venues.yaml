@@ -1,6 +1,7 @@
 # One row per place a workshop can happen. Only the name and the city are
-# public; the street address is given to signed-in bénévoles, facilitateur·ices
-# and the coordination (and to people who register, by HelloAsso).
+# public; the street address is given to signed-in bénévoles (member+) and to
+# people who register, by HelloAsso. Logistique (group) and the Cercle Gardien
+# manage the list.
 id: 2
 name: venues
 fields:
@@ -14,8 +15,8 @@ fields:
   - { id: 7, name: longitude, label: Longitude, type: decimal, precision: 7 }
 permissions:
   read: all
-  create: [admin]
-  update: [admin]
-  delete: [admin]
+  create: ['group:logistique', gardien, admin]
+  update: ['group:logistique', gardien, admin]
+  delete: [gardien, admin]
   fields:
-    - { field: street, read: [admin, coordination, facilitateur, member], write: [admin] }
+    - { field: street, read: [member, coeur, gardien, admin], write: [coeur, gardien, admin] }

@@ -28,7 +28,8 @@ tables:
   - $ref: ./config/tables/registrations.yaml
   - $ref: ./config/tables/workshop_cash.yaml
 
-# Authentication and roles (candidat → member / facilitateur → coordination → admin).
+# Authentication: circles as roles (candidat → member/Abeilles → coeur → gardien,
+# + admin) and volunteer roles as groups (facilitation, logistique, …).
 auth:
   $ref: ./config/auth.yaml
 
@@ -57,6 +58,9 @@ env:
   - { key: BREVO_SENDER_EMAIL, description: Sender address of the news campaigns (a verified Brevo sender), secret: false }
   - { key: BREVO_SENDER_NAME, description: Sender name of the news campaigns (e.g. Merci pour ton non), secret: false }
   - { key: WHATSAPP_COMMUNITY_URL, description: Invitation link to the bénévoles' WhatsApp community, secret: false }
+  - key: SOVRIUM_ADMIN_API_KEY
+    description: An admin's API key (POST /api/auth/api-key/create), used by sync-member-groups to set volunteer-role groups
+    required: false
   - key: BASE_URL
     description: Public origin of the app (https://mercipourtonnon.fr), used for links in emails
     secret: false
@@ -64,6 +68,8 @@ env:
 connections:
   - $ref: ./config/connections/helloasso.yaml
   - $ref: ./library/connection/brevo.yaml
+  # Volunteer roles → groups (sync-member-groups).
+  - $ref: ./config/connections/sovrium-admin.yaml
 
 # Reusable automation steps.
 actions:
@@ -82,6 +88,7 @@ automations:
   - $ref: ./config/automations/validate-member.yaml
   - $ref: ./config/automations/refuse-member.yaml
   - $ref: ./config/automations/archive-member.yaml
+  - $ref: ./config/automations/sync-member-groups.yaml
   - $ref: ./config/automations/on-member-validated.yaml
   - $ref: ./config/automations/on-member-archived.yaml
   - $ref: ./config/automations/on-news-published.yaml
@@ -130,7 +137,7 @@ pages:
   - $ref: ./config/pages/ressources.yaml
   # One page per published workshop date (/ateliers/:slug).
   - $ref: ./config/pages/atelier.yaml
-  # Espace facilitateur·ices and coordination (private, noindex, out of the sitemap).
+  # Espace facilitateur·ices and Cercle Gardien (private, noindex, out of the sitemap).
   - $ref: ./config/pages/espace-connexion.yaml
   - $ref: ./config/pages/espace-accueil.yaml
   - $ref: ./config/pages/espace-proposer.yaml

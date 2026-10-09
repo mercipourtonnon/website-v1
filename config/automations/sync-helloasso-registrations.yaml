@@ -1,13 +1,14 @@
 # "Synchroniser maintenant" on /espace/suivi/:id — the facilitators' way to pull
 # the latest registrations the morning of a workshop, without waiting for the cron.
-# The page's `access` is the grant; requiredRole also opens the API road to members.
+# The page's `access` is the grant (groups facilitation and logistique);
+# requiredRole reads the role only, so it opens the API road to the Cercle Cœur.
 name: sync-helloasso-registrations
 description: Synchronise tout de suite les inscriptions HelloAsso d'une date.
 trigger:
   type: manual
   label: Synchroniser les inscriptions
-  # Lowest role allowed; coordination (higher level) and admin pass too.
-  requiredRole: facilitateur
+  # Lowest role allowed; gardien and admin pass too.
+  requiredRole: coeur
   inputSchema: { recordId: { type: string } }
 timeout: 150000
 actions:
