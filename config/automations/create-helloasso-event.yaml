@@ -75,6 +75,8 @@ actions:
       code: |
         async function execute(context) {
           // A failed step exposes its error on `error` or on its last `attempts[]` entry.
+          // (Sovrium 0.33.0: under continueOnError `{{step.error}}` renders empty; the
+          // error is only in `attempts[]` when the step has a retry. Not documented either way.)
           function stepError(step: unknown): string {
             if (!step || typeof step !== 'object') return '';
             const s = step as Record<string, unknown>;
@@ -231,7 +233,8 @@ actions:
 
   # 6b. End a failed attempt as a FAILED run, so notify-helloasso-failure fires.
   #     (A `flow/stop` with status error inside the branch ended the run as
-  #     `completed-with-errors` in Sovrium 0.33.0, which no failure trigger sees.)
+  #     `completed-with-errors` in Sovrium 0.33.0, which no failure trigger sees:
+  #     sovrium/sovrium#132.)
   - name: fail_on_error
     type: code
     operator: runTypescript

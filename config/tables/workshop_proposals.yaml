@@ -65,6 +65,8 @@ fields:
   - { id: 13, name: helloasso_url, label: Lien HelloAsso, type: url }
   - { id: 14, name: sync_error, label: Erreur de synchronisation, type: long-text }
   # Row actions. Visibility only; each automation gates who may run it.
+  # No lookup/count on this table: in Sovrium 0.33.0 one next to a button field
+  # breaks every insert (sovrium/sovrium#130). Names are read in build-workshop-payload.
   - id: 15
     name: approve
     type: button

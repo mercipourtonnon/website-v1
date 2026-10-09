@@ -21,4 +21,5 @@ permissions:
     - { field: contact_email, read: [admin], write: [admin] }
     - { field: phone, read: [admin], write: [admin] }
 # Note: the email field is `contact_email`, not `email`: in Sovrium 0.33.0 an
-# unreadable table field named `email` makes the sign-in block drop its email input.
+# unreadable table field named `email` makes the sign-in block drop its email input
+# (sovrium/sovrium#131).
