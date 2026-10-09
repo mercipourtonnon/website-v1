@@ -1,0 +1,70 @@
+# A new account (self sign-up, role candidat) gets its `members` row, status
+# pending, and the coordination is told someone is waiting.
+#
+# Accounts created another way — an invitation with role member (the Notion
+# import), the bootstrap admin — are not candidat and are skipped: they come
+# with their own row. Re-running is harmless: an existing row is kept.
+name: on-sign-up
+description: Crée la fiche bénévole « en attente » d'un nouveau compte et prévient la coordination.
+trigger:
+  type: auth
+  events: [signUp]
+timeout: 60000
+actions:
+  - name: only_candidat
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: '{{trigger.data.user.role}}', operator: equals, value: candidat }
+  - name: profile
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 15000
+      inputData:
+        id: '{{trigger.data.user.id}}'
+        email: '{{trigger.data.user.email}}'
+        name: '{{trigger.data.user.name}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const id = String(input.id || '').trim();
+          const email = String(input.email || '').trim();
+          if (!id) throw new Error('Inscription sans identifiant de compte.');
+          const link = `${String(context.env.BASE_URL || '').replace(/\/+$/, '')}/espace/coordination/membres`;
+          const name = String(input.name || '').trim() || email.split('@')[0] || 'Nouvelle personne';
+          const found = (await context.actions.record.list({
+            table: 'members',
+            filter: { conditions: [{ field: 'account', operator: 'equals', value: id }] },
+            limit: 1,
+          })) as unknown as { records?: Array<Record<string, unknown>> };
+          if (found && Array.isArray(found.records) && found.records.length > 0) {
+            context.log.info('fiche déjà présente');
+            return { created: false, name, link };
+          }
+          await context.actions.record.create({
+            table: 'members',
+            data: { account: id, display_name: name, contact_email: email, status: 'pending' },
+          });
+          return { created: true, name, link };
+        }
+  - name: has_recipient
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: $env.ADMIN_NOTIFY_EMAIL, operator: isNotEmpty }
+  - name: notify_coordination
+    type: email
+    operator: send
+    retry: { maxAttempts: 2, delayMs: 5000, strategy: exponential }
+    props:
+      to: $env.ADMIN_NOTIFY_EMAIL
+      subject: 'Espace bénévole : nouvelle inscription de {{profile.name}}'
+      body: |
+        <p><strong>{{profile.name}}</strong> ({{trigger.data.user.email}}) vient de créer son compte sur l'espace bénévole.</p>
+        <p>Sa fiche est en attente : dès qu'elle est remplie, tu peux la valider ou la refuser depuis la page coordination.</p>
+        <p><a href="{{profile.link}}">Voir les candidatures</a></p>

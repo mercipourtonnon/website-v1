@@ -44,9 +44,20 @@ env:
     secret: false
   - { key: HELLOASSO_CONTACT_EMAIL, description: Contact email shown on each HelloAsso event, secret: false }
   - { key: ADMIN_NOTIFY_EMAIL, description: Who is emailed when a HelloAsso automation fails (optional), required: false, secret: false }
+  # Espace bénévole — Brevo contacts and campaigns (the same key also serves
+  # EMAIL_PROVIDER=brevo for transactional mail), and the WhatsApp community.
+  - { key: BREVO_API_KEY, description: Brevo API key (contacts and email campaigns) }
+  - { key: BREVO_LIST_BENEVOLES_ID, description: Id of the Brevo list of validated bénévoles (a number), secret: false }
+  - { key: BREVO_SENDER_EMAIL, description: Sender address of the news campaigns (a verified Brevo sender), secret: false }
+  - { key: BREVO_SENDER_NAME, description: Sender name of the news campaigns (e.g. Merci pour ton non), secret: false }
+  - { key: WHATSAPP_COMMUNITY_URL, description: Invitation link to the bénévoles' WhatsApp community, secret: false }
+  - key: BASE_URL
+    description: Public origin of the app (https://mercipourtonnon.fr), used for links in emails
+    secret: false
 
 connections:
   - $ref: ./config/connections/helloasso.yaml
+  - $ref: ./library/connection/brevo.yaml
 
 # Reusable automation steps.
 actions:
@@ -61,6 +72,15 @@ automations:
   - $ref: ./config/automations/notify-helloasso-failure.yaml
   # Espace bénévole.
   - $ref: ./config/automations/save-member-profile.yaml
+  - $ref: ./config/automations/on-sign-up.yaml
+  - $ref: ./config/automations/validate-member.yaml
+  - $ref: ./config/automations/refuse-member.yaml
+  - $ref: ./config/automations/archive-member.yaml
+  - $ref: ./config/automations/on-member-validated.yaml
+  - $ref: ./config/automations/on-member-archived.yaml
+  - $ref: ./config/automations/on-news-published.yaml
+  - $ref: ./config/automations/on-participation.yaml
+  - $ref: ./config/automations/notify-espace-failure.yaml
 
 # Standalone forms of the espace bénévole (embedded in pages with formRef).
 forms:

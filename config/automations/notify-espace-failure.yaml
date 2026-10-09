@@ -1,0 +1,38 @@
+# Emails ADMIN_NOTIFY_EMAIL when an espace bénévole automation fails (Brevo
+# down, a bad list id, a profile that could not be saved…). Same pattern as
+# notify-helloasso-failure; skipped when ADMIN_NOTIFY_EMAIL is not set.
+name: notify-espace-failure
+description: Prévient la coordination quand une automatisation de l'espace bénévole échoue.
+trigger:
+  type: automation-failure
+  automations:
+    - on-sign-up
+    - save-member-profile
+    - validate-member
+    - refuse-member
+    - archive-member
+    - on-member-validated
+    - on-member-archived
+    - on-news-published
+    - on-participation
+timeout: 60000
+actions:
+  - name: has_recipient
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: $env.ADMIN_NOTIFY_EMAIL, operator: isNotEmpty }
+  - name: alert
+    type: email
+    operator: send
+    retry: { maxAttempts: 2, delayMs: 5000, strategy: exponential }
+    props:
+      to: $env.ADMIN_NOTIFY_EMAIL
+      subject: 'Espace bénévole : échec de « {{trigger.data.automationName}} »'
+      body: |
+        <p>L'automatisation <strong>{{trigger.data.automationName}}</strong> a échoué.</p>
+        <p>Erreur : {{trigger.data.error}}</p>
+        <p>Run : {{trigger.data.runId}}</p>
+        <p>Pour une actualité, regarde son « Envoi email » dans la page coordination ; une campagne créée mais pas envoyée peut être envoyée depuis Brevo. Pour un·e bénévole, le run peut être rejoué depuis la console d'administration une fois le problème réglé.</p>
