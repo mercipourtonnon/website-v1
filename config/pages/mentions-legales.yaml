@@ -239,8 +239,10 @@ components:
                       - type: text
                         element: p
                         content: "Le site est hébergé par :"
+                      # TODO(legal): complete with the host's legal name, postal address and
+                      # phone number once the Sovrium Cloud contract is signed (LCEN art. 6).
                       - type: customHTML
-                        content: "<p><strong>GitHub Pages</strong> (Microsoft Corporation)<br />One Microsoft Way<br />Redmond, WA 98052<br />États-Unis</p>"
+                        content: "<p><strong>Sovrium Cloud</strong>, service d'hébergement géré par Sovrium.</p>"
                       - type: text
                         element: p
                         content: Les données sont hébergées conformément au RGPD (Règlement Général sur la Protection des Données).
@@ -293,10 +295,10 @@ components:
                                 element: span
                                 props:
                                   className: font-bold
-                                content: "Hébergement européen :"
+                                content: "Hébergement :"
                               - type: text
                                 element: span
-                                content: " Toutes les données du site sont hébergées dans l'Union européenne (via GitHub Pages/Microsoft), garantissant la conformité avec le RGPD."
+                                content: " Le site et ses données (ateliers, comptes des facilitateur·ices, statistiques de visite) sont hébergés sur Sovrium Cloud, conformément au RGPD."
                       - type: text
                         element: p
                         props:
@@ -340,7 +342,27 @@ components:
                                 content: "Inscriptions aux ateliers :"
                               - type: text
                                 element: span
-                                content: " Gérées via la plateforme tierce Billetweb (nom, prénom, email, téléphone si fourni). Consulte la politique de confidentialité de Billetweb pour plus d'informations sur le traitement de tes données."
+                                content: " Gérées via la plateforme tierce HelloAsso, qui traite tes données d'inscription et de paiement (nom, prénom, email, réponses au formulaire d'inscription, téléphone si fourni, et ton paiement ou ton don si tu en fais un). Consulte la "
+                              - type: link
+                                props:
+                                  href: https://www.helloasso.com/confidentialite
+                                  target: _blank
+                                  rel: noopener noreferrer
+                                  className: text-orange hover:underline
+                                content: politique de confidentialité de HelloAsso
+                              - type: text
+                                element: span
+                                content: " pour plus d'informations."
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
+                                content: "Comptes des facilitateur·ices :"
+                              - type: text
+                                element: span
+                                content: " Les personnes qui animent nos ateliers ont un compte sur l'espace facilitateur·ices (nom, adresse email, mot de passe chiffré, propositions de dates). Ces comptes sont créés sur invitation par l'association, et servent uniquement à organiser les ateliers."
                           - type: list-item
                             children:
                               - type: text
@@ -370,7 +392,7 @@ components:
                                 content: "Statistiques de navigation :"
                               - type: text
                                 element: span
-                                content: " Via Plausible Analytics, un outil respectueux de la vie privée qui ne collecte aucune donnée personnelle identifiable et ne pose pas de cookies de tracking."
+                                content: " Via l'outil de statistiques intégré à notre hébergement : il compte les pages vues, la provenance des visites et le type d'appareil, sans cookie, sans empreinte de navigateur et sans service tiers. Les données restent sur notre serveur, et rien n'est enregistré si ton navigateur demande de ne pas être suivi (Do Not Track)."
 
                   - type: text
                     element: h3
@@ -528,39 +550,23 @@ components:
                     children:
                       - type: text
                         element: p
-                        content: "Notre site utilise des cookies techniques nécessaires au bon fonctionnement du site. Le formulaire d'inscription à la newsletter (Brevo) peut utiliser des cookies techniques nécessaires à son fonctionnement. Nous utilisons également Plausible Analytics, qui est une solution d'analyse web respectueuse de la vie privée :"
+                        content: "Notre site n'utilise aucun cookie publicitaire ni de suivi. Les seuls cookies sont techniques :"
                       - type: list
                         props:
                           className: list-disc list-inside space-y-2 ml-4
                         children:
                           - type: list-item
-                            content: Ne collecte aucune donnée personnelle identifiable
+                            content: "Le cookie de session de l'espace facilitateur·ices : posé uniquement quand une personne se connecte, il la garde connectée. Il n'est lisible que par le serveur (httpOnly) et disparaît à la déconnexion ou à son expiration."
                           - type: list-item
-                            content: Ne pose pas de cookies de tracking
-                          - type: list-item
-                            content: Respecte le RGPD sans nécessiter de bandeau de consentement
-                          - type: list-item
-                            content: N'utilise pas ton adresse IP complète (anonymisation)
-                          - type: list-item
-                            content: Toutes les données sont hébergées dans l'Union européenne
+                            content: "Le formulaire d'inscription à la newsletter (Brevo) peut utiliser des cookies techniques nécessaires à son fonctionnement."
+                      - type: text
+                        element: p
+                        content: "Nos statistiques de visite ne posent aucun cookie : elles comptent les visites de façon anonyme, sans identifier personne. C'est pourquoi le site n'affiche pas de bandeau de consentement."
                       - type: text
                         element: p
                         props:
                           className: mt-4
-                        content: Tu peux néanmoins désactiver les cookies dans les paramètres de ton navigateur si tu le souhaites. Note que cela peut affecter certaines fonctionnalités du site.
-                      - type: text
-                        element: p
-                        children:
-                          - type: text
-                            element: span
-                            content: "En savoir plus sur Plausible : "
-                          - type: link
-                            props:
-                              href: https://plausible.io/privacy-focused-web-analytics
-                              target: _blank
-                              rel: noopener noreferrer
-                              className: text-orange hover:underline
-                            content: plausible.io/privacy-focused-web-analytics
+                        content: Tu peux néanmoins désactiver les cookies dans les paramètres de ton navigateur si tu le souhaites. Note que la connexion à l'espace facilitateur·ices ne fonctionnera plus.
 
               # Section 6: Propriété intellectuelle
               - type: container

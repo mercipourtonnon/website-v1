@@ -1,0 +1,24 @@
+# One row per person who facilitates workshops.
+# Public: the site credits facilitators by name. The linked account, email and
+# phone stay admin-only.
+id: 1
+name: facilitators
+fields:
+  - { id: 1, name: display_name, label: Nom affiché, type: single-line-text, required: true, unique: true }
+  - { id: 2, name: short_name, label: Prénom, type: single-line-text }
+  # The sign-in account of this facilitator (member role), once invited.
+  - { id: 3, name: account, label: Compte, type: user, unique: true }
+  - { id: 4, name: contact_email, label: Email de contact, type: email }
+  - { id: 5, name: phone, label: Téléphone, type: phone-number }
+  - { id: 6, name: active, label: Actif·ve, type: checkbox, default: true }
+permissions:
+  read: all
+  create: [admin]
+  update: [admin]
+  delete: [admin]
+  fields:
+    - { field: account, read: [admin], write: [admin] }
+    - { field: contact_email, read: [admin], write: [admin] }
+    - { field: phone, read: [admin], write: [admin] }
+# Note: the email field is `contact_email`, not `email`: in Sovrium 0.33.0 an
+# unreadable table field named `email` makes the sign-in block drop its email input.

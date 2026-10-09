@@ -5,10 +5,19 @@ description: Ateliers de consentement à prix libre à Strasbourg
 badge: false
 
 # Built-in privacy-friendly analytics (server-side; inert on static hosting)
-analytics: true
+analytics:
+  # The private Espace and sign-in pages are not audience traffic.
+  excludedPaths: [/_admin/*, /api/*, /connexion, /espace, /espace/*]
 
 design:
   $ref: ./config/design.yaml
+
+# Data model — workshop catalogue and the facilitators' proposal workflow.
+tables:
+  - $ref: ./config/tables/facilitators.yaml
+  - $ref: ./config/tables/venues.yaml
+  - $ref: ./config/tables/workshop_proposals.yaml
+  - $ref: ./config/tables/workshops.yaml
 
 # Authentication — needed for the admin console (/_admin) and the design-system
 # console on a dev server. No public sign-up: accounts are created by an admin
@@ -19,6 +28,37 @@ auth:
     - type: emailAndPassword
   allowSignUp: false
   defaultRole: member
+
+# Environment the app needs (values live in .env, names in .env.example).
+# HELLOASSO_BILLETERIE_PLUS_API_KEY is deliberately NOT declared: it only serves
+# the legacy script in scripts/.
+env:
+  - { key: HELLOASSO_CLIENT_ID, description: HelloAsso API client id (needs the FormAdministration privilege) }
+  - { key: HELLOASSO_CLIENT_SECRET, description: HelloAsso API client secret }
+  - { key: HELLOASSO_ORGANIZATION_SLUG, description: HelloAsso organisation slug (e.g. merci-pour-ton-non), secret: false }
+  - key: HELLOASSO_API_BASE_URL
+    description: HelloAsso API root — https://api.helloasso.com/v5 (sandbox https://api.helloasso-sandbox.com/v5)
+    secret: false
+  - key: HELLOASSO_TOKEN_URL
+    description: HelloAsso OAuth2 token endpoint — https://api.helloasso.com/oauth2/token (sandbox https://api.helloasso-sandbox.com/oauth2/token)
+    secret: false
+  - { key: HELLOASSO_CONTACT_EMAIL, description: Contact email shown on each HelloAsso event, secret: false }
+  - { key: ADMIN_NOTIFY_EMAIL, description: Who is emailed when a HelloAsso automation fails (optional), required: false, secret: false }
+
+connections:
+  - $ref: ./config/connections/helloasso.yaml
+
+# Reusable automation steps.
+actions:
+  - $ref: ./config/actions/build-workshop-payload.yaml
+
+# Proposal → approval → HelloAsso event → public catalogue.
+automations:
+  - $ref: ./config/automations/approve-workshop-proposal.yaml
+  - $ref: ./config/automations/create-helloasso-event.yaml
+  - $ref: ./config/automations/retry-helloasso.yaml
+  - $ref: ./config/automations/publish-workshop-on-site.yaml
+  - $ref: ./config/automations/notify-helloasso-failure.yaml
 
 components:
   - $ref: ./config/components/site-footer.yaml
@@ -32,6 +72,7 @@ components:
   - $ref: ./config/components/resource-card.yaml
   - $ref: ./config/components/knowledge-card.yaml
   - $ref: ./config/components/term-card.yaml
+  - $ref: ./config/components/espace-shell.yaml
 
 pages:
   - $ref: ./config/pages/home.yaml
@@ -39,3 +80,22 @@ pages:
   - $ref: ./config/pages/newsletter.yaml
   - $ref: ./config/pages/le-consentement.yaml
   - $ref: ./config/pages/ressources.yaml
+  # One page per published workshop date (/ateliers/:slug).
+  - $ref: ./config/pages/atelier.yaml
+  # Espace facilitateur·ices (private, noindex, out of the sitemap).
+  - $ref: ./config/pages/espace-connexion.yaml
+  - $ref: ./config/pages/espace-accueil.yaml
+  - $ref: ./config/pages/espace-proposer.yaml
+  - $ref: ./config/pages/espace-proposition.yaml
+  - $ref: ./config/pages/espace-validation.yaml
+  - $ref: ./config/pages/espace-ateliers.yaml
+
+# Facilitators propose a workshop date (embedded on /espace/proposer).
+forms:
+  - $ref: ./config/forms/proposer-un-atelier.yaml
+
+# URLs of the retired static (GitHub Pages) export.
+redirects:
+  - { from: /index.html, to: / }
+  - { from: /newsletter.html, to: /newsletter }
+  - { from: /mentions-legales.html, to: /mentions-legales }

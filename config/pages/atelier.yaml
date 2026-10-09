@@ -1,0 +1,255 @@
+# One page per published workshop date: /ateliers/2026-10-17-14h, …
+# Collection over the public `workshops` table (no row rule, so the sitemap
+# lists every date). Each page carries its own EducationEvent JSON-LD; the home
+# page no longer hardcodes dates (pages-seo/seo-structured-data: JSON-LD cannot
+# loop over rows on a listing page).
+name: atelier
+path: /ateliers/:slug
+collection:
+  table: workshops
+  slugField: slug
+  filter:
+    - { field: status, operator: eq, value: published }
+sitemap:
+  priority: 0.8
+  changefreq: weekly
+meta:
+  lang: fr-FR
+  title: Atelier consentement, $record.date_label
+  description: Atelier de consentement de 3h à $record.venue_city, $record.date_label à $record.time_label. Prix libre, 15 places. Apprends à poser tes limites.
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/ateliers/$record.slug
+  openGraph:
+    type: website
+    title: Atelier de consentement, $record.date_label
+    description: 3h pour explorer le consentement à $record.venue_city, $record.date_label à $record.time_label. Prix libre.
+    url: https://mercipourtonnon.fr/ateliers/$record.slug
+    image: https://mercipourtonnon.fr/social.png
+    imageAlt: Atelier sur le consentement - Merci pour ton non
+    siteName: Merci pour ton non
+    locale: fr_FR
+  twitter:
+    card: summary_large_image
+    image: https://mercipourtonnon.fr/social.png
+  schema:
+    educationEvent:
+      '@context': https://schema.org
+      '@type': EducationEvent
+      name: Atelier de consentement - Niveau 1 - $record.date_label à $record.time_label
+      description: Un atelier de 3h pour explorer le consentement dans un cadre bienveillant et participatif. Apprends à dire non, à poser tes limites et à construire des relations plus authentiques. Prix libre.
+      url: https://mercipourtonnon.fr/ateliers/$record.slug
+      startDate: $record.starts_at
+      endDate: $record.ends_at
+      eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
+      eventStatus: https://schema.org/EventScheduled
+      inLanguage: fr-FR
+      educationalLevel: Niveau 1
+      image: https://mercipourtonnon.fr/social.png
+      # Sovrium 0.33.0 writes every $record token as a string, so this reads
+      # "15"; schema.org consumers accept the numeric text.
+      maximumAttendeeCapacity: $record.capacity
+      # Only the venue name and the city are public; the street address goes
+      # to people who register.
+      location:
+        '@type': Place
+        name: $record.venue_name
+        address:
+          '@type': PostalAddress
+          addressLocality: $record.venue_city
+          addressCountry: FR
+      organizer:
+        '@type': Organization
+        name: Merci pour ton non
+        url: https://mercipourtonnon.fr
+      # Short names (lead_name / co_name look up short_name). meta cannot be
+      # gated per record, and a body <script> is stripped, so a date without
+      # a co-facilitator would emit one Person with an empty name.
+      performer:
+        - { '@type': Person, name: $record.lead_name }
+        - { '@type': Person, name: $record.co_name }
+      offers:
+        '@type': Offer
+        price: '0'
+        priceCurrency: EUR
+        availability: https://schema.org/InStock
+        url: $record.booking_url
+        description: Prix libre - personne n'est refusé·e par manque d'argent
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  preload:
+    - href: /fonts/BelyDisplay/BelyDisplay-Regular.woff2
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  dnsPrefetch:
+    - https://www.helloasso.com
+    - https://plusbilletterie.helloasso.com
+  customElements:
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+components:
+  - type: container
+    props:
+      className: min-h-screen flex flex-col bg-white
+    children:
+      # Navigation — same quiet bar as the legal page.
+      - type: container
+        element: nav
+        props:
+          className: w-full bg-white border-b border-gray-100
+        children:
+          - type: container
+            props:
+              className: max-w-5xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-4
+            children:
+              - type: link
+                props:
+                  href: /
+                  className: flex items-center
+                children:
+                  - type: image
+                    props:
+                      src: /logo-without-marging.svg
+                      alt: Merci pour ton non, accueil
+                      className: h-12 sm:h-14 w-auto
+              - type: link
+                props:
+                  href: /#events
+                  className: text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-orange-vif
+                content: Toutes les dates
+
+      - type: container
+        props:
+          className: flex-1 px-4 sm:px-6 py-12 sm:py-16 bg-orange-lighter
+        children:
+          - type: container
+            element: article
+            props:
+              className: max-w-3xl mx-auto bg-white rounded-lg border border-gray-200 border-t-4 border-t-orange p-6 sm:p-10 flex flex-col gap-8
+            children:
+              - type: container
+                element: header
+                props:
+                  className: flex flex-col gap-3
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: text-sm font-bold uppercase tracking-wide text-gray-600
+                    content: Atelier de consentement · Niveau 1 · Tout public
+                  - type: text
+                    element: h1
+                    props:
+                      className: text-3xl sm:text-5xl title-font text-bleu-fonce
+                    content: $record.date_label
+                  - type: text
+                    element: p
+                    props:
+                      className: text-lg text-gray-700
+                    content: Un atelier de 3h pour explorer le consentement dans un cadre bienveillant et participatif. Apprends à dire non, à poser tes limites et à construire des relations plus authentiques.
+
+              # The practical facts, as a description list.
+              - type: container
+                element: div
+                props:
+                  className: grid gap-4 sm:grid-cols-2
+                children:
+                  - type: container
+                    props: { className: flex items-start gap-3 }
+                    children:
+                      - type: icon
+                        props: { name: clock, className: w-5 h-5 text-orange shrink-0 mt-1, aria-hidden: 'true' }
+                      - type: container
+                        children:
+                          - { type: text, element: p, props: { className: text-sm text-gray-600 }, content: Horaire }
+                          - { type: text, element: p, props: { className: font-bold text-bleu-fonce }, content: 'Dès $record.time_label, pendant 3h' }
+                  - type: container
+                    props: { className: flex items-start gap-3 }
+                    children:
+                      - type: icon
+                        props: { name: map-pin, className: w-5 h-5 text-orange shrink-0 mt-1, aria-hidden: 'true' }
+                      - type: container
+                        children:
+                          - { type: text, element: p, props: { className: text-sm text-gray-600 }, content: Lieu }
+                          - { type: text, element: p, props: { className: font-bold text-bleu-fonce }, content: '$record.venue_name, $record.venue_city' }
+                          - { type: text, element: p, props: { className: text-sm text-gray-600 }, content: L'adresse exacte est envoyée aux personnes inscrites. }
+                  - type: container
+                    props: { className: flex items-start gap-3 }
+                    children:
+                      - type: icon
+                        props: { name: users, className: w-5 h-5 text-orange shrink-0 mt-1, aria-hidden: 'true' }
+                      - type: container
+                        children:
+                          - { type: text, element: p, props: { className: text-sm text-gray-600 }, content: Facilitation }
+                          - type: text
+                            element: p
+                            props: { className: font-bold text-bleu-fonce }
+                            content: $record.lead_name & $record.co_name
+                            visibility: { record: { field: co_name, isNotEmpty: true } }
+                          - type: text
+                            element: p
+                            props: { className: font-bold text-bleu-fonce }
+                            content: $record.lead_name
+                            visibility: { record: { field: co_name, isEmpty: true } }
+                  - type: container
+                    props: { className: flex items-start gap-3 }
+                    children:
+                      - type: icon
+                        props: { name: coins, className: w-5 h-5 text-orange shrink-0 mt-1, aria-hidden: 'true' }
+                      - type: container
+                        children:
+                          - { type: text, element: p, props: { className: text-sm text-gray-600 }, content: Participation }
+                          - { type: text, element: p, props: { className: font-bold text-bleu-fonce }, content: 'Prix libre, $record.capacity places' }
+                          - { type: text, element: p, props: { className: text-sm text-gray-600 }, content: Tu donnes ce que tu veux et ce que tu peux. Personne n'est refusé·e par manque d'argent. }
+
+              - type: container
+                props:
+                  className: flex flex-col gap-3 sm:flex-row sm:items-center
+                children:
+                  - type: link
+                    props:
+                      href: $record.booking_url
+                      target: _blank
+                      rel: noopener noreferrer
+                      aria-label: Réserver ta place le $record.date_label (nouvel onglet)
+                      className: inline-flex items-center justify-center gap-2 bg-orange text-bleu-fonce px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-bleu-fonce focus-visible:ring-offset-2
+                    children:
+                      - { type: text, element: span, content: Réserver ma place }
+                      - type: icon
+                        props: { name: arrow-up-right, className: w-5 h-5, aria-hidden: 'true' }
+                  - type: text
+                    element: p
+                    props:
+                      className: text-sm text-gray-600
+                    content: L'inscription se fait sur HelloAsso, dans un nouvel onglet.
+
+              - type: container
+                props:
+                  className: border-t border-gray-100 pt-6 text-sm text-gray-600
+                children:
+                  - type: text
+                    element: span
+                    content: 'Une question avant de t''inscrire ? '
+                  - type: link
+                    props:
+                      href: /#faq
+                      className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4
+                    content: Lis la FAQ
+                  - type: text
+                    element: span
+                    content: ' ou écris-nous à '
+                  - type: link
+                    props:
+                      href: mailto:mercipourtonnon@gmail.com
+                      className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4
+                    content: mercipourtonnon@gmail.com
+
+      - component: site-footer

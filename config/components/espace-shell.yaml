@@ -1,0 +1,105 @@
+# Espace facilitateur·ices — the app frame around every /espace page.
+# Based on library block/shell-sidebar@0.33.0: a sidebar beside a main region
+# that holds the page's own components (`children: $children`).
+#
+# Two sidebars, one per audience: the sidebar has no per-entry role gate, so
+# the admin one (with the Coordination group) and the member one are swapped
+# with component `visibility.roles` — the unmet one is left out of the HTML.
+# A `roles: [member]` gate does not let an admin through
+# (pages/pages-layouts-access, "Gating one component on who is reading").
+#
+# Density: data screens use the default 36 px controls and medium table rows;
+# body copy stays on the brand body face, headings on the title face.
+# Status chips: see the `valueLabels` + `cellStyle` mapping on each grid.
+name: espace-shell
+type: container
+props:
+  className: min-h-screen flex flex-col bg-white text-bleu-fonce
+children:
+  # Top bar: brand, way back to the public site, sign out.
+  - type: container
+    element: header
+    props:
+      className: flex items-center justify-between gap-4 border-b border-gray-200 bg-white px-4 py-3 sm:px-6
+    children:
+      - type: link
+        props:
+          href: /espace
+          className: flex items-center gap-3
+        children:
+          - type: image
+            props:
+              src: /logo-without-marging.svg
+              alt: Merci pour ton non
+              className: h-9 w-auto
+          - type: text
+            element: span
+            props:
+              className: hidden text-sm font-bold sm:inline
+            content: Espace facilitateur·ices
+      - type: container
+        props:
+          className: flex items-center gap-2 sm:gap-4
+        children:
+          - type: link
+            props:
+              href: /
+              className: text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-orange-vif
+            content: Voir le site
+          - type: button
+            variant: outline
+            size: sm
+            label: Me déconnecter
+            action:
+              type: auth
+              method: logout
+              onSuccess: { type: navigate, navigate: /connexion }
+  - type: flex
+    props:
+      className: flex w-full flex-1 items-stretch
+    children:
+      # Admin sidebar: own proposals + the coordination screens.
+      - type: sidebar
+        visibility: { roles: [admin] }
+        rail: { below: md }
+        props:
+          aria-label: Navigation de l'espace
+          className: flex-none border-r border-gray-200 bg-orange-lighter py-4 md:w-64 md:px-2
+        classes:
+          parts:
+            link: rounded-md text-bleu-fonce hover:bg-orange-light
+            groupLabel: text-xs font-bold uppercase tracking-wide text-gray-700
+          states:
+            current: { link: bg-white font-bold text-bleu-fonce shadow-sm }
+        groups:
+          - label: Mes ateliers
+            items:
+              - { label: Mes propositions, href: /espace, icon: list-checks }
+              - { label: Proposer une date, href: /espace/proposer, icon: calendar-plus }
+          - label: Coordination
+            items:
+              - { label: À valider, href: /espace/validation, icon: inbox, activeMatch: prefix }
+              - { label: Ateliers en ligne, href: /espace/ateliers, icon: calendar-check, activeMatch: prefix }
+      # Member sidebar.
+      - type: sidebar
+        visibility: { roles: [member] }
+        rail: { below: md }
+        props:
+          aria-label: Navigation de l'espace
+          className: flex-none border-r border-gray-200 bg-orange-lighter py-4 md:w-64 md:px-2
+        classes:
+          parts:
+            link: rounded-md text-bleu-fonce hover:bg-orange-light
+            groupLabel: text-xs font-bold uppercase tracking-wide text-gray-700
+          states:
+            current: { link: bg-white font-bold text-bleu-fonce shadow-sm }
+        groups:
+          - label: Mes ateliers
+            items:
+              - { label: Mes propositions, href: /espace, icon: list-checks }
+              - { label: Proposer une date, href: /espace/proposer, icon: calendar-plus }
+      - type: container
+        props:
+          id: contenu
+          className: min-w-0 flex-1 px-4 py-6 sm:px-10 sm:py-8
+        children: $children

@@ -1,0 +1,77 @@
+# The public catalogue: one row per workshop date shown on the site. Rows are
+# written by publish-workshop-on-site (or seeded for the legacy Billetterie Plus
+# date). No row rule, so logged-out visitors and the sitemap can read it.
+id: 4
+name: workshops
+fields:
+  # e.g. 2026-11-28-14h — the /ateliers/:slug path.
+  - { id: 1, name: slug, label: Slug, type: single-line-text, required: true, unique: true }
+  # UTC instants (stored and read back as ...Z).
+  - { id: 2, name: starts_at, label: Début, type: datetime, required: true }
+  - { id: 3, name: ends_at, label: Fin, type: datetime }
+  # Europe/Paris calendar day, for "upcoming" filters.
+  - { id: 4, name: session_date, label: Date, type: date, required: true }
+  # "samedi 28 novembre 2026" / "14h"
+  - { id: 5, name: date_label, label: Date (texte), type: single-line-text }
+  - { id: 6, name: time_label, label: Heure (texte), type: single-line-text }
+  - id: 7
+    name: lead_facilitator
+    label: Facilitateur·ice principal·e
+    type: relationship
+    relatedTable: facilitators
+    relationType: many-to-one
+    displayField: display_name
+    onDelete: restrict
+  - id: 8
+    name: co_facilitator
+    label: Co-facilitateur·ice
+    type: relationship
+    relatedTable: facilitators
+    relationType: many-to-one
+    displayField: display_name
+    onDelete: set-null
+  - { id: 9, name: lead_name, label: Facilitateur·ice, type: lookup, relationshipField: lead_facilitator, relatedField: short_name }
+  - { id: 10, name: co_name, label: Co-facilitateur·ice (nom), type: lookup, relationshipField: co_facilitator, relatedField: short_name }
+  - id: 11
+    name: venue
+    label: Lieu
+    type: relationship
+    relatedTable: venues
+    relationType: many-to-one
+    displayField: name
+    onDelete: restrict
+  - { id: 12, name: venue_name, label: Nom du lieu, type: lookup, relationshipField: venue, relatedField: name }
+  - { id: 13, name: venue_city, label: Ville, type: lookup, relationshipField: venue, relatedField: city }
+  - { id: 14, name: capacity, label: Places, type: integer, default: 15 }
+  - { id: 15, name: booking_url, label: Lien de réservation, type: url }
+  - id: 16
+    name: booking_provider
+    label: Billetterie
+    type: single-select
+    default: helloasso
+    options: [helloasso, billetterie_plus]
+  - id: 17
+    name: status
+    label: Statut
+    type: single-select
+    required: true
+    default: published
+    options: [published, cancelled]
+  # Back-office links, admin-only. No reverse link from proposals (a circular
+  # relationship is rejected at boot).
+  - id: 18
+    name: proposal
+    label: Proposition
+    type: relationship
+    relatedTable: workshop_proposals
+    relationType: many-to-one
+    onDelete: set-null
+  - { id: 19, name: helloasso_form_slug, label: Slug HelloAsso, type: single-line-text }
+permissions:
+  read: all
+  create: [admin]
+  update: [admin]
+  delete: [admin]
+  fields:
+    - { field: proposal, read: [admin], write: [admin] }
+    - { field: helloasso_form_slug, read: [admin], write: [admin] }

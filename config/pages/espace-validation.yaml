@@ -1,0 +1,135 @@
+# /espace/validation — the admin review queue: every proposal still in the
+# workflow. Row buttons run the same automations as the detail page, passing
+# the row id as `recordId`; the row opens the full proposal (review note,
+# status, venue, HelloAsso checklist) at /espace/propositions/:id.
+name: espace-validation
+path: /espace/validation
+access: { require: [admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: À valider - Espace facilitateur·ices
+  description: Les propositions de dates à relire, approuver et publier.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-6
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: à valider
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Les propositions en cours, de la relecture à la mise en ligne. Ouvre une ligne pour lire la proposition, écrire une note de relecture ou la refuser.
+
+          - type: alert
+            alertVariant: info
+            content: "« Approuver » crée un vrai événement sur HelloAsso. Une date « À finaliser sur HelloAsso » attend tes réglages dans le back-office HelloAsso (les 6 questions d'inscription, le tarif, les places, la bannière, la publication) : la liste détaillée est dans la proposition. Ensuite seulement, « Publier sur le site »."
+
+          - type: table
+            caption: Propositions en cours
+            classes: { parts: { caption: sr-only } }
+            readOnly: true
+            phoneLayout: rows
+            dataSource:
+              table: workshop_proposals
+              filter:
+                - { field: status, operator: in, value: [proposed, approved, helloasso_draft, sync_error] }
+              sort: [{ field: session_date, direction: asc }]
+            toolbar: { search: false, filters: false, sort: false, export: false, refresh: true }
+            emptyMessage: Rien à valider pour l'instant. Les nouvelles propositions des facilitateur·ices arrivent ici.
+            onRowClick: { type: navigate, path: /espace/propositions/$record.id }
+            # Status chips read the option labels and colours declared on
+            # workshop_proposals.status; no per-grid mapping.
+            columns:
+              - { field: session_date, label: Date, format: long-date }
+              - field: status
+                label: Statut
+                badgeForm: outline-dot
+              - { field: start_time, label: Début }
+              - { field: lead_facilitator, label: Facilitation }
+              - { field: co_facilitator, label: Co-facilitation }
+              - { field: venue, label: Lieu }
+              - type: actions
+                label: Action
+                actions:
+                  - label: Approuver
+                    icon: check
+                    visibleWhen: { field: status, eq: proposed }
+                    confirm: "Approuver cette date ? Un vrai événement HelloAsso va être créé avec cette date, ces facilitateur·ices, ce lieu et ce nombre de places."
+                    action:
+                      type: automation
+                      name: approve-workshop-proposal
+                      inputData: { recordId: $record.id }
+                      await: true
+                      onSuccess: { toast: { message: "Date approuvée : création de l'événement HelloAsso lancée.", variant: success } }
+                      onError: { toast: { message: "L'approbation n'a pas abouti. Ouvre la proposition pour voir son état.", variant: error } }
+                  - label: Publier sur le site
+                    icon: globe
+                    visibleWhen: { field: status, eq: helloasso_draft }
+                    confirm: "Publier cette date sur le site ? Fais-le seulement une fois l'événement publié sur HelloAsso, avec ses 6 questions d'inscription."
+                    action:
+                      type: automation
+                      name: publish-workshop-on-site
+                      inputData: { recordId: $record.id }
+                      await: true
+                      onSuccess: { toast: { message: "Date publiée sur le site.", variant: success } }
+                      onError: { toast: { message: "La date n'a pas été publiée. Vérifie que l'événement est bien publié sur HelloAsso, puis réessaie.", variant: error, duration: 10000 } }
+                  - label: Réessayer HelloAsso
+                    icon: rotate-ccw
+                    visibleWhen: { field: status, eq: sync_error }
+                    action:
+                      type: automation
+                      name: retry-helloasso
+                      inputData: { recordId: $record.id }
+                      await: true
+                      onSuccess: { toast: { message: "Relance envoyée à HelloAsso.", variant: success } }
+                      onError: { toast: { message: "La relance n'a pas abouti. Ouvre la proposition pour lire l'erreur.", variant: error } }
+
+          - type: container
+            element: section
+            props:
+              aria-labelledby: traitees-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: traitees-titre
+                  className: text-xl title-font text-bleu-fonce
+                content: déjà traitées
+              - type: table
+                caption: Propositions traitées
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: rows
+                dataSource:
+                  table: workshop_proposals
+                  filter:
+                    - { field: status, operator: in, value: [published, rejected, withdrawn] }
+                  sort: [{ field: session_date, direction: desc }]
+                  pagination: { pageSize: 20 }
+                toolbar: { search: false, filters: false, sort: false, export: false, refresh: false }
+                emptyMessage: Aucune proposition traitée pour l'instant.
+                onRowClick: { type: navigate, path: /espace/propositions/$record.id }
+                columns:
+                  - { field: session_date, label: Date, format: long-date }
+                  - { field: lead_facilitator, label: Facilitation }
+                  - { field: co_facilitator, label: Co-facilitation }
+                  - field: status
+                    label: Statut
+                    badgeForm: outline-dot

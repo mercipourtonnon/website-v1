@@ -1,0 +1,28 @@
+# /espace/proposer — the proposal form (config/forms/proposer-un-atelier.yaml).
+name: espace-proposer
+path: /espace/proposer
+access: { require: [admin, member], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Proposer une date - Espace facilitateur·ices
+  description: Propose une date d'atelier de consentement à l'équipe.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-2xl flex-col gap-6
+        children:
+          - type: link
+            props:
+              href: /espace
+              className: self-start text-sm text-bleu-fonce underline underline-offset-4
+            content: ← Mes propositions
+          - type: form
+            formRef: proposer-un-atelier
+            props:
+              headingLevel: h1

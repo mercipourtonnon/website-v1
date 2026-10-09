@@ -1,0 +1,21 @@
+# One row per place a workshop can happen. Only the name and the city are
+# public; the street address is given to signed-in members (and to people who
+# register, by HelloAsso).
+id: 2
+name: venues
+fields:
+  - { id: 1, name: name, label: Nom du lieu, type: single-line-text, required: true, unique: true }
+  - { id: 2, name: street, label: Adresse, type: single-line-text }
+  - { id: 3, name: zip_code, label: Code postal, type: single-line-text }
+  - { id: 4, name: city, label: Ville, type: single-line-text, required: true }
+  # ISO 3166-1 alpha-3, as HelloAsso expects it.
+  - { id: 5, name: country, label: Pays, type: single-line-text, default: FRA }
+  - { id: 6, name: latitude, label: Latitude, type: decimal, precision: 7 }
+  - { id: 7, name: longitude, label: Longitude, type: decimal, precision: 7 }
+permissions:
+  read: all
+  create: [admin]
+  update: [admin]
+  delete: [admin]
+  fields:
+    - { field: street, read: [admin, member], write: [admin] }

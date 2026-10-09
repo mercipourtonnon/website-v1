@@ -1,0 +1,34 @@
+# "Réessayer HelloAsso" button (admin only): sync_error → approved, which starts
+# create-helloasso-event again. That automation looks the event up by title
+# before creating it, so a retry never duplicates an event that did get created.
+name: retry-helloasso
+description: Relance la création HelloAsso d'une proposition en erreur.
+trigger:
+  type: manual
+  label: Réessayer HelloAsso
+  requiredRole: admin
+timeout: 30000
+actions:
+  - name: proposal
+    type: record
+    operator: read
+    props:
+      table: workshop_proposals
+      id: '{{trigger.input.recordId}}'
+  - name: only_sync_error
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: '{{proposal.record.status}}', operator: equals, value: sync_error }
+  - name: requeue
+    type: record
+    operator: update
+    props:
+      table: workshop_proposals
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{proposal.record.id}}' }
+      data:
+        status: approved

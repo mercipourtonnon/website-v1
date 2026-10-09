@@ -1,0 +1,372 @@
+# /espace/propositions/:id — one proposal.
+# A member sees only her own (row rule → 404 otherwise) and may edit or delete
+# it while it is `proposed`. An admin sees every proposal, edits the review
+# fields, and runs the workflow buttons. Each button passes the record id as
+# `recordId`, which the automations read at {{trigger.input.recordId}}
+# (automation-triggers/trigger-manual-chained, "Where the input lands").
+#
+# Status-dependent blocks use `visibility.record` (Record Visibility in the
+# schema): the unmet ones are left out of the HTML.
+name: espace-proposition
+path: /espace/propositions/:id
+access: { require: [admin, member], redirectTo: /connexion }
+sitemap: false
+dataSource:
+  table: workshop_proposals
+  mode: single
+  param: id
+meta:
+  lang: fr-FR
+  title: Proposition - Espace facilitateur·ices
+  description: Le détail d'une proposition de date d'atelier.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-3xl flex-col gap-8
+        children:
+          - type: container
+            props:
+              className: flex flex-wrap gap-x-6 gap-y-2 text-sm
+            children:
+              - type: link
+                props:
+                  href: /espace
+                  className: text-bleu-fonce underline underline-offset-4
+                content: ← Mes propositions
+              - type: link
+                visibility: { roles: [admin] }
+                props:
+                  href: /espace/validation
+                  className: text-bleu-fonce underline underline-offset-4
+                content: ← À valider
+
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-2
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: proposition de date
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Atelier de consentement, niveau 1, 3h, prix libre.
+
+          # ── Where it stands ────────────────────────────────────────────────
+          - type: alert
+            alertVariant: info
+            visibility: { record: { field: status, eq: proposed } }
+            content: Ta proposition attend la relecture de l'équipe. Tu peux la modifier ou la supprimer d'ici là.
+          - type: alert
+            alertVariant: info
+            visibility: { record: { field: status, eq: approved } }
+            content: Proposition validée. La création de l'événement sur HelloAsso est en cours, ça prend quelques secondes. Recharge la page pour voir la suite.
+          - type: alert
+            alertVariant: info
+            visibility: { roles: [member], record: { field: status, in: [helloasso_draft, sync_error] } }
+            content: Proposition validée. L'équipe prépare la page d'inscription sur HelloAsso ; la date apparaîtra sur le site dès qu'elle sera prête.
+          - type: alert
+            alertVariant: success
+            visibility: { record: { field: status, eq: published } }
+            content: Cette date est en ligne sur le site, les inscriptions sont ouvertes.
+          - type: alert
+            alertVariant: default
+            visibility: { record: { field: status, eq: rejected } }
+            content: Cette proposition n'a pas été retenue. La note de relecture ci-dessous t'explique pourquoi ; n'hésite pas à proposer une autre date.
+          - type: alert
+            alertVariant: default
+            visibility: { record: { field: status, eq: withdrawn } }
+            content: Cette proposition a été retirée.
+
+          # ── Facts ─────────────────────────────────────────────────────────
+          # Proposals carry no lookup fields (0.33.0: a lookup beside a button
+          # field breaks inserts), so names are read with server-drawn
+          # containers bound to the related table, filtered on the page record.
+          - type: description-list
+            layout: stacked
+            items:
+              - { term: Date, field: session_date }
+              - { term: Heure de début, field: start_time }
+              - { term: Places, field: capacity }
+          - type: container
+            props:
+              className: grid gap-x-6 gap-y-3 text-bleu-fonce sm:grid-cols-[minmax(0,12rem)_1fr]
+            children:
+              - { type: text, element: p, props: { className: text-gray-700 }, content: Facilitation }
+              - type: container
+                props: { className: flex flex-wrap gap-x-1 font-medium }
+                children:
+                  - type: container
+                    dataSource:
+                      table: facilitators
+                      filter: [{ field: id, operator: eq, value: $record.lead_facilitator }]
+                      limit: 1
+                    children:
+                      - { type: text, element: span, content: $record.display_name }
+                  - type: container
+                    visibility: { record: { field: co_facilitator, isNotEmpty: true } }
+                    dataSource:
+                      table: facilitators
+                      filter: [{ field: id, operator: eq, value: $record.co_facilitator }]
+                      limit: 1
+                    children:
+                      - { type: text, element: span, content: '& $record.display_name' }
+              - { type: text, element: p, props: { className: text-gray-700 }, content: Lieu }
+              - type: container
+                visibility: { record: { field: venue, isNotEmpty: true } }
+                props: { className: font-medium }
+                dataSource:
+                  table: venues
+                  filter: [{ field: id, operator: eq, value: $record.venue }]
+                  limit: 1
+                children:
+                  - { type: text, element: span, content: '$record.name, $record.city' }
+              - type: text
+                element: p
+                visibility: { record: { field: venue, isEmpty: true } }
+                props: { className: text-gray-700 }
+                content: Choisi par l'équipe à la relecture.
+          - type: description-list
+            layout: stacked
+            visibility: { record: { field: note_to_team, isNotEmpty: true } }
+            items:
+              - { term: Note pour l'équipe, field: note_to_team }
+          - type: description-list
+            layout: stacked
+            visibility: { record: { field: reviewer_note, isNotEmpty: true } }
+            items:
+              - { term: Note de relecture, field: reviewer_note }
+
+          # ── Member: edit or delete while still proposed ───────────────────
+          - type: container
+            element: section
+            visibility: { roles: [member], record: { field: status, eq: proposed } }
+            props:
+              aria-labelledby: modifier-titre
+              className: flex flex-col gap-4 rounded-lg border border-gray-200 p-5 sm:p-6
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: modifier-titre
+                  className: text-xl title-font text-bleu-fonce
+                content: modifier ma proposition
+              - type: form
+                showHeader: false
+                dataSource: { table: workshop_proposals, mode: single, param: id }
+                action:
+                  type: crud
+                  operation: update
+                  table: workshop_proposals
+                  submitLabel: Enregistrer les modifications
+                  onSuccess: { toast: { message: Modifications enregistrées., variant: success } }
+                  onError: { toast: { message: "Les modifications n'ont pas pu être enregistrées. Vérifie les champs, puis réessaie.", variant: error } }
+                fields:
+                  - { field: session_date, label: Date de l'atelier }
+                  - { field: start_time, label: Heure de début }
+                  - { field: lead_facilitator, label: Facilitateur·ice principal·e }
+                  - { field: co_facilitator, label: Co-facilitateur·ice (facultatif) }
+                  - { field: note_to_team, label: Un mot pour l'équipe (facultatif) }
+              # Destructive action: a trigger and a confirmation dialog that
+              # names what is lost (library block/modal-confirm-destructive).
+              - type: button
+                variant: outline
+                label: Supprimer la proposition
+                interactions:
+                  click:
+                    modal: supprimer-proposition
+              - type: alert-dialog
+                confirmLabel: Supprimer la proposition
+                cancelLabel: La garder
+                content: La proposition disparaît de ta liste et l'équipe ne la verra plus. Tu pourras toujours proposer une nouvelle date.
+                props:
+                  id: supprimer-proposition
+                  title: Supprimer cette proposition ?
+                  variant: destructive
+                action:
+                  type: crud
+                  operation: delete
+                  table: workshop_proposals
+                  onSuccess: { type: navigate, navigate: /espace }
+                  onError: { toast: { message: "La proposition n'a pas pu être supprimée. Recharge la page, puis réessaie.", variant: error } }
+
+          # ── Admin: workflow ───────────────────────────────────────────────
+          - type: container
+            element: section
+            visibility: { roles: [admin] }
+            props:
+              aria-labelledby: coordination-titre
+              className: flex flex-col gap-5 rounded-lg border border-gray-200 border-t-4 border-t-mauve p-5 sm:p-6
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: coordination-titre
+                  className: text-xl title-font text-bleu-fonce
+                content: coordination
+
+              # proposed → approve (creates the real HelloAsso event). The event
+              # needs a venue, so the button waits for one.
+              - type: container
+                visibility: { record: { field: status, eq: proposed } }
+                props:
+                  className: flex flex-col gap-3
+                children:
+                  - type: text
+                    element: p
+                    content: Vérifie la date, l'heure, les facilitateur·ices, le lieu et le nombre de places. Approuver crée tout de suite un vrai événement sur HelloAsso.
+                  - type: alert
+                    alertVariant: warning
+                    visibility: { record: { field: venue, isEmpty: true } }
+                    content: Choisis d'abord un lieu dans « Relecture et détails » ci-dessous, puis enregistre. Le bouton d'approbation apparaît ensuite.
+                  - type: container
+                    visibility: { record: { field: venue, isNotEmpty: true } }
+                    children:
+                      - type: button
+                        label: Approuver et créer sur HelloAsso
+                        confirm:
+                          title: Approuver cette date ?
+                          message: Un vrai événement HelloAsso va être créé avec cette date, ces facilitateur·ices, ce lieu et ce nombre de places. Il ne se supprime pas d'ici.
+                          confirmLabel: Approuver et créer
+                          cancelLabel: Pas encore
+                        action:
+                          type: automation
+                          name: approve-workshop-proposal
+                          inputData: { recordId: $record.id }
+                          await: true
+                          onSuccess: { type: navigate, navigate: /espace/propositions/$record.id }
+                          onError: { toast: { message: "L'approbation n'a pas abouti. Recharge la page pour voir l'état de la proposition, puis réessaie.", variant: error } }
+
+              # approved → in flight
+              - type: text
+                element: p
+                visibility: { record: { field: status, eq: approved } }
+                content: La création sur HelloAsso est en cours. Recharge la page dans quelques secondes.
+
+              # helloasso_draft → manual checklist, then publish on the site
+              - type: container
+                visibility: { record: { field: status, eq: helloasso_draft } }
+                props:
+                  className: flex flex-col gap-4
+                children:
+                  - type: alert
+                    alertVariant: warning
+                    content: L'événement existe sur HelloAsso mais n'est pas encore prêt. Termine ces étapes dans le back-office HelloAsso avant de le publier sur le site.
+                  - type: link
+                    props:
+                      href: $record.helloasso_url
+                      target: _blank
+                      rel: noopener noreferrer
+                      className: self-start font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4
+                    content: Ouvrir l'événement sur HelloAsso (nouvel onglet)
+                  - type: list
+                    props:
+                      className: list-decimal space-y-3 pl-6 text-bleu-fonce
+                    children:
+                      - type: list-item
+                        children:
+                          - type: text
+                            element: span
+                            content: "Ajoute les 6 questions du formulaire d'inscription, mot pour mot :"
+                          - type: list
+                            props:
+                              className: mt-2 list-disc space-y-1 pl-6 text-sm
+                            children:
+                              - { type: list-item, content: "Email (obligatoire, format email)" }
+                              - { type: list-item, content: "Numéro de téléphone (pour te prévenir en cas d'imprévu ou d'information importante avant l'atelier) (obligatoire, format téléphone)" }
+                              - { type: list-item, content: "Comment j'ai entendu parler de cet événement (obligatoire)" }
+                              - { type: list-item, content: "Qu'est-ce qui me motive, me donne envie de participer ? (obligatoire)" }
+                              - { type: list-item, content: "J'autorise l'association à me photographier/filmer lors de l'événement et à utiliser ces images sur ses supports de communication. Consentement retirable à tout moment : mercipourtonnon@gmail.com (obligatoire, choix Oui / Non)" }
+                              - { type: list-item, content: "Veux-tu nous laisser un petit mot ? (facultatif)" }
+                      - type: list-item
+                        content: "Vérifie le tarif « Prix libre » à 0 €, les dons ouverts, le nombre de places et la bannière."
+                      - type: list-item
+                        content: Publie l'événement sur HelloAsso.
+                      - type: list-item
+                        content: Reviens ici et appuie sur « Publier sur le site ».
+                  - type: button
+                    label: Publier sur le site
+                    confirm:
+                      title: Publier cette date sur le site ?
+                      message: La date apparaît sur la page d'accueil avec son lien d'inscription HelloAsso. Si l'événement n'est pas encore publié sur HelloAsso, la publication échoue et rien ne change.
+                      confirmLabel: Publier sur le site
+                      cancelLabel: Pas encore
+                    action:
+                      type: automation
+                      name: publish-workshop-on-site
+                      inputData: { recordId: $record.id }
+                      await: true
+                      onSuccess: { type: navigate, navigate: /espace/propositions/$record.id }
+                      onError: { toast: { message: "La date n'a pas été publiée. Vérifie que l'événement est bien publié sur HelloAsso, puis réessaie.", variant: error, duration: 10000 } }
+
+              # sync_error → what went wrong, then retry
+              - type: container
+                visibility: { record: { field: status, eq: sync_error } }
+                props:
+                  className: flex flex-col gap-3
+                children:
+                  - type: alert
+                    alertVariant: destructive
+                    content: "La création sur HelloAsso a échoué. Aucun événement en double n'a été créé : avant de recréer, la relance cherche d'abord un événement du même titre."
+                  - type: description-list
+                    items:
+                      - { term: Message d'erreur, field: sync_error }
+                  - type: button
+                    label: Réessayer sur HelloAsso
+                    action:
+                      type: automation
+                      name: retry-helloasso
+                      inputData: { recordId: $record.id }
+                      await: true
+                      onSuccess: { type: navigate, navigate: /espace/propositions/$record.id }
+                      onError: { toast: { message: "La relance n'a pas abouti. Recharge la page pour voir l'état de la proposition.", variant: error } }
+
+          # ── Admin: review and details, apart from the workflow buttons ────
+          - type: container
+            element: section
+            visibility: { roles: [admin] }
+            props:
+              aria-labelledby: relecture-titre
+              className: flex flex-col gap-4 rounded-lg border border-gray-200 p-5 sm:p-6
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: relecture-titre
+                  className: text-xl title-font text-bleu-fonce
+                content: relecture et détails
+              - type: form
+                showHeader: false
+                dataSource: { table: workshop_proposals, mode: single, param: id }
+                action:
+                  type: crud
+                  operation: update
+                  table: workshop_proposals
+                  submitLabel: Enregistrer
+                  onSuccess: { type: navigate, navigate: /espace/propositions/$record.id }
+                  onError: { toast: { message: "Les modifications n'ont pas pu être enregistrées. Vérifie les champs, puis réessaie.", variant: error } }
+                sections:
+                  - title: Relecture
+                    description: "Pour refuser une date, choisis « rejected » et explique pourquoi dans la note : la personne la lit dans sa proposition. N'utilise pas « approved » ici : le bouton « Approuver » demande confirmation avant de créer l'événement HelloAsso."
+                    fields: [status, reviewer_note]
+                  - title: Atelier
+                    fields: [session_date, start_time, lead_facilitator, co_facilitator, venue, capacity, duration_minutes]
+                fields:
+                  - { field: status, label: Statut }
+                  - { field: reviewer_note, label: Note de relecture (visible par la personne) }
+                  - { field: session_date, label: Date }
+                  - { field: start_time, label: Heure de début }
+                  - { field: lead_facilitator, label: Facilitateur·ice principal·e }
+                  - { field: co_facilitator, label: Co-facilitateur·ice }
+                  - { field: venue, label: Lieu }
+                  - { field: capacity, label: Places }
+                  - { field: duration_minutes, label: Durée (minutes) }

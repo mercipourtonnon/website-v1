@@ -1,0 +1,81 @@
+# /espace/ateliers — the admin view of the public catalogue (`workshops`).
+# "Retirer du site" sets status = cancelled, which takes the date off the home
+# page and /ateliers/:slug at once (both filter status = published).
+name: espace-ateliers
+path: /espace/ateliers
+access: { require: [admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Ateliers en ligne - Espace facilitateur·ices
+  description: Les dates publiées sur le site, avec leur lien d'inscription.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-6
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: ateliers en ligne
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Les dates que le site affiche. « Retirer du site » enlève une date de la page d'accueil et de sa page, tout de suite. Pense aussi à fermer l'événement sur HelloAsso et à prévenir les personnes inscrites.
+          - type: table
+            caption: Ateliers du catalogue public
+            classes: { parts: { caption: sr-only } }
+            # Read-only: dates enter the catalogue only through "Publier sur le
+            # site" (no hand-made rows, no import). Corrections happen in the
+            # expanded row; cancelling has its own confirmed action.
+            readOnly: true
+            phoneLayout: rows
+            dataSource:
+              table: workshops
+              sort: [{ field: starts_at, direction: desc }]
+              pagination: { pageSize: 25 }
+            toolbar: { search: false, filters: false, sort: false, export: false, refresh: false }
+            emptyMessage: Aucun atelier en ligne pour l'instant. Une date apparaît ici quand tu la publies depuis « À valider ».
+            rowExpand:
+              title: Atelier
+              fields: [status, date_label, time_label, lead_facilitator, co_facilitator, venue, capacity, booking_url, booking_provider, slug]
+            columns:
+              - { field: session_date, label: Date, format: long-date }
+              - field: status
+                label: Statut
+                badgeForm: outline-dot
+                valueLabels: { published: En ligne, cancelled: Retirée du site }
+                cellStyle:
+                  - { when: { eq: cancelled }, tone: muted }
+              - { field: time_label, label: Heure }
+              - { field: lead_name, label: Facilitation }
+              - { field: co_name, label: Co-facilitation }
+              - { field: venue_name, label: Lieu }
+              - { field: booking_url, label: Inscription }
+              - type: actions
+                label: Action
+                actions:
+                  - label: Retirer du site
+                    icon: calendar-x
+                    variant: destructive
+                    visibleWhen: { field: status, eq: published }
+                    confirm: "Retirer cette date du site ? Elle disparaît tout de suite de la page d'accueil et de sa page. Pense à fermer l'événement sur HelloAsso et à prévenir les personnes inscrites."
+                    action:
+                      type: crud
+                      operation: update
+                      table: workshops
+                      data: { status: cancelled }
+                      onSuccess: { toast: { message: Date retirée du site., variant: success } }
+                      onError: { toast: { message: "La date n'a pas pu être retirée. Recharge la page, puis réessaie.", variant: error } }

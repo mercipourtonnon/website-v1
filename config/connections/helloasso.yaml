@@ -1,0 +1,91 @@
+# HelloAsso API v5, machine-to-machine (OAuth2 client credentials).
+# The API client needs the FormAdministration privilege to quick-create events.
+# Development points at the sandbox (api.helloasso-sandbox.com) with its own client.
+#
+# Declared as `tokenExchange`, not `oauth2` + clientCredentials: in Sovrium 0.33.0
+# the oauth2 client-credentials request sends `$env.HELLOASSO_CLIENT_ID` and
+# `$env.HELLOASSO_CLIENT_SECRET` literally (and its tokenUrl does not take
+# $env either), so HelloAsso answered 401. tokenExchange resolves $env in both
+# the body and the tokenUrl, and HelloAsso's token endpoint is exactly this:
+# a form POST answered with { access_token, expires_in }.
+name: helloasso
+label: HelloAsso
+description: Création et lecture des événements (billetterie) de l'association.
+type: tokenExchange
+baseUrl: $env.HELLOASSO_API_BASE_URL
+props:
+  tokenUrl: $env.HELLOASSO_TOKEN_URL
+  bodyType: form
+  body:
+    grant_type: client_credentials
+    client_id: $env.HELLOASSO_CLIENT_ID
+    client_secret: $env.HELLOASSO_CLIENT_SECRET
+operations:
+  # POST /organizations/{slug}/forms/Event/action/quick-create → { formSlug, publicUrl, ... }
+  # The request schema is additionalProperties:false, so the body is written out
+  # key by key (raw) and sends only keys HelloAsso knows. No idempotency key exists:
+  # callers must look the event up by title first (list-events) and never retry it.
+  - name: create-event
+    method: POST
+    path: /organizations/{organizationSlug}/forms/Event/action/quick-create
+    summary: Crée un événement HelloAsso (un tarif prix libre à 0 €, dons ouverts).
+    params:
+      organizationSlug: { in: path, type: string, required: true }
+      title: { in: body, type: string, required: true }
+      description: { in: body, type: string, required: true }
+      longDescription: { in: body, type: string, required: true }
+      startDate: { in: body, type: string, required: true, format: date-time }
+      endDate: { in: body, type: string, required: true, format: date-time }
+      placeName: { in: body, type: string, required: true }
+      placeCity: { in: body, type: string, required: true }
+      placeZipCode: { in: body, type: string, required: true }
+      contactEmail: { in: body, type: string, required: true, format: email }
+      maxEntries: { in: body, type: integer, required: true }
+    body:
+      kind: raw
+      contentType: application/json
+      # Venue: name, city, zip and country only — the street goes to registrants.
+      content: |
+        {
+          "title": {{params.title}},
+          "description": {{params.description}},
+          "longDescription": {{params.longDescription}},
+          "startDate": {{params.startDate}},
+          "endDate": {{params.endDate}},
+          "place": {
+            "name": {{params.placeName}},
+            "city": {{params.placeCity}},
+            "zipCode": {{params.placeZipCode}},
+            "country": "FRA"
+          },
+          "contact": { "email": {{params.contactEmail}} },
+          "tierList": [{ "label": "Prix libre", "price": 0 }],
+          "acceptOpenDonation": true,
+          "maxEntries": {{params.maxEntries}},
+          "displayRemainingEntries": true
+        }
+  # GET /organizations/{slug}/forms?formTypes=Event → { data: [...], pagination: { continuationToken } }
+  - name: list-events
+    method: GET
+    path: /organizations/{organizationSlug}/forms
+    summary: Liste les événements de l'association (titre, formSlug, url, état).
+    params:
+      organizationSlug: { in: path, type: string, required: true }
+      formTypes: { in: query, type: string }
+      pageSize: { in: query, type: integer }
+      continuationToken: { in: query, type: string }
+    pagination:
+      style: cursor
+      cursorParam: continuationToken
+      cursorPath: pagination.continuationToken
+      itemsPath: data
+  # GET /organizations/{slug}/forms/{formType}/{formSlug}/public — the public view
+  # of one form, used to check the event is published before it goes on the site.
+  - name: get-public-event
+    method: GET
+    path: /organizations/{organizationSlug}/forms/{formType}/{formSlug}/public
+    summary: Lit la fiche publique d'un événement (échoue s'il n'est pas public).
+    params:
+      organizationSlug: { in: path, type: string, required: true }
+      formType: { in: path, type: string, required: true, enum: [Event] }
+      formSlug: { in: path, type: string, required: true }

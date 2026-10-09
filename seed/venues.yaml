@@ -1,0 +1,12 @@
+# Reference data: the venue (from scripts/create-billetterie-plus-events.mjs).
+mergeOn: [name]
+records:
+  - key: plage_digitale
+    fields:
+      name: La Plage Digitale
+      street: 13 rue Jacques Peirotes
+      zip_code: '67000'
+      city: Strasbourg
+      country: FRA
+      latitude: 48.5765594
+      longitude: 7.7551093
