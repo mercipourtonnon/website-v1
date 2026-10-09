@@ -74,9 +74,25 @@
     });
   }
 
+  // FAQ toggles: Sovrium's toggleElement flips the answer's inline display but
+  // sets no ARIA state, so mirror it on the question button after each click.
+  function initFaqAria() {
+    document.querySelectorAll('.faq-q').forEach(function (button) {
+      var answer = button.nextElementSibling;
+      if (!answer || !answer.classList.contains('faq-answer') || !answer.id) return;
+      button.setAttribute('aria-controls', answer.id);
+      var sync = function () {
+        button.setAttribute('aria-expanded', String(answer.style.display !== 'none'));
+      };
+      sync();
+      button.addEventListener('click', function () { setTimeout(sync, 0); });
+    });
+  }
+
   function init() {
     initMobileMenuClose();
     initScrollSpy();
+    initFaqAria();
   }
 
   if (document.readyState === 'loading') {
