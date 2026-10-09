@@ -1,6 +1,7 @@
-# Shared footer — used by home, mentions-legales, /le-consentement, /ressources.
-# To add a page link, append one `link` to the "Le site" grid below — every
-# entry has the same one-line shape.
+# Shared footer — used by every public page.
+# The "Le site" grid mirrors the header's IA (review of 2026-10-09). To add a
+# page link, append one `link` to it — every entry has the same one-line
+# shape; "Nous faire un don" opens HelloAsso (see TODO(don)).
 # Links are root-absolute so they work from every page. Social networks are
 # plain text links: Lucide has no brand marks, and the charter allows only
 # Lucide icons.
@@ -57,32 +58,44 @@ children:
               className: grid grid-cols-2 gap-x-6 gap-y-2 type-small
             children:
               - type: link
-                props: { href: '/#atelier', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
-                content: L'atelier
+                props: { href: /notre-mission, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Notre mission
+              - type: link
+                props: { href: /nos-ateliers, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Nos ateliers
+              - type: link
+                props: { href: /nos-stands, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Nos stands
+              - type: link
+                props: { href: /nos-interventions, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Nos interventions
               - type: link
                 props: { href: /le-consentement, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
                 content: Le consentement
               - type: link
-                props: { href: '/#temoignages', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
-                content: Témoignages
-              - type: link
                 props: { href: /ressources, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
                 content: Ressources
               - type: link
-                props: { href: '/#mission', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
-                content: Mission et valeurs
-              - type: link
-                props: { href: '/#partenaires', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
-                content: Partenaires
-              - type: link
-                props: { href: '/#equipe', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                props: { href: /notre-mission#equipe, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
                 content: L'équipe
               - type: link
                 props: { href: /newsletter, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
                 content: Newsletter
+              # TODO(don): HelloAsso URL — the organisation page stands in until the
+              # donation form exists. Same URL in site-header, site-footer, notre-mission.
               - type: link
-                props: { href: '/#faq', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
-                content: FAQ
+                props:
+                  href: https://www.helloasso.com/associations/merci-pour-ton-non
+                  target: _blank
+                  rel: noopener noreferrer
+                  aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
+                  className: inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline
+                children:
+                  - type: icon
+                    props: { name: heart, size: 18, strokeWidth: 2, aria-hidden: 'true' }
+                  - type: text
+                    element: span
+                    content: Nous faire un don
               - type: link
                 props: { href: /mentions-legales, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
                 content: Mentions légales

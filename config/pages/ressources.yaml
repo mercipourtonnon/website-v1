@@ -1,5 +1,7 @@
-# /ressources — downloadable materials. Adding a resource = adding one
-# `resource-card` instance to the grid below. Files are hosted on kDrive
+# /ressources — "nos ressources": supports de communication and contenus
+# pédagogiques to download (review of 2026-10-09; the stand band moved to
+# /nos-stands). Adding a resource = adding one `resource-card` instance to the
+# matching group below. Files are hosted on kDrive
 # (the print masters are too heavy for the repo); only a light thumbnail
 # lives in public/resources/.
 name: ressources
@@ -9,7 +11,7 @@ sitemap:
   changefreq: monthly
 meta:
   lang: fr-FR
-  title: Ressources à télécharger - Merci pour ton non
+  title: Nos ressources sur le consentement - Merci pour ton non
   description: Affiches et supports sur le consentement à imprimer, afficher et partager librement, par l'association Merci pour ton non à Strasbourg.
   author: Merci pour ton non
   robots: index, follow
@@ -74,15 +76,13 @@ meta:
 
 scripts:
   externalScripts:
-    # Mobile menu close-on-link / Escape (site-header drawer)
+    # Mobile menu close-on-link / Escape, current page (site.js)
     - src: /assets/site.js
       defer: true
       position: body-end
 
 components:
   - component: site-header
-    vars:
-      base: /
 
   - type: container
     props:
@@ -112,12 +112,17 @@ components:
                     element: h1
                     props:
                       className: type-page text-bleu-fonce
-                    content: à imprimer, afficher, partager
+                    content: nos ressources
+                  - type: text
+                    element: p
+                    props:
+                      className: type-h4 font-bold text-bleu-fonce
+                    content: Contenus pédagogiques et supports à télécharger
                   - type: text
                     element: p
                     props:
                       className: type-lead text-bleu-fonce max-w-xl
-                    content: "Des supports pour faire vivre la culture du consentement là où tu es : au travail, dans ton asso, ta fac ou ton lieu de vie. Télécharge-les, imprime-les, affiche-les — ils sont faits pour circuler."
+                    content: "Pour faire vivre la culture du consentement là où tu es : au travail, dans ton asso, ta fac ou ton lieu de vie. Télécharge-les, imprime-les, affiche-les — ils sont faits pour circuler."
               - type: container
                 props:
                   className: lg:col-span-6 photo-frame frame-orange
@@ -131,7 +136,7 @@ components:
                       alt: Deux mains tiennent le flyer « Le consentement, ça te parle ? » au milieu des plantes
                       className: w-full h-auto rounded-media shadow-raised object-cover aspect-[3/2]
 
-      # Resource list
+      # Resources, in two groups (#telechargements kept as the anchor of the list)
       - type: container
         element: section
         props:
@@ -140,79 +145,107 @@ components:
         children:
           - type: container
             props:
-              className: max-w-5xl mx-auto flex flex-col gap-block
+              className: max-w-5xl mx-auto flex flex-col gap-band-sm
             children:
+              # Group 1: supports de communication
               - type: container
                 props:
-                  className: flex flex-col gap-3
+                  id: supports-de-communication
+                  className: flex flex-col gap-block
                 children:
-                  - type: text
-                    element: h2
+                  - type: container
                     props:
-                      className: type-section text-bleu-fonce
-                    content: à télécharger
-                  - type: text
-                    element: p
+                      className: flex flex-col gap-3
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: supports de communication
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-2xl
+                        content: Affiches et visuels à imprimer et à partager, en libre accès.
+                  - type: container
                     props:
-                      className: type-lead text-bleu-fonce-70 max-w-2xl
-                    content: En libre accès. D'autres supports arriveront ici au fil du temps.
+                      className: grid gap-6
+                    children:
+                      - component: resource-card
+                        vars:
+                          thumb: /resources/affiche-a3.webp
+                          thumbAlt: Aperçu de l'affiche « Pas touche sans demander » — un cactus en fleur dans un pot rose, sur fond jaune
+                          meta: PDF · A3 · 5 pages
+                          title: série de 5 affiches
+                          text: « Pas touche sans demander », « Si tu fais l'anguille, c'est que c'est non ! », « Recevoir un "non" est un cadeau », « On peut changer de disque ! » et « Dire "non" n'est pas une trahison ». Cinq affiches au format A3, pensées pour être imprimées et affichées.
+                          href: https://kdrive.infomaniak.com/app/share/3042221/15e326c4-bee4-4b34-a443-838de7a36201
+                          cta: Télécharger les affiches
+              # Group 2: contenus pédagogiques — empty until the first one ships.
               - type: container
                 props:
-                  className: grid gap-6
+                  id: contenus-pedagogiques
+                  className: flex flex-col gap-block
                 children:
-                  - component: resource-card
-                    vars:
-                      thumb: /resources/affiche-a3.webp
-                      thumbAlt: Aperçu de l'affiche « Pas touche sans demander » — un cactus en fleur dans un pot rose, sur fond jaune
-                      meta: PDF · A3 · 5 pages
-                      title: série de 5 affiches
-                      text: « Pas touche sans demander », « Si tu fais l'anguille, c'est que c'est non ! », « Recevoir un "non" est un cadeau », « On peut changer de disque ! » et « Dire "non" n'est pas une trahison ». Cinq affiches au format A3, pensées pour être imprimées et affichées.
-                      href: https://kdrive.infomaniak.com/app/share/3042221/15e326c4-bee4-4b34-a443-838de7a36201
-                      cta: Télécharger les affiches
-
-      # Other formats / stand — contact band
-      - type: container
-        element: section
-        props:
-          className: px-4 sm:px-6 pb-band-sm md:pb-band
-        children:
-          - type: container
-            props:
-              className: max-w-5xl mx-auto bg-mauve-light rounded-media overflow-hidden grid md:grid-cols-12 items-center
-            children:
-              - type: container
-                props:
-                  className: md:col-span-5 h-full
-                children:
-                  - type: image
+                  - type: container
                     props:
-                      src: /pictures/stand/cartes-imprimees-stand-sm.webp
-                      alt: Sur notre stand, une personne lit une carte à voix haute devant une table couverte de cartes et de supports imprimés
-                      loading: lazy
-                      className: w-full h-full object-cover aspect-[4/3] md:aspect-auto rounded-none
-              - type: container
+                      className: flex flex-col gap-3
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: contenus pédagogiques
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-2xl
+                        content: Des fiches et des outils pour parler du consentement autour de toi.
+                  - type: container
+                    props:
+                      className: rounded-card border-2 border-dashed border-cyan-lighter bg-cyan-light p-8 flex flex-col sm:flex-row sm:items-center gap-4
+                    children:
+                      - type: icon
+                        props: { name: hourglass, size: 28, strokeWidth: 2, className: text-cyan-ink shrink-0 }
+                      - type: container
+                        props:
+                          className: flex flex-col gap-1
+                        children:
+                          - type: text
+                            element: p
+                            props:
+                              className: font-bold text-bleu-fonce
+                            content: Bientôt ici.
+                          - type: text
+                            element: p
+                            props:
+                              className: type-small text-bleu-fonce-70
+                            children:
+                              - type: text
+                                element: span
+                                content: 'On prépare nos premiers contenus. En attendant, les notions de nos ateliers sont en libre accès : '
+                              - type: link
+                                props:
+                                  href: /le-consentement
+                                  className: font-bold text-cyan-ink underline underline-offset-4 hover:text-bleu-fonce
+                                content: notre vision du consentement
+                              - type: text
+                                element: span
+                                content: .
+              - type: text
+                element: p
                 props:
-                  className: md:col-span-7 p-8 md:p-10 flex flex-col gap-4
+                  className: type-small text-bleu-fonce-70
                 children:
                   - type: text
-                    element: h2
-                    props:
-                      className: type-h3 text-bleu-fonce
-                    content: un autre format, un stand, un atelier ?
-                  - type: text
-                    element: p
-                    props:
-                      className: text-bleu-fonce
-                    content: Tu as besoin d'un autre format, de supports imprimés, ou tu aimerais nous inviter avec notre stand ou un atelier dans ta structure ? Écris-nous, on en parle.
+                    element: span
+                    content: 'Besoin d''un autre format ou de supports imprimés ? '
                   - type: link
                     props:
                       href: mailto:mercipourtonnon@gmail.com
-                      className: inline-flex items-center gap-2 self-start bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
-                    children:
-                      - type: icon
-                        props: { name: mail, size: 20, strokeWidth: 2 }
-                      - type: text
-                        element: span
-                        content: Écrire à l'association
+                      className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
+                    content: Écris-nous
+                  - type: text
+                    element: span
+                    content: .
 
   - component: site-footer

@@ -1,0 +1,323 @@
+# /nos-interventions — interventions for organisations (entreprises, assos,
+# établissements). New page (review of 2026-10-09), drafted from the "pour
+# tous les contextes" pillar of /notre-mission. Every `# TODO(contenu)` marks
+# text the association should check or complete (formats, durations, price).
+name: nos-interventions
+path: /nos-interventions
+sitemap:
+  priority: 0.6
+  changefreq: monthly
+meta:
+  lang: fr-FR
+  title: Interventions sur le consentement - Merci pour ton non
+  description: "Entreprises, associations, établissements scolaires : on construit avec toi une intervention sur le consentement, à Strasbourg et dans le Grand Est."
+  author: Merci pour ton non
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/nos-interventions
+  openGraph:
+    type: website
+    title: Nos interventions auprès de structures | Merci pour ton non
+    description: "Une intervention sur le consentement construite avec ta structure : entreprise, association ou établissement scolaire."
+    url: https://mercipourtonnon.fr/nos-interventions
+    image: https://mercipourtonnon.fr/social.png
+    imageAlt: Merci pour ton non — nos interventions auprès de structures
+    siteName: Merci pour ton non
+    locale: fr_FR
+  twitter:
+    card: summary_large_image
+    title: Nos interventions auprès de structures | Merci pour ton non
+    description: "Une intervention sur le consentement construite avec ta structure : entreprise, association ou établissement scolaire."
+    image: https://mercipourtonnon.fr/social.png
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  preload:
+    - href: /fonts/NeueMachina/NeueMachina-Regular.otf
+      as: font
+      type: font/otf
+      crossorigin: anonymous
+    - href: /fonts/BelyDisplay/BelyDisplay-Regular.woff2
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  customElements:
+    - type: meta
+      attrs:
+        name: theme-color
+        content: '#7B01FE'
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+
+scripts:
+  externalScripts:
+    # Mobile menu close-on-link / Escape, current page (site.js)
+    - src: /assets/site.js
+      defer: true
+      position: body-end
+
+components:
+  - component: site-header
+
+  - type: container
+    props:
+      id: contenu
+      className: bg-white overflow-x-clip
+    children:
+      # Page header
+      - type: container
+        element: section
+        props:
+          className: px-4 sm:px-6 pt-10 md:pt-16 pb-band-sm md:pb-band bg-mauve-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-6 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Nos actions · Interventions
+                  - type: text
+                    element: h1
+                    props:
+                      className: type-page text-bleu-fonce
+                    content: nos interventions auprès de structures
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce max-w-xl
+                    content: "Relations amicales, familiales, professionnelles, intimes : le consentement est partout. On intervient dans les entreprises, les associations et les établissements, avec un format construit avec toi."
+                  - type: container
+                    props:
+                      className: flex flex-wrap items-center gap-4
+                    children:
+                      - type: link
+                        props:
+                          href: '#contact'
+                          className: inline-flex items-center gap-2 whitespace-nowrap bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
+                        children:
+                          - type: text
+                            element: span
+                            content: Parler de ton projet
+                          - type: icon
+                            props: { name: arrow-down, size: 20, strokeWidth: 2 }
+                      - type: link
+                        props:
+                          href: /nos-ateliers#programme
+                          className: font-bold text-mauve underline underline-offset-4 hover:text-mauve-hover py-2
+                        content: Voir le programme d'un atelier
+              - type: container
+                props:
+                  className: lg:col-span-6 photo-frame frame-cyan
+                children:
+                  - type: image
+                    variant: hero
+                    props:
+                      src: /pictures/atelier/dilara-mathilde-animent.webp
+                      srcset: /pictures/atelier/dilara-mathilde-animent-sm.webp 800w, /pictures/atelier/dilara-mathilde-animent.webp 1600w
+                      sizes: '(min-width: 1024px) 600px, 100vw'
+                      alt: Dilara et Mathilde, assises face au groupe, animent un temps d'échange
+                      className: w-full h-auto rounded-media shadow-raised object-cover aspect-[3/2]
+
+      # Section: Pour quelles structures (#structures)
+      - type: container
+        element: section
+        props:
+          id: structures
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Pour qui
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: pour quelles structures ?
+              # TODO(contenu): check the three audiences and their examples.
+              - type: container
+                props:
+                  className: grid md:grid-cols-3 gap-6
+                children:
+                  - component: audience-card
+                    vars:
+                      iconBg: bg-mauve-light
+                      icon: briefcase
+                      accent: text-mauve
+                      title: entreprises et collectifs de travail
+                      text: Poser ses limites au travail, entendre celles des collègues, repérer les pressions liées à la hiérarchie. Pour une équipe, un service ou un temps fort.
+                  - component: audience-card
+                    vars:
+                      iconBg: bg-mauve-light
+                      icon: heart-handshake
+                      accent: text-mauve
+                      title: associations et lieux culturels
+                      text: Pour tes bénévoles, ton équipe ou ton public. Un atelier, un stand ou un temps d'échange autour d'un événement.
+                  - component: audience-card
+                    vars:
+                      iconBg: bg-mauve-light
+                      icon: graduation-cap
+                      accent: text-mauve
+                      title: établissements scolaires et supérieurs
+                      text: Lycées, facs, écoles. Des exercices concrets pour parler consentement dans les relations amicales, amoureuses et de groupe.
+
+      # Section: Comment on travaille (#deroule)
+      - type: container
+        element: section
+        props:
+          id: deroule
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-cyan-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: Déroulé
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: comment on travaille
+              # TODO(contenu): formats, durations and pricing of an intervention.
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: grid md:grid-cols-3 gap-6
+                children:
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '1'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: on échange sur tes besoins
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Ton public, ce qui se passe dans ta structure, ce que tu aimerais voir changer.
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '2'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: on construit le format ensemble
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Atelier, stand ou temps d'échange, durée et nombre de personnes, à partir de nos notions et de nos exercices.
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '3'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: on intervient, puis on fait le point
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Deux facilitateur·ices animent l'intervention dans un cadre bienveillant, puis on prend un temps avec toi pour en tirer les suites.
+
+      # Section: Témoignage — the participant who asked for it in so many words
+      - type: container
+        element: section
+        props:
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-3xl mx-auto
+            children:
+              - component: testimonial-card
+                vars:
+                  size: type-lead
+                  quote: "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
+                  author: Alex
+
+      # Section: Contact (#contact)
+      - type: container
+        element: section
+        props:
+          id: contact
+          className: px-4 sm:px-6 pb-band-sm md:pb-band
+        children:
+          - type: container
+            props:
+              className: max-w-5xl mx-auto bg-orange-light rounded-media p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center
+            children:
+              - type: container
+                props:
+                  className: md:col-span-8 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: parlons de ton projet
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: Dis-nous qui tu es, quel public tu accueilles et ce que tu imagines. On te répond par email pour en discuter.
+              - type: container
+                props:
+                  className: md:col-span-4 flex md:justify-end
+                children:
+                  - type: link
+                    props:
+                      href: mailto:mercipourtonnon@gmail.com?subject=Intervention%20dans%20ma%20structure
+                      className: inline-flex items-center gap-2 whitespace-nowrap bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors shadow-card
+                    children:
+                      - type: icon
+                        props: { name: mail, size: 20, strokeWidth: 2 }
+                      - type: text
+                        element: span
+                        content: Écrire à l'association
+
+  - component: site-footer

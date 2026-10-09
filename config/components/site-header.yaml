@@ -1,11 +1,17 @@
 # Shared header — sticky top bar (desktop nav + mobile drawer).
-# Used by home, /le-consentement and /ressources.
-# Var: $base — prefix for the home anchors. Pass '/' everywhere except on the
-# home page, where '#' links keep the scroll-spy in /assets/site.js working
-# (it compares href to '#<section-id>'); there pass base: '' .
+# Used by every public page. No vars: every link is a route, so the header
+# reads the same everywhere (the old $base/#anchor scheme went with the
+# one-page home).
+# Desktop: a native navigation-menu (Notre mission · Nos actions ▾ ·
+# Ressources · Devenir bénévole), the don button (HelloAsso, external) and the
+# booking CTA. The drawer mirrors that tree, "Nos actions" as an indented group.
 # The drawer keeps the ids/classes site.js hooks into: #mobile-menu,
-# #menu-overlay, .mobile-nav-link (close on click / Escape), .nav-link (spy).
-# No links to /espace or /ateliers/* until feat/espace-facilitateurices merges.
+# #menu-overlay, .mobile-nav-link (close on click / Escape, current page).
+# "Devenir bénévole" → /inscription is the only public entry into the espace.
+# The don URL is written out (TODO(don)) in this file, site-footer and
+# notre-mission: in Sovrium 0.34.1 a page href does not resolve `$env.X`
+# (it renders verbatim), and a template cannot place another template, so
+# neither an env var nor a shared don-link template can hold it once.
 name: site-header
 type: container
 element: header
@@ -33,39 +39,50 @@ children:
               alt: ''
               loading: eager
               className: h-10 lg:h-12 w-auto
-      # Desktop navigation
+      # Desktop navigation — native navigation-menu (hydrated island; the
+      # "Nos actions" panel opens on hover and on click). Every href is a
+      # route, so the header reads the same on every page.
       - type: container
         element: nav
         props:
-          className: hidden lg:flex items-center gap-8
+          className: hidden lg:flex items-center gap-4 xl:gap-6
           aria-label: Navigation principale
         children:
-          - type: container
+          - type: navigation-menu
+            openOnHover: true
+            triggerClassName: inline-flex items-center gap-1 whitespace-nowrap rounded-control px-2 py-1 type-small font-medium text-bleu-fonce hover:text-mauve transition-colors
             props:
-              className: flex items-center gap-6
-            children:
-              - type: link
-                props: { href: '$base#atelier', className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
-                content: L'atelier
-              - type: link
-                props: { href: '$base#programme', className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
-                content: Programme
-              - type: link
-                props: { href: '$base#infos-pratiques', className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
-                content: Infos pratiques
-              - type: link
-                props: { href: /le-consentement, className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
-                content: Le consentement
-              - type: link
-                props: { href: /ressources, className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
-                content: Ressources
-              - type: link
-                props: { href: '$base#faq', className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
-                content: FAQ
+              className: flex items-center gap-1 xl:gap-3
+            navItems:
+              - { label: Notre mission, href: /notre-mission }
+              - label: Nos actions
+                children:
+                  - { label: Nos ateliers, href: /nos-ateliers, description: '3 heures pour explorer le consentement, à prix libre' }
+                  - { label: Nos stands de sensibilisation, href: /nos-stands, description: 'Des cartes et des échanges, en festival ou en événement' }
+                  - { label: Nos interventions, href: /nos-interventions, description: 'Auprès des entreprises, des assos et des établissements' }
+              - { label: Ressources, href: /ressources }
+              - { label: Devenir bénévole, href: /inscription }
+          # TODO(don): HelloAsso URL — the organisation page stands in until the
+          # donation form exists. Same URL in site-header, site-footer, notre-mission.
           - type: link
             props:
-              href: '$base#events'
-              className: inline-flex items-center gap-2 bg-orange text-bleu-fonce px-5 py-2.5 rounded-pill font-bold type-small hover:bg-orange-hover transition-colors
+              href: https://www.helloasso.com/associations/merci-pour-ton-non
+              target: _blank
+              rel: noopener noreferrer
+              aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
+              className: inline-flex items-center gap-2 whitespace-nowrap border-2 border-bleu-fonce text-bleu-fonce px-2.5 xl:px-4 py-2 rounded-pill font-bold type-small hover:bg-bleu-fonce hover:text-white transition-colors
+            children:
+              - type: icon
+                props: { name: heart, size: 18, strokeWidth: 2, aria-hidden: 'true' }
+              # Icon only between lg and xl, where the full label would wrap the nav.
+              - type: text
+                element: span
+                props: { className: sr-only xl:not-sr-only }
+                content: Nous faire un don
+          - type: link
+            props:
+              href: /nos-ateliers#events
+              className: inline-flex items-center gap-2 whitespace-nowrap bg-orange text-bleu-fonce px-5 py-2.5 rounded-pill font-bold type-small hover:bg-orange-hover transition-colors
             content: Je réserve ma place
       # Mobile / tablet menu button
       - type: button
@@ -126,29 +143,57 @@ children:
               className: flex-1 overflow-y-auto px-3 py-4 flex flex-col gap-1
             children:
               - type: link
-                props: { href: '$base#atelier', className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
-                content: L'atelier
-              - type: link
-                props: { href: '$base#programme', className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
-                content: Programme
-              - type: link
-                props: { href: '$base#infos-pratiques', className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
-                content: Infos pratiques
-              - type: link
-                props: { href: /le-consentement, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
-                content: Le consentement
+                props: { href: /notre-mission, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
+                content: Notre mission
+              # "Nos actions" — a group label, its three pages indented below.
+              - type: text
+                element: p
+                props:
+                  id: drawer-actions
+                  className: px-4 pt-3 pb-1 type-overline text-bleu-fonce-70
+                content: Nos actions
+              - type: container
+                props:
+                  role: group
+                  aria-labelledby: drawer-actions
+                  className: ml-4 pl-2 border-l-2 border-mauve-lighter flex flex-col gap-1
+                children:
+                  - type: link
+                    props: { href: /nos-ateliers, className: mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light }
+                    content: Nos ateliers
+                  - type: link
+                    props: { href: /nos-stands, className: mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light }
+                    content: Nos stands de sensibilisation
+                  - type: link
+                    props: { href: /nos-interventions, className: mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light }
+                    content: Nos interventions
               - type: link
                 props: { href: /ressources, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
                 content: Ressources
               - type: link
-                props: { href: '$base#faq', className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
-                content: FAQ
+                props: { href: /inscription, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
+                content: Devenir bénévole
+              # TODO(don): HelloAsso URL — the organisation page stands in until the
+              # donation form exists. Same URL in site-header, site-footer, notre-mission.
+              - type: link
+                props:
+                  href: https://www.helloasso.com/associations/merci-pour-ton-non
+                  target: _blank
+                  rel: noopener noreferrer
+                  aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
+                  className: mobile-nav-link flex items-center gap-2 rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light
+                children:
+                  - type: icon
+                    props: { name: heart, size: 18, strokeWidth: 2, aria-hidden: 'true' }
+                  - type: text
+                    element: span
+                    content: Nous faire un don
           - type: container
             props:
               className: p-5 border-t border-bleu-fonce-light
             children:
               - type: link
                 props:
-                  href: '$base#events'
+                  href: /nos-ateliers#events
                   className: mobile-nav-link block w-full text-center bg-orange text-bleu-fonce px-6 py-4 rounded-pill font-bold hover:bg-orange-hover transition-colors
                 content: Je réserve ma place

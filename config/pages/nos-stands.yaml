@@ -1,0 +1,296 @@
+# /nos-stands — the awareness stand: what happens on it, where to meet us,
+# and how to invite it (contact band moved from /ressources, review of
+# 2026-10-09). Draft copy: every `# TODO(contenu)` marks text the association
+# should check or complete.
+name: nos-stands
+path: /nos-stands
+sitemap:
+  priority: 0.6
+  changefreq: monthly
+meta:
+  lang: fr-FR
+  title: Nos stands de sensibilisation - Merci pour ton non
+  description: "En festival ou en événement à Strasbourg, notre stand ouvre la discussion sur le consentement avec des cartes de mises en situation. Invite-nous."
+  author: Merci pour ton non
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/nos-stands
+  openGraph:
+    type: website
+    title: Nos stands de sensibilisation | Merci pour ton non
+    description: "Des cartes, des affiches et des échanges sur le consentement, en festival ou en événement à Strasbourg."
+    url: https://mercipourtonnon.fr/nos-stands
+    image: https://mercipourtonnon.fr/social.png
+    imageAlt: Merci pour ton non — nos stands de sensibilisation
+    siteName: Merci pour ton non
+    locale: fr_FR
+  twitter:
+    card: summary_large_image
+    title: Nos stands de sensibilisation | Merci pour ton non
+    description: "Des cartes, des affiches et des échanges sur le consentement, en festival ou en événement à Strasbourg."
+    image: https://mercipourtonnon.fr/social.png
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  preload:
+    - href: /fonts/NeueMachina/NeueMachina-Regular.otf
+      as: font
+      type: font/otf
+      crossorigin: anonymous
+    - href: /fonts/BelyDisplay/BelyDisplay-Regular.woff2
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  customElements:
+    - type: meta
+      attrs:
+        name: theme-color
+        content: '#12A19D'
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+
+scripts:
+  externalScripts:
+    # Mobile menu close-on-link / Escape, current page (site.js)
+    - src: /assets/site.js
+      defer: true
+      position: body-end
+
+components:
+  - component: site-header
+
+  - type: container
+    props:
+      id: contenu
+      className: bg-white overflow-x-clip
+    children:
+      # Page header
+      - type: container
+        element: section
+        props:
+          className: px-4 sm:px-6 pt-10 md:pt-16 pb-band-sm md:pb-band bg-cyan-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-6 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: Nos actions · Stands
+                  - type: text
+                    element: h1
+                    props:
+                      className: type-page text-bleu-fonce
+                    content: nos stands de sensibilisation
+                  # TODO(contenu): check the description of the stand.
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce max-w-xl
+                    content: "En festival, en soirée ou dans un événement associatif, on installe notre stand pour parler consentement avec les personnes qui passent : quelques minutes, une carte, une discussion."
+                  - type: container
+                    props:
+                      className: flex flex-wrap items-center gap-4
+                    children:
+                      - type: link
+                        props:
+                          href: '#inviter'
+                          className: inline-flex items-center gap-2 whitespace-nowrap bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
+                        children:
+                          - type: text
+                            element: span
+                            content: Nous inviter
+                          - type: icon
+                            props: { name: arrow-down, size: 20, strokeWidth: 2 }
+                      - type: link
+                        props:
+                          href: /nos-ateliers
+                          className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve py-2
+                        content: Voir nos ateliers
+              - type: container
+                props:
+                  className: lg:col-span-6 photo-frame frame-orange
+                children:
+                  - type: image
+                    variant: hero
+                    props:
+                      src: /pictures/stand/equipe-stand-bifurquer.webp
+                      srcset: /pictures/stand/equipe-stand-bifurquer-sm.webp 800w, /pictures/stand/equipe-stand-bifurquer.webp 1600w
+                      sizes: '(min-width: 1024px) 600px, 100vw'
+                      alt: L'équipe bénévole rit devant le stand Merci pour ton non, un soir de festival
+                      className: w-full h-auto rounded-media shadow-raised object-cover aspect-[3/2]
+
+      # Section: Comment ça se passe (#deroule)
+      - type: container
+        element: section
+        props:
+          id: deroule
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-start
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-4 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Sur le stand
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: comment ça se passe
+                  - type: container
+                    props:
+                      className: hidden lg:block photo-frame frame-cyan mt-4
+                    children:
+                      - type: image
+                        props:
+                          src: /pictures/stand/carte-consentement-stand-sm.webp
+                          alt: Sur notre stand, une personne tend une carte de mise en situation à une bénévole souriante
+                          loading: lazy
+                          className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/4]
+              # TODO(contenu): check the three steps of a stand.
+              - type: container
+                props:
+                  className: lg:col-span-8 grid sm:grid-cols-2 gap-6 content-start
+                children:
+                  - component: audience-card
+                    vars:
+                      iconBg: bg-mauve-light
+                      icon: layers
+                      accent: text-mauve
+                      title: des cartes de mises en situation
+                      text: "Tu tires une carte, tu lis une situation du quotidien, et on en parle : oui, non, ça dépend ? Il n'y a pas de bonne réponse, juste des repères à partager."
+                  - component: audience-card
+                    vars:
+                      iconBg: bg-mauve-light
+                      icon: messages-square
+                      accent: text-mauve
+                      title: un temps d'échange
+                      text: Pas de cours magistral. On écoute, on pose des questions, et chacun·e repart avec une idée à creuser, à son rythme.
+                  - component: audience-card
+                    vars:
+                      iconBg: bg-mauve-light
+                      icon: file-text
+                      accent: text-mauve
+                      title: des supports à emporter
+                      text: Nos affiches et nos flyers sont sur la table. Tu peux aussi les télécharger sur la page ressources.
+                  - component: audience-card
+                    vars:
+                      iconBg: bg-mauve-light
+                      icon: users
+                      accent: text-mauve
+                      title: une équipe bénévole
+                      text: Le stand est tenu par des bénévoles formé·es à nos notions. Tu as envie d'en faire partie ? Rejoins l'équipe bénévole.
+
+      # Section: Où nous croiser (#ou-nous-croiser)
+      - type: container
+        element: section
+        props:
+          id: ou-nous-croiser
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-orange-light
+        children:
+          - type: container
+            props:
+              className: max-w-3xl mx-auto flex flex-col gap-4
+            children:
+              - type: text
+                element: h2
+                props:
+                  className: type-section text-bleu-fonce
+                content: où nous croiser
+              # TODO(contenu): list the festivals and events where the stand has
+              # been (names, places, years), or the next dates.
+              - type: text
+                element: p
+                props:
+                  className: type-lead text-bleu-fonce-70
+                content: On tient notre stand dans des festivals et des événements à Strasbourg et alentour. Les prochaines dates sont annoncées dans la newsletter et sur Instagram.
+              - type: container
+                props:
+                  className: flex flex-wrap items-center gap-4 pt-2
+                children:
+                  - type: link
+                    props:
+                      href: /newsletter
+                      className: inline-flex items-center gap-2 border-2 border-bleu-fonce text-bleu-fonce px-5 py-2.5 rounded-pill font-bold hover:bg-bleu-fonce hover:text-white transition-colors
+                    content: S'inscrire à la newsletter
+                  - type: link
+                    props:
+                      href: https://www.instagram.com/mercipourtonnon/
+                      target: _blank
+                      rel: noopener noreferrer
+                      aria-label: Instagram (nouvel onglet)
+                      className: inline-flex items-center gap-1.5 font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve py-2
+                    children:
+                      - type: text
+                        element: span
+                        content: Instagram
+                      - type: icon
+                        props: { name: arrow-up-right, size: 18, strokeWidth: 2 }
+
+      # Section: Nous inviter (#inviter) — contact band, moved from /ressources
+      - type: container
+        element: section
+        props:
+          id: inviter
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-5xl mx-auto bg-mauve-light rounded-media overflow-hidden grid md:grid-cols-12 items-center
+            children:
+              - type: container
+                props:
+                  className: md:col-span-5 h-full
+                children:
+                  - type: image
+                    props:
+                      src: /pictures/stand/cartes-imprimees-stand-sm.webp
+                      alt: Sur notre stand, une personne lit une carte à voix haute devant une table couverte de cartes et de supports imprimés
+                      loading: lazy
+                      className: w-full h-full object-cover aspect-[4/3] md:aspect-auto rounded-none
+              - type: container
+                props:
+                  className: md:col-span-7 p-8 md:p-10 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-h3 text-bleu-fonce
+                    content: tu organises un événement ?
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce
+                    content: Tu aimerais nous inviter avec notre stand dans ton festival, ta soirée ou ton événement ? Écris-nous, on en parle.
+                  - type: link
+                    props:
+                      href: mailto:mercipourtonnon@gmail.com?subject=Inviter%20le%20stand
+                      className: inline-flex items-center gap-2 self-start bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
+                    children:
+                      - type: icon
+                        props: { name: mail, size: 20, strokeWidth: 2 }
+                      - type: text
+                        element: span
+                        content: Écrire à l'association
+
+  - component: site-footer

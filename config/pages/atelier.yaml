@@ -122,7 +122,7 @@ components:
                       className: h-12 sm:h-14 w-auto
               - type: link
                 props:
-                  href: /#events
+                  href: /nos-ateliers#events
                   className: text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-orange-vif
                 content: Toutes les dates
 
@@ -240,7 +240,7 @@ components:
                     content: 'Une question avant de t''inscrire ? '
                   - type: link
                     props:
-                      href: /#faq
+                      href: /nos-ateliers#faq
                       className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4
                     content: Lis la FAQ
                   - type: text

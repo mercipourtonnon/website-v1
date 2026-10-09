@@ -1,4 +1,7 @@
-# /le-consentement — the knowledge shared during the Niveau 1 workshop.
+# /le-consentement — "notre vision du consentement": the knowledge shared
+# during the Niveau 1 workshop. Since the review of 2026-10-09 the workshop
+# techniques (#insistance, #nuances) live in /nos-ateliers#programme and the
+# bias list keeps six representative cards.
 # Source: the "Apports" blocks of the Notion Déroulé (Niveau 1 – Tout public)
 # and the "Cartes Biais" page (reworked biases). Facilitation material —
 # timings, instructions, materials, exercise scripts, learning objectives — is
@@ -10,30 +13,30 @@ sitemap:
   changefreq: monthly
 meta:
   lang: fr-FR
-  title: Le consentement, en clair - Merci pour ton non
-  description: Définitions, l'acronyme RÈGLES, dire et remercier le non, changer d'avis, les biais qui poussent à dire oui. Les notions de nos ateliers, en libre accès.
+  title: Notre vision du consentement - Merci pour ton non
+  description: Notre vision du consentement - définitions, l'acronyme RÈGLES, dire et remercier le non, changer d'avis, les biais qui poussent à dire oui. En libre accès.
   author: Merci pour ton non
   robots: index, follow
   canonical: https://mercipourtonnon.fr/le-consentement
   openGraph:
     type: article
-    title: Le consentement, en clair | Merci pour ton non
+    title: Notre vision du consentement | Merci pour ton non
     description: Les notions partagées dans nos ateliers de consentement à Strasbourg, en libre accès.
     url: https://mercipourtonnon.fr/le-consentement
     image: https://mercipourtonnon.fr/social.png
-    imageAlt: Merci pour ton non — le consentement, en clair
+    imageAlt: Merci pour ton non — notre vision du consentement
     siteName: Merci pour ton non
     locale: fr_FR
   twitter:
     card: summary_large_image
-    title: Le consentement, en clair | Merci pour ton non
+    title: Notre vision du consentement | Merci pour ton non
     description: Les notions partagées dans nos ateliers de consentement, en libre accès.
     image: https://mercipourtonnon.fr/social.png
   schema:
     '@context': https://schema.org
     '@type': Article
-    headline: Le consentement, en clair
-    description: Définitions, l'acronyme RÈGLES, dire et remercier le non, changer d'avis, les biais qui poussent à dire oui et que faire face à l'insistance.
+    headline: Notre vision du consentement
+    description: Définitions, l'acronyme RÈGLES, dire et remercier le non, changer d'avis et les biais qui poussent à dire oui.
     inLanguage: fr-FR
     url: https://mercipourtonnon.fr/le-consentement
     image: https://mercipourtonnon.fr/pictures/stand/table-cartes-stand.webp
@@ -80,15 +83,13 @@ meta:
 
 scripts:
   externalScripts:
-    # Mobile menu close-on-link / Escape (site-header drawer)
+    # Mobile menu close-on-link / Escape, current page (site.js)
     - src: /assets/site.js
       defer: true
       position: body-end
 
 components:
   - component: site-header
-    vars:
-      base: /
 
   - type: container
     props:
@@ -113,12 +114,12 @@ components:
                     element: p
                     props:
                       className: type-overline text-mauve
-                    content: Savoirs · Atelier niveau 1
+                    content: Notre vision · Atelier niveau 1
                   - type: text
                     element: h1
                     props:
                       className: type-page text-bleu-fonce
-                    content: le consentement, en clair
+                    content: notre vision du consentement
                   - type: text
                     element: p
                     props:
@@ -130,7 +131,7 @@ components:
                     children:
                       - type: link
                         props:
-                          href: /#events
+                          href: /nos-ateliers#events
                           className: inline-flex items-center gap-2 whitespace-nowrap bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
                         children:
                           - type: text
@@ -196,12 +197,6 @@ components:
                       - type: link
                         props: { href: '#biais', className: py-1 text-bleu-fonce hover:text-mauve }
                         content: Les biais
-                      - type: link
-                        props: { href: '#insistance', className: py-1 text-bleu-fonce hover:text-mauve }
-                        content: Face à l'insistance
-                      - type: link
-                        props: { href: '#nuances', className: py-1 text-bleu-fonce hover:text-mauve }
-                        content: Consentement, défaut, bris
 
               - type: container
                 element: article
@@ -657,15 +652,15 @@ components:
                                   alt: Une main dispose sur une table des feuilles portant des noms de biais — « Patriarcat », « Chantage », « Dette psychologique »
                                   loading: lazy
                                   className: w-full h-auto rounded-media shadow-card object-cover aspect-[2/3]
+                      - type: text
+                        element: p
+                        props:
+                          className: font-bold text-bleu-fonce
+                        content: Six exemples, parmi tous ceux qu'on explore en atelier.
                       - type: container
                         props:
                           className: grid sm:grid-cols-2 xl:grid-cols-3 gap-4
                         children:
-                          - component: term-card
-                            vars:
-                              term: Légitimité, aura
-                              definition: Je donne plus de crédit à une personne que je perçois comme experte ou charismatique.
-                              effect: Je dis oui sans avoir toutes les informations pour décider en connaissance de cause, et je crois ce qu'elle affirme sans me poser de questions.
                           - component: term-card
                             vars:
                               term: Autorité
@@ -678,11 +673,6 @@ components:
                               effect: On peut consentir par peur d'être exclu·e ou jugé·e.
                           - component: term-card
                             vars:
-                              term: Désirabilité sociale
-                              definition: Tendance à répondre ou agir de façon socialement acceptable ou valorisée, plutôt qu'authentique.
-                              effect: Je dis oui pour être accepté·e, ne pas déplaire, éviter un malaise ou séduire, plutôt que par réelle envie.
-                          - component: term-card
-                            vars:
                               term: Culpabilité anticipée
                               definition: J'imagine que mon refus va faire de la peine, blesser, gêner ou casser le lien.
                               effect: Je dis oui pour éviter cette charge émotionnelle.
@@ -693,191 +683,14 @@ components:
                               effect: On renouvelle un consentement par loyauté, ou pour « ne pas revenir en arrière ».
                           - component: term-card
                             vars:
-                              term: Rareté
-                              definition: Peur de manquer une occasion perçue comme unique ou rare.
-                              effect: On peut consentir par crainte du regret plutôt que par désir actuel.
-                          - component: term-card
-                            vars:
-                              term: Habitude relationnelle
-                              definition: Tendance à répéter les mêmes schémas avec une personne sans se demander s'ils sont toujours d'actualité.
-                              effect: Ça peut empêcher de reconsidérer son consentement dans des situations familières.
-                          - component: term-card
-                            vars:
-                              term: Loyauté relationnelle
-                              definition: Tendance à agir par devoir plus que par choix dans les liens forts (amitié, famille, couple…).
-                              effect: Le consentement peut être donné par devoir plutôt que par choix.
-                          - component: term-card
-                            vars:
-                              term: Familiarité
-                              definition: Tendance à faire davantage confiance à ce qui nous est familier ou proche.
-                              effect: On baisse sa vigilance face aux personnes connues, en supposant qu'elles ne peuvent pas nous nuire.
-                          - component: term-card
-                            vars:
                               term: Effet de script
                               definition: Application automatique de scénarios sociaux appris, sans se poser de questions (le déroulé d'un acte sexuel ou d'une relation amoureuse, par exemple).
                               effect: Ça limite l'espace de choix réel, en imposant un déroulé implicite.
                           - component: term-card
                             vars:
-                              term: Illusion de transparence
-                              definition: Croire que notre malaise ou notre désaccord se voit, sans avoir besoin de l'exprimer.
-                              effect: On peut ne pas dire son non, en pensant que l'autre l'a déjà perçu.
-                          - component: term-card
-                            vars:
-                              term: Effet spectateur
-                              definition: En groupe, chacun·e se sent moins responsable d'agir ou de s'opposer.
-                              effect: On laisse faire, en pensant que « d'autres diront non s'il le faut ».
-                          - component: term-card
-                            vars:
-                              term: Pauvreté
-                              definition: Une contrainte matérielle ou économique limite la liberté de choix.
-                              effect: Je dis oui par nécessité, parce que je n'ai pas les ressources pour me permettre de refuser.
-                          - component: term-card
-                            vars:
-                              term: Beauté
-                              definition: Les personnes qui correspondent aux canons de beauté ont tendance à recevoir plus de oui que la moyenne.
-                              effect: Ça peut biaiser notre capacité à évaluer librement une demande.
-                          - component: term-card
-                            vars:
-                              term: Patriarcat
-                              definition: Un système social qui assigne des rôles genrés inégaux dès l'enfance.
-                              effect: Selon le genre qu'on m'a assigné, j'ai appris à être gentil·le ou à insister. Ça biaise mon rapport au consentement.
-                          - component: term-card
-                            vars:
                               term: Rapports de pouvoir inégaux
                               definition: Des écarts de hiérarchie, d'âge, de prestige ou de situation économique entre les personnes.
                               effect: Ils pèsent sur la liberté de dire non.
-                          - component: term-card
-                            vars:
-                              term: Chantage
-                              definition: Une forme de menace ou de pression exercée pour obtenir un accord.
-                              effect: Il annule toute possibilité de consentement libre.
-                          - component: term-card
-                            vars:
-                              term: États modifiés de conscience
-                              definition: Un état altéré par des substances, des émotions intenses ou un choc psychique.
-                              effect: Ça peut compromettre la capacité à évaluer, refuser ou exprimer son choix.
-                          - component: term-card
-                            vars:
-                              term: Dette psychologique
-                              definition: Le sentiment de « devoir quelque chose » à quelqu'un parce qu'il ou elle nous a donné, aidé, attendu, aimé, écouté.
-                              effect: Une pression implicite à dire oui pour rendre la pareille.
-                          - component: term-card
-                            vars:
-                              term: Fatigue décisionnelle ou émotionnelle
-                              definition: Être trop fatigué·e, stressé·e ou épuisé·e pour évaluer une demande ou affirmer un non.
-                              effect: Je dis oui pour « avoir la paix ».
-
-                  # 6. Face à l'insistance
-                  - type: container
-                    element: section
-                    props:
-                      id: insistance
-                      className: flex flex-col gap-6
-                    children:
-                      - type: text
-                        element: h2
-                        props:
-                          className: type-section text-bleu-fonce
-                        content: face à l'insistance
-                      - type: text
-                        element: p
-                        props:
-                          className: type-lead text-bleu-fonce-70 max-w-3xl
-                        content: Ton non a été entendu, et pourtant on insiste. Trois façons de le tenir.
-                      - type: container
-                        props:
-                          className: grid md:grid-cols-3 gap-6
-                        children:
-                          - type: container
-                            props:
-                              className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
-                            children:
-                              - type: icon
-                                props: { name: repeat, size: 28, strokeWidth: 2, className: text-mauve }
-                              - type: text
-                                element: h3
-                                props:
-                                  className: type-h4 text-bleu-fonce
-                                content: le disque rayé
-                              - type: text
-                                element: p
-                                props:
-                                  className: type-small text-bleu-fonce-70
-                                content: Répète ton non, tel quel, autant de fois qu'il le faut.
-                          - type: container
-                            props:
-                              className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
-                            children:
-                              - type: icon
-                                props: { name: megaphone, size: 28, strokeWidth: 2, className: text-mauve }
-                              - type: text
-                                element: h3
-                                props:
-                                  className: type-h4 text-bleu-fonce
-                                content: nommer la pression
-                              - type: text
-                                element: p
-                                props:
-                                  className: type-small text-bleu-fonce-70
-                                content: « Tu insistes trop. » « Tu veux me mettre la pression ? » « Tu ne veux pas respecter mon non ? »
-                          - type: container
-                            props:
-                              className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
-                            children:
-                              - type: icon
-                                props: { name: door-open, size: 28, strokeWidth: 2, className: text-mauve }
-                              - type: text
-                                element: h3
-                                props:
-                                  className: type-h4 text-bleu-fonce
-                                content: partir
-                              - type: text
-                                element: p
-                                props:
-                                  className: type-small text-bleu-fonce-70
-                                content: Tu peux couper court à l'interaction et t'en aller.
-
-                  # 7. Consentement, défaut, bris
-                  - type: container
-                    element: section
-                    props:
-                      id: nuances
-                      className: flex flex-col gap-6
-                    children:
-                      - type: text
-                        element: h2
-                        props:
-                          className: type-section text-bleu-fonce
-                        content: consentement, défaut, bris — les nuances
-                      - type: text
-                        element: p
-                        props:
-                          className: type-lead text-bleu-fonce-70 max-w-3xl
-                        content: Développer une culture du consentement, c'est aussi muscler notre capacité à lire une situation, en distinguant un consentement, un défaut de consentement et un bris de consentement. En atelier, on s'y exerce à partir de situations du quotidien. Pour reconnaître un consentement, quatre repères.
-                      - type: container
-                        props:
-                          className: grid sm:grid-cols-2 gap-4
-                        children:
-                          - component: term-card
-                            vars:
-                              term: Explicite
-                              definition: C'est clair, exprimé, formulé.
-                              effect: Il ne reste pas de doute.
-                          - component: term-card
-                            vars:
-                              term: Spécifique
-                              definition: Une action précise, à un moment donné.
-                              effect: Pour autre chose, ou plus tard, on redemande.
-                          - component: term-card
-                            vars:
-                              term: Individuel
-                              definition: Une action avec une personne seulement.
-                              effect: Le oui de l'une ne vaut pas pour celles d'à côté.
-                          - component: term-card
-                            vars:
-                              term: Gagnant-gagnant
-                              definition: Chacun·e en retire quelque chose de positif, aligné avec soi.
-                              effect: Personne ne cède pour l'autre.
 
       # Closing CTA
       - type: container
@@ -909,7 +722,7 @@ components:
                 children:
                   - type: link
                     props:
-                      href: /#events
+                      href: /nos-ateliers#events
                       className: inline-flex items-center justify-center gap-2 whitespace-nowrap bg-orange text-bleu-fonce px-7 py-4 rounded-pill font-bold type-lead hover:bg-orange-hover transition-colors shadow-card
                     children:
                       - type: text
@@ -919,8 +732,8 @@ components:
                         props: { name: arrow-right, size: 20, strokeWidth: 2 }
                   - type: link
                     props:
-                      href: /ressources
+                      href: /nos-ateliers#programme
                       className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve py-2
-                    content: Voir les ressources
+                    content: Voir ce qu'on pratique en atelier
 
   - component: site-footer
