@@ -102,7 +102,7 @@ pages:
   - $ref: ./config/pages/newsletter.yaml
   # One page per published workshop date (/ateliers/:slug).
   - $ref: ./config/pages/atelier.yaml
-  # Espace facilitateur·ices (private, noindex, out of the sitemap).
+  # Espace facilitateur·ices and coordination (private, noindex, out of the sitemap).
   - $ref: ./config/pages/espace-connexion.yaml
   - $ref: ./config/pages/espace-accueil.yaml
   - $ref: ./config/pages/espace-proposer.yaml
@@ -120,6 +120,9 @@ pages:
   - $ref: ./config/pages/espace-membres.yaml
   - $ref: ./config/pages/espace-membre.yaml
   - $ref: ./config/pages/espace-profil.yaml
+  - $ref: ./config/pages/espace-coordination-membres.yaml
+  - $ref: ./config/pages/espace-coordination-agenda.yaml
+  - $ref: ./config/pages/espace-coordination-actualites.yaml
 
 # Standalone forms, embedded in pages with formRef.
 forms:
