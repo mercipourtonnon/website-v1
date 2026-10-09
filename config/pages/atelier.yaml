@@ -45,6 +45,8 @@ meta:
       inLanguage: fr-FR
       educationalLevel: Niveau 1
       image: https://mercipourtonnon.fr/social.png
+      # Sovrium 0.33.0 writes every $record token as a string, so this reads
+      # "15"; schema.org consumers accept the numeric text.
       maximumAttendeeCapacity: $record.capacity
       # Only the venue name and the city are public; the street address goes
       # to people who register.
@@ -59,6 +61,9 @@ meta:
         '@type': Organization
         name: Merci pour ton non
         url: https://mercipourtonnon.fr
+      # Short names (lead_name / co_name look up short_name). meta cannot be
+      # gated per record, and a body <script> is stripped, so a date without
+      # a co-facilitator would emit one Person with an empty name.
       performer:
         - { '@type': Person, name: $record.lead_name }
         - { '@type': Person, name: $record.co_name }

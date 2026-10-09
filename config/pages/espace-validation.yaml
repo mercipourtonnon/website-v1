@@ -53,22 +53,13 @@ components:
             toolbar: { search: false, filters: false, sort: false, export: false, refresh: true }
             emptyMessage: Rien à valider pour l'instant. Les nouvelles propositions des facilitateur·ices arrivent ici.
             onRowClick: { type: navigate, path: /espace/propositions/$record.id }
+            # Status chips read the option labels and colours declared on
+            # workshop_proposals.status; no per-grid mapping.
             columns:
               - { field: session_date, label: Date, format: long-date }
               - field: status
                 label: Statut
                 badgeForm: outline-dot
-                valueLabels:
-                  proposed: À relire
-                  approved: Création HelloAsso en cours
-                  helloasso_draft: À finaliser sur HelloAsso
-                  published: En ligne
-                  rejected: Non retenue
-                  withdrawn: Retirée
-                  sync_error: Erreur HelloAsso
-                cellStyle:
-                  - { when: { eq: sync_error }, tone: error, className: font-bold }
-                  - { when: { eq: helloasso_draft }, className: font-bold }
               - { field: start_time, label: Début }
               - { field: lead_facilitator, label: Facilitation }
               - { field: co_facilitator, label: Co-facilitation }
@@ -142,4 +133,3 @@ components:
                   - field: status
                     label: Statut
                     badgeForm: outline-dot
-                    valueLabels: { published: En ligne, rejected: Non retenue, withdrawn: Retirée }
