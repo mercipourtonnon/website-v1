@@ -70,7 +70,7 @@ components:
               - type: list
                 props:
                   aria-label: Prochains rendez-vous
-                  className: rounded-lg border border-gray-200
+                  className: rounded-lg border border-mauve-lighter
                 dataSource:
                   table: events
                   filter:
@@ -132,7 +132,7 @@ components:
               - type: list
                 props:
                   aria-label: Prochains ateliers
-                  className: list-none m-0 flex flex-col divide-y divide-gray-200 rounded-lg border border-gray-200 p-0
+                  className: list-none m-0 flex flex-col divide-y divide-mauve-lighter rounded-lg border border-mauve-lighter p-0
                 dataSource:
                   table: workshops
                   filter:
@@ -153,12 +153,12 @@ components:
                           - type: link
                             props:
                               href: /ateliers/$record.slug
-                              className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                              className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
                             content: $record.date_label, $record.time_label
                           - type: text
                             element: span
                             props:
-                              className: text-sm text-gray-700
+                              className: text-sm text-bleu-fonce-70
                             content: $record.venue_name · avec $record.lead_name
                       - type: text
                         element: span

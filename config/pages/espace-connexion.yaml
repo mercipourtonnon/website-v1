@@ -22,7 +22,7 @@ components:
     children:
       - type: container
         props:
-          className: flex w-full max-w-md flex-col gap-6 self-start sm:self-auto sm:rounded-lg sm:border sm:border-gray-200 sm:bg-white sm:p-8
+          className: flex w-full max-w-md flex-col gap-6 self-start sm:self-auto sm:rounded-lg sm:border sm:border-mauve-lighter sm:bg-white sm:p-8
         children:
           - type: link
             props:
@@ -70,11 +70,11 @@ components:
             visibility:
               declares: auth.signUp
             props:
-              className: flex flex-wrap gap-1 border-t border-gray-200 pt-4 text-sm text-bleu-fonce
+              className: flex flex-wrap gap-1 border-t border-mauve-lighter pt-4 text-sm text-bleu-fonce
             children:
               - { type: text, element: span, content: Pas encore de compte ? }
               - type: link
                 props:
                   href: /inscription
-                  className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                  className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
                 content: Rejoindre l'équipe bénévole

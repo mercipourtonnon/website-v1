@@ -52,7 +52,7 @@ components:
                     element: span
                     visibility: { record: { field: status, eq: cancelled } }
                     props:
-                      className: rounded-full bg-gray-100 px-3 py-0.5 text-sm font-medium text-bleu-fonce
+                      className: rounded-full bg-bleu-fonce-light px-3 py-0.5 text-sm font-medium text-bleu-fonce
                     content: Annulé
               - type: text
                 element: h1
@@ -60,6 +60,7 @@ components:
                   className: text-3xl sm:text-4xl title-font text-bleu-fonce
                 content: $record.title
               - type: description-list
+                layout: stacked
                 items:
                   - { term: Début, field: starts_at }
                   - { term: Fin, field: ends_at }
@@ -70,7 +71,7 @@ components:
                   href: $record.video_url
                   target: _blank
                   rel: noopener noreferrer
-                  className: inline-flex items-center gap-2 self-start font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                  className: inline-flex items-center gap-2 self-start font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
                 children:
                   - type: icon
                     props: { name: video, className: w-4 h-4, aria-hidden: 'true' }
@@ -148,12 +149,16 @@ components:
               - type: list
                 props:
                   aria-label: Besoins de l'équipe
-                  className: rounded-lg border border-gray-200
+                  className: rounded-lg border border-mauve-lighter
                 dataSource:
                   table: event_needs
                   filter:
                     - { field: event, operator: eq, value: $param.id }
                   sort: [{ field: position, direction: asc }]
+                classes:
+                  parts:
+                    title: font-bold text-bleu-fonce
+                    subtitle: text-bleu-fonce-70
                 listDisplay:
                   itemLayout: stacked
                   itemTemplate:
@@ -167,12 +172,31 @@ components:
             element: section
             visibility: { record: { field: status, eq: published } }
             props:
-              className: rounded-lg border border-gray-200 border-t-4 border-t-orange p-5 sm:p-6
+              aria-labelledby: participe-titre
+              className: rounded-lg border border-mauve-lighter border-t-4 border-t-orange p-5 sm:p-6
             children:
+              - type: text
+                element: h2
+                props:
+                  id: participe-titre
+                  className: mb-3 text-2xl title-font text-bleu-fonce
+                content: je participe
+              # The need picker lists the needs of every published event (no
+              # filter on the page's event exists in 0.33, and a formRef embed
+              # takes no field overrides), so the hint names this event.
+              - type: container
+                props:
+                  className: mb-4 flex items-start gap-2 rounded-md bg-warning-bg px-3 py-2 text-sm text-warning-fg
+                children:
+                  - type: icon
+                    props: { name: info, className: w-4 h-4 shrink-0 mt-0.5, aria-hidden: 'true' }
+                  - type: text
+                    element: p
+                    content: "Choisis le besoin de cet évènement : « $record.title ». La liste montre aussi ceux des autres rendez-vous ; les besoins de celui-ci sont listés juste au-dessus."
               - type: form
                 formRef: event-participation
+                showHeader: false
                 props:
-                  headingLevel: h2
                   label: Je participe
                 inlinePrefill:
                   prefill: { event: $parent.id }
@@ -194,7 +218,7 @@ components:
               - type: list
                 props:
                   aria-label: Bénévoles inscrit·es
-                  className: rounded-lg border border-gray-200
+                  className: rounded-lg border border-mauve-lighter
                 dataSource:
                   table: event_participations
                   filter:

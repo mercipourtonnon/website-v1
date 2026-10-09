@@ -63,7 +63,7 @@ components:
                     element: span
                     visibility: { record: { field: pronoun, isNotEmpty: true } }
                     props:
-                      className: text-gray-700
+                      className: text-bleu-fonce-70
                     content: $record.pronoun
 
           # Coordination only: contact and status.
@@ -72,7 +72,7 @@ components:
             visibility: { roles: [coordination, admin] }
             props:
               aria-label: Pour la coordination
-              className: rounded-lg border border-gray-200 border-t-4 border-t-mauve p-4
+              className: rounded-lg border border-mauve-lighter border-t-4 border-t-mauve p-4
             children:
               - type: description-list
                 items:
@@ -86,7 +86,7 @@ components:
             element: section
             props:
               aria-label: Sa fiche
-              className: flex flex-col divide-y divide-gray-200
+              className: flex flex-col divide-y divide-mauve-lighter
             children:
               - type: container
                 visibility: { record: { field: why, isNotEmpty: true } }

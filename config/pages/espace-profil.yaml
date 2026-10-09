@@ -45,7 +45,7 @@ components:
               - type: link
                 props:
                   href: /espace/membres/$record.id
-                  className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                  className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
                 content: Voir ma fiche comme les autres la voient
           - type: form
             formRef: member-profile

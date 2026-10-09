@@ -64,7 +64,7 @@ components:
                   - type: link
                     props:
                       href: /espace/agenda
-                      className: text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                      className: text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
                     content: Tout l'agenda
               - type: list
                 props:
@@ -102,7 +102,7 @@ components:
                   - type: link
                     props:
                       href: /espace/actualites
-                      className: text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                      className: text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
                     content: Toutes les actualités
               - type: list
                 props:
@@ -135,7 +135,7 @@ components:
               - type: list
                 props:
                   aria-label: Mes participations
-                  className: rounded-lg border border-gray-200
+                  className: rounded-lg border border-mauve-lighter
                 dataSource:
                   table: event_participations
                   filter:
@@ -196,12 +196,13 @@ components:
               # Dates read as stored (2027-01-16): a row template prints no
               # localized date, and an itemTemplate list (which does) would print
               # the raw status value, since the status options carry no labels.
-              # Status chips: tinted brand backgrounds, bleu-fonce ink (>= 10:1),
-              # and the word itself carries the meaning (never colour alone).
+              # Status chips: warning tokens while it waits for review, success once
+              # online, mauve while in progress, bleu-fonce-light when closed; the
+              # word itself carries the meaning (never colour alone).
               - type: list
                 props:
                   aria-label: Mes propositions de dates
-                  className: list-none m-0 flex flex-col divide-y divide-gray-200 rounded-lg border border-gray-200 p-0
+                  className: list-none m-0 flex flex-col divide-y divide-mauve-lighter rounded-lg border border-mauve-lighter p-0
                 dataSource:
                   table: workshop_proposals
                   filter:
@@ -226,7 +227,7 @@ components:
                             props:
                               href: /espace/propositions/$record.id
                               aria-label: Voir la proposition du $record.session_date
-                              className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                              className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
                             content: Voir la proposition
                       - type: container
                         props: { className: flex }
@@ -234,35 +235,35 @@ components:
                           - type: text
                             element: span
                             visibility: { record: { field: status, eq: proposed } }
-                            props: { className: self-start rounded-full bg-mauve-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            props: { className: self-start rounded-full border border-warning-border bg-warning-bg px-3 py-1 text-sm font-medium text-warning-fg }
                             content: Proposée
                           - type: text
                             element: span
                             visibility: { record: { field: status, eq: approved } }
-                            props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            props: { className: self-start rounded-full bg-mauve-light px-3 py-1 text-sm font-medium text-bleu-fonce }
                             content: Validée, création en cours
                           - type: text
                             element: span
                             visibility: { record: { field: status, eq: helloasso_draft } }
-                            props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            props: { className: self-start rounded-full bg-mauve-light px-3 py-1 text-sm font-medium text-bleu-fonce }
                             content: Validée, mise en ligne en cours
                           - type: text
                             element: span
                             visibility: { record: { field: status, eq: sync_error } }
-                            props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            props: { className: self-start rounded-full bg-mauve-light px-3 py-1 text-sm font-medium text-bleu-fonce }
                             content: Validée, mise en ligne en cours
                           - type: text
                             element: span
                             visibility: { record: { field: status, eq: published } }
-                            props: { className: self-start rounded-full bg-cyan-lighter px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            props: { className: self-start rounded-full border border-success-border bg-success-bg px-3 py-1 text-sm font-medium text-success-fg }
                             content: En ligne
                           - type: text
                             element: span
                             visibility: { record: { field: status, eq: rejected } }
-                            props: { className: self-start rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            props: { className: self-start rounded-full bg-bleu-fonce-light px-3 py-1 text-sm font-medium text-bleu-fonce }
                             content: Non retenue
                           - type: text
                             element: span
                             visibility: { record: { field: status, eq: withdrawn } }
-                            props: { className: self-start rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            props: { className: self-start rounded-full bg-bleu-fonce-light px-3 py-1 text-sm font-medium text-bleu-fonce }
                             content: Retirée

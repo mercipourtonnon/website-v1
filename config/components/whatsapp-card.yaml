@@ -1,11 +1,9 @@
 # WhatsApp card — the invitation to the bénévoles' WhatsApp community, on /espace.
 # No vars.
 #
-# TODO(WHATSAPP_COMMUNITY_URL): the link below is a PLACEHOLDER. Pages cannot
-# read `$env` in Sovrium 0.33 (`$env.NAME` resolves in automation templates and
-# connections only; on a page it is printed verbatim — checked on a dev
-# server). Paste the community invitation link here, the same value as the
-# WHATSAPP_COMMUNITY_URL env entry the welcome email uses.
+# Pages cannot read `$env` in Sovrium 0.33, so the link is written here; it
+# duplicates the WHATSAPP_COMMUNITY_URL env var used by the welcome email.
+# Change both together.
 name: whatsapp-card
 type: container
 element: section
@@ -18,7 +16,7 @@ children:
       className: flex items-start gap-3
     children:
       - type: icon
-        props: { name: message-circle, className: w-6 h-6 shrink-0 text-cyan-hover mt-0.5, aria-hidden: 'true' }
+        props: { name: message-circle, className: w-6 h-6 shrink-0 text-cyan-ink mt-0.5, aria-hidden: 'true' }
       - type: container
         props:
           className: flex flex-col gap-1
@@ -36,7 +34,7 @@ children:
             content: C'est là qu'on se donne des nouvelles au quotidien, qu'on s'organise et qu'on partage les petites annonces de l'asso.
   - type: link
     props:
-      href: https://chat.whatsapp.com/A-REMPLACER
+      href: https://chat.whatsapp.com/Ga7IjcF0z1bGB3XBZsM1yn?mode=gi_t
       target: _blank
       rel: noopener noreferrer
       aria-label: Rejoindre la communauté WhatsApp (nouvel onglet)

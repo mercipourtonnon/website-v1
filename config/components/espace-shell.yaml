@@ -25,7 +25,7 @@ children:
   - type: container
     element: header
     props:
-      className: flex items-center justify-between gap-4 border-b border-gray-200 bg-white px-4 py-3 sm:px-6
+      className: flex items-center justify-between gap-4 border-b border-mauve-lighter bg-white px-4 py-3 sm:px-6
     children:
       - type: link
         props:
@@ -49,7 +49,7 @@ children:
           - type: link
             props:
               href: /
-              className: text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-orange-vif
+              className: text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-mauve
             content: Voir le site
           - type: button
             variant: outline
@@ -69,11 +69,11 @@ children:
         rail: { below: md }
         props: &sidebarProps
           aria-label: Navigation de l'espace
-          className: flex-none border-r border-gray-200 bg-orange-lighter py-4 md:w-64 md:px-2
+          className: flex-none border-r border-mauve-lighter bg-orange-lighter py-4 md:w-64 md:px-2
         classes: &sidebarClasses
           parts:
             link: rounded-md text-bleu-fonce hover:bg-orange-light
-            groupLabel: text-xs font-bold uppercase tracking-wide text-gray-700
+            groupLabel: text-xs font-bold uppercase tracking-wide text-bleu-fonce-70
           states:
             current: { link: bg-white font-bold text-bleu-fonce shadow-sm }
         groups:

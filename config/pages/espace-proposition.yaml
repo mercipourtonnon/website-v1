@@ -101,7 +101,7 @@ components:
             props:
               className: grid gap-x-6 gap-y-3 text-bleu-fonce sm:grid-cols-[minmax(0,12rem)_1fr]
             children:
-              - { type: text, element: p, props: { className: text-gray-700 }, content: Facilitation }
+              - { type: text, element: p, props: { className: text-bleu-fonce-70 }, content: Facilitation }
               - type: container
                 props: { className: flex flex-wrap gap-x-1 font-medium }
                 children:
@@ -120,7 +120,7 @@ components:
                       limit: 1
                     children:
                       - { type: text, element: span, content: '& $record.display_name' }
-              - { type: text, element: p, props: { className: text-gray-700 }, content: Lieu }
+              - { type: text, element: p, props: { className: text-bleu-fonce-70 }, content: Lieu }
               - type: container
                 visibility: { record: { field: venue, isNotEmpty: true } }
                 props: { className: font-medium }
@@ -133,7 +133,7 @@ components:
               - type: text
                 element: p
                 visibility: { record: { field: venue, isEmpty: true } }
-                props: { className: text-gray-700 }
+                props: { className: text-bleu-fonce-70 }
                 content: Choisi par l'équipe à la relecture.
           - type: description-list
             layout: stacked
@@ -152,7 +152,7 @@ components:
             visibility: { roles: [facilitateur], record: { field: status, eq: proposed } }
             props:
               aria-labelledby: modifier-titre
-              className: flex flex-col gap-4 rounded-lg border border-gray-200 p-5 sm:p-6
+              className: flex flex-col gap-4 rounded-lg border border-mauve-lighter p-5 sm:p-6
             children:
               - type: text
                 element: h2
@@ -205,7 +205,7 @@ components:
             visibility: { roles: [admin, coordination] }
             props:
               aria-labelledby: coordination-titre
-              className: flex flex-col gap-5 rounded-lg border border-gray-200 border-t-4 border-t-mauve p-5 sm:p-6
+              className: flex flex-col gap-5 rounded-lg border border-mauve-lighter border-t-4 border-t-mauve p-5 sm:p-6
             children:
               - type: text
                 element: h2
@@ -336,7 +336,7 @@ components:
             visibility: { roles: [admin, coordination] }
             props:
               aria-labelledby: relecture-titre
-              className: flex flex-col gap-4 rounded-lg border border-gray-200 p-5 sm:p-6
+              className: flex flex-col gap-4 rounded-lg border border-mauve-lighter p-5 sm:p-6
             children:
               - type: text
                 element: h2
