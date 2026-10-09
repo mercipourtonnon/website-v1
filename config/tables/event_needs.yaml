@@ -1,0 +1,45 @@
+# What an event needs from the bénévoles — « Tenir le stand 14h–16h », « Apporter
+# à manger » — with how many people, and how many have signed up already.
+# Readable by member+ (no row rule: see the note at the end of this file).
+id: 7
+name: event_needs
+fields:
+  - id: 1
+    name: event
+    label: Événement
+    type: relationship
+    relatedTable: events
+    relationType: many-to-one
+    displayField: title
+    required: true
+    onDelete: cascade
+  - { id: 2, name: label, label: Besoin, type: single-line-text, required: true }
+  - { id: 3, name: description, label: Description, type: long-text }
+  - { id: 4, name: slots, label: Places, type: integer, required: true, default: 1, min: 1, max: 500 }
+  # The sign-ups for this need (event_participations.need), read from here.
+  - id: 5
+    name: participations
+    label: Inscriptions
+    type: relationship
+    relatedTable: event_participations
+    relationType: one-to-many
+    foreignKey: need
+  - { id: 6, name: signed_up, label: Inscrit·es, type: count, relationshipField: participations }
+  - { id: 7, name: remaining, label: Places restantes, type: formula, formula: 'slots - signed_up', resultType: number }
+  - { id: 8, name: position, label: Ordre, type: integer, default: 0 }
+  # « Tenir le stand — Fête de quartier »: the choice label in the
+  # event-participation form, so needs of different events are told apart.
+  # Written by label-need (label or event changes) and label-event-date
+  # (event title changes).
+  - { id: 9, name: option_label, label: Besoin (avec l'événement), type: single-line-text }
+permissions:
+  read: [member, facilitateur, coordination, admin]
+  create: [coordination, admin]
+  update: [coordination, admin]
+  delete: [coordination, admin]
+  fields:
+    - { field: option_label, write: [admin] }
+# No row rule. A rule reading `event.status` through the relationship is
+# applied by the records API but, in Sovrium 0.33.0, server-side reads (page
+# templates, form options and form validation) then return nothing to
+# non-admins. The needs of a draft event are harmless: the event stays hidden.

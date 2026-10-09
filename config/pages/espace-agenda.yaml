@@ -1,0 +1,167 @@
+# /espace/agenda — the bénévoles' agenda: upcoming published events (list
+# and month calendar, both narrowed by the type filter), then the upcoming
+# « Atelier Niveau 1 » dates read from `workshops` (they are never copied into
+# `events`).
+#
+# The type filter is a filter-bar publishing on the `agenda-filtre` channel;
+# the list (drawn from an item template, so it follows the bar) and the
+# calendar both subscribe. The status and date filters are part of each
+# binding, so a reader cannot lift them: drafts never show, even to the
+# coordination.
+name: espace-agenda
+path: /espace/agenda
+access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Agenda - Espace bénévole
+  description: Les prochains rendez-vous de l'équipe et les prochains ateliers.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-5xl flex-col gap-10
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: agenda
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Réunions, formations, stands… Ouvre un rendez-vous pour lire son programme, voir ce dont l'équipe a besoin et t'inscrire.
+
+          - type: container
+            element: section
+            props:
+              aria-labelledby: rdv-titre
+              className: flex flex-col gap-4
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: rdv-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: prochains rendez-vous
+              - type: filter-bar
+                publishes: { bindTo: agenda-filtre }
+                fields:
+                  - name: type
+                    label: Type
+                    kind: select
+                    options:
+                      - { value: Séance de réflexion, label: Séance de réflexion }
+                      - { value: Réunion mensuelle de l'équipe, label: Réunion mensuelle de l'équipe }
+                      - { value: Formation, label: Formation }
+                      - { value: Réunion écosystème, label: Réunion écosystème }
+                      - { value: Réunion de travail, label: Réunion de travail }
+                      - { value: Stand, label: Stand }
+              - type: list
+                props:
+                  aria-label: Prochains rendez-vous
+                  className: rounded-lg border border-mauve-lighter
+                dataSource:
+                  table: events
+                  filter:
+                    - { field: status, operator: eq, value: published }
+                    - { field: starts_at, operator: gte, value: $today }
+                  sort: [{ field: starts_at, direction: asc }]
+                  limit: 20
+                  bindTo: agenda-filtre
+                  sharedFilter: {}
+                listDisplay:
+                  itemLayout: stacked
+                  itemTemplate:
+                    title: $record.title
+                    subtitle: $record.location
+                    badge: $record.type
+                    metadata:
+                      - { field: starts_at, format: datetime }
+                  loadMore: button
+                  emptyMessage: Aucun rendez-vous à venir pour ce choix. Retire le filtre pour tout revoir, ou repasse bientôt.
+                onRowClick: { type: navigate, path: /espace/agenda/$record.id }
+              - type: calendar
+                dataSource:
+                  table: events
+                  filter:
+                    - { field: status, operator: eq, value: published }
+                  bindTo: agenda-filtre
+                  sharedFilter: {}
+                dateField: starts_at
+                endDateField: ends_at
+                labelField: title
+                colorField: type
+                defaultView: month
+                maxEventsPerDay: 3
+                calendarEvent:
+                  onEventClick: { type: navigate, path: /espace/agenda/$record.id }
+
+          # Upcoming public workshops (the catalogue, read-only here).
+          - type: container
+            element: section
+            props:
+              aria-labelledby: ateliers-titre
+              className: flex flex-col gap-4
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-1
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      id: ateliers-titre
+                      className: text-2xl title-font text-bleu-fonce
+                    content: prochains ateliers
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce
+                    content: Les ateliers de consentement ouverts au public. Parles-en autour de toi !
+              - type: list
+                props:
+                  aria-label: Prochains ateliers
+                  className: list-none m-0 flex flex-col divide-y divide-mauve-lighter rounded-lg border border-mauve-lighter p-0
+                dataSource:
+                  table: workshops
+                  filter:
+                    - { field: status, operator: eq, value: published }
+                    - { field: session_date, operator: gte, value: $today }
+                  sort: [{ field: starts_at, direction: asc }]
+                listDisplay:
+                  emptyMessage: Pas d'atelier programmé pour l'instant.
+                children:
+                  - type: container
+                    props:
+                      className: flex flex-col gap-1 px-4 py-3 sm:flex-row sm:items-center sm:justify-between
+                    children:
+                      - type: container
+                        props:
+                          className: flex flex-col
+                        children:
+                          - type: link
+                            props:
+                              href: /ateliers/$record.slug
+                              className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                            content: $record.date_label, $record.time_label
+                          - type: text
+                            element: span
+                            props:
+                              className: text-sm text-bleu-fonce-70
+                            content: $record.venue_name · avec $record.lead_name
+                      - type: text
+                        element: span
+                        props:
+                          className: self-start rounded-full bg-orange-light px-3 py-0.5 text-sm font-medium text-bleu-fonce sm:self-auto
+                        content: Atelier Niveau 1

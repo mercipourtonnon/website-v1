@@ -1,0 +1,64 @@
+# Actualités of the association for the bénévoles. The coordination writes and
+# publishes them; member+ read the published ones. Publishing with « Envoyer par
+# email » ticked sends one Brevo campaign to the bénévoles list
+# (on-news-published); brevo_campaign_id makes that send happen once.
+id: 9
+name: news
+fields:
+  - { id: 1, name: title, label: Titre, type: single-line-text, required: true }
+  - { id: 2, name: summary, label: Chapô, type: long-text }
+  - { id: 3, name: body, label: Article, type: rich-text }
+  - id: 4
+    name: image
+    label: Image
+    type: single-attachment
+    allowedFileTypes: [image/jpeg, image/png, image/webp]
+    maxFileSize: 5242880
+  - id: 5
+    name: status
+    label: Statut
+    type: status
+    required: true
+    default: draft
+    options:
+      - { value: draft, label: Brouillon }
+      - { value: published, label: Publiée }
+  - { id: 6, name: published_at, label: Publiée le, type: datetime, indexed: true }
+  - { id: 7, name: send_email, label: Envoyer par email, type: checkbox, default: false }
+  # Written by on-news-published only.
+  - { id: 8, name: brevo_campaign_id, label: Campagne Brevo, type: single-line-text }
+  - id: 9
+    name: send_status
+    label: Envoi email
+    type: single-select
+    options:
+      - { value: sending, label: En cours }
+      - { value: sent, label: Envoyé }
+      - { value: failed, label: Échec }
+  - { id: 10, name: send_error, label: Erreur d'envoi, type: long-text }
+  - { id: 11, name: created_by, label: Rédigé par, type: created-by }
+  # Technical, see members.editor_role.
+  - { id: 12, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+  # French label of published_at for cards, e.g. « mar. 20 oct. » (Europe/Paris).
+  # Written by label-news-date; record-field prints English dates in 0.33.
+  - { id: 13, name: date_label, label: Date (texte), type: single-line-text }
+permissions:
+  read: [member, facilitateur, coordination, admin]
+  create: [coordination, admin]
+  update: [coordination, admin]
+  delete: [coordination, admin]
+  fields:
+    - { field: brevo_campaign_id, read: [coordination, admin], write: [admin] }
+    - { field: send_status, read: [coordination, admin], write: [admin] }
+    - { field: send_error, read: [coordination, admin], write: [admin] }
+    - { field: editor_role, read: [coordination, admin], write: [admin] }
+    - { field: date_label, write: [admin] }
+rowLevelPermissions:
+  read:
+    when:
+      logic: or
+      conditions:
+        - { field: status, operator: eq, value: published }
+        - field: editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }

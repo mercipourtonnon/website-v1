@@ -1,0 +1,61 @@
+# /espace/actualites/:id — one news article. A draft answers 404 to a bénévole
+# (news row rule). The coordination's send fields are never drawn here.
+name: espace-actualite
+path: /espace/actualites/:id
+access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+sitemap: false
+dataSource:
+  table: news
+  mode: single
+  param: id
+meta:
+  lang: fr-FR
+  title: Actualité - Espace bénévole
+  description: Une actualité de Merci pour ton non.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        element: article
+        props:
+          className: mx-auto flex max-w-3xl flex-col gap-6
+        children:
+          - type: link
+            props:
+              href: /espace/actualites
+              className: self-start text-sm text-bleu-fonce underline underline-offset-4
+            content: ← Actualités
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-2
+            children:
+              # A description-list `field` is drawn in the page language on a
+              # record page (record-field prints English dates in 0.33).
+              - type: description-list
+                layout: stacked
+                items:
+                  - { term: Publiée le, field: published_at }
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: $record.title
+              - type: text
+                element: p
+                visibility: { record: { field: summary, isNotEmpty: true } }
+                props:
+                  className: text-lg font-medium text-bleu-fonce
+                content: $record.summary
+          - type: image
+            visibility: { record: { field: image, isNotEmpty: true } }
+            props:
+              src: $record.image
+              alt: ''
+              className: w-full rounded-lg object-cover
+          - type: record-field
+            visibility: { record: { field: body, isNotEmpty: true } }
+            props: { field: body }

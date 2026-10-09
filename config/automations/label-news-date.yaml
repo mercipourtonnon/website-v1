@@ -1,0 +1,51 @@
+# Keeps news.date_label in step with published_at: « mar. 20 oct. »,
+# Europe/Paris, French. Cards print it instead of the raw datetime.
+# published_at is usually written by on-news-published (a system write, which
+# fires this automation too).
+#
+# Loop check: watches published_at, writes date_label only.
+name: label-news-date
+description: Écrit la date de publication d'une actualité en français (« mar. 20 oct. »).
+trigger:
+  type: record
+  table: news
+  events: [create, update]
+  watchFields: [published_at]
+timeout: 30000
+actions:
+  # Fresh read: the create run (published_at still empty) and the update run
+  # from on-news-published can finish in either order; both write what the
+  # row holds now, so the empty one never wins.
+  - name: news
+    type: record
+    operator: read
+    props:
+      table: news
+      id: '{{trigger.data.record.id}}'
+  - name: label
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 5000
+      inputData:
+        publishedAt: '{{news.record.published_at}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const d = new Date(String(input.publishedAt || ''));
+          if (Number.isNaN(d.getTime())) return { label: '' };
+          const label = new Intl.DateTimeFormat('fr-FR', {
+            timeZone: 'Europe/Paris', weekday: 'short', day: 'numeric', month: 'short',
+          }).format(d);
+          return { label };
+        }
+  - name: save
+    type: record
+    operator: update
+    props:
+      table: news
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{trigger.data.record.id}}' }
+      data:
+        date_label: '{{label.label}}'

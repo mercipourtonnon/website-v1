@@ -1,15 +1,15 @@
 # A facilitator adds someone who turned up without registering. Writes a
 # `registrations` row marked on_site + present (the table's row rule only lets a
-# member create on_site rows). Embedded in the "Ajouter une personne sur place"
+# facilitator or coordinator create on_site rows). Embedded in the "Ajouter une personne sur place"
 # dialog of /espace/suivi/:id, which locks `workshop` to the page's date.
 # Its own page (/forms/ajout-sur-place) has no date to file under, so a
 # submission there is refused on the required `workshop` link.
-id: 2
+id: 4
 name: ajout-sur-place
 title: Ajouter une personne sur place
 description: Pour quelqu'un qui vient sans s'être inscrit·e. Elle est comptée présente tout de suite.
 access:
-  require: [admin, member]
+  require: [admin, coordination, facilitateur]
   redirectTo: /connexion
 submitTo:
   table: registrations

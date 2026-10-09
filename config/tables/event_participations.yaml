@@ -1,0 +1,75 @@
+# One row per bénévole signing up to an event (and optionally to one of its
+# needs). Created through the event-participation form, which fills `member`
+# with the signed-in person and locks `event` to the page's event.
+#
+# member+ read every sign-up (« qui vient ? »),
+# create only for themselves, and change or delete only their own. The
+# coordination manages them all.
+id: 8
+name: event_participations
+fields:
+  - id: 1
+    name: event
+    label: Événement
+    type: relationship
+    relatedTable: events
+    relationType: many-to-one
+    displayField: title
+    required: true
+    onDelete: cascade
+  - id: 2
+    name: need
+    label: Besoin
+    type: relationship
+    relatedTable: event_needs
+    relationType: many-to-one
+    displayField: label
+    onDelete: set-null
+  - { id: 3, name: member, label: Bénévole, type: user, required: true, default: $currentUser, indexed: true }
+  - { id: 4, name: comment, label: Commentaire, type: long-text }
+  - { id: 5, name: created_at, label: Inscrit·e le, type: created-at }
+  # Technical, see members.editor_role.
+  - { id: 6, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+permissions:
+  read: [member, facilitateur, coordination, admin]
+  create: [member, facilitateur, coordination, admin]
+  update: [member, facilitateur, coordination, admin]
+  delete: [member, facilitateur, coordination, admin]
+  fields:
+    - { field: event, write: [member, facilitateur, coordination, admin] }
+    - { field: member, write: [coordination, admin] }
+    - { field: editor_role, read: [coordination, admin], write: [admin] }
+# No read rule: one reading `event.status` through the relationship empties
+# server-side reads in Sovrium 0.33.0 (see event_needs.yaml). Sign-ups to a
+# draft event are harmless: the event itself stays hidden.
+rowLevelPermissions:
+  create:
+    when:
+      logic: or
+      conditions:
+        - field: member
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: id } }
+        - field: editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }
+  write:
+    when:
+      logic: or
+      conditions:
+        - field: member
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: id } }
+        - field: editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }
+  delete:
+    when:
+      logic: or
+      conditions:
+        - field: member
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: id } }
+        - field: editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }

@@ -1,0 +1,212 @@
+# sovrium-library: connection/brevo@0.33.0
+name: brevo
+type: apiKey
+# Added by hand: the 0.33.0 library entry ships no baseUrl, and installing an
+# operation is refused without one.
+baseUrl: https://api.brevo.com/v3
+label: Brevo
+description: "Brevo API, authenticated with an API key"
+props:
+  key: $env.BREVO_API_KEY
+  header: api-key
+operations:
+  - name: create-contact
+    method: POST
+    path: /contacts
+    summary: Create a contact
+    params:
+      attributes:
+        in: body
+        type: object
+      email:
+        in: body
+        type: string
+        format: email
+      emailBlacklisted:
+        in: body
+        type: boolean
+      ext_id:
+        in: body
+        type: string
+      listIds:
+        in: body
+        type: array
+        items:
+          type: integer
+      smsBlacklisted:
+        in: body
+        type: boolean
+      smtpBlacklistSender:
+        in: body
+        type: array
+        items:
+          type: string
+      updateEnabled:
+        in: body
+        type: boolean
+      forceMerge:
+        in: body
+        type: boolean
+      getId:
+        in: body
+        type: boolean
+  - name: remove-contact-from-list
+    method: POST
+    path: "/contacts/lists/{listId}/contacts/remove"
+    summary: Delete a contact from a list
+    params:
+      listId:
+        in: path
+        type: integer
+        required: true
+      emails:
+        in: body
+        type: array
+        items:
+          type: string
+      ids:
+        in: body
+        type: array
+        items:
+          type: integer
+      all:
+        in: body
+        type: boolean
+      extIds:
+        in: body
+        type: array
+        items:
+          type: string
+  - name: create-email-campaign
+    method: POST
+    path: /emailCampaigns
+    summary: Create an email campaign
+    params:
+      abTesting:
+        in: body
+        type: boolean
+      attachmentUrl:
+        in: body
+        type: string
+        format: uri
+      emailExpirationDate:
+        in: body
+        type: object
+      footer:
+        in: body
+        type: string
+      header:
+        in: body
+        type: string
+      htmlContent:
+        in: body
+        type: string
+      htmlUrl:
+        in: body
+        type: string
+        format: uri
+      increaseRate:
+        in: body
+        type: integer
+      initialQuota:
+        in: body
+        type: integer
+      inlineImageActivation:
+        in: body
+        type: boolean
+      ipWarmupEnable:
+        in: body
+        type: boolean
+      mirrorActive:
+        in: body
+        type: boolean
+      name:
+        in: body
+        type: string
+        required: true
+      params:
+        in: body
+        type: object
+      previewText:
+        in: body
+        type: string
+      recipients:
+        in: body
+        type: object
+      replyTo:
+        in: body
+        type: string
+        format: email
+      scheduledAt:
+        in: body
+        type: string
+      sendAtBestTime:
+        in: body
+        type: boolean
+      sender:
+        in: body
+        type: object
+        required: true
+      splitRule:
+        in: body
+        type: integer
+      subject:
+        in: body
+        type: string
+      subjectA:
+        in: body
+        type: string
+      subjectB:
+        in: body
+        type: string
+      tag:
+        in: body
+        type: string
+      templateId:
+        in: body
+        type: integer
+      toField:
+        in: body
+        type: string
+      unsubscriptionPageId:
+        in: body
+        type: string
+      updateFormId:
+        in: body
+        type: string
+      utmCampaign:
+        in: body
+        type: string
+      utmContent:
+        in: body
+        type: string
+      utmId:
+        in: body
+        type: string
+      utmMedium:
+        in: body
+        type: string
+      utmSource:
+        in: body
+        type: string
+      utmTerm:
+        in: body
+        type: string
+      winnerCriteria:
+        in: body
+        type: string
+        enum:
+          - open
+          - click
+      winnerDelay:
+        in: body
+        type: integer
+  - name: send-email-campaign-now
+    method: POST
+    path: "/emailCampaigns/{campaignId}/sendNow"
+    summary: "Send an email campaign immediately, based on campaignId"
+    params:
+      campaignId:
+        in: path
+        type: integer
+        required: true

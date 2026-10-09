@@ -1,0 +1,110 @@
+# /inscription — create an account to join the bénévoles.
+# Adapted from library block/auth-sign-up@0.33.0 (French, brand tokens), drawn
+# like /connexion. A new account is a `candidat` (auth.defaultRole): on-sign-up
+# creates her `members` row (pending) and tells the coordination. After the
+# sign-up, `role-landing` goes through /espace/arrivee to her landing,
+# /espace/en-attente, where she fills in her profile.
+#
+# The intro adapts the Notion « Création de ma fiche membre » description. In
+# the app, email and phone are read by the coordination only (members field
+# permissions), so the copy says so rather than "accessible to all members".
+# When sign-up is closed (allowSignUp: false), the form is replaced by a
+# short "ask for an invitation" note.
+name: espace-inscription
+path: /inscription
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Rejoindre l'équipe bénévole - Merci pour ton non
+  description: Crée ton compte pour rejoindre l'équipe bénévole de Merci pour ton non.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - type: container
+    props:
+      className: flex min-h-screen justify-center bg-orange-lighter px-4 pt-10 pb-12 sm:items-center sm:px-6
+    children:
+      - type: container
+        props:
+          className: flex w-full max-w-md flex-col gap-6 self-start sm:self-auto sm:rounded-lg sm:border sm:border-mauve-lighter sm:bg-white sm:p-8
+        children:
+          - type: link
+            props:
+              href: /
+              className: self-start
+            children:
+              - type: image
+                props:
+                  src: /logo-without-marging.svg
+                  alt: Merci pour ton non, retour au site
+                  className: h-12 w-auto
+          # Open sign-up.
+          - type: container
+            visibility:
+              declares: auth.signUp
+            props:
+              className: flex flex-col gap-6
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-3
+                children:
+                  - type: text
+                    element: h1
+                    props:
+                      className: text-3xl title-font text-bleu-fonce
+                    content: rejoindre l'équipe bénévole
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce
+                    content: Crée ton compte, puis remplis ta fiche bénévole. Elle sera visible par les autres bénévoles de Merci pour ton non (MPTN) et contient ce qu'il faut pour mieux se connaître. La coordination la relit et t'ouvre l'espace bénévole.
+                  - type: text
+                    element: p
+                    props:
+                      className: text-sm text-bleu-fonce-70
+                    content: Ton email et ton téléphone restent réservés à la coordination. En créant ton compte, tu acceptes qu'ils servent à t'inviter dans notre communauté WhatsApp.
+              - type: form
+                action:
+                  type: auth
+                  method: signup
+                  strategy: email
+                  submitLabel: Créer mon compte
+                  pendingLabel: Création…
+                  fields:
+                    - { name: email, label: Adresse email, placeholder: toi@exemple.fr }
+                    - { name: password, label: Mot de passe }
+                  onSuccess: { type: role-landing }
+              - type: container
+                props:
+                  className: flex flex-wrap gap-1 border-t border-mauve-lighter pt-4 text-sm text-bleu-fonce
+                children:
+                  - { type: text, element: span, content: Déjà un compte ? }
+                  - type: link
+                    props:
+                      href: /connexion
+                      className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                    content: Me connecter
+          # Closed sign-up.
+          - type: container
+            visibility:
+              unlessDeclares: auth.signUp
+            props:
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl title-font text-bleu-fonce
+                content: rejoindre l'équipe bénévole
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Les inscriptions se font pour l'instant sur invitation. Écris-nous à mercipourtonnon@gmail.com, on t'envoie un lien pour créer ton compte.
+              - type: link
+                props:
+                  href: /connexion
+                  className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                content: J'ai déjà un compte

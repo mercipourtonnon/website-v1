@@ -2,12 +2,12 @@
 # date's `workshop_cash` row. Shown on /espace/suivi/:id only while the date has
 # no such row; once it exists, the page shows an edit form on that row instead
 # (workshop_cash.workshop is unique, so a second create would be refused).
-id: 3
+id: 5
 name: prix-libre-sur-place
 title: Prix libre sur place
 description: Ce qui a été donné sur place (espèces, terminal de paiement), pour cette date.
 access:
-  require: [admin, member]
+  require: [admin, coordination, facilitateur]
   redirectTo: /connexion
 submitTo:
   table: workshop_cash

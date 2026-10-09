@@ -10,7 +10,7 @@
 # No lookup into `workshops` here: workshops counts and sums these rows, and two
 # tables cannot derive from each other. No button field either (0.33.0: a button
 # next to a lookup or rollup breaks inserts).
-id: 5
+id: 10
 name: registrations
 fields:
   # HelloAsso item id ("import-…" for imported rows, empty for on-site rows).
@@ -78,12 +78,12 @@ fields:
     default: unknown
     options: [unknown, yes, no]
 permissions:
-  # Facilitators (member today; [admin, coordination, facilitateur] once the
-  # espace bénévole roles land). Never `all`.
-  read: [admin, member]
+  # Facilitators and coordination. Never `all`, never `member` (a member is any
+  # bénévole, who has no business reading participants' data).
+  read: [admin, coordination, facilitateur]
   # On-site walk-ins (the form locks source, status and attendance).
-  create: [admin, member]
-  update: [admin, member]
+  create: [admin, coordination, facilitateur]
+  update: [admin, coordination, facilitateur]
   delete: [admin]
   fields:
     - { field: external_id, write: [admin] }

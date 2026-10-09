@@ -1,0 +1,100 @@
+# A bénévole leaves (archive-member, or an admin in the grid): her account goes
+# back to candidat and she leaves the Brevo
+# bénévoles list (the contact itself is kept, with its unsubscribe history).
+# Both steps are idempotent; a failure is reported by notify-espace-failure.
+# Sovrium 0.33 does not expose an account's role to an automation: archiving
+# the row of an admin would demote her too (the last admin is always refused).
+#
+# Loop check: watches status only and writes nothing to members.
+name: on-member-archived
+description: Retire l'accès bénévole et la liste Brevo d'une personne archivée.
+trigger:
+  type: record
+  table: members
+  events: [update]
+  watchFields: [status]
+  condition:
+    logic: and
+    conditions:
+      - { field: '{{trigger.data.record.status}}', operator: equals, value: archived }
+      - { field: '{{trigger.data.previousRecord.status}}', operator: notEquals, value: archived }
+timeout: 60000
+actions:
+  - name: member
+    type: record
+    operator: read
+    props:
+      table: members
+      id: '{{trigger.data.record.id}}'
+  - name: still_archived
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: '{{member.record.status}}', operator: equals, value: archived }
+  - name: role
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 10000
+      inputData:
+        account: '{{member.record.account}}'
+        # The account's address, through the trigger's user field (id, email
+        # and name only — no role).
+        accountEmail: '{{trigger.data.record.account.email}}'
+        contactEmail: '{{member.record.contact_email}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const account = String(input.account || '').trim();
+          const email = String(input.contactEmail || '').trim() || String(input.accountEmail || '').trim();
+          if (!account) {
+            context.log.info('fiche sans compte : aucun rôle à retirer');
+            return { demoted: false, email };
+          }
+          await context.actions.auth.assignRole({ userId: account, role: 'candidat' });
+          return { demoted: true, email };
+        }
+  - name: has_email
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: '{{role.email}}', operator: isNotEmpty }
+  - name: brevo_remove
+    type: code
+    operator: runTypescript
+    retry: { maxAttempts: 3, delayMs: 5000, strategy: exponential }
+    props:
+      timeout: 30000
+      inputData:
+        email: '{{role.email}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const email = String(input.email || '').trim().toLowerCase();
+          const listId = Number(context.env.BREVO_LIST_BENEVOLES_ID);
+          if (!Number.isInteger(listId) || listId <= 0) {
+            throw new Error('BREVO_LIST_BENEVOLES_ID doit être un nombre entier.');
+          }
+          try {
+            await context.actions.connection.call({
+              connection: 'brevo',
+              operation: 'remove-contact-from-list',
+              params: { listId, emails: [email] },
+              timeout: 20000,
+            });
+          } catch (error) {
+            // Brevo answers 400 when the address is not (or no longer) in the
+            // list: nothing left to do.
+            const message = String((error as Error).message || error);
+            if (/40[04]/.test(message) && /not|exist|already|introuvable/i.test(message)) {
+              context.log.info(`déjà hors de la liste : ${message}`);
+              return { removed: false };
+            }
+            throw error;
+          }
+          return { removed: true };
+        }

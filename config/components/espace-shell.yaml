@@ -1,12 +1,17 @@
-# Espace facilitateur·ices — the app frame around every /espace page.
+# Espace bénévole — the app frame around every /espace page.
 # Based on library block/shell-sidebar@0.33.0: a sidebar beside a main region
 # that holds the page's own components (`children: $children`).
 #
-# Two sidebars, one per audience: the sidebar has no per-entry role gate, so
-# the admin one (with the Coordination group) and the member one are swapped
-# with component `visibility.roles` — the unmet one is left out of the HTML.
-# A `roles: [member]` gate does not let an admin through
-# (pages/pages-layouts-access, "Gating one component on who is reading").
+# One sidebar per audience: the sidebar has no per-entry role gate, so three
+# variants are swapped with component `visibility.roles` — the unmet ones are
+# left out of the HTML. A role list does not let an admin through unless it
+# names `admin` (pages/pages-layouts-access, "Gating one component on who is
+# reading"), and page `access` lists do not inherit, so every role is named:
+#   member               → Espace bénévole
+#   facilitateur         → Espace bénévole + Mes ateliers + Le jour J
+#   coordination, admin  → Espace bénévole + Mes ateliers + Coordination + Le jour J
+# A candidat has no sidebar: her only page, /espace/en-attente, has no shell.
+# The groups are YAML anchors so the three variants cannot drift apart.
 #
 # Density: data screens use the default 36 px controls and medium table rows;
 # body copy stays on the brand body face, headings on the title face.
@@ -20,7 +25,7 @@ children:
   - type: container
     element: header
     props:
-      className: flex items-center justify-between gap-4 border-b border-gray-200 bg-white px-4 py-3 sm:px-6
+      className: flex items-center justify-between gap-4 border-b border-mauve-lighter bg-white px-4 py-3 sm:px-6
     children:
       - type: link
         props:
@@ -36,7 +41,7 @@ children:
             element: span
             props:
               className: hidden text-sm font-bold sm:inline
-            content: Espace facilitateur·ices
+            content: Espace bénévole
       - type: container
         props:
           className: flex items-center gap-2 sm:gap-4
@@ -44,7 +49,7 @@ children:
           - type: link
             props:
               href: /
-              className: text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-orange-vif
+              className: text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-mauve
             content: Voir le site
           - type: button
             variant: outline
@@ -58,54 +63,65 @@ children:
     props:
       className: flex w-full flex-1 items-stretch
     children:
-      # Admin sidebar: own proposals + the coordination screens.
-      - type: sidebar
-        visibility: { roles: [admin] }
-        rail: { below: md }
-        props:
-          aria-label: Navigation de l'espace
-          className: flex-none border-r border-gray-200 bg-orange-lighter py-4 md:w-64 md:px-2
-        classes:
-          parts:
-            link: rounded-md text-bleu-fonce hover:bg-orange-light
-            groupLabel: text-xs font-bold uppercase tracking-wide text-gray-700
-          states:
-            current: { link: bg-white font-bold text-bleu-fonce shadow-sm }
-        groups:
-          - label: Mes ateliers
-            items:
-              - { label: Mes propositions, href: /espace, icon: list-checks }
-              - { label: Proposer une date, href: /espace/proposer, icon: calendar-plus }
-          - label: Coordination
-            items:
-              - { label: À valider, href: /espace/validation, icon: inbox, activeMatch: prefix }
-              - { label: Ateliers en ligne, href: /espace/ateliers, icon: calendar-check, activeMatch: prefix }
-          # Day-of tools, a group of its own (other entries will join it).
-          - label: Le jour J
-            items:
-              - { label: Suivi des ateliers, href: /espace/suivi, icon: clipboard-check, activeMatch: prefix }
-      # Member sidebar.
+      # Bénévole (member).
       - type: sidebar
         visibility: { roles: [member] }
         rail: { below: md }
-        props:
+        props: &sidebarProps
           aria-label: Navigation de l'espace
-          className: flex-none border-r border-gray-200 bg-orange-lighter py-4 md:w-64 md:px-2
-        classes:
+          className: flex-none border-r border-mauve-lighter bg-orange-lighter py-4 md:w-64 md:px-2
+        classes: &sidebarClasses
           parts:
             link: rounded-md text-bleu-fonce hover:bg-orange-light
-            groupLabel: text-xs font-bold uppercase tracking-wide text-gray-700
+            groupLabel: text-xs font-bold uppercase tracking-wide text-bleu-fonce-70
           states:
             current: { link: bg-white font-bold text-bleu-fonce shadow-sm }
         groups:
-          - label: Mes ateliers
+          - &benevoleGroup
+            label: Espace bénévole
             items:
-              - { label: Mes propositions, href: /espace, icon: list-checks }
+              - { label: Accueil, href: /espace, icon: house }
+              - { label: Agenda, href: /espace/agenda, icon: calendar-days, activeMatch: prefix }
+              - { label: Actualités, href: /espace/actualites, icon: newspaper, activeMatch: prefix }
+              - { label: Membres, href: /espace/membres, icon: users, activeMatch: prefix }
+              - { label: Mon profil, href: /espace/profil, icon: user-round-pen }
+      # Facilitateur·ice: the bénévole entries and her workshop proposals.
+      - type: sidebar
+        visibility: { roles: [facilitateur] }
+        rail: { below: md }
+        props: *sidebarProps
+        classes: *sidebarClasses
+        groups:
+          - *benevoleGroup
+          - &ateliersGroup
+            label: Mes ateliers
+            items:
+              - { label: Mes propositions, href: /espace#mes-propositions, icon: list-checks }
               - { label: Proposer une date, href: /espace/proposer, icon: calendar-plus }
           # Day-of tools, a group of its own (other entries will join it).
-          - label: Le jour J
+          # Facilitateur·ices and coordination/admin only, not the bénévoles.
+          - &jourJGroup
+            label: Le jour J
             items:
               - { label: Suivi des ateliers, href: /espace/suivi, icon: clipboard-check, activeMatch: prefix }
+      # Coordination and admin: the bénévole entries, workshops, and the
+      # coordination screens (members, agenda, news, workshop review).
+      - type: sidebar
+        visibility: { roles: [coordination, admin] }
+        rail: { below: md }
+        props: *sidebarProps
+        classes: *sidebarClasses
+        groups:
+          - *benevoleGroup
+          - *ateliersGroup
+          - label: Coordination
+            items:
+              - { label: Bénévoles, href: /espace/coordination/membres, icon: user-check }
+              - { label: Agenda à gérer, href: /espace/coordination/agenda, icon: calendar-cog }
+              - { label: Actualités à publier, href: /espace/coordination/actualites, icon: megaphone }
+              - { label: Ateliers à valider, href: /espace/validation, icon: inbox, activeMatch: prefix }
+              - { label: Ateliers en ligne, href: /espace/ateliers, icon: calendar-check, activeMatch: prefix }
+          - *jourJGroup
       - type: container
         props:
           id: contenu

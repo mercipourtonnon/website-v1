@@ -5,7 +5,7 @@
 # applied on the workshop rows.
 name: espace-suivi
 path: /espace/suivi
-access: { require: [admin, member], redirectTo: /connexion }
+access: { require: [admin, coordination, facilitateur], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR

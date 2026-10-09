@@ -5,7 +5,7 @@
 # Declared as `tokenExchange`, not `oauth2` + clientCredentials: in Sovrium 0.33.0
 # the oauth2 client-credentials request sends `$env.HELLOASSO_CLIENT_ID` and
 # `$env.HELLOASSO_CLIENT_SECRET` literally (and its tokenUrl does not take
-# $env either), so HelloAsso answered 401. tokenExchange resolves $env in both
+# $env either), so HelloAsso answered 401 (sovrium/sovrium#125). tokenExchange resolves $env in both
 # the body and the tokenUrl, and HelloAsso's token endpoint is exactly this:
 # a form POST answered with { access_token, expires_in }.
 # Upstream: https://github.com/sovrium/sovrium/issues/125

@@ -5,7 +5,8 @@
 # Contract: the calling automation must have read the proposal first, in a
 # `record/read` step named `proposal`. The facilitators' names and the venue are
 # read here through the proposal's links (workshop_proposals carries no lookup:
-# in Sovrium 0.33.0 a lookup next to a button field breaks every insert).
+# in Sovrium 0.33.0 a lookup next to a button field breaks every insert,
+# sovrium/sovrium#130).
 # Used by create-helloasso-event and publish-workshop-on-site.
 name: build-workshop-payload
 action:

@@ -1,11 +1,16 @@
-# "Approuver" button (admin only): proposed → approved. The status change starts
+# "Approuver" button (coordination and admin): proposed → approved. The status change starts
 # create-helloasso-event, which creates the real HelloAsso event.
 name: approve-workshop-proposal
 description: Valide une proposition d'atelier ; déclenche la création de l'événement HelloAsso.
 trigger:
   type: manual
   label: Approuver
-  requiredRole: admin
+  # A single role name (an admin satisfies any). permissions.trigger spells out
+  # who may press it and can only narrow requiredRole. Pressing it runs with
+  # the presser's rights, so coordination needs write on the rows it changes.
+  requiredRole: coordination
+permissions:
+  trigger: [coordination, admin]
 timeout: 30000
 actions:
   # Table button → {{trigger.input.recordId}}. A page button must pass `recordId` too.

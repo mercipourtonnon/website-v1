@@ -8,7 +8,7 @@ name: proposer-un-atelier
 title: Proposer une date d'atelier
 description: Propose une date pour un atelier de consentement de niveau 1. L'équipe la relit avant de la mettre en ligne, et tu suis son avancée dans **Mes propositions**.
 access:
-  require: [admin, member]
+  require: [admin, coordination, facilitateur]
   redirectTo: /connexion
 submitTo:
   table: workshop_proposals

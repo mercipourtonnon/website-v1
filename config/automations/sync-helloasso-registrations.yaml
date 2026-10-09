@@ -6,7 +6,8 @@ description: Synchronise tout de suite les inscriptions HelloAsso d'une date.
 trigger:
   type: manual
   label: Synchroniser les inscriptions
-  requiredRole: member
+  # Lowest role allowed; coordination (higher level) and admin pass too.
+  requiredRole: facilitateur
   inputSchema: { recordId: { type: string } }
 timeout: 150000
 actions:

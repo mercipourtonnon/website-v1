@@ -2,9 +2,12 @@
 # approval workflow (proposed → approved → helloasso_draft → published, plus
 # rejected, withdrawn and sync_error). The public catalogue is `workshops`.
 #
-# A member reads only the proposals she made, creates them as `proposed`, and
-# edits or deletes them only while they are still `proposed`. Status, review and
-# HelloAsso fields are written by an admin or by the automations.
+# A facilitateur·ice reads only the proposals she made, creates them as
+# `proposed`, and edits or deletes them only while they are still `proposed`.
+# The coordination reads and updates every proposal (row rules on editor_role)
+# and runs Approuver / Publier / Réessayer. Status, review and HelloAsso fields
+# are written by the coordination, an admin or the automations — never by a
+# facilitateur·ice.
 id: 3
 name: workshop_proposals
 fields:
@@ -65,6 +68,8 @@ fields:
   - { id: 13, name: helloasso_url, label: Lien HelloAsso, type: url }
   - { id: 14, name: sync_error, label: Erreur de synchronisation, type: long-text }
   # Row actions. Visibility only; each automation gates who may run it.
+  # No lookup/count on this table: in Sovrium 0.33.0 one next to a button field
+  # breaks every insert (sovrium/sovrium#130). Names are read in build-workshop-payload.
   - id: 15
     name: approve
     type: button
@@ -86,38 +91,53 @@ fields:
     action: automation
     automation: retry-helloasso
     visibleWhen: { field: status, eq: sync_error }
+  # Technical: holds `coordination` on every row so the row rules below let
+  # that role through (a row rule cannot name a role). Never shown; admins only.
+  # Existing rows: see the note at the end of this file.
+  - { id: 18, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
 permissions:
-  read: [admin, member]
-  create: [admin, member]
-  update: [admin, member]
-  delete: [admin, member]
+  read: [admin, coordination, facilitateur]
+  create: [admin, coordination, facilitateur]
+  update: [admin, coordination, facilitateur]
+  delete: [admin, coordination, facilitateur]
   fields:
-    - { field: status, write: [admin] }
-    - { field: reviewer_note, write: [admin] }
-    - { field: helloasso_form_slug, write: [admin] }
-    - { field: helloasso_url, write: [admin] }
-    - { field: sync_error, write: [admin] }
-    - { field: capacity, write: [admin] }
-    - { field: venue, write: [admin] }
-    - { field: duration_minutes, write: [admin] }
+    - { field: status, write: [admin, coordination] }
+    - { field: reviewer_note, write: [admin, coordination] }
+    - { field: helloasso_form_slug, write: [admin, coordination] }
+    - { field: helloasso_url, write: [admin, coordination] }
+    - { field: sync_error, write: [admin, coordination] }
+    - { field: capacity, write: [admin, coordination] }
+    - { field: venue, write: [admin, coordination] }
+    - { field: duration_minutes, write: [admin, coordination] }
+    - { field: editor_role, read: [admin, coordination], write: [admin] }
 # Admins bypass these rules (auth-access/auth-roles-rbac); automations started
 # by a record event write as the system.
 rowLevelPermissions:
   read:
     when:
-      field: proposed_by
-      operator: eq
-      value: { kind: currentUser, path: { kind: scalar, name: id } }
-  create:
-    when: { field: status, operator: eq, value: proposed }
-  write:
-    when:
-      logic: and
+      logic: or
       conditions:
         - field: proposed_by
           operator: eq
           value: { kind: currentUser, path: { kind: scalar, name: id } }
-        - { field: status, operator: eq, value: proposed }
+        - field: editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }
+  create:
+    when: { field: status, operator: eq, value: proposed }
+  write:
+    when:
+      logic: or
+      conditions:
+        - logic: and
+          conditions:
+            - field: proposed_by
+              operator: eq
+              value: { kind: currentUser, path: { kind: scalar, name: id } }
+            - { field: status, operator: eq, value: proposed }
+        - field: editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }
   delete:
     when:
       logic: and
@@ -126,3 +146,7 @@ rowLevelPermissions:
           operator: eq
           value: { kind: currentUser, path: { kind: scalar, name: id } }
         - { field: status, operator: eq, value: proposed }
+# editor_role on existing rows: Sovrium 0.33 fills the new column's default
+# into rows already there when the app starts (checked on SQLite: proposals
+# created before the column read back `coordination`). No migration step;
+# if a row ever reads empty, `PATCH editor_role: coordination` as an admin.

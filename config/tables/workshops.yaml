@@ -114,20 +114,21 @@ fields:
   - { id: 30, name: cash_entries, label: Saisie sur place, type: count, relationshipField: cash }
 permissions:
   read: all
-  create: [admin]
-  update: [admin]
+  # Coordination: publish-workshop-on-site upserts the row with the presser's rights.
+  create: [admin, coordination]
+  update: [admin, coordination]
   delete: [admin]
   fields:
-    - { field: proposal, read: [admin], write: [admin] }
-    - { field: helloasso_form_slug, read: [admin], write: [admin] }
-    - { field: registrations, read: [admin, member], write: [admin] }
-    - { field: cash, read: [admin, member], write: [admin] }
-    - { field: registrations_count, read: [admin, member], write: [admin] }
-    - { field: present_count, read: [admin, member], write: [admin] }
-    - { field: revenue_online, read: [admin, member], write: [admin] }
-    - { field: revenue_on_site, read: [admin, member], write: [admin] }
-    - { field: revenue_total, read: [admin, member], write: [admin] }
-    - { field: last_synced_at, read: [admin, member], write: [admin] }
-    - { field: revenue_online_eur, read: [admin, member], write: [admin] }
-    - { field: revenue_on_site_eur, read: [admin, member], write: [admin] }
-    - { field: cash_entries, read: [admin, member], write: [admin] }
+    - { field: proposal, read: [admin, coordination], write: [admin, coordination] }
+    - { field: helloasso_form_slug, read: [admin, coordination], write: [admin, coordination] }
+    - { field: registrations, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: cash, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: registrations_count, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: present_count, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: revenue_online, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: revenue_on_site, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: revenue_total, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: last_synced_at, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: revenue_online_eur, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: revenue_on_site_eur, read: [admin, coordination, facilitateur], write: [admin] }
+    - { field: cash_entries, read: [admin, coordination, facilitateur], write: [admin] }

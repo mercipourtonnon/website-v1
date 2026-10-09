@@ -1,0 +1,52 @@
+# /espace/membres — the directory of validated bénévoles. Pending, refused and
+# archived profiles never reach a member (members row rule); the explicit
+# status filter keeps the coordination's directory to validated people too
+# (the others are on /espace/coordination/membres). Email and phone are not
+# drawn: the table keeps them for the coordination.
+name: espace-membres
+path: /espace/membres
+access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Membres - Espace bénévole
+  description: Les bénévoles de Merci pour ton non.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-5xl flex-col gap-6
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: membres
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Les bénévoles de l'asso. Ouvre une fiche pour découvrir ce qui anime chacun·e, ses envies et ses ressources.
+          - type: list
+            props:
+              aria-label: Bénévoles
+              className: list-none m-0 grid grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3
+            dataSource:
+              table: members
+              filter:
+                - { field: status, operator: eq, value: validated }
+              sort: [{ field: display_name, direction: asc }]
+              pagination: { pageSize: 30 }
+            listDisplay:
+              emptyMessage: Pas encore de fiche validée. Les bénévoles apparaissent ici une fois leur candidature validée.
+            children:
+              - component: member-card

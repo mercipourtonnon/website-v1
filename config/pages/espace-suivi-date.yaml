@@ -5,7 +5,7 @@
 # two phones see each other's taps.
 name: espace-suivi-date
 path: /espace/suivi/:id
-access: { require: [admin, member], redirectTo: /connexion }
+access: { require: [admin, coordination, facilitateur], redirectTo: /connexion }
 sitemap: false
 dataSource: { table: workshops, mode: single, param: id }
 meta:
@@ -255,6 +255,10 @@ components:
           # Prix libre collected at the venue: one workshop_cash row per date.
           # No row yet (cash_entries 0) → the create form; a row → an edit
           # form on it, even when it holds 0 €.
+          # Workaround for sovrium/sovrium#128 (an edit form in `mode: single`
+          # ignores its filter and opens another date's row): hence the
+          # one-row grid below, and the `cash_entries` gate choosing between
+          # the create form and that grid.
           - type: container
             element: section
             props:
