@@ -27,7 +27,7 @@
     '    </div>',
     '    <div></div>',
     '    <div id="sib-container" class="sib-container--large sib-container--vertical">',
-    '      <form id="sib-form" method="POST" action="https://a2ea51dd.sibforms.com/serve/MUIFADf-ROZY1VsCOLGJDE48wYzLzvQO2t-F7ZXBqwsBcBw4UDtNglcsq90q0cfw9mVMWbx-vZ3kLvH0hnQxxo6KLrlRmRjg4tktedlP-qzaG0-rNWwtcDpAzZcipU-N6-l4SkjLCuKjWkvAc_y0UauELZXB2AmbCcdQpRKR9dnIVQXjUxBWc9fgmm1AGNynQ8jk5RcYudetbiFPmQ==" data-type="subscription">',
+    '      <form id="sib-form" method="POST" action="https://fac2d107.sibforms.com/serve/MUIFAMwa3xtu-2jcfDdFnVlD_fO1Sp4asrZXYBhN32AXiC7KTTGkrJ4cr2oqhbPzKS31zjNgUTRXh5xuSIlNIQHl3KlBuq7xcpN2Akxsp79lHIAaJLIRTpUu9NjTfYMSaexcjSXWca6CVIJJXsNiIX0UZWQp2rZHbqX3ZXHDBtnRLBxU9Uwvgnc6TYl44RocSyp7eAwDeNtolFC1CA==" data-type="subscription">',
     '        <div class="flex flex-col gap-6">',
     '          <div class="sib-input sib-form-block">',
     '            <div class="form__entry entry_block">',
