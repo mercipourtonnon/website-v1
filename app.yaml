@@ -27,6 +27,10 @@ tables:
   # Dashboard /espace/suivi: who registered, who came, what the date brought in.
   - $ref: ./config/tables/registrations.yaml
   - $ref: ./config/tables/workshop_cash.yaml
+  # /ressources: the curated external references (table `ressources`: `references` is a reserved SQL word) (seeded, public read).
+  - $ref: ./config/tables/ressources.yaml
+  # /vos-idees: ideas sent by the public (coordination-only read).
+  - $ref: ./config/tables/ideas.yaml
 
 # Authentication and roles (candidat → member / facilitateur → coordination → admin).
 auth:
@@ -97,6 +101,8 @@ automations:
   - $ref: ./config/automations/helloasso-notification.yaml
   - $ref: ./config/automations/stamp-check-in.yaml
   - $ref: ./config/automations/anonymise-registrations.yaml
+  # Public ideas form → mail to the coordination.
+  - $ref: ./config/automations/on-idea.yaml
 
 components:
   - $ref: ./config/components/site-footer.yaml
@@ -169,6 +175,8 @@ forms:
   # On /espace/suivi/:id: a walk-in, and the first entry of the dons sur place (form prix-libre-sur-place).
   - $ref: ./config/forms/ajout-sur-place.yaml
   - $ref: ./config/forms/prix-libre-sur-place.yaml
+  # Public: anyone can send an idea (embedded on /vos-idees, also at /forms/idees).
+  - $ref: ./config/forms/idees.yaml
 
 # URLs of the retired static (GitHub Pages) export.
 redirects:

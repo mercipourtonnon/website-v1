@@ -1,0 +1,1048 @@
+# External references for /ressources — one record per reference, grouped by
+# `block` and sorted by `position` (tens). `featured` marks the incontournables
+# (shown first on the page, and again in their own block). `verified: false`
+# shows an « à vérifier » tag until an admin has opened the link.
+# Source: the 2026-10-09 site review (Notion, « Revue du site d'après le BPS »).
+# Replay with: sovrium seed app.yaml --mode upsert --table ressources
+mergeOn: [title]
+records:
+  # ── Besoin d'aide maintenant ────────────────────────────────────────────
+  - key: aide_3919
+    fields:
+      title: "3919 — Violences Femmes Info"
+      author: "Fédération nationale Solidarité Femmes"
+      kind: aide
+      lang: fr
+      url: https://www.solidaritefemmes.org/
+      note: "Écoute, information et orientation, 24h/24 et 7j/7, gratuit et anonyme. Pour soi ou pour quelqu'un dont on s'inquiète."
+      block: aide
+      position: 10
+      verified: true
+  - key: aide_cfcv
+    fields:
+      title: "0 800 05 95 95 — Viols Femmes Informations"
+      author: "Collectif Féministe Contre le Viol"
+      kind: aide
+      lang: fr
+      url: https://cfcv.asso.fr/
+      note: "La ligne d'écoute du CFCV, du lundi au vendredi de 10 h à 19 h. Gratuit, anonyme, pour les victimes et leurs proches."
+      block: aide
+      position: 20
+      verified: true
+  - key: aide_17
+    fields:
+      title: "17 — police ou gendarmerie"
+      author: "Service public"
+      kind: aide
+      lang: fr
+      url: https://www.service-public.fr/particuliers/vosdroits/F32001
+      note: "En cas d'urgence ou de danger immédiat. Le 114 par SMS si tu ne peux pas parler."
+      block: aide
+      position: 30
+      verified: false
+  - key: aide_arretons
+    fields:
+      title: "arretonslesviolences.gouv.fr — tchat 24h/24"
+      author: "Gouvernement français"
+      kind: aide
+      lang: fr
+      url: https://arretonslesviolences.gouv.fr/besoin-d-aide/violences-sexuelles
+      note: "Un tchat avec des policier·es et gendarmes formé·es, à toute heure, pour les victimes et les témoins de violences sexuelles."
+      block: aide
+      position: 40
+      verified: true
+  - key: aide_fil_sante_jeunes
+    fields:
+      title: "0 800 235 236 — Fil Santé Jeunes"
+      author: "Fil Santé Jeunes"
+      kind: aide
+      lang: fr
+      url: https://www.filsantejeunes.com/
+      note: "Pour les 12-25 ans : écoute anonyme et gratuite, et des articles sur les premières fois, le consentement, l'orientation."
+      block: aide
+      position: 50
+      verified: false
+
+  # ── Lire : essais en français ───────────────────────────────────────────
+  - key: rey_robert_culture_du_viol
+    fields:
+      title: "Une culture du viol à la française"
+      author: "Valérie Rey-Robert, Libertalia"
+      kind: livre
+      year: 2019
+      lang: fr
+      url: https://editionslibertalia.com/IMG/pdf/libertalia-valerie_rey_robert-une_culture_du_viol_a_la_francaise-texte_complet.pdf
+      note: "Les mythes qui, en France, excusent les agresseurs et rendent le non inaudible. Le texte intégral est en libre accès chez l'éditeur."
+      block: lire
+      featured: true
+      position: 10
+      verified: true
+  - key: garcia_conversation_des_sexes
+    fields:
+      title: "La Conversation des sexes. Philosophie du consentement"
+      author: "Manon Garcia, Climats / Flammarion"
+      kind: livre
+      year: 2021
+      lang: fr
+      url: https://www.manon-garcia.com/
+      note: "Penser la relation comme une conversation entre égaux plutôt qu'un oui arraché. Le livre de philosophie du consentement le plus lu."
+      block: lire
+      featured: true
+      position: 20
+      verified: true
+  - key: leguil_ceder
+    fields:
+      title: "Céder n'est pas consentir"
+      author: "Clotilde Leguil, PUF"
+      kind: livre
+      year: 2021
+      lang: fr
+      url: https://www.puf.com/ceder-nest-pas-consentir
+      note: "La frontière entre consentir et se laisser faire. La formule est devenue un slogan, on la reprend en atelier."
+      block: lire
+      featured: true
+      position: 30
+      verified: false
+  - key: springora_le_consentement
+    fields:
+      title: "Le Consentement"
+      author: "Vanessa Springora, Grasset"
+      kind: livre
+      year: 2020
+      lang: fr
+      url: https://www.grasset.fr/livre/le-consentement-9782246822691/
+      note: "Le récit qui a relancé le débat public sur l'emprise. Adapté au cinéma en 2023."
+      block: lire
+      position: 40
+      verified: false
+  - key: rey_robert_dix_questions
+    fields:
+      title: "Dix questions sur la culture du viol"
+      author: "Valérie Rey-Robert, Libertalia"
+      kind: livre
+      year: 2025
+      lang: fr
+      note: "La version courte et pédagogique de l'essai de 2019, en dix questions."
+      block: lire
+      position: 50
+      verified: true
+  - key: fraisse_du_consentement
+    fields:
+      title: "Du consentement"
+      author: "Geneviève Fraisse, Seuil"
+      kind: livre
+      year: 2007
+      lang: fr
+      url: https://www.seuil.com/ouvrage/du-consentement-genevieve-fraisse/9782021371758
+      note: "Le consentement comme lien politique entre liberté et capacité de refuser. Édition augmentée en 2017, poche en 2022."
+      block: lire
+      position: 60
+      verified: false
+  - key: boucherie_troubles
+    fields:
+      title: "Troubles dans le consentement. Du désir partagé au viol"
+      author: "Alexia Boucherie, François Bourin"
+      kind: livre
+      year: 2019
+      lang: fr
+      url: https://catalogue.bnf.fr/ark:/12148/cb45694422f
+      note: "Enquête auprès de jeunes adultes sur les conditions concrètes d'un consentement libre et éclairé."
+      block: lire
+      position: 70
+      verified: true
+  - key: renard_en_finir
+    fields:
+      title: "En finir avec la culture du viol"
+      author: "Noémie Renard, Les Petits Matins"
+      kind: livre
+      year: 2018
+      lang: fr
+      url: https://www.antisexisme.net/
+      note: "Synthèse accessible des recherches sur la culture du viol, par la fondatrice d'antisexisme.net."
+      block: lire
+      position: 80
+      verified: false
+  - key: le_magueresse_pieges
+    fields:
+      title: "Les Pièges du consentement"
+      author: "Catherine Le Magueresse, Éditions iXe"
+      kind: livre
+      year: 2021
+      lang: fr
+      url: https://catalogue.bnf.fr/ark:/12148/cb469722110
+      note: "Pourquoi la justice présume le consentement, et comment redéfinir le viol. La juriste à l'origine du débat sur la loi de 2025."
+      block: lire
+      position: 90
+      verified: true
+  - key: marzano_je_consens
+    fields:
+      title: "Je consens, donc je suis… Éthique de l'autonomie"
+      author: "Michela Marzano, PUF"
+      kind: livre
+      year: 2006
+      lang: fr
+      note: "Les limites philosophiques du consentement comme seul critère moral."
+      block: lire
+      position: 100
+      verified: true
+  - key: thery_moi_aussi
+    fields:
+      title: "Moi aussi. La nouvelle civilité sexuelle"
+      author: "Irène Théry, Seuil"
+      kind: livre
+      year: 2022
+      lang: fr
+      url: https://journals.openedition.org/sociologies/24977
+      note: "Généalogie de #MeToo et de la norme du consentement. Le lien ouvre le grand résumé en libre accès."
+      block: lire
+      position: 110
+      verified: true
+  - key: van_geen_allumeuse
+    fields:
+      title: "Allumeuse. Genèse d'un mythe"
+      author: "Christine Van Geen, Seuil"
+      kind: livre
+      year: 2024
+      lang: fr
+      note: "Comment un mot sert à présumer le consentement des femmes."
+      block: lire
+      position: 120
+      verified: true
+  - key: page_au_dela
+    fields:
+      title: "Au-delà de la pénétration"
+      author: "Martin Page, Monstrograph / Le Nouvel Attila"
+      kind: livre
+      year: 2019
+      lang: fr
+      note: "Décentrer la sexualité pour laisser place à la négociation et au désir. Court et direct."
+      block: lire
+      position: 130
+      verified: true
+  - key: pla_jouissance_club
+    fields:
+      title: "Jouissance Club"
+      author: "Jüne Plã, Marabout"
+      kind: livre
+      year: 2020
+      lang: fr
+      url: https://www.instagram.com/jouissance.club/
+      note: "Éducation au plaisir, inclusive, où le consentement est le préalable à tout."
+      block: lire
+      position: 140
+      verified: false
+  - key: tuaillon_couilles_livre
+    fields:
+      title: "Les Couilles sur la table (le livre)"
+      author: "Victoire Tuaillon, Binge Audio Éditions"
+      kind: livre
+      year: 2019
+      lang: fr
+      note: "Les masculinités, dont le consentement vu du côté des hommes. Tiré du podcast."
+      block: lire
+      position: 150
+      verified: true
+  - key: chollet_reinventer_amour
+    fields:
+      title: "Réinventer l'amour"
+      author: "Mona Chollet, Zones / La Découverte"
+      kind: livre
+      year: 2021
+      lang: fr
+      note: "Les scripts de désir et de pouvoir dans le couple hétérosexuel."
+      block: lire
+      position: 160
+      verified: true
+  - key: autain_un_beau_jour
+    fields:
+      title: "Un beau jour… combattre le viol"
+      author: "Clémentine Autain, Indigène"
+      kind: livre
+      year: 2011
+      lang: fr
+      note: "Témoignage précoce sur le silence qui entoure le viol en France."
+      block: lire
+      position: 170
+      verified: true
+  - key: ovidie_chair_triste
+    fields:
+      title: "La chair est triste hélas"
+      author: "Ovidie, Julliard"
+      kind: livre
+      year: 2023
+      lang: fr
+      note: "Le droit de ne plus consentir. Adapté au théâtre en 2025."
+      block: lire
+      position: 180
+      verified: true
+  # ── Lire : essais en anglais ───────────────────────────────────────────
+  - key: martin_wheel_book
+    fields:
+      title: "The Art of Receiving and Giving: The Wheel of Consent"
+      author: "Betty Martin avec Robyn Dalzen, Luminare Press"
+      kind: livre
+      year: 2021
+      lang: en
+      url: https://wheelofconsentbook.com/
+      note: "Le livre de référence de la Roue du consentement. Pas de traduction française à ce jour ; les fiches de la Roue, elles, existent en français."
+      block: lire
+      position: 190
+      verified: false
+  - key: gavey_just_sex
+    fields:
+      title: "Just Sex? The Cultural Scaffolding of Rape"
+      author: "Nicola Gavey, Routledge"
+      kind: livre
+      year: 2019
+      lang: en
+      url: https://www.routledge.com/Just-Sex-The-Cultural-Scaffolding-of-Rape-2nd-Edition/Gavey/p/book/9781138336209
+      note: "L'ouvrage fondateur sur les normes qui rendent le viol ordinaire."
+      block: lire
+      position: 200
+      verified: true
+  - key: yes_means_yes
+    fields:
+      title: "Yes Means Yes!"
+      author: "dir. Jaclyn Friedman et Jessica Valenti, Seal Press"
+      kind: livre
+      year: 2008
+      lang: en
+      note: "L'anthologie à l'origine du passage de « non c'est non » à « seul un oui est un oui »."
+      block: lire
+      position: 210
+      verified: true
+  # ── Lire : bandes dessinées ───────────────────────────────────────────
+  - key: crocodiles
+    fields:
+      title: "Les Crocodiles / Les Crocodiles sont toujours là"
+      author: "Thomas Mathieu, puis Juliette Boutant et Thomas Mathieu — Le Lombard, Casterman"
+      kind: bd
+      year: 2014
+      lang: fr
+      url: https://projetcrocodiles.tumblr.com/
+      note: "Témoignages de harcèlement et de sexisme ordinaire en BD. Très utilisés en atelier."
+      block: lire
+      position: 220
+      verified: true
+  - key: libres_bd
+    fields:
+      title: "Libres ! Manifeste pour s'affranchir des diktats sexuels"
+      author: "Ovidie et Diglee, Delcourt"
+      kind: bd
+      year: 2017
+      lang: fr
+      note: "Drôle et déculpabilisant. À l'origine de la websérie Arte. Édition augmentée en 2022."
+      block: lire
+      position: 230
+      verified: true
+  - key: emma_un_autre_regard
+    fields:
+      title: "Un autre regard"
+      author: "Emma, Massot"
+      kind: bd
+      year: 2017
+      lang: fr
+      url: https://emmaclit.com/
+      note: "Consentement, charge mentale, #MeToo : quatre tomes de BD militantes."
+      block: lire
+      position: 240
+      verified: false
+
+  # ── Regarder ─────────────────────────────────────────────────────────
+  - key: tea_consent
+    fields:
+      title: "Tea Consent — « Le consentement avec un thé »"
+      author: "Emmeline May et Blue Seat Studios"
+      kind: video
+      year: 2015
+      lang: fr-en
+      url: https://www.youtube.com/watch?v=yj5NcMew6qc
+      note: "La métaphore de la tasse de thé, en trois minutes : l'explication la plus simple et la plus partagée du consentement. Version française."
+      block: regarder
+      featured: true
+      position: 10
+      verified: true
+  - key: sexe_sans_consentement
+    fields:
+      title: "Sexe sans consentement"
+      author: "Delphine Dhilly et Blandine Grosjean, France 2"
+      kind: film
+      year: 2018
+      lang: fr
+      url: https://www.francetvpro.fr/contenu-de-presse/37979
+      note: "Six jeunes femmes racontent un rapport non voulu sans violence physique. La zone grise filmée, en 52 minutes."
+      block: regarder
+      featured: true
+      position: 20
+      verified: true
+  - key: film_le_consentement
+    fields:
+      title: "Le Consentement (le film)"
+      author: "Vanessa Filho"
+      kind: film
+      year: 2023
+      lang: fr
+      url: https://www.grignoux.be/filmpdf/2085/le-consentement
+      note: "Adaptation du récit de Vanessa Springora. Le lien ouvre la fiche pédagogique des Grignoux."
+      block: regarder
+      position: 30
+      verified: true
+  - key: libres_arte
+    fields:
+      title: "Libres ! (la websérie)"
+      author: "Ovidie et Sophie-Marie Larrouy, Arte"
+      kind: video
+      year: 2021
+      lang: fr
+      url: https://www.arte.tv/fr/videos/RC-020047/libres/
+      note: "Vingt épisodes animés de 3'30 d'après la BD. Le format court idéal pour lancer une discussion."
+      block: regarder
+      position: 40
+      verified: false
+  - key: sexotuto
+    fields:
+      title: "Sexotuto"
+      author: "France Télévisions, Lumni"
+      kind: video
+      lang: fr
+      url: https://www.lumni.fr/programme/sexotuto
+      note: "38 vidéos de cinq minutes pour les ados, dont « Qu'est-ce que le consentement ? ». Contenu validé par un comité d'experts."
+      block: regarder
+      position: 50
+      verified: false
+  - key: tu_enfanteras
+    fields:
+      title: "Tu enfanteras dans la douleur"
+      author: "Ovidie, Arte"
+      kind: film
+      year: 2019
+      lang: fr
+      note: "Le consentement dans le soin, au-delà de la sexualité : les violences obstétricales."
+      block: regarder
+      position: 60
+      verified: true
+  - key: brut_porno_consentement
+    fields:
+      title: "Porno et consentement"
+      author: "Brut"
+      kind: film
+      year: 2021
+      lang: fr
+      url: https://www.brut.media/fr/documentaires/sexualite/porno-et-consentement
+      note: "Comment une partie de l'industrie tente de rendre le consentement visible."
+      block: regarder
+      position: 70
+      verified: true
+  - key: nantes_table_ronde
+    fields:
+      title: "Table ronde « Le consentement, si ce n'est pas oui c'est non »"
+      author: "Nantes Université"
+      kind: video
+      lang: fr
+      url: https://mediaserver.univ-nantes.fr/videos/table-ronde-consentement/
+      note: "Une conférence universitaire en accès libre."
+      block: regarder
+      position: 80
+      verified: true
+  - key: jdiwi
+    fields:
+      title: "#JDIWI"
+      author: "Amnesty International Belgique"
+      kind: video
+      year: 2020
+      lang: fr
+      url: https://www.amnesty.be/jdiwi
+      note: "La campagne belge « oui = oui » pensée pour les 18-25 ans, avec des youtubeurs."
+      block: regarder
+      position: 90
+      verified: false
+
+  # ── Écouter ──────────────────────────────────────────────────────────
+  - key: podcast_a_soi_60
+    fields:
+      title: "Un podcast à soi, n° 60 — « Céder n'est pas consentir »"
+      author: "Charlotte Bienaimé, Arte Radio"
+      kind: podcast
+      year: 2025
+      lang: fr
+      url: https://www.arteradio.com/emission/un-podcast-a-soi
+      note: "Huit ans après #MeToo, femmes, hommes et enfants racontent ce que consentir veut dire au quotidien."
+      block: ecouter
+      featured: true
+      position: 10
+      verified: false
+  - key: couilles_sexe_sans_consentement
+    fields:
+      title: "Les Couilles sur la table — « Sexe sans consentement : le rôle des hommes »"
+      author: "Victoire Tuaillon avec Delphine Dhilly, Binge Audio"
+      kind: podcast
+      year: 2018
+      lang: fr
+      url: https://podcasts.apple.com/ca/podcast/sexe-sans-consentement-le-r%C3%B4le-des-hommes/id1283233873?i=1000404377830
+      note: "Que disent les garçons de la séduction et du consentement ?"
+      block: ecouter
+      position: 20
+      verified: true
+  - key: couilles_mazaurette
+    fields:
+      title: "Les Couilles sur la table — « Maïa Mazaurette (1/2) »"
+      author: "Victoire Tuaillon, Binge Audio"
+      kind: podcast
+      lang: fr
+      url: https://www.binge.audio/podcast/les-couilles-sur-la-table/maia-mazaurette-sortir-la-tete-du-trou-1-2
+      note: "Non, demander un consentement explicite ne casse pas l'ambiance."
+      block: ecouter
+      position: 30
+      verified: true
+  - key: couilles_ados
+    fields:
+      title: "Les Couilles sur la table — « Dans la tête des ados »"
+      author: "Victoire Tuaillon avec Didier Valentin, Binge Audio"
+      kind: podcast
+      year: 2023
+      lang: fr
+      url: https://www.binge.audio/podcast/les-couilles-sur-la-table/dans-la-tete-des-ados
+      note: "Parler consentement, orientation et porno avec les adolescents."
+      block: ecouter
+      position: 40
+      verified: true
+  - key: couilles_justice
+    fields:
+      title: "Les Couilles sur la table — « Nous faire justice : changer la loi sur le viol »"
+      author: "Victoire Tuaillon avec Catherine Le Magueresse, Binge Audio"
+      kind: podcast
+      year: 2024
+      lang: fr
+      url: https://podcasts.apple.com/us/podcast/nous-faire-justice-changer-la-loi-sur-le-viol/id1283233873?i=1000651433092
+      note: "Faut-il inscrire le consentement dans la loi ? Un an avant qu'elle ne soit votée."
+      block: ecouter
+      position: 50
+      verified: true
+  - key: vivons_heureux_allumeuse
+    fields:
+      title: "Vivons heureux avant la fin du monde — « Le mythe de l'allumeuse. Le consentement expliqué à ma fille »"
+      author: "Delphine Saltel, Arte Radio"
+      kind: podcast
+      year: 2024
+      lang: fr
+      url: https://www.arteradio.com/son/61678888/le_mythe_de_l_allumeuse
+      note: "Une boîte à outils pour ouvrir la discussion avec ses enfants, avec Christine Van Geen et Irène Théry."
+      block: ecouter
+      position: 60
+      verified: true
+  - key: mansplaining_aborder
+    fields:
+      title: "Mansplaining — « Aborder sans importuner »"
+      author: "Thomas Messias avec Safiatou Mendy (Consentis), Slate"
+      kind: podcast
+      lang: fr
+      url: https://www.slate.fr/podcasts/mansplaining/aborder-sans-importuner-comment-seduire-sans-etre-gros-lourd-92
+      note: "Le consentement en milieu festif, côté hommes."
+      block: ecouter
+      position: 70
+      verified: true
+  - key: deuxieme_texte_excuses
+    fields:
+      title: "Le Deuxième Texte — « Pourquoi cherche-t-on des excuses aux violeurs ? »"
+      author: "Slate"
+      kind: podcast
+      lang: fr
+      url: https://www.slate.fr/podcasts/le-deuxieme-texte/pourquoi-cherche-t-des-excuses-aux-violeurs
+      note: "Lecture commentée de « Une culture du viol à la française »."
+      block: ecouter
+      position: 80
+      verified: true
+  - key: ok_pas_ok
+    fields:
+      title: "OK, pas OK"
+      author: "Delphine Dhilly pour Santé publique France"
+      kind: podcast
+      lang: fr
+      url: https://www.onsexprime.fr/la-sexualite/ok-ou-pas-ok/ok-pas-ok-le-consentement-c-est-obligatoire
+      note: "Cinq témoignages de six à huit minutes : des jeunes racontent un « ok » qui n'en était pas un."
+      block: ecouter
+      position: 90
+      verified: true
+  - key: coeur_sur_la_table
+    fields:
+      title: "Le Cœur sur la table"
+      author: "Victoire Tuaillon, Binge Audio"
+      kind: podcast
+      year: 2021
+      lang: fr
+      url: https://www.binge.audio/podcast/le-coeur-sur-la-table
+      note: "L'amour et la réinvention des relations, en série documentaire."
+      block: ecouter
+      position: 100
+      verified: false
+  - key: entre_nos_levres
+    fields:
+      title: "Entre nos lèvres"
+      author: "Céline et Margaux"
+      kind: podcast
+      year: 2018
+      lang: fr
+      url: https://www.entrenoslevres.fr/podcast/
+      note: "Des témoignages intimes où la question « ai-je le droit de refuser ? » revient en filigrane."
+      block: ecouter
+      position: 110
+      verified: true
+
+  # ── Institutions et associations ─────────────────────────────────────
+  - key: spf_brochure_consentement
+    fields:
+      title: "« Aider à exprimer et à entendre le consentement »"
+      author: "Santé publique France et CRIAVS Île-de-France"
+      kind: kit
+      year: 2023
+      lang: fr
+      url: https://www.santepubliquefrance.fr/sante-sexuelle/brochure/aider-a-exprimer-et-a-entendre-le-consentement
+      note: "Le kit officiel de séances clés en main pour animer sur le consentement avec des adolescent·es. 44 pages."
+      block: institutions
+      featured: true
+      position: 10
+      verified: true
+  - key: cfcv_dix_idees_recues
+    fields:
+      title: "« 10 idées reçues sur l'introduction du consentement dans la définition légale du viol »"
+      author: "Collectif Féministe Contre le Viol"
+      kind: institution
+      lang: fr
+      url: https://cfcv.asso.fr/10-idees-recues-sur-lintroduction-du-consentement-dans-la-definition-legale-du-viol/
+      note: "Une position critique sur le consentement dans la loi, utile pour nourrir le débat."
+      block: institutions
+      position: 20
+      verified: true
+  - key: planning_familial_brochure
+    fields:
+      title: "« Mon corps, moi et les autres »"
+      author: "Le Planning familial"
+      kind: kit
+      year: 2018
+      lang: fr
+      url: https://www.planning-familial.org/sites/default/files/2019-01/2018_brochure_moi_mon_corps_et_les_autres_planning_familial.pdf
+      note: "Consentement et intimité en facile à lire et à comprendre, par le réseau d'éducation à la sexualité le plus implanté."
+      block: institutions
+      position: 30
+      verified: true
+  - key: onsexprime
+    fields:
+      title: "OnSexprime.fr — « Ok, pas ok : le consentement, c'est obligatoire ! »"
+      author: "Santé publique France"
+      kind: institution
+      lang: fr
+      url: https://www.onsexprime.fr/la-sexualite/ok-ou-pas-ok/ok-pas-ok-le-consentement-c-est-obligatoire
+      note: "Le site de référence santé sexuelle pour les 15-25 ans."
+      block: institutions
+      position: 40
+      verified: true
+  - key: evars_eduscol
+    fields:
+      title: "Programme EVARS — éducation à la vie affective, relationnelle et sexuelle"
+      author: "Éducation nationale, Eduscol"
+      kind: institution
+      year: 2025
+      lang: fr
+      url: https://eduscol.education.gouv.fr/5916/mettre-en-oeuvre-le-programme-evarevars
+      note: "Trois séances annuelles obligatoires depuis la rentrée 2025 ; le consentement est au programme. Livrets par niveau."
+      block: institutions
+      position: 50
+      verified: true
+  - key: commentonsaime
+    fields:
+      title: "commentonsaime.fr"
+      author: "En avant toute(s)"
+      kind: institution
+      lang: fr
+      url: https://commentonsaime.fr/
+      note: "Le premier tchat d'écoute sur les violences dans le couple, pour les jeunes."
+      block: institutions
+      position: 60
+      verified: true
+  - key: memoire_traumatique
+    fields:
+      title: "« Que faire en cas de violences »"
+      author: "Mémoire Traumatique et Victimologie (Dr Muriel Salmona)"
+      kind: institution
+      lang: fr
+      url: https://www.memoiretraumatique.org/que-faire-en-cas-de-violences/
+      note: "Droits, loi, prise en charge. La référence sur la sidération et l'amnésie traumatique."
+      block: institutions
+      position: 70
+      verified: true
+  - key: hce_rapport_2025
+    fields:
+      title: "« Mettre fin au déni et à l'impunité face aux viols et agressions sexuelles »"
+      author: "Haut Conseil à l'Égalité"
+      kind: recherche
+      year: 2025
+      lang: fr
+      url: https://www.haut-conseil-egalite.gouv.fr/rapport-mettre-fin-au-deni-et-limpunite-face-aux-viols-et-agressions-sexuelles
+      note: "État des lieux chiffré et 61 recommandations, dont la prévention par l'EVARS."
+      block: institutions
+      position: 80
+      verified: true
+  - key: noustoutes_jaipasditoui
+    fields:
+      title: "Enquête #JaiPasDitOui"
+      author: "#NousToutes"
+      kind: recherche
+      year: 2020
+      lang: fr
+      url: https://www.noustoutes.org/ressources/Dossier_complet_JaiPasDitOui.01.pdf
+      note: "108 947 répondant·es : des données françaises massives sur le consentement vécu. Voir aussi le livret Safebar."
+      block: institutions
+      position: 90
+      verified: true
+  - key: fondation_des_femmes_droits
+    fields:
+      title: "« Vos droits : quand ce n'est pas oui, c'est non »"
+      author: "Fondation des Femmes"
+      kind: institution
+      lang: fr
+      url: https://fondationdesfemmes.org/actualites/vos-droits-quand-ce-nest-pas-oui-cest-non/
+      note: "Une fiche juridique claire sur viol, agression sexuelle et non-consentement."
+      block: institutions
+      position: 100
+      verified: true
+  - key: crips_fiche_reperes
+    fields:
+      title: "Fiche repères « Le consentement »"
+      author: "Crips Île-de-France"
+      kind: kit
+      year: 2026
+      lang: fr
+      url: https://www.lecrips-idf.net/wp-content/uploads/2025/09/crips_fiche_reperes_consentement_avril_2026.pdf
+      note: "Les critères d'un oui valide en une page, pour les animateur·ices."
+      block: institutions
+      position: 110
+      verified: true
+  - key: consentis
+    fields:
+      title: "Consentis"
+      author: "Association Consentis"
+      kind: institution
+      year: 2018
+      lang: fr
+      url: https://consentis.info/
+      note: "Contre les violences sexuelles en milieu festif : kits de prévention gratuits, affiches et flyers prêts à imprimer."
+      block: institutions
+      position: 120
+      verified: true
+  - key: sans_oui_cest_interdit
+    fields:
+      title: "« Sans oui, c'est interdit »"
+      author: "Ministère de l'Enseignement supérieur"
+      kind: kit
+      year: 2022
+      lang: fr
+      url: https://www.etudiant.gouv.fr/fr/sans-oui-c-est-interdit-2881
+      note: "Un kit de communication pour les campus."
+      block: institutions
+      position: 130
+      verified: true
+  - key: violentometre
+    fields:
+      title: "Le Violentomètre"
+      author: "Centre Hubertine Auclert"
+      kind: kit
+      lang: fr
+      url: https://www.centre-hubertine-auclert.fr/
+      note: "La règle graduée pour repérer les violences dans le couple, très diffusée auprès des jeunes."
+      block: institutions
+      position: 140
+      verified: false
+  - key: amnesty_parlons_du_oui
+    fields:
+      title: "« Parlons du OUI » (Let's Talk About Yes)"
+      author: "Amnesty International"
+      kind: institution
+      year: 2020
+      lang: fr-en
+      url: https://www.amnesty.org/fr/latest/campaigns/2020/02/more-about-lets-talk-about-yes/
+      note: "Un guide pour parler de consentement enthousiaste."
+      block: institutions
+      position: 150
+      verified: true
+  - key: quebec_sans_oui_cest_non
+    fields:
+      title: "« Sans oui, c'est non ! » (Québec)"
+      author: "Université Laval"
+      kind: institution
+      year: 2014
+      lang: fr
+      url: https://www.ulaval.ca/respect-de-la-personne/sans-oui-cest-non
+      note: "La campagne universitaire québécoise : affiches et vidéos à chaque étape d'une relation."
+      block: institutions
+      position: 160
+      verified: true
+  - key: bruxelles_j_consentement
+    fields:
+      title: "« Le consentement c'est quoi ? » (Belgique)"
+      author: "Bruxelles-J"
+      kind: institution
+      lang: fr
+      url: https://www.bruxelles-j.be/amour-sexualite/le-consentement/
+      note: "Avec la réforme belge de 2022, qui place le consentement au cœur du droit pénal sexuel."
+      block: institutions
+      position: 170
+      verified: true
+  - key: sante_sexuelle_suisse
+    fields:
+      title: "« Seul un oui est un oui » (Suisse)"
+      author: "Santé Sexuelle Suisse"
+      kind: institution
+      lang: fr
+      url: https://www.sante-sexuelle.ch/assets/docs/Position_Seul-un-oui-est-un-oui.pdf
+      note: "Un argumentaire fondé sur la Convention d'Istanbul."
+      block: institutions
+      position: 180
+      verified: true
+
+  # ── Jouer et pratiquer ───────────────────────────────────────────────
+  - key: roue_du_consentement
+    fields:
+      title: "La Roue du consentement et le Jeu des 3 minutes"
+      author: "Betty Martin"
+      kind: kit
+      lang: fr-en
+      url: https://www.wheelofconsent.org/free-handouts
+      note: "Servir, prendre, permettre, accepter : l'outil corporel de référence, et un jeu simple pour pratiquer demander, offrir, refuser. Fiches officielles en français."
+      block: jouer
+      featured: true
+      position: 10
+      verified: true
+  - key: school_of_consent
+    fields:
+      title: "School of Consent"
+      author: "Betty Martin et Matt Schwenteck"
+      kind: pratique
+      year: 2018
+      lang: en
+      url: https://schoolofconsent.org/
+      note: "Pour les animateur·ices qui veulent se former à la Roue du consentement."
+      block: jouer
+      position: 20
+      verified: false
+  - key: consentkido
+    fields:
+      title: "ConsentKido"
+      author: "ConsentKido"
+      kind: jeu
+      lang: fr
+      url: https://www.consentkido.fr/
+      note: "Un jeu de 42 cartes dès 6 ans, labellisé par la Chaire UNESCO Santé sexuelle et Droits humains. Pour s'entraîner à dire oui ou non, en famille ou en classe."
+      block: jouer
+      position: 30
+      verified: true
+  - key: topla_ok_not_ok
+    fields:
+      title: "OK or not OK ? Le jeu de rôle du consentement"
+      author: "Topla, avec le Planning familial Nouvelle-Aquitaine"
+      kind: jeu
+      lang: fr
+      url: https://playtopla.com/products/ok-not-ok-le-jeu-de-role-du-consentement
+      note: "Des mises en situation pour débattre des limites, ados et adultes."
+      block: jouer
+      position: 40
+      verified: true
+  - key: jdiwi_jdinon
+    fields:
+      title: "Jdiwi Jdinon"
+      author: "Fédération des Centres de Planning Familial (Belgique)"
+      kind: jeu
+      lang: fr
+      url: https://fcppf.be/produit/jdiwi-jdinon/
+      note: "Un jeu de cartes inspiré de la campagne #JDIWI, pour des groupes de jeunes et d'adultes."
+      block: jouer
+      position: 50
+      verified: true
+  - key: loto_du_consentement
+    fields:
+      title: "Mon Loto du consentement"
+      author: "Popaia"
+      kind: jeu
+      lang: fr
+      url: https://popaia.fr/jeu-de-societe-mon-loto-du-consentement-jeu-de-societe-pour-enfants-evars-9dcacab5
+      note: "Une entrée ludique dès 3 ans, en famille ou à l'école."
+      block: jouer
+      position: 60
+      verified: false
+
+  # ── Enfants et parents ───────────────────────────────────────────────
+  - key: dolto_respecte_mon_corps
+    fields:
+      title: "Respecte mon corps"
+      author: "Catherine Dolto et Colline Faure-Poirée, Gallimard Jeunesse"
+      kind: livre
+      year: 1999
+      lang: fr
+      note: "Le classique, dès 2 ans : « personne n'a le droit de toucher ton corps sans ton accord »."
+      block: enfants
+      featured: true
+      position: 10
+      verified: true
+  - key: jai_le_droit_de_dire_non
+    fields:
+      title: "J'ai le droit de dire non !"
+      author: "Ophélie Célier et Thomas Piet, ill. Fanny Vella, Petit Kiwi"
+      kind: livre
+      year: 2021
+      lang: fr
+      note: "Un album sur le droit de refuser, écrit pour parler de consentement aux petits dès 5 ans."
+      block: enfants
+      featured: true
+      position: 20
+      verified: true
+  - key: cest_mon_corps
+    fields:
+      title: "C'est MON corps !"
+      author: "Mai Lan Chapiron"
+      kind: livre
+      year: 2021
+      lang: fr
+      note: "Nommer ses parties intimes, les protéger, dire non. Dès 3 ans."
+      block: enfants
+      position: 30
+      verified: false
+  - key: milan_intimite_consentement
+    fields:
+      title: "L'intimité et le consentement"
+      author: "coll. « Mes p'tites questions et moi », Milan"
+      kind: livre
+      lang: fr
+      note: "Seize questions sur l'intimité physique, émotionnelle et numérique, dès 7 ans."
+      block: enfants
+      position: 40
+      verified: false
+  - key: te_laisse_pas_faire
+    fields:
+      title: "Te laisse pas faire !"
+      author: "Jocelyne Robert, Éditions de l'Homme"
+      kind: livre
+      lang: fr
+      note: "Un guide parental québécois de prévention des abus, orienté autonomie corporelle."
+      block: enfants
+      position: 50
+      verified: false
+
+  # ── Textes et recherche ──────────────────────────────────────────────
+  - key: loi_2025_1057
+    fields:
+      title: "Loi n° 2025-1057 du 6 novembre 2025"
+      author: "Journal officiel"
+      kind: institution
+      year: 2025
+      lang: fr
+      url: https://www.info.gouv.fr/actualite/le-non-consentement-entre-dans-la-definition-penale-du-viol
+      note: "Le consentement devient « libre et éclairé, spécifique, préalable et révocable » et ne peut se déduire du silence. Le texte est aussi cité sur notre page Le consentement."
+      block: recherche
+      featured: true
+      position: 10
+      verified: true
+  - key: boucherie_zones_grises
+    fields:
+      title: "« Du vrai viol aux zones grises »"
+      author: "Alexia Boucherie, Archives de philosophie du droit"
+      kind: recherche
+      year: 2019
+      lang: fr
+      url: https://shs.cairn.info/revue-archives-de-philosophie-du-droit-2019-1-page-375.htm
+      note: "Une critique de la notion de zone grise."
+      block: recherche
+      position: 20
+      verified: false
+  - key: jaunait_matonti_enjeu
+    fields:
+      title: "« L'enjeu du consentement »"
+      author: "Alexandre Jaunait et Frédérique Matonti, Raisons politiques n° 46"
+      kind: recherche
+      year: 2012
+      lang: fr
+      url: https://shs.cairn.info/article/RAI_046_0005
+      note: "L'introduction d'un dossier de science politique sur le consentement."
+      block: recherche
+      position: 30
+      verified: true
+  - key: muehlenhard_complexities
+    fields:
+      title: "« The Complexities of Sexual Consent Among College Students »"
+      author: "Muehlenhard, Humphreys, Jozkowski et Peterson, Journal of Sex Research"
+      kind: recherche
+      year: 2016
+      lang: en
+      url: https://doi.org/10.1080/00224499.2016.1146651
+      note: "La revue de référence : consentir n'est pas vouloir ; ambivalence, alcool, double standard."
+      block: recherche
+      position: 40
+      verified: true
+
+  # ── Pratiques voisines ───────────────────────────────────────────────
+  - key: rosenberg_cnv
+    fields:
+      title: "Les mots sont des fenêtres (ou bien ce sont des murs)"
+      author: "Marshall B. Rosenberg, La Découverte"
+      kind: livre
+      year: 1999
+      lang: fr
+      note: "La Communication NonViolente : exprimer un besoin, entendre un non."
+      block: voisines
+      position: 10
+      verified: true
+  - key: ansembourg_cessez
+    fields:
+      title: "Cessez d'être gentil, soyez vrai !"
+      author: "Thomas d'Ansembourg, Éditions de l'Homme"
+      kind: livre
+      year: 2001
+      lang: fr
+      note: "Apprendre à dire non à temps, dans la bonne mesure et à la bonne personne."
+      block: voisines
+      position: 20
+      verified: true
+  - key: van_der_kolk_corps
+    fields:
+      title: "Le corps n'oublie rien"
+      author: "Bessel van der Kolk, Albin Michel"
+      kind: livre
+      year: 2018
+      lang: fr
+      note: "La base d'une approche du trauma pour des ateliers qui passent par le corps."
+      block: voisines
+      position: 30
+      verified: true
+  - key: brene_brown_vulnerabilite
+    fields:
+      title: "Le pouvoir de la vulnérabilité"
+      author: "Brené Brown"
+      kind: livre
+      year: 2014
+      lang: fr-en
+      url: https://www.ted.com/talks/brene_brown_the_power_of_vulnerability
+      note: "Vulnérabilité, courage et limites. Le lien ouvre sa conférence TED, sous-titrée en français."
+      block: voisines
+      position: 40
+      verified: false
+  - key: cuddle_party
+    fields:
+      title: "Cuddle Party — les règles"
+      author: "Reid Mihalko"
+      kind: pratique
+      year: 2004
+      lang: en
+      url: https://cuddleparty.com/
+      note: "Le modèle d'atelier non sexuel structuré en trois temps : cercle, pratique, clôture."
+      block: voisines
+      position: 50
+      verified: false
+  - key: somatic_consent
+    fields:
+      title: "Somatic Consent"
+      author: "Matt Schwenteck"
+      kind: pratique
+      lang: en
+      url: https://www.somaticconsent.com/
+      note: "Une approche corporelle du consentement pour facilitateur·ices : Roue du consentement et théorie polyvagale."
+      block: voisines
+      position: 60
+      verified: true

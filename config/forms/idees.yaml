@@ -1,0 +1,32 @@
+# Public form: anyone can send an idea (no `access` block = everyone). Writes an
+# `ideas` row, runs on-idea (mail to the coordination) and keeps a copy in the
+# console's Submissions inbox, also when embedded on /vos-idees with formRef.
+# Reachable at /forms/idees (a custom `path` may not collide with the page).
+id: 6
+name: idees
+title: Une idée pour Merci pour ton non ?
+description: >-
+  Un atelier pour un public précis, un contenu, un format, un lieu, un partenariat :
+  dis-nous ce que tu voudrais qu'on construise. On lit tout, on répond si tu le
+  souhaites, et les idées retenues nourrissent nos priorités de l'année.
+submitTo:
+  table: ideas
+  automation: on-idea
+  storeSubmission: true
+antiSpam:
+  honeypot: true
+  rateLimit: { perIp: 5, windowSeconds: 3600 }
+display:
+  submitLabel: Envoyer mon idée
+onSuccess:
+  type: successPage
+  title: Merci, c'est reçu
+  message: On lit chaque idée en réunion mensuelle. Si tu as laissé ton e-mail et coché la case, on te répond.
+fields:
+  - { kind: table-field, column: kind, label: C'est plutôt…, required: true }
+  - { kind: table-field, column: audience, label: Pour qui ?, placeholder: 'des parents, mon équipe, des lycéen·nes…' }
+  - { kind: table-field, column: message, label: Ton idée, required: true, helpText: "Ce que tu voudrais qu'on propose, et pourquoi ça manque." }
+  - { kind: section, heading: Si tu veux qu'on te réponde (facultatif) }
+  - { kind: table-field, column: name, label: Prénom ou nom }
+  - { kind: table-field, column: email, label: E-mail }
+  - { kind: table-field, column: contact_ok, label: Vous pouvez me recontacter à ce sujet }

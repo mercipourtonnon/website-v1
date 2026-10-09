@@ -1,0 +1,42 @@
+# Ideas and wishes sent by anyone through the public `idees` form (/vos-idees):
+# a workshop for a specific audience, a content, a format, a venue… Read by the
+# coordination; the form writes the row server-side (no anonymous access to the
+# records API). `status` is the coordination's follow-up.
+id: 13
+name: ideas
+fields:
+  - id: 1
+    name: kind
+    label: Type d'idée
+    type: single-select
+    required: true
+    options:
+      - { value: atelier, label: Un atelier pour un public précis }
+      - { value: contenu, label: Un contenu ou une ressource }
+      - { value: format, label: Un format ou un programme }
+      - { value: lieu, label: Un lieu ou un partenariat }
+      - { value: autre, label: Autre }
+  - { id: 2, name: audience, label: Pour qui ?, type: single-line-text }
+  - { id: 3, name: message, label: L'idée, type: long-text, required: true }
+  - { id: 4, name: name, label: Prénom ou nom, type: single-line-text }
+  - { id: 5, name: email, label: E-mail, type: email }
+  - { id: 6, name: contact_ok, label: Je veux bien être recontacté·e, type: checkbox, default: false }
+  - id: 7
+    name: status
+    label: Suivi
+    type: single-select
+    required: true
+    default: nouvelle
+    options:
+      - { value: nouvelle, label: Nouvelle }
+      - { value: a_etudier, label: À étudier }
+      - { value: retenue, label: Retenue }
+      - { value: realisee, label: Réalisée }
+      - { value: ecartee, label: Écartée }
+  - { id: 8, name: notes, label: Notes de la coordination, type: long-text }
+  - { id: 9, name: received_at, label: Reçue le, type: created-at }
+permissions:
+  read: [admin, coordination]
+  create: [admin, coordination]
+  update: [admin, coordination]
+  delete: [admin]

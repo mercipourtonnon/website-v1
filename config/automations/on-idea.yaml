@@ -1,0 +1,31 @@
+# An idea sent through the public `idees` form: tell the coordination by mail
+# (when ADMIN_NOTIFY_EMAIL is set; the row and the Submissions inbox entry are
+# written by the form itself, whatever happens here).
+name: on-idea
+description: Prévient la coordination qu'une idée a été envoyée depuis /vos-idees.
+trigger:
+  type: form
+  form: idees
+timeout: 30000
+actions:
+  - name: has_recipient
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: $env.ADMIN_NOTIFY_EMAIL, operator: isNotEmpty }
+  - name: notify_coordination
+    type: email
+    operator: send
+    retry: { maxAttempts: 2, delayMs: 5000, strategy: exponential }
+    props:
+      to: $env.ADMIN_NOTIFY_EMAIL
+      subject: 'Nouvelle idée pour l''association ({{trigger.data.kind}})'
+      body: |
+        <p>Quelqu'un vient d'envoyer une idée depuis le site.</p>
+        <p><strong>Type :</strong> {{trigger.data.kind}}<br>
+        <strong>Pour qui :</strong> {{trigger.data.audience}}</p>
+        <p><strong>L'idée :</strong><br>{{trigger.data.message}}</p>
+        <p><strong>Contact :</strong> {{trigger.data.name}} — {{trigger.data.email}} (recontact : {{trigger.data.contact_ok}})</p>
+        <p>La fiche est dans la table « ideas » et dans la boîte Submissions de la console.</p>
