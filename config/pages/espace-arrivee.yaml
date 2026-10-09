@@ -1,6 +1,6 @@
 # /espace/arrivee — auth.landingPath. Draws nothing: a signed-in session is
 # redirected to its role's defaultLanding (candidat → /espace/en-attente,
-# member, facilitateur, coordination → /espace), and this page's access rule is
+# member, coeur, gardien, admin → /espace), and this page's access rule is
 # the guard that sends an anonymous visitor to /connexion first
 # (auth-access/auth-post-login, auth-access/auth-assignments).
 name: espace-arrivee

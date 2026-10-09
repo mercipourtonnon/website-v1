@@ -1,8 +1,8 @@
 # /espace/actualites/:id — one news article. A draft answers 404 to a bénévole
-# (news row rule). The coordination's send fields are never drawn here.
+# (news row rule). The news managers' send fields are never drawn here.
 name: espace-actualite
 path: /espace/actualites/:id
-access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+access: { require: [member, coeur, gardien, admin], redirectTo: /connexion }
 sitemap: false
 dataSource:
   table: news

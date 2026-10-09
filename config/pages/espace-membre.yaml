@@ -1,10 +1,11 @@
 # /espace/membres/:id — one bénévole's profile (her answers to the member
 # form). A member reads validated profiles and her own (members row rule; any
 # other answers 404). Email, phone and status are drawn in a block gated to the
-# coordination, who are also the only readers of those fields.
+# Cercle Gardien, who are also the only readers of those fields. Her volunteer
+# roles (« Rôles bénévoles ») are shown to every reader.
 name: espace-membre
 path: /espace/membres/:id
-access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+access: { require: [member, coeur, gardien, admin], redirectTo: /connexion }
 sitemap: false
 dataSource:
   table: members
@@ -66,12 +67,21 @@ components:
                       className: text-bleu-fonce-70
                     content: $record.pronoun
 
-          # Coordination only: contact and status.
+          # Volunteer roles, for every reader. `detail: $record…`, not `field:`:
+          # a field entry prints a multi-select as raw JSON (Sovrium 0.34.1,
+          # sovrium/sovrium#135); page text prints the labels as a list.
+          - type: description-list
+            visibility: { record: { field: volunteer_roles, isNotEmpty: true } }
+            layout: stacked
+            items:
+              - { term: Rôles bénévoles, detail: $record.volunteer_roles }
+
+          # Cercle Gardien only: contact and status.
           - type: container
             element: section
-            visibility: { roles: [coordination, admin] }
+            visibility: { roles: [gardien, admin] }
             props:
-              aria-label: Pour la coordination
+              aria-label: Pour le Cercle Gardien
               className: rounded-lg border border-mauve-lighter border-t-4 border-t-mauve p-4
             children:
               - type: description-list

@@ -4,7 +4,7 @@
 # status, venue, HelloAsso checklist) at /espace/propositions/:id.
 name: espace-validation
 path: /espace/validation
-access: { require: [admin, coordination], redirectTo: /connexion }
+access: { require: [gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR

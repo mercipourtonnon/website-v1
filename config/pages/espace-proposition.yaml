@@ -1,7 +1,8 @@
 # /espace/propositions/:id — one proposal.
-# A facilitateur·ice sees only her own (row rule → 404 otherwise) and may edit or delete
-# it while it is `proposed`. The coordination (and admins) see every proposal, edit the review
-# fields, and run the workflow buttons. Each button passes the record id as
+# A facilitateur·ice (group facilitation) sees only her own (row rule → 404
+# otherwise) and may edit or delete it while it is `proposed`. The Cercle Gardien
+# (and admins) see every proposal, edit the review fields, and run the workflow
+# buttons. Each button passes the record id as
 # `recordId`, which the automations read at {{trigger.input.recordId}}
 # (automation-triggers/trigger-manual-chained, "Where the input lands").
 #
@@ -9,7 +10,7 @@
 # schema): the unmet ones are left out of the HTML.
 name: espace-proposition
 path: /espace/propositions/:id
-access: { require: [admin, coordination, facilitateur], redirectTo: /connexion }
+access: { require: ['group:facilitation', gardien, admin], redirectTo: /connexion }
 sitemap: false
 dataSource:
   table: workshop_proposals
@@ -39,7 +40,7 @@ components:
                   className: text-bleu-fonce underline underline-offset-4
                 content: ← Mes propositions
               - type: link
-                visibility: { roles: [admin, coordination] }
+                visibility: { roles: [gardien, admin] }
                 props:
                   href: /espace/validation
                   className: text-bleu-fonce underline underline-offset-4
@@ -72,7 +73,7 @@ components:
             content: Proposition validée. La création de l'événement sur HelloAsso est en cours, ça prend quelques secondes. Recharge la page pour voir la suite.
           - type: alert
             alertVariant: info
-            visibility: { roles: [facilitateur], record: { field: status, in: [helloasso_draft, sync_error] } }
+            visibility: { roles: ['group:facilitation'], record: { field: status, in: [helloasso_draft, sync_error] } }
             content: Proposition validée. L'équipe prépare la page d'inscription sur HelloAsso ; la date apparaîtra sur le site dès qu'elle sera prête.
           - type: alert
             alertVariant: success
@@ -149,7 +150,7 @@ components:
           # ── Member: edit or delete while still proposed ───────────────────
           - type: container
             element: section
-            visibility: { roles: [facilitateur], record: { field: status, eq: proposed } }
+            visibility: { roles: ['group:facilitation'], record: { field: status, eq: proposed } }
             props:
               aria-labelledby: modifier-titre
               className: flex flex-col gap-4 rounded-lg border border-mauve-lighter p-5 sm:p-6
@@ -199,20 +200,20 @@ components:
                   onSuccess: { type: navigate, navigate: /espace }
                   onError: { toast: { message: "La proposition n'a pas pu être supprimée. Recharge la page, puis réessaie.", variant: error } }
 
-          # ── Admin: workflow ───────────────────────────────────────────────
+          # ── Cercle Gardien: workflow ───────────────────────────────────────────────
           - type: container
             element: section
-            visibility: { roles: [admin, coordination] }
+            visibility: { roles: [gardien, admin] }
             props:
-              aria-labelledby: coordination-titre
+              aria-labelledby: validation-titre
               className: flex flex-col gap-5 rounded-lg border border-mauve-lighter border-t-4 border-t-mauve p-5 sm:p-6
             children:
               - type: text
                 element: h2
                 props:
-                  id: coordination-titre
+                  id: validation-titre
                   className: text-xl title-font text-bleu-fonce
-                content: coordination
+                content: validation par le cercle gardien
 
               # proposed → approve (creates the real HelloAsso event). The event
               # needs a venue, so the button waits for one.
@@ -330,10 +331,10 @@ components:
                       onSuccess: { type: navigate, navigate: /espace/propositions/$record.id }
                       onError: { toast: { message: "La relance n'a pas abouti. Recharge la page pour voir l'état de la proposition.", variant: error } }
 
-          # ── Admin: review and details, apart from the workflow buttons ────
+          # ── Cercle Gardien: review and details, apart from the workflow buttons
           - type: container
             element: section
-            visibility: { roles: [admin, coordination] }
+            visibility: { roles: [gardien, admin] }
             props:
               aria-labelledby: relecture-titre
               className: flex flex-col gap-4 rounded-lg border border-mauve-lighter p-5 sm:p-6

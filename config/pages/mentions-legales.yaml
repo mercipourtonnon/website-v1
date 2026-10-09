@@ -362,7 +362,7 @@ components:
                                 content: "Suivi des ateliers :"
                               - type: text
                                 element: span
-                                content: " Quand tu t'inscris à un atelier, nous copions depuis HelloAsso dans l'outil interne de l'association ton nom, ton email, ton téléphone si tu l'as donné, le prix libre payé, l'état de ton inscription et ta réponse sur les photos. Le jour de l'atelier, nous y notons ta présence. Si tu viens sans t'être inscrit·e, nous y notons ton nom (et ton email ou ton téléphone si tu nous les donnes). Seul·es les facilitateur·ices et l'équipe de coordination y ont accès."
+                                content: " Quand tu t'inscris à un atelier, nous copions depuis HelloAsso dans l'outil interne de l'association ton nom, ton email, ton téléphone si tu l'as donné, le prix libre payé, l'état de ton inscription et ta réponse sur les photos. Le jour de l'atelier, nous y notons ta présence. Si tu viens sans t'être inscrit·e, nous y notons ton nom (et ton email ou ton téléphone si tu nous les donnes). Seul·es les bénévoles qui accueillent les ateliers (facilitation et logistique) et le Cercle Gardien de l'association y ont accès."
                           - type: list-item
                             children:
                               - type: text

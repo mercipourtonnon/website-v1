@@ -1,8 +1,9 @@
 # Member card — one validated `members` row, in the /espace/membres directory.
 # Place it as the row template of a list bound to `members` (filter status =
-# validated). Photo (initials when there is none), name, pronoun, and a link to
-# the profile, /espace/membres/<id>. Email and phone are never drawn here: the
-# table keeps them for the coordination. No vars.
+# validated). Photo (initials when there is none), name, pronoun, a link to
+# the profile, /espace/membres/<id>, and her volunteer roles when she holds
+# any. Email and phone are never drawn here: the table keeps them for the
+# Cercle Gardien. No vars.
 name: member-card
 type: container
 element: article
@@ -37,3 +38,11 @@ children:
         props:
           className: text-sm text-bleu-fonce-70
         content: $record.pronoun
+      # Page text, not a record-field: in a list row a record-field prints a
+      # multi-select as raw JSON (Sovrium 0.34.1, sovrium/sovrium#135).
+      - type: text
+        element: span
+        visibility: { record: { field: volunteer_roles, isNotEmpty: true } }
+        props:
+          className: mt-1 text-sm text-bleu-fonce
+        content: $record.volunteer_roles

@@ -6,7 +6,7 @@
 # picker empty keeps the stored photo.
 name: espace-profil
 path: /espace/profil
-access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+access: { require: [member, coeur, gardien, admin], redirectTo: /connexion }
 sitemap: false
 dataSource:
   table: members
@@ -41,7 +41,7 @@ components:
                 element: p
                 props:
                   className: text-bleu-fonce
-                content: Ta fiche est visible par les autres bénévoles, sauf ton téléphone, réservé à la coordination. Un champ laissé vide garde la réponse déjà enregistrée.
+                content: Ta fiche est visible par les autres bénévoles, sauf ton téléphone, réservé au Cercle Gardien. Un champ laissé vide garde la réponse déjà enregistrée.
               - type: link
                 props:
                   href: /espace/membres/$record.id

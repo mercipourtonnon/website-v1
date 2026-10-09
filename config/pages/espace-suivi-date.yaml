@@ -3,14 +3,19 @@
 # walk-ins, then enter the prix libre collected on site.
 # Live figures and the grid re-read every 15 s, so two facilitators pointing on
 # two phones see each other's taps.
+# Who sees what (config/auth.yaml): facilitation, logistique and the Cercle
+# Gardien point the people (sync, walk-ins, the registrations grid, which
+# `registrations` only lets them read); the trésorerie reads the figures and
+# enters the prix libre. The figures therefore read the date's own rollups on
+# `workshops`, which the trésorerie may read, not `registrations`.
 name: espace-suivi-date
 path: /espace/suivi/:id
-access: { require: [admin, coordination, facilitateur], redirectTo: /connexion }
+access: { require: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], redirectTo: /connexion }
 sitemap: false
 dataSource: { table: workshops, mode: single, param: id }
 meta:
   lang: fr-FR
-  title: Suivi d'un atelier - Espace facilitateur·ices
+  title: Suivi d'un atelier - Espace bénévole
   description: Pointer les présences, ajouter les personnes venues sur place et saisir le prix libre d'une date.
   noindex: true
   robots: noindex, nofollow
@@ -74,6 +79,7 @@ components:
                     props: { className: text-sm text-bleu-fonce }
                     content: Pas encore synchronisée avec HelloAsso.
               - type: container
+                visibility: { roles: ['group:facilitation', 'group:logistique', gardien, admin] }
                 props: { className: flex flex-col gap-2 sm:flex-row md:flex-col md:items-end }
                 children:
                   - type: button
@@ -87,7 +93,7 @@ components:
                       onSuccess:
                         toast: { message: Inscriptions à jour avec HelloAsso., variant: success }
                       onError:
-                        toast: { message: "La synchronisation n'a pas abouti. Réessaie dans une minute ; si ça bloque encore, préviens la coordination.", variant: error }
+                        toast: { message: "La synchronisation n'a pas abouti. Réessaie dans une minute ; si ça bloque encore, préviens le Cercle Gardien.", variant: error }
                   - type: button
                     label: Ajouter une personne sur place
                     props:
@@ -110,45 +116,43 @@ components:
                 props:
                   className: grid grid-cols-2 gap-3 lg:grid-cols-4
                 children:
+                  # present_count, registrations_count and revenue_online count
+                  # the `valid` registrations of this date, as the grid does.
                   - type: kpi
                     label: Présent·es
                     icon: user-check
                     size: { mobile: sm, md: md }
                     dataSource:
-                      table: registrations
+                      table: workshops
                       filter:
-                        - { field: workshop, operator: eq, value: $param.id }
-                        - { field: status, operator: eq, value: valid }
-                        - { field: attendance, operator: eq, value: present }
+                        - { field: id, operator: eq, value: $param.id }
                       refreshMode: poll
                       pollIntervalMs: 15000
-                    kpiAggregate: { function: count }
+                    kpiAggregate: { function: sum, field: present_count }
                     kpiFormat: { type: number }
                   - type: kpi
                     label: Inscrit·es
                     icon: users
                     size: { mobile: sm, md: md }
                     dataSource:
-                      table: registrations
+                      table: workshops
                       filter:
-                        - { field: workshop, operator: eq, value: $param.id }
-                        - { field: status, operator: eq, value: valid }
+                        - { field: id, operator: eq, value: $param.id }
                       refreshMode: poll
                       pollIntervalMs: 15000
-                    kpiAggregate: { function: count }
+                    kpiAggregate: { function: sum, field: registrations_count }
                     kpiFormat: { type: number }
                   - type: kpi
                     label: Prix libre en ligne
                     icon: credit-card
                     size: { mobile: sm, md: md }
                     dataSource:
-                      table: registrations
+                      table: workshops
                       filter:
-                        - { field: workshop, operator: eq, value: $param.id }
-                        - { field: status, operator: eq, value: valid }
+                        - { field: id, operator: eq, value: $param.id }
                       refreshMode: poll
                       pollIntervalMs: 15000
-                    kpiAggregate: { function: sum, field: amount_paid }
+                    kpiAggregate: { function: sum, field: revenue_online }
                     kpiFormat: { type: currency, options: { currency: EUR } }
                   - type: kpi
                     label: Prix libre sur place
@@ -172,6 +176,7 @@ components:
           # layout drops the action column.
           - type: container
             element: section
+            visibility: { roles: ['group:facilitation', 'group:logistique', gardien, admin] }
             props:
               aria-labelledby: pointage-titre
               className: flex flex-col gap-3
@@ -310,6 +315,7 @@ components:
 
   # Walk-in dialog (opened by "Ajouter une personne sur place").
   - type: dialog
+    visibility: { roles: ['group:facilitation', 'group:logistique', gardien, admin] }
     props: { id: ajout-sur-place, title: Ajouter une personne sur place }
     children:
       - type: form

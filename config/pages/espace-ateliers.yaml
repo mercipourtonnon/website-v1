@@ -3,7 +3,7 @@
 # page and /ateliers/:slug at once (both filter status = published).
 name: espace-ateliers
 path: /espace/ateliers
-access: { require: [admin, coordination], redirectTo: /connexion }
+access: { require: [gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR

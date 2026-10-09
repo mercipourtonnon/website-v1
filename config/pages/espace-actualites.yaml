@@ -3,7 +3,7 @@
 # coordination's reading list too (they edit them on /espace/coordination/actualites).
 name: espace-actualites
 path: /espace/actualites
-access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+access: { require: [member, coeur, gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR
