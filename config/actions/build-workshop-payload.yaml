@@ -1,0 +1,170 @@
+# Turns one workshop proposal into everything HelloAsso and the public site need:
+# the unique event title, Europe/Paris ISO dates (and their UTC instants), the
+# French labels, the slug and the HTML description.
+#
+# Contract: the calling automation must have read the proposal first, in a
+# `record/read` step named `proposal`. The facilitators' names and the venue are
+# read here through the proposal's links (workshop_proposals carries no lookup:
+# in Sovrium 0.33.0 a lookup next to a button field breaks every insert).
+# Used by create-helloasso-event and publish-workshop-on-site.
+name: build-workshop-payload
+action:
+  type: code
+  operator: runTypescript
+  props:
+    timeout: 10000
+    inputData:
+      session_date: '{{proposal.record.session_date}}'
+      start_time: '{{proposal.record.start_time}}'
+      duration_minutes: '{{proposal.record.duration_minutes}}'
+      capacity: '{{proposal.record.capacity}}'
+      lead_facilitator: '{{proposal.record.lead_facilitator}}'
+      co_facilitator: '{{proposal.record.co_facilitator}}'
+      venue: '{{proposal.record.venue}}'
+    code: |
+      async function execute(context) {
+        // Workshop text, kept word for word from scripts/create-billetterie-plus-events.mjs.
+        const REFERENCE_DESCRIPTION =
+          'Un atelier de 3h pour explorer le consentement dans un cadre bienveillant et participatif. ' +
+          'Apprends à dire non, à poser tes limites et à construire des relations plus authentiques. ' +
+          '15 places, prix libre — tu donnes ce que tu veux/peux.';
+        const SHORT_DESCRIPTION = 'Atelier de consentement Niveau 1 — 3h, prix libre, 15 places.';
+        const DEFAULT_PLACE = { name: 'La Plage Digitale', city: 'Strasbourg', zipCode: '67000' };
+
+        const WEEKDAYS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+        const MONTHS = [
+          'janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+          'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre',
+        ];
+
+        // A lookup may arrive as a value or as a one-item list; empty → ''.
+        function text(value: unknown): string {
+          if (Array.isArray(value)) return text(value.find((v) => v !== null && v !== undefined && v !== ''));
+          if (value === null || value === undefined) return '';
+          return String(value).trim();
+        }
+
+        // One field of a linked record, '' when there is no link.
+        async function readField(table: string, id: string, field: string): Promise<string> {
+          if (!id) return '';
+          const res = (await context.actions.record.read({ table, id })) as unknown as {
+            record?: Record<string, unknown>;
+          };
+          return text(res && res.record ? res.record[field] : '');
+        }
+
+        function pad2(n: number): string {
+          return n < 10 ? `0${n}` : String(n);
+        }
+
+        // Joint une liste de noms en français : ["A"] → "A" ; ["A","B"] → "A et B" ;
+        // ["A","B","C"] → "A, B et C".
+        function joinNames(names: string[]): string {
+          if (names.length <= 1) return names[0] || '';
+          return `${names.slice(0, -1).join(', ')} et ${names[names.length - 1]}`;
+        }
+
+        function escapeHtml(value: string): string {
+          return value
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+        }
+
+        // Converts a Paris wall-clock day and time into an ISO-8601 string carrying
+        // the Europe/Paris offset in force on that day.
+        function toParisIso(date: string, time: string): string {
+          // TODO(human): return the ISO string with the Europe/Paris offset, e.g. 2026-11-28T14:00:00+01:00
+          return `${date}T${time}:00+01:00`;
+        }
+
+        // Adds minutes to a wall-clock day + time (crossing midnight if needed).
+        function addMinutes(date: string, time: string, minutes: number): { date: string; time: string } {
+          const [y, m, d] = date.split('-').map(Number);
+          const [hh, mm] = time.split(':').map(Number);
+          const t = new Date(Date.UTC(y, m - 1, d, hh, mm) + minutes * 60000);
+          return {
+            date: `${t.getUTCFullYear()}-${pad2(t.getUTCMonth() + 1)}-${pad2(t.getUTCDate())}`,
+            time: `${pad2(t.getUTCHours())}:${pad2(t.getUTCMinutes())}`,
+          };
+        }
+
+        // "2026-11-28" → "samedi 28 novembre 2026" (the 1st reads "1er").
+        function dateLabel(date: string): string {
+          const [y, m, d] = date.split('-').map(Number);
+          const weekday = WEEKDAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
+          return `${weekday} ${d === 1 ? '1er' : d} ${MONTHS[m - 1]} ${y}`;
+        }
+
+        // "14:00" → "14h", "18:30" → "18h30".
+        function timeLabel(time: string): string {
+          const [hh, mm] = time.split(':');
+          return mm === '00' ? `${Number(hh)}h` : `${Number(hh)}h${mm}`;
+        }
+
+        // ── Validate the inputs (reject, never coerce) ────────────────────────
+        const input = context.inputData as Record<string, unknown>;
+        const sessionDate = text(input.session_date).slice(0, 10);
+        const startTime = text(input.start_time).slice(0, 5);
+        const duration = Number(text(input.duration_minutes) || '180');
+        const capacity = Number(text(input.capacity) || '15');
+        const venueId = text(input.venue);
+        const leadName = await readField('facilitators', text(input.lead_facilitator), 'display_name');
+        const coName = await readField('facilitators', text(input.co_facilitator), 'display_name');
+        const venueName = await readField('venues', venueId, 'name');
+        const venueCity = await readField('venues', venueId, 'city');
+        const venueZip = await readField('venues', venueId, 'zip_code');
+
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(sessionDate) || Number.isNaN(Date.parse(`${sessionDate}T00:00:00Z`))) {
+          throw new Error(`session_date invalide : "${sessionDate}" (attendu AAAA-MM-JJ)`);
+        }
+        if (!/^([01]\d|2[0-3]):[0-5]\d$/.test(startTime)) {
+          throw new Error(`start_time invalide : "${startTime}" (attendu HH:MM)`);
+        }
+        if (!Number.isInteger(duration) || duration < 30 || duration > 600) {
+          throw new Error(`duration_minutes invalide : "${text(input.duration_minutes)}"`);
+        }
+        if (!Number.isInteger(capacity) || capacity < 1 || capacity > 200) {
+          throw new Error(`capacity invalide : "${text(input.capacity)}"`);
+        }
+        if (!leadName) {
+          throw new Error('La proposition n\'a pas de facilitateur·ice principal·e.');
+        }
+
+        // ── Build ─────────────────────────────────────────────────────────────
+        const end = addMinutes(sessionDate, startTime, duration);
+        const startIso = toParisIso(sessionDate, startTime);
+        const endIso = toParisIso(end.date, end.time);
+        const startsAtUtc = new Date(startIso).toISOString();
+        const endsAtUtc = new Date(endIso).toISOString();
+
+        const date_label = dateLabel(sessionDate);
+        const time_label = timeLabel(startTime);
+        const slug = `${sessionDate}-${time_label}`;
+        // Unique per date and hour: HelloAsso builds the event URL from it.
+        const title = `Atelier de consentement - Niveau 1 - ${date_label} à ${time_label}`;
+
+        const facilitators = [leadName, coName].filter((n) => n !== '');
+        const credit = `Facilité par ${joinNames(facilitators)}.`;
+        const longDescription = `<p>${escapeHtml(REFERENCE_DESCRIPTION)}</p><p>${escapeHtml(credit)}</p>`;
+
+        context.log.info(`payload ${slug}: ${startIso} → ${endIso} (${startsAtUtc})`);
+
+        return {
+          title,
+          slug,
+          date_label,
+          time_label,
+          startIso,
+          endIso,
+          startsAtUtc,
+          endsAtUtc,
+          description: SHORT_DESCRIPTION,
+          longDescription,
+          placeName: venueName || DEFAULT_PLACE.name,
+          placeCity: venueCity || DEFAULT_PLACE.city,
+          placeZipCode: venueZip || DEFAULT_PLACE.zipCode,
+          maxEntries: capacity,
+        };
+      }

@@ -1,0 +1,248 @@
+# When a proposal becomes `approved` (button "Approuver" or "Réessayer"), create
+# its event on HelloAsso and write the slug and public URL back at once.
+#
+# HelloAsso has no idempotency key, so duplicates are prevented by:
+#   1. stopping when the proposal already carries a helloasso_form_slug;
+#   2. looking the event up by its (unique) title before creating it;
+#   3. writing formSlug / publicUrl back in the step right after the create;
+#   4. never retrying the POST.
+#
+# Loop check: the trigger fires on status → approved; this automation only ever
+# writes helloasso_draft or sync_error, which cannot satisfy that condition.
+name: create-helloasso-event
+description: Crée l'événement HelloAsso d'une proposition approuvée et en garde le lien.
+trigger:
+  type: record
+  table: workshop_proposals
+  events: [update]
+  watchFields: [status]
+  condition:
+    logic: and
+    conditions:
+      - { field: '{{trigger.data.record.status}}', operator: equals, value: approved }
+      - { field: '{{trigger.data.previousRecord.status}}', operator: notEquals, value: approved }
+timeout: 120000
+actions:
+  # Fresh read: the row as it is now, with its lookups (names, venue).
+  - name: proposal
+    type: record
+    operator: read
+    props:
+      table: workshop_proposals
+      id: '{{trigger.data.record.id}}'
+
+  # 1. Already linked to a HelloAsso event, or no longer approved → nothing to do.
+  - name: guard_not_linked
+    type: filter
+    operator: continue
+    props:
+      condition:
+        logic: and
+        conditions:
+          - { field: '{{proposal.record.helloasso_form_slug}}', operator: isEmpty }
+          - { field: '{{proposal.record.status}}', operator: equals, value: approved }
+
+  # 2. Title, ISO dates, labels, description.
+  - name: payload
+    $ref: build-workshop-payload
+
+  # 3. Look for an event with the same title (a previous run may have created it
+  #    and failed before the write-back). A read: safe to retry on 429/5xx.
+  - name: list_events
+    type: connection
+    operator: call
+    continueOnError: true
+    timeout: 45000
+    retry: { maxAttempts: 3, delayMs: 2000, strategy: exponential }
+    props:
+      connection: helloasso
+      operation: list-events
+      params:
+        organizationSlug: $env.HELLOASSO_ORGANIZATION_SLUG
+        formTypes: Event
+        pageSize: 100
+      paginate: 5
+
+  - name: existing
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 5000
+      inputData:
+        title: '{{payload.title}}'
+        events: '{{list_events.data}}'
+        listStep: '{{list_events}}'
+      code: |
+        async function execute(context) {
+          // A failed step exposes its error on `error` or on its last `attempts[]` entry.
+          function stepError(step: unknown): string {
+            if (!step || typeof step !== 'object') return '';
+            const s = step as Record<string, unknown>;
+            if (typeof s.error === 'string' && s.error) return s.error;
+            const attempts = Array.isArray(s.attempts) ? (s.attempts as Array<Record<string, unknown>>) : [];
+            const last = attempts[attempts.length - 1];
+            return last && last.error ? String(last.error) : '';
+          }
+          const input = context.inputData as Record<string, unknown>;
+          const title = String(input.title || '').trim();
+          if (!title) throw new Error('Titre du payload vide.');
+          const failure = stepError(input.listStep);
+          if (failure || !Array.isArray(input.events)) {
+            const reason = failure || 'réponse sans liste';
+            context.log.warn(`list-events indisponible : ${reason}`);
+            return { listOk: false, found: false, formSlug: '', publicUrl: '', error: `Lecture des événements HelloAsso impossible : ${reason}` };
+          }
+          const events = input.events as Array<Record<string, unknown>>;
+          const match = events.find((e) => String(e.title || '').trim() === title);
+          if (!match) return { listOk: true, found: false, formSlug: '', publicUrl: '', error: '' };
+          context.log.info(`Événement déjà présent sur HelloAsso : ${String(match.formSlug)}`);
+          return {
+            listOk: true,
+            found: true,
+            formSlug: String(match.formSlug || ''),
+            publicUrl: String(match.url || ''),
+            error: '',
+          };
+        }
+
+  # 4. Create only when the lookup worked and found nothing. No retry: a POST
+  #    that timed out may still have created the event (the next attempt finds it
+  #    by title instead).
+  - name: maybe_create
+    type: path
+    operator: branch
+    props:
+      mode: first-match
+      paths:
+        - name: needs_create
+          condition:
+            logic: and
+            conditions:
+              - { field: '{{existing.listOk}}', operator: equals, value: true }
+              - { field: '{{existing.found}}', operator: equals, value: false }
+          actions:
+            - name: create_event
+              type: connection
+              operator: call
+              continueOnError: true
+              timeout: 30000
+              props:
+                connection: helloasso
+                operation: create-event
+                timeout: 25000
+                params:
+                  organizationSlug: $env.HELLOASSO_ORGANIZATION_SLUG
+                  title: '{{payload.title}}'
+                  description: '{{payload.description}}'
+                  longDescription: '{{payload.longDescription}}'
+                  startDate: '{{payload.startIso}}'
+                  endDate: '{{payload.endIso}}'
+                  placeName: '{{payload.placeName}}'
+                  placeCity: '{{payload.placeCity}}'
+                  placeZipCode: '{{payload.placeZipCode}}'
+                  contactEmail: $env.HELLOASSO_CONTACT_EMAIL
+                  maxEntries: '{{payload.maxEntries}}'
+        - name: no_create
+          actions:
+            - name: create_skipped
+              type: data
+              operator: set
+              props:
+                value: 'skipped'
+
+  # One outcome, whichever way the slug was obtained.
+  - name: outcome
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 5000
+      inputData:
+        found: '{{existing.found}}'
+        foundSlug: '{{existing.formSlug}}'
+        foundUrl: '{{existing.publicUrl}}'
+        listError: '{{existing.error}}'
+        created: '{{create_event.data}}'
+        createStep: '{{create_event}}'
+      code: |
+        async function execute(context) {
+          function stepError(step: unknown): string {
+            if (!step || typeof step !== 'object') return '';
+            const s = step as Record<string, unknown>;
+            if (typeof s.error === 'string' && s.error) return s.error;
+            const attempts = Array.isArray(s.attempts) ? (s.attempts as Array<Record<string, unknown>>) : [];
+            const last = attempts[attempts.length - 1];
+            return last && last.error ? String(last.error) : '';
+          }
+          const input = context.inputData as Record<string, unknown>;
+          if (input.found === true || input.found === 'true') {
+            return { ok: true, source: 'found', formSlug: String(input.foundSlug), publicUrl: String(input.foundUrl), error: '' };
+          }
+          if (input.listError) {
+            return { ok: false, source: 'list', formSlug: '', publicUrl: '', error: String(input.listError) };
+          }
+          const created = (input.created && typeof input.created === 'object' ? input.created : {}) as Record<string, unknown>;
+          const formSlug = String(created.formSlug || '');
+          const publicUrl = String(created.publicUrl || '');
+          if (formSlug) {
+            return { ok: true, source: 'created', formSlug, publicUrl, error: '' };
+          }
+          const reason = stepError(input.createStep) || 'réponse sans formSlug';
+          return { ok: false, source: 'create', formSlug: '', publicUrl: '', error: `Création HelloAsso échouée : ${reason}` };
+        }
+
+  # 5. Write back at once, or 6. record the failure as sync_error.
+  - name: write_back
+    type: path
+    operator: branch
+    props:
+      mode: first-match
+      paths:
+        - name: success
+          condition:
+            conditions:
+              - { field: '{{outcome.ok}}', operator: equals, value: true }
+          actions:
+            - name: save_slug
+              type: record
+              operator: update
+              props:
+                table: workshop_proposals
+                filter:
+                  conditions:
+                    - { field: id, operator: equals, value: '{{proposal.record.id}}' }
+                data:
+                  helloasso_form_slug: '{{outcome.formSlug}}'
+                  helloasso_url: '{{outcome.publicUrl}}'
+                  status: helloasso_draft
+                  sync_error: ''
+        - name: failure
+          actions:
+            - name: save_error
+              type: record
+              operator: update
+              props:
+                table: workshop_proposals
+                filter:
+                  conditions:
+                    - { field: id, operator: equals, value: '{{proposal.record.id}}' }
+                data:
+                  status: sync_error
+                  sync_error: '{{outcome.error}}'
+
+  # 6b. End a failed attempt as a FAILED run, so notify-helloasso-failure fires.
+  #     (A `flow/stop` with status error inside the branch ended the run as
+  #     `completed-with-errors` in Sovrium 0.33.0, which no failure trigger sees.)
+  - name: fail_on_error
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 2000
+      inputData:
+        ok: '{{outcome.ok}}'
+        error: '{{outcome.error}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          if (input.ok === true || input.ok === 'true') return { ok: true };
+          throw new Error(`HelloAsso : ${String(input.error || 'erreur inconnue')}`);
+        }

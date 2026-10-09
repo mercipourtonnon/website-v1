@@ -1,0 +1,121 @@
+# One row per workshop date a facilitator proposes. Private: it holds the
+# approval workflow (proposed → approved → helloasso_draft → published, plus
+# rejected, withdrawn and sync_error). The public catalogue is `workshops`.
+#
+# A member reads only the proposals she made, creates them as `proposed`, and
+# edits or deletes them only while they are still `proposed`. Status, review and
+# HelloAsso fields are written by an admin or by the automations.
+id: 3
+name: workshop_proposals
+fields:
+  # Day + wall-clock time in Europe/Paris. Kept apart (no datetime) so the form
+  # never round-trips through UTC; build-workshop-payload turns them into ISO.
+  - { id: 1, name: session_date, label: Date, type: date, required: true, weekday: long }
+  - id: 2
+    name: start_time
+    label: Heure de début
+    type: single-select
+    required: true
+    options: ['14:00', '18:30']
+  - { id: 3, name: duration_minutes, label: Durée (minutes), type: integer, default: 180, min: 30, max: 600 }
+  - id: 4
+    name: lead_facilitator
+    label: Facilitateur·ice principal·e
+    type: relationship
+    relatedTable: facilitators
+    relationType: many-to-one
+    displayField: display_name
+    required: true
+    onDelete: restrict
+  - id: 5
+    name: co_facilitator
+    label: Co-facilitateur·ice
+    type: relationship
+    relatedTable: facilitators
+    relationType: many-to-one
+    displayField: display_name
+    onDelete: set-null
+  - id: 6
+    name: venue
+    label: Lieu
+    type: relationship
+    relatedTable: venues
+    relationType: many-to-one
+    displayField: name
+    onDelete: restrict
+  - { id: 7, name: capacity, label: Places, type: integer, default: 15, min: 1, max: 200 }
+  - { id: 8, name: note_to_team, label: Note pour l'équipe, type: long-text }
+  - { id: 9, name: proposed_by, label: Proposé par, type: created-by }
+  - id: 10
+    name: status
+    label: Statut
+    type: status
+    required: true
+    default: proposed
+    options: [proposed, approved, helloasso_draft, published, rejected, withdrawn, sync_error]
+  - { id: 11, name: reviewer_note, label: Note de relecture, type: long-text }
+  - { id: 12, name: helloasso_form_slug, label: Slug HelloAsso, type: single-line-text, unique: true }
+  - { id: 13, name: helloasso_url, label: Lien HelloAsso, type: url }
+  - { id: 14, name: sync_error, label: Erreur de synchronisation, type: long-text }
+  # Row actions. Visibility only; each automation gates who may run it.
+  - id: 15
+    name: approve
+    type: button
+    label: Approuver
+    action: automation
+    automation: approve-workshop-proposal
+    visibleWhen: { field: status, eq: proposed }
+  - id: 16
+    name: publish
+    type: button
+    label: Publier sur le site
+    action: automation
+    automation: publish-workshop-on-site
+    visibleWhen: { field: status, eq: helloasso_draft }
+  - id: 17
+    name: retry
+    type: button
+    label: Réessayer HelloAsso
+    action: automation
+    automation: retry-helloasso
+    visibleWhen: { field: status, eq: sync_error }
+permissions:
+  read: [admin, member]
+  create: [admin, member]
+  update: [admin, member]
+  delete: [admin, member]
+  fields:
+    - { field: status, write: [admin] }
+    - { field: reviewer_note, write: [admin] }
+    - { field: helloasso_form_slug, write: [admin] }
+    - { field: helloasso_url, write: [admin] }
+    - { field: sync_error, write: [admin] }
+    - { field: capacity, write: [admin] }
+    - { field: venue, write: [admin] }
+    - { field: duration_minutes, write: [admin] }
+# Admins bypass these rules (auth-access/auth-roles-rbac); automations started
+# by a record event write as the system.
+rowLevelPermissions:
+  read:
+    when:
+      field: proposed_by
+      operator: eq
+      value: { kind: currentUser, path: { kind: scalar, name: id } }
+  create:
+    when: { field: status, operator: eq, value: proposed }
+  write:
+    when:
+      logic: and
+      conditions:
+        - field: proposed_by
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: id } }
+        - { field: status, operator: eq, value: proposed }
+  delete:
+    when:
+      logic: and
+      conditions:
+        - field: proposed_by
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: id } }
+        - { field: status, operator: eq, value: proposed }

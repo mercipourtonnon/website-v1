@@ -1,0 +1,34 @@
+# "Approuver" button (admin only): proposed → approved. The status change starts
+# create-helloasso-event, which creates the real HelloAsso event.
+name: approve-workshop-proposal
+description: Valide une proposition d'atelier ; déclenche la création de l'événement HelloAsso.
+trigger:
+  type: manual
+  label: Approuver
+  requiredRole: admin
+timeout: 30000
+actions:
+  # Table button → {{trigger.input.recordId}}. A page button must pass `recordId` too.
+  - name: proposal
+    type: record
+    operator: read
+    props:
+      table: workshop_proposals
+      id: '{{trigger.input.recordId}}'
+  - name: only_proposed
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: '{{proposal.record.status}}', operator: equals, value: proposed }
+  - name: approve
+    type: record
+    operator: update
+    props:
+      table: workshop_proposals
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{proposal.record.id}}' }
+      data:
+        status: approved

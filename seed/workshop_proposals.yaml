@@ -1,0 +1,34 @@
+# The three dates migrated through the approval flow, waiting for an admin to
+# press "Approuver" (seeding starts no automation). Fixed dates on purpose:
+# these are real sessions, not demo data.
+records:
+  - key: p_2026_11_28
+    fields:
+      session_date: '2026-11-28'
+      start_time: '14:00'
+      duration_minutes: 180
+      lead_facilitator: '@facilitators.laetitia'
+      co_facilitator: '@facilitators.mogo'
+      venue: '@venues.plage_digitale'
+      capacity: 15
+      status: proposed
+  - key: p_2026_12_12
+    fields:
+      session_date: '2026-12-12'
+      start_time: '14:00'
+      duration_minutes: 180
+      lead_facilitator: '@facilitators.dilara'
+      co_facilitator: '@facilitators.mathilde'
+      venue: '@venues.plage_digitale'
+      capacity: 15
+      status: proposed
+  - key: p_2026_12_17
+    fields:
+      session_date: '2026-12-17'
+      start_time: '18:30'
+      duration_minutes: 180
+      lead_facilitator: '@facilitators.mogo'
+      co_facilitator: '@facilitators.thomas'
+      venue: '@venues.plage_digitale'
+      capacity: 15
+      status: proposed

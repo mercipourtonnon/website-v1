@@ -1,0 +1,19 @@
+# The legacy date that stays on Billetterie Plus (17 Oct 2026, 14:00 Paris =
+# 12:00Z, summer time). Every later date is published by the approval flow.
+mergeOn: [slug]
+records:
+  - key: legacy_2026_10_17
+    fields:
+      slug: 2026-10-17-14h
+      starts_at: '2026-10-17T12:00:00Z'
+      ends_at: '2026-10-17T15:00:00Z'
+      session_date: '2026-10-17'
+      date_label: samedi 17 octobre 2026
+      time_label: 14h
+      lead_facilitator: '@facilitators.dilara'
+      co_facilitator: '@facilitators.mogo'
+      venue: '@venues.plage_digitale'
+      capacity: 15
+      booking_url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+      booking_provider: billetterie_plus
+      status: published

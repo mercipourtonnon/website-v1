@@ -1,0 +1,33 @@
+# Emails ADMIN_NOTIFY_EMAIL when a HelloAsso workflow fails. Sovrium also sends
+# its own operator alert to admins (SOVRIUM_NOTIFY_TO); this one names the
+# workshop flow and is skipped when ADMIN_NOTIFY_EMAIL is not set.
+name: notify-helloasso-failure
+description: Prévient l'équipe quand la création ou la publication HelloAsso échoue.
+trigger:
+  type: automation-failure
+  automations:
+    - create-helloasso-event
+    - publish-workshop-on-site
+    - approve-workshop-proposal
+    - retry-helloasso
+timeout: 60000
+actions:
+  - name: has_recipient
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: $env.ADMIN_NOTIFY_EMAIL, operator: isNotEmpty }
+  - name: alert
+    type: email
+    operator: send
+    retry: { maxAttempts: 2, delayMs: 5000, strategy: exponential }
+    props:
+      to: $env.ADMIN_NOTIFY_EMAIL
+      subject: 'Atelier : échec de « {{trigger.data.automationName}} »'
+      body: |
+        <p>L'automatisation <strong>{{trigger.data.automationName}}</strong> a échoué.</p>
+        <p>Erreur : {{trigger.data.error}}</p>
+        <p>Run : {{trigger.data.runId}}</p>
+        <p>Ouvre l'espace de validation pour voir la proposition concernée et, si besoin, appuie sur « Réessayer HelloAsso ».</p>

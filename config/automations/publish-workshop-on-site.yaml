@@ -1,0 +1,103 @@
+# "Publier sur le site" button (admin only), once the admin has finished and
+# published the event in the HelloAsso back office (registration questions,
+# banner, price check). Puts the date in the public `workshops` catalogue.
+# Pressing it twice updates the same row (upsert by slug), never a second one.
+name: publish-workshop-on-site
+description: Publie sur le site un atelier dont l'événement HelloAsso est en ligne.
+trigger:
+  type: manual
+  label: Publier sur le site
+  requiredRole: admin
+timeout: 60000
+actions:
+  - name: proposal
+    type: record
+    operator: read
+    props:
+      table: workshop_proposals
+      id: '{{trigger.input.recordId}}'
+
+  # 1. Only a proposal whose HelloAsso event exists.
+  - name: only_draft
+    type: filter
+    operator: continue
+    props:
+      condition:
+        logic: and
+        conditions:
+          - { field: '{{proposal.record.status}}', operator: equals, value: helloasso_draft }
+          - { field: '{{proposal.record.helloasso_form_slug}}', operator: isNotEmpty }
+
+  # 2. The public view of the event: a non-2xx answer fails the run.
+  - name: public_event
+    type: connection
+    operator: call
+    timeout: 20000
+    retry: { maxAttempts: 2, delayMs: 2000, strategy: exponential }
+    props:
+      connection: helloasso
+      operation: get-public-event
+      params:
+        organizationSlug: $env.HELLOASSO_ORGANIZATION_SLUG
+        formType: Event
+        formSlug: '{{proposal.record.helloasso_form_slug}}'
+
+  - name: require_public
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 5000
+      inputData:
+        state: '{{public_event.data.state}}'
+        url: '{{public_event.data.url}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const state = String(input.state || '');
+          if (state && state !== 'Public') {
+            throw new Error(`L'événement HelloAsso n'est pas encore publié (état : ${state}). Publie-le dans le back-office HelloAsso, puis réessaie.`);
+          }
+          if (!state) context.log.warn('HelloAsso n\'a pas indiqué l\'état de l\'événement ; publication acceptée.');
+          return { state: state || 'unknown', url: String(input.url || '') };
+        }
+
+  - name: payload
+    $ref: build-workshop-payload
+
+  # 3. One catalogue row per slug.
+  - name: catalogue
+    type: record
+    operator: upsert
+    props:
+      table: workshops
+      filter:
+        conditions:
+          - { field: slug, operator: equals, value: '{{payload.slug}}' }
+      data:
+        slug: '{{payload.slug}}'
+        starts_at: '{{payload.startsAtUtc}}'
+        ends_at: '{{payload.endsAtUtc}}'
+        session_date: '{{proposal.record.session_date}}'
+        date_label: '{{payload.date_label}}'
+        time_label: '{{payload.time_label}}'
+        lead_facilitator: '{{proposal.record.lead_facilitator}}'
+        co_facilitator: '{{proposal.record.co_facilitator}}'
+        venue: '{{proposal.record.venue}}'
+        capacity: '{{proposal.record.capacity}}'
+        booking_url: '{{proposal.record.helloasso_url}}'
+        booking_provider: helloasso
+        status: published
+        proposal: '{{proposal.record.id}}'
+        helloasso_form_slug: '{{proposal.record.helloasso_form_slug}}'
+
+  # 4. Close the workflow.
+  - name: mark_published
+    type: record
+    operator: update
+    props:
+      table: workshop_proposals
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{proposal.record.id}}' }
+      data:
+        status: published
