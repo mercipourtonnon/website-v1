@@ -359,6 +359,16 @@ components:
                                 element: span
                                 props:
                                   className: font-bold
+                                content: "Suivi des ateliers :"
+                              - type: text
+                                element: span
+                                content: " Quand tu t'inscris à un atelier, nous copions depuis HelloAsso dans l'outil interne de l'association ton nom, ton email, ton téléphone si tu l'as donné, le prix libre payé, l'état de ton inscription et ta réponse sur les photos. Le jour de l'atelier, nous y notons ta présence. Si tu viens sans t'être inscrit·e, nous y notons ton nom (et ton email ou ton téléphone si tu nous les donnes). Seul·es les facilitateur·ices et l'équipe de coordination y ont accès."
+                          - type: list-item
+                            children:
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold
                                 content: "Comptes des facilitateur·ices :"
                               - type: text
                                 element: span
@@ -412,6 +422,8 @@ components:
                         content: Gérer les inscriptions aux ateliers
                       - type: list-item
                         content: Te contacter concernant les ateliers auxquels tu t'es inscrit·e
+                      - type: list-item
+                        content: "Organiser l'accueil et le suivi des ateliers : t'accueillir, noter ta présence, te joindre en cas d'imprévu le jour J, et établir des statistiques globales (nombre de personnes, prix libre collecté)"
                       - type: list-item
                         content: T'envoyer notre newsletter si tu t'y es inscrit·e (actualités, dates d'ateliers, ressources sur le consentement)
                       - type: list-item
@@ -532,6 +544,11 @@ components:
                     props:
                       className: text-gray-700 leading-relaxed
                     content: Tes données personnelles sont conservées uniquement le temps nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées, conformément aux obligations légales applicables.
+                  - type: text
+                    element: p
+                    props:
+                      className: mt-3 text-gray-700 leading-relaxed
+                    content: "Pour le suivi des ateliers, ton nom, ton email et ton téléphone sont effacés de notre outil interne 12 mois après l'atelier. Nous ne gardons ensuite que des chiffres anonymes (nombre d'inscrit·es, de présent·es, prix libre collecté)."
 
               # Section 5: Cookies
               - type: container

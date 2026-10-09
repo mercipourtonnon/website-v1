@@ -102,10 +102,16 @@ pages:
   - $ref: ./config/pages/espace-proposition.yaml
   - $ref: ./config/pages/espace-validation.yaml
   - $ref: ./config/pages/espace-ateliers.yaml
+  # Le jour J: figures per date, and each date's check-in screen.
+  - $ref: ./config/pages/espace-suivi.yaml
+  - $ref: ./config/pages/espace-suivi-date.yaml
 
 # Facilitators propose a workshop date (embedded on /espace/proposer).
 forms:
   - $ref: ./config/forms/proposer-un-atelier.yaml
+  # On /espace/suivi/:id: a walk-in, and the first entry of the on-site prix libre.
+  - $ref: ./config/forms/ajout-sur-place.yaml
+  - $ref: ./config/forms/prix-libre-sur-place.yaml
 
 # URLs of the retired static (GitHub Pages) export.
 redirects:

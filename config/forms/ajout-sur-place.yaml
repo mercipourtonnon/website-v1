@@ -1,0 +1,49 @@
+# A facilitator adds someone who turned up without registering. Writes a
+# `registrations` row marked on_site + present (the table's row rule only lets a
+# member create on_site rows). Embedded in the "Ajouter une personne sur place"
+# dialog of /espace/suivi/:id, which locks `workshop` to the page's date.
+# Its own page (/forms/ajout-sur-place) has no date to file under, so a
+# submission there is refused on the required `workshop` link.
+id: 2
+name: ajout-sur-place
+title: Ajouter une personne sur place
+description: Pour quelqu'un qui vient sans s'être inscrit·e. Elle est comptée présente tout de suite.
+access:
+  require: [admin, member]
+  redirectTo: /connexion
+submitTo:
+  table: registrations
+display:
+  submitLabel: Ajouter et pointer présent·e
+antiSpam:
+  rateLimit: { perIp: 60, windowSeconds: 3600 }
+prefill:
+  source: on_site
+  attendance: present
+fields:
+  - kind: table-field
+    column: first_name
+    label: Prénom
+    required: true
+  - kind: table-field
+    column: last_name
+    label: Nom
+    required: true
+  - kind: table-field
+    column: participant_email
+    label: Email (facultatif)
+    helpText: Pour la prévenir des prochaines dates, si elle le souhaite.
+  - kind: table-field
+    column: phone
+    label: Téléphone (facultatif)
+  # Filled by the page (inlinePrefill) and by `prefill` above; never shown.
+  - { kind: table-field, column: workshop, hidden: true }
+  - { kind: table-field, column: source, hidden: true }
+  - { kind: table-field, column: attendance, hidden: true }
+onSuccess:
+  type: redirect
+  url: /espace/suivi/$record.workshop
+  delaySeconds: 0
+onError:
+  type: message
+  message: La personne n'a pas pu être ajoutée. Vérifie le prénom et le nom, puis réessaie. Si ça bloque encore, recharge la page.

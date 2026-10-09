@@ -80,6 +80,10 @@ children:
             items:
               - { label: À valider, href: /espace/validation, icon: inbox, activeMatch: prefix }
               - { label: Ateliers en ligne, href: /espace/ateliers, icon: calendar-check, activeMatch: prefix }
+          # Day-of tools, a group of its own (other entries will join it).
+          - label: Le jour J
+            items:
+              - { label: Suivi des ateliers, href: /espace/suivi, icon: clipboard-check, activeMatch: prefix }
       # Member sidebar.
       - type: sidebar
         visibility: { roles: [member] }
@@ -98,6 +102,10 @@ children:
             items:
               - { label: Mes propositions, href: /espace, icon: list-checks }
               - { label: Proposer une date, href: /espace/proposer, icon: calendar-plus }
+          # Day-of tools, a group of its own (other entries will join it).
+          - label: Le jour J
+            items:
+              - { label: Suivi des ateliers, href: /espace/suivi, icon: clipboard-check, activeMatch: prefix }
       - type: container
         props:
           id: contenu

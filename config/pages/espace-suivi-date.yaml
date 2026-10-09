@@ -1,0 +1,308 @@
+# /espace/suivi/:id — the check-in screen of one workshop date, used on a phone
+# at the door: sync the latest HelloAsso registrations, point who is there, add
+# walk-ins, then enter the prix libre collected on site.
+# Live figures and the grid re-read every 15 s, so two facilitators pointing on
+# two phones see each other's taps.
+name: espace-suivi-date
+path: /espace/suivi/:id
+access: { require: [admin, member], redirectTo: /connexion }
+sitemap: false
+dataSource: { table: workshops, mode: single, param: id }
+meta:
+  lang: fr-FR
+  title: Suivi d'un atelier - Espace facilitateur·ices
+  description: Pointer les présences, ajouter les personnes venues sur place et saisir le prix libre d'une date.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: link
+            props:
+              href: /espace/suivi
+              className: self-start text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-orange-vif
+            content: ← Toutes les dates
+
+          # Header: which date, where, with whom, and how fresh the list is.
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-4 md:flex-row md:items-start md:justify-between
+            children:
+              - type: container
+                props: { className: flex min-w-0 flex-col gap-2 }
+                children:
+                  - type: text
+                    element: h1
+                    props:
+                      className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                    content: atelier du $record.date_label $record.time_label
+                  # Lookups may be empty (the legacy date has no venue or
+                  # facilitators): each line shows only when it has a value.
+                  - type: text
+                    element: p
+                    visibility: { record: { field: venue_name, isNotEmpty: true } }
+                    props: { className: text-bleu-fonce }
+                    content: "Lieu : $record.venue_name"
+                  - type: text
+                    element: p
+                    visibility: { record: { field: lead_name, isNotEmpty: true } }
+                    props: { className: text-bleu-fonce }
+                    content: "Facilitation : $record.lead_name"
+                  - type: text
+                    element: p
+                    visibility: { record: { field: co_name, isNotEmpty: true } }
+                    props: { className: text-bleu-fonce }
+                    content: "Co-facilitation : $record.co_name"
+                  - type: text
+                    element: p
+                    props: { className: text-bleu-fonce }
+                    content: "$record.capacity places"
+                  - type: description-list
+                    visibility: { record: { field: last_synced_at, isNotEmpty: true } }
+                    layout: stacked
+                    items:
+                      - { term: Dernière synchronisation HelloAsso, field: last_synced_at }
+                  - type: text
+                    element: p
+                    visibility: { record: { field: last_synced_at, isEmpty: true } }
+                    props: { className: text-sm text-bleu-fonce }
+                    content: Pas encore synchronisée avec HelloAsso.
+              - type: container
+                props: { className: flex flex-col gap-2 sm:flex-row md:flex-col md:items-end }
+                children:
+                  - type: button
+                    variant: outline
+                    label: Synchroniser maintenant
+                    action:
+                      type: automation
+                      name: sync-helloasso-registrations
+                      inputData: { recordId: $param.id }
+                      await: true
+                      onSuccess:
+                        toast: { message: Inscriptions à jour avec HelloAsso., variant: success }
+                      onError:
+                        toast: { message: "La synchronisation n'a pas abouti. Réessaie dans une minute ; si ça bloque encore, préviens la coordination.", variant: error }
+                  - type: button
+                    label: Ajouter une personne sur place
+                    props:
+                      interactions: { click: { modal: ajout-sur-place } }
+
+          # Live figures for this date.
+          - type: container
+            element: section
+            props:
+              aria-labelledby: chiffres-date-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: chiffres-date-titre
+                  className: text-xl title-font text-bleu-fonce
+                content: en direct
+              - type: grid
+                props:
+                  className: grid grid-cols-2 gap-3 lg:grid-cols-4
+                children:
+                  - type: kpi
+                    label: Présent·es
+                    icon: user-check
+                    size: { mobile: sm, md: md }
+                    dataSource:
+                      table: registrations
+                      filter:
+                        - { field: workshop, operator: eq, value: $param.id }
+                        - { field: status, operator: eq, value: valid }
+                        - { field: attendance, operator: eq, value: present }
+                      refreshMode: poll
+                      pollIntervalMs: 15000
+                    kpiAggregate: { function: count }
+                    kpiFormat: { type: number }
+                  - type: kpi
+                    label: Inscrit·es
+                    icon: users
+                    size: { mobile: sm, md: md }
+                    dataSource:
+                      table: registrations
+                      filter:
+                        - { field: workshop, operator: eq, value: $param.id }
+                        - { field: status, operator: eq, value: valid }
+                      refreshMode: poll
+                      pollIntervalMs: 15000
+                    kpiAggregate: { function: count }
+                    kpiFormat: { type: number }
+                  - type: kpi
+                    label: Prix libre en ligne
+                    icon: credit-card
+                    size: { mobile: sm, md: md }
+                    dataSource:
+                      table: registrations
+                      filter:
+                        - { field: workshop, operator: eq, value: $param.id }
+                        - { field: status, operator: eq, value: valid }
+                      refreshMode: poll
+                      pollIntervalMs: 15000
+                    kpiAggregate: { function: sum, field: amount_paid }
+                    kpiFormat: { type: currency, options: { currency: EUR } }
+                  - type: kpi
+                    label: Prix libre sur place
+                    icon: hand-coins
+                    size: { mobile: sm, md: md }
+                    dataSource:
+                      table: workshop_cash
+                      filter:
+                        - { field: workshop, operator: eq, value: $param.id }
+                      refreshMode: poll
+                      pollIntervalMs: 15000
+                    kpiAggregate: { function: sum, field: amount_on_site }
+                    kpiFormat: { type: currency, options: { currency: EUR } }
+
+          # Check-in. Columns ordered for a phone at the door: the frozen
+          # surname stays in view while the grid scrolls to the photo answer
+          # and the buttons. Plain name columns, not full_name: in 0.33.0 a
+          # formula text cell is clipped to ~48 px.
+          # Read-only grid (no cell editing on a phone at the door):
+          # the row buttons are the only writes. `scroll`, not `rows`: the rows
+          # layout drops the action column.
+          - type: container
+            element: section
+            props:
+              aria-labelledby: pointage-titre
+              className: flex flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: pointage-titre
+                  className: text-xl title-font text-bleu-fonce
+                content: pointage
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Appuie sur « Présent·e » quand une personne arrive. Une personne marquée « Pas de photo » ne doit apparaître sur aucune photo ni vidéo. Touche une ligne pour voir son téléphone, son email et ajouter une note.
+              - type: table
+                caption: Personnes inscrites à cette date
+                classes: { parts: { caption: sr-only } }
+                props: { id: pointage }
+                readOnly: true
+                phoneLayout: scroll
+                rowHeight: tall
+                dataSource:
+                  table: registrations
+                  filter:
+                    - { field: workshop, operator: eq, value: $param.id }
+                    - { field: status, operator: eq, value: valid }
+                  sort: [{ field: last_name, direction: asc }, { field: first_name, direction: asc }]
+                  pagination: { pageSize: 100 }
+                  refreshMode: poll
+                  pollIntervalMs: 15000
+                toolbar: { search: true, filters: false, sort: false, export: false, refresh: false }
+                emptyMessage: Personne n'est encore inscrit·e à cette date. Appuie sur « Synchroniser maintenant » pour récupérer les dernières inscriptions HelloAsso, ou ajoute les personnes venues sur place.
+                rowExpand:
+                  title: Personne inscrite
+                  fields: [full_name, phone, participant_email, notes, checked_in_at]
+                columns:
+                  - { field: last_name, label: Nom, frozen: true }
+                  - { field: first_name, label: Prénom }
+                  - field: photo_consent
+                    label: Photos
+                    badgeForm: outline-dot
+                    valueLabels: { unknown: À demander, yes: OK, no: Pas de photo }
+                    cellStyle:
+                      - { when: { eq: no }, tone: error, className: 'bg-pourpre-light font-bold' }
+                      - { when: { eq: unknown }, tone: muted }
+                  - type: actions
+                    label: Pointer
+                    actions:
+                      - label: Présent·e
+                        icon: check
+                        visibleWhen: { field: attendance, neq: present }
+                        action:
+                          type: crud
+                          operation: update
+                          table: registrations
+                          data: { attendance: present }
+                          onError: { toast: { message: "La présence n'a pas pu être enregistrée. Vérifie ta connexion, puis réessaie.", variant: error } }
+                      - label: Absent·e
+                        icon: x
+                        variant: ghost
+                        visibleWhen: { field: attendance, neq: absent }
+                        action:
+                          type: crud
+                          operation: update
+                          table: registrations
+                          data: { attendance: absent }
+                          onError: { toast: { message: "L'absence n'a pas pu être enregistrée. Vérifie ta connexion, puis réessaie.", variant: error } }
+                  - field: attendance
+                    label: Présence
+                    badgeForm: outline-dot
+                    valueLabels: { unknown: À pointer, present: Présent·e, absent: Absent·e }
+                    cellStyle:
+                      - { when: { eq: present }, tone: success }
+                      - { when: { eq: absent }, tone: muted }
+                  - field: source
+                    label: Origine
+                    valueLabels: { helloasso: En ligne, on_site: Sur place, import: Import }
+                  - { field: amount_paid, label: Prix libre, format: currency }
+
+          # Prix libre collected at the venue: one workshop_cash row per date.
+          # No row yet → the create form; a row → an edit form on it.
+          - type: container
+            element: section
+            props:
+              aria-labelledby: sur-place-titre
+              className: flex max-w-xl flex-col gap-3
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: sur-place-titre
+                  className: text-xl title-font text-bleu-fonce
+                content: prix libre sur place
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: À la fin de l'atelier, compte ce qui a été donné sur place (espèces et terminal de paiement) et note le total ici. Tu peux le corriger ensuite.
+              - type: form
+                visibility: { record: { field: revenue_on_site, lte: 0 } }
+                formRef: prix-libre-sur-place
+                props: { headingLevel: h3 }
+                showHeader: false
+                inlinePrefill:
+                  prefill: { workshop: $parent.id }
+                  lockPrefill: true
+              - type: form
+                visibility: { record: { field: revenue_on_site, gt: 0 } }
+                dataSource:
+                  table: workshop_cash
+                  mode: single
+                  filter:
+                    - { field: workshop, operator: eq, value: $param.id }
+                action:
+                  type: crud
+                  operation: update
+                  table: workshop_cash
+                  onSuccess: { toast: { message: Montant enregistré., variant: success } }
+                  onError: { toast: { message: "Le montant n'a pas pu être enregistré. Recharge la page, puis réessaie.", variant: error } }
+                fields:
+                  - { field: amount_on_site, label: Montant collecté sur place }
+                  - { field: note, label: Note (facultatif), control: textarea }
+
+  # Walk-in dialog (opened by "Ajouter une personne sur place").
+  - type: dialog
+    props: { id: ajout-sur-place, title: Ajouter une personne sur place }
+    children:
+      - type: form
+        formRef: ajout-sur-place
+        showHeader: false
+        inlinePrefill:
+          prefill: { workshop: $parent.id }
+          lockPrefill: true

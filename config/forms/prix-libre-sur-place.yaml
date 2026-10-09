@@ -1,0 +1,36 @@
+# First entry of the prix libre collected at the venue for one date: creates the
+# date's `workshop_cash` row. Shown on /espace/suivi/:id only while the date has
+# no such row; once it exists, the page shows an edit form on that row instead
+# (workshop_cash.workshop is unique, so a second create would be refused).
+id: 3
+name: prix-libre-sur-place
+title: Prix libre sur place
+description: Ce qui a été donné sur place (espèces, terminal de paiement), pour cette date.
+access:
+  require: [admin, member]
+  redirectTo: /connexion
+submitTo:
+  table: workshop_cash
+display:
+  submitLabel: Enregistrer le montant
+antiSpam:
+  rateLimit: { perIp: 60, windowSeconds: 3600 }
+fields:
+  - kind: table-field
+    column: amount_on_site
+    label: Montant collecté sur place
+    helpText: Le total en euros, espèces et carte confondues.
+    required: true
+  - kind: table-field
+    column: note
+    label: Note (facultatif)
+    helpText: Un détail utile à la coordination, par exemple « 40 € en espèces, le reste par carte ».
+  # Filled by the page (inlinePrefill); never shown.
+  - { kind: table-field, column: workshop, hidden: true }
+onSuccess:
+  type: redirect
+  url: /espace/suivi/$record.workshop
+  delaySeconds: 0
+onError:
+  type: message
+  message: Le montant n'a pas pu être enregistré. Recharge la page, puis réessaie.
