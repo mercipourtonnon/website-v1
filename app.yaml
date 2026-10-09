@@ -7,7 +7,7 @@ badge: false
 # Built-in privacy-friendly analytics (server-side; inert on static hosting)
 analytics:
   # The private Espace and sign-in pages are not audience traffic.
-  excludedPaths: [/_admin/*, /api/*, /connexion, /espace, /espace/*]
+  excludedPaths: [/_admin/*, /api/*, /connexion, /inscription, /espace, /espace/*]
 
 design:
   $ref: ./config/design.yaml
@@ -109,6 +109,17 @@ pages:
   - $ref: ./config/pages/espace-proposition.yaml
   - $ref: ./config/pages/espace-validation.yaml
   - $ref: ./config/pages/espace-ateliers.yaml
+  # Espace bénévole (private, noindex, out of the sitemap).
+  - $ref: ./config/pages/espace-inscription.yaml
+  - $ref: ./config/pages/espace-arrivee.yaml
+  - $ref: ./config/pages/espace-en-attente.yaml
+  - $ref: ./config/pages/espace-agenda.yaml
+  - $ref: ./config/pages/espace-agenda-evenement.yaml
+  - $ref: ./config/pages/espace-actualites.yaml
+  - $ref: ./config/pages/espace-actualite.yaml
+  - $ref: ./config/pages/espace-membres.yaml
+  - $ref: ./config/pages/espace-membre.yaml
+  - $ref: ./config/pages/espace-profil.yaml
 
 # Standalone forms, embedded in pages with formRef.
 forms:

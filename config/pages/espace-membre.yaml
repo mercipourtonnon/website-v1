@@ -1,0 +1,225 @@
+# /espace/membres/:id — one bénévole's profile (her answers to the member
+# form). A member reads validated profiles and her own (members row rule; any
+# other answers 404). Email, phone and status are drawn in a block gated to the
+# coordination, who are also the only readers of those fields.
+name: espace-membre
+path: /espace/membres/:id
+access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+sitemap: false
+dataSource:
+  table: members
+  mode: single
+  param: id
+meta:
+  lang: fr-FR
+  title: Fiche bénévole - Espace bénévole
+  description: La fiche d'un·e bénévole de Merci pour ton non.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-3xl flex-col gap-6
+        children:
+          - type: link
+            props:
+              href: /espace/membres
+              className: self-start text-sm text-bleu-fonce underline underline-offset-4
+            content: ← Membres
+          - type: container
+            element: header
+            props:
+              className: flex items-center gap-4
+            children:
+              # An avatar's src/label are not filled from the page record in
+              # 0.33 (they are in a list row): an image when there is a photo,
+              # a neutral mark otherwise.
+              - type: image
+                visibility: { record: { field: photo, isNotEmpty: true } }
+                props:
+                  src: $record.photo
+                  alt: ''
+                  className: h-16 w-16 shrink-0 rounded-full object-cover
+              - type: container
+                visibility: { record: { field: photo, isEmpty: true } }
+                props:
+                  className: flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-mauve-light
+                children:
+                  - type: icon
+                    props: { name: user-round, className: w-7 h-7 text-mauve, aria-hidden: 'true' }
+              - type: container
+                props:
+                  className: flex flex-col
+                children:
+                  - type: text
+                    element: h1
+                    props:
+                      className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                    content: $record.display_name
+                  - type: text
+                    element: span
+                    visibility: { record: { field: pronoun, isNotEmpty: true } }
+                    props:
+                      className: text-gray-700
+                    content: $record.pronoun
+
+          # Coordination only: contact and status.
+          - type: container
+            element: section
+            visibility: { roles: [coordination, admin] }
+            props:
+              aria-label: Pour la coordination
+              className: rounded-lg border border-gray-200 border-t-4 border-t-mauve p-4
+            children:
+              - type: description-list
+                items:
+                  - { term: Statut, field: status }
+                  - { term: Email, field: contact_email }
+                  - { term: Téléphone, field: phone }
+                  - { term: Droit à l'image, field: image_rights }
+                  - { term: Inscrit·e le, field: joined_at }
+
+          - type: container
+            element: section
+            props:
+              aria-label: Sa fiche
+              className: flex flex-col divide-y divide-gray-200
+            children:
+              - type: container
+                visibility: { record: { field: why, isNotEmpty: true } }
+                props:
+                  className: flex flex-col gap-1 py-3
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: font-bold text-bleu-fonce
+                    content: Pourquoi je souhaite contribuer à Merci pour ton non
+                  - type: text
+                    element: p
+                    props:
+                      className: whitespace-pre-line text-bleu-fonce
+                    content: $record.why
+              - type: container
+                visibility: { record: { field: intentions, isNotEmpty: true } }
+                props:
+                  className: flex flex-col gap-1 py-3
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: font-bold text-bleu-fonce
+                    content: Mes intentions
+                  - type: text
+                    element: p
+                    props:
+                      className: whitespace-pre-line text-bleu-fonce
+                    content: $record.intentions
+              - type: container
+                visibility: { record: { field: wishes, isNotEmpty: true } }
+                props:
+                  className: flex flex-col gap-1 py-3
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: font-bold text-bleu-fonce
+                    content: Mes envies
+                  - type: text
+                    element: p
+                    props:
+                      className: whitespace-pre-line text-bleu-fonce
+                    content: $record.wishes
+              - type: container
+                visibility: { record: { field: fears, isNotEmpty: true } }
+                props:
+                  className: flex flex-col gap-1 py-3
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: font-bold text-bleu-fonce
+                    content: Mes peurs
+                  - type: text
+                    element: p
+                    props:
+                      className: whitespace-pre-line text-bleu-fonce
+                    content: $record.fears
+              - type: container
+                visibility: { record: { field: resources, isNotEmpty: true } }
+                props:
+                  className: flex flex-col gap-1 py-3
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: font-bold text-bleu-fonce
+                    content: Mes ressources
+                  - type: text
+                    element: p
+                    props:
+                      className: whitespace-pre-line text-bleu-fonce
+                    content: $record.resources
+              - type: container
+                visibility: { record: { field: skills, isNotEmpty: true } }
+                props:
+                  className: flex flex-col gap-1 py-3
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: font-bold text-bleu-fonce
+                    content: Mes compétences
+                  - type: text
+                    element: p
+                    props:
+                      className: whitespace-pre-line text-bleu-fonce
+                    content: $record.skills
+              - type: container
+                visibility: { record: { field: dislikes, isNotEmpty: true } }
+                props:
+                  className: flex flex-col gap-1 py-3
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: font-bold text-bleu-fonce
+                    content: Ce que je n'aime pas
+                  - type: text
+                    element: p
+                    props:
+                      className: whitespace-pre-line text-bleu-fonce
+                    content: $record.dislikes
+              - type: container
+                visibility: { record: { field: work_style, isNotEmpty: true } }
+                props:
+                  className: flex flex-col gap-1 py-3
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: font-bold text-bleu-fonce
+                    content: Comment j'aime travailler
+                  - type: text
+                    element: p
+                    props:
+                      className: whitespace-pre-line text-bleu-fonce
+                    content: $record.work_style
+              - type: container
+                visibility: { record: { field: preferred_slots, isNotEmpty: true } }
+                props:
+                  className: flex flex-col gap-1 py-3
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: font-bold text-bleu-fonce
+                    content: Mes créneaux favoris pour des réunions
+                  - type: text
+                    element: p
+                    props:
+                      className: whitespace-pre-line text-bleu-fonce
+                    content: $record.preferred_slots

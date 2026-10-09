@@ -1,15 +1,20 @@
-# /espace — "Mes propositions": the proposals the signed-in person made.
-# workshop_proposals already scopes a member to her own rows; the explicit
+# /espace — the bénévole home: next events, latest news, the WhatsApp
+# community and the person's own sign-ups. Facilitateur·ices (and the
+# coordination) also find "Mes propositions" here, the workshop dates they
+# proposed: that section is gated with visibility.roles, so a plain member
+# never receives it.
+#
+# workshop_proposals already scopes a facilitator to her own rows; the explicit
 # proposed_by filter keeps an admin's list to her own too (the review queue
 # is /espace/validation).
 name: espace-accueil
 path: /espace
-access: { require: [admin, member], redirectTo: /connexion }
+access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR
-  title: Mes propositions - Espace facilitateur·ices
-  description: Les dates d'atelier que tu as proposées, et où en est chacune.
+  title: Accueil - Espace bénévole
+  description: Les prochains rendez-vous, les actualités de l'asso et tes inscriptions.
   noindex: true
   robots: noindex, nofollow
   favicon: ./favicon/favicon-32x32.png
@@ -18,109 +23,246 @@ components:
     children:
       - type: container
         props:
-          className: mx-auto flex max-w-5xl flex-col gap-6
+          className: mx-auto flex max-w-5xl flex-col gap-10
         children:
           - type: container
             element: header
             props:
-              className: flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between
+              className: flex flex-col gap-1
             children:
-              - type: container
+              - type: text
+                element: h1
                 props:
-                  className: flex flex-col gap-1
-                children:
-                  - type: text
-                    element: h1
-                    props:
-                      className: text-3xl sm:text-4xl title-font text-bleu-fonce
-                    content: mes propositions
-                  - type: text
-                    element: p
-                    props:
-                      className: text-bleu-fonce
-                    content: Les dates que tu as proposées, et où en est chacune. Ouvre une proposition pour la modifier tant qu'elle n'est pas encore relue.
-              - type: link
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: ton espace bénévole
+              - type: text
+                element: p
                 props:
-                  href: /espace/proposer
-                  className: inline-flex shrink-0 items-center justify-center gap-2 self-start whitespace-nowrap rounded-full bg-orange px-5 py-2.5 font-bold text-bleu-fonce hover:bg-orange-hover focus-visible:ring-2 focus-visible:ring-bleu-fonce focus-visible:ring-offset-2 sm:self-auto
-                children:
-                  - type: icon
-                    props: { name: calendar-plus, className: w-4 h-4, aria-hidden: 'true' }
-                  - { type: text, element: span, content: Proposer une date }
+                  className: text-bleu-fonce
+                content: Les prochains rendez-vous de l'équipe, les nouvelles de l'asso et les événements où tu as dit « je viens ».
 
-          # A server-drawn list rather than a grid: in 0.33.0 a grid's phone
-          # rows are not links and its desktop rows are not keyboard-reachable
-          # without an action column. Here each row has a real link.
-          # Dates read as stored (2027-01-16): a row template prints no
-          # localized date, and an itemTemplate list (which does) would print
-          # the raw status value, since the status options carry no labels.
-          # Status chips: tinted brand backgrounds, bleu-fonce ink (>= 10:1),
-          # and the word itself carries the meaning (never colour alone).
-          - type: list
+          - component: whatsapp-card
+
+          # Next 5 published events. Drafts never reach a bénévole (row rule),
+          # the explicit status filter also keeps them off the coordination's home.
+          - type: container
+            element: section
             props:
-              aria-label: Mes propositions de dates
-              className: list-none m-0 flex flex-col divide-y divide-gray-200 rounded-lg border border-gray-200 p-0
-            dataSource:
-              table: workshop_proposals
-              filter:
-                - { field: proposed_by, operator: eq, value: $currentUser.id }
-              sort: [{ field: session_date, direction: asc }]
-            listDisplay:
-              emptyMessage: Tu n'as encore proposé aucune date. Quand tu en proposes une, elle apparaît ici et tu peux suivre sa relecture.
+              aria-labelledby: rdv-titre
+              className: flex flex-col gap-4
             children:
               - type: container
                 props:
-                  className: flex flex-col gap-2 px-4 py-4 sm:flex-row sm:items-center sm:justify-between
+                  className: flex flex-wrap items-baseline justify-between gap-2
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      id: rdv-titre
+                      className: text-2xl title-font text-bleu-fonce
+                    content: prochains rendez-vous
+                  - type: link
+                    props:
+                      href: /espace/agenda
+                      className: text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                    content: Tout l'agenda
+              - type: list
+                props:
+                  aria-label: Prochains rendez-vous
+                  className: list-none m-0 grid grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3
+                dataSource:
+                  table: events
+                  filter:
+                    - { field: status, operator: eq, value: published }
+                    - { field: starts_at, operator: gte, value: $today }
+                  sort: [{ field: starts_at, direction: asc }]
+                  limit: 5
+                listDisplay:
+                  emptyMessage: Pas de rendez-vous prévu pour l'instant. La coordination les ajoute ici dès qu'ils sont calés.
+                children:
+                  - component: event-card
+
+          # Latest 3 published news.
+          - type: container
+            element: section
+            props:
+              aria-labelledby: actus-titre
+              className: flex flex-col gap-4
+            children:
+              - type: container
+                props:
+                  className: flex flex-wrap items-baseline justify-between gap-2
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      id: actus-titre
+                      className: text-2xl title-font text-bleu-fonce
+                    content: dernières actualités
+                  - type: link
+                    props:
+                      href: /espace/actualites
+                      className: text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                    content: Toutes les actualités
+              - type: list
+                props:
+                  aria-label: Dernières actualités
+                  className: list-none m-0 grid grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3
+                dataSource:
+                  table: news
+                  filter:
+                    - { field: status, operator: eq, value: published }
+                  sort: [{ field: published_at, direction: desc }]
+                  limit: 3
+                listDisplay:
+                  emptyMessage: Pas encore d'actualité. Les nouvelles de l'asso arriveront ici (et par email).
+                children:
+                  - component: news-card
+
+          # The signed-in person's own sign-ups (event_participations.member).
+          - type: container
+            element: section
+            props:
+              aria-labelledby: participations-titre
+              className: flex flex-col gap-4
+            children:
+              - type: text
+                element: h2
+                props:
+                  id: participations-titre
+                  className: text-2xl title-font text-bleu-fonce
+                content: mes participations
+              - type: list
+                props:
+                  aria-label: Mes participations
+                  className: rounded-lg border border-gray-200
+                dataSource:
+                  table: event_participations
+                  filter:
+                    - { field: member, operator: eq, value: $currentUser.id }
+                  sort: [{ field: created_at, direction: desc }]
+                  limit: 10
+                listDisplay:
+                  itemLayout: stacked
+                  itemTemplate:
+                    title: $record.event
+                    subtitle: $record.need
+                    metadata:
+                      - { field: created_at, format: short-date }
+                  emptyMessage: Tu n'es inscrit·e à aucun rendez-vous pour l'instant. Ouvre un événement de l'agenda et clique sur « Je participe ».
+                onRowClick: { type: navigate, path: /espace/agenda/$record.event }
+
+          # Facilitateur·ices, coordination and admins: their workshop proposals.
+          - type: container
+            element: section
+            visibility: { roles: [facilitateur, coordination, admin] }
+            props:
+              id: mes-propositions
+              aria-labelledby: propositions-titre
+              className: flex flex-col gap-4 scroll-mt-6
+            children:
+              - type: container
+                element: header
+                props:
+                  className: flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between
                 children:
                   - type: container
-                    props: { className: flex flex-col gap-1 }
+                    props:
+                      className: flex flex-col gap-1
                     children:
-                      - type: description-list
-                        layout: stacked
-                        items:
-                          - { term: Date, field: session_date }
-                          - { term: Début, field: start_time }
-                      - type: link
+                      - type: text
+                        element: h2
                         props:
-                          href: /espace/propositions/$record.id
-                          aria-label: Voir la proposition du $record.session_date
-                          className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
-                        content: Voir la proposition
-                  - type: container
-                    props: { className: flex }
+                          id: propositions-titre
+                          className: text-2xl title-font text-bleu-fonce
+                        content: mes propositions d'ateliers
+                      - type: text
+                        element: p
+                        props:
+                          className: text-bleu-fonce
+                        content: Les dates d'atelier que tu as proposées, et où en est chacune. Ouvre une proposition pour la modifier tant qu'elle n'est pas encore relue.
+                  - type: link
+                    props:
+                      href: /espace/proposer
+                      className: inline-flex shrink-0 items-center justify-center gap-2 self-start whitespace-nowrap rounded-full bg-orange px-5 py-2.5 font-bold text-bleu-fonce hover:bg-orange-hover focus-visible:ring-2 focus-visible:ring-bleu-fonce focus-visible:ring-offset-2 sm:self-auto
                     children:
-                      - type: text
-                        element: span
-                        visibility: { record: { field: status, eq: proposed } }
-                        props: { className: self-start rounded-full bg-mauve-light px-3 py-1 text-sm font-medium text-bleu-fonce }
-                        content: Proposée
-                      - type: text
-                        element: span
-                        visibility: { record: { field: status, eq: approved } }
-                        props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
-                        content: Validée, création en cours
-                      - type: text
-                        element: span
-                        visibility: { record: { field: status, eq: helloasso_draft } }
-                        props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
-                        content: Validée, mise en ligne en cours
-                      - type: text
-                        element: span
-                        visibility: { record: { field: status, eq: sync_error } }
-                        props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
-                        content: Validée, mise en ligne en cours
-                      - type: text
-                        element: span
-                        visibility: { record: { field: status, eq: published } }
-                        props: { className: self-start rounded-full bg-cyan-lighter px-3 py-1 text-sm font-medium text-bleu-fonce }
-                        content: En ligne
-                      - type: text
-                        element: span
-                        visibility: { record: { field: status, eq: rejected } }
-                        props: { className: self-start rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-bleu-fonce }
-                        content: Non retenue
-                      - type: text
-                        element: span
-                        visibility: { record: { field: status, eq: withdrawn } }
-                        props: { className: self-start rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-bleu-fonce }
-                        content: Retirée
+                      - type: icon
+                        props: { name: calendar-plus, className: w-4 h-4, aria-hidden: 'true' }
+                      - { type: text, element: span, content: Proposer une date }
+
+              # A server-drawn list rather than a grid: in 0.33.0 a grid's phone
+              # rows are not links and its desktop rows are not keyboard-reachable
+              # without an action column. Here each row has a real link.
+              # Dates read as stored (2027-01-16): a row template prints no
+              # localized date, and an itemTemplate list (which does) would print
+              # the raw status value, since the status options carry no labels.
+              # Status chips: tinted brand backgrounds, bleu-fonce ink (>= 10:1),
+              # and the word itself carries the meaning (never colour alone).
+              - type: list
+                props:
+                  aria-label: Mes propositions de dates
+                  className: list-none m-0 flex flex-col divide-y divide-gray-200 rounded-lg border border-gray-200 p-0
+                dataSource:
+                  table: workshop_proposals
+                  filter:
+                    - { field: proposed_by, operator: eq, value: $currentUser.id }
+                  sort: [{ field: session_date, direction: asc }]
+                listDisplay:
+                  emptyMessage: Tu n'as encore proposé aucune date. Quand tu en proposes une, elle apparaît ici et tu peux suivre sa relecture.
+                children:
+                  - type: container
+                    props:
+                      className: flex flex-col gap-2 px-4 py-4 sm:flex-row sm:items-center sm:justify-between
+                    children:
+                      - type: container
+                        props: { className: flex flex-col gap-1 }
+                        children:
+                          - type: description-list
+                            layout: stacked
+                            items:
+                              - { term: Date, field: session_date }
+                              - { term: Début, field: start_time }
+                          - type: link
+                            props:
+                              href: /espace/propositions/$record.id
+                              aria-label: Voir la proposition du $record.session_date
+                              className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                            content: Voir la proposition
+                      - type: container
+                        props: { className: flex }
+                        children:
+                          - type: text
+                            element: span
+                            visibility: { record: { field: status, eq: proposed } }
+                            props: { className: self-start rounded-full bg-mauve-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            content: Proposée
+                          - type: text
+                            element: span
+                            visibility: { record: { field: status, eq: approved } }
+                            props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            content: Validée, création en cours
+                          - type: text
+                            element: span
+                            visibility: { record: { field: status, eq: helloasso_draft } }
+                            props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            content: Validée, mise en ligne en cours
+                          - type: text
+                            element: span
+                            visibility: { record: { field: status, eq: sync_error } }
+                            props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            content: Validée, mise en ligne en cours
+                          - type: text
+                            element: span
+                            visibility: { record: { field: status, eq: published } }
+                            props: { className: self-start rounded-full bg-cyan-lighter px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            content: En ligne
+                          - type: text
+                            element: span
+                            visibility: { record: { field: status, eq: rejected } }
+                            props: { className: self-start rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            content: Non retenue
+                          - type: text
+                            element: span
+                            visibility: { record: { field: status, eq: withdrawn } }
+                            props: { className: self-start rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-bleu-fonce }
+                            content: Retirée

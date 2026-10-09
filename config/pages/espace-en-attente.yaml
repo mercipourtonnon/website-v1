@@ -1,0 +1,83 @@
+# /espace/en-attente — a candidat's landing while the coordination reads her
+# profile. No espace-shell: a candidat may open no other /espace page, so the
+# frame is the sign-in card's, with a way out (site, sign out).
+#
+# The member-profile form saves through save-member-profile, which upserts her
+# own `members` row and keeps its `pending` status.
+name: espace-en-attente
+path: /espace/en-attente
+access: { require: authenticated, redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Candidature en cours - Espace bénévole
+  description: Ta candidature est en cours de validation par la coordination.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - type: container
+    props:
+      className: min-h-screen bg-orange-lighter px-4 pt-6 pb-12 sm:px-6
+    children:
+      - type: container
+        props:
+          className: mx-auto flex w-full max-w-2xl flex-col gap-6
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex items-center justify-between gap-4
+            children:
+              - type: link
+                props:
+                  href: /
+                  className: shrink-0
+                children:
+                  - type: image
+                    props:
+                      src: /logo-without-marging.svg
+                      alt: Merci pour ton non, retour au site
+                      className: h-10 w-auto
+              - type: button
+                variant: outline
+                size: sm
+                label: Me déconnecter
+                action:
+                  type: auth
+                  method: logout
+                  onSuccess: { type: navigate, navigate: /connexion }
+          - type: container
+            props:
+              className: flex flex-col gap-3 rounded-lg bg-white p-5 sm:p-8
+            children:
+              - type: container
+                props:
+                  className: flex items-center gap-3
+                children:
+                  - type: icon
+                    props: { name: hourglass, className: w-6 h-6 shrink-0 text-mauve, aria-hidden: 'true' }
+                  - type: text
+                    element: h1
+                    props:
+                      className: text-2xl sm:text-3xl title-font text-bleu-fonce
+                    content: ta candidature est en cours de validation
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Merci de vouloir rejoindre l'équipe ! La coordination relit ta fiche et t'ouvre l'espace bénévole dans les prochains jours. Tu recevras un email dès que c'est fait, avec le lien vers notre communauté WhatsApp.
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: En attendant, complète ta fiche ci-dessous. Tu peux l'envoyer plusieurs fois, la dernière version compte.
+          - type: container
+            props:
+              className: rounded-lg bg-white p-5 sm:p-8
+            children:
+              - type: form
+                formRef: member-profile
+                props:
+                  headingLevel: h2
+                  label: Enregistrer ma fiche
