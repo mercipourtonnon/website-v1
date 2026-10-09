@@ -538,7 +538,10 @@ components:
                           roleAccent: text-orange-ink
                           bio: Professionnelle de la communication depuis 8 ans, mes valeurs personnelles colorent mes créations et guident mes missions. Féministe et queer, je suis aussi engagée au sein du groupe Bipan Strasbourg. J'ai rejoint Merci pour ton non après avoir moi-même participé à un atelier de consentement. Aujourd'hui, je mets mes compétences au service de l'association pour faire rayonner ces valeurs de respect, d'écoute et d'émancipation auxquelles je crois profondément.
 
-      # Section: Partenaires (#partenaires)
+      # Section: Partenaires (#partenaires) — three groups from the BPS
+      # (2.16, 3.31): accompagnent · accueillent · ont fait confiance. Logos
+      # only for Le Labo and La Plage Digitale (partner-card); the others use
+      # the logo-less partner-row. Shipped visible (review of 2026-10-09, A6).
       - type: container
         element: section
         props:
@@ -567,27 +570,109 @@ components:
                     element: p
                     props:
                       className: type-lead text-bleu-fonce-70
-                    content: Deux lieux strasbourgeois qui accompagnent l'association.
+                    content: Celles et ceux qui accompagnent, accueillent et commandent nos actions.
               - type: container
                 props:
-                  className: lg:col-span-8 grid sm:grid-cols-2 gap-6
+                  className: lg:col-span-8 flex flex-col gap-block
                 children:
-                  - component: partner-card
-                    vars:
-                      logo: /partners/le-labo-des-partenariats.svg
-                      tileBg: bg-white
-                      name: Le Labo des Partenariats
-                      text: Tiers-lieu et incubateur d'innovation sociale de l'Eurométropole de Strasbourg.
-                      href: https://lelabo-partenariats.org
-                      linkLabel: Découvrir Le Labo des Partenariats
-                  - component: partner-card
-                    vars:
-                      logo: /partners/la-plage-digitale-blanc.webp
-                      tileBg: tile-bleu-fonce
-                      name: La Plage Digitale
-                      text: Tiers-lieu de l'innovation et espace de coworking associatif à Strasbourg.
-                      href: https://www.laplagedigitale.fr
-                      linkLabel: Découvrir La Plage Digitale
+                  # Group 1 — ils nous accompagnent
+                  - type: container
+                    props:
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h3
+                        props:
+                          className: type-h3 text-bleu-fonce
+                        content: ils nous accompagnent
+                      - type: container
+                        props:
+                          className: grid sm:grid-cols-2 gap-6
+                        children:
+                          - component: partner-card
+                            vars:
+                              logo: /partners/le-labo-des-partenariats.svg
+                              tileBg: bg-white
+                              name: Le Labo des Partenariats
+                              text: Tiers-lieu et incubateur d'innovation sociale de l'Eurométropole de Strasbourg, qui accompagne l'association depuis sa création.
+                              href: https://lelabo-partenariats.org
+                              linkLabel: Découvrir Le Labo des Partenariats
+                          - component: partner-row
+                            vars:
+                              icon: scale
+                              role: Ils nous accompagnent
+                              name: Impact Lawyers
+                              text: Appui juridique et fiscal de l'association.
+                              href: https://impact-lawyers.com
+                              linkLabel: Découvrir Impact Lawyers
+                  # Group 2 — ils nous accueillent
+                  - type: container
+                    props:
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h3
+                        props:
+                          className: type-h3 text-bleu-fonce
+                        content: ils nous accueillent
+                      - type: container
+                        props:
+                          className: grid sm:grid-cols-2 gap-6
+                        children:
+                          - component: partner-card
+                            vars:
+                              logo: /partners/la-plage-digitale-blanc.webp
+                              tileBg: tile-bleu-fonce
+                              name: La Plage Digitale
+                              text: Tiers-lieu de l'innovation et espace de coworking associatif à Strasbourg, où se tiennent la plupart de nos ateliers.
+                              href: https://www.laplagedigitale.fr
+                              linkLabel: Découvrir La Plage Digitale
+                          - component: partner-row
+                            vars:
+                              icon: map-pin
+                              role: Lieu partenaire
+                              name: La Tour Merveilleuse
+                              text: Nous accueille pour des ateliers depuis juin 2026 et relaie la newsletter de l'association.
+                              href: https://lelabo-partenariats.org/tour-merveilleuse
+                              linkLabel: Découvrir La Tour Merveilleuse
+                  # Group 3 — ils nous ont fait confiance
+                  - type: container
+                    props:
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h3
+                        props:
+                          className: type-h3 text-bleu-fonce
+                        content: ils nous ont fait confiance
+                      - type: container
+                        props:
+                          className: grid sm:grid-cols-2 gap-6
+                        children:
+                          - component: partner-row
+                            vars:
+                              icon: landmark
+                              role: Première commande
+                              name: Ville de Strasbourg
+                              text: Animation d'un stand à la Fête de la musique, juin 2026.
+                              href: https://www.strasbourg.eu
+                              linkLabel: Découvrir la Ville de Strasbourg
+                          - component: partner-row
+                            vars:
+                              icon: graduation-cap
+                              role: Premier atelier réservé
+                              name: Unis-Cité
+                              text: Un atelier pour 8 volontaires en service civique, décembre 2026.
+                              href: https://www.uniscite.fr
+                              linkLabel: Découvrir Unis-Cité
+                          - component: partner-row
+                            vars:
+                              icon: hand-heart
+                              role: Stands partenaires
+                              name: Cop1
+                              text: Notre stand à ses distributions solidaires pour les étudiant·es, mai 2026.
+                              href: https://cop1.eu
+                              linkLabel: Découvrir Cop1
 
       # Section: Agir avec nous (#agir) — the two ways in: bénévolat and don
       - type: container

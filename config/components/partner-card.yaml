@@ -23,7 +23,7 @@ children:
       - type: text
         element: h3
         props:
-          className: type-h4 text-bleu-fonce
+          className: title-font normal-case type-h4 text-bleu-fonce
         content: $name
       - type: text
         element: p
