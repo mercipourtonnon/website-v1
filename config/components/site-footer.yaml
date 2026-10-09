@@ -1,105 +1,145 @@
-# Shared footer — used by the home page and mentions-legales.
+# Shared footer — used by home, mentions-legales, /le-consentement, /ressources.
+# Links are root-absolute so they work from every page. Social networks are
+# plain text links: Lucide has no brand marks, and the charter allows only
+# Lucide icons.
 name: site-footer
 type: container
 element: footer
 props:
-  className: bg-white py-12 sm:py-16
+  className: bg-mauve-light border-t border-mauve-lighter
 children:
   - type: container
     props:
-      className: max-w-6xl mx-auto px-4 sm:px-6
+      className: max-w-7xl mx-auto px-4 sm:px-6 py-16 grid gap-12 md:grid-cols-12
     children:
+      # Identity
       - type: container
         props:
-          className: grid md:grid-cols-2 gap-10 md:gap-16 items-start
+          className: md:col-span-5 flex flex-col gap-4
         children:
-          # Left: Identity
+          - type: link
+            props:
+              href: /
+              className: self-start
+              aria-label: Merci pour ton non — accueil
+            children:
+              - type: image
+                props:
+                  src: /logo.svg
+                  alt: ''
+                  className: h-16 md:h-20 w-auto
+          - type: text
+            element: p
+            props:
+              className: type-small text-bleu-fonce-70 max-w-sm
+            content: On anime des ateliers de consentement à prix libre à Strasbourg. En 3h, on apprend à poser ses limites, à dire non et à accueillir celui des autres — dans un cadre bienveillant, ouvert à tou·te·s.
+          - type: link
+            props:
+              href: mailto:mercipourtonnon@gmail.com
+              className: self-start type-small font-bold text-mauve underline underline-offset-4 hover:text-pourpre-hover
+            content: mercipourtonnon@gmail.com
+      # Site links
+      - type: container
+        element: nav
+        props:
+          className: md:col-span-4 flex flex-col gap-3
+          aria-label: Plan du site
+        children:
+          - type: text
+            element: p
+            props:
+              className: type-overline text-bleu-fonce-70
+            content: Le site
           - type: container
+            props:
+              className: grid grid-cols-2 gap-x-6 gap-y-2 type-small
+            children:
+              - type: link
+                props: { href: '/#atelier', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: L'atelier
+              - type: link
+                props: { href: /le-consentement, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Le consentement
+              - type: link
+                props: { href: '/#temoignages', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Témoignages
+              - type: link
+                props: { href: /ressources, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Ressources
+              - type: link
+                props: { href: '/#mission', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Mission et valeurs
+              - type: link
+                props: { href: '/#partenaires', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Partenaires
+              - type: link
+                props: { href: '/#equipe', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: L'équipe
+              - type: link
+                props: { href: /newsletter, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Newsletter
+              - type: link
+                props: { href: '/#faq', className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: FAQ
+              - type: link
+                props: { href: /mentions-legales, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Mentions légales
+      # Social
+      - type: container
+        props:
+          className: md:col-span-3 flex flex-col gap-3
+        children:
+          - type: text
+            element: p
+            props:
+              className: type-overline text-bleu-fonce-70
+            content: Nous suivre
+          - type: container
+            props:
+              className: flex flex-col gap-1 type-small
             children:
               - type: link
                 props:
-                  href: /
-                children:
-                  - type: image
-                    props:
-                      src: /logo.svg
-                      alt: Merci pour ton non
-                      className: h-16 md:h-20 w-auto mb-4
-              - type: text
-                element: p
-                props:
-                  className: text-bleu-fonce/70 text-sm leading-relaxed max-w-sm
-                content: On anime des ateliers de consentement à prix libre à Strasbourg. En 3h, on apprend à poser ses limites, à dire non et à accueillir celui des autres — dans un cadre bienveillant, ouvert à tou·te·s.
-          # Right: Links & Social
-          - type: container
-            props:
-              className: md:text-right
-            children:
-              - type: text
-                element: h3
-                props:
-                  className: title-font text-xl text-bleu-fonce mb-4
-                content: nous suivre
-              - type: container
-                props:
-                  className: flex md:justify-end items-center gap-4 mb-8
-                children:
-                  - type: link
-                    props:
-                      href: https://www.instagram.com/mercipourtonnon/
-                      target: _blank
-                      rel: noopener noreferrer
-                      className: w-10 h-10 rounded-full bg-white flex items-center justify-center text-mauve hover:text-pourpre transition-colors shadow-sm
-                      aria-label: Instagram
-                    children:
-                      - type: icon
-                        props:
-                          name: instagram
-                          className: w-5 h-5
-                  - type: link
-                    props:
-                      href: https://www.facebook.com/mercipourtonnon
-                      target: _blank
-                      rel: noopener noreferrer
-                      className: w-10 h-10 rounded-full bg-white flex items-center justify-center text-mauve hover:text-pourpre transition-colors shadow-sm
-                      aria-label: Facebook
-                    children:
-                      - type: icon
-                        props:
-                          name: facebook
-                          className: w-5 h-5
-                  - type: link
-                    props:
-                      href: https://www.linkedin.com/company/merci-pour-ton-non
-                      target: _blank
-                      rel: noopener noreferrer
-                      className: w-10 h-10 rounded-full bg-white flex items-center justify-center text-mauve hover:text-pourpre transition-colors shadow-sm
-                      aria-label: LinkedIn
-                    children:
-                      - type: icon
-                        props:
-                          name: linkedin
-                          className: w-5 h-5
-              - type: container
-                props:
-                  className: text-bleu-fonce/50 text-sm space-y-1
+                  href: https://www.instagram.com/mercipourtonnon/
+                  target: _blank
+                  rel: noopener noreferrer
+                  className: inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve
                 children:
                   - type: text
-                    element: p
-                    children:
-                      - type: link
-                        props:
-                          href: mailto:mercipourtonnon@gmail.com
-                          className: text-bleu-fonce-50 hover:text-orange transition-colors
-                        content: mercipourtonnon@gmail.com
+                    element: span
+                    content: Instagram
+                  - type: icon
+                    props: { name: arrow-up-right, size: 16 }
+              - type: link
+                props:
+                  href: https://www.facebook.com/mercipourtonnon
+                  target: _blank
+                  rel: noopener noreferrer
+                  className: inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve
+                children:
                   - type: text
-                    element: p
-                    children:
-                      - type: link
-                        props:
-                          href: /mentions-legales
-                          className: text-bleu-fonce-50 hover:text-orange transition-colors
-                        content: Mentions légales
+                    element: span
+                    content: Facebook
+                  - type: icon
+                    props: { name: arrow-up-right, size: 16 }
+              - type: link
+                props:
+                  href: https://www.linkedin.com/company/merci-pour-ton-non
+                  target: _blank
+                  rel: noopener noreferrer
+                  className: inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve
+                children:
                   - type: text
-                    element: p
-                    content: © 2026 Merci pour ton non. Tous droits réservés.
+                    element: span
+                    content: LinkedIn
+                  - type: icon
+                    props: { name: arrow-up-right, size: 16 }
+  - type: container
+    props:
+      className: border-t border-mauve-lighter
+    children:
+      - type: text
+        element: p
+        props:
+          className: max-w-7xl mx-auto px-4 sm:px-6 py-6 type-caption text-bleu-fonce-70
+        content: © 2026 Merci pour ton non. Tous droits réservés.

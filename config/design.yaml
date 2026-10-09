@@ -72,8 +72,8 @@ typeScale:
 # Rythme vertical — one section step, one block step; Tailwind's numeric
 # ladder (4px base) stays available for spacing inside components.
 spacing:
-  section: '6rem' # between sections, desktop
-  section-sm: '4rem' # between sections, mobile
+  band: '6rem' # between sections, desktop
+  band-sm: '4rem' # between sections, mobile
   block: '3rem' # between a section's heading and its content
 
 # Coins — small on controls, larger on surfaces, largest on photos.

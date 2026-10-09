@@ -1,0 +1,27 @@
+# Glossary entry — a named notion, its definition and what it does to a
+# "oui". Used for the bias list on /le-consentement. Vars: $term, $definition,
+# $effect.
+name: term-card
+type: container
+props:
+  className: term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2
+children:
+  - type: text
+    element: h3
+    props:
+      className: type-lead font-bold text-bleu-fonce
+    content: $term
+  - type: text
+    element: p
+    props:
+      className: type-small text-bleu-fonce-70
+    content: $definition
+  - type: container
+    props:
+      className: flex items-start gap-2 type-small text-mauve
+    children:
+      - type: icon
+        props: { name: corner-down-right, size: 18, strokeWidth: 2, className: shrink-0 mt-1 }
+      - type: text
+        element: p
+        content: $effect

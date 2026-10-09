@@ -1,0 +1,35 @@
+# One letter of an acronym (RÈGLES) — vars: $letter, $chipBg (bg-orange),
+# $chipText (text-bleu-fonce; text-white only on pourpre/mauve), $icon (lucide),
+# $accent (icon colour: text-mauve…), $title, $text. Full class tokens.
+name: knowledge-card
+type: container
+element: article
+props:
+  className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-4 h-full
+children:
+  - type: container
+    props:
+      className: flex items-center justify-between
+    children:
+      - type: text
+        element: span
+        props:
+          className: $chipBg $chipText w-14 h-14 rounded-pill flex items-center justify-center title-font normal-case type-h3
+          aria-hidden: 'true'
+        content: $letter
+      - type: icon
+        props:
+          name: $icon
+          size: 28
+          strokeWidth: 2
+          className: $accent
+  - type: text
+    element: h3
+    props:
+      className: type-h4 text-bleu-fonce
+    content: $title
+  - type: text
+    element: p
+    props:
+      className: type-small text-bleu-fonce-70
+    content: $text

@@ -1,25 +1,23 @@
-# "Nos valeurs" card — vars: $borderTop (border-t-orange), $icon (lucide name),
-# $accent (text-orange), $title, $text. Full class tokens only.
+# "Nos valeurs" card — vars: $icon (lucide name), $accent (text-orange — icon
+# colour only), $title, $text. Full class tokens only.
 name: value-card
 type: container
 props:
-  className: bg-white rounded-lg p-6 border border-gray-200 border-t-4 $borderTop
+  className: flex flex-col gap-3 border-t-2 border-bleu-fonce-light pt-6
 children:
-  - type: container
+  - type: icon
     props:
-      className: mb-4
-    children:
-      - type: icon
-        props:
-          name: $icon
-          className: w-8 h-8 $accent
+      name: $icon
+      size: 28
+      strokeWidth: 2
+      className: $accent
   - type: text
     element: h3
     props:
-      className: text-xl title-font $accent mb-3
+      className: type-h4 text-bleu-fonce
     content: $title
   - type: text
     element: p
     props:
-      className: text-gray-600
+      className: type-small text-bleu-fonce-70
     content: $text

@@ -27,6 +27,11 @@ components:
   - $ref: ./config/components/audience-card.yaml
   - $ref: ./config/components/value-card.yaml
   - $ref: ./config/components/team-card.yaml
+  - $ref: ./config/components/site-header.yaml
+  - $ref: ./config/components/partner-card.yaml
+  - $ref: ./config/components/resource-card.yaml
+  - $ref: ./config/components/knowledge-card.yaml
+  - $ref: ./config/components/term-card.yaml
 
 pages:
   - $ref: ./config/pages/home.yaml

@@ -101,8 +101,8 @@ Each step emits `--text-{step}` and a matching `text-{step}` utility that carrie
 
 | Token | Value |
 | --- | --- |
-| section | 6rem |
-| section-sm | 4rem |
+| band | 6rem |
+| band-sm | 4rem |
 | block | 3rem |
 
 ## Radius tokens
