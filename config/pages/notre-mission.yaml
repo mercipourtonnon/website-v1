@@ -1,0 +1,650 @@
+# /notre-mission — who we are: mission and approach, our vision of consent
+# (teaser of /le-consentement), values, l'équipe cœur, partners, and the two
+# ways to act with us. Split out of the one-page home (review of 2026-10-09);
+# section ids are the home's old anchors (#mission, #valeurs, #equipe,
+# #partenaires).
+name: notre-mission
+path: /notre-mission
+sitemap:
+  priority: 0.7
+  changefreq: monthly
+meta:
+  lang: fr-FR
+  title: "Notre mission et l'équipe - Merci pour ton non"
+  description: "Merci pour ton non diffuse une culture du consentement à Strasbourg et dans le Grand Est : notre mission, nos valeurs, l'équipe cœur et nos partenaires."
+  author: Merci pour ton non
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/notre-mission
+  openGraph:
+    type: website
+    title: "Notre mission | Merci pour ton non"
+    description: "Diffuser une culture du consentement à Strasbourg et dans le Grand Est : notre mission, nos valeurs et l'équipe cœur."
+    url: https://mercipourtonnon.fr/notre-mission
+    image: https://mercipourtonnon.fr/social.png
+    imageAlt: "Merci pour ton non — notre mission"
+    siteName: Merci pour ton non
+    locale: fr_FR
+  twitter:
+    card: summary_large_image
+    title: "Notre mission | Merci pour ton non"
+    description: "Diffuser une culture du consentement à Strasbourg et dans le Grand Est : notre mission, nos valeurs et l'équipe cœur."
+    image: https://mercipourtonnon.fr/social.png
+  schema:
+    '@context': https://schema.org
+    '@type': AboutPage
+    name: Notre mission
+    url: https://mercipourtonnon.fr/notre-mission
+    inLanguage: fr-FR
+    about:
+      '@type': Organization
+      name: Merci pour ton non
+      url: https://mercipourtonnon.fr
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  preload:
+    - href: /fonts/NeueMachina/NeueMachina-Regular.otf
+      as: font
+      type: font/otf
+      crossorigin: anonymous
+    - href: /fonts/BelyDisplay/BelyDisplay-Regular.woff2
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  customElements:
+    - type: meta
+      attrs:
+        name: theme-color
+        content: '#FFAF00'
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+
+scripts:
+  externalScripts:
+    # Mobile menu close-on-link / Escape, current page, FAQ aria (site.js)
+    - src: /assets/site.js
+      defer: true
+      position: body-end
+
+components:
+  - component: site-header
+
+  - type: container
+    props:
+      id: contenu
+      className: bg-white overflow-x-clip
+    children:
+      # Page hero (#mission) — the mission statement, three pillars, approach and trust
+      - type: container
+        element: section
+        props:
+          id: mission
+          className: px-4 sm:px-6 pt-10 md:pt-16 pb-band-sm md:pb-band bg-orange-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: grid lg:grid-cols-12 gap-12 items-center
+                children:
+                  - type: container
+                    props:
+                      className: lg:col-span-7 flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: p
+                        props:
+                          className: type-overline text-orange-ink
+                        content: L'association
+                      - type: text
+                        element: h1
+                        props:
+                          className: type-page text-bleu-fonce
+                        content: notre mission
+                      - type: text
+                        element: p
+                        props:
+                          className: type-h4 font-bold text-bleu-fonce
+                        content: Diffuser une culture du consentement à Strasbourg et dans le Grand Est
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce
+                        children:
+                          - type: text
+                            element: span
+                            content: 'On crée des '
+                          - type: text
+                            element: span
+                            props: { className: font-bold text-cyan-ink }
+                            content: espaces sûrs
+                          - type: text
+                            element: span
+                            content: ' où chacun·e peut apprendre à '
+                          - type: text
+                            element: span
+                            props: { className: font-bold text-orange-ink }
+                            content: dire non
+                          - type: text
+                            element: span
+                            content: ', '
+                          - type: text
+                            element: span
+                            props: { className: font-bold text-orange-ink }
+                            content: poser ses limites
+                          - type: text
+                            element: span
+                            content: ' et construire des '
+                          - type: text
+                            element: span
+                            props: { className: font-bold text-pourpre-hover }
+                            content: relations plus authentiques
+                          - type: text
+                            element: span
+                            content: ' — dans tous les contextes de vie.'
+                  - type: container
+                    props:
+                      className: lg:col-span-5 photo-frame frame-orange max-w-md lg:max-w-none
+                    children:
+                      - type: image
+                        variant: hero
+                        props:
+                          src: /pictures/stand/echange-carte-stand.webp
+                          srcset: /pictures/stand/echange-carte-stand-sm.webp 533w, /pictures/stand/echange-carte-stand.webp 1066w
+                          sizes: '(min-width: 1024px) 420px, 90vw'
+                          alt: Sur notre stand, une bénévole sourit en échangeant avec une visiteuse autour d'une carte
+                          className: w-full h-auto rounded-media shadow-card object-cover aspect-[4/5]
+              # 3 piliers
+              - type: container
+                props:
+                  className: grid md:grid-cols-3 gap-6
+                children:
+                  - type: container
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                    children:
+                      - type: icon
+                        props: { name: target, size: 28, strokeWidth: 2, className: text-orange-ink }
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: apprendre à dire non
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Écouter ses ressentis, poser ses limites et accueillir le "non" de l'autre avec bienveillance
+                  - type: container
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                    children:
+                      - type: icon
+                        props: { name: globe, size: 28, strokeWidth: 2, className: text-orange-ink }
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: pour tous les contextes
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Relations amicales, familiales, professionnelles, intimes — le consentement est partout
+                  - type: container
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                    children:
+                      - type: icon
+                        props: { name: shield, size: 28, strokeWidth: 2, className: text-orange-ink }
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: un enjeu collectif
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Issu des luttes féministes, le consentement questionne les rapports de pouvoir dans la société
+              # Notre approche + Pourquoi nous faire confiance
+              - type: container
+                props:
+                  className: grid lg:grid-cols-2 gap-6
+                children:
+                  - type: container
+                    props:
+                      className: bg-white rounded-card shadow-card p-8 flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: notre approche
+                      - type: container
+                        props: { className: flex flex-col gap-2 }
+                        children:
+                          - type: text
+                            element: h4
+                            props: { className: font-bold text-bleu-fonce }
+                            content: Association à but non lucratif
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            children:
+                              - type: text
+                                element: span
+                                content: 'Nos ateliers sont à '
+                              - type: text
+                                element: span
+                                props: { className: font-bold text-bleu-fonce }
+                                content: prix libre
+                              - type: text
+                                element: span
+                                content: ' — personne n''est refusé·e par manque d''argent. On croit que le consentement doit être '
+                              - type: text
+                                element: span
+                                props: { className: font-bold text-bleu-fonce }
+                                content: accessible
+                              - type: text
+                                element: span
+                                content: ' à tou·te·s.'
+                      - type: container
+                        props: { className: flex flex-col gap-2 }
+                        children:
+                          - type: text
+                            element: h4
+                            props: { className: font-bold text-bleu-fonce }
+                            content: Inclusif et accessible
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            children:
+                              - type: text
+                                element: span
+                                content: 'On accueille tous les publics dans leur '
+                              - type: text
+                                element: span
+                                props: { className: font-bold text-bleu-fonce }
+                                content: diversité
+                              - type: text
+                                element: span
+                                content: '. Nos espaces sont '
+                              - type: text
+                                element: span
+                                props: { className: font-bold text-bleu-fonce }
+                                content: bienveillants
+                              - type: text
+                                element: span
+                                content: ' et adaptés aux différents vécus et capacités.'
+                  - type: container
+                    props:
+                      className: bg-white rounded-card shadow-card p-8 flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: pourquoi nous faire confiance ?
+                      - type: container
+                        element: div
+                        props:
+                          role: list
+                          className: flex flex-col gap-3 type-small text-bleu-fonce
+                        children:
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Formé·es aux pédagogies actives et à la facilitation
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Expertise en violences sexistes et sexuelles
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Bénévoles passionné·es et engagé·es
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Association à but non lucratif reconnue
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Ateliers testés et améliorés en continu
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Cadre sécurisant et bienveillant garanti
+
+      # Section: Notre vision du consentement (#vision) — teaser of /le-consentement
+      - type: container
+        element: section
+        props:
+          id: vision
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-5xl mx-auto bg-mauve-light rounded-media p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center
+            children:
+              - type: container
+                props:
+                  className: md:col-span-8 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Ce qu'on défend
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: notre vision du consentement
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: "Deux définitions, l'acronyme RÈGLES, l'espace entre le oui et le non, dire et remercier le non, changer d'avis, et les biais qui nous poussent à dire oui : ce sur quoi reposent nos ateliers, en libre accès."
+              - type: container
+                props:
+                  className: md:col-span-4 flex md:justify-end
+                children:
+                  - type: link
+                    props:
+                      href: /le-consentement
+                      className: inline-flex items-center gap-2 whitespace-nowrap bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
+                    children:
+                      - type: text
+                        element: span
+                        content: Lire notre vision
+                      - type: icon
+                        props: { name: arrow-right, size: 20, strokeWidth: 2 }
+
+      # Section: Nos valeurs (#valeurs)
+      - type: container
+        element: section
+        props:
+          id: valeurs
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Ce qui nous guide
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: nos valeurs
+              - type: container
+                props:
+                  className: grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10
+                children:
+                  - component: value-card
+                    vars:
+                      icon: gem
+                      accent: text-mauve
+                      title: intégrité et clarté
+                      text: On encourage l'écoute de soi, l'alignement entre ce que l'on ressent, ce que l'on pense et ce que l'on dit et une expression sincère et transparente.
+                  - component: value-card
+                    vars:
+                      icon: sprout
+                      accent: text-mauve
+                      title: culture du consentement
+                      text: Le respect des limites, des désaccords et des "non" est une forme élevée de soin et de reconnaissance de l'autre conduisant à des relations plus authentiques et respectueuses.
+                  - component: value-card
+                    vars:
+                      icon: search
+                      accent: text-mauve
+                      title: réflexivité et doute
+                      text: L'examen de nos croyances, automatismes, biais et privilèges est un levier essentiel pour agir de façon plus juste.
+                  - component: value-card
+                    vars:
+                      icon: sparkles
+                      accent: text-mauve
+                      title: accessibilité et inclusion
+                      text: On travaille activement à rendre nos espaces compréhensibles, accessibles et accueillants à la diversité des vécus, des origines et des capacités.
+                  - component: value-card
+                    vars:
+                      icon: users
+                      accent: text-mauve
+                      title: responsabilité collective et individuelle
+                      text: Nos choix sont façonnés par nos besoins fondamentaux de liens, des contextes sociaux et des structures de pouvoir qu'on ne peut ignorer, on refuse donc de faire peser l'entière responsabilité sur les individus.
+                  - component: value-card
+                    vars:
+                      icon: palette
+                      accent: text-mauve
+                      title: gouvernance démocratique
+                      text: On aspire à ce que nos modes d'organisation internes incarnent les principes que l'on défend, entre partage du pouvoir, écoute et co-responsabilité.
+
+      # Section: L'équipe cœur (#equipe)
+      - type: container
+        element: section
+        props:
+          id: equipe
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-mauve-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Qui anime
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: l'équipe cœur
+              - type: container
+                props:
+                  className: max-w-6xl mx-auto w-full
+                children:
+                  # 5 members: 3 + 2 centred (widths in site.css .team-grid)
+                  - type: container
+                    props:
+                      className: team-grid flex flex-wrap justify-center gap-6
+                    children:
+                      - component: team-card
+                        vars:
+                          photo: /pictures/dilara.jpg
+                          alt: Dilara Simsek Araiz
+                          name: dilara simsek araiz
+                          role: Facilitatrice
+                          photoBg: bg-orange-light
+                          backBg: bg-mauve
+                          roleAccent: text-mauve
+                          bio: Diplômée en droit international et action humanitaire, je développe mon expertise dans la gestion de projets associatifs, la formation et le partenariat. Je suis particulièrement sensible à toutes les questions liées au genre, la migration et les droits humains. M'engager au sein de Merci pour ton non est l'opportunité pour moi de mettre mes compétences au service d'une cause qui me tient à coeur et en cohérence avec mes valeurs.
+                      - component: team-card
+                        vars:
+                          photo: /pictures/morgane.jpg
+                          alt: Morgane Bourgeais
+                          name: morgane bourgeais
+                          role: Facilitatrice
+                          photoBg: bg-orange-light
+                          backBg: bg-mauve
+                          roleAccent: text-mauve
+                          bio: "Juriste en droits humains de formation, puis formatrice et animatrice de prévention en santé sexuelle et prévention des violences de genre, également conseillère conjugale et familiale… Bref j'ai plusieurs casquettes mais une même ligne motrice : accompagner et offrir des espaces communs et collectifs d'échanges pour améliorer nos relations intimes, individuelles et collectives et nous permettre de lutter efficacement contre les violences et les discriminations. Facilitatrice pour Merci pour ton non, j'ai rejoint l'asso pour travailler la question du consentement en profondeur et pour partager de beaux moments de réflexion avec l'espoir de faire bouger quelques lignes."
+                      - component: team-card
+                        vars:
+                          photo: /pictures/mathilde.jpg
+                          alt: Mathilde Brière
+                          name: mathilde brière
+                          role: Coprésidente, facilitatrice
+                          photoBg: bg-orange-light
+                          backBg: bg-mauve
+                          roleAccent: text-mauve
+                          bio: Psychologue sociale depuis 10 ans, je suis passionnée par les dynamiques de groupe. J'ai co-fondé l'association et je facilite ces ateliers car je crois profondément qu'essaimer une culture plus soucieuse du consentement transforme positivement nos relations et nos manières de faire société.
+                      - component: team-card
+                        vars:
+                          photo: /pictures/thomas.jpg
+                          alt: Thomas Jeanneau
+                          name: thomas jeanneau
+                          role: Coprésident, facilitateur
+                          photoBg: bg-orange-light
+                          backBg: bg-mauve
+                          roleAccent: text-mauve
+                          bio: En tant que personne ayant un vécu d'homme cisgenre hétéro dans une société patriarcale, j'ai été confronté à mon manque d'éducation au consentement dans mes relations. Coprésident de l'association, formé à la facilitation et au consentement par Zohra de Love Experience, je souhaite contribuer à une éducation populaire pour construire des relations plus apaisées dans notre société. Je met mon expérience en entrepreneuriat et en informatique au service des actions de Merci pour ton non.
+                      - component: team-card
+                        vars:
+                          photo: /pictures/elisa.jpg
+                          alt: Elisa Garcia
+                          name: elisa garcia
+                          role: Communication
+                          photoBg: bg-orange-light
+                          backBg: bg-mauve
+                          roleAccent: text-orange-ink
+                          bio: Professionnelle de la communication depuis 8 ans, mes valeurs personnelles colorent mes créations et guident mes missions. Féministe et queer, je suis aussi engagée au sein du groupe Bipan Strasbourg. J'ai rejoint Merci pour ton non après avoir moi-même participé à un atelier de consentement. Aujourd'hui, je mets mes compétences au service de l'association pour faire rayonner ces valeurs de respect, d'écoute et d'émancipation auxquelles je crois profondément.
+
+      # Section: Partenaires (#partenaires)
+      - type: container
+        element: section
+        props:
+          id: partenaires
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-4 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Partenaires
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: ils nous soutiennent
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Deux lieux strasbourgeois qui accompagnent l'association.
+              - type: container
+                props:
+                  className: lg:col-span-8 grid sm:grid-cols-2 gap-6
+                children:
+                  - component: partner-card
+                    vars:
+                      logo: /partners/le-labo-des-partenariats.svg
+                      tileBg: bg-white
+                      name: Le Labo des Partenariats
+                      text: Tiers-lieu et incubateur d'innovation sociale de l'Eurométropole de Strasbourg.
+                      href: https://lelabo-partenariats.org
+                      linkLabel: Découvrir Le Labo des Partenariats
+                  - component: partner-card
+                    vars:
+                      logo: /partners/la-plage-digitale-blanc.webp
+                      tileBg: tile-bleu-fonce
+                      name: La Plage Digitale
+                      text: Tiers-lieu de l'innovation et espace de coworking associatif à Strasbourg.
+                      href: https://www.laplagedigitale.fr
+                      linkLabel: Découvrir La Plage Digitale
+
+      # Section: Agir avec nous (#agir) — the two ways in: bénévolat and don
+      - type: container
+        element: section
+        props:
+          id: agir
+          className: px-4 sm:px-6 pb-band-sm md:pb-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto bg-orange-light rounded-media p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center
+            children:
+              - type: container
+                props:
+                  className: md:col-span-7 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: agir avec nous
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: Rejoins l'équipe bénévole pour tenir un stand, accueillir un atelier ou faire connaître l'association. Tu peux aussi nous soutenir par un don, pour que nos ateliers restent à prix libre.
+              - type: container
+                props:
+                  className: md:col-span-5 flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 md:items-end lg:justify-end
+                children:
+                  - type: link
+                    props:
+                      href: /inscription
+                      className: inline-flex items-center justify-center gap-2 whitespace-nowrap bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
+                    children:
+                      - type: text
+                        element: span
+                        content: Devenir bénévole
+                      - type: icon
+                        props: { name: arrow-right, size: 20, strokeWidth: 2 }
+                  # TODO(don): HelloAsso URL — the organisation page stands in until the
+                  # donation form exists. Same URL in site-header, site-footer, notre-mission.
+                  - type: link
+                    props:
+                      href: https://www.helloasso.com/associations/merci-pour-ton-non
+                      target: _blank
+                      rel: noopener noreferrer
+                      aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
+                      className: inline-flex items-center justify-center gap-2 whitespace-nowrap border-2 border-bleu-fonce text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-bleu-fonce hover:text-white transition-colors
+                    children:
+                      - type: icon
+                        props: { name: heart, size: 18, strokeWidth: 2, aria-hidden: 'true' }
+                      - type: text
+                        element: span
+                        content: Nous faire un don
+
+  - component: site-footer

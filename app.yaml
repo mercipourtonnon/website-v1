@@ -119,6 +119,11 @@ components:
 
 pages:
   - $ref: ./config/pages/home.yaml
+  # Public site (review of 2026-10-09): Notre mission · Nos actions ▾ · Ressources.
+  - $ref: ./config/pages/notre-mission.yaml
+  - $ref: ./config/pages/nos-ateliers.yaml
+  - $ref: ./config/pages/nos-stands.yaml
+  - $ref: ./config/pages/nos-interventions.yaml
   - $ref: ./config/pages/mentions-legales.yaml
   - $ref: ./config/pages/newsletter.yaml
   - $ref: ./config/pages/le-consentement.yaml

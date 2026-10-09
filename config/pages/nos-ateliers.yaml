@@ -1,0 +1,1589 @@
+# /nos-ateliers — everything about the Niveau 1 workshop: what it is, who it
+# is for, the programme (with the two techniques moved from /le-consentement),
+# the practical facts, testimonials, FAQ and the upcoming dates (#events).
+# Split out of the one-page home (review of 2026-10-09). The section ids are
+# the home's old anchors, so /nos-ateliers#programme, #faq, #events… work.
+name: nos-ateliers
+path: /nos-ateliers
+sitemap:
+  priority: 0.9
+  changefreq: weekly
+meta:
+  lang: fr-FR
+  title: "Atelier de consentement à Strasbourg - Merci pour ton non"
+  description: "Atelier de consentement à prix libre à Strasbourg : 3h pour apprendre à dire non et poser ses limites. Programme, infos pratiques, FAQ et prochaines dates."
+  author: Merci pour ton non
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/nos-ateliers
+  openGraph:
+    type: website
+    title: "Atelier de consentement à prix libre à Strasbourg | Merci pour ton non"
+    description: "3 heures pour apprendre à dire non, poser tes limites et accueillir celles des autres. Programme, infos pratiques et prochaines dates."
+    url: https://mercipourtonnon.fr/nos-ateliers
+    image: https://mercipourtonnon.fr/social.png
+    imageAlt: "Atelier sur le consentement - Merci pour ton non"
+    siteName: Merci pour ton non
+    locale: fr_FR
+  twitter:
+    card: summary_large_image
+    title: "Atelier de consentement à prix libre à Strasbourg | Merci pour ton non"
+    description: "3 heures pour apprendre à dire non, poser tes limites et accueillir celles des autres. Programme, infos pratiques et prochaines dates."
+    image: https://mercipourtonnon.fr/social.png
+  keywords: atelier consentement, atelier consentement strasbourg, formation consentement, apprendre dire non, poser limites, atelier prix libre strasbourg
+  # FAQ JSON-LD — moved from the home with the FAQ it describes. It earns no
+  # rich result since 2026; kept because it matches visible content.
+  schema:
+      # EducationEvent JSON-LD on /ateliers/:slug (config/pages/atelier.yaml).
+    faqPage:
+      '@context': https://schema.org
+      '@type': FAQPage
+      mainEntity:
+        - '@type': Question
+          name: Je connais déjà le consentement
+          acceptedAnswer:
+            '@type': Answer
+            text: 'Super ! Cet atelier va au-delà de la théorie : tu vas pratiquer concrètement avec des exercices, identifier les biais subtils qui influencent tes choix, et muscler ta capacité à dire "non" dans des situations réelles.'
+        - '@type': Question
+          name: Je n'ai pas le temps
+          acceptedAnswer:
+            '@type': Answer
+            text: 3 heures, c'est l'équivalent d'un long film. Mais contrairement à un film, tu repars avec des outils pratiques que tu utiliseras toute ta vie pour améliorer toutes tes relations. Un investissement qui vaut le coup !
+        - '@type': Question
+          name: J'ai peur que ce soit trop intense
+          acceptedAnswer:
+            '@type': Answer
+            text: 'Le cadre est ultra sécurisant : tu n''es jamais obligé·e de partager ton vécu personnel, tu peux juste observer, et tout reste confidentiel. C''est ludique, bienveillant, et 100% respectueux de tes limites.'
+        - '@type': Question
+          name: Je ne peux pas me le permettre
+          acceptedAnswer:
+            '@type': Answer
+            text: Prix libre = 0€ si nécessaire. Aucune justification demandée, aucun jugement. L'argent ne doit jamais être un obstacle à ta participation.
+        - '@type': Question
+          name: Comment fonctionne le prix libre ?
+          acceptedAnswer:
+            '@type': Answer
+            text: Le prix libre signifie que tu donnes ce que tu veux et peux. Tu peux participer sans rien payer si c'est difficile pour toi. Si tu veux et peux soutenir l'association, ta contribution est bienvenue mais ne sera jamais obligatoire. Chacun·e participe selon ses moyens.
+        - '@type': Question
+          name: C'est uniquement sur le consentement sexuel ?
+          acceptedAnswer:
+            '@type': Answer
+            text: 'Non ! L''atelier explore le consentement dans toutes les dimensions : amicales, familiales, professionnelles... Le consentement concerne tous nos rapports humains.'
+        - '@type': Question
+          name: Je suis timide, vais-je devoir parler ?
+          acceptedAnswer:
+            '@type': Answer
+            text: Tu restes souverain·e ! Tu peux choisir de ne pas participer à certains exercices, juste observer, ou partir quand tu veux. Tout dans la bienveillance.
+        - '@type': Question
+          name: Je peux venir seul·e ?
+          acceptedAnswer:
+            '@type': Answer
+            text: Bien sûr ! La plupart viennent seul·es. C'est même plus enrichissant pour rencontrer de nouvelles personnes dans un cadre bienveillant.
+        - '@type': Question
+          name: Je peux annuler ?
+          acceptedAnswer:
+            '@type': Answer
+            text: Oui, tu peux annuler à tout moment ! Préviens-nous juste pour libérer ta place (6 à 15 personnes maximum).
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  preload:
+    - href: /fonts/NeueMachina/NeueMachina-Regular.otf
+      as: font
+      type: font/otf
+      crossorigin: anonymous
+    - href: /fonts/BelyDisplay/BelyDisplay-Regular.woff2
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  dnsPrefetch:
+    # Registration: one native HelloAsso event per date (www.helloasso.com).
+    # 17 Oct 2026 still books on Billetterie Plus; drop that host after it.
+    - https://www.helloasso.com
+    - https://plusbilletterie.helloasso.com
+  customElements:
+    - type: meta
+      attrs:
+        name: theme-color
+        content: '#FFAF00'
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+
+scripts:
+  externalScripts:
+    # Mobile menu close-on-link / Escape, current page, FAQ aria (site.js)
+    - src: /assets/site.js
+      defer: true
+      position: body-end
+
+components:
+  - component: site-header
+
+  - type: container
+    props:
+      id: contenu
+      className: bg-white overflow-x-clip
+    children:
+      # Page hero (#atelier) — the workshop in one screen, then the CTA and the next date
+      - type: container
+        element: section
+        props:
+          id: atelier
+          className: px-4 sm:px-6 pt-10 md:pt-16 pb-band-sm md:pb-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-5 order-last lg:order-first photo-frame frame-cyan
+                children:
+                  - type: image
+                    variant: hero
+                    props:
+                      src: /pictures/atelier/dilara-mathilde-echange.webp
+                      srcset: /pictures/atelier/dilara-mathilde-echange-sm.webp 800w, /pictures/atelier/dilara-mathilde-echange.webp 1600w
+                      sizes: '(min-width: 1024px) 480px, 100vw'
+                      alt: Dilara et Mathilde échangent en souriant avant le début d'un atelier
+                      className: w-full h-auto rounded-media shadow-card object-cover aspect-[4/3]
+              - type: container
+                props:
+                  className: lg:col-span-7 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: Nos actions · Ateliers de 3 heures
+                  - type: text
+                    element: h1
+                    props:
+                      className: type-page text-bleu-fonce
+                    content: nos ateliers de consentement
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Cet atelier t'invite à explorer le consentement dans un cadre bienveillant et participatif.
+                  - type: container
+                    props:
+                      className: inline-flex items-center gap-2 self-start type-small font-bold text-bleu-fonce bg-cyan-light rounded-pill px-4 py-2
+                    children:
+                      - type: icon
+                        props: { name: info, size: 18, strokeWidth: 2, className: text-cyan-ink }
+                      - type: text
+                        element: span
+                        content: 6 à 15 participants maximum
+                  - type: container
+                    props:
+                      className: grid sm:grid-cols-2 gap-8 pt-2
+                    children:
+                      - type: container
+                        props: { className: flex flex-col gap-4 }
+                        children:
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 text-bleu-fonce }
+                            content: ce qu'on explore ensemble
+                          - type: container
+                            element: div
+                            props: { role: list, className: flex flex-col gap-3 type-small text-bleu-fonce }
+                            children:
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Exercices ludiques pour mettre en pratique les notions clés
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Jeux de rôle bienveillants pour t'entraîner à dire non
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Mises en situation pour comprendre ce qui influence tes décisions
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Moments de partage dans un cadre sécurisant
+                      - type: container
+                        props: { className: flex flex-col gap-4 }
+                        children:
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 text-bleu-fonce }
+                            content: tu pourras emporter
+                          - type: container
+                            element: div
+                            props: { role: list, className: flex flex-col gap-3 type-small text-bleu-fonce }
+                            children:
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: sparkle, size: 20, strokeWidth: 2, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Une définition claire et mémorisable du consentement
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: sparkle, size: 20, strokeWidth: 2, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Des clés concrètes pour repérer les situations problématiques
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: sparkle, size: 20, strokeWidth: 2, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Plus de confiance pour poser tes limites
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: sparkle, size: 20, strokeWidth: 2, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Des outils pour des relations plus authentiques et respectueuses
+                  # CTA + next date (same server-rendered list as the home hero)
+                  - type: container
+                    props:
+                      className: flex flex-col sm:flex-row sm:items-center gap-4 pt-2
+                    children:
+                      - type: link
+                        props:
+                          href: '#events'
+                          className: inline-flex items-center justify-center gap-2 self-start whitespace-nowrap bg-orange text-bleu-fonce px-7 py-4 rounded-pill font-bold type-lead hover:bg-orange-hover transition-colors shadow-card
+                        children:
+                          - type: text
+                            element: span
+                            content: Voir les dates
+                          - type: icon
+                            props: { name: arrow-down, size: 20, strokeWidth: 2 }
+                      - type: list
+                        props:
+                          aria-label: Prochaine session
+                          className: list-none p-0 m-0 type-small text-bleu-fonce-70
+                        dataSource:
+                          table: workshops
+                          filter:
+                            - { field: status, operator: eq, value: published }
+                            - { field: session_date, operator: gte, value: $today }
+                          sort: [{ field: starts_at, direction: asc }]
+                          limit: 1
+                        listDisplay:
+                          emptyMessage: Nouvelles dates bientôt
+                        children:
+                          - type: text
+                            element: p
+                            props:
+                              className: type-small text-bleu-fonce-70
+                            children:
+                              - type: text
+                                element: span
+                                content: 'Prochaine session le '
+                              - type: text
+                                element: span
+                                props:
+                                  className: font-bold text-bleu-fonce
+                                content: $record.date_label à $record.time_label
+
+      # Section: Pour qui ? (#pour-qui)
+      - type: container
+        element: section
+        props:
+          id: pour-qui
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-orange-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: grid lg:grid-cols-12 gap-12
+                children:
+                  - type: container
+                    props:
+                      className: lg:col-span-4 flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: p
+                        props:
+                          className: type-overline text-orange-ink
+                        content: Pour qui
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: cet atelier est pour toi si...
+                      - type: container
+                        props:
+                          className: hidden lg:block photo-frame frame-orange mt-4
+                        children:
+                          - type: image
+                            props:
+                              src: /pictures/stand/carte-consentement-stand-sm.webp
+                              alt: Sur notre stand, une personne tend une carte de mise en situation à une bénévole souriante
+                              loading: lazy
+                              className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/4]
+                  - type: container
+                    props:
+                      className: lg:col-span-8 grid sm:grid-cols-2 gap-6 content-start
+                    children:
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: users
+                          accent: text-orange-ink
+                          title: tu es parent
+                          text: Tu souhaites améliorer la communication avec tes enfants, respecter leurs limites et leur apprendre à poser les leurs dès le plus jeune âge.
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: briefcase
+                          accent: text-orange-ink
+                          title: tu es professionnel·le
+                          text: Tu cherches à mieux gérer les relations au travail, poser tes limites professionnelles et créer des interactions plus saines avec collègues et clients.
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: heart
+                          accent: text-orange-ink
+                          title: tu es impliqué·e dans une relation
+                          text: 'Couple, relation ouverte, polyamour ou autre forme relationnelle : tu souhaites mieux communiquer tes besoins et désirs, et construire des relations plus équilibrées et authentiques.'
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: graduation-cap
+                          accent: text-orange-ink
+                          title: tu es étudiant·e ou jeune actif·ve
+                          text: Tu construis tes relations amicales, amoureuses et professionnelles, et tu aimerais naviguer ces interactions en respectant tes limites.
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: hand
+                          accent: text-orange-ink
+                          title: tu as du mal à dire non
+                          text: Tu te sens souvent obligé·e d'accepter des choses qui ne te conviennent pas, et tu cherches à apprendre à t'affirmer sans culpabiliser.
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: circle-help
+                          accent: text-orange-ink
+                          title: tu es simplement curieux·se
+                          text: Tu souhaites mieux comprendre le consentement au-delà du contexte sexuel et découvrir comment il s'applique dans toutes tes relations quotidiennes.
+              # Universality message
+              - type: container
+                props:
+                  className: bg-white rounded-card shadow-card p-8 md:p-10 flex flex-col gap-4 max-w-4xl
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: type-h4 text-bleu-fonce
+                    content: quel que soit ton profil...
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce
+                    children:
+                      - type: text
+                        element: span
+                        content: 'Homme, femme, non-binaire • Jeune ou moins jeune • En relation ou célibataire • Avec ou sans enfants • En questionnement ou déjà sensibilisé·e — '
+                      - type: text
+                        element: span
+                        props:
+                          className: font-bold text-mauve
+                        content: cet atelier est fait pour toi.
+                  - type: text
+                    element: p
+                    props:
+                      className: type-small text-bleu-fonce-70
+                    content: Le consentement est une compétence relationnelle universelle qui nous concerne tou·te·s.
+
+      # Section: Programme (#programme)
+      - type: container
+        element: section
+        props:
+          id: programme
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28 self-start
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Déroulé
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: programme de l'atelier (3h)
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Un parcours progressif pour explorer toutes les dimensions du consentement
+                  - type: container
+                    props:
+                      className: photo-frame frame-mauve mt-2
+                    children:
+                      - type: image
+                        props:
+                          src: /pictures/atelier/dilara-mathilde-animent.webp
+                          srcset: /pictures/atelier/dilara-mathilde-animent-sm.webp 800w, /pictures/atelier/dilara-mathilde-animent.webp 1600w
+                          sizes: '(min-width: 1024px) 480px, 100vw'
+                          alt: Dilara et Mathilde, assises face au groupe, animent un temps d'échange
+                          loading: lazy
+                          className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/2]
+                  - type: link
+                    props:
+                      href: '#events'
+                      className: hidden lg:inline-flex items-center gap-2 self-start bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
+                    children:
+                      - type: text
+                        element: span
+                        content: Je réserve ma place
+                      - type: icon
+                        props: { name: arrow-right, size: 20, strokeWidth: 2 }
+              # Timeline
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: lg:col-span-7 flex flex-col
+                children:
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '1'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: accueil & cadre
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Présentation de l'équipe, des objectifs et création d'un cadre sécurisant
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '2'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: les règles du consentement
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Découvrir l'acronyme RÈGLES (Révocable, Éclairé, Gagnant-Gagnant, Libre, Explicite, Spécifique)
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '3'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: dire non
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: S'entraîner à poser un "non" franc et remercier pour le "non" de l'autre
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '4'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: repérer les bris
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Reconnaître les défauts et bris de consentement dans des situations concrètes
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: container
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve-light text-mauve flex items-center justify-center }
+                        children:
+                          - type: icon
+                            props: { name: coffee, size: 18, strokeWidth: 2 }
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce-70 pt-1.5 }
+                        content: pause
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '5'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: la négociation gagnant-gagnant
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Explorer le spectre entre OUI et NON, et négocier pour trouver un accord juste
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '6'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: changer d'avis (révocable)
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Pratiquer le retrait du consentement et accueillir le changement d'avis de l'autre
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '7'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: identifier les biais
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Comprendre les pressions sociales, affectives et les biais qui influencent nos choix
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '8'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: tenir face à l'insistance
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Muscler sa capacité à résister aux pressions et tenir un "non"
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 ml-5 border-l-2 border-transparent }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '9'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: cercle de clôture
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Partage des apprentissages et distribution des ressources à emporter
+              - type: link
+                props:
+                  href: '#events'
+                  className: lg:hidden inline-flex items-center gap-2 self-start bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
+                children:
+                  - type: text
+                    element: span
+                    content: Je réserve ma place
+                  - type: icon
+                    props: { name: arrow-right, size: 20, strokeWidth: 2 }
+          # Ce qu'on pratique en atelier — moved from /le-consentement (#insistance,
+          # #nuances): techniques, not definitions.
+          - type: container
+            props:
+              className: max-w-7xl mx-auto mt-band-sm md:mt-band flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-3 max-w-3xl
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: type-h3 text-bleu-fonce
+                    content: ce qu'on pratique en atelier
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Deux exercices qu'on fait ensemble, à partir de situations du quotidien.
+              # Face à l'insistance
+              - type: container
+                element: div
+                props:
+                  id: insistance
+                  className: flex flex-col gap-4
+                children:
+                  - type: text
+                    element: h4
+                    props:
+                      className: type-h4 text-bleu-fonce
+                    content: tenir son non face à l'insistance
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce-70 max-w-3xl
+                    content: Ton non a été entendu, et pourtant on insiste. Trois façons de le tenir.
+                  - type: container
+                    props:
+                      className: grid md:grid-cols-3 gap-6
+                    children:
+                      - type: container
+                        props:
+                          className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                        children:
+                          - type: icon
+                            props: { name: repeat, size: 28, strokeWidth: 2, className: text-mauve }
+                          - type: text
+                            element: h5
+                            props:
+                              className: type-lead font-extrabold text-bleu-fonce
+                            content: le disque rayé
+                          - type: text
+                            element: p
+                            props:
+                              className: type-small text-bleu-fonce-70
+                            content: Répète ton non, tel quel, autant de fois qu'il le faut.
+                      - type: container
+                        props:
+                          className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                        children:
+                          - type: icon
+                            props: { name: megaphone, size: 28, strokeWidth: 2, className: text-mauve }
+                          - type: text
+                            element: h5
+                            props:
+                              className: type-lead font-extrabold text-bleu-fonce
+                            content: nommer la pression
+                          - type: text
+                            element: p
+                            props:
+                              className: type-small text-bleu-fonce-70
+                            content: « Tu insistes trop. » « Tu veux me mettre la pression ? » « Tu ne veux pas respecter mon non ? »
+                      - type: container
+                        props:
+                          className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                        children:
+                          - type: icon
+                            props: { name: door-open, size: 28, strokeWidth: 2, className: text-mauve }
+                          - type: text
+                            element: h5
+                            props:
+                              className: type-lead font-extrabold text-bleu-fonce
+                            content: partir
+                          - type: text
+                            element: p
+                            props:
+                              className: type-small text-bleu-fonce-70
+                            content: Tu peux couper court à l'interaction et t'en aller.
+              # Consentement, défaut, bris
+              - type: container
+                element: div
+                props:
+                  id: nuances
+                  className: flex flex-col gap-4
+                children:
+                  - type: text
+                    element: h4
+                    props:
+                      className: type-h4 text-bleu-fonce
+                    content: consentement, défaut, bris — lire une situation
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce-70 max-w-3xl
+                    content: Développer une culture du consentement, c'est aussi muscler notre capacité à lire une situation, en distinguant un consentement, un défaut de consentement et un bris de consentement. On s'y exerce à partir de situations du quotidien. Pour reconnaître un consentement, quatre repères.
+                  # Same look as the term-card template, with an h5 title to keep
+                  # the heading order under this h4.
+                  - type: container
+                    props:
+                      className: grid sm:grid-cols-2 gap-4
+                    children:
+                      - type: container
+                        props:
+                          className: term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2
+                        children:
+                          - type: text
+                            element: h5
+                            props:
+                              className: type-lead font-extrabold text-bleu-fonce
+                            content: Explicite
+                          - type: text
+                            element: p
+                            props:
+                              className: type-small text-bleu-fonce-70
+                            content: "C'est clair, exprimé, formulé."
+                          - type: container
+                            props:
+                              className: flex items-start gap-2 type-small text-mauve
+                            children:
+                              - type: icon
+                                props: { name: corner-down-right, size: 18, strokeWidth: 2, className: shrink-0 mt-1 }
+                              - type: text
+                                element: p
+                                content: "Il ne reste pas de doute."
+                      - type: container
+                        props:
+                          className: term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2
+                        children:
+                          - type: text
+                            element: h5
+                            props:
+                              className: type-lead font-extrabold text-bleu-fonce
+                            content: Spécifique
+                          - type: text
+                            element: p
+                            props:
+                              className: type-small text-bleu-fonce-70
+                            content: "Une action précise, à un moment donné."
+                          - type: container
+                            props:
+                              className: flex items-start gap-2 type-small text-mauve
+                            children:
+                              - type: icon
+                                props: { name: corner-down-right, size: 18, strokeWidth: 2, className: shrink-0 mt-1 }
+                              - type: text
+                                element: p
+                                content: "Pour autre chose, ou plus tard, on redemande."
+                      - type: container
+                        props:
+                          className: term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2
+                        children:
+                          - type: text
+                            element: h5
+                            props:
+                              className: type-lead font-extrabold text-bleu-fonce
+                            content: Individuel
+                          - type: text
+                            element: p
+                            props:
+                              className: type-small text-bleu-fonce-70
+                            content: "Une action avec une personne seulement."
+                          - type: container
+                            props:
+                              className: flex items-start gap-2 type-small text-mauve
+                            children:
+                              - type: icon
+                                props: { name: corner-down-right, size: 18, strokeWidth: 2, className: shrink-0 mt-1 }
+                              - type: text
+                                element: p
+                                content: "Le oui de l'une ne vaut pas pour celles d'à côté."
+                      - type: container
+                        props:
+                          className: term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2
+                        children:
+                          - type: text
+                            element: h5
+                            props:
+                              className: type-lead font-extrabold text-bleu-fonce
+                            content: Gagnant-gagnant
+                          - type: text
+                            element: p
+                            props:
+                              className: type-small text-bleu-fonce-70
+                            content: "Chacun·e en retire quelque chose de positif, aligné avec soi."
+                          - type: container
+                            props:
+                              className: flex items-start gap-2 type-small text-mauve
+                            children:
+                              - type: icon
+                                props: { name: corner-down-right, size: 18, strokeWidth: 2, className: shrink-0 mt-1 }
+                              - type: text
+                                element: p
+                                content: "Personne ne cède pour l'autre."
+
+      # Section: Infos pratiques (#infos-pratiques)
+      - type: container
+        element: section
+        props:
+          id: infos-pratiques
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-cyan-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: En pratique
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: infos pratiques
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Tout ce qu'il faut savoir avant de s'inscrire
+              - type: container
+                props:
+                  className: grid sm:grid-cols-2 lg:grid-cols-4 gap-6
+                children:
+                  - type: container
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-2 }
+                    children:
+                      - type: container
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-2 }
+                        children:
+                          - type: icon
+                            props: { name: clock, size: 24, strokeWidth: 2, className: text-cyan-ink }
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: durée
+                      - type: text
+                        element: p
+                        props: { className: font-bold text-bleu-fonce }
+                        content: 3 heures avec pause
+                      - type: text
+                        element: p
+                        props: { className: type-caption text-bleu-fonce-70 }
+                        content: Horaire selon la session
+                  - type: container
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-2 }
+                    children:
+                      - type: container
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-2 }
+                        children:
+                          - type: icon
+                            props: { name: map-pin, size: 24, strokeWidth: 2, className: text-cyan-ink }
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: lieu
+                      - type: text
+                        element: p
+                        props: { className: font-bold text-bleu-fonce }
+                        content: Strasbourg
+                      - type: text
+                        element: p
+                        props: { className: type-caption text-bleu-fonce-70 }
+                        content: Adresse communiquée aux inscrit·es
+                  - type: container
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-2 }
+                    children:
+                      - type: container
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-2 }
+                        children:
+                          - type: icon
+                            props: { name: users, size: 24, strokeWidth: 2, className: text-cyan-ink }
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: groupe
+                      - type: text
+                        element: p
+                        props: { className: font-bold text-bleu-fonce }
+                        content: 6 à 15 personnes
+                      - type: text
+                        element: p
+                        props: { className: type-caption text-bleu-fonce-70 }
+                        content: Intimité préservée
+                  - type: container
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-2 }
+                    children:
+                      - type: container
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-2 }
+                        children:
+                          - type: icon
+                            props: { name: hand-coins, size: 24, strokeWidth: 2, className: text-cyan-ink }
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: prix libre
+                      - type: text
+                        element: p
+                        props: { className: font-bold text-bleu-fonce }
+                        content: À partir de 0€
+                      - type: text
+                        element: p
+                        props: { className: type-caption text-bleu-fonce-70 }
+                        content: Tu donnes ce que tu veux/peux
+              # Bon à savoir + photo
+              - type: container
+                props:
+                  className: grid md:grid-cols-12 gap-8 items-center
+                children:
+                  - type: container
+                    props:
+                      className: md:col-span-4 photo-frame frame-cyan max-w-xs md:max-w-none
+                    children:
+                      - type: image
+                        props:
+                          src: /pictures/atelier/dilara-explique-sm.webp
+                          alt: Dilara, facilitatrice, explique une notion en s'appuyant sur ses notes
+                          loading: lazy
+                          className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/4]
+                  - type: container
+                    props:
+                      className: md:col-span-8 bg-white rounded-card shadow-card p-6 md:p-8 flex flex-col gap-4
+                    children:
+                      - type: text
+                        element: h3
+                        props:
+                          className: type-h4 text-bleu-fonce flex items-center gap-2
+                        content: bon à savoir
+                      - type: container
+                        element: div
+                        props:
+                          role: list
+                          className: flex flex-col gap-3 text-bleu-fonce
+                        children:
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-1 text-cyan-ink }
+                              - type: text
+                                element: span
+                                children:
+                                  - type: text
+                                    element: span
+                                    props: { className: font-bold }
+                                    content: 'Annulation possible'
+                                  - type: text
+                                    element: span
+                                    content: ' à tout moment (merci de nous prévenir par email pour libérer ta place)'
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-1 text-cyan-ink }
+                              - type: text
+                                element: span
+                                children:
+                                  - type: text
+                                    element: span
+                                    props: { className: font-bold }
+                                    content: 'Participation aux exercices libre'
+                                  - type: text
+                                    element: span
+                                    content: ' — tu peux juste observer si tu préfères'
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-1 text-cyan-ink }
+                              - type: text
+                                element: span
+                                children:
+                                  - type: text
+                                    element: span
+                                    props: { className: font-bold }
+                                    content: 'Cadre bienveillant et confidentiel'
+                                  - type: text
+                                    element: span
+                                    content: ' — ce qui se dit en atelier reste en atelier'
+
+      # Section: Testimonials (#temoignages) — each testimonial exists once.
+      # Three featured quotes (larger), then one CSS-columns list.
+      - type: container
+        element: section
+        props:
+          id: temoignages
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-pourpre-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-pourpre-hover
+                    content: Témoignages
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: ce que les participant·es en disent
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Des personnes qui sont venues, et qui en parlent mieux que nous.
+              - type: container
+                props:
+                  className: grid lg:grid-cols-3 gap-6 items-start
+                children:
+                  - component: testimonial-card
+                    vars:
+                      size: type-lead
+                      quote: "C'est la première fois que je participais à un atelier autour de la notion de consentement, et première fois tout court que je participais à un atelier militant, et ce fût une très belle première fois ! […] je me suis sentie en sécurité et à l'aise pour participer facilement. Le contenu en lui-même a été très intéressant et m'a apporté des notions nouvelles alors que je pensais déjà être assez calée sur le sujet. Les exercices pratiques sont un vrai plus ! […]"
+                      author: Leyla
+                  - component: testimonial-card
+                    vars:
+                      size: type-lead
+                      quote: "En tant qu'homme cis, je craignais que la question du consentement ne soit abordée que par le prisme des violences sexistes, dans lesquelles les hommes sont très majoritairement mis en cause. Mais l'angle de l'atelier était bien plus large que ça, et mettait en lumière le fait que poser ses limites, et dépasser les limites d'autrui, était sans rapport avec les questions de genre."
+                      author: Pierre
+                  - component: testimonial-card
+                    vars:
+                      size: type-lead
+                      quote: "Une très belle expérience à partager! Venu en couple, j'avais un peu d'appréhension à l'idée de parler de moi ou de nous. La force de l'atelier est d'approcher le consentement avec des exemples simples, progressifs et du quotidien : \"tu me prêtes ton crayon? ...\". Une prise de recul qui permet d'approcher la notion de manière sereine. Merci beaucoup."
+                      author: Nicolas
+              - type: container
+                props:
+                  className: wall-of-love
+                children:
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l'on se sente à l'aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d'atelier afin d'apprendre de nouvelles choses ou de solidifier les acquis !"
+                      author: Camille
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
+                      author: Sam
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
+                      author: Lou
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Atelier riche d'expériences et de questionnements, en douceur et bienveillance."
+                      author: Céline
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
+                      author: Alex
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Je recommande cet atelier à tout le monde ! Les 3h sont passées super vite grâce à une animation de qualité. J'ai hâte de pouvoir pratiquer toute la théorie."
+                      author: Juliette
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Atelier très instructif, avec des mises en pratique peu engageantes et qui font cependant bien réfléchir. Cadre très sécure, chaleureux et accueillant. Je recommande ++. La rencontre avec les autres participant·e·s est aussi très riche. J'en ressors avec de la force et de la bonne humeur."
+                      author: Anonyme
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Une formation éclairante pour toutes les générations sans oublier les hommes cis."
+                      author: Elodie
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Merci pour cet atelier passionnant, ludique et bienveillant. J'ai beaucoup appris. Je recommande !"
+                      author: Laetitia
+
+      # Section: FAQ (#faq) — toggle pattern replaces <details>/<summary>
+      - type: container
+        element: section
+        props:
+          id: faq
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-pourpre-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-4 flex flex-col gap-4 lg:sticky lg:top-28 self-start
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-pourpre-hover
+                    content: FAQ
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: questions fréquentes
+                  - type: link
+                    props:
+                      href: mailto:mercipourtonnon@gmail.com
+                      className: self-start font-bold text-pourpre-hover underline underline-offset-4 hover:text-bleu-fonce
+                    content: Une autre question ? Écris-nous
+              - type: container
+                props:
+                  className: lg:col-span-8 flex flex-col gap-3
+                children:
+                  - type: container
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
+                    children:
+                      - type: button
+                        props: { className: faq-q }
+                        interactions: { click: { toggleElement: '#faq-a-1' } }
+                        children:
+                          - type: text
+                            element: span
+                            content: Pourquoi participer si je connais déjà le consentement ?
+                          - type: icon
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
+                      - type: container
+                        props: { id: faq-a-1, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
+                            children:
+                              - type: text
+                                element: span
+                                content: 'Super que tu connaisses déjà le concept ! Cet atelier va au-delà de la théorie : tu vas '
+                              - type: text
+                                element: span
+                                props: { className: font-bold }
+                                content: pratiquer concrètement
+                              - type: text
+                                element: span
+                                content: ' avec des exercices, identifier les '
+                              - type: text
+                                element: span
+                                props: { className: font-bold }
+                                content: biais subtils
+                              - type: text
+                                element: span
+                                content: ' qui influencent tes choix, et muscler ta capacité à dire "non" dans des situations réelles.'
+                  - type: container
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
+                    children:
+                      - type: button
+                        props: { className: faq-q }
+                        interactions: { click: { toggleElement: '#faq-a-2' } }
+                        children:
+                          - type: text
+                            element: span
+                            content: Est-ce que 3 heures, c'est vraiment utile ?
+                          - type: icon
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
+                      - type: container
+                        props: { id: faq-a-2, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
+                            children:
+                              - type: text
+                                element: span
+                                content: '3 heures, c''est l''équivalent d''un long film. Mais contrairement à un film, tu repars avec des '
+                              - type: text
+                                element: span
+                                props: { className: font-bold }
+                                content: outils pratiques
+                              - type: text
+                                element: span
+                                content: ' que tu utiliseras toute ta vie pour améliorer toutes tes relations. Un investissement qui vaut le coup !'
+                  - type: container
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
+                    children:
+                      - type: button
+                        props: { className: faq-q }
+                        interactions: { click: { toggleElement: '#faq-a-3' } }
+                        children:
+                          - type: text
+                            element: span
+                            content: Est-ce que l'atelier peut être trop intense émotionnellement ?
+                          - type: icon
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
+                      - type: container
+                        props: { id: faq-a-3, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
+                            children:
+                              - type: text
+                                element: span
+                                content: 'Nous créons '
+                              - type: text
+                                element: span
+                                props: { className: font-bold }
+                                content: le cadre le plus sécurisant possible
+                              - type: text
+                                element: span
+                                content: ' : tu n''es jamais obligé·e de partager ton vécu personnel, tu peux juste observer, et tout reste confidentiel. C''est un '
+                              - type: text
+                                element: span
+                                props: { className: font-bold }
+                                content: espace de découverte
+                              - type: text
+                                element: span
+                                content: ' ludique et bienveillant, 100% respectueux de tes limites. Important : nous ne sommes '
+                              - type: text
+                                element: span
+                                props: { className: font-bold }
+                                content: pas des thérapeutes ou psychologues
+                              - type: text
+                                element: span
+                                content: ', mais des facilitateur·ices formé·es à la pédagogie du consentement.'
+                  - type: container
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
+                    children:
+                      - type: button
+                        props: { className: faq-q }
+                        interactions: { click: { toggleElement: '#faq-a-4' } }
+                        children:
+                          - type: text
+                            element: span
+                            content: Comment fonctionne le prix libre ?
+                          - type: icon
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
+                      - type: container
+                        props: { id: faq-a-4, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
+                            children:
+                              - type: text
+                                element: span
+                                content: 'Le prix libre signifie que tu donnes ce que tu veux et peux. Tu peux participer sans rien payer si c''est difficile pour toi. Si tu veux et peux soutenir l''association, ta contribution est bienvenue mais ne sera jamais obligatoire. '
+                              - type: text
+                                element: span
+                                props: { className: font-bold }
+                                content: 'C''est un principe fondamental de l''association : les moyens financiers ne doivent jamais être un frein à ta participation.'
+                              - type: text
+                                element: span
+                                content: ' Chacun·e participe selon ses moyens.'
+                  - type: container
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
+                    children:
+                      - type: button
+                        props: { className: faq-q }
+                        interactions: { click: { toggleElement: '#faq-a-5' } }
+                        children:
+                          - type: text
+                            element: span
+                            content: C'est uniquement sur le consentement sexuel ?
+                          - type: icon
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
+                      - type: container
+                        props: { id: faq-a-5, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
+                            content: 'Non ! L''atelier explore le consentement dans toutes les dimensions : amicales, familiales, professionnelles... Le consentement concerne tous nos rapports humains.'
+                  - type: container
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
+                    children:
+                      - type: button
+                        props: { className: faq-q }
+                        interactions: { click: { toggleElement: '#faq-a-6' } }
+                        children:
+                          - type: text
+                            element: span
+                            content: Je suis timide, vais-je devoir parler ?
+                          - type: icon
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
+                      - type: container
+                        props: { id: faq-a-6, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
+                            content: Tu restes souverain·e ! Tu peux choisir de ne pas participer à certains exercices, juste observer, ou partir quand tu veux. Tout dans la bienveillance.
+                  - type: container
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
+                    children:
+                      - type: button
+                        props: { className: faq-q }
+                        interactions: { click: { toggleElement: '#faq-a-7' } }
+                        children:
+                          - type: text
+                            element: span
+                            content: Je peux venir seul·e ?
+                          - type: icon
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
+                      - type: container
+                        props: { id: faq-a-7, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
+                            content: Bien sûr ! La plupart viennent seul·es. C'est même plus enrichissant pour rencontrer de nouvelles personnes dans un cadre bienveillant.
+                  - type: container
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
+                    children:
+                      - type: button
+                        props: { className: faq-q }
+                        interactions: { click: { toggleElement: '#faq-a-8' } }
+                        children:
+                          - type: text
+                            element: span
+                            content: Je peux annuler ma réservation ?
+                          - type: icon
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
+                      - type: container
+                        props: { id: faq-a-8, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
+                            content: Oui, tu peux annuler à tout moment ! Préviens-nous juste pour libérer ta place (6 à 15 personnes maximum).
+
+      # Section: Events / Réservation (#events) — one card listing every upcoming
+      # published date from the `workshops` table (gallery, server-rendered),
+      # each row with its own booking link (HelloAsso, one event per date).
+      - type: container
+        element: section
+        props:
+          id: events
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-orange-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto
+            children:
+              - type: container
+                props:
+                  className: text-center mb-12
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce mb-4
+                    content: réserve ta place maintenant
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Choisis la date qui te convient. Chaque atelier est à prix libre.
+              # Workshop card — one card, six dates, one registration URL.
+              - type: container
+                props:
+                  className: grid gap-8 max-w-2xl mx-auto
+                children:
+                  - type: container
+                    props:
+                      className: bg-white rounded-lg p-8 border border-gray-200 border-t-4 border-t-orange shadow-sm flex flex-col gap-6 text-left
+                    children:
+                      # Title
+                      - type: text
+                        element: h3
+                        props:
+                          className: text-2xl title-font text-bleu-fonce
+                        content: 'Atelier de consentement - Niveau 1 - Tout public'
+
+                      # Meta details — the practical facts a visitor weighs before
+                      # clicking. Times live per-date below, not here.
+                      - type: container
+                        props:
+                          className: flex flex-wrap items-center gap-x-5 gap-y-2 text-gray-600
+                        children:
+                          - type: container
+                            props:
+                              className: inline-flex items-center gap-2
+                            children:
+                              - type: icon
+                                props: { name: map-pin, className: w-5 h-5 text-orange }
+                              - type: text
+                                element: span
+                                content: Strasbourg — adresse communiquée aux inscrit·es
+                          - type: container
+                            props:
+                              className: inline-flex items-center gap-2
+                            children:
+                              - type: icon
+                                props: { name: users, className: w-5 h-5 text-orange }
+                              - type: text
+                                element: span
+                                content: 6 à 15 places
+                          # Brand orange on white is 1.8:1; orange-ink keeps the hue at 6.2:1.
+                          - type: container
+                            props:
+                              className: inline-flex items-center gap-2 font-bold text-orange-ink
+                            children:
+                              - type: icon
+                                props: { name: coins, className: w-5 h-5 text-orange }
+                              - type: text
+                                element: span
+                                content: prix libre
+
+                      # Upcoming dates, chronological, drawn on the server. Past
+                      # and cancelled dates drop out on their own ($today is the
+                      # server's UTC day).
+                      - type: list
+                        props:
+                          aria-label: Prochaines dates
+                          className: list-none p-0 m-0 flex flex-col
+                        dataSource:
+                          table: workshops
+                          filter:
+                            - { field: status, operator: eq, value: published }
+                            - { field: session_date, operator: gte, value: $today }
+                          sort: [{ field: starts_at, direction: asc }]
+                        listDisplay:
+                          emptyMessage: Pas de date ouverte pour l'instant. Inscris-toi à la newsletter pour recevoir les prochaines.
+                        children:
+                          - type: container
+                            visibility: { record: { field: co_name, isNotEmpty: true } }
+                            children:
+                              - component: event-date-row
+                                vars:
+                                  date: $record.date_label
+                                  time: $record.time_label
+                                  facilitators: $record.lead_name & $record.co_name
+                                  bookingUrl: $record.booking_url
+                                  detailsUrl: /ateliers/$record.slug
+                          - type: container
+                            visibility: { record: { field: co_name, isEmpty: true } }
+                            children:
+                              - component: event-date-row
+                                vars:
+                                  date: $record.date_label
+                                  time: $record.time_label
+                                  facilitators: $record.lead_name
+                                  bookingUrl: $record.booking_url
+                                  detailsUrl: /ateliers/$record.slug
+                      - type: text
+                        element: p
+                        props:
+                          className: text-sm text-gray-600
+                        children:
+                          - type: text
+                            element: span
+                            content: 'Aucune date ne te convient ? '
+                          - type: link
+                            props:
+                              href: /newsletter
+                              className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4
+                            content: Reçois les prochaines par la newsletter
+              - type: container
+                props:
+                  className: bg-white rounded-card shadow-card p-8 max-w-4xl mx-auto mt-12
+                children:
+                  # Contact option for questions
+                  - type: container
+                    props:
+                      className: text-center
+                    children:
+                      - type: text
+                        element: h3
+                        props:
+                          className: text-xl title-font text-bleu-fonce mb-3
+                        content: tu as des questions ?
+                      - type: text
+                        element: p
+                        props:
+                          className: text-bleu-fonce mb-4
+                        content: On est là pour échanger avec toi avant que tu t'inscrives. Aucune question n'est bête, on répond avec plaisir !
+                      - type: container
+                        props:
+                          className: flex flex-col sm:flex-row gap-4 justify-center items-center
+                        children:
+                          - type: link
+                            props:
+                              href: mailto:mercipourtonnon@gmail.com
+                              className: inline-flex items-center gap-2 text-orange-ink underline underline-offset-4 hover:text-bleu-fonce font-semibold transition-colors
+                            children:
+                              - type: icon
+                                props: { name: mail, className: w-5 h-5 -mt-0.5 }
+                              - type: text
+                                element: span
+                                content: mercipourtonnon@gmail.com
+                          - type: text
+                            element: span
+                            props:
+                              className: text-gray-400 hidden sm:inline
+                            content: •
+                          - type: link
+                            props:
+                              href: https://www.instagram.com/mercipourtonnon/
+                              target: _blank
+                              rel: noopener noreferrer
+                              className: inline-flex items-center gap-2 text-orange-ink underline underline-offset-4 hover:text-bleu-fonce font-semibold transition-colors
+                            children:
+                              - type: icon
+                                props: { name: arrow-up-right, className: w-5 h-5 -mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Instagram
+
+  - component: site-footer

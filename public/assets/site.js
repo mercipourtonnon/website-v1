@@ -2,8 +2,8 @@
 // Loaded on every page (defer, body-end). Team-card flip is pure CSS;
 // testimonial reveal is handled by Sovrium's scroll-animation runtime;
 // smooth anchor scrolling is CSS (scroll-behavior + scroll-margin-top).
-// Workshop dates are server-rendered from the `workshops` table (hero and
-// #events galleries in config/pages/home.yaml); nothing here touches them.
+// Workshop dates are server-rendered from the `workshops` table (home hero,
+// /nos-ateliers #events); nothing here touches them.
 (function () {
   'use strict';
 
@@ -26,51 +26,16 @@
     });
   }
 
-  // ── Scroll-spy: highlight the nav link of the section in view ────────────
-  function initScrollSpy() {
-    var ids = ['atelier', 'temoignages', 'pour-qui', 'programme', 'infos-pratiques',
-               'mission', 'valeurs', 'equipe', 'faq', 'newsletter'];
-    var desktopLinks = document.querySelectorAll('.nav-link');
-    var mobileLinks = document.querySelectorAll('.mobile-nav-link');
-    if (!desktopLinks.length && !mobileLinks.length) return;
-    var nav = document.querySelector('nav');
-
-    function updateActiveNav() {
-      var totalOffset = nav ? nav.offsetHeight : 0;
-      var scrollPosition = window.scrollY + totalOffset + 100;
-      var currentSection = '';
-
-      ids.forEach(function (id) {
-        var element = document.getElementById(id);
-        if (element) {
-          var top = element.offsetTop;
-          if (scrollPosition >= top && scrollPosition < top + element.offsetHeight) {
-            currentSection = '#' + id;
-          }
-        }
-      });
-
-      desktopLinks.forEach(function (link) {
-        var active = link.getAttribute('href') === currentSection;
-        link.classList.toggle('!text-orange', active);
-        link.classList.toggle('border-b-2', active);
-        link.classList.toggle('border-orange', active);
-      });
-
-      mobileLinks.forEach(function (link) {
-        var active = link.getAttribute('href') === currentSection;
-        link.classList.toggle('!text-orange', active);
-        link.classList.toggle('!bg-orange-light', active);
-        link.classList.toggle('border-l-4', active);
-        link.classList.toggle('border-orange', active);
-      });
-    }
-
-    updateActiveNav();
-    var scrollTimeout;
-    window.addEventListener('scroll', function () {
-      if (scrollTimeout) window.cancelAnimationFrame(scrollTimeout);
-      scrollTimeout = window.requestAnimationFrame(updateActiveNav);
+  // ── Current page: mark the drawer link of the page being read ────────────
+  // The header links are routes since the one-page home was split (review of
+  // 2026-10-09), so the old section scroll-spy had nothing left to match.
+  // The desktop links live in the navigation-menu island and are left alone.
+  function initCurrentPage() {
+    var path = window.location.pathname.replace(/\/$/, '') || '/';
+    document.querySelectorAll('#mobile-menu a.mobile-nav-link').forEach(function (link) {
+      if (link.getAttribute('href') !== path) return;
+      link.setAttribute('aria-current', 'page');
+      link.classList.add('!text-orange-ink', '!bg-orange-light', 'border-l-4', 'border-orange');
     });
   }
 
@@ -91,7 +56,7 @@
 
   function init() {
     initMobileMenuClose();
-    initScrollSpy();
+    initCurrentPage();
     initFaqAria();
   }
 
