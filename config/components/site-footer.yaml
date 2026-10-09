@@ -86,6 +86,9 @@ children:
               - type: link
                 props: { href: /mentions-legales, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
                 content: Mentions légales
+              - type: link
+                props: { href: /espace, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Espace bénévole
       # Social
       - type: container
         props:
