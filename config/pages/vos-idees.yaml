@@ -1,8 +1,8 @@
 # /vos-idees — the public way to help build the association (review of
 # 2026-10-09, A13): anyone can send an idea — an atelier for a specific
 # audience, a content, a format, a venue — through the public `idees` form
-# (config/forms/idees.yaml, embedded here with formRef; the row lands in the
-# `ideas` table, the coordination is mailed by on-idea). Indexable, in the
+# (config/forms/idees.yaml, embedded here with formRef; on-idea writes the
+# `ideas` row and mails the coordination). Indexable, in the
 # sitemap. On the static build (GitHub Pages) the form renders but cannot
 # submit (no server): the mailto fallback line below the form covers it (A14).
 # Mauve accent: exploration, co-construction (design.colorRoles).
@@ -264,14 +264,10 @@ components:
                 props:
                   className: lg:col-span-8 flex flex-col gap-6
                 children:
-                  # Sovrium 0.34.1: a `formRef` embed of a public form bound to a
-                  # table whose `create` excludes the visitor draws nothing for a
-                  # signed-out reader (the standalone /forms/idees renders and
-                  # accepts the submission — sovrium/sovrium#138). Two halves until
-                  # the fix ships or the data side changes: the embed for a signed-in
-                  # reader, a link to the standalone form for everyone else.
+                  # The `idees` form is standalone (no submitTo.table; on-idea writes
+                  # the row): on 0.34.1 a public form bound to a table the visitor may
+                  # not create in renders nothing when embedded (sovrium/sovrium#138).
                   - type: container
-                    visibility: { when: authenticated }
                     props:
                       className: bg-white rounded-card shadow-card p-6 sm:p-8
                     children:
@@ -279,36 +275,6 @@ components:
                         formRef: idees
                         props:
                           headingLevel: h2
-                  - type: container
-                    visibility: { when: unauthenticated }
-                    props:
-                      className: bg-white rounded-card shadow-card p-6 sm:p-8 flex flex-col gap-4
-                    children:
-                      - type: text
-                        element: h2
-                        props:
-                          className: type-h4 text-bleu-fonce
-                        content: une idée pour l'association ?
-                      - type: text
-                        element: p
-                        props:
-                          className: text-bleu-fonce
-                        content: "Un atelier pour un public précis, un contenu, un format, un lieu, un partenariat : dis-nous ce que tu voudrais qu'on construise. On lit tout, on répond si tu le souhaites."
-                      - type: link
-                        props:
-                          href: /forms/idees
-                          className: inline-flex items-center justify-center gap-2 self-start bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
-                        children:
-                          - type: text
-                            element: span
-                            content: Ouvrir le formulaire
-                          - type: icon
-                            props: { name: arrow-right, size: 20, strokeWidth: 2, aria-hidden: 'true' }
-                      - type: text
-                        element: p
-                        props:
-                          className: type-caption text-bleu-fonce-70
-                        content: Trois questions, deux minutes. Aucun compte à créer.
                   # A14: on the static build the form renders but cannot submit.
                   - type: text
                     element: p
