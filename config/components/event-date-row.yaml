@@ -1,43 +1,61 @@
-# Event date row — one session of the multi-date workshop.
-# Vars: $date ("samedi 19 septembre 2026"), $time ("14h – 17h"),
-# $facilitators ("Laetitia & Thomas"). Full Tailwind class tokens only.
+# Event date row — one workshop date, as drawn in the home #events gallery.
+# Vars:
+#   $date         "samedi 17 octobre 2026"
+#   $time         "14h"
+#   $facilitators "Mogo & Thomas"
+#   $bookingUrl   HelloAsso (or Billetterie Plus) registration page
+#   $detailsUrl   the date's own page, /ateliers/<slug>
+# Full Tailwind class tokens only.
 name: event-date-row
 type: container
 props:
-  className: flex items-start gap-3 py-3 border-b border-gray-100
+  className: flex flex-col gap-3 py-4 border-b border-gray-100 sm:flex-row sm:items-center sm:justify-between
 children:
-  # Bare calendar icon rather than the old event-card pill: six stacked pills
-  # would out-shout the single CTA below the list.
-  - type: icon
-    props: { name: calendar, className: w-5 h-5 text-orange shrink-0 mt-0.5 }
   - type: container
     props:
-      className: flex flex-col gap-0.5
+      className: flex items-start gap-3
     children:
-      # Primary line — date dominates, horaire follows. Wraps on narrow screens.
+      # Bare calendar icon: a stack of pills would out-shout the booking links.
+      - type: icon
+        props: { name: calendar, className: w-5 h-5 text-orange shrink-0 mt-0.5, aria-hidden: 'true' }
       - type: container
         props:
-          className: flex flex-wrap items-baseline gap-x-3 gap-y-1
+          className: flex flex-col gap-0.5
         children:
+          # Primary line — the date links to the date's own page.
+          - type: container
+            props:
+              className: flex flex-wrap items-baseline gap-x-3 gap-y-1
+            children:
+              - type: link
+                props:
+                  href: $detailsUrl
+                  className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                content: $date
+              - type: text
+                element: span
+                props:
+                  className: text-gray-600
+                content: $time
+          # Secondary line — facilitation, deliberately quieter.
           - type: text
             element: span
             props:
-              className: font-bold text-bleu-fonce
-            content: $date
-          - type: text
-            element: span
-            props:
-              className: text-gray-600
-            content: $time
-      # Secondary line — facilitation, deliberately quieter.
+              className: text-sm text-gray-600
+            content: avec $facilitators
+  # One booking link per date. The visible word is "Réserver"; the accessible
+  # name starts with it and adds the date, so the links never read alike.
+  # Dark ink on orange: white on #FFAF00 fails WCAG AA.
+  - type: link
+    props:
+      href: $bookingUrl
+      target: _blank
+      rel: noopener noreferrer
+      aria-label: Réserver ta place le $date (nouvel onglet)
+      className: inline-flex items-center justify-center gap-2 self-start shrink-0 bg-orange text-bleu-fonce px-5 py-2.5 rounded-full font-bold hover:bg-orange-hover transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-bleu-fonce focus-visible:ring-offset-2 sm:self-auto
+    children:
       - type: text
         element: span
-        props:
-          className: text-sm text-gray-500
-        children:
-          - type: text
-            element: span
-            content: 'avec '
-          - type: text
-            element: span
-            content: $facilitators
+        content: Réserver
+      - type: icon
+        props: { name: arrow-up-right, className: w-4 h-4, aria-hidden: 'true' }

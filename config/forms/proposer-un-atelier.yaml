@@ -1,0 +1,62 @@
+# A facilitator proposes one workshop date. Writes a `workshop_proposals` row
+# (status defaults to `proposed`; capacity, duration and venue keep the table
+# defaults and are set by an admin at review). Embedded on /espace/proposer
+# with formRef; also reachable at /forms/proposer-un-atelier under the same
+# access rule.
+id: 1
+name: proposer-un-atelier
+title: Proposer une date d'atelier
+description: Propose une date pour un atelier de consentement de niveau 1. L'équipe la relit avant de la mettre en ligne, et tu suis son avancée dans **Mes propositions**.
+access:
+  require: [admin, member]
+  redirectTo: /connexion
+submitTo:
+  table: workshop_proposals
+display:
+  submitLabel: Envoyer ma proposition
+antiSpam:
+  rateLimit: { perIp: 10, windowSeconds: 3600 }
+fields:
+  - kind: table-field
+    column: session_date
+    label: Date de l'atelier
+    helpText: Le jour où tu proposes d'animer l'atelier.
+    required: true
+  - kind: table-field
+    column: start_time
+    label: Heure de début
+    helpText: L'atelier dure 3h à partir de cette heure.
+    required: true
+  - kind: table-field
+    column: lead_facilitator
+    label: Facilitateur·ice principal·e
+    helpText: La personne qui porte l'atelier ce jour-là. Ça peut être toi.
+    required: true
+    optionsSource:
+      table: facilitators
+      displayField: display_name
+      filter: [{ field: active, operator: eq, value: true }]
+      sort: [{ field: display_name, direction: asc }]
+  - kind: table-field
+    column: co_facilitator
+    label: Co-facilitateur·ice (facultatif)
+    helpText: La personne qui anime avec toi, si vous êtes déjà en binôme.
+    optionsSource:
+      table: facilitators
+      displayField: display_name
+      filter: [{ field: active, operator: eq, value: true }]
+      sort: [{ field: display_name, direction: asc }]
+  - kind: table-field
+    column: note_to_team
+    label: Un mot pour l'équipe (facultatif)
+    helpText: Une contrainte, un lieu en tête, une envie particulière… tout ce qui nous aide à relire ta proposition.
+onSuccess:
+  type: successPage
+  title: Merci, ta proposition est envoyée
+  message: L'équipe la relit et tu suivras son avancée dans Mes propositions. Tu peux encore la modifier tant qu'elle n'a pas été relue.
+  actions:
+    - { label: Voir mes propositions, action: navigate, url: /espace }
+    - { label: Proposer une autre date, action: reset }
+onError:
+  type: message
+  message: Ta proposition n'a pas pu être envoyée. Vérifie les champs signalés, puis réessaie. Si ça bloque encore, écris-nous à mercipourtonnon@gmail.com.

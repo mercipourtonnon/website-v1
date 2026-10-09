@@ -65,8 +65,28 @@ components:
   - $ref: ./config/components/audience-card.yaml
   - $ref: ./config/components/value-card.yaml
   - $ref: ./config/components/team-card.yaml
+  - $ref: ./config/components/espace-shell.yaml
 
 pages:
   - $ref: ./config/pages/home.yaml
   - $ref: ./config/pages/mentions-legales.yaml
   - $ref: ./config/pages/newsletter.yaml
+  # One page per published workshop date (/ateliers/:slug).
+  - $ref: ./config/pages/atelier.yaml
+  # Espace facilitateur·ices (private, noindex, out of the sitemap).
+  - $ref: ./config/pages/espace-connexion.yaml
+  - $ref: ./config/pages/espace-accueil.yaml
+  - $ref: ./config/pages/espace-proposer.yaml
+  - $ref: ./config/pages/espace-proposition.yaml
+  - $ref: ./config/pages/espace-validation.yaml
+  - $ref: ./config/pages/espace-ateliers.yaml
+
+# Facilitators propose a workshop date (embedded on /espace/proposer).
+forms:
+  - $ref: ./config/forms/proposer-un-atelier.yaml
+
+# URLs of the retired static (GitHub Pages) export.
+redirects:
+  - { from: /index.html, to: / }
+  - { from: /newsletter.html, to: /newsletter }
+  - { from: /mentions-legales.html, to: /mentions-legales }

@@ -1,0 +1,126 @@
+# /espace — "Mes propositions": the proposals the signed-in person made.
+# workshop_proposals already scopes a member to her own rows; the explicit
+# proposed_by filter keeps an admin's list to her own too (the review queue
+# is /espace/validation).
+name: espace-accueil
+path: /espace
+access: { require: [admin, member], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Mes propositions - Espace facilitateur·ices
+  description: Les dates d'atelier que tu as proposées, et où en est chacune.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-5xl flex-col gap-6
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-1
+                children:
+                  - type: text
+                    element: h1
+                    props:
+                      className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                    content: mes propositions
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce
+                    content: Les dates que tu as proposées, et où en est chacune. Ouvre une proposition pour la modifier tant qu'elle n'est pas encore relue.
+              - type: link
+                props:
+                  href: /espace/proposer
+                  className: inline-flex shrink-0 items-center justify-center gap-2 self-start whitespace-nowrap rounded-full bg-orange px-5 py-2.5 font-bold text-bleu-fonce hover:bg-orange-hover focus-visible:ring-2 focus-visible:ring-bleu-fonce focus-visible:ring-offset-2 sm:self-auto
+                children:
+                  - type: icon
+                    props: { name: calendar-plus, className: w-4 h-4, aria-hidden: 'true' }
+                  - { type: text, element: span, content: Proposer une date }
+
+          # A server-drawn list rather than a grid: in 0.33.0 a grid's phone
+          # rows are not links and its desktop rows are not keyboard-reachable
+          # without an action column. Here each row has a real link.
+          # Dates read as stored (2027-01-16): a row template prints no
+          # localized date, and an itemTemplate list (which does) would print
+          # the raw status value, since the status options carry no labels.
+          # Status chips: tinted brand backgrounds, bleu-fonce ink (>= 10:1),
+          # and the word itself carries the meaning (never colour alone).
+          - type: list
+            props:
+              aria-label: Mes propositions de dates
+              className: list-none m-0 flex flex-col divide-y divide-gray-200 rounded-lg border border-gray-200 p-0
+            dataSource:
+              table: workshop_proposals
+              filter:
+                - { field: proposed_by, operator: eq, value: $currentUser.id }
+              sort: [{ field: session_date, direction: asc }]
+            listDisplay:
+              emptyMessage: Tu n'as encore proposé aucune date. Quand tu en proposes une, elle apparaît ici et tu peux suivre sa relecture.
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-2 px-4 py-4 sm:flex-row sm:items-center sm:justify-between
+                children:
+                  - type: container
+                    props: { className: flex flex-col gap-1 }
+                    children:
+                      - type: description-list
+                        layout: stacked
+                        items:
+                          - { term: Date, field: session_date }
+                          - { term: Début, field: start_time }
+                      - type: link
+                        props:
+                          href: /espace/propositions/$record.id
+                          aria-label: Voir la proposition du $record.session_date
+                          className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif
+                        content: Voir la proposition
+                  - type: container
+                    props: { className: flex }
+                    children:
+                      - type: text
+                        element: span
+                        visibility: { record: { field: status, eq: proposed } }
+                        props: { className: self-start rounded-full bg-mauve-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                        content: Proposée
+                      - type: text
+                        element: span
+                        visibility: { record: { field: status, eq: approved } }
+                        props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                        content: Validée, création en cours
+                      - type: text
+                        element: span
+                        visibility: { record: { field: status, eq: helloasso_draft } }
+                        props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                        content: Validée, mise en ligne en cours
+                      - type: text
+                        element: span
+                        visibility: { record: { field: status, eq: sync_error } }
+                        props: { className: self-start rounded-full bg-cyan-light px-3 py-1 text-sm font-medium text-bleu-fonce }
+                        content: Validée, mise en ligne en cours
+                      - type: text
+                        element: span
+                        visibility: { record: { field: status, eq: published } }
+                        props: { className: self-start rounded-full bg-cyan-lighter px-3 py-1 text-sm font-medium text-bleu-fonce }
+                        content: En ligne
+                      - type: text
+                        element: span
+                        visibility: { record: { field: status, eq: rejected } }
+                        props: { className: self-start rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-bleu-fonce }
+                        content: Non retenue
+                      - type: text
+                        element: span
+                        visibility: { record: { field: status, eq: withdrawn } }
+                        props: { className: self-start rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-bleu-fonce }
+                        content: Retirée

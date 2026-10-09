@@ -2,37 +2,10 @@
 // Loaded on every page (defer, body-end). Team-card flip is pure CSS;
 // testimonial reveal is handled by Sovrium's scroll-animation runtime;
 // smooth anchor scrolling is CSS (scroll-behavior + scroll-margin-top).
+// Workshop dates are server-rendered from the `workshops` table (hero and
+// #events galleries in config/pages/home.yaml); nothing here touches them.
 (function () {
   'use strict';
-
-  // ── Workshop dates ────────────────────────────────────────────────────────
-  // Keep in sync with the event-card list in config/pages/home.yaml. Drives the
-  // hero's "Prochaine session le …" line only; the #events section lists each
-  // workshop explicitly with its own HelloAsso registration link.
-  var workshopDates = [
-    new Date('2026-07-16T18:30:00')
-  ];
-
-  function getNextWorkshop() {
-    // A session stays "next" for the whole day it happens; once all dates
-    // have passed, return null so the static fallback text is kept rather
-    // than displaying a stale date as "next" (bug in the old site).
-    var startOfToday = new Date();
-    startOfToday.setHours(0, 0, 0, 0);
-    var next = workshopDates.find(function (d) { return d >= startOfToday; });
-    return next || null;
-  }
-
-  function formatDateWithYear(date) {
-    return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-  }
-
-  function injectDates() {
-    var next = getNextWorkshop();
-    if (!next) return;
-    var heroDate = document.getElementById('hero-next-date');
-    if (heroDate) heroDate.textContent = formatDateWithYear(next);
-  }
 
   // ── Mobile menu: close when a menu link is clicked ───────────────────────
   // The hamburger / close button / overlay toggle #mobile-menu via Sovrium's
@@ -102,7 +75,6 @@
   }
 
   function init() {
-    injectDates();
     initMobileMenuClose();
     initScrollSpy();
   }
