@@ -116,6 +116,8 @@ components:
   # Logo-less partner row — /notre-mission#partenaires and /nos-interventions#references.
   - $ref: ./config/components/partner-row.yaml
   - $ref: ./config/components/resource-card.yaml
+  # One row of the /ressources lists (bound to the `ressources` table).
+  - $ref: ./config/components/reference-row.yaml
   - $ref: ./config/components/knowledge-card.yaml
   - $ref: ./config/components/term-card.yaml
   # « Besoin d'aide maintenant ? » — on /nos-ateliers#cadre and /ressources.
