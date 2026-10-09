@@ -264,7 +264,7 @@ meta:
       description: Ateliers de consentement à prix libre à Strasbourg. Formation pratique pour apprendre à dire non et développer des relations saines.
       url: https://mercipourtonnon.fr
       logo: https://mercipourtonnon.fr/logo.svg
-      email: contact@mercipourtonnon.fr
+      email: mercipourtonnon@gmail.com
       priceRange: Prix libre (0€ - participation libre)
       address:
         '@type': PostalAddress
@@ -2465,7 +2465,7 @@ components:
                         children:
                           - type: link
                             props:
-                              href: mailto:contact@mercipourtonnon.fr
+                              href: mailto:mercipourtonnon@gmail.com
                               className: inline-flex items-center gap-2 text-orange-ink underline underline-offset-4 hover:text-bleu-fonce font-semibold transition-colors
                             children:
                               - type: icon

@@ -97,7 +97,7 @@ summary:focus-visible {
 /* Sovrium's `type: button` ships the design-system primary look (dark fill,
    fixed height). Icon-only toggles (menu open/close) reset it here. */
 .icon-btn {
-  display: inline-flex !important;
+  /* no `display` here: it must not override the `lg:hidden` utility */
   align-items: center !important;
   justify-content: center !important;
   width: 2.75rem !important;
