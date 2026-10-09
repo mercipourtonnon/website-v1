@@ -156,5 +156,5 @@ rowLevelPermissions:
 # into rows already there when the app starts (checked on SQLite: proposals
 # created before the column read back `coordination`). Since the 2026-10
 # governance roles, rows created before hold `coordination`: harmless (the
-# gardien role bypasses row rules), and scripts/migrate-governance-roles.sh
+# gardien role bypasses row rules), and scripts/migrate-governance-roles.mjs
 # rewrites them to `gardien`.
