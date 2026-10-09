@@ -1,0 +1,56 @@
+# Downloadable resource — add a resource = add one instance on /ressources.
+# Vars: $thumb (/resources/x.webp), $thumbAlt, $title,
+# $text, $meta ("PDF · A3 · 5 pages"), $href (download or share URL),
+# $cta ("Télécharger les affiches").
+name: resource-card
+type: container
+element: article
+props:
+  className: bg-white rounded-card shadow-card border border-bleu-fonce-light overflow-hidden grid sm:grid-cols-5
+children:
+  - type: container
+    props:
+      className: sm:col-span-2 bg-cyan-light flex items-center justify-center p-6
+    children:
+      - type: image
+        props:
+          src: $thumb
+          alt: $thumbAlt
+          loading: lazy
+          className: w-full max-w-56 h-auto rounded-control shadow-card
+  - type: container
+    props:
+      className: sm:col-span-3 p-6 sm:p-8 flex flex-col gap-4
+    children:
+      - type: text
+        element: p
+        props:
+          className: type-overline text-cyan-ink uppercase
+        content: $meta
+      - type: text
+        element: h3
+        props:
+          className: type-h4 text-bleu-fonce
+        content: $title
+      - type: text
+        element: p
+        props:
+          className: type-small text-bleu-fonce-70 flex-1
+        content: $text
+      - type: link
+        props:
+          href: $href
+          target: _blank
+          rel: noopener
+          className: inline-flex items-center justify-center gap-2 self-start bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
+        children:
+          - type: icon
+            props: { name: download, size: 20, strokeWidth: 2 }
+          - type: text
+            element: span
+            content: $cta
+      - type: text
+        element: p
+        props:
+          className: type-caption text-bleu-fonce-70
+        content: S'ouvre dans un nouvel onglet, sur kDrive (Infomaniak).

@@ -45,38 +45,50 @@
 | foreground-inverse | oklch(0.985 0 0) |  |  |
 | border | oklch(0.92 0 0) |  |  |
 | ring | oklch(0.205 0 0) |  |  |
-| primary | oklch(0.205 0 0) |  |  |
-| primary-hover | oklch(0.272 0 0) |  |  |
-| primary-active | oklch(0.14 0 0) |  |  |
-| primary-foreground | oklch(0.985 0 0) |  |  |
-| primary-subtle | oklch(0.965 0 0) |  |  |
+| primary | #130077 |  |  |
+| primary-hover | #24109A |  |  |
+| primary-active | #0C004F |  |  |
+| primary-foreground | #FFFFFF |  |  |
+| primary-subtle | #E6E0FF |  |  |
 | primary-subtle-foreground | oklch(0.205 0 0) |  |  |
-| success | oklch(0.45 0 0) |  |  |
-| warning | oklch(0.72 0 0) |  |  |
+| success | #E6F9F8 |  |  |
+| warning | #FFF8E6 |  |  |
 | error | #c13520 |  |  |
 | info | #398ad6 |  |  |
 | pourpre | #F5004F | Émotion, authenticité, découverte. Témoignages, sections émotionnelles. Jamais en fond de grande section : utiliser pourpre-light. | pourpre-light |
 | pourpre-hover | #D10042 |  |  |
 | pourpre-light | #FFF0F5 |  |  |
 | pourpre-lighter | #FFE0EA |  |  |
-| orange | #FFAF00 | Action, engagement, chaleur. Boutons d'inscription, CTAs principaux, liens actifs. Jamais pour une action contradictoire (annuler ET confirmer). | orange-light |
+| orange | #FFAF00 | Action, engagement, chaleur. Boutons d'inscription, CTAs principaux, liens actifs — en fond, toujours avec un texte bleu-fonce (8,8:1), jamais blanc (1,8:1). Jamais pour une action contradictoire (annuler ET confirmer). | orange-light |
 | orange-hover | #E69E00 |  |  |
 | orange-light | #FFF8E6 |  |  |
 | orange-lighter | #FFF0D1 |  |  |
+| orange-ink | #8F5200 | Version texte de l'orange : petits libellés, liens et sur-titres orange sur fond blanc ou clair. L'orange vif n'est jamais du texte (1,8:1). | orange-light |
 | orange-vif | #FF7000 | Variante chaude, en opposition au violet. Accent ponctuel uniquement. | orange-vif-light |
 | orange-vif-light | #FFF4E6 |  |  |
 | mauve | #7B01FE | Exploration, apprentissage, créativité. Sections pédagogiques, titres secondaires, invitations à la réflexion. | mauve-light |
 | mauve-hover | #6A01DB |  |  |
 | mauve-light | #F3E6FF |  |  |
 | mauve-lighter | #E6D1FF |  |  |
-| cyan | #12A19D | Validation, calme, ressources. Confirmations, ressources, sections factuelles. Pas en petit texte sur fond blanc (contraste). | cyan-light |
+| cyan | #12A19D | Validation, calme, ressources. Confirmations, ressources, sections factuelles. Pas en petit texte sur fond blanc (contraste) : utiliser cyan-ink. | cyan-light |
 | cyan-hover | #0F8A87 |  |  |
 | cyan-light | #E6F9F8 |  |  |
 | cyan-lighter | #D1F2F0 |  |  |
+| cyan-ink | #0B6E6B | Version texte du cyan : libellés, liens et titres de cartes cyan sur fond blanc ou cyan-light. | cyan-light |
 | bleu-fonce | #130077 | Texte principal et titres ; remplace le noir partout. | pourpre-light |
 | bleu-fonce-light | #E6E0FF |  |  |
 | bleu-fonce-50 | #130077 |  |  |
 | bleu-fonce-70 | #130077 |  |  |
+| primary-fg | #FFFFFF |  |  |
+| primary-subtle-fg | #130077 |  |  |
+| warning-fg | #130077 |  |  |
+| warning-foreground | #130077 |  |  |
+| warning-bg | #FFF8E6 |  |  |
+| warning-border | #FFAF00 |  |  |
+| success-fg | #130077 |  |  |
+| success-foreground | #130077 |  |  |
+| success-bg | #E6F9F8 |  |  |
+| success-border | #12A19D |  |  |
 
 ## Type scale
 
@@ -84,12 +96,24 @@ Each step emits `--text-{step}` and a matching `text-{step}` utility that carrie
 
 | Step | Utility | Size | Leading | Weight | Tracking | Face |
 | --- | --- | --- | --- | --- | --- | --- |
-| h1 | text-h1 | 4.5rem | 1.1 |  |  | Bely Display, Archivo Black, cursive |
-| h2 | text-h2 | 3rem | 1.15 |  |  | Bely Display, Archivo Black, cursive |
-| h3 | text-h3 | 2.25rem | 1.2 |  |  | Bely Display, Archivo Black, cursive |
-| body | text-body | 1.125rem | 1.7 | 400 |  | Neue Machina, Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif |
-| bodySmall | text-bodySmall | 0.9375rem | 1.6 | 300 |  | Neue Machina, Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif |
-| caption | text-caption | 0.875rem | 1.5 | 300 |  | Neue Machina, Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif |
+| display | text-display | 4.5rem | 0.95 |  |  | Bely Display, Archivo Black, cursive |
+| h1 | text-h1 | 3.25rem | 1 |  |  | Bely Display, Archivo Black, cursive |
+| h2 | text-h2 | 2.375rem | 1.1 |  |  | Bely Display, Archivo Black, cursive |
+| h3 | text-h3 | 1.75rem | 1.15 |  |  | Bely Display, Archivo Black, cursive |
+| h4 | text-h4 | 1.375rem | 1.25 |  |  | Bely Display, Archivo Black, cursive |
+| lead | text-lead | 1.25rem | 1.6 | 400 |  | Neue Machina, Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif |
+| body | text-body | 1.0625rem | 1.7 | 400 |  | Neue Machina, Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif |
+| bodySmall | text-bodySmall | 0.9375rem | 1.6 | 400 |  | Neue Machina, Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif |
+| caption | text-caption | 0.875rem | 1.5 | 400 |  | Neue Machina, Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif |
+| overline | text-overline | 0.8125rem | 1.4 | 800 | 0.06em | Neue Machina, Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif |
+
+## Spacing tokens
+
+| Token | Value |
+| --- | --- |
+| band | 6rem |
+| band-sm | 4rem |
+| block | 3rem |
 
 ## Radius tokens
 
@@ -102,6 +126,10 @@ Each step emits `--text-{step}` and a matching `text-{step}` utility that carrie
 | lg | 8px |
 | xl | 12px |
 | full | 9999px |
+| control | 0.75rem |
+| card | 1.5rem |
+| media | 2rem |
+| pill | 9999px |
 
 ## Breakpoint tokens
 
@@ -147,6 +175,8 @@ The elevation this app ships. `inherited` steps come from the platform; `declare
 | sm | 0 1px 2px rgb(0 0 0 / 0.08) | inherited |
 | md | 0 4px 12px rgb(0 0 0 / 0.06) | inherited |
 | lg | 0 8px 24px rgb(0 0 0 / 0.12) | inherited |
+| card | 0 1px 2px rgb(19 0 119 / 0.04), 0 12px 32px -12px rgb(19 0 119 / 0.14) | declared |
+| raised | 0 2px 4px rgb(19 0 119 / 0.05), 0 24px 48px -16px rgb(19 0 119 / 0.22) | declared |
 
 ## Imagery
 
@@ -163,6 +193,8 @@ The elevation this app ships. `inherited` steps come from the platform; `declare
 - Pattern: Cercles qui se chevauchent (rencontres, co-construction) en fond subtil.
 - Pattern: Lignes ondulées (fluidité, respect des limites) en filigrane très léger.
 - Pattern: Formes géométriques colorées et dégradés clairs (pourpre-light, orange-light, mauve-light, cyan-light) comme fonds ; jamais les teintes vives en fond de section.
+- Pattern: Photos en cadre arrondi (rounded-media) avec un cercle de couleur de marque décalé derrière ; jamais en pleine largeur façon stock, jamais de flou ni de blob animé.
+- Pattern: Une couleur d'accent par section, choisie selon son rôle (colorRoles) ; fonds de section en blanc ou en une seule teinte -light.
 
 ## Catalogue
 
@@ -273,6 +305,9 @@ These are applied by the app but have no faithful DTCG form, so they are carried
 
 | Declaration | Value |
 | --- | --- |
+| design.typeScale.overline.letterSpacing | 0.06em |
 | design.typeScale.families.title.transform | lowercase |
 | design.typeScale.families.title.letterSpacing | 0.05em |
 | design.typeScale.families.title.url | /assets/site.css |
+| design.elevation.card | 0 1px 2px rgb(19 0 119 / 0.04), 0 12px 32px -12px rgb(19 0 119 / 0.14) |
+| design.elevation.raised | 0 2px 4px rgb(19 0 119 / 0.05), 0 24px 48px -16px rgb(19 0 119 / 0.22) |
