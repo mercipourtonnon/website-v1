@@ -55,10 +55,15 @@ actions:
           // A checkbox always answers: true / false (or "on" / "").
           const rights = input.image_rights;
           data.image_rights = rights === true || rights === 'true' || rights === 'on';
-          // A new photo arrives as { url, name, size, mimeType }; nothing otherwise.
+          // A new photo arrives as { url: '/api/buckets/system/files/<key>', name,
+          // size, mimeType }; the column stores the storage key. Nothing when the
+          // picker was left alone.
           const photo = input.photo;
-          if (photo && typeof photo === 'object' && (photo as Record<string, unknown>).url) {
-            data.photo = photo;
+          if (photo && typeof photo === 'object') {
+            const url = String((photo as Record<string, unknown>).url || '');
+            const match = /\/api\/buckets\/[^/]+\/files\/([^/?#]+)$/.exec(url);
+            if (match) data.photo = decodeURIComponent(match[1]);
+            else context.log.warn(`photo ignorée : adresse inattendue ${url.slice(0, 120)}`);
           }
 
           const res = (await context.actions.record.upsert({
