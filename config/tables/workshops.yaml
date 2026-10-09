@@ -69,9 +69,10 @@ fields:
   - { id: 19, name: helloasso_form_slug, label: Slug HelloAsso, type: single-line-text }
 permissions:
   read: all
-  create: [admin]
-  update: [admin]
+  # Coordination: publish-workshop-on-site upserts the row with the presser's rights.
+  create: [admin, coordination]
+  update: [admin, coordination]
   delete: [admin]
   fields:
-    - { field: proposal, read: [admin], write: [admin] }
-    - { field: helloasso_form_slug, read: [admin], write: [admin] }
+    - { field: proposal, read: [admin, coordination], write: [admin, coordination] }
+    - { field: helloasso_form_slug, read: [admin, coordination], write: [admin, coordination] }

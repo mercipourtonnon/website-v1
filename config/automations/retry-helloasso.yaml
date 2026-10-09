@@ -1,4 +1,4 @@
-# "Réessayer HelloAsso" button (admin only): sync_error → approved, which starts
+# "Réessayer HelloAsso" button (coordination and admin): sync_error → approved, which starts
 # create-helloasso-event again. That automation looks the event up by title
 # before creating it, so a retry never duplicates an event that did get created.
 name: retry-helloasso
@@ -6,7 +6,12 @@ description: Relance la création HelloAsso d'une proposition en erreur.
 trigger:
   type: manual
   label: Réessayer HelloAsso
-  requiredRole: admin
+  # A single role name (an admin satisfies any). permissions.trigger spells out
+  # who may press it and can only narrow requiredRole. Pressing it runs with
+  # the presser's rights, so coordination needs write on the rows it changes.
+  requiredRole: coordination
+permissions:
+  trigger: [coordination, admin]
 timeout: 30000
 actions:
   - name: proposal
