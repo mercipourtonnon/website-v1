@@ -184,9 +184,11 @@ Every component type this build ships. A row carrying a reason is NOT drawn — 
 | input | form-controls |  |  |
 | input-group | form-controls |  |  |
 | radio-group | form-controls |  |  |
+| rating | form-controls |  | rating ships in this build and has no specimen in the catalogue yet, so there is nothing here to draw it from. |
 | record-picker | form-controls |  | Searches a table of yours and links the row it finds. This page is bound to no table — and binding it to one of yours is what the confidentiality bound forbids — so there are no candidates for it to offer. Its states, its paging and its create path are drawn as authored option sections on its own page. |
 | rich-text-editor | form-controls |  |  |
 | select | form-controls |  |  |
+| signature-pad | form-controls |  | A well to sign in, or a name to type, under the statement being agreed to. Pressing Sign uploads the mark and writes it onto the record the page is bound to, so the pad is a write path of its own, and a read-only console may carry none. Once signed it reads "Signed by … on …" from that record. See it on a data-bound page. |
 | slider | form-controls |  |  |
 | switch | form-controls |  |  |
 | textarea | form-controls |  |  |
@@ -201,8 +203,10 @@ Every component type this build ships. A row carrying a reason is NOT drawn — 
 | kanban | data |  |  |
 | kpi | data |  |  |
 | list | data |  |  |
+| map | data |  | Places one pin per record at its location, with a list of the same pins a keyboard can use. It needs a geolocation field on a table of yours, and this console reads none of yours; the platform’s specimen rows carry no location, so there is nothing to pin. See it on a data-bound page. |
 | matrix | data |  | Crosses two sets of nodes from a bound graph and marks each intersection an edge connects, so an absent pair stays a visible empty cell. It reads the same envelope the map next door does and meets the same wall: your own access map is the one graph this instance holds, and a fixture of flat rows gives it no two sets to cross. |
 | table | data |  |  |
+| tree | data |  | Nests the records of one table under their parents and opens them branch by branch. The hierarchy lives in a relationship that points back at the same table, and the platform’s specimen rows are flat, with no parent to nest under; your own tables are what this console may not read. See it on a data-bound page. |
 | card | layout |  |  |
 | container | layout |  |  |
 | flex | layout |  |  |
@@ -211,6 +215,7 @@ Every component type this build ships. A row carrying a reason is NOT drawn — 
 | split-pane | layout |  |  |
 | audio | content |  |  |
 | code | content |  |  |
+| file-preview | content |  | Shows a stored file inline: an image with zoom, a PDF in its viewer, anything else as a download. Every face is drawn from a file signed for the reader, and the only files this instance holds are in your buckets, which this console may not read. See it on a data-bound page. |
 | icon | content |  |  |
 | iframe | content |  | Not drawn here, and this is a refusal rather than a gap: this console renders every specimen flat, in one document, because a design system inside a nested scrolling document is not one a reader can read. Drawing an iframe specimen would put the frame back. Look at the page you embedded it on. |
 | image | content | default, avatar, thumbnail, hero |  |
@@ -228,6 +233,7 @@ Every component type this build ships. A row carrying a reason is NOT drawn — 
 | marquee | display |  |  |
 | record-field | display |  | Draws ONE field of the record the page it sits on is bound to. This page is bound to no record — and binding it to one of yours is what the confidentiality bound forbids — so there is nothing for it to read. The field CONTROLS it draws from are in the composed form below. |
 | scroll-area | display |  |  |
+| stepper | display |  |  |
 | swatch | display |  |  |
 | tabs | display |  |  |
 | timeline | display |  |  |

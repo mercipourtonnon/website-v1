@@ -28,8 +28,10 @@ SOVRIUM_GENERATE_ROBOTS=true \
   sovrium build app.yaml
 
 echo "▸ Post-processing dist/…"
-# The static exporter writes JS asset routes with a .html suffix — restore it.
-for f in dist/assets/*.js.html; do [ -e "$f" ] && mv "$f" "${f%.html}"; done
+# Since Sovrium 0.33 the exporter emits real .js assets (no more .js.html rename).
+# `auth` (for /_admin) makes the build emit OAuth discovery files and an
+# invitation page pointing at localhost — meaningless on static hosting.
+rm -rf dist/.well-known dist/accept-invitation.html
 find dist -name ".DS_Store" -delete
 rm -f dist/.gitkeep
 # Pages "deploy from branch" runs Jekyll unless told not to; keep CNAME bound.

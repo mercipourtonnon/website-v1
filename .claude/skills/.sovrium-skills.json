@@ -1,0 +1,156 @@
+{
+  "format": "sovrium-skills",
+  "schemaVersion": 1,
+  "engine": "0.33.0",
+  "target": "claude",
+  "files": [
+    {
+      "path": "sovrium-app/SKILL.md",
+      "sha256": "dfde53f7d929ce67b3554407e9e2ce5dc257d5f64f14c7bbf9a6e2f7cdceaab6"
+    },
+    {
+      "path": "sovrium-app/references/api-checks.md",
+      "sha256": "d88304ecc1af3222689765bbd81015cfbf9e2bb11aa14ff6bc7a15750d7cb3e3"
+    },
+    {
+      "path": "sovrium-app/references/browser-loop.md",
+      "sha256": "0e04bf8307228eff702246dafb4949c96c1287954701ec5e7d7d47070efe05e1"
+    },
+    {
+      "path": "sovrium-app/references/cli-verbs.generated.md",
+      "sha256": "a6fbeaee8cb6de4bfbb0be38296cad25a84fad0526b7516c6e4b6ca1ded12314"
+    },
+    {
+      "path": "sovrium-app/references/config-mcp.md",
+      "sha256": "f3f3851d0e6c1ecc07750813c51b043208a71708b681a4ed0c975f31966b5ce2"
+    },
+    {
+      "path": "sovrium-app/references/sources.md",
+      "sha256": "ba6edab615db7a969e09ae6a12e071721b3d3e453483d0387fcfb27cd86c11f4"
+    },
+    {
+      "path": "sovrium-automations/SKILL.md",
+      "sha256": "7c04ed2230bd6ff2d3d05649c064b46a7abd0a7e9a40f55ab880c0eb998446b8"
+    },
+    {
+      "path": "sovrium-automations/references/loops.md",
+      "sha256": "67d3d06022f624d635a29c9f996f43b3c7aaa3eb96bf40413732a9a2840c1cd0"
+    },
+    {
+      "path": "sovrium-automations/references/notifications.md",
+      "sha256": "4ed4810ae985c9aecbd79adf97c00b2f6fd981ede56f84968029a1b5afc54f53"
+    },
+    {
+      "path": "sovrium-automations/references/reliability.md",
+      "sha256": "23d07fc638f7b9b8867f0ba96e7f3f5357a35eabf10f3671302575f81d5a3dc5"
+    },
+    {
+      "path": "sovrium-automations/references/sources.md",
+      "sha256": "cecf38bfd290391619b299f1ac2cafabc252c55904ccd5f4393d5bc6ada2419a"
+    },
+    {
+      "path": "sovrium-automations/references/triggers-and-actions.generated.md",
+      "sha256": "cfd5ae6c0a1ed071f7648a9effb8df94b8b3c523b8187ca0f8031cc959d5aaf0"
+    },
+    {
+      "path": "sovrium-data-model/SKILL.md",
+      "sha256": "c29caf33ded934fdc7745f47420559a5fc5647843a90fd72978533d7830c2be4"
+    },
+    {
+      "path": "sovrium-data-model/references/field-types.generated.md",
+      "sha256": "e7a0f6356d65346b87d416835b110be8544976fe4d2abccca033a7d78fc29590"
+    },
+    {
+      "path": "sovrium-data-model/references/migrations.md",
+      "sha256": "f2284d54d274bbabbdb653f457b4593c793167832620840d1246aab5ad6a27c6"
+    },
+    {
+      "path": "sovrium-data-model/references/permissions.md",
+      "sha256": "f7fecf72cbad608a939f562691d4d850b96dbfa448cba6365a73c219584a0b1b"
+    },
+    {
+      "path": "sovrium-data-model/references/relations.md",
+      "sha256": "478da1e2f4bae4978b9fe14837c86570087d5fbb78ea6626059f5c589c3b0560"
+    },
+    {
+      "path": "sovrium-data-model/references/sources.md",
+      "sha256": "8227b19b38c3c4e0c586ce223183fa10298d2de2508f1a9fa5a2e11d5e2cc5ec"
+    },
+    {
+      "path": "sovrium-pages/SKILL.md",
+      "sha256": "b39463996568b5414fe169b1daf2921a841299d14e55ee92d7d13071a1087103"
+    },
+    {
+      "path": "sovrium-pages/references/accessibility.md",
+      "sha256": "0f131addd64c57e7d0dd8c3110ae9b1158c8e825774ebd7d9d4d6150cd4184e6"
+    },
+    {
+      "path": "sovrium-pages/references/anti-slop.md",
+      "sha256": "0f3d4f909cc5734b9228d9cc003fa9e7d14cf22ec7b8ac725c496fd21accffa9"
+    },
+    {
+      "path": "sovrium-pages/references/component-catalogue.generated.md",
+      "sha256": "9f4bed566f4adbb1687adcf27c0122703a1cad5af9129c01d3e046a15af0d897"
+    },
+    {
+      "path": "sovrium-pages/references/copy.md",
+      "sha256": "75091be230c7591dd3182e189bdacfb4e5bb8fe684949a05ab6a08d03ac8d0b6"
+    },
+    {
+      "path": "sovrium-pages/references/data-dense.md",
+      "sha256": "84a915595e3fc825ae4af1899351281641f08f261c015def43f4cbc237299b9a"
+    },
+    {
+      "path": "sovrium-pages/references/design-plan.md",
+      "sha256": "f682253173d6a974892d3fa68571535e0c90d909b4b0f29ac68918e3e5fe35db"
+    },
+    {
+      "path": "sovrium-pages/references/sources.md",
+      "sha256": "0664240d29ce3603c2f5da79ee019ebf47eb00b8d165fbffec9df0d65f02c02a"
+    },
+    {
+      "path": "sovrium-pages/references/states-and-forms.md",
+      "sha256": "3ab38ec31f5deb521cf8e25460b963ff9eebdf120c7b20101512c179e36f31e1"
+    },
+    {
+      "path": "sovrium-seo-geo/SKILL.md",
+      "sha256": "deb0808de2f68d693e21a32d8afe0475fd473b984af4e8f60af2c923193d4ce9"
+    },
+    {
+      "path": "sovrium-seo-geo/references/copy-for-search.md",
+      "sha256": "19599d52a1b1cbfe2c2fb621063aa9c367f4535205d8735e9f944a655837f689"
+    },
+    {
+      "path": "sovrium-seo-geo/references/crawlers.md",
+      "sha256": "18a6be6bbbf127d6b595aa6999903740e7bb085008043acc00fc66dcf61587ef"
+    },
+    {
+      "path": "sovrium-seo-geo/references/geo.md",
+      "sha256": "efb43b5a6fe427b410927448cdc0d764f0b47d38f059559a6283fe080edfeeda"
+    },
+    {
+      "path": "sovrium-seo-geo/references/report-template.md",
+      "sha256": "72a7657727859f16bac7433ca72b6cd9a39eec81f66b025228a6288c669db36a"
+    },
+    {
+      "path": "sovrium-seo-geo/references/seo-options.generated.md",
+      "sha256": "fe4ad910ba9e31cf2d2183eeafd25aa977e7743acedf7408f54d6e1102d53e08"
+    },
+    {
+      "path": "sovrium-seo-geo/references/social-previews.md",
+      "sha256": "bf194515e686fb8f677e4557790c1ae4c0bfc728e26145fde81cfa3c74c6cc0c"
+    },
+    {
+      "path": "sovrium-seo-geo/references/sources.md",
+      "sha256": "5bf0667294612098550d9147f375c54e96a7a05b8c0c2bdcc6e9d91c81314d21"
+    },
+    {
+      "path": "sovrium-seo-geo/references/structured-data.md",
+      "sha256": "9ea5a22e45af94872592ea5ce5f80fb9c33d27377a6c7ba83fb27e5dc09decba"
+    },
+    {
+      "path": "sovrium-seo-geo/references/technical.md",
+      "sha256": "a627155c80fbdc2dff189b70d2a6ee680b29c699f1645d511ba65a8a4d4563cc"
+    }
+  ]
+}
