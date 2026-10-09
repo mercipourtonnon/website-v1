@@ -1,7 +1,9 @@
 # Shared footer — used by every public page.
 # The "Le site" grid mirrors the header's IA (review of 2026-10-09). To add a
 # page link, append one `link` to it — every entry has the same one-line
-# shape; "Nous faire un don" opens HelloAsso (see TODO(don)).
+# shape; "Nous faire un don" opens the HelloAsso donation form, its URL
+# repeated in 4 places (header ×2, footer, notre-mission) because a page href
+# does not resolve `$env.X` on Sovrium 0.34.1.
 # Links are root-absolute so they work from every page. Social networks are
 # plain text links: Lucide has no brand marks, and the charter allows only
 # Lucide icons.
@@ -81,11 +83,10 @@ children:
               - type: link
                 props: { href: /newsletter, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
                 content: Newsletter
-              # TODO(don): HelloAsso URL — the organisation page stands in until the
-              # donation form exists. Same URL in site-header, site-footer, notre-mission.
+              # HelloAsso donation form — same URL in site-header, site-footer, notre-mission.
               - type: link
                 props:
-                  href: https://www.helloasso.com/associations/merci-pour-ton-non
+                  href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
                   target: _blank
                   rel: noopener noreferrer
                   aria-label: Nous faire un don sur HelloAsso (nouvel onglet)

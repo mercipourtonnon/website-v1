@@ -8,10 +8,11 @@
 # The drawer keeps the ids/classes site.js hooks into: #mobile-menu,
 # #menu-overlay, .mobile-nav-link (close on click / Escape, current page).
 # "Devenir bénévole" → /inscription is the only public entry into the espace.
-# The don URL is written out (TODO(don)) in this file, site-footer and
-# notre-mission: in Sovrium 0.34.1 a page href does not resolve `$env.X`
-# (it renders verbatim), and a template cannot place another template, so
-# neither an env var nor a shared don-link template can hold it once.
+# The don URL (HelloAsso donation form) is written out 4 times: twice in
+# this file, once in site-footer, once in notre-mission. In Sovrium 0.34.1 a
+# page href does not resolve `$env.X` (it renders verbatim), and a template
+# cannot place another template, so neither an env var nor a shared don-link
+# template can hold it once.
 name: site-header
 type: container
 element: header
@@ -62,11 +63,10 @@ children:
                   - { label: Nos interventions, href: /nos-interventions, description: 'Auprès des entreprises, des assos et des établissements' }
               - { label: Ressources, href: /ressources }
               - { label: Devenir bénévole, href: /inscription }
-          # TODO(don): HelloAsso URL — the organisation page stands in until the
-          # donation form exists. Same URL in site-header, site-footer, notre-mission.
+          # HelloAsso donation form — same URL in site-header, site-footer, notre-mission.
           - type: link
             props:
-              href: https://www.helloasso.com/associations/merci-pour-ton-non
+              href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
               target: _blank
               rel: noopener noreferrer
               aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
@@ -173,11 +173,10 @@ children:
               - type: link
                 props: { href: /inscription, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
                 content: Devenir bénévole
-              # TODO(don): HelloAsso URL — the organisation page stands in until the
-              # donation form exists. Same URL in site-header, site-footer, notre-mission.
+              # HelloAsso donation form — same URL in site-header, site-footer, notre-mission.
               - type: link
                 props:
-                  href: https://www.helloasso.com/associations/merci-pour-ton-non
+                  href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
                   target: _blank
                   rel: noopener noreferrer
                   aria-label: Nous faire un don sur HelloAsso (nouvel onglet)

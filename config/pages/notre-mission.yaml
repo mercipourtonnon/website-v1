@@ -631,11 +631,10 @@ components:
                         content: Devenir bénévole
                       - type: icon
                         props: { name: arrow-right, size: 20, strokeWidth: 2 }
-                  # TODO(don): HelloAsso URL — the organisation page stands in until the
-                  # donation form exists. Same URL in site-header, site-footer, notre-mission.
+                  # HelloAsso donation form — same URL in site-header, site-footer, notre-mission.
                   - type: link
                     props:
-                      href: https://www.helloasso.com/associations/merci-pour-ton-non
+                      href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
                       target: _blank
                       rel: noopener noreferrer
                       aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
