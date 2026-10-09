@@ -2,7 +2,7 @@
 # down, a bad list id, a profile that could not be saved…). Same pattern as
 # notify-helloasso-failure; skipped when ADMIN_NOTIFY_EMAIL is not set.
 name: notify-espace-failure
-description: Prévient la coordination quand une automatisation de l'espace bénévole échoue.
+description: Prévient le Cercle Gardien quand une automatisation de l'espace bénévole échoue.
 trigger:
   type: automation-failure
   automations:
@@ -13,6 +13,7 @@ trigger:
     - archive-member
     - on-member-validated
     - on-member-archived
+    - sync-member-groups
     - on-news-published
     - on-participation
 timeout: 60000

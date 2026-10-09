@@ -78,14 +78,24 @@ fields:
     default: unknown
     options: [unknown, yes, no]
 permissions:
-  # Facilitators and coordination. Never `all`, never `member` (a member is any
-  # bénévole, who has no business reading participants' data).
-  read: [admin, coordination, facilitateur]
+  # Facilitation and logistique (groups), the Cercle Gardien. Never `all`, never
+  # a circle (any bénévole has no business reading participants' data).
+  # The trésorerie reads the table too, but none of the personal fields below:
+  # without table read, the workshops rollups over it (online revenue, counts,
+  # total) are hidden from her as well.
+  read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin]
   # On-site walk-ins (the form locks source, status and attendance).
-  create: [admin, coordination, facilitateur]
-  update: [admin, coordination, facilitateur]
+  create: ['group:facilitation', 'group:logistique', gardien, admin]
+  update: ['group:facilitation', 'group:logistique', gardien, admin]
   delete: [admin]
   fields:
+    # Who the participant is: never the trésorerie.
+    - { field: first_name, read: ['group:facilitation', 'group:logistique', gardien, admin] }
+    - { field: last_name, read: ['group:facilitation', 'group:logistique', gardien, admin] }
+    - { field: full_name, read: ['group:facilitation', 'group:logistique', gardien, admin] }
+    - { field: participant_email, read: ['group:facilitation', 'group:logistique', gardien, admin] }
+    - { field: phone, read: ['group:facilitation', 'group:logistique', gardien, admin] }
+    - { field: notes, read: ['group:facilitation', 'group:logistique', gardien, admin] }
     - { field: external_id, write: [admin] }
     - { field: order_id, write: [admin] }
     - { field: amount_paid, write: [admin] }

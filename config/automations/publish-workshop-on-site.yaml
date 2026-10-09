@@ -1,4 +1,4 @@
-# "Publier sur le site" button (coordination and admin), once the admin has finished and
+# "Publier sur le site" button (Cercle Gardien and admin), once the admin has finished and
 # published the event in the HelloAsso back office (registration questions,
 # banner, price check). Puts the date in the public `workshops` catalogue.
 # Pressing it twice updates the same row (upsert by slug), never a second one.
@@ -9,10 +9,12 @@ trigger:
   label: Publier sur le site
   # A single role name (an admin satisfies any). permissions.trigger spells out
   # who may press it and can only narrow requiredRole. Pressing it runs with
-  # the presser's rights, so coordination needs write on the rows it changes.
-  requiredRole: coordination
+  # the presser's rights, so gardien needs write on the rows it changes.
+  # Not the logistique group: requiredRole and permissions.trigger read the
+  # caller's role only (Sovrium 0.34.1); see workshop_proposals.yaml.
+  requiredRole: gardien
 permissions:
-  trigger: [coordination, admin]
+  trigger: [gardien, admin]
 timeout: 60000
 actions:
   - name: proposal

@@ -7,10 +7,10 @@
 # the list (drawn from an item template, so it follows the bar) and the
 # calendar both subscribe. The status and date filters are part of each
 # binding, so a reader cannot lift them: drafts never show, even to the
-# coordination.
+# agenda managers.
 name: espace-agenda
 path: /espace/agenda
-access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+access: { require: [member, coeur, gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR

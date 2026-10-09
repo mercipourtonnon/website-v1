@@ -1,18 +1,21 @@
-# /espace/coordination/membres — the coordination's view of every bénévole.
+# /espace/coordination/membres — the Cercle Gardien's view of every bénévole.
 # Pending applications come first, in their own grid; the second grid lists
 # everyone else. The Valider / Refuser / Archiver columns are the members
 # table's own button fields (validate, refuse, archive): each shows on the
 # statuses its field declares and runs validate-member / refuse-member /
-# archive-member on its row (gated to coordination+, status re-checked).
+# archive-member on its row (gated to gardien+, status re-checked).
 # A grid action column calling the same automations sent no request for the
-# coordination in 0.33, so the button fields are used; they ask no
+# old coordination role in 0.33, so the button fields are used; they ask no
 # confirmation. The row opens the full profile.
 # Status chips: option labels with the table's valueLabels, toned by cellStyle
 # (warning = waiting, success = validated, muted = refused / archived); the
 # word carries the meaning, never the colour alone.
+# « Rôles bénévoles » (volunteer_roles): a column on both grids, edited in the
+# row panel (rowExpand), where only gardien/admin may write it (members field
+# rule). sync-member-groups turns the ticks into group memberships.
 name: espace-coordination-membres
 path: /espace/coordination/membres
-access: { require: [coordination, admin], redirectTo: /connexion }
+access: { require: [gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR
@@ -42,7 +45,12 @@ components:
                 element: p
                 props:
                   className: text-bleu-fonce
-                content: Les candidatures à relire, puis toute l'équipe. Ouvre une ligne pour lire la fiche complète.
+                content: Les candidatures à relire, puis toute l'équipe. Ouvre une ligne pour lire la fiche complète et cocher ses rôles bénévoles.
+              - type: text
+                element: p
+                props:
+                  className: text-sm text-bleu-fonce-70
+                content: Cocher un rôle bénévole donne à la personne les outils qui vont avec, dès que son compte est dans le Cercle Cœur. Le cercle lui-même se change dans la console d'administration (« Changer le rôle »).
           - type: container
             element: section
             props:
@@ -70,7 +78,7 @@ components:
                 emptyMessage: Aucune candidature en attente. Les nouvelles inscriptions arrivent ici.
                 rowExpand:
                   title: Fiche bénévole
-                  fields: [display_name, pronoun, contact_email, phone, image_rights, why, intentions, wishes, fears, resources, skills, dislikes, work_style, preferred_slots, facilitator, validated_at, joined_at]
+                  fields: [display_name, pronoun, contact_email, phone, image_rights, why, intentions, wishes, fears, resources, skills, dislikes, work_style, preferred_slots, volunteer_roles, facilitator, validated_at, joined_at]
                 columns:
                   - { field: display_name, label: Nom }
                   - field: status
@@ -81,6 +89,7 @@ components:
                       - { when: { eq: pending }, tone: warning }
                       - { when: { eq: validated }, tone: success }
                       - { when: { in: [refused, archived] }, tone: muted }
+                  - { field: volunteer_roles, label: Rôles bénévoles }
                   - { field: contact_email, label: Email }
                   - { field: phone, label: Téléphone }
                   - { field: joined_at, label: Inscrit·e le, format: short-date }
@@ -114,7 +123,7 @@ components:
                 emptyMessage: Personne pour l'instant.
                 rowExpand:
                   title: Fiche bénévole
-                  fields: [display_name, pronoun, contact_email, phone, image_rights, why, intentions, wishes, fears, resources, skills, dislikes, work_style, preferred_slots, facilitator, validated_at, joined_at]
+                  fields: [display_name, pronoun, contact_email, phone, image_rights, why, intentions, wishes, fears, resources, skills, dislikes, work_style, preferred_slots, volunteer_roles, facilitator, validated_at, joined_at]
                 columns:
                   - { field: display_name, label: Nom }
                   - field: status
@@ -125,6 +134,7 @@ components:
                       - { when: { eq: pending }, tone: warning }
                       - { when: { eq: validated }, tone: success }
                       - { when: { in: [refused, archived] }, tone: muted }
+                  - { field: volunteer_roles, label: Rôles bénévoles }
                   - { field: contact_email, label: Email }
                   - { field: phone, label: Téléphone }
                   - { field: joined_at, label: Inscrit·e le, format: short-date }

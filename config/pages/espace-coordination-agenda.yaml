@@ -1,10 +1,10 @@
-# /espace/coordination/agenda — the coordination edits events and their needs
+# /espace/coordination/agenda — logistique, communication and the Cercle Gardien edit events and their needs
 # in grids (in-cell editing, « Nouvel enregistrement », the row panel for the
 # rich-text fields), and reads who signed up to what. Every status shows here,
 # drafts included. Publishing = setting the status to Publié.
 name: espace-coordination-agenda
 path: /espace/coordination/agenda
-access: { require: [coordination, admin], redirectTo: /connexion }
+access: { require: ['group:logistique', 'group:communication', gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR

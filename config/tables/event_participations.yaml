@@ -4,7 +4,7 @@
 #
 # member+ read every sign-up (« qui vient ? »),
 # create only for themselves, and change or delete only their own. The
-# coordination manages them all.
+# Cercle Gardien manages them all.
 id: 8
 name: event_participations
 fields:
@@ -29,16 +29,16 @@ fields:
   - { id: 4, name: comment, label: Commentaire, type: long-text }
   - { id: 5, name: created_at, label: Inscrit·e le, type: created-at }
   # Technical, see members.editor_role.
-  - { id: 6, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+  - { id: 6, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: gardien }
 permissions:
-  read: [member, facilitateur, coordination, admin]
-  create: [member, facilitateur, coordination, admin]
-  update: [member, facilitateur, coordination, admin]
-  delete: [member, facilitateur, coordination, admin]
+  read: [member, coeur, gardien, admin]
+  create: [member, coeur, gardien, admin]
+  update: [member, coeur, gardien, admin]
+  delete: [member, coeur, gardien, admin]
   fields:
-    - { field: event, write: [member, facilitateur, coordination, admin] }
-    - { field: member, write: [coordination, admin] }
-    - { field: editor_role, read: [coordination, admin], write: [admin] }
+    - { field: event, write: [member, coeur, gardien, admin] }
+    - { field: member, write: [gardien, admin] }
+    - { field: editor_role, read: [gardien, admin], write: [admin] }
 # No read rule: one reading `event.status` through the relationship empties
 # server-side reads in Sovrium 0.33.0 (see event_needs.yaml). Sign-ups to a
 # draft event are harmless: the event itself stays hidden.

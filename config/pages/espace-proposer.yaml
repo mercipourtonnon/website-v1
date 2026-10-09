@@ -1,7 +1,7 @@
 # /espace/proposer — the proposal form (config/forms/proposer-un-atelier.yaml).
 name: espace-proposer
 path: /espace/proposer
-access: { require: [admin, coordination, facilitateur], redirectTo: /connexion }
+access: { require: ['group:facilitation', gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR

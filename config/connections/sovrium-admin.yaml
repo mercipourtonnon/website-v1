@@ -1,0 +1,38 @@
+# This app's own team API, called by sync-member-groups to mirror a member's
+# « Rôles bénévoles » into her `group:` memberships.
+#
+# Workaround (Sovrium 0.34.1): no automation action and no console screen add a
+# person to a group; only POST /api/auth/organization/add-team-member does, for
+# an admin (sovrium/sovrium#134). The key is an admin's self-service API key (auth.apiKeys), minted
+# once with POST /api/auth/api-key/create while signed in as an admin.
+# `organizationId` must be sent: an API-key caller has no active organization.
+#
+# The outbound guard refuses loopback addresses, so this round trip only works
+# where BASE_URL is the public origin (production), never on localhost.
+name: sovrium-admin
+label: Sovrium (équipes)
+description: Ajoute et retire les bénévoles des groupes (rôles bénévoles).
+type: apiKey
+baseUrl: $env.BASE_URL
+props:
+  key: $env.SOVRIUM_ADMIN_API_KEY
+  header: x-api-key
+operations:
+  # → { teams: [{ id, name, organizationId }] }; one team per auth.groups entry.
+  - name: list-teams
+    method: GET
+    path: /api/auth/organization/list-teams
+  - name: add-team-member
+    method: POST
+    path: /api/auth/organization/add-team-member
+    params:
+      teamId: { in: body, type: string }
+      userId: { in: body, type: string }
+      organizationId: { in: body, type: string }
+  - name: remove-team-member
+    method: POST
+    path: /api/auth/organization/remove-team-member
+    params:
+      teamId: { in: body, type: string }
+      userId: { in: body, type: string }
+      organizationId: { in: body, type: string }

@@ -1,10 +1,10 @@
-# /espace/coordination/actualites — the coordination writes and publishes
+# /espace/coordination/actualites — the communication group and the Cercle Gardien write and publish
 # news. Ticking « Envoyer par email » before publishing sends one Brevo
 # campaign to the bénévoles list (on-news-published); the send status and its
 # error are written by that automation and shown read-only here.
 name: espace-coordination-actualites
 path: /espace/coordination/actualites
-access: { require: [coordination, admin], redirectTo: /connexion }
+access: { require: ['group:communication', gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR

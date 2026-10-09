@@ -9,7 +9,7 @@
 # or replaying the run never creates a second campaign. The create is never
 # retried (a POST that timed out may have created the campaign); any failure
 # sets send_status: failed with the reason, fails the run, and
-# notify-espace-failure tells the coordination. A campaign created but not
+# notify-espace-failure tells the Cercle Gardien. A campaign created but not
 # sent can be sent from Brevo; a failed create saves no id, so publishing
 # again (or ticking « Envoyer par email » again) retries it.
 #
@@ -108,7 +108,7 @@ actions:
           function escapeHtml(value: string): string {
             return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
           }
-          // The body is rich text written by the coordination; scripts, styles
+          // The body is rich text written by the communication group; scripts, styles
           // and inline handlers are dropped before it goes into an email.
           function cleanHtml(value: string): string {
             return value

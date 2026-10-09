@@ -2,14 +2,16 @@
 # per date, with a link to its check-in screen (/espace/suivi/:id).
 # Figures aggregate over `workshops` (registrations_count, present_count,
 # revenue_*): `registrations` carries no date, so a date window can only be
-# applied on the workshop rows.
+# applied on the workshop rows. Open to facilitation, logistique, trésorerie
+# and the Cercle Gardien: every figure here is a `workshops` rollup they may
+# read; the people themselves are only on /espace/suivi/:id, for those who point.
 name: espace-suivi
 path: /espace/suivi
-access: { require: [admin, coordination, facilitateur], redirectTo: /connexion }
+access: { require: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR
-  title: Suivi des ateliers - Espace facilitateur·ices
+  title: Suivi des ateliers - Espace bénévole
   description: Inscrit·es, présent·es et prix libre de chaque date d'atelier.
   noindex: true
   robots: noindex, nofollow

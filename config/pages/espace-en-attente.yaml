@@ -1,4 +1,4 @@
-# /espace/en-attente — a candidat's landing while the coordination reads her
+# /espace/en-attente — a candidat's landing while the Cercle Gardien reads her
 # profile. No espace-shell: a candidat may open no other /espace page, so the
 # frame is the sign-in card's, with a way out (site, sign out).
 #
@@ -11,7 +11,7 @@ sitemap: false
 meta:
   lang: fr-FR
   title: Candidature en cours - Espace bénévole
-  description: Ta candidature est en cours de validation par la coordination.
+  description: Ta candidature est en cours de validation par le Cercle Gardien.
   noindex: true
   robots: noindex, nofollow
   favicon: ./favicon/favicon-32x32.png
@@ -66,7 +66,7 @@ components:
                 element: p
                 props:
                   className: text-bleu-fonce
-                content: Merci de vouloir rejoindre l'équipe ! La coordination relit ta fiche et t'ouvre l'espace bénévole dans les prochains jours. Tu recevras un email dès que c'est fait, avec le lien vers notre communauté WhatsApp.
+                content: Merci de vouloir rejoindre l'équipe ! Le Cercle Gardien relit ta fiche et t'ouvre l'espace bénévole dans les prochains jours. Tu recevras un email dès que c'est fait, avec le lien vers notre communauté WhatsApp.
               - type: text
                 element: p
                 props:

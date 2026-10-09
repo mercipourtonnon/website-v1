@@ -1,11 +1,11 @@
 # A new account (self sign-up, role candidat) gets its `members` row, status
-# pending, and the coordination is told someone is waiting.
+# pending, and the Cercle Gardien is told someone is waiting.
 #
 # Accounts created another way — an invitation with role member (the Notion
 # import), the bootstrap admin — are not candidat and are skipped: they come
 # with their own row. Re-running is harmless: an existing row is kept.
 name: on-sign-up
-description: Crée la fiche bénévole « en attente » d'un nouveau compte et prévient la coordination.
+description: Crée la fiche bénévole « en attente » d'un nouveau compte et prévient le Cercle Gardien.
 trigger:
   type: auth
   events: [signUp]
@@ -66,5 +66,5 @@ actions:
       subject: 'Espace bénévole : nouvelle inscription de {{profile.name}}'
       body: |
         <p><strong>{{profile.name}}</strong> ({{trigger.data.user.email}}) vient de créer son compte sur l'espace bénévole.</p>
-        <p>Sa fiche est en attente : dès qu'elle est remplie, tu peux la valider ou la refuser depuis la page coordination.</p>
+        <p>Sa fiche est en attente : dès qu'elle est remplie, tu peux la valider ou la refuser depuis la page « Bénévoles » de la coordination.</p>
         <p><a href="{{profile.link}}">Voir les candidatures</a></p>

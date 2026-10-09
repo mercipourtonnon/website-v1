@@ -7,7 +7,7 @@ name: prix-libre-sur-place
 title: Prix libre sur place
 description: Ce qui a été donné sur place (espèces, terminal de paiement), pour cette date.
 access:
-  require: [admin, coordination, facilitateur]
+  require: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin]
   redirectTo: /connexion
 submitTo:
   table: workshop_cash
@@ -24,7 +24,7 @@ fields:
   - kind: table-field
     column: note
     label: Note (facultatif)
-    helpText: Un détail utile à la coordination, par exemple « 40 € en espèces, le reste par carte ».
+    helpText: Un détail utile à la trésorerie, par exemple « 40 € en espèces, le reste par carte ».
   # Filled by the page (inlinePrefill); never shown.
   - { kind: table-field, column: workshop, hidden: true }
 onSuccess:

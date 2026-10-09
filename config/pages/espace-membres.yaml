@@ -1,11 +1,11 @@
 # /espace/membres — the directory of validated bénévoles. Pending, refused and
 # archived profiles never reach a member (members row rule); the explicit
-# status filter keeps the coordination's directory to validated people too
+# status filter keeps the Cercle Gardien's directory to validated people too
 # (the others are on /espace/coordination/membres). Email and phone are not
-# drawn: the table keeps them for the coordination.
+# drawn: the table keeps them for the Cercle Gardien.
 name: espace-membres
 path: /espace/membres
-access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+access: { require: [member, coeur, gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR

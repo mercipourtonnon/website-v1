@@ -1,7 +1,7 @@
-# "Valider" (coordination): pending or refused → validated. The status change
+# "Valider" (Cercle Gardien): pending or refused → validated. The status change
 # starts on-member-validated (role member, Brevo list, welcome email).
 #
-# Pressing it runs with the presser's rights: the coordination may write any
+# Pressing it runs with the presser's rights: the Cercle Gardien may write any
 # members row (row rule on editor_role) and its status. Only the status is
 # written here; the record automation does the rest as the system.
 name: validate-member
@@ -11,9 +11,9 @@ trigger:
   label: Valider
   # requiredRole takes ONE role name (an admin satisfies any of them);
   # permissions.trigger spells out who may press it and can only narrow it.
-  requiredRole: coordination
+  requiredRole: gardien
 permissions:
-  trigger: [coordination, admin]
+  trigger: [gardien, admin]
 timeout: 30000
 actions:
   # Table button → {{trigger.input.recordId}}. A page button must pass `recordId` too.

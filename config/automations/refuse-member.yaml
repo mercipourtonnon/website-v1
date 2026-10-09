@@ -1,7 +1,7 @@
-# "Refuser" (coordination): pending → refused. The account keeps the candidat
+# "Refuser" (Cercle Gardien): pending → refused. The account keeps the candidat
 # role, so it still sees only /espace/en-attente.
 #
-# Pressing it runs with the presser's rights: the coordination may write any
+# Pressing it runs with the presser's rights: the Cercle Gardien may write any
 # members row (row rule on editor_role) and its status. Only the status is
 # written here; the record automation does the rest as the system.
 name: refuse-member
@@ -11,9 +11,9 @@ trigger:
   label: Refuser
   # requiredRole takes ONE role name (an admin satisfies any of them);
   # permissions.trigger spells out who may press it and can only narrow it.
-  requiredRole: coordination
+  requiredRole: gardien
 permissions:
-  trigger: [coordination, admin]
+  trigger: [gardien, admin]
 timeout: 30000
 actions:
   # Table button → {{trigger.input.recordId}}. A page button must pass `recordId` too.

@@ -1,6 +1,6 @@
 # /espace — the bénévole home: next events, latest news, the WhatsApp
-# community and the person's own sign-ups. Facilitateur·ices (and the
-# coordination) also find "Mes propositions" here, the workshop dates they
+# community and the person's own sign-ups. Facilitateur·ices (group
+# facilitation) and the Cercle Gardien also find "Mes propositions" here, the workshop dates they
 # proposed: that section is gated with visibility.roles, so a plain member
 # never receives it.
 #
@@ -9,7 +9,7 @@
 # is /espace/validation).
 name: espace-accueil
 path: /espace
-access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+access: { require: [member, coeur, gardien, admin], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR
@@ -44,7 +44,7 @@ components:
           - component: whatsapp-card
 
           # Next 5 published events. Drafts never reach a bénévole (row rule),
-          # the explicit status filter also keeps them off the coordination's home.
+          # the explicit status filter also keeps them off the Cercle Gardien's home.
           - type: container
             element: section
             props:
@@ -78,7 +78,7 @@ components:
                   sort: [{ field: starts_at, direction: asc }]
                   limit: 5
                 listDisplay:
-                  emptyMessage: Pas de rendez-vous prévu pour l'instant. La coordination les ajoute ici dès qu'ils sont calés.
+                  emptyMessage: Pas de rendez-vous prévu pour l'instant. L'équipe les ajoute ici dès qu'ils sont calés.
                 children:
                   - component: event-card
 
@@ -152,10 +152,10 @@ components:
                   emptyMessage: Tu n'es inscrit·e à aucun rendez-vous pour l'instant. Ouvre un événement de l'agenda et clique sur « Je participe ».
                 onRowClick: { type: navigate, path: /espace/agenda/$record.event }
 
-          # Facilitateur·ices, coordination and admins: their workshop proposals.
+          # Group facilitation, Cercle Gardien and admins: their workshop proposals.
           - type: container
             element: section
-            visibility: { roles: [facilitateur, coordination, admin] }
+            visibility: { roles: ['group:facilitation', gardien, admin] }
             props:
               id: mes-propositions
               aria-labelledby: propositions-titre

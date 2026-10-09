@@ -15,7 +15,7 @@ description: >-
   où chacun·e trouve sa place. Prends le temps qu'il te faut : tu pourras la
   modifier ensuite depuis ton profil.
 access:
-  require: [candidat, member, facilitateur, coordination, admin]
+  require: [candidat, member, coeur, gardien, admin]
   redirectTo: /connexion
 submitTo:
   automation: save-member-profile
@@ -30,7 +30,7 @@ fields:
   - { kind: section, heading: Qui es-tu ? }
   - { kind: standalone, name: display_name, inputType: short-text, label: Prénom & Nom, required: true }
   - { kind: standalone, name: pronoun, inputType: short-text, label: Pronom, placeholder: 'elle, il, iel…' }
-  - { kind: standalone, name: phone, inputType: phone, label: Téléphone, helpText: Visible uniquement par la coordination. }
+  - { kind: standalone, name: phone, inputType: phone, label: Téléphone, helpText: Visible uniquement par le Cercle Gardien. }
   - kind: standalone
     name: photo
     inputType: attachment

@@ -8,7 +8,7 @@
 # (inlinePrefill + lockPrefill), and fills `member` from the session.
 name: espace-agenda-evenement
 path: /espace/agenda/:id
-access: { require: [member, facilitateur, coordination, admin], redirectTo: /connexion }
+access: { require: [member, coeur, gardien, admin], redirectTo: /connexion }
 sitemap: false
 dataSource:
   table: events
@@ -80,7 +80,7 @@ components:
           - type: alert
             alertVariant: warning
             visibility: { record: { field: status, eq: cancelled } }
-            content: Ce rendez-vous est annulé. La coordination te tient au courant s'il est reprogrammé.
+            content: Ce rendez-vous est annulé. L'équipe te tient au courant s'il est reprogrammé.
 
           - type: container
             element: section

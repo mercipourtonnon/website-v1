@@ -9,7 +9,7 @@ name: ajout-sur-place
 title: Ajouter une personne sur place
 description: Pour quelqu'un qui vient sans s'être inscrit·e. Elle est comptée présente tout de suite.
 access:
-  require: [admin, coordination, facilitateur]
+  require: ['group:facilitation', 'group:logistique', gardien, admin]
   redirectTo: /connexion
 submitTo:
   table: registrations

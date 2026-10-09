@@ -12,7 +12,7 @@ id: 3
 name: event-participation
 title: Je participe
 access:
-  require: [member, facilitateur, coordination, admin]
+  require: [member, coeur, gardien, admin]
   redirectTo: /connexion
 submitTo:
   table: event_participations

@@ -2,13 +2,13 @@
 #   1. the account gets the `member` role. Sovrium 0.33 does not expose an
 #      account's role to an automation, so this cannot check it: validate only
 #      candidat·es (the Valider button shows on pending / refused rows), and
-#      give facilitateur or coordination AFTER validation, never before;
+#      move someone to the Cercle Cœur or Gardien AFTER validation, never before;
 #   2. the person joins the Brevo bénévoles list (create-contact with
 #      updateEnabled: idempotent, safe to retry and to replay);
 #   3. the Brevo id and the validation date are saved;
 #   4. a welcome email with the WhatsApp community link goes out (last: it is
 #      the one step that cannot be taken back).
-# A failure fails the run, so notify-espace-failure tells the coordination;
+# A failure fails the run, so notify-espace-failure tells the Cercle Gardien;
 # replaying it resumes from the failed step.
 #
 # Loop check: watches status only; writes brevo_contact_id and validated_at.

@@ -1,15 +1,36 @@
-# Authentication and the role ladder of the espace bénévole.
+# Authentication, and the circles and volunteer roles of the internal
+# governance (Notion « 🎯 Gouvernance interne », 2026-10).
 #
 # Anyone may create an account (allowSignUp: true). A new account is a
-# `candidat`: it sees only /espace/en-attente until a coordinator validates it
-# (validate-member → role `member`). Invitations from an admin or a coordinator
-# keep working, and the first admin still comes from AUTH_ADMIN_EMAIL /
-# AUTH_ADMIN_PASSWORD or `sovrium admin create`.
+# `candidat`: it sees only /espace/en-attente until the Cercle Gardien validates
+# it (validate-member → role `member`, i.e. the Cercle Abeilles). Invitations
+# from an admin or a gardien·ne keep working, and the first admin still comes
+# from AUTH_ADMIN_EMAIL / AUTH_ADMIN_PASSWORD or `sovrium admin create`.
 #
-# One role per account. Page `access.require` and table permissions do not
-# inherit, so every list spells its roles out:
-#   member+       = [member, facilitateur, coordination, admin]
-#   coordination+ = [coordination, admin]
+# CIRCLE = ROLE (exactly one per account, changed in the console « Changer le rôle »)
+#   candidat  5   candidature awaiting validation
+#   member    40  Cercle Abeilles: adhérent·e, occasional help
+#   coeur     50  Cercle Cœur: active member holding at least one volunteer role
+#   gardien   80  Cercle Gardien: direction collégiale. Level 80 makes it the
+#                 app's top role, so it is admin-equivalent (governance: « Tout »)
+#   admin     80  built-in, technical operator
+#
+# VOLUNTEER ROLE = GROUP (any number per account; `group:<name>` in permissions)
+#   Membership is runtime state: tick « Rôles bénévoles » on the member's
+#   profile (/espace/coordination/membres) and sync-member-groups applies it.
+#   facilitation, logistique, communication, tresorerie, polyvalent.
+#
+# Sovrium 0.34.1 limits that decide where a right can live:
+#   - row rules compare `$currentUser.role` only, so "sees every row" is a role
+#     (the editor_role columns), never a group;
+#   - a field `write` grant and a manual automation's requiredRole /
+#     permissions.trigger read the role only, so approving a proposal and
+#     validating a member stay with the Cercle Gardien.
+#
+# Permission lists do not inherit, so they spell their roles out:
+#   member+  = [member, coeur, gardien, admin]
+#   coeur+   = [coeur, gardien, admin]
+#   gardien+ = [gardien, admin]
 #
 # Inert on the static GitHub Pages build.
 strategies:
@@ -30,25 +51,41 @@ roles:
   # role's defaultLanding (auth/auth-overview, role-landing), which would
   # otherwise be candidat's /espace/en-attente.
   - { name: admin, defaultLanding: /espace }
-  # Signed up, profile awaiting validation by the coordination.
+  # Signed up, profile awaiting validation by the Cercle Gardien.
   - name: candidat
     description: Candidature en attente de validation
     level: 5
     defaultLanding: /espace/en-attente
-  # Built-in (level 40): a validated bénévole.
+  # Built-in (level 40): Cercle Abeilles, a validated bénévole.
   - name: member
     defaultLanding: /espace
-  # A bénévole who also facilitates workshops (proposes dates, facilitators pages).
-  - name: facilitateur
-    description: Bénévole facilitateur·ice d'ateliers
-    level: 45
+  - name: coeur
+    description: Cercle Cœur — membre actif·ve qui porte au moins un rôle bénévole
+    level: 50
     defaultLanding: /espace
-  # Publishes events and news, validates members, approves workshops.
-  - name: coordination
-    description: Coordination de l'association
-    level: 60
+  # Validates members and workshop dates, changes circles, assigns volunteer
+  # roles. canInvite is implied by admin-equivalence; kept explicit.
+  - name: gardien
+    description: Cercle Gardien — direction collégiale
+    level: 80
     canInvite: true
     defaultLanding: /espace
+# Volunteer roles (Notion « 🦸 Rôles », Cercle Cœur). « Expérience
+# participant·es » is inactive in Notion, so it has no group yet.
+groups:
+  - name: facilitation
+    description: Facilitateur·ice — anime des ateliers de consentement de qualité
+  - name: logistique
+    description: Logisticien·ne — salles, agenda, billetterie et matériel des ateliers
+  - name: communication
+    description: Communication — visibilité de l'association, actualités, réseaux
+  - name: tresorerie
+    description: Trésorerie — suivi des finances, des dons et des recettes des ateliers
+  - name: polyvalent
+    description: Contributeur·ice polyvalent·e — appui régulier là où il y a besoin
+# Self-service API keys: an admin mints the key sync-member-groups uses to call
+# the team endpoints (SOVRIUM_ADMIN_API_KEY). See that automation.
+apiKeys: true
 emailTemplates:
   magicLink:
     subject: Ton lien de connexion à l'espace bénévole
