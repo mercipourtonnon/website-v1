@@ -75,8 +75,19 @@ action:
         // Converts a Paris wall-clock day and time into an ISO-8601 string carrying
         // the Europe/Paris offset in force on that day.
         function toParisIso(date: string, time: string): string {
-          // TODO(human): return the ISO string with the Europe/Paris offset, e.g. 2026-11-28T14:00:00+01:00
-          return `${date}T${time}:00+01:00`;
+          // EU rule: summer time (+02:00) from the last Sunday of March to the last
+          // Sunday of October, switching at 01:00 UTC both ways.
+          const [y, m, d] = date.split('-').map(Number);
+          const [hh, mm] = time.split(':').map(Number);
+          const lastSundayUtc = (month: number): number => {
+            const lastDay = new Date(Date.UTC(y, month + 1, 0));
+            return Date.UTC(y, month, lastDay.getUTCDate() - lastDay.getUTCDay(), 1);
+          };
+          // Compared as if winter time; the ambiguous hour at the switch never
+          // matters here (workshops start at 14:00 or 18:30).
+          const instant = Date.UTC(y, m - 1, d, hh, mm) - 60 * 60000;
+          const summer = instant >= lastSundayUtc(2) && instant < lastSundayUtc(9);
+          return `${date}T${time}:00${summer ? '+02:00' : '+01:00'}`;
         }
 
         // Adds minutes to a wall-clock day + time (crossing midnight if needed).
