@@ -82,3 +82,8 @@ check with `sovrium docs config <path>` (e.g. `pages[].meta.twitter`,
    browser loop: three widths, dark scheme if relevant, console clean.
 3. Regenerate `DESIGN.md` if `config/design.yaml` changed.
 4. Report the files changed, validation result, and any open question for the author.
+5. If the runtime misbehaved (a documented option ignored, a crash, a wrong render),
+   follow **"Sovrium bugs: verify, de-duplicate, report"** in `CLAUDE.md`: reproduce
+   it in a minimal standalone app, search `sovrium/sovrium` issues (open and closed),
+   and file only a confirmed, new bug. Report the issue link (or why you did not file)
+   to the author.

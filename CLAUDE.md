@@ -44,6 +44,27 @@ instead of relying on memory. Always start with `sovrium-app`, then the speciali
 it. After a Sovrium upgrade, run `sovrium skills` to refresh the skills
 (`sovrium skills --check` reports stale ones) and `sovrium changelog` for breaking changes.
 
+## Sovrium bugs: verify, de-duplicate, report
+
+This app runs on Sovrium, and the team builds Sovrium. When something in the runtime
+misbehaves (a crash, a documented option that does nothing, a silent wrong result), it
+gets reported upstream, not just worked around:
+
+1. **Verify it is a real bug** before reporting: reproduce it in a **minimal standalone
+   app** (scratch directory, its own port), not only in this project, and check the
+   behaviour against `sovrium docs` for the installed version. A documented limit or a
+   deliberate design choice is not a bug; at most a documentation issue.
+2. **Search for an existing issue**, open *and* closed:
+   `gh issue list -R sovrium/sovrium --state all --search "<keywords>"`. Comment on a
+   match only if it adds something new; never file a duplicate.
+3. **File it** in `sovrium/sovrium` with the `bug` label, in the house format:
+   **Version**, `## What happens`, `## Reproduction` (the minimal YAML + the exact
+   command/request), `## Expected` (quote the manual when it promises otherwise),
+   `## Workaround`, `## Suggested area`. Never paste personal data, secrets or `.env`
+   values: use placeholder values in repros.
+4. **Keep the workaround in the config** with a comment naming the Sovrium version and
+   the issue number, so it can be removed once the fix ships.
+
 ## Commands
 
 ```bash
