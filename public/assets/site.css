@@ -152,6 +152,14 @@ summary:focus-visible {
   background-color: #130077;
 }
 
+/* Letter chips (RÈGLES knowledge cards): fill + letter colour that read at
+   >= 3:1 for the large letter (white on pourpre 4.2, white on mauve 6.4,
+   bleu foncé on orange 8.8, bleu foncé on cyan 5.1). */
+.chip-pourpre { background-color: #f5004f; color: #fff; }
+.chip-mauve { background-color: #7b01fe; color: #fff; }
+.chip-orange { background-color: #ffaf00; color: #130077; }
+.chip-cyan { background-color: #12a19d; color: #130077; }
+
 /* Respect reduced-motion: no reveal or transition movement */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -315,6 +323,11 @@ p {
   font-family: "Bely Display", "Archivo Black", cursive;
   letter-spacing: 0.05em;
   text-transform: lowercase;
+}
+/* Tailwind utilities live in a cascade layer, so `normal-case` alone cannot
+   beat this unlayered rule; letters such as RÈGLES opt out explicitly. */
+.title-font.normal-case {
+  text-transform: none;
 }
 
 

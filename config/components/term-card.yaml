@@ -9,7 +9,7 @@ children:
   - type: text
     element: h3
     props:
-      className: type-lead font-bold text-bleu-fonce
+      className: type-lead font-extrabold text-bleu-fonce
     content: $term
   - type: text
     element: p
