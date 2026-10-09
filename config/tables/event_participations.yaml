@@ -2,7 +2,7 @@
 # needs). Created through the event-participation form, which fills `member`
 # with the signed-in person and locks `event` to the page's event.
 #
-# member+ read every sign-up of the events they can see (« qui vient ? »),
+# member+ read every sign-up (« qui vient ? »),
 # create only for themselves, and change or delete only their own. The
 # coordination manages them all.
 id: 8
@@ -39,15 +39,10 @@ permissions:
     - { field: event, write: [member, facilitateur, coordination, admin] }
     - { field: member, write: [coordination, admin] }
     - { field: editor_role, read: [coordination, admin], write: [admin] }
+# No read rule: one reading `event.status` through the relationship empties
+# server-side reads in Sovrium 0.33.0 (see event_needs.yaml). Sign-ups to a
+# draft event are harmless: the event itself stays hidden.
 rowLevelPermissions:
-  read:
-    when:
-      logic: or
-      conditions:
-        - { field: event.status, operator: in, value: [published, cancelled] }
-        - field: editor_role
-          operator: eq
-          value: { kind: currentUser, path: { kind: scalar, name: role } }
   create:
     when:
       logic: or

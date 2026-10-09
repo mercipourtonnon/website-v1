@@ -80,6 +80,7 @@ automations:
   - $ref: ./config/automations/on-member-archived.yaml
   - $ref: ./config/automations/on-news-published.yaml
   - $ref: ./config/automations/on-participation.yaml
+  - $ref: ./config/automations/label-event-date.yaml
   - $ref: ./config/automations/notify-espace-failure.yaml
 
 components:

@@ -1,0 +1,42 @@
+# Keeps events.date_label in step with starts_at: « lun. 20 oct. · 19:00 »,
+# Europe/Paris, French. Cards print it instead of the raw datetime (which the
+# record-field component renders in English).
+#
+# Loop check: watches starts_at, writes date_label only.
+name: label-event-date
+description: Écrit la date d'un événement en français (« lun. 20 oct. · 19:00 »).
+trigger:
+  type: record
+  table: events
+  events: [create, update]
+  watchFields: [starts_at]
+timeout: 30000
+actions:
+  - name: label
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 5000
+      inputData:
+        startsAt: '{{trigger.data.record.starts_at}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const d = new Date(String(input.startsAt || ''));
+          if (Number.isNaN(d.getTime())) return { label: '' };
+          const part = (opts: Intl.DateTimeFormatOptions) =>
+            new Intl.DateTimeFormat('fr-FR', { timeZone: 'Europe/Paris', ...opts }).format(d);
+          const day = part({ weekday: 'short', day: 'numeric', month: 'short' });
+          const time = part({ hour: '2-digit', minute: '2-digit' });
+          return { label: `${day} · ${time}` };
+        }
+  - name: save
+    type: record
+    operator: update
+    props:
+      table: events
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{trigger.data.record.id}}' }
+      data:
+        date_label: '{{label.label}}'

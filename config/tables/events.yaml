@@ -49,6 +49,9 @@ fields:
   # Technical, same role as members.editor_role: lets the coordination through
   # the read rule on drafts.
   - { id: 14, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+  # French label of starts_at for cards, e.g. « lun. 20 oct. · 19:00 »
+  # (Europe/Paris). Written by label-event-date; like workshops.date_label.
+  - { id: 15, name: date_label, label: Date (texte), type: single-line-text }
 permissions:
   read: [member, facilitateur, coordination, admin]
   create: [coordination, admin]
@@ -56,6 +59,7 @@ permissions:
   delete: [coordination, admin]
   fields:
     - { field: editor_role, read: [coordination, admin], write: [admin] }
+    - { field: date_label, write: [admin] }
 rowLevelPermissions:
   read:
     when:

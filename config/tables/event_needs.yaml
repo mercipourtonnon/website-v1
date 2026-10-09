@@ -1,6 +1,6 @@
 # What an event needs from the bénévoles — « Tenir le stand 14h–16h », « Apporter
 # à manger » — with how many people, and how many have signed up already.
-# Read with its event (published events only, drafts for the coordination).
+# Readable by member+ (no row rule: see the note at the end of this file).
 id: 7
 name: event_needs
 fields:
@@ -32,12 +32,7 @@ permissions:
   create: [coordination, admin]
   update: [coordination, admin]
   delete: [coordination, admin]
-rowLevelPermissions:
-  read:
-    when:
-      logic: or
-      conditions:
-        - { field: event.status, operator: in, value: [published, cancelled] }
-        - field: event.editor_role
-          operator: eq
-          value: { kind: currentUser, path: { kind: scalar, name: role } }
+# No row rule. A rule reading `event.status` through the relationship is
+# applied by the records API but, in Sovrium 0.33.0, server-side reads (page
+# templates, form options and form validation) then return nothing to
+# non-admins. The needs of a draft event are harmless: the event stays hidden.
