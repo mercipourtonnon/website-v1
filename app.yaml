@@ -82,11 +82,6 @@ automations:
   - $ref: ./config/automations/on-participation.yaml
   - $ref: ./config/automations/notify-espace-failure.yaml
 
-# Standalone forms of the espace bénévole (embedded in pages with formRef).
-forms:
-  - $ref: ./config/forms/member-profile.yaml
-  - $ref: ./config/forms/event-participation.yaml
-
 components:
   - $ref: ./config/components/site-footer.yaml
   - $ref: ./config/components/event-date-row.yaml
@@ -110,9 +105,13 @@ pages:
   - $ref: ./config/pages/espace-validation.yaml
   - $ref: ./config/pages/espace-ateliers.yaml
 
-# Facilitators propose a workshop date (embedded on /espace/proposer).
+# Standalone forms, embedded in pages with formRef.
 forms:
+  # Facilitators propose a workshop date (embedded on /espace/proposer).
   - $ref: ./config/forms/proposer-un-atelier.yaml
+  # Espace bénévole: member profile and event sign-up.
+  - $ref: ./config/forms/member-profile.yaml
+  - $ref: ./config/forms/event-participation.yaml
 
 # URLs of the retired static (GitHub Pages) export.
 redirects:

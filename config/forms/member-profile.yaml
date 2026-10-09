@@ -7,7 +7,7 @@
 # answer is optional except the name; on /espace/profil the page may prefill
 # the current values with inlinePrefill ($record.<field>) from the person's
 # members row.
-id: 1
+id: 2
 name: member-profile
 title: Ma fiche bénévole
 description: >-

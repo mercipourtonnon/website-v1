@@ -8,7 +8,7 @@
 # `event` is hidden here, so the server only accepts an event that page shows
 # its submitter. `member` is not a form field: the column's default
 # ($currentUser) fills it with the submitter.
-id: 2
+id: 3
 name: event-participation
 title: Je participe
 access:
