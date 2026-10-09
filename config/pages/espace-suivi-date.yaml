@@ -253,7 +253,8 @@ components:
                   - { field: amount_paid, label: Prix libre, format: currency }
 
           # Prix libre collected at the venue: one workshop_cash row per date.
-          # No row yet → the create form; a row → an edit form on it.
+          # No row yet (cash_entries 0) → the create form; a row → an edit
+          # form on it, even when it holds 0 €.
           - type: container
             element: section
             props:
@@ -270,31 +271,38 @@ components:
                 element: p
                 props:
                   className: text-bleu-fonce
-                content: À la fin de l'atelier, compte ce qui a été donné sur place (espèces et terminal de paiement) et note le total ici. Tu peux le corriger ensuite.
+                content: À la fin de l'atelier, compte ce qui a été donné sur place (espèces et terminal de paiement) et note le total ici. Pour le corriger, touche la ligne du montant.
               - type: form
-                visibility: { record: { field: revenue_on_site, lte: 0 } }
+                visibility: { record: { field: cash_entries, eq: 0 } }
                 formRef: prix-libre-sur-place
                 props: { headingLevel: h3 }
                 showHeader: false
                 inlinePrefill:
                   prefill: { workshop: $parent.id }
                   lockPrefill: true
-              - type: form
-                visibility: { record: { field: revenue_on_site, gt: 0 } }
+              # The saved row, as a one-row grid: an edit form in single mode
+              # ignores its filter in 0.33.0 and opens the first workshop_cash
+              # row of any date. A grid honours the filter; the row opens in
+              # an editable panel.
+              - type: table
+                visibility: { record: { field: cash_entries, gt: 0 } }
+                caption: Prix libre saisi pour cette date
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: scroll
+                rowHeight: tall
                 dataSource:
                   table: workshop_cash
-                  mode: single
                   filter:
                     - { field: workshop, operator: eq, value: $param.id }
-                action:
-                  type: crud
-                  operation: update
-                  table: workshop_cash
-                  onSuccess: { toast: { message: Montant enregistré., variant: success } }
-                  onError: { toast: { message: "Le montant n'a pas pu être enregistré. Recharge la page, puis réessaie.", variant: error } }
-                fields:
-                  - { field: amount_on_site, label: Montant collecté sur place }
-                  - { field: note, label: Note (facultatif), control: textarea }
+                toolbar: { search: false, filters: false, sort: false, export: false, refresh: false }
+                rowExpand:
+                  title: Prix libre sur place
+                  fields: [amount_on_site, note]
+                columns:
+                  - { field: amount_on_site, label: Montant, format: currency }
+                  - { field: note, label: Note }
+                  - { field: updated_at, label: Saisi le, format: datetime }
 
   # Walk-in dialog (opened by "Ajouter une personne sur place").
   - type: dialog

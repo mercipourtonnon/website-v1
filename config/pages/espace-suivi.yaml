@@ -148,10 +148,9 @@ components:
                       - { field: registrations_count, label: Inscrit·es }
                       - { field: capacity, label: Places }
                       - { field: present_count, label: Présent·es }
-                      # Rollups carry no currency in 0.33.0 (a currency format reads
-                      # USD), so these two print the plain figure under a € label.
-                      - { field: revenue_online, label: En ligne (€) }
-                      - { field: revenue_on_site, label: Sur place (€) }
+                      # The *_eur formulas: a rollup cannot declare a currency.
+                      - { field: revenue_online_eur, label: En ligne, format: currency }
+                      - { field: revenue_on_site_eur, label: Sur place, format: currency }
                       - { field: revenue_total, label: Total, format: currency }
                   - type: table
                     caption: Dates passées
@@ -180,8 +179,7 @@ components:
                       - { field: registrations_count, label: Inscrit·es }
                       - { field: capacity, label: Places }
                       - { field: present_count, label: Présent·es }
-                      # Rollups carry no currency in 0.33.0 (a currency format reads
-                      # USD), so these two print the plain figure under a € label.
-                      - { field: revenue_online, label: En ligne (€) }
-                      - { field: revenue_on_site, label: Sur place (€) }
+                      # The *_eur formulas: a rollup cannot declare a currency.
+                      - { field: revenue_online_eur, label: En ligne, format: currency }
+                      - { field: revenue_on_site_eur, label: Sur place, format: currency }
                       - { field: revenue_total, label: Total, format: currency }
