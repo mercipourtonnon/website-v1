@@ -38,3 +38,4 @@ pages:
   - $ref: ./config/pages/mentions-legales.yaml
   - $ref: ./config/pages/newsletter.yaml
   - $ref: ./config/pages/le-consentement.yaml
+  - $ref: ./config/pages/ressources.yaml
