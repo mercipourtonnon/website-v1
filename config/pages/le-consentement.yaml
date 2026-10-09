@@ -1,0 +1,926 @@
+# /le-consentement — the knowledge shared during the Niveau 1 workshop.
+# Source: the "Apports" blocks of the Notion Déroulé (Niveau 1 – Tout public)
+# and the "Cartes Biais" page (reworked biases). Facilitation material —
+# timings, instructions, materials, exercise scripts, learning objectives — is
+# deliberately NOT published here.
+name: le-consentement
+path: /le-consentement
+sitemap:
+  priority: 0.8
+  changefreq: monthly
+meta:
+  lang: fr-FR
+  title: Le consentement, en clair - Merci pour ton non
+  description: Définitions, l'acronyme RÈGLES, dire et remercier le non, changer d'avis, les biais qui poussent à dire oui. Les notions de nos ateliers, en libre accès.
+  author: Merci pour ton non
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/le-consentement
+  openGraph:
+    type: article
+    title: Le consentement, en clair | Merci pour ton non
+    description: Les notions partagées dans nos ateliers de consentement à Strasbourg, en libre accès.
+    url: https://mercipourtonnon.fr/le-consentement
+    image: https://mercipourtonnon.fr/social.png
+    imageAlt: Merci pour ton non — le consentement, en clair
+    siteName: Merci pour ton non
+    locale: fr_FR
+  twitter:
+    card: summary_large_image
+    title: Le consentement, en clair | Merci pour ton non
+    description: Les notions partagées dans nos ateliers de consentement, en libre accès.
+    image: https://mercipourtonnon.fr/social.png
+  schema:
+    '@context': https://schema.org
+    '@type': Article
+    headline: Le consentement, en clair
+    description: Définitions, l'acronyme RÈGLES, dire et remercier le non, changer d'avis, les biais qui poussent à dire oui et que faire face à l'insistance.
+    inLanguage: fr-FR
+    url: https://mercipourtonnon.fr/le-consentement
+    image: https://mercipourtonnon.fr/pictures/stand/table-cartes-stand.webp
+    author:
+      '@type': Organization
+      name: Merci pour ton non
+      url: https://mercipourtonnon.fr
+    publisher:
+      '@type': Organization
+      name: Merci pour ton non
+      logo:
+        '@type': ImageObject
+        url: https://mercipourtonnon.fr/logo.svg
+    about:
+      - Consentement
+      - Limites
+      - Biais cognitifs
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  preload:
+    - href: /fonts/NeueMachina/NeueMachina-Regular.otf
+      as: font
+      type: font/otf
+      crossorigin: anonymous
+    - href: /fonts/BelyDisplay/BelyDisplay-Regular.woff2
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  customElements:
+    - type: meta
+      attrs:
+        name: theme-color
+        content: '#7B01FE'
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+
+scripts:
+  externalScripts:
+    # Mobile menu close-on-link / Escape (site-header drawer)
+    - src: /assets/site.js
+      defer: true
+      position: body-end
+
+components:
+  - component: site-header
+    vars:
+      base: /
+
+  - type: container
+    props:
+      id: contenu
+      className: bg-white overflow-x-clip
+    children:
+      # Page header
+      - type: container
+        element: section
+        props:
+          className: px-4 sm:px-6 pt-10 md:pt-16 pb-band-sm md:pb-band bg-mauve-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-7 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Savoirs · Atelier niveau 1
+                  - type: text
+                    element: h1
+                    props:
+                      className: type-page text-bleu-fonce
+                    content: le consentement, en clair
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce max-w-2xl
+                    content: "En atelier, on partage des notions qui changent la façon de demander, de dire non et d'accueillir le non des autres. On les met ici en libre accès, parce que le consentement ne devrait jamais dépendre d'un ticket d'entrée : relis-les à ton rythme, partage-les, discutes-en autour de toi. Elles ne remplacent pas le fait de s'entraîner ensemble, mais elles t'en ouvrent la porte."
+                  - type: container
+                    props:
+                      className: flex flex-wrap items-center gap-4
+                    children:
+                      - type: link
+                        props:
+                          href: /#events
+                          className: inline-flex items-center gap-2 whitespace-nowrap bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
+                        children:
+                          - type: text
+                            element: span
+                            content: Je réserve ma place
+                          - type: icon
+                            props: { name: arrow-right, size: 20, strokeWidth: 2 }
+                      - type: link
+                        props:
+                          href: /ressources
+                          className: font-bold text-mauve underline underline-offset-4 hover:text-mauve-hover py-2
+                        content: Voir les ressources
+              - type: container
+                props:
+                  className: lg:col-span-5 photo-frame frame-orange max-w-md lg:max-w-none
+                children:
+                  - type: image
+                    variant: hero
+                    props:
+                      src: /pictures/stand/table-cartes-stand.webp
+                      srcset: /pictures/stand/table-cartes-stand-sm.webp 533w, /pictures/stand/table-cartes-stand.webp 1066w
+                      sizes: '(min-width: 1024px) 420px, 90vw'
+                      alt: Sur notre stand, une bénévole montre du doigt l'affiche « On peut changer de disque ! » posée parmi les cartes du jeu
+                      className: w-full h-auto rounded-media shadow-raised object-cover aspect-[4/5]
+
+      # Body: sticky table of contents + article
+      - type: container
+        props:
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
+            children:
+              # Table of contents (sticky on desktop)
+              - type: container
+                element: nav
+                props:
+                  className: lg:col-span-3 lg:sticky lg:top-28 self-start bg-mauve-light lg:bg-white rounded-card p-5 lg:p-0 flex flex-col gap-3
+                  aria-label: Sur cette page
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Sur cette page
+                  - type: container
+                    props:
+                      className: flex flex-col gap-1 type-small lg:border-l-2 lg:border-mauve-lighter lg:pl-4
+                    children:
+                      - type: link
+                        props: { href: '#definitions', className: py-1 text-bleu-fonce hover:text-mauve }
+                        content: Deux définitions
+                      - type: link
+                        props: { href: '#regles', className: py-1 text-bleu-fonce hover:text-mauve }
+                        content: RÈGLES, six lettres
+                      - type: link
+                        props: { href: '#dire-non', className: py-1 text-bleu-fonce hover:text-mauve }
+                        content: Dire non, remercier le non
+                      - type: link
+                        props: { href: '#changer-d-avis', className: py-1 text-bleu-fonce hover:text-mauve }
+                        content: Changer d'avis
+                      - type: link
+                        props: { href: '#biais', className: py-1 text-bleu-fonce hover:text-mauve }
+                        content: Les biais
+                      - type: link
+                        props: { href: '#insistance', className: py-1 text-bleu-fonce hover:text-mauve }
+                        content: Face à l'insistance
+                      - type: link
+                        props: { href: '#nuances', className: py-1 text-bleu-fonce hover:text-mauve }
+                        content: Consentement, défaut, bris
+
+              - type: container
+                element: article
+                props:
+                  className: lg:col-span-9 flex flex-col gap-band-sm md:gap-band min-w-0
+                children:
+                  # 1. Deux définitions
+                  - type: container
+                    element: section
+                    props:
+                      id: definitions
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: deux définitions
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-3xl
+                        content: Le dictionnaire et la loi ne disent pas la même chose — et l'écart est parlant.
+                      - type: container
+                        props:
+                          className: grid md:grid-cols-2 gap-6 items-start
+                        children:
+                          - type: container
+                            props:
+                              className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                            children:
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: le dictionnaire
+                              - type: text
+                                element: blockquote
+                                props:
+                                  className: type-body text-bleu-fonce border-l-4 border-mauve-lighter pl-4
+                                content: « Action de donner son accord à une action, un projet ; acquiescement, approbation, assentiment. »
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-caption text-bleu-fonce-70
+                                content: Larousse. Une définition courte, qui dit peu de ce que demande un vrai oui.
+                          - type: container
+                            props:
+                              className: bg-white rounded-card shadow-card border border-mauve-lighter p-6 flex flex-col gap-3
+                            children:
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: la loi
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-small text-bleu-fonce-70
+                                content: Depuis la loi du 6 novembre 2025, le Code pénal (article 222-22) définit l'agression sexuelle à partir du non-consentement.
+                              - type: text
+                                element: blockquote
+                                props:
+                                  className: type-body text-bleu-fonce border-l-4 border-mauve pl-4
+                                content: « Constitue une agression sexuelle tout acte sexuel non consenti commis sur la personne d'autrui ou sur la personne de l'auteur. »
+                              - type: text
+                                element: blockquote
+                                props:
+                                  className: type-body text-bleu-fonce border-l-4 border-mauve pl-4
+                                content: « Le consentement est libre et éclairé, spécifique, préalable et révocable. Il est apprécié au regard des circonstances. Il ne peut être déduit du seul silence ou de la seule absence de réaction de la victime. »
+                              - type: text
+                                element: blockquote
+                                props:
+                                  className: type-body text-bleu-fonce border-l-4 border-mauve pl-4
+                                content: « Il n'y a pas de consentement si l'acte à caractère sexuel est commis avec violence, contrainte, menace ou surprise, quelle que soit leur nature. »
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-small text-bleu-fonce
+                                content: "Concrètement : quelqu'un d'endormi·e, d'inconscient·e, sous emprise ou en état de sidération ne consent pas."
+                              - type: link
+                                props:
+                                  href: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052535583
+                                  target: _blank
+                                  rel: noopener
+                                  className: self-start inline-flex items-center gap-1.5 type-caption font-bold text-mauve underline underline-offset-4
+                                children:
+                                  - type: text
+                                    element: span
+                                    content: Lire l'article 222-22 sur Légifrance
+                                  - type: icon
+                                    props: { name: arrow-up-right, size: 14, strokeWidth: 2 }
+                  # 2. RÈGLES
+                  - type: container
+                    element: section
+                    props:
+                      id: regles
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        children:
+                          - type: text
+                            element: span
+                            content: 'six lettres pour s''en souvenir : '
+                          - type: text
+                            element: span
+                            props: { className: normal-case }
+                            content: RÈGLES
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-3xl
+                        content: L'acronyme qu'on te propose pour vérifier qu'un oui en est vraiment un.
+                      - type: container
+                        props:
+                          className: grid sm:grid-cols-2 xl:grid-cols-3 gap-6
+                        children:
+                          - component: knowledge-card
+                            vars:
+                              letter: R
+                              chip: chip-pourpre
+                              icon: rotate-ccw
+                              accent: text-mauve
+                              title: révocable
+                              text: Tu as le droit de changer d'avis, aussi souvent que tu le sens — un consentement peut être retiré à tout moment. Vérifie régulièrement, avec des mots ou sans, que c'est toujours bon pour toi et pour l'autre.
+                          - component: knowledge-card
+                            vars:
+                              letter: É
+                              chip: chip-orange
+                              icon: lightbulb
+                              accent: text-mauve
+                              title: éclairé
+                              text: "Consentir, c'est avoir toutes les infos sur la proposition : les personnes impliquées, les modalités, l'état émotionnel de chacun·e, les infos de santé sexuelle… Et être éveillé·e, hors état de conscience modifiée (alcool, drogues, hypnose)."
+                          - component: knowledge-card
+                            vars:
+                              letter: G
+                              chip: chip-mauve
+                              icon: handshake
+                              accent: text-mauve
+                              title: gagnant-gagnant
+                              text: Un rapport d'égal·e à égal·e, où la négociation a sa place et où chacun·e en retire quelque chose de positif, aligné avec soi. Chacun·e reste libre de sortir de l'interaction dès qu'elle ne lui semble plus juste. Pas de domination non consentie.
+                          - component: knowledge-card
+                            vars:
+                              letter: L
+                              chip: chip-cyan
+                              icon: feather
+                              accent: text-mauve
+                              title: libre
+                              text: "Un oui ne vaut que s'il est donné sans pression, sans violence ni contrainte, et sans être soumis à un biais dont on n'a pas conscience : dynamique de pouvoir, pression du groupe, rareté de l'occasion, attentes… On y revient plus bas."
+                          - component: knowledge-card
+                            vars:
+                              letter: E
+                              chip: chip-pourpre
+                              icon: message-circle
+                              accent: text-mauve
+                              title: explicite
+                              text: Enthousiaste, franc, sincère — consentir, ce n'est pas céder. Si tu penses « peut-être », si tu ne sais pas, si tu n'es pas sûr·e ou si tu te sens obligé·e, c'est non. Le signal doit être assez clair pour ne pas laisser de place au doute, y compris dans le non-verbal.
+                          - component: knowledge-card
+                            vars:
+                              letter: S
+                              chip: chip-orange
+                              icon: crosshair
+                              accent: text-mauve
+                              title: spécifique
+                              text: Un consentement vaut pour une action précise, avec une personne, à un moment donné. Quand l'action change et qu'elle n'a pas été discutée avant, on redemande.
+                      # Spectrum callout + photo of the flyer
+                      - type: container
+                        props:
+                          className: grid md:grid-cols-12 gap-6 items-center
+                        children:
+                          - type: container
+                            props:
+                              className: md:col-span-8 bg-mauve-light rounded-card p-6 md:p-8 flex flex-col gap-4
+                            children:
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: entre le oui et le non, tout un spectre
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-small text-bleu-fonce
+                                content: « Je ne sais pas trop si je vais aimer, mais j'ai envie d'essayer » ou « ça me fait un peu peur, mais je me sens assez en sécurité pour oser » ne ressemblent pas à « je ne me sens pas assez en sécurité pour dire non », « j'ai peur des conséquences si je dis non » ou « d'habitude j'aime bien, donc aujourd'hui je suis censé·e aimer aussi ».
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-small text-bleu-fonce
+                                content: Attention aussi à l'injonction à la joie — l'enthousiasme ne se force pas.
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-caption text-bleu-fonce-70
+                                content: "D'autres acronymes disent la même chose autrement : RÉELS, RELIÉS, CALIBRES, PALIERS."
+                          - type: container
+                            props:
+                              className: md:col-span-4 photo-frame frame-mauve max-w-xs mx-auto md:max-w-none
+                            children:
+                              - type: image
+                                props:
+                                  src: /pictures/atelier/flyer-regles-sm.webp
+                                  alt: Le flyer « Le consentement, ça te parle ? » qui présente l'acronyme RÈGLES, posé sur une table d'atelier
+                                  loading: lazy
+                                  className: w-full h-auto rounded-media shadow-card object-cover aspect-[2/3]
+
+                  # 3. Dire non, remercier le non
+                  - type: container
+                    element: section
+                    props:
+                      id: dire-non
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: dire non, remercier le non
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-3xl
+                        content: Culturellement, on vit souvent mal le fait de recevoir un non, et on peut avoir du mal à en dire un. Pourtant, un non peut être joyeux — il ouvre une relation plus franche et plus transparente, où chacun·e pose ses limites et laisse à l'autre la possibilité de poser les siennes.
+                      - type: container
+                        props:
+                          className: grid md:grid-cols-2 gap-6
+                        children:
+                          - type: container
+                            props:
+                              className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                            children:
+                              - type: icon
+                                props: { name: hand, size: 28, strokeWidth: 2, className: text-mauve }
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: poser son non
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-small text-bleu-fonce-70
+                                content: Pas besoin de faire l'anguille. Pose ton non franchement, sans en avoir peur — tu es légitime à refuser. Tu peux te justifier si tu en as envie, mais garde ton refus clair.
+                          - type: container
+                            props:
+                              className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                            children:
+                              - type: icon
+                                props: { name: heart-handshake, size: 28, strokeWidth: 2, className: text-mauve }
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: remercier le non
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-small text-bleu-fonce-70
+                                content: Dire merci à un non, c'est encourager l'autre à en redire, et montrer que tu l'as écouté·e et accueilli·e. Une preuve d'empathie visible, et un soin porté à la relation. Et quand quelqu'un te demande ton consentement avant d'agir, tu peux l'en remercier aussi.
+                      - type: container
+                        props:
+                          className: flex items-start gap-3 bg-orange-light rounded-card p-5 max-w-3xl
+                        children:
+                          - type: icon
+                            props: { name: message-square-quote, size: 24, strokeWidth: 2, className: shrink-0 text-orange-ink mt-0.5 }
+                          - type: text
+                            element: p
+                            props:
+                              className: text-bleu-fonce
+                            children:
+                              - type: text
+                                element: span
+                                props: { className: font-bold }
+                                content: 'Une phrase pour demander : '
+                              - type: text
+                                element: span
+                                content: « Tu peux me dire non, et je voulais te demander… »
+
+                  # 4. Changer d'avis
+                  - type: container
+                    element: section
+                    props:
+                      id: changer-d-avis
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: changer d'avis, c'est OK
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-3xl
+                        content: Le consentement est révocable. Avant de répondre, et après, prends le temps de te sonder. Retirer un oui déjà donné peut réveiller des tensions ou des automatismes — culpabilité, frustration, peur de blesser — qui rendent plus difficile de revenir sur sa décision, ou d'accueillir le changement d'avis de l'autre.
+                      - type: container
+                        props:
+                          className: grid md:grid-cols-2 gap-6
+                        children:
+                          - type: container
+                            props:
+                              className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                            children:
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: quand c'est toi qui changes d'avis
+                              - type: container
+                                props:
+                                  className: flex flex-col gap-2 type-small text-bleu-fonce
+                                  role: list
+                                children:
+                                  - type: container
+                                    props: { role: listitem, className: flex items-start gap-2 }
+                                    children:
+                                      - type: icon
+                                        props: { name: check, size: 18, strokeWidth: 2.5, className: shrink-0 mt-1 text-mauve }
+                                      - type: text
+                                        element: span
+                                        content: Ce n'est pas une trahison, c'est un ajustement à toi.
+                                  - type: container
+                                    props: { role: listitem, className: flex items-start gap-2 }
+                                    children:
+                                      - type: icon
+                                        props: { name: check, size: 18, strokeWidth: 2.5, className: shrink-0 mt-1 text-mauve }
+                                      - type: text
+                                        element: span
+                                        content: C'est OK de temporiser.
+                                  - type: container
+                                    props: { role: listitem, className: flex items-start gap-2 }
+                                    children:
+                                      - type: icon
+                                        props: { name: check, size: 18, strokeWidth: 2.5, className: shrink-0 mt-1 text-mauve }
+                                      - type: text
+                                        element: span
+                                        content: Tu n'as pas à te justifier si on te demande pourquoi.
+                          - type: container
+                            props:
+                              className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                            children:
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: quand c'est l'autre qui change d'avis
+                              - type: container
+                                props:
+                                  className: flex flex-col gap-2 type-small text-bleu-fonce
+                                  role: list
+                                children:
+                                  - type: container
+                                    props: { role: listitem, className: flex items-start gap-2 }
+                                    children:
+                                      - type: icon
+                                        props: { name: check, size: 18, strokeWidth: 2.5, className: shrink-0 mt-1 text-mauve }
+                                      - type: text
+                                        element: span
+                                        content: "Accueillir un retrait n'est pas un rejet personnel : c'est respecter la relation."
+                                  - type: container
+                                    props: { role: listitem, className: flex items-start gap-2 }
+                                    children:
+                                      - type: icon
+                                        props: { name: check, size: 18, strokeWidth: 2.5, className: shrink-0 mt-1 text-mauve }
+                                      - type: text
+                                        element: span
+                                        content: Il y a sans doute des raisons que tu ne connais pas.
+                                  - type: container
+                                    props: { role: listitem, className: flex items-start gap-2 }
+                                    children:
+                                      - type: icon
+                                        props: { name: check, size: 18, strokeWidth: 2.5, className: shrink-0 mt-1 text-mauve }
+                                      - type: text
+                                        element: span
+                                        content: Tu peux demander « pourquoi as-tu changé d'avis ? » — et l'autre peut choisir de ne pas répondre.
+                      - type: container
+                        props:
+                          className: flex items-start gap-3 bg-orange-light rounded-card p-5 max-w-3xl
+                        children:
+                          - type: icon
+                            props: { name: message-square-quote, size: 24, strokeWidth: 2, className: shrink-0 text-orange-ink mt-0.5 }
+                          - type: container
+                            props: { className: flex flex-col gap-1 text-bleu-fonce }
+                            children:
+                              - type: text
+                                element: p
+                                props: { className: font-bold }
+                                content: 'Des phrases pour revenir sur un oui :'
+                              - type: text
+                                element: p
+                                content: « En prenant du recul, j'ai décidé que… »
+                              - type: text
+                                element: p
+                                content: « En y réfléchissant mieux, je vais… »
+                              - type: text
+                                element: p
+                                content: « Finalement, j'ai changé d'avis… »
+
+                  # 5. Les biais
+                  - type: container
+                    element: section
+                    props:
+                      id: biais
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: les biais qui nous poussent à dire oui
+                      - type: container
+                        props:
+                          className: grid md:grid-cols-12 gap-6 items-center
+                        children:
+                          - type: container
+                            props:
+                              className: md:col-span-8 flex flex-col gap-4
+                            children:
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-lead text-bleu-fonce-70
+                                content: Des biais cognitifs, liés au fonctionnement automatique de notre cerveau, des dynamiques affectives et des structures sociales, éducatives ou économiques réduisent notre marge de manœuvre pour dire un vrai non.
+                              - type: text
+                                element: p
+                                props:
+                                  className: text-bleu-fonce
+                                content: S'en libérer complètement est impossible ; les connaître aide déjà à les repérer et à faire avec. Et tout ne dépend pas de nous individuellement — la société, et même notre biologie, ont leur part dans les défauts et les bris de consentement.
+                              - type: text
+                                element: p
+                                props:
+                                  className: text-bleu-fonce
+                                children:
+                                  - type: text
+                                    element: span
+                                    content: '« Libre », c''est un bien grand mot. Disons déjà : '
+                                  - type: text
+                                    element: span
+                                    props: { className: font-bold }
+                                    content: sans pression, menaces, intimidation ni chantage
+                                  - type: text
+                                    element: span
+                                    content: ' — et avec une meilleure conscience des biais, des dynamiques et des structures en jeu.'
+                          - type: container
+                            props:
+                              className: md:col-span-4 photo-frame frame-cyan max-w-xs mx-auto md:max-w-none
+                            children:
+                              - type: image
+                                props:
+                                  src: /pictures/atelier/cartes-biais-sm.webp
+                                  alt: Une main dispose sur une table des feuilles portant des noms de biais — « Patriarcat », « Chantage », « Dette psychologique »
+                                  loading: lazy
+                                  className: w-full h-auto rounded-media shadow-card object-cover aspect-[2/3]
+                      - type: container
+                        props:
+                          className: grid sm:grid-cols-2 xl:grid-cols-3 gap-4
+                        children:
+                          - component: term-card
+                            vars:
+                              term: Légitimité, aura
+                              definition: Je donne plus de crédit à une personne que je perçois comme experte ou charismatique.
+                              effect: Je dis oui sans avoir toutes les informations pour décider en connaissance de cause, et je crois ce qu'elle affirme sans me poser de questions.
+                          - component: term-card
+                            vars:
+                              term: Autorité
+                              definition: Tendance à accorder plus de poids aux opinions ou demandes de figures qui ont du pouvoir (supérieur·e hiérarchique, médecin, prof…).
+                              effect: Le consentement peut venir de la soumission plutôt que de la conviction.
+                          - component: term-card
+                            vars:
+                              term: Conformité
+                              definition: Tendance à adopter l'avis ou le comportement du groupe, même s'il contredit ton propre jugement.
+                              effect: On peut consentir par peur d'être exclu·e ou jugé·e.
+                          - component: term-card
+                            vars:
+                              term: Désirabilité sociale
+                              definition: Tendance à répondre ou agir de façon socialement acceptable ou valorisée, plutôt qu'authentique.
+                              effect: Je dis oui pour être accepté·e, ne pas déplaire, éviter un malaise ou séduire, plutôt que par réelle envie.
+                          - component: term-card
+                            vars:
+                              term: Culpabilité anticipée
+                              definition: J'imagine que mon refus va faire de la peine, blesser, gêner ou casser le lien.
+                              effect: Je dis oui pour éviter cette charge émotionnelle.
+                          - component: term-card
+                            vars:
+                              term: Engagement
+                              definition: Besoin de rester cohérent·e avec ses engagements passés, même s'ils ne sont plus pertinents.
+                              effect: On renouvelle un consentement par loyauté, ou pour « ne pas revenir en arrière ».
+                          - component: term-card
+                            vars:
+                              term: Rareté
+                              definition: Peur de manquer une occasion perçue comme unique ou rare.
+                              effect: On peut consentir par crainte du regret plutôt que par désir actuel.
+                          - component: term-card
+                            vars:
+                              term: Habitude relationnelle
+                              definition: Tendance à répéter les mêmes schémas avec une personne sans se demander s'ils sont toujours d'actualité.
+                              effect: Ça peut empêcher de reconsidérer son consentement dans des situations familières.
+                          - component: term-card
+                            vars:
+                              term: Loyauté relationnelle
+                              definition: Tendance à agir par devoir plus que par choix dans les liens forts (amitié, famille, couple…).
+                              effect: Le consentement peut être donné par devoir plutôt que par choix.
+                          - component: term-card
+                            vars:
+                              term: Familiarité
+                              definition: Tendance à faire davantage confiance à ce qui nous est familier ou proche.
+                              effect: On baisse sa vigilance face aux personnes connues, en supposant qu'elles ne peuvent pas nous nuire.
+                          - component: term-card
+                            vars:
+                              term: Effet de script
+                              definition: Application automatique de scénarios sociaux appris, sans se poser de questions (le déroulé d'un acte sexuel ou d'une relation amoureuse, par exemple).
+                              effect: Ça limite l'espace de choix réel, en imposant un déroulé implicite.
+                          - component: term-card
+                            vars:
+                              term: Illusion de transparence
+                              definition: Croire que notre malaise ou notre désaccord se voit, sans avoir besoin de l'exprimer.
+                              effect: On peut ne pas dire son non, en pensant que l'autre l'a déjà perçu.
+                          - component: term-card
+                            vars:
+                              term: Effet spectateur
+                              definition: En groupe, chacun·e se sent moins responsable d'agir ou de s'opposer.
+                              effect: On laisse faire, en pensant que « d'autres diront non s'il le faut ».
+                          - component: term-card
+                            vars:
+                              term: Pauvreté
+                              definition: Une contrainte matérielle ou économique limite la liberté de choix.
+                              effect: Je dis oui par nécessité, parce que je n'ai pas les ressources pour me permettre de refuser.
+                          - component: term-card
+                            vars:
+                              term: Beauté
+                              definition: Les personnes qui correspondent aux canons de beauté ont tendance à recevoir plus de oui que la moyenne.
+                              effect: Ça peut biaiser notre capacité à évaluer librement une demande.
+                          - component: term-card
+                            vars:
+                              term: Patriarcat
+                              definition: Un système social qui assigne des rôles genrés inégaux dès l'enfance.
+                              effect: Selon le genre qu'on m'a assigné, j'ai appris à être gentil·le ou à insister. Ça biaise mon rapport au consentement.
+                          - component: term-card
+                            vars:
+                              term: Rapports de pouvoir inégaux
+                              definition: Des écarts de hiérarchie, d'âge, de prestige ou de situation économique entre les personnes.
+                              effect: Ils pèsent sur la liberté de dire non.
+                          - component: term-card
+                            vars:
+                              term: Chantage
+                              definition: Une forme de menace ou de pression exercée pour obtenir un accord.
+                              effect: Il annule toute possibilité de consentement libre.
+                          - component: term-card
+                            vars:
+                              term: États modifiés de conscience
+                              definition: Un état altéré par des substances, des émotions intenses ou un choc psychique.
+                              effect: Ça peut compromettre la capacité à évaluer, refuser ou exprimer son choix.
+                          - component: term-card
+                            vars:
+                              term: Dette psychologique
+                              definition: Le sentiment de « devoir quelque chose » à quelqu'un parce qu'il ou elle nous a donné, aidé, attendu, aimé, écouté.
+                              effect: Une pression implicite à dire oui pour rendre la pareille.
+                          - component: term-card
+                            vars:
+                              term: Fatigue décisionnelle ou émotionnelle
+                              definition: Être trop fatigué·e, stressé·e ou épuisé·e pour évaluer une demande ou affirmer un non.
+                              effect: Je dis oui pour « avoir la paix ».
+
+                  # 6. Face à l'insistance
+                  - type: container
+                    element: section
+                    props:
+                      id: insistance
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: face à l'insistance
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-3xl
+                        content: Ton non a été entendu, et pourtant on insiste. Trois façons de le tenir.
+                      - type: container
+                        props:
+                          className: grid md:grid-cols-3 gap-6
+                        children:
+                          - type: container
+                            props:
+                              className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                            children:
+                              - type: icon
+                                props: { name: repeat, size: 28, strokeWidth: 2, className: text-mauve }
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: le disque rayé
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-small text-bleu-fonce-70
+                                content: Répète ton non, tel quel, autant de fois qu'il le faut.
+                          - type: container
+                            props:
+                              className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                            children:
+                              - type: icon
+                                props: { name: megaphone, size: 28, strokeWidth: 2, className: text-mauve }
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: nommer la pression
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-small text-bleu-fonce-70
+                                content: « Tu insistes trop. » « Tu veux me mettre la pression ? » « Tu ne veux pas respecter mon non ? »
+                          - type: container
+                            props:
+                              className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3
+                            children:
+                              - type: icon
+                                props: { name: door-open, size: 28, strokeWidth: 2, className: text-mauve }
+                              - type: text
+                                element: h3
+                                props:
+                                  className: type-h4 text-bleu-fonce
+                                content: partir
+                              - type: text
+                                element: p
+                                props:
+                                  className: type-small text-bleu-fonce-70
+                                content: Tu peux couper court à l'interaction et t'en aller.
+
+                  # 7. Consentement, défaut, bris
+                  - type: container
+                    element: section
+                    props:
+                      id: nuances
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: consentement, défaut, bris — les nuances
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-3xl
+                        content: Développer une culture du consentement, c'est aussi muscler notre capacité à lire une situation, en distinguant un consentement, un défaut de consentement et un bris de consentement. En atelier, on s'y exerce à partir de situations du quotidien. Pour reconnaître un consentement, quatre repères.
+                      - type: container
+                        props:
+                          className: grid sm:grid-cols-2 gap-4
+                        children:
+                          - component: term-card
+                            vars:
+                              term: Explicite
+                              definition: C'est clair, exprimé, formulé.
+                              effect: Il ne reste pas de doute.
+                          - component: term-card
+                            vars:
+                              term: Spécifique
+                              definition: Une action précise, à un moment donné.
+                              effect: Pour autre chose, ou plus tard, on redemande.
+                          - component: term-card
+                            vars:
+                              term: Individuel
+                              definition: Une action avec une personne seulement.
+                              effect: Le oui de l'une ne vaut pas pour celles d'à côté.
+                          - component: term-card
+                            vars:
+                              term: Gagnant-gagnant
+                              definition: Chacun·e en retire quelque chose de positif, aligné avec soi.
+                              effect: Personne ne cède pour l'autre.
+
+      # Closing CTA
+      - type: container
+        element: section
+        props:
+          className: px-4 sm:px-6 pb-band-sm md:pb-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto bg-orange-light rounded-media p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center
+            children:
+              - type: container
+                props:
+                  className: md:col-span-8 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: envie d'aller plus loin ?
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: Ces notions prennent tout leur sens quand on les pratique ensemble, dans un cadre bienveillant. Rejoins-nous pour 3 heures d'atelier, à prix libre, à Strasbourg.
+              - type: container
+                props:
+                  className: md:col-span-4 flex flex-col gap-3 md:items-end
+                children:
+                  - type: link
+                    props:
+                      href: /#events
+                      className: inline-flex items-center justify-center gap-2 whitespace-nowrap bg-orange text-bleu-fonce px-7 py-4 rounded-pill font-bold type-lead hover:bg-orange-hover transition-colors shadow-card
+                    children:
+                      - type: text
+                        element: span
+                        content: Je réserve ma place
+                      - type: icon
+                        props: { name: arrow-right, size: 20, strokeWidth: 2 }
+                  - type: link
+                    props:
+                      href: /ressources
+                      className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve py-2
+                    content: Voir les ressources
+
+  - component: site-footer

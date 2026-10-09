@@ -1,0 +1,154 @@
+# Shared header — sticky top bar (desktop nav + mobile drawer).
+# Used by home, /le-consentement and /ressources.
+# Var: $base — prefix for the home anchors. Pass '/' everywhere except on the
+# home page, where '#' links keep the scroll-spy in /assets/site.js working
+# (it compares href to '#<section-id>'); there pass base: '' .
+# The drawer keeps the ids/classes site.js hooks into: #mobile-menu,
+# #menu-overlay, .mobile-nav-link (close on click / Escape), .nav-link (spy).
+# No links to /espace or /ateliers/* until feat/espace-facilitateurices merges.
+name: site-header
+type: container
+element: header
+props:
+  className: sticky top-0 z-50 w-full bg-white/95 border-b border-bleu-fonce-light backdrop-blur-sm
+children:
+  - type: link
+    props:
+      href: '#contenu'
+      className: skip-link
+    content: Aller au contenu
+  - type: container
+    props:
+      className: max-w-7xl mx-auto px-4 sm:px-6 h-16 lg:h-20 flex items-center justify-between gap-6
+    children:
+      - type: link
+        props:
+          href: /
+          className: flex items-center shrink-0
+          aria-label: Merci pour ton non — accueil
+        children:
+          - type: image
+            props:
+              src: /logo-without-marging.svg
+              alt: ''
+              loading: eager
+              className: h-10 lg:h-12 w-auto
+      # Desktop navigation
+      - type: container
+        element: nav
+        props:
+          className: hidden lg:flex items-center gap-8
+          aria-label: Navigation principale
+        children:
+          - type: container
+            props:
+              className: flex items-center gap-6
+            children:
+              - type: link
+                props: { href: '$base#atelier', className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
+                content: L'atelier
+              - type: link
+                props: { href: '$base#programme', className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
+                content: Programme
+              - type: link
+                props: { href: '$base#infos-pratiques', className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
+                content: Infos pratiques
+              - type: link
+                props: { href: /le-consentement, className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
+                content: Le consentement
+              - type: link
+                props: { href: /ressources, className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
+                content: Ressources
+              - type: link
+                props: { href: '$base#faq', className: nav-link type-small font-medium text-bleu-fonce hover:text-mauve transition-colors py-1 }
+                content: FAQ
+          - type: link
+            props:
+              href: '$base#events'
+              className: inline-flex items-center gap-2 bg-orange text-bleu-fonce px-5 py-2.5 rounded-pill font-bold type-small hover:bg-orange-hover transition-colors
+            content: Je réserve ma place
+      # Mobile / tablet menu button
+      - type: button
+        props:
+          id: mobile-menu-button
+          className: icon-btn lg:hidden
+          aria-label: Ouvrir le menu
+          aria-controls: mobile-menu
+        interactions:
+          click:
+            toggleElement: '#mobile-menu'
+        children:
+          - type: icon
+            props: { name: menu, size: 24, strokeWidth: 2 }
+
+  # Mobile drawer (display toggled by the menu button; overlay/link/Escape
+  # close handled by site.js)
+  - type: container
+    props:
+      id: mobile-menu
+      className: fixed inset-0 z-50
+      style:
+        display: none
+    children:
+      - type: container
+        props:
+          id: menu-overlay
+          className: fixed inset-0 bg-bleu-fonce-50
+      - type: container
+        element: nav
+        props:
+          id: menu-sidebar
+          className: fixed right-0 top-0 h-dvh w-80 max-w-[85%] bg-white shadow-raised flex flex-col rounded-l-card
+          aria-label: Menu
+        children:
+          - type: container
+            props:
+              className: flex items-center justify-between px-5 h-16 border-b border-bleu-fonce-light
+            children:
+              - type: image
+                props:
+                  src: /logo-without-marging.svg
+                  alt: Merci pour ton non
+                  className: h-9 w-auto
+              - type: button
+                props:
+                  id: close-menu-button
+                  className: icon-btn
+                  aria-label: Fermer le menu
+                interactions:
+                  click:
+                    toggleElement: '#mobile-menu'
+                children:
+                  - type: icon
+                    props: { name: x, size: 24, strokeWidth: 2 }
+          - type: container
+            props:
+              className: flex-1 overflow-y-auto px-3 py-4 flex flex-col gap-1
+            children:
+              - type: link
+                props: { href: '$base#atelier', className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
+                content: L'atelier
+              - type: link
+                props: { href: '$base#programme', className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
+                content: Programme
+              - type: link
+                props: { href: '$base#infos-pratiques', className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
+                content: Infos pratiques
+              - type: link
+                props: { href: /le-consentement, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
+                content: Le consentement
+              - type: link
+                props: { href: /ressources, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
+                content: Ressources
+              - type: link
+                props: { href: '$base#faq', className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
+                content: FAQ
+          - type: container
+            props:
+              className: p-5 border-t border-bleu-fonce-light
+            children:
+              - type: link
+                props:
+                  href: '$base#events'
+                  className: mobile-nav-link block w-full text-center bg-orange text-bleu-fonce px-6 py-4 rounded-pill font-bold hover:bg-orange-hover transition-colors
+                content: Je réserve ma place
