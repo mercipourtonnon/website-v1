@@ -1,0 +1,76 @@
+# Reference row — one external reference of the `ressources` table, drawn as a
+# row of the /ressources lists (review of 2026-10-09). Placed from a
+# server-rendered `list` (`children` form); the record gates below read the
+# row's own fields, so one template serves every block:
+#   - the title links out when `url` holds a value, and stays plain text when
+#     it does not (a book with no official page);
+#   - « en anglais » / « en français et en anglais » when `lang` is not `fr`;
+#   - « à vérifier » until an admin flips `verified` (the lists ship before
+#     every link has been opened).
+# Vars: $title, $url, $meta (the `meta_line` formula « Auteur · Type · Année »),
+# $note (one or two sentences, DESIGN.md voice).
+# Model: event-date-row + the text column of resource-card. The row title is a
+# bold paragraph, not a heading: 88 headings in one page would drown the
+# section outline. Full Tailwind class tokens only.
+name: reference-row
+type: container
+props:
+  className: flex flex-col gap-1.5 py-4 border-b border-cyan-lighter
+children:
+  # Title line — a link when there is a URL, plain text otherwise.
+  - type: text
+    element: p
+    props:
+      className: type-body text-bleu-fonce
+    children:
+      - type: link
+        visibility: { record: { field: url, isNotEmpty: true } }
+        props:
+          href: $url
+          target: _blank
+          rel: noopener noreferrer
+          className: font-bold text-bleu-fonce underline decoration-cyan decoration-2 underline-offset-4 hover:text-cyan-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bleu-fonce focus-visible:ring-offset-2 rounded-sm
+        content: $title
+      - type: text
+        element: span
+        visibility: { record: { field: url, isEmpty: true } }
+        props:
+          className: font-bold text-bleu-fonce
+        content: $title
+  # Meta line — « Auteur · Type · Année », then the quiet markers.
+  - type: container
+    props:
+      className: flex flex-wrap items-center gap-x-3 gap-y-1
+    children:
+      - type: text
+        element: p
+        props:
+          className: type-caption text-bleu-fonce-70
+        content: $meta
+      - type: text
+        element: span
+        visibility: { record: { field: lang, eq: en } }
+        props:
+          className: type-caption text-cyan-ink
+        content: en anglais
+      - type: text
+        element: span
+        visibility: { record: { field: lang, eq: fr-en } }
+        props:
+          className: type-caption text-cyan-ink
+        content: en français et en anglais
+      # Orange-ink on white keeps the hue readable (6.2:1); the vivid orange is never text.
+      # Sovrium 0.34.1: a record gate on a checkbox compares the stored 0/1, not
+      # the boolean the manual documents (`neq: true` matched every row). Keep
+      # `neq: 1` until the fix ships (sovrium/sovrium#137).
+      - type: text
+        element: span
+        visibility: { record: { field: verified, neq: 1 } }
+        props:
+          className: type-caption font-bold text-orange-ink border border-orange rounded-pill px-2 py-0.5
+        content: à vérifier
+  - type: text
+    element: p
+    props:
+      className: type-small text-bleu-fonce-70 max-w-3xl
+    content: $note

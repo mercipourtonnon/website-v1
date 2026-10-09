@@ -2,17 +2,25 @@
 # Used by every public page. No vars: every link is a route, so the header
 # reads the same everywhere (the old $base/#anchor scheme went with the
 # one-page home).
-# Desktop: a native navigation-menu (Notre mission · Nos actions ▾ ·
-# Ressources · Devenir bénévole), the don button (HelloAsso, external) and the
-# booking CTA. The drawer mirrors that tree, "Nos actions" as an indented group.
-# The drawer keeps the ids/classes site.js hooks into: #mobile-menu,
+# Desktop (review of 2026-10-09): a native navigation-menu with three
+# dropdowns and one link — Nos actions ▾ · Comprendre ▾ · L'association ·
+# S'engager ▾ — then the don button (HelloAsso, external) and the booking
+# CTA. The drawer mirrors that tree: three `role: group` blocks
+# (drawer-actions, drawer-comprendre, drawer-engager) plus the « L'association »
+# link. The drawer keeps the ids/classes site.js hooks into: #mobile-menu,
 # #menu-overlay, .mobile-nav-link (close on click / Escape, current page).
-# "Devenir bénévole" → /inscription is the only public entry into the espace.
-# The don URL (HelloAsso donation form) is written out 4 times: twice in
-# this file, once in site-footer, once in notre-mission. In Sovrium 0.34.1 a
-# page href does not resolve `$env.X` (it renders verbatim), and a template
-# cannot place another template, so neither an env var nor a shared don-link
-# template can hold it once.
+# « Devenir bénévole » → /devenir-benevole (public page carrying the sign-up
+# form); /inscription stays the auth-flow entry and is linked from there only.
+# Two HelloAsso URLs are written out verbatim: in Sovrium 0.34.1 a page href
+# does not resolve `$env.X` (it renders verbatim) and a template cannot place
+# another template, so neither an env var nor a shared link template can hold
+# them once. Counts (grep before changing one):
+#   don form …/formulaires/1 — 6 times: 3 here (don button, S'engager
+#     dropdown, drawer), site-footer, notre-mission (#agir door-card),
+#     devenir-benevole.
+#   adhésion …/adhesions/adhesion-a-l-association-merci-pour-ton-non — 5 times:
+#     2 here (S'engager dropdown, drawer), site-footer, notre-mission (#agir
+#     door-card), devenir-benevole.
 name: site-header
 type: container
 element: header
@@ -55,15 +63,33 @@ children:
             props:
               className: flex items-center gap-1 xl:gap-3
             navItems:
-              - { label: Notre mission, href: /notre-mission }
               - label: Nos actions
                 children:
-                  - { label: Nos ateliers, href: /nos-ateliers, description: '3 heures pour explorer le consentement, à prix libre' }
+                  - { label: Nos ateliers, href: /nos-ateliers, description: '3 heures pour explorer le consentement, gratuitement' }
                   - { label: Nos stands de sensibilisation, href: /nos-stands, description: 'Des cartes et des échanges, en festival ou en événement' }
-                  - { label: Nos interventions, href: /nos-interventions, description: 'Auprès des entreprises, des assos et des établissements' }
-              - { label: Ressources, href: /ressources }
-              - { label: Devenir bénévole, href: /inscription }
-          # HelloAsso donation form — same URL in site-header, site-footer, notre-mission.
+                  - { label: Nos interventions, href: /nos-interventions, description: 'Pour ta structure, ton équipe, ton établissement' }
+              - label: Comprendre
+                children:
+                  - { label: Le consentement, href: /le-consentement, description: 'Deux définitions, RÈGLES, les biais — nos notions en libre accès' }
+                  - { label: Ressources, href: /ressources, description: 'Numéros d''aide, nos affiches, livres, films et podcasts' }
+              - { label: L'association, href: /notre-mission }
+              - label: S'engager
+                children:
+                  # HelloAsso adhésion form — URL count in the header comment.
+                  - label: Adhérer
+                    href: https://www.helloasso.com/associations/merci-pour-ton-non/adhesions/adhesion-a-l-association-merci-pour-ton-non
+                    target: _blank
+                    rel: noopener noreferrer
+                    description: 'Cotisation 5, 20 ou 50 € — tu votes à l''AG'
+                  - { label: Devenir bénévole, href: /devenir-benevole, description: 'Stands, ateliers, facilitation — à ton rythme' }
+                  - { label: Proposer une idée, href: /vos-idees, description: 'Un atelier, un contenu, un format : dis-nous' }
+                  # HelloAsso donation form — URL count in the header comment.
+                  - label: Faire un don
+                    href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
+                    target: _blank
+                    rel: noopener noreferrer
+                    description: 'Chaque don finance un atelier gratuit'
+          # HelloAsso donation form — URL count in the header comment.
           - type: link
             props:
               href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
@@ -142,9 +168,6 @@ children:
             props:
               className: flex-1 overflow-y-auto px-3 py-4 flex flex-col gap-1
             children:
-              - type: link
-                props: { href: /notre-mission, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
-                content: Notre mission
               # "Nos actions" — a group label, its three pages indented below.
               - type: text
                 element: p
@@ -167,26 +190,75 @@ children:
                   - type: link
                     props: { href: /nos-interventions, className: mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light }
                     content: Nos interventions
-              - type: link
-                props: { href: /ressources, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
-                content: Ressources
-              - type: link
-                props: { href: /inscription, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
-                content: Devenir bénévole
-              # HelloAsso donation form — same URL in site-header, site-footer, notre-mission.
-              - type: link
+              # "Comprendre" — the two knowledge pages.
+              - type: text
+                element: p
                 props:
-                  href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
-                  target: _blank
-                  rel: noopener noreferrer
-                  aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
-                  className: mobile-nav-link flex items-center gap-2 rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light
+                  id: drawer-comprendre
+                  className: px-4 pt-3 pb-1 type-overline text-bleu-fonce-70
+                content: Comprendre
+              - type: container
+                props:
+                  role: group
+                  aria-labelledby: drawer-comprendre
+                  className: ml-4 pl-2 border-l-2 border-mauve-lighter flex flex-col gap-1
                 children:
-                  - type: icon
-                    props: { name: heart, size: 18, strokeWidth: 2, aria-hidden: 'true' }
-                  - type: text
-                    element: span
-                    content: Nous faire un don
+                  - type: link
+                    props: { href: /le-consentement, className: mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light }
+                    content: Le consentement
+                  - type: link
+                    props: { href: /ressources, className: mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light }
+                    content: Ressources
+              - type: link
+                props: { href: /notre-mission, className: mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light }
+                content: L'association
+              # "S'engager" — the four ways in.
+              - type: text
+                element: p
+                props:
+                  id: drawer-engager
+                  className: px-4 pt-3 pb-1 type-overline text-bleu-fonce-70
+                content: S'engager
+              - type: container
+                props:
+                  role: group
+                  aria-labelledby: drawer-engager
+                  className: ml-4 pl-2 border-l-2 border-mauve-lighter flex flex-col gap-1
+                children:
+                  # HelloAsso adhésion form — URL count in the header comment.
+                  - type: link
+                    props:
+                      href: https://www.helloasso.com/associations/merci-pour-ton-non/adhesions/adhesion-a-l-association-merci-pour-ton-non
+                      target: _blank
+                      rel: noopener noreferrer
+                      aria-label: Adhérer sur HelloAsso (nouvel onglet)
+                      className: mobile-nav-link flex items-center gap-2 rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light
+                    children:
+                      - type: icon
+                        props: { name: user-plus, size: 18, strokeWidth: 2, aria-hidden: 'true' }
+                      - type: text
+                        element: span
+                        content: Adhérer
+                  - type: link
+                    props: { href: /devenir-benevole, className: mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light }
+                    content: Devenir bénévole
+                  - type: link
+                    props: { href: /vos-idees, className: mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light }
+                    content: Proposer une idée
+                  # HelloAsso donation form — URL count in the header comment.
+                  - type: link
+                    props:
+                      href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
+                      target: _blank
+                      rel: noopener noreferrer
+                      aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
+                      className: mobile-nav-link flex items-center gap-2 rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light
+                    children:
+                      - type: icon
+                        props: { name: heart, size: 18, strokeWidth: 2, aria-hidden: 'true' }
+                      - type: text
+                        element: span
+                        content: Faire un don
           - type: container
             props:
               className: p-5 border-t border-bleu-fonce-light

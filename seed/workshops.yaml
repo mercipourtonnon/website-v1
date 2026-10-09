@@ -1,7 +1,48 @@
-# The legacy date that stays on Billetterie Plus (17 Oct 2026, 14:00 Paris =
-# 12:00Z, summer time). Every later date is published by the approval flow.
+# The public workshop catalogue as it stands on HelloAsso Billetterie Plus
+# (event 6a57a68b6a7a3ea948a15e4b, shop 6a57a68b6a7a3ea948a15e62): one record
+# per selling item, read from the organiser dashboard on 2026-10-09. Dates,
+# facilitators and the venue come from each item; the booking link is the shop.
+# Later dates are published by the approval flow (HelloAsso classic), so a
+# replay only touches these six slugs:
+#   sovrium seed app.yaml --mode upsert --table workshops
+# Paris time → UTC: +02:00 until 25 Oct 2026 (CEST), +01:00 after (CET).
+# « Morgane » on HelloAsso is the `mogo` facilitator record (display name still
+# « Mogo » there — open item in seed/facilitators.yaml).
 mergeOn: [slug]
 records:
+  # item 6a57a68b6a7a3ea948a15e7c — 5/15 sold on 2026-10-09
+  - key: bp_2026_09_19
+    fields:
+      slug: 2026-09-19-14h
+      starts_at: '2026-09-19T12:00:00Z'
+      ends_at: '2026-09-19T15:00:00Z'
+      session_date: '2026-09-19'
+      date_label: samedi 19 septembre 2026
+      time_label: 14h
+      lead_facilitator: '@facilitators.dilara'
+      co_facilitator: '@facilitators.thomas'
+      venue: '@venues.plage_digitale'
+      capacity: 15
+      booking_url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+      booking_provider: billetterie_plus
+      status: published
+  # item 6a57b5e46a7a3ea948ab7878 — 6/15
+  - key: bp_2026_10_06
+    fields:
+      slug: 2026-10-06-18h30
+      starts_at: '2026-10-06T16:30:00Z'
+      ends_at: '2026-10-06T19:30:00Z'
+      session_date: '2026-10-06'
+      date_label: mardi 6 octobre 2026
+      time_label: 18h30
+      lead_facilitator: '@facilitators.mathilde'
+      co_facilitator: '@facilitators.thomas'
+      venue: '@venues.plage_digitale'
+      capacity: 15
+      booking_url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+      booking_provider: billetterie_plus
+      status: published
+  # item 6a57b5e48443f1e1bb5773f8 — 11/15
   - key: legacy_2026_10_17
     fields:
       slug: 2026-10-17-14h
@@ -10,6 +51,54 @@ records:
       session_date: '2026-10-17'
       date_label: samedi 17 octobre 2026
       time_label: 14h
+      lead_facilitator: '@facilitators.dilara'
+      co_facilitator: '@facilitators.mogo'
+      venue: '@venues.plage_digitale'
+      capacity: 15
+      booking_url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+      booking_provider: billetterie_plus
+      status: published
+  # item 6a57b5e46a7a3ea948ab78d9 — 2/15
+  - key: bp_2026_11_28
+    fields:
+      slug: 2026-11-28-14h
+      starts_at: '2026-11-28T13:00:00Z'
+      ends_at: '2026-11-28T16:00:00Z'
+      session_date: '2026-11-28'
+      date_label: samedi 28 novembre 2026
+      time_label: 14h
+      lead_facilitator: '@facilitators.laetitia'
+      co_facilitator: '@facilitators.mogo'
+      venue: '@venues.plage_digitale'
+      capacity: 15
+      booking_url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+      booking_provider: billetterie_plus
+      status: published
+  # item 6a57b5e48443f1e1bb57746b — 0/15
+  - key: bp_2026_12_12
+    fields:
+      slug: 2026-12-12-14h
+      starts_at: '2026-12-12T13:00:00Z'
+      ends_at: '2026-12-12T16:00:00Z'
+      session_date: '2026-12-12'
+      date_label: samedi 12 décembre 2026
+      time_label: 14h
+      lead_facilitator: '@facilitators.dilara'
+      co_facilitator: '@facilitators.mathilde'
+      venue: '@venues.plage_digitale'
+      capacity: 15
+      booking_url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
+      booking_provider: billetterie_plus
+      status: published
+  # item 6a57b5e56a7a3ea948ab795e — 8/15
+  - key: bp_2026_12_17
+    fields:
+      slug: 2026-12-17-18h30
+      starts_at: '2026-12-17T17:30:00Z'
+      ends_at: '2026-12-17T20:30:00Z'
+      session_date: '2026-12-17'
+      date_label: jeudi 17 décembre 2026
+      time_label: 18h30
       lead_facilitator: '@facilitators.mogo'
       co_facilitator: '@facilitators.thomas'
       venue: '@venues.plage_digitale'

@@ -1,0 +1,55 @@
+# Logo-less partner row — for the partners that have no logo under
+# /public/partners (review of 2026-10-09, BPS 2.16 / 3.31). Vars: $icon (lucide
+# name), $name, $role (one short overline: « Ils nous accompagnent », « Lieu
+# partenaire », « Première commande »), $text (one line), $href, $linkLabel
+# (« Découvrir Unis-Cité »). Modelled on the text half of `partner-card` and the
+# icon tile of `audience-card`; mauve tile and link like `partner-card`. Full
+# class tokens only. `title-font normal-case` keeps proper nouns cased.
+name: partner-row
+type: container
+element: article
+props:
+  className: bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex gap-4 items-start h-full
+children:
+  - type: container
+    props:
+      className: w-12 h-12 shrink-0 rounded-pill bg-mauve-light flex items-center justify-center
+    children:
+      - type: icon
+        props:
+          name: $icon
+          size: 24
+          strokeWidth: 2
+          className: text-mauve
+          aria-hidden: 'true'
+  - type: container
+    props:
+      className: flex flex-col gap-2 flex-1 min-w-0
+    children:
+      - type: text
+        element: p
+        props:
+          className: type-overline text-mauve
+        content: $role
+      - type: text
+        element: h3
+        props:
+          className: title-font normal-case type-h4 text-bleu-fonce
+        content: $name
+      - type: text
+        element: p
+        props:
+          className: type-small text-bleu-fonce-70 flex-1
+        content: $text
+      - type: link
+        props:
+          href: $href
+          target: _blank
+          rel: noopener noreferrer
+          className: inline-flex items-center gap-1.5 self-start font-bold type-small text-mauve underline underline-offset-4 hover:text-pourpre-hover
+        children:
+          - type: text
+            element: span
+            content: $linkLabel
+          - type: icon
+            props: { name: arrow-up-right, size: 16, strokeWidth: 2 }

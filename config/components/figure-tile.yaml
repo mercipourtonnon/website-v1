@@ -1,0 +1,27 @@
+# Figure tile — one hand-maintained number (review of 2026-10-09, BPS 1.10):
+# /notre-mission#chiffres and the home #chiffres band. Vars: $value (« 12 »,
+# « 9,25 / 10 », « sept. 2025 »), $label (one short line), $accent (text-cyan-ink,
+# text-pourpre-hover… — the value colour only). Modelled on the RÈGLES tiles of
+# the home. The value is a span, not a heading: four figures are not four
+# sections. Place the tiles in a `role: list` container. Full class tokens only.
+# Size: `text-3xl md:text-h2` — the runtime strips an authored `text-h3`
+# (the `type-h*` classes of site.css are unlayered and would beat `md:`).
+# Constants, not a `kpi` card: a kpi queries the records API at load and renders
+# empty on the static build (GitHub Pages).
+name: figure-tile
+type: container
+element: div
+props:
+  role: listitem
+  className: bg-white rounded-card shadow-card p-5 flex flex-col gap-1
+children:
+  - type: text
+    element: span
+    props:
+      className: title-font text-3xl md:text-h2 $accent
+    content: $value
+  - type: text
+    element: span
+    props:
+      className: type-small text-bleu-fonce-70
+    content: $label

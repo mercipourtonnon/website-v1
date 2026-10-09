@@ -1,0 +1,82 @@
+# External references shown on /ressources (livres, films, podcasts, numéros
+# d'aide, jeux, textes…). One row per reference; the page draws one list per
+# `block`, sorted by `position`, and a second list of the `featured` rows
+# (« les incontournables »). Reference data: seeded from seed/ressources.yaml
+# (`sovrium seed app.yaml --mode upsert --table ressources`), which the static
+# build needs before `sovrium build` (see scripts/deploy-pages.sh). Public read,
+# admin-only writes; `verified` is flipped by an admin once the link is checked.
+id: 12
+name: ressources
+fields:
+  - { id: 1, name: title, label: Titre, type: single-line-text, required: true, unique: true }
+  - { id: 2, name: author, label: Auteur·ice / éditeur, type: single-line-text }
+  - id: 3
+    name: kind
+    label: Type
+    type: single-select
+    required: true
+    options:
+      - { value: livre, label: Livre }
+      - { value: bd, label: Bande dessinée }
+      - { value: film, label: Film }
+      - { value: video, label: Vidéo }
+      - { value: podcast, label: Podcast }
+      - { value: institution, label: Institution }
+      - { value: aide, label: Aide }
+      - { value: jeu, label: Jeu }
+      - { value: kit, label: Kit }
+      - { value: recherche, label: Recherche }
+      - { value: pratique, label: Pratique }
+  - { id: 4, name: year, label: Année, type: integer, min: 1990, max: 2030 }
+  - id: 5
+    name: lang
+    label: Langue
+    type: single-select
+    required: true
+    default: fr
+    options:
+      - { value: fr, label: Français }
+      - { value: en, label: Anglais }
+      - { value: fr-en, label: Français et anglais }
+  - { id: 6, name: url, label: Lien, type: url }
+  - { id: 7, name: note, label: Pourquoi c'est utile, type: long-text, required: true }
+  # Which block of /ressources the row belongs to.
+  - id: 8
+    name: block
+    label: Bloc de la page
+    type: single-select
+    required: true
+    options:
+      - { value: aide, label: Besoin d'aide maintenant }
+      - { value: lire, label: Lire }
+      - { value: regarder, label: Regarder }
+      - { value: ecouter, label: Écouter }
+      - { value: institutions, label: Institutions et associations }
+      - { value: jouer, label: Jouer et pratiquer }
+      - { value: enfants, label: Enfants et parents }
+      - { value: recherche, label: Textes et recherche }
+      - { value: voisines, label: Pratiques voisines }
+  - { id: 9, name: featured, label: À la une, type: checkbox, default: false }
+  # Sort key inside a block (tens). Named `position`: `order` is an SQL keyword.
+  - { id: 10, name: position, label: Ordre, type: integer, required: true }
+  - { id: 11, name: verified, label: Lien vérifié, type: checkbox, default: false }
+  - { id: 12, name: published, label: Publié, type: checkbox, default: true }
+  # « Auteur · Type · Année », NULL-safe, so the page prints one line per row.
+  - id: 13
+    name: meta_line
+    label: Ligne de métadonnées
+    type: formula
+    resultType: string
+    formula: >-
+      COALESCE(author || ' · ', '')
+      || CASE kind
+           WHEN 'livre' THEN 'Livre' WHEN 'bd' THEN 'Bande dessinée' WHEN 'film' THEN 'Film'
+           WHEN 'video' THEN 'Vidéo' WHEN 'podcast' THEN 'Podcast' WHEN 'institution' THEN 'Institution'
+           WHEN 'aide' THEN 'Aide' WHEN 'jeu' THEN 'Jeu' WHEN 'kit' THEN 'Kit'
+           WHEN 'recherche' THEN 'Recherche' WHEN 'pratique' THEN 'Pratique' ELSE kind END
+      || COALESCE(' · ' || CAST(year AS TEXT), '')
+permissions:
+  read: all
+  create: [admin]
+  update: [admin]
+  delete: [admin]

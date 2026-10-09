@@ -715,7 +715,7 @@ components:
                     element: p
                     props:
                       className: type-lead text-bleu-fonce
-                    content: Ces notions prennent tout leur sens quand on les pratique ensemble, dans un cadre bienveillant. Rejoins-nous pour 3 heures d'atelier, à prix libre, à Strasbourg.
+                    content: Ces notions prennent tout leur sens quand on les pratique ensemble, dans un cadre bienveillant. Rejoins-nous pour 3 heures d'atelier, gratuites, à Strasbourg.
               - type: container
                 props:
                   className: md:col-span-4 flex flex-col gap-3 md:items-end

@@ -18,6 +18,12 @@ cd "$REPO_ROOT"
 
 command -v sovrium >/dev/null || { echo "sovrium not on PATH — install it first."; exit 1; }
 
+echo "▸ Seeding reference data (the build renders table-bound pages from the local DB)…"
+# facilitators/venues first (the workshop seed points at them), then the
+# Billetterie Plus dates and the /ressources references — all upserts on a
+# mergeOn key, so a replay is idempotent and never touches other rows.
+sovrium seed app.yaml --mode upsert --table facilitators --table venues --table workshops --table ressources
+
 echo "▸ Building static site (production)…"
 rm -rf dist
 NODE_ENV=production \

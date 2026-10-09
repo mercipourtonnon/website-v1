@@ -1,7 +1,7 @@
 # /nos-stands — the awareness stand: what happens on it, where to meet us,
 # and how to invite it (contact band moved from /ressources, review of
-# 2026-10-09). Draft copy: every `# TODO(contenu)` marks text the association
-# should check or complete.
+# 2026-10-09). The dates in « où nous croiser » come from the BPS (3.2, 3.8,
+# 1.10) and are a hand-maintained list: add each new stand there.
 name: nos-stands
 path: /nos-stands
 sitemap:
@@ -94,7 +94,6 @@ components:
                     props:
                       className: type-page text-bleu-fonce
                     content: nos stands de sensibilisation
-                  # TODO(contenu): check the description of the stand.
                   - type: text
                     element: p
                     props:
@@ -167,7 +166,6 @@ components:
                           alt: Sur notre stand, une personne tend une carte de mise en situation à une bénévole souriante
                           loading: lazy
                           className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/4]
-              # TODO(contenu): check the three steps of a stand.
               - type: container
                 props:
                   className: lg:col-span-8 grid sm:grid-cols-2 gap-6 content-start
@@ -217,13 +215,11 @@ components:
                 props:
                   className: type-section text-bleu-fonce
                 content: où nous croiser
-              # TODO(contenu): list the festivals and events where the stand has
-              # been (names, places, years), or the next dates.
               - type: text
                 element: p
                 props:
                   className: type-lead text-bleu-fonce-70
-                content: On tient notre stand dans des festivals et des événements à Strasbourg et alentour. Les prochaines dates sont annoncées dans la newsletter et sur Instagram.
+                content: "On a tenu notre stand au Village des associations (mars et septembre 2026), aux distributions de Cop1 (mai 2026), à la Fête de la musique pour la Ville de Strasbourg (juin 2026), et on sera au marché de Noël en décembre. Les prochaines dates sont dans la newsletter et sur Instagram."
               - type: container
                 props:
                   className: flex flex-wrap items-center gap-4 pt-2

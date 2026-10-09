@@ -1,7 +1,8 @@
-# /nos-interventions — interventions for organisations (entreprises, assos,
-# établissements). New page (review of 2026-10-09), drafted from the "pour
-# tous les contextes" pillar of /notre-mission. Every `# TODO(contenu)` marks
-# text the association should check or complete (formats, durations, price).
+# /nos-interventions — the offer for structures (à but non lucratif, petites
+# structures et ESS, entreprises), written from the BPS (3.16 structures,
+# 1.18 formats, 2.9 / 3.16 tarifs, 2.16 references) in the review of
+# 2026-10-09. Sections: #structures · #formats (with « comment on travaille »)
+# · #tarifs · #references · témoignage · #contact.
 name: nos-interventions
 path: /nos-interventions
 sitemap:
@@ -9,15 +10,15 @@ sitemap:
   changefreq: monthly
 meta:
   lang: fr-FR
-  title: Interventions sur le consentement - Merci pour ton non
-  description: "Entreprises, associations, établissements scolaires : on construit avec toi une intervention sur le consentement, à Strasbourg et dans le Grand Est."
+  title: Interventions pour les structures - Merci pour ton non
+  description: "Intervention sur le consentement pour ta structure, à Strasbourg et en Alsace : atelier découverte, demi-journée ou journée, gratuit pour les participant·es."
   author: Merci pour ton non
   robots: index, follow
   canonical: https://mercipourtonnon.fr/nos-interventions
   openGraph:
     type: website
-    title: Nos interventions auprès de structures | Merci pour ton non
-    description: "Une intervention sur le consentement construite avec ta structure : entreprise, association ou établissement scolaire."
+    title: Interventions sur le consentement pour les structures | Merci pour ton non
+    description: "Structures à but non lucratif, petites structures, entreprises : une demi-journée ou une journée sur le consentement, construite avec toi. Les participant·es ne paient jamais."
     url: https://mercipourtonnon.fr/nos-interventions
     image: https://mercipourtonnon.fr/social.png
     imageAlt: Merci pour ton non — nos interventions auprès de structures
@@ -25,8 +26,8 @@ meta:
     locale: fr_FR
   twitter:
     card: summary_large_image
-    title: Nos interventions auprès de structures | Merci pour ton non
-    description: "Une intervention sur le consentement construite avec ta structure : entreprise, association ou établissement scolaire."
+    title: Interventions pour les structures | Merci pour ton non
+    description: "Structures à but non lucratif, petites structures, entreprises : une demi-journée ou une journée sur le consentement, construite avec toi. Les participant·es ne paient jamais."
     image: https://mercipourtonnon.fr/social.png
   favicons:
     icon: /favicon/favicon-32x32.png
@@ -98,7 +99,7 @@ components:
                     element: p
                     props:
                       className: type-lead text-bleu-fonce max-w-xl
-                    content: "Relations amicales, familiales, professionnelles, intimes : le consentement est partout. On intervient dans les entreprises, les associations et les établissements, avec un format construit avec toi."
+                    content: "On intervient dans les structures à but non lucratif, les petites structures et les entreprises, à Strasbourg et en Alsace, avec un format construit avec toi. Les participant·es ne paient jamais."
                   - type: container
                     props:
                       className: flex flex-wrap items-center gap-4
@@ -115,9 +116,9 @@ components:
                             props: { name: arrow-down, size: 20, strokeWidth: 2 }
                       - type: link
                         props:
-                          href: /nos-ateliers#programme
+                          href: '#tarifs'
                           className: font-bold text-mauve underline underline-offset-4 hover:text-mauve-hover py-2
-                        content: Voir le programme d'un atelier
+                        content: Voir ce que ça coûte
               - type: container
                 props:
                   className: lg:col-span-6 photo-frame frame-cyan
@@ -131,7 +132,7 @@ components:
                       alt: Dilara et Mathilde, assises face au groupe, animent un temps d'échange
                       className: w-full h-auto rounded-media shadow-raised object-cover aspect-[3/2]
 
-      # Section: Pour quelles structures (#structures)
+      # Section: Pour quelles structures (#structures) — BPS 3.16
       - type: container
         element: section
         props:
@@ -156,7 +157,6 @@ components:
                     props:
                       className: type-section text-bleu-fonce
                     content: pour quelles structures ?
-              # TODO(contenu): check the three audiences and their examples.
               - type: container
                 props:
                   className: grid md:grid-cols-3 gap-6
@@ -164,30 +164,30 @@ components:
                   - component: audience-card
                     vars:
                       iconBg: bg-mauve-light
-                      icon: briefcase
-                      accent: text-mauve
-                      title: entreprises et collectifs de travail
-                      text: Poser ses limites au travail, entendre celles des collègues, repérer les pressions liées à la hiérarchie. Pour une équipe, un service ou un temps fort.
-                  - component: audience-card
-                    vars:
-                      iconBg: bg-mauve-light
                       icon: heart-handshake
                       accent: text-mauve
-                      title: associations et lieux culturels
-                      text: Pour tes bénévoles, ton équipe ou ton public. Un atelier, un stand ou un temps d'échange autour d'un événement.
+                      title: structures à but non lucratif
+                      text: "Écoles, centres socio-culturels, CROUS, associations, médiathèques : l'atelier contribue directement à ta mission. On cherche un financement par subvention ou convention avec toi."
                   - component: audience-card
                     vars:
                       iconBg: bg-mauve-light
-                      icon: graduation-cap
+                      icon: users
                       accent: text-mauve
-                      title: établissements scolaires et supérieurs
-                      text: Lycées, facs, écoles. Des exercices concrets pour parler consentement dans les relations amicales, amoureuses et de groupe.
+                      title: petites structures, collectifs et coopératives
+                      text: "Une équipe, un collectif, une coopérative : un tarif de solidarité, et un format à la taille de ton groupe."
+                  - component: audience-card
+                    vars:
+                      iconBg: bg-mauve-light
+                      icon: building-2
+                      accent: text-mauve
+                      title: entreprises et grandes institutions
+                      text: "Prévention collective du harcèlement, culture commune du non, qualité de vie au travail — et notre tarif finance nos ateliers gratuits."
 
-      # Section: Comment on travaille (#deroule)
+      # Section: Deux formats (#formats) — BPS 1.18, with « comment on travaille »
       - type: container
         element: section
         props:
-          id: deroule
+          id: formats
           className: px-4 sm:px-6 py-band-sm md:py-band bg-cyan-light
         children:
           - type: container
@@ -202,67 +202,290 @@ components:
                     element: p
                     props:
                       className: type-overline text-cyan-ink
-                    content: Déroulé
+                    content: Formats
                   - type: text
                     element: h2
                     props:
                       className: type-section text-bleu-fonce
+                    content: deux formats
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Le même atelier que pour le grand public, dans ta structure, avec deux facilitateur·ices.
+              - type: container
+                props:
+                  className: grid md:grid-cols-2 gap-6
+                children:
+                  - type: container
+                    element: article
+                    props: { className: bg-white rounded-card shadow-card p-6 md:p-8 flex flex-col gap-3 }
+                    children:
+                      - type: container
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-1 }
+                        children:
+                          - type: icon
+                            props: { name: clock, size: 24, strokeWidth: 2, className: text-cyan-ink, aria-hidden: 'true' }
+                      - type: text
+                        element: p
+                        props: { className: type-overline text-cyan-ink }
+                        content: Une demi-journée
+                      - type: text
+                        element: h3
+                        props: { className: type-h3 text-bleu-fonce }
+                        content: atelier découverte
+                      - type: text
+                        element: p
+                        props: { className: text-bleu-fonce }
+                        content: "3 h à 3 h 30, de 6 à 15 personnes, deux facilitateur·ices. Nos exercices et l'acronyme RÈGLES, pour poser ses limites et entendre celles des autres."
+                  - type: container
+                    element: article
+                    props: { className: bg-white rounded-card shadow-card p-6 md:p-8 flex flex-col gap-3 }
+                    children:
+                      - type: container
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-1 }
+                        children:
+                          - type: icon
+                            props: { name: calendar-days, size: 24, strokeWidth: 2, className: text-cyan-ink, aria-hidden: 'true' }
+                      - type: text
+                        element: p
+                        props: { className: type-overline text-cyan-ink }
+                        content: Une journée
+                      - type: text
+                        element: h3
+                        props: { className: type-h3 text-bleu-fonce }
+                        content: deux temps dans la journée
+                      - type: text
+                        element: p
+                        props: { className: text-bleu-fonce }
+                        content: "Deux ateliers pour deux groupes, ou un atelier le matin et, l'après-midi, un temps de travail sur vos situations."
+              # Comment on travaille — the three steps, kept from the first version
+              - type: container
+                props:
+                  className: flex flex-col gap-6
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: type-h3 text-bleu-fonce
                     content: comment on travaille
-              # TODO(contenu): formats, durations and pricing of an intervention.
+                  - type: container
+                    element: div
+                    props:
+                      role: list
+                      className: grid md:grid-cols-3 gap-6
+                    children:
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                        children:
+                          - type: text
+                            element: span
+                            props: { className: w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                            content: '1'
+                          - type: text
+                            element: h4
+                            props: { className: type-h4 text-bleu-fonce }
+                            content: on échange sur tes besoins
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: Ton public, ce qui se passe dans ta structure, ce que tu aimerais voir changer.
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                        children:
+                          - type: text
+                            element: span
+                            props: { className: w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                            content: '2'
+                          - type: text
+                            element: h4
+                            props: { className: type-h4 text-bleu-fonce }
+                            content: on construit le format ensemble
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: Demi-journée ou journée, nombre de personnes, lieu et date, à partir de nos notions et de nos exercices.
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                        children:
+                          - type: text
+                            element: span
+                            props: { className: w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                            content: '3'
+                          - type: text
+                            element: h4
+                            props: { className: type-h4 text-bleu-fonce }
+                            content: on intervient, puis on fait le point
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: Deux facilitateur·ices animent l'intervention dans un cadre bienveillant, puis on prend un temps avec toi pour en tirer les suites.
+
+      # Section: Tarifs (#tarifs) — decision A1 of the 2026-10-09 review: the
+      # grid of the BPS (2.9 / 3.16) is published as is — gratuit / subvention
+      # ou convention / 500 € / 1 000 € la demi-journée; participants never pay.
+      - type: container
+        element: section
+        props:
+          id: tarifs
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Tarifs
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: ce que ça coûte, et pourquoi
               - type: container
                 element: div
                 props:
                   role: list
-                  className: grid md:grid-cols-3 gap-6
+                  className: grid sm:grid-cols-2 lg:grid-cols-4 gap-6
                 children:
                   - type: container
                     element: div
-                    props: { role: listitem, className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                    props: { role: listitem, className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-2 }
                     children:
-                      - type: text
-                        element: span
-                        props: { className: w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
-                        content: '1'
                       - type: text
                         element: h3
                         props: { className: type-h4 text-bleu-fonce }
-                        content: on échange sur tes besoins
+                        content: particuliers
                       - type: text
                         element: p
-                        props: { className: type-small text-bleu-fonce-70 }
-                        content: Ton public, ce qui se passe dans ta structure, ce que tu aimerais voir changer.
+                        props: { className: title-font type-h3 text-mauve }
+                        content: gratuit
+                      - type: text
+                        element: p
+                        props: { className: type-caption text-bleu-fonce-70 }
+                        content: Don libre pour soutenir l'association
                   - type: container
                     element: div
-                    props: { role: listitem, className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                    props: { role: listitem, className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-2 }
                     children:
-                      - type: text
-                        element: span
-                        props: { className: w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
-                        content: '2'
                       - type: text
                         element: h3
                         props: { className: type-h4 text-bleu-fonce }
-                        content: on construit le format ensemble
+                        content: structure à but non lucratif
                       - type: text
                         element: p
-                        props: { className: type-small text-bleu-fonce-70 }
-                        content: Atelier, stand ou temps d'échange, durée et nombre de personnes, à partir de nos notions et de nos exercices.
+                        props: { className: title-font type-h3 text-mauve }
+                        content: subvention ou convention
+                      - type: text
+                        element: p
+                        props: { className: type-caption text-bleu-fonce-70 }
+                        content: À défaut, 500 € la demi-journée
                   - type: container
                     element: div
-                    props: { role: listitem, className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
+                    props: { role: listitem, className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-2 }
                     children:
                       - type: text
-                        element: span
-                        props: { className: w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
-                        content: '3'
+                        element: h3
+                        props: { className: title-font normal-case type-h4 text-bleu-fonce }
+                        content: petite structure privée ou de l'ESS
+                      - type: text
+                        element: p
+                        props: { className: title-font type-h3 text-mauve }
+                        content: 500 €
+                      - type: text
+                        element: p
+                        props: { className: type-caption text-bleu-fonce-70 }
+                        content: La demi-journée
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-2 }
+                    children:
                       - type: text
                         element: h3
                         props: { className: type-h4 text-bleu-fonce }
-                        content: on intervient, puis on fait le point
+                        content: entreprise, grande institution, grande association
                       - type: text
                         element: p
-                        props: { className: type-small text-bleu-fonce-70 }
-                        content: Deux facilitateur·ices animent l'intervention dans un cadre bienveillant, puis on prend un temps avec toi pour en tirer les suites.
+                        props: { className: title-font type-h3 text-mauve }
+                        content: 1 000 €
+                      - type: text
+                        element: p
+                        props: { className: type-caption text-bleu-fonce-70 }
+                        content: La demi-journée
+              - type: container
+                props:
+                  className: max-w-3xl flex flex-col gap-4 text-bleu-fonce
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: font-bold }
+                        content: Les participant·es ne paient jamais.
+                      - type: text
+                        element: span
+                        content: " Ce qui est facturé finance ce qui est gratuit : nos tarifs sont au bas du marché parce qu'on est une association, et chaque intervention payée paie des ateliers ouverts à tou·tes."
+                  - type: text
+                    element: p
+                    content: "Pas de budget ? On ouvre l'atelier au grand public ou on cherche un financement ensemble — on n'intervient pas gratuitement sur commande."
+
+      # Section: Références (#references) — BPS 2.16, shipped visible (A6)
+      - type: container
+        element: section
+        props:
+          id: references
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-cyan-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: Références
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: ils nous ont fait confiance
+              - type: container
+                props:
+                  className: grid md:grid-cols-2 gap-6
+                children:
+                  - component: partner-row
+                    vars:
+                      icon: landmark
+                      role: Première commande
+                      name: Ville de Strasbourg
+                      text: Animation d'un stand à la Fête de la musique, juin 2026.
+                      href: https://www.strasbourg.eu
+                      linkLabel: Découvrir la Ville de Strasbourg
+                  - component: partner-row
+                    vars:
+                      icon: graduation-cap
+                      role: Premier atelier réservé
+                      name: Unis-Cité
+                      text: Un atelier pour 8 volontaires en service civique, décembre 2026.
+                      href: https://www.uniscite.fr
+                      linkLabel: Découvrir Unis-Cité
 
       # Section: Témoignage — the participant who asked for it in so many words
       - type: container
@@ -305,6 +528,23 @@ components:
                     props:
                       className: type-lead text-bleu-fonce
                     content: Dis-nous qui tu es, quel public tu accueilles et ce que tu imagines. On te répond par email pour en discuter.
+                  # /notre-mission#chiffres lands with the next batch of the review.
+                  - type: text
+                    element: p
+                    props:
+                      className: type-small text-bleu-fonce-70
+                    children:
+                      - type: text
+                        element: span
+                        content: "Tu es un financeur ou une collectivité ? Les chiffres et le besoin social sont sur "
+                      - type: link
+                        props:
+                          href: /notre-mission#chiffres
+                          className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
+                        content: notre mission
+                      - type: text
+                        element: span
+                        content: .
               - type: container
                 props:
                   className: md:col-span-4 flex md:justify-end

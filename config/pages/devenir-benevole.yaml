@@ -1,0 +1,529 @@
+# /devenir-benevole — the public way into the équipe bénévole (review of
+# 2026-10-09, A12): what you find, the parcours, the open roles, and the
+# account sign-up form. Indexable, in the sitemap. /inscription keeps the
+# auth-flow role (role-landing, noindex) and links here from its top line.
+# On the static build (GitHub Pages) the form renders but cannot submit (no
+# server): the mailto fallback line below the form covers it (A14).
+name: devenir-benevole
+path: /devenir-benevole
+sitemap:
+  priority: 0.6
+  changefreq: monthly
+meta:
+  lang: fr-FR
+  title: Devenir bénévole - Merci pour ton non
+  description: "Rejoins l'équipe bénévole de Merci pour ton non à Strasbourg : stands, ateliers, rôles, parcours vers la facilitation. Crée ton compte en deux minutes."
+  author: Merci pour ton non
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/devenir-benevole
+  openGraph:
+    type: website
+    title: "Devenir bénévole | Merci pour ton non"
+    description: "Stands, ateliers, rôles, parcours vers la facilitation : rejoins l'équipe bénévole à Strasbourg, à ton rythme."
+    url: https://mercipourtonnon.fr/devenir-benevole
+    image: https://mercipourtonnon.fr/social.png
+    imageAlt: "L'équipe bénévole de Merci pour ton non devant son stand"
+    siteName: Merci pour ton non
+    locale: fr_FR
+  twitter:
+    card: summary_large_image
+    title: "Devenir bénévole | Merci pour ton non"
+    description: "Stands, ateliers, rôles, parcours vers la facilitation : rejoins l'équipe bénévole à Strasbourg, à ton rythme."
+    image: https://mercipourtonnon.fr/social.png
+  schema:
+    '@context': https://schema.org
+    '@type': WebPage
+    name: Devenir bénévole
+    url: https://mercipourtonnon.fr/devenir-benevole
+    inLanguage: fr-FR
+    about:
+      '@type': Organization
+      name: Merci pour ton non
+      url: https://mercipourtonnon.fr
+      foundingDate: '2025-09-21'
+      areaServed: Alsace
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  preload:
+    - href: /fonts/NeueMachina/NeueMachina-Regular.otf
+      as: font
+      type: font/otf
+      crossorigin: anonymous
+    - href: /fonts/BelyDisplay/BelyDisplay-Regular.woff2
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  customElements:
+    - type: meta
+      attrs:
+        name: theme-color
+        content: '#FFAF00'
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+
+scripts:
+  externalScripts:
+    # Mobile menu close-on-link / Escape, current page (site.js)
+    - src: /assets/site.js
+      defer: true
+      position: body-end
+
+components:
+  - component: site-header
+
+  - type: container
+    props:
+      id: contenu
+      className: bg-white overflow-x-clip
+    children:
+      # Hero (#rejoindre) — the HelloAsso adhésion pitch (BPS 3.16)
+      - type: container
+        element: section
+        props:
+          id: rejoindre
+          className: px-4 sm:px-6 pt-10 md:pt-16 pb-band-sm md:pb-band bg-orange-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-7 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-orange-ink
+                    content: S'engager
+                  - type: text
+                    element: h1
+                    props:
+                      className: type-page text-bleu-fonce
+                    content: rejoindre l'équipe bénévole
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: "Un collectif engagé, une formation, un rythme que tu choisis et des rôles que tu consens. Pas de contribution exigée par défaut : chacun·e donne le temps qu'iel a envie de donner, quand iel en a l'espace."
+                  - type: container
+                    props:
+                      className: flex flex-col sm:flex-row sm:items-center gap-4 pt-2
+                    children:
+                      - type: link
+                        props:
+                          href: '#compte'
+                          className: inline-flex items-center justify-center gap-2 self-start whitespace-nowrap bg-orange text-bleu-fonce px-7 py-4 rounded-pill font-bold type-lead hover:bg-orange-hover transition-colors shadow-card
+                        children:
+                          - type: text
+                            element: span
+                            content: Créer mon compte bénévole
+                          - type: icon
+                            props: { name: arrow-down, size: 20, strokeWidth: 2 }
+                      - type: link
+                        props:
+                          href: /notre-mission#benevoles
+                          className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve py-2
+                        content: Qui sont les bénévoles ?
+              - type: container
+                props:
+                  className: lg:col-span-5 photo-frame frame-orange max-w-md lg:max-w-none
+                children:
+                  - type: image
+                    variant: hero
+                    props:
+                      src: /pictures/stand/equipe-stand-bifurquer.webp
+                      srcset: /pictures/stand/equipe-stand-bifurquer-sm.webp 800w, /pictures/stand/equipe-stand-bifurquer.webp 1600w
+                      sizes: '(min-width: 1024px) 480px, 90vw'
+                      alt: L'équipe bénévole rit devant le stand Merci pour ton non, un soir de festival
+                      className: w-full h-auto rounded-media shadow-card object-cover aspect-[4/3]
+
+      # Section: Ce que tu trouves (#ce-que-tu-trouves)
+      - type: container
+        element: section
+        props:
+          id: ce-que-tu-trouves
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Concrètement
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: ce que tu trouves
+              - type: container
+                props:
+                  className: grid md:grid-cols-3 gap-6
+                children:
+                  - component: audience-card
+                    vars:
+                      icon: users
+                      iconBg: bg-mauve-light
+                      accent: text-mauve
+                      title: une équipe
+                      text: Six membres actifs, quatre facilitateur·ices, une réunion par mois, un groupe WhatsApp pour se donner des nouvelles.
+                  - component: audience-card
+                    vars:
+                      icon: graduation-cap
+                      iconBg: bg-mauve-light
+                      accent: text-mauve
+                      title: une formation
+                      text: "Formation interne à la facilitation, auto-évaluation, co-animation en binôme, supervision entre pairs ; l'association peut financer une formation utile contre un engagement de transmission."
+                  - component: audience-card
+                    vars:
+                      icon: scroll-text
+                      iconBg: bg-mauve-light
+                      accent: text-mauve
+                      title: un cadre clair
+                      text: "Des rôles écrits (raison d'être, redevabilités), des décisions sans objection, une gouvernance en trois cercles. Un rôle se quitte à tout moment, sans justification."
+
+      # Section: Le parcours (#parcours) — numbered rail as /nos-ateliers#programme
+      - type: container
+        element: section
+        props:
+          id: parcours
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-mauve-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28 self-start
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Étape par étape
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: le parcours
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Personne ne commence facilitateur·ice. On avance à son rythme, et chaque étape est déjà une façon de contribuer.
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: lg:col-span-7 flex flex-col
+                children:
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '1'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: participant·e
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Tu viens à un atelier.
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '2'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: bénévole
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Tu crées ton compte, tu remplis ta fiche, la coordination t'ouvre l'espace bénévole. Tu rejoins les stands, la communication, la logistique…
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-2 ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '3'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: facilitateur·ice
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Après la formation interne et des co-animations, tu animes à ton tour, rémunéré·e sur les interventions commandées (300 € HT la demi-journée), bénévole sur les ateliers grand public.
+
+      # Section: Les rôles ouverts (#roles) — BPS 3.24
+      - type: container
+        element: section
+        props:
+          id: roles
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-8
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: Les rôles
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: les rôles ouverts
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Chaque rôle a une raison d'être et des redevabilités écrites. Deux cherchent quelqu'un en ce moment.
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: flex flex-wrap gap-3
+                  aria-label: Rôles de l'association
+                children:
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
+                    content: Gardien·ne (direction collégiale)
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
+                    content: Facilitateur·rice
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
+                    content: Communication
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: inline-flex items-center gap-2 rounded-pill border border-cyan bg-cyan-light px-4 py-2 type-small font-bold text-bleu-fonce }
+                    children:
+                      - type: text
+                        element: span
+                        content: Logisticien·ne
+                      - type: text
+                        element: span
+                        props: { className: type-caption font-normal text-cyan-ink }
+                        content: ouvert
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: inline-flex items-center gap-2 rounded-pill border border-cyan bg-cyan-light px-4 py-2 type-small font-bold text-bleu-fonce }
+                    children:
+                      - type: text
+                        element: span
+                        content: Trésorerie
+                      - type: text
+                        element: span
+                        props: { className: type-caption font-normal text-cyan-ink }
+                        content: ouvert
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
+                    content: Contributeur·ice polyvalent·e
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
+                    content: Abeille (coups de main)
+
+      # Section: Créer mon compte bénévole (#compte)
+      # Copie du bloc d'inscription de /inscription (un form auth ne peut pas être
+      # référencé par formRef). Garder les deux synchronisés.
+      - type: container
+        element: section
+        props:
+          id: compte
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-orange-lighter
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-start
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-5 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-orange-ink
+                    content: Deux minutes
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: créer mon compte bénévole
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: Crée ton compte, puis remplis ta fiche bénévole. Elle sera visible par les autres bénévoles de Merci pour ton non et contient ce qu'il faut pour mieux se connaître. La coordination la relit et t'ouvre l'espace bénévole.
+                  - type: text
+                    element: p
+                    props:
+                      className: type-small text-bleu-fonce-70
+                    content: Ton email et ton téléphone restent réservés à la coordination. En créant ton compte, tu acceptes qu'ils servent à t'inviter dans notre communauté WhatsApp.
+              - type: container
+                props:
+                  className: lg:col-span-7 flex flex-col gap-6 rounded-card border border-mauve-lighter bg-white p-6 md:p-8
+                children:
+                  # Open sign-up.
+                  - type: container
+                    visibility:
+                      declares: auth.signUp
+                    props:
+                      className: flex flex-col gap-6
+                    children:
+                      - type: form
+                        action:
+                          type: auth
+                          method: signup
+                          strategy: email
+                          submitLabel: Créer mon compte
+                          pendingLabel: Création…
+                          fields:
+                            - { name: email, label: Adresse email, placeholder: toi@exemple.fr }
+                            - { name: password, label: Mot de passe }
+                          onSuccess: { type: role-landing }
+                      - type: container
+                        props:
+                          className: flex flex-wrap gap-1 border-t border-mauve-lighter pt-4 text-sm text-bleu-fonce
+                        children:
+                          - { type: text, element: span, content: Déjà un compte ? }
+                          - type: link
+                            props:
+                              href: /connexion
+                              className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                            content: Me connecter
+                  # Closed sign-up.
+                  - type: container
+                    visibility:
+                      unlessDeclares: auth.signUp
+                    props:
+                      className: flex flex-col gap-3
+                    children:
+                      - type: text
+                        element: h3
+                        props:
+                          className: type-h4 text-bleu-fonce
+                        content: sur invitation pour l'instant
+                      - type: text
+                        element: p
+                        props:
+                          className: text-bleu-fonce
+                        content: Les inscriptions se font pour l'instant sur invitation. Écris-nous à mercipourtonnon@gmail.com, on t'envoie un lien pour créer ton compte.
+                      - type: link
+                        props:
+                          href: /connexion
+                          className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                        content: J'ai déjà un compte
+                  # A14: on the static build the form renders but cannot submit.
+                  - type: text
+                    element: p
+                    props:
+                      className: type-small text-bleu-fonce-70
+                    children:
+                      - type: text
+                        element: span
+                        content: "Le formulaire ne marche pas ? Écris-nous : "
+                      - type: link
+                        props:
+                          href: mailto:mercipourtonnon@gmail.com?subject=Devenir%20b%C3%A9n%C3%A9vole
+                          className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
+                        content: mercipourtonnon@gmail.com
+
+      # Closing — support without joining
+      - type: container
+        element: section
+        props:
+          id: soutenir
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto bg-mauve-light rounded-media p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center
+            children:
+              - type: container
+                props:
+                  className: md:col-span-7 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: tu préfères soutenir sans t'engager ?
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: Adhérer te donne une voix à l'assemblée générale ; un don finance les ateliers gratuits. Les deux ouvrent droit à un reçu fiscal.
+              - type: container
+                props:
+                  className: md:col-span-5 flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 md:items-end lg:justify-end
+                children:
+                  # HelloAsso adhésion form — URL count in the site-header comment.
+                  - type: link
+                    props:
+                      href: https://www.helloasso.com/associations/merci-pour-ton-non/adhesions/adhesion-a-l-association-merci-pour-ton-non
+                      target: _blank
+                      rel: noopener noreferrer
+                      aria-label: Adhérer sur HelloAsso (nouvel onglet)
+                      className: inline-flex items-center justify-center gap-2 whitespace-nowrap bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
+                    children:
+                      - type: icon
+                        props: { name: user-plus, size: 18, strokeWidth: 2, aria-hidden: 'true' }
+                      - type: text
+                        element: span
+                        content: Adhérer
+                  # HelloAsso donation form — URL count in the site-header comment.
+                  - type: link
+                    props:
+                      href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
+                      target: _blank
+                      rel: noopener noreferrer
+                      aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
+                      className: inline-flex items-center justify-center gap-2 whitespace-nowrap border-2 border-bleu-fonce text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-bleu-fonce hover:text-white transition-colors
+                    children:
+                      - type: icon
+                        props: { name: heart, size: 18, strokeWidth: 2, aria-hidden: 'true' }
+                      - type: text
+                        element: span
+                        content: Faire un don
+
+  - component: site-footer

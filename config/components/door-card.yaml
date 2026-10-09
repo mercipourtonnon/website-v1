@@ -1,0 +1,41 @@
+# Door card — a whole-card link to one way in (review of 2026-10-09):
+# /notre-mission#agir, the home #tu-es row. Vars: $href, $target (_self for a
+# route, _blank for HelloAsso), $icon (lucide name), $iconBg (bg-orange-light),
+# $accent (text-orange-ink — icon colour only), $title (lowercase display),
+# $text, $cta (« Adhérer sur HelloAsso »). Modelled on the home « nos actions »
+# cards. `rel: noopener noreferrer` is always set: harmless on a route, required
+# on an external _blank. Full class tokens only.
+name: door-card
+type: link
+props:
+  href: $href
+  target: $target
+  rel: noopener noreferrer
+  className: group bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3 h-full hover:shadow-card transition-shadow
+children:
+  - type: container
+    props:
+      className: w-12 h-12 rounded-pill flex items-center justify-center $iconBg
+    children:
+      - type: icon
+        props:
+          name: $icon
+          size: 24
+          strokeWidth: 2
+          className: $accent
+          aria-hidden: 'true'
+  - type: text
+    element: h3
+    props:
+      className: type-h4 text-bleu-fonce
+    content: $title
+  - type: text
+    element: p
+    props:
+      className: type-small text-bleu-fonce-70 flex-1
+    content: $text
+  - type: text
+    element: span
+    props:
+      className: inline-flex items-center gap-2 font-bold text-mauve group-hover:underline underline-offset-4
+    content: $cta →

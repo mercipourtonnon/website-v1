@@ -28,6 +28,14 @@ SOVRIUM_GENERATE_ROBOTS=true \
 sovrium build app.yaml           # → dist/
 ```
 
+Le build rend les pages liées à une table (dates d'ateliers, références de
+`/ressources`) depuis la base locale : charger les données de référence avant
+de construire (le script `scripts/deploy-pages.sh` le fait) :
+
+```bash
+sovrium seed app.yaml --mode upsert --table facilitators --table venues --table workshops --table ressources
+```
+
 Le déploiement est automatisé par `.github/workflows/deploy.yml` à chaque push
 sur `main` (GitHub Pages, domaine `mercipourtonnon.fr`).
 

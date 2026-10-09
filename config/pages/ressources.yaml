@@ -1,9 +1,13 @@
-# /ressources — "nos ressources": supports de communication and contenus
-# pédagogiques to download (review of 2026-10-09; the stand band moved to
-# /nos-stands). Adding a resource = adding one `resource-card` instance to the
-# matching group below. Files are hosted on kDrive
-# (the print masters are too heavy for the repo); only a light thumbnail
-# lives in public/resources/.
+# /ressources — "nos ressources" (review of 2026-10-09, Batch 4): the numbers
+# to call, our own supports, then the curated references the BPS review
+# gathered, drawn from the `ressources` table (seed/ressources.yaml — the
+# static build seeds it first, see scripts/deploy-pages.sh). Seven blocks, one
+# server-rendered `list` per block (`children` form; `dataSource.limit: 100`
+# so no pager appears), each sorted by `position` and hidden when empty.
+# Adding a reference = adding a row (console or seed), not editing this page.
+# The `aide` rows of the table mirror the static `help-now-band` and are not
+# listed here. Our own supports stay hand-placed `resource-card`s: the print
+# masters are hosted on kDrive, only a light thumbnail lives in public/resources/.
 name: ressources
 path: /ressources
 sitemap:
@@ -11,32 +15,39 @@ sitemap:
   changefreq: monthly
 meta:
   lang: fr-FR
-  title: Nos ressources sur le consentement - Merci pour ton non
-  description: Affiches et supports sur le consentement à imprimer, afficher et partager librement, par l'association Merci pour ton non à Strasbourg.
+  title: Ressources sur le consentement - Merci pour ton non
+  description: Numéros d'aide, affiches à imprimer, livres, films, podcasts, jeux et textes sur le consentement, choisis par Merci pour ton non à Strasbourg.
   author: Merci pour ton non
   robots: index, follow
   canonical: https://mercipourtonnon.fr/ressources
   openGraph:
     type: website
-    title: Ressources sur le consentement | Merci pour ton non
-    description: Affiches et supports à imprimer, afficher et partager librement.
+    title: "Ressources : aide, livres, films, podcasts | Merci pour ton non"
+    description: Numéros d'aide, nos affiches à imprimer, et une sélection de livres, films, podcasts, jeux et textes sur le consentement.
     url: https://mercipourtonnon.fr/ressources
     image: https://mercipourtonnon.fr/social.png
-    imageAlt: Merci pour ton non — ressources à télécharger
+    imageAlt: Merci pour ton non — ressources sur le consentement
     siteName: Merci pour ton non
     locale: fr_FR
   twitter:
     card: summary_large_image
-    title: Ressources sur le consentement | Merci pour ton non
-    description: Affiches et supports à imprimer, afficher et partager librement.
+    title: "Ressources : aide, livres, films, podcasts | Merci pour ton non"
+    description: Numéros d'aide, nos affiches à imprimer, et une sélection de livres, films, podcasts, jeux et textes sur le consentement.
     image: https://mercipourtonnon.fr/social.png
   schema:
     '@context': https://schema.org
     '@type': CollectionPage
     name: Ressources sur le consentement
-    description: Affiches et supports sur le consentement à imprimer, afficher et partager librement.
+    description: Numéros d'aide, affiches à imprimer, et une sélection de livres, films, podcasts, jeux et textes sur le consentement, choisie par l'association Merci pour ton non.
     inLanguage: fr-FR
     url: https://mercipourtonnon.fr/ressources
+    about:
+      - '@type': Thing
+        name: Consentement
+      - '@type': Thing
+        name: Violences sexistes et sexuelles
+      - '@type': Thing
+        name: Éducation à la vie affective
     publisher:
       '@type': Organization
       name: Merci pour ton non
@@ -116,13 +127,13 @@ components:
                   - type: text
                     element: p
                     props:
-                      className: type-h4 font-bold text-bleu-fonce
-                    content: Contenus pédagogiques et supports à télécharger
+                      className: type-lead text-bleu-fonce max-w-xl
+                    content: "Des numéros si tu as besoin d'aide, nos affiches, et les livres, films, podcasts, jeux et textes qui nourrissent nos ateliers."
                   - type: text
                     element: p
                     props:
-                      className: type-lead text-bleu-fonce max-w-xl
-                    content: "Pour faire vivre la culture du consentement là où tu es : au travail, dans ton asso, ta fac ou ton lieu de vie. Télécharge-les, imprime-les, affiche-les — ils sont faits pour circuler."
+                      className: type-caption text-bleu-fonce-70
+                    content: Les références marquées « à vérifier » sont en cours de contrôle.
               - type: container
                 props:
                   className: lg:col-span-6 photo-frame frame-orange
@@ -136,116 +147,521 @@ components:
                       alt: Deux mains tiennent le flyer « Le consentement, ça te parle ? » au milieu des plantes
                       className: w-full h-auto rounded-media shadow-raised object-cover aspect-[3/2]
 
-      # Resources, in two groups (#telechargements kept as the anchor of the list)
+      # Block 1 — help band: the numbers to call come before everything else.
       - type: container
         element: section
         props:
-          id: telechargements
+          id: besoin-d-aide
+          className: px-4 sm:px-6 pt-band-sm md:pt-band
+        children:
+          - component: help-now-band
+
+      # Body: sticky « Sur cette page » + the six other blocks
+      - type: container
+        props:
           className: px-4 sm:px-6 py-band-sm md:py-band
         children:
           - type: container
             props:
-              className: max-w-5xl mx-auto flex flex-col gap-band-sm
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
             children:
-              # Group 1: supports de communication
+              # Table of contents (sticky on desktop)
               - type: container
+                element: nav
                 props:
-                  id: supports-de-communication
-                  className: flex flex-col gap-block
+                  className: lg:col-span-3 lg:sticky lg:top-28 self-start bg-cyan-light lg:bg-white rounded-card p-5 lg:p-0 flex flex-col gap-3
+                  aria-label: Sur cette page
                 children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: Sur cette page
                   - type: container
                     props:
-                      className: flex flex-col gap-3
+                      className: flex flex-col gap-1 type-small lg:border-l-2 lg:border-cyan-lighter lg:pl-4
+                    children:
+                      - type: link
+                        props: { href: '#besoin-d-aide', className: py-1 text-bleu-fonce hover:text-cyan-ink }
+                        content: Besoin d'aide maintenant ?
+                      - type: link
+                        props: { href: '#nos-supports', className: py-1 text-bleu-fonce hover:text-cyan-ink }
+                        content: Nos supports
+                      - type: link
+                        props: { href: '#incontournables', className: py-1 text-bleu-fonce hover:text-cyan-ink }
+                        content: Nos incontournables
+                      - type: link
+                        props: { href: '#lire-regarder-ecouter', className: py-1 text-bleu-fonce hover:text-cyan-ink }
+                        content: Lire, regarder, écouter
+                      - type: link
+                        props: { href: '#jouer-et-pratiquer', className: py-1 text-bleu-fonce hover:text-cyan-ink }
+                        content: Jouer et pratiquer
+                      - type: link
+                        props: { href: '#enfants-et-parents', className: py-1 text-bleu-fonce hover:text-cyan-ink }
+                        content: Enfants et parents
+                      - type: link
+                        props: { href: '#textes-et-recherche', className: py-1 text-bleu-fonce hover:text-cyan-ink }
+                        content: Textes et recherche
+
+              - type: container
+                props:
+                  className: lg:col-span-9 flex flex-col gap-band-sm md:gap-band min-w-0
+                children:
+                  # Block 2 — nos supports (hand-placed cards)
+                  - type: container
+                    element: section
+                    props:
+                      id: nos-supports
+                      className: flex flex-col gap-6
                     children:
                       - type: text
                         element: h2
                         props:
                           className: type-section text-bleu-fonce
-                        content: supports de communication
+                        content: nos supports
                       - type: text
                         element: p
                         props:
-                          className: type-lead text-bleu-fonce-70 max-w-2xl
-                        content: Affiches et visuels à imprimer et à partager, en libre accès.
-                  - type: container
-                    props:
-                      className: grid gap-6
-                    children:
-                      - component: resource-card
-                        vars:
-                          thumb: /resources/affiche-a3.webp
-                          thumbAlt: Aperçu de l'affiche « Pas touche sans demander » — un cactus en fleur dans un pot rose, sur fond jaune
-                          meta: PDF · A3 · 5 pages
-                          title: série de 5 affiches
-                          text: « Pas touche sans demander », « Si tu fais l'anguille, c'est que c'est non ! », « Recevoir un "non" est un cadeau », « On peut changer de disque ! » et « Dire "non" n'est pas une trahison ». Cinq affiches au format A3, pensées pour être imprimées et affichées.
-                          href: https://kdrive.infomaniak.com/app/share/3042221/15e326c4-bee4-4b34-a443-838de7a36201
-                          cta: Télécharger les affiches
-              # Group 2: contenus pédagogiques — empty until the first one ships.
-              - type: container
-                props:
-                  id: contenus-pedagogiques
-                  className: flex flex-col gap-block
-                children:
-                  - type: container
-                    props:
-                      className: flex flex-col gap-3
-                    children:
-                      - type: text
-                        element: h2
-                        props:
-                          className: type-section text-bleu-fonce
-                        content: contenus pédagogiques
-                      - type: text
-                        element: p
-                        props:
-                          className: type-lead text-bleu-fonce-70 max-w-2xl
-                        content: Des fiches et des outils pour parler du consentement autour de toi.
-                  - type: container
-                    props:
-                      className: rounded-card border-2 border-dashed border-cyan-lighter bg-cyan-light p-8 flex flex-col sm:flex-row sm:items-center gap-4
-                    children:
-                      - type: icon
-                        props: { name: hourglass, size: 28, strokeWidth: 2, className: text-cyan-ink shrink-0 }
+                          className: type-lead text-bleu-fonce-70 max-w-3xl
+                        content: "Affiches et visuels à imprimer, afficher et partager, en libre accès — ils sont faits pour circuler."
                       - type: container
                         props:
-                          className: flex flex-col gap-1
+                          className: grid gap-6
+                        children:
+                          - component: resource-card
+                            vars:
+                              thumb: /resources/affiche-a3.webp
+                              thumbAlt: Aperçu de l'affiche « Pas touche sans demander » — un cactus en fleur dans un pot rose, sur fond jaune
+                              meta: PDF · A3 · 5 pages
+                              title: série de 5 affiches
+                              text: « Pas touche sans demander », « Si tu fais l'anguille, c'est que c'est non ! », « Recevoir un "non" est un cadeau », « On peut changer de disque ! » et « Dire "non" n'est pas une trahison ». Cinq affiches au format A3, pensées pour être imprimées et affichées.
+                              href: https://kdrive.infomaniak.com/app/share/3042221/15e326c4-bee4-4b34-a443-838de7a36201
+                              cta: Télécharger les affiches
+                          # In preparation — the flyer and the kit (BPS 1.17, 3.32).
+                          - type: container
+                            props:
+                              className: rounded-card border-2 border-dashed border-cyan-lighter bg-cyan-light p-8 flex flex-col sm:flex-row sm:items-center gap-4
+                            children:
+                              - type: icon
+                                props: { name: hourglass, size: 28, strokeWidth: 2, className: text-cyan-ink shrink-0, aria-hidden: 'true' }
+                              - type: container
+                                props:
+                                  className: flex flex-col gap-1
+                                children:
+                                  - type: text
+                                    element: p
+                                    props:
+                                      className: font-bold text-bleu-fonce
+                                    content: En préparation
+                                  - type: text
+                                    element: p
+                                    props:
+                                      className: type-small text-bleu-fonce-70
+                                    content: Le flyer RÈGLES arrive ici, puis le kit pédagogique libre (licence Creative Commons, année 2).
+                      - type: text
+                        element: p
+                        props:
+                          className: type-small text-bleu-fonce-70
                         children:
                           - type: text
-                            element: p
+                            element: span
+                            content: 'Besoin d''un autre format ou de supports imprimés ? '
+                          - type: link
                             props:
-                              className: font-bold text-bleu-fonce
-                            content: Bientôt ici.
+                              href: mailto:mercipourtonnon@gmail.com
+                              className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-cyan-ink
+                            content: Écris-nous
+                          - type: text
+                            element: span
+                            content: .
+
+                  # Block 3 — nos incontournables (featured rows, every kind)
+                  - type: container
+                    element: section
+                    props:
+                      id: incontournables
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: nos incontournables
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-3xl
+                        content: "Pour commencer : une vidéo, un podcast, un jeu, des livres et la loi — ce qu'on recommande d'abord. Tu les retrouves aussi dans leur rubrique."
+                      - type: list
+                        props:
+                          aria-label: Nos incontournables
+                          className: list-none p-0 m-0 flex flex-col
+                        dataSource:
+                          table: ressources
+                          filter:
+                            - { field: featured, operator: eq, value: true }
+                            - { field: published, operator: eq, value: true }
+                          sort: [{ field: position, direction: asc }]
+                          limit: 100
+                        listDisplay:
+                          emptyMessage: Bientôt.
+                          hideWhenEmpty: true
+                        children:
+                          - component: reference-row
+                            vars: { title: $record.title, url: $record.url, meta: $record.meta_line, note: $record.note }
+
+                  # Block 4 — lire, regarder, écouter
+                  - type: container
+                    element: section
+                    props:
+                      id: lire-regarder-ecouter
+                      className: flex flex-col gap-8
+                    children:
+                      - type: container
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h2
+                            props:
+                              className: type-section text-bleu-fonce
+                            content: lire, regarder, écouter
                           - type: text
                             element: p
                             props:
-                              className: type-small text-bleu-fonce-70
+                              className: type-lead text-bleu-fonce-70 max-w-3xl
+                            content: Les livres, les films et les podcasts qui nourrissent nos ateliers — et nos conversations.
+                      - type: container
+                        element: div
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h3
+                            props:
+                              className: type-h4 text-bleu-fonce
+                            content: lire
+                          - type: list
+                            props:
+                              aria-label: Lire
+                              className: list-none p-0 m-0 flex flex-col
+                            dataSource:
+                              table: ressources
+                              filter:
+                                - { field: block, operator: eq, value: lire }
+                                - { field: published, operator: eq, value: true }
+                              sort: [{ field: position, direction: asc }]
+                              limit: 100
+                            listDisplay:
+                              emptyMessage: Bientôt.
+                              hideWhenEmpty: true
+                            children:
+                              - component: reference-row
+                                vars: { title: $record.title, url: $record.url, meta: $record.meta_line, note: $record.note }
+                      - type: container
+                        element: div
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h3
+                            props:
+                              className: type-h4 text-bleu-fonce
+                            content: regarder
+                          - type: list
+                            props:
+                              aria-label: Regarder
+                              className: list-none p-0 m-0 flex flex-col
+                            dataSource:
+                              table: ressources
+                              filter:
+                                - { field: block, operator: eq, value: regarder }
+                                - { field: published, operator: eq, value: true }
+                              sort: [{ field: position, direction: asc }]
+                              limit: 100
+                            listDisplay:
+                              emptyMessage: Bientôt.
+                              hideWhenEmpty: true
+                            children:
+                              - component: reference-row
+                                vars: { title: $record.title, url: $record.url, meta: $record.meta_line, note: $record.note }
+                      - type: container
+                        element: div
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h3
+                            props:
+                              className: type-h4 text-bleu-fonce
+                            content: écouter
+                          - type: list
+                            props:
+                              aria-label: Écouter
+                              className: list-none p-0 m-0 flex flex-col
+                            dataSource:
+                              table: ressources
+                              filter:
+                                - { field: block, operator: eq, value: ecouter }
+                                - { field: published, operator: eq, value: true }
+                              sort: [{ field: position, direction: asc }]
+                              limit: 100
+                            listDisplay:
+                              emptyMessage: Bientôt.
+                              hideWhenEmpty: true
+                            children:
+                              - component: reference-row
+                                vars: { title: $record.title, url: $record.url, meta: $record.meta_line, note: $record.note }
+
+                  # Block 5 — jouer et pratiquer
+                  - type: container
+                    element: section
+                    props:
+                      id: jouer-et-pratiquer
+                      className: flex flex-col gap-8
+                    children:
+                      - type: container
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h2
+                            props:
+                              className: type-section text-bleu-fonce
+                            content: jouer et pratiquer
+                          - type: text
+                            element: p
+                            props:
+                              className: type-lead text-bleu-fonce-70 max-w-3xl
+                            content: Des jeux et des outils pour s'exercer à demander, à dire non et à l'entendre — et les pratiques dont nos exercices s'inspirent.
+                      - type: container
+                        element: div
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h3
+                            props:
+                              className: type-h4 text-bleu-fonce
+                            content: jouer
+                          - type: list
+                            props:
+                              aria-label: Jouer
+                              className: list-none p-0 m-0 flex flex-col
+                            dataSource:
+                              table: ressources
+                              filter:
+                                - { field: block, operator: eq, value: jouer }
+                                - { field: published, operator: eq, value: true }
+                              sort: [{ field: position, direction: asc }]
+                              limit: 100
+                            listDisplay:
+                              emptyMessage: Bientôt.
+                              hideWhenEmpty: true
+                            children:
+                              - component: reference-row
+                                vars: { title: $record.title, url: $record.url, meta: $record.meta_line, note: $record.note }
+                      - type: container
+                        element: div
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h3
+                            props:
+                              className: type-h4 text-bleu-fonce
+                            content: pratiques voisines
+                          - type: list
+                            props:
+                              aria-label: Pratiques voisines
+                              className: list-none p-0 m-0 flex flex-col
+                            dataSource:
+                              table: ressources
+                              filter:
+                                - { field: block, operator: eq, value: voisines }
+                                - { field: published, operator: eq, value: true }
+                              sort: [{ field: position, direction: asc }]
+                              limit: 100
+                            listDisplay:
+                              emptyMessage: Bientôt.
+                              hideWhenEmpty: true
+                            children:
+                              - component: reference-row
+                                vars: { title: $record.title, url: $record.url, meta: $record.meta_line, note: $record.note }
+
+                  # Block 6 — enfants et parents
+                  - type: container
+                    element: section
+                    props:
+                      id: enfants-et-parents
+                      className: flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: enfants et parents
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce-70 max-w-3xl
+                        children:
+                          - type: text
+                            element: span
+                            content: "Pour parler du consentement dès le plus jeune âge, à la maison ou à l'école. Nos ateliers sont réservés aux adultes pour l'instant — "
+                          - type: link
+                            props:
+                              href: /nos-ateliers#pour-qui
+                              className: font-bold text-bleu-fonce underline decoration-cyan decoration-2 underline-offset-4 hover:text-cyan-ink
+                            content: on t'explique pourquoi
+                          - type: text
+                            element: span
+                            content: .
+                      - type: list
+                        props:
+                          aria-label: Enfants et parents
+                          className: list-none p-0 m-0 flex flex-col
+                        dataSource:
+                          table: ressources
+                          filter:
+                            - { field: block, operator: eq, value: enfants }
+                            - { field: published, operator: eq, value: true }
+                          sort: [{ field: position, direction: asc }]
+                          limit: 100
+                        listDisplay:
+                          emptyMessage: Bientôt.
+                          hideWhenEmpty: true
+                        children:
+                          - component: reference-row
+                            vars: { title: $record.title, url: $record.url, meta: $record.meta_line, note: $record.note }
+
+                  # Block 7 — textes et recherche
+                  - type: container
+                    element: section
+                    props:
+                      id: textes-et-recherche
+                      className: flex flex-col gap-8
+                    children:
+                      - type: container
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h2
+                            props:
+                              className: type-section text-bleu-fonce
+                            content: textes et recherche
+                          - type: text
+                            element: p
+                            props:
+                              className: type-lead text-bleu-fonce-70 max-w-3xl
+                            content: La loi, les études et les institutions sur lesquelles on s'appuie, et les associations vers qui on oriente.
+                      - type: container
+                        element: div
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h3
+                            props:
+                              className: type-h4 text-bleu-fonce
+                            content: recherche
+                          - type: list
+                            props:
+                              aria-label: Recherche
+                              className: list-none p-0 m-0 flex flex-col
+                            dataSource:
+                              table: ressources
+                              filter:
+                                - { field: block, operator: eq, value: recherche }
+                                - { field: published, operator: eq, value: true }
+                              sort: [{ field: position, direction: asc }]
+                              limit: 100
+                            listDisplay:
+                              emptyMessage: Bientôt.
+                              hideWhenEmpty: true
+                            children:
+                              - component: reference-row
+                                vars: { title: $record.title, url: $record.url, meta: $record.meta_line, note: $record.note }
+                      - type: container
+                        element: div
+                        props:
+                          className: flex flex-col gap-3
+                        children:
+                          - type: text
+                            element: h3
+                            props:
+                              className: type-h4 text-bleu-fonce
+                            content: institutions et associations
+                          - type: list
+                            props:
+                              aria-label: Institutions et associations
+                              className: list-none p-0 m-0 flex flex-col
+                            dataSource:
+                              table: ressources
+                              filter:
+                                - { field: block, operator: eq, value: institutions }
+                                - { field: published, operator: eq, value: true }
+                              sort: [{ field: position, direction: asc }]
+                              limit: 100
+                            listDisplay:
+                              emptyMessage: Bientôt.
+                              hideWhenEmpty: true
+                            children:
+                              - component: reference-row
+                                vars: { title: $record.title, url: $record.url, meta: $record.meta_line, note: $record.note }
+
+                  # Closing — et maintenant ?
+                  - type: container
+                    element: section
+                    props:
+                      id: et-maintenant
+                      className: bg-cyan-light rounded-media p-8 md:p-12 flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: et maintenant ?
+                      - type: text
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce max-w-3xl
+                        content: "Lire, c'est un début. S'exercer à dire non et à l'entendre, ça se fait en groupe — c'est ce qu'on propose."
+                      - type: container
+                        props:
+                          className: flex flex-col sm:flex-row sm:items-center gap-4
+                        children:
+                          - type: link
+                            props:
+                              href: /nos-ateliers
+                              className: inline-flex items-center justify-center gap-2 self-start bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
                             children:
                               - type: text
                                 element: span
-                                content: 'On prépare nos premiers contenus. En attendant, les notions de nos ateliers sont en libre accès : '
-                              - type: link
-                                props:
-                                  href: /le-consentement
-                                  className: font-bold text-cyan-ink underline underline-offset-4 hover:text-bleu-fonce
-                                content: notre vision du consentement
-                              - type: text
-                                element: span
-                                content: .
-              - type: text
-                element: p
-                props:
-                  className: type-small text-bleu-fonce-70
-                children:
-                  - type: text
-                    element: span
-                    content: 'Besoin d''un autre format ou de supports imprimés ? '
-                  - type: link
-                    props:
-                      href: mailto:mercipourtonnon@gmail.com
-                      className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
-                    content: Écris-nous
-                  - type: text
-                    element: span
-                    content: .
+                                content: Venir à un atelier
+                              - type: icon
+                                props: { name: arrow-right, size: 20, strokeWidth: 2, aria-hidden: 'true' }
+                          - type: link
+                            props:
+                              href: /nos-interventions
+                              className: font-bold text-bleu-fonce underline decoration-cyan decoration-2 underline-offset-4 hover:text-cyan-ink py-2
+                            content: Organiser un atelier dans ta structure
+                      - type: text
+                        element: p
+                        props:
+                          className: type-small text-bleu-fonce-70
+                        children:
+                          - type: text
+                            element: span
+                            content: 'Une référence à nous proposer ? '
+                          - type: link
+                            props:
+                              href: /vos-idees
+                              className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-cyan-ink
+                            content: Partage-la
+                          - type: text
+                            element: span
+                            content: .
 
   - component: site-footer
