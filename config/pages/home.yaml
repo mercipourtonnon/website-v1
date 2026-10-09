@@ -413,230 +413,55 @@ scripts:
       position: body-end
 
 components:
-  # Page wrapper with gradient background and animated blobs
+  # Shared chrome — header (anchors stay '#…' on this page so the scroll-spy
+  # in /assets/site.js keeps matching), then <main>, then the footer.
+  - component: site-header
+    vars:
+      base: ''
+
+  # Sovrium already wraps the page in <main id="main-content">; this div is
+  # the skip-link target past the header.
   - type: container
     props:
-      className: min-h-screen relative overflow-hidden
-      style:
-        background: 'linear-gradient(135deg, #FFF8E6 0%, #F3E6FF 100%)'
+      id: contenu
+      className: bg-white overflow-x-clip
     children:
-      # Animated background blobs
-      - type: container
-        props:
-          className: blob w-96 h-96 top-0 left-0 bg-orange
-      - type: container
-        props:
-          className: blob w-80 h-80 bottom-0 right-0 bg-mauve
-
-      # Section: Navigation
-      - type: container
-        element: nav
-        props:
-          className: fixed top-0 left-0 right-0 z-50 w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-lg
-        children:
-          - type: container
-            props:
-              className: max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4
-            children:
-              - type: container
-                props:
-                  className: flex justify-between items-center
-                children:
-                  - type: link
-                    props:
-                      href: '#'
-                      className: flex items-center text-gray-700
-                    children:
-                      - type: image
-                        props:
-                          src: /logo-without-marging.svg
-                          alt: Merci pour ton non
-                          className: h-12 sm:h-14 lg:h-16 w-auto
-                  # Desktop Navigation
-                  - type: container
-                    props:
-                      className: hidden lg:flex items-center gap-8
-                    children:
-                      - type: container
-                        props:
-                          className: flex space-x-6 items-center
-                        children:
-                          - type: link
-                            props: { href: '#atelier', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: L'atelier
-                          - type: link
-                            props: { href: '#temoignages', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: Témoignages
-                          - type: link
-                            props: { href: '#pour-qui', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: Pour qui
-                          - type: link
-                            props: { href: '#programme', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: Programme
-                          - type: link
-                            props: { href: '#infos-pratiques', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: Infos pratiques
-                          - type: link
-                            props: { href: '#mission', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: Mission
-                          - type: link
-                            props: { href: '#valeurs', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: Valeurs
-                          - type: link
-                            props: { href: '#equipe', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: Équipe
-                          - type: link
-                            props: { href: '#faq', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: FAQ
-                          - type: link
-                            props: { href: '#newsletter', className: nav-link text-gray-700 hover:text-orange font-medium transition text-sm }
-                            content: Newsletter
-                      # CTA in Desktop Navigation
-                      - type: link
-                        props:
-                          href: '#events'
-                          className: inline-flex items-center gap-2 bg-orange text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-orange-hover transition-colors duration-300
-                        children:
-                          - type: text
-                            element: span
-                            content: Je m'inscris
-                  # Mobile/Tablet Menu Button
-                  - type: button
-                    props:
-                      id: mobile-menu-button
-                      className: lg:hidden p-2 rounded-lg hover:bg-gray-100 transition
-                      aria-label: Menu
-                    interactions:
-                      click:
-                        toggleElement: '#mobile-menu'
-                    children:
-                      - type: icon
-                        props:
-                          name: menu
-                          className: w-6 h-6 text-gray-700
-
-      # Mobile/Tablet Sidebar Menu (display toggled by the hamburger button)
-      - type: container
-        props:
-          id: mobile-menu
-          className: fixed inset-0 z-50
-          style:
-            display: none
-        children:
-          # Overlay (click-to-close handled by site.js — containers don't
-          # emit click-interaction attributes)
-          - type: container
-            props:
-              id: menu-overlay
-              className: fixed inset-0 bg-bleu-fonce/50 backdrop-blur-sm transition-opacity
-          # Sidebar
-          - type: container
-            props:
-              id: menu-sidebar
-              className: fixed left-0 top-0 h-screen w-80 max-w-[85%] bg-white shadow-xl flex flex-col
-            children:
-              - type: container
-                props:
-                  className: flex items-center justify-between p-4
-                children:
-                  - type: image
-                    props:
-                      src: /logo.svg
-                      alt: Merci pour ton non
-                      className: h-10 w-auto
-                  - type: button
-                    props:
-                      id: close-menu-button
-                      className: p-2 rounded-lg hover:bg-gray-100 transition
-                      aria-label: Fermer le menu
-                    interactions:
-                      click:
-                        toggleElement: '#mobile-menu'
-                    children:
-                      - type: icon
-                        props:
-                          name: x
-                          className: w-6 h-6 text-gray-700
-              - type: container
-                element: nav
-                props:
-                  className: flex-1 overflow-y-auto p-6
-                children:
-                  - type: container
-                    props:
-                      className: space-y-2
-                    children:
-                      - type: link
-                        props: { href: '#atelier', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: L'atelier
-                      - type: link
-                        props: { href: '#temoignages', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: Témoignages
-                      - type: link
-                        props: { href: '#pour-qui', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: Pour qui
-                      - type: link
-                        props: { href: '#programme', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: Programme
-                      - type: link
-                        props: { href: '#infos-pratiques', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: Infos pratiques
-                      - type: link
-                        props: { href: '#mission', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: Mission
-                      - type: link
-                        props: { href: '#valeurs', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: Valeurs
-                      - type: link
-                        props: { href: '#equipe', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: Équipe
-                      - type: link
-                        props: { href: '#faq', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: FAQ
-                      - type: link
-                        props: { href: '#newsletter', className: mobile-nav-link block text-lg font-medium text-gray-700 hover:text-orange hover:bg-orange-light rounded-lg transition py-3 px-4 }
-                        content: Newsletter
-                  # CTA in Mobile Menu
-                  - type: container
-                    props:
-                      className: mt-8
-                    children:
-                      - type: link
-                        props:
-                          href: '#events'
-                          className: mobile-nav-link block w-full text-center bg-orange text-white px-6 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg
-                        content: Je réserve ma place
-
       # Section: Hero
       - type: container
         element: section
         props:
-          className: relative z-10 px-4 pt-32 sm:pt-40 pb-16 sm:pb-24 md:pb-28
+          className: px-4 sm:px-6 pt-10 md:pt-16 pb-band-sm md:pb-band
         children:
           - type: container
             props:
-              className: max-w-5xl mx-auto text-center
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
             children:
-              - type: text
-                element: h1
+              - type: container
                 props:
-                  className: hero-title text-4xl sm:text-5xl lg:text-7xl mb-8 leading-none
+                  className: lg:col-span-6 flex flex-col gap-6
                 children:
                   - type: text
-                    element: span
+                    element: p
                     props:
-                      className: title-font text-pourpre
-                    content: 'atelier '
+                      className: type-overline text-mauve
+                    content: Ateliers à prix libre · Strasbourg
+                  # Brand-coloured title, as in the logo. "de" is bleu foncé:
+                  # orange text fails contrast even at display size (1.8:1).
                   - type: text
-                    element: span
+                    element: h1
                     props:
-                      className: title-font text-orange
-                    content: de
-                  - type: container
-                    element: div
-                    props:
-                      className: contents
+                      className: type-hero
                     children:
+                      - type: text
+                        element: span
+                        props:
+                          className: title-font text-pourpre
+                        content: 'atelier '
+                      - type: text
+                        element: span
+                        props:
+                          className: title-font text-bleu-fonce
+                        content: de
                       - type: text
                         element: span
                         props:
@@ -647,483 +472,574 @@ components:
                         props:
                           className: title-font text-cyan block
                         content: à strasbourg
-              - type: text
-                element: p
-                props:
-                  className: text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10
-                content: "Rejoins-nous pour 3 heures d'atelier : apprendre à dire non et faire évoluer tes relations"
-              # Key features with brand colors
-              - type: container
-                props:
-                  className: flex flex-wrap justify-center gap-3 mb-10 max-w-3xl mx-auto
-                children:
-                  - type: text
-                    element: span
-                    props:
-                      className: inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-pourpre-light text-pourpre border border-pourpre
-                    children:
-                      - type: icon
-                        props: { name: users, className: w-4 h-4 -mt-0.5 }
-                      - type: text
-                        element: span
-                        content: 6 à 15 personnes
-                  - type: text
-                    element: span
-                    props:
-                      className: inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-orange-light text-orange border border-orange
-                    children:
-                      - type: icon
-                        props: { name: clock, className: w-4 h-4 -mt-0.5 }
-                      - type: text
-                        element: span
-                        content: 3 heures
-                  - type: text
-                    element: span
-                    props:
-                      className: inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-mauve-light text-mauve border border-mauve
-                    children:
-                      - type: icon
-                        props: { name: heart, className: w-4 h-4 -mt-0.5 }
-                      - type: text
-                        element: span
-                        content: Prix libre
-                  - type: text
-                    element: span
-                    props:
-                      className: inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold bg-cyan-light text-cyan border border-cyan
-                    children:
-                      - type: icon
-                        props: { name: map-pin, className: w-4 h-4 -mt-0.5 }
-                      - type: text
-                        element: span
-                        content: Strasbourg, Alsace
-              # CTA
-              - type: container
-                props:
-                  className: flex flex-col sm:flex-row gap-4 justify-center items-center
-                children:
-                  - type: link
-                    props:
-                      href: '#events'
-                      className: inline-flex items-center gap-2 bg-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg hover:shadow-xl
-                    children:
-                      - type: text
-                        element: span
-                        content: Je réserve ma place
-                      - type: icon
-                        props: { name: arrow-right, className: w-5 h-5 -mt-0.5 }
                   - type: text
                     element: p
                     props:
-                      className: text-sm text-gray-600
+                      className: type-lead text-bleu-fonce-70 max-w-xl
+                    content: "Rejoins-nous pour 3 heures d'atelier : apprendre à dire non et faire évoluer tes relations"
+                  # Key facts — one row, icons in one accent
+                  - type: container
+                    element: div
+                    props:
+                      role: list
+                      className: flex flex-wrap gap-x-6 gap-y-2 type-small font-bold text-bleu-fonce
                     children:
-                      - type: text
-                        element: span
-                        content: 'Prochaine session le '
-                      - type: text
-                        element: span
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: inline-flex items-center gap-2 }
+                        children:
+                          - type: icon
+                            props: { name: users, size: 18, strokeWidth: 2, className: text-mauve }
+                          - type: text
+                            element: span
+                            content: 6 à 15 personnes
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: inline-flex items-center gap-2 }
+                        children:
+                          - type: icon
+                            props: { name: clock, size: 18, strokeWidth: 2, className: text-mauve }
+                          - type: text
+                            element: span
+                            content: 3 heures
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: inline-flex items-center gap-2 }
+                        children:
+                          - type: icon
+                            props: { name: heart, size: 18, strokeWidth: 2, className: text-mauve }
+                          - type: text
+                            element: span
+                            content: Prix libre
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: inline-flex items-center gap-2 }
+                        children:
+                          - type: icon
+                            props: { name: map-pin, size: 18, strokeWidth: 2, className: text-mauve }
+                          - type: text
+                            element: span
+                            content: Strasbourg, Alsace
+                  # CTA
+                  - type: container
+                    props:
+                      className: flex flex-col sm:flex-row sm:items-center gap-4 pt-2
+                    children:
+                      - type: link
                         props:
-                          id: hero-next-date
-                          className: font-bold text-bleu-fonce
-                        content: 19 septembre 2026
-          # Decorative colored circles
-          - type: container
-            props:
-              className: absolute top-20 left-10 w-32 h-32 bg-orange-light rounded-full opacity-40 blur-3xl -z-10
-          - type: container
-            props:
-              className: absolute bottom-20 right-10 w-40 h-40 bg-mauve-light rounded-full opacity-40 blur-3xl -z-10
-          - type: container
-            props:
-              className: absolute top-40 right-20 w-24 h-24 bg-pourpre-light rounded-full opacity-30 blur-2xl -z-10
+                          href: '#events'
+                          className: inline-flex items-center justify-center gap-2 self-start whitespace-nowrap bg-orange text-bleu-fonce px-7 py-4 rounded-pill font-bold type-lead hover:bg-orange-hover transition-colors shadow-card
+                        children:
+                          - type: text
+                            element: span
+                            content: Je réserve ma place
+                          - type: icon
+                            props: { name: arrow-right, size: 20, strokeWidth: 2 }
+                      - type: text
+                        element: p
+                        props:
+                          className: type-small text-bleu-fonce-70
+                        children:
+                          - type: text
+                            element: span
+                            content: 'Prochaine session le '
+                          - type: text
+                            element: span
+                            props:
+                              id: hero-next-date
+                              className: font-bold text-bleu-fonce
+                            content: 19 septembre 2026
+              - type: container
+                props:
+                  className: lg:col-span-6 photo-frame frame-mauve
+                children:
+                  - type: image
+                    variant: hero
+                    props:
+                      src: /pictures/atelier/dilara-mathilde-rires.webp
+                      srcset: /pictures/atelier/dilara-mathilde-rires-sm.webp 800w, /pictures/atelier/dilara-mathilde-rires.webp 1600w
+                      sizes: '(min-width: 1024px) 600px, 100vw'
+                      alt: Dilara et Mathilde, facilitatrices, rient ensemble pendant un atelier de consentement
+                      className: w-full h-auto rounded-media shadow-raised object-cover aspect-[3/2]
 
       # Section: Workshop Details (#atelier)
       - type: container
         element: section
         props:
           id: atelier
-          className: relative z-10 px-6 py-16 bg-orange-light
+          className: px-4 sm:px-6 py-band-sm md:py-band
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
             children:
               - type: container
                 props:
-                  className: mb-12 text-center
+                  className: lg:col-span-5 order-last lg:order-first photo-frame frame-cyan
                 children:
+                  - type: image
+                    props:
+                      src: /pictures/atelier/dilara-mathilde-echange.webp
+                      srcset: /pictures/atelier/dilara-mathilde-echange-sm.webp 800w, /pictures/atelier/dilara-mathilde-echange.webp 1600w
+                      sizes: '(min-width: 1024px) 480px, 100vw'
+                      alt: Dilara et Mathilde échangent en souriant avant le début d'un atelier
+                      loading: lazy
+                      className: w-full h-auto rounded-media shadow-card object-cover aspect-[4/3]
+              - type: container
+                props:
+                  className: lg:col-span-7 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: L'atelier · 3 heures
                   - type: text
                     element: h2
                     props:
-                      className: text-3xl md:text-4xl title-font text-orange
+                      className: type-section text-bleu-fonce
                     content: un atelier de consentement qui fait sens
                   - type: text
                     element: p
                     props:
-                      className: text-base text-gray-600 mt-4 max-w-3xl mx-auto
+                      className: type-lead text-bleu-fonce-70
                     content: Cet atelier t'invite à explorer le consentement dans un cadre bienveillant et participatif.
                   - type: container
                     props:
-                      className: mt-6 inline-flex items-center gap-2 bg-pourpre-light text-pourpre px-4 py-2 rounded-full font-semibold
+                      className: inline-flex items-center gap-2 self-start type-small font-bold text-bleu-fonce bg-cyan-light rounded-pill px-4 py-2
                     children:
                       - type: icon
-                        props: { name: info, className: w-5 h-5 }
+                        props: { name: info, size: 18, strokeWidth: 2, className: text-cyan-ink }
                       - type: text
                         element: span
                         content: 6 à 15 participants maximum
+                  - type: container
+                    props:
+                      className: grid sm:grid-cols-2 gap-8 pt-2
+                    children:
+                      - type: container
+                        props: { className: flex flex-col gap-4 }
+                        children:
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 text-bleu-fonce }
+                            content: ce qu'on explore ensemble
+                          - type: container
+                            element: div
+                            props: { role: list, className: flex flex-col gap-3 type-small text-bleu-fonce }
+                            children:
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Exercices ludiques pour mettre en pratique les notions clés
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Jeux de rôle bienveillants pour t'entraîner à dire non
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Mises en situation pour comprendre ce qui influence tes décisions
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Moments de partage dans un cadre sécurisant
+                      - type: container
+                        props: { className: flex flex-col gap-4 }
+                        children:
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 text-bleu-fonce }
+                            content: tu pourras emporter
+                          - type: container
+                            element: div
+                            props: { role: list, className: flex flex-col gap-3 type-small text-bleu-fonce }
+                            children:
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: sparkle, size: 20, strokeWidth: 2, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Une définition claire et mémorisable du consentement
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: sparkle, size: 20, strokeWidth: 2, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Des clés concrètes pour repérer les situations problématiques
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: sparkle, size: 20, strokeWidth: 2, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Plus de confiance pour poser tes limites
+                              - type: container
+                                element: div
+                                props: { role: listitem, className: flex items-start gap-3 }
+                                children:
+                                  - type: icon
+                                    props: { name: sparkle, size: 20, strokeWidth: 2, className: shrink-0 mt-0.5 text-cyan-ink }
+                                  - type: text
+                                    element: span
+                                    content: Des outils pour des relations plus authentiques et respectueuses
+
+      # Section: Le consentement, en clair — teaser of /le-consentement
+      - type: container
+        element: section
+        props:
+          id: en-clair
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-mauve-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
+            children:
               - type: container
                 props:
-                  className: grid md:grid-cols-2 gap-8 mb-12
+                  className: lg:col-span-5 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Savoirs
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: le consentement, en clair
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: "Six lettres pour t'en souvenir. On a mis en ligne les notions qu'on partage en atelier : deux définitions, l'acronyme RÈGLES, les biais qui nous poussent à dire oui et quelques phrases pour tenir un non."
+                  - type: container
+                    props:
+                      className: flex flex-wrap items-center gap-4
+                    children:
+                      - type: link
+                        props:
+                          href: /le-consentement
+                          className: inline-flex items-center gap-2 bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
+                        children:
+                          - type: text
+                            element: span
+                            content: Lire les notions
+                          - type: icon
+                            props: { name: arrow-right, size: 20, strokeWidth: 2 }
+                      - type: link
+                        props:
+                          href: /ressources
+                          className: font-bold text-mauve underline underline-offset-4 hover:text-mauve-hover py-2
+                        content: Voir les ressources
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-4
+                  aria-label: L'acronyme RÈGLES
                 children:
                   - type: container
-                    props:
-                      className: bg-white rounded-lg p-8
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card shadow-card p-5 flex flex-col gap-1 }
                     children:
                       - type: text
-                        element: h3
-                        props:
-                          className: text-xl title-font text-cyan mb-6
-                        content: ce qu'on explore ensemble
-                      - type: container
-                        props:
-                          className: space-y-4
-                        children:
-                          - type: container
-                            props: { className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check-circle, className: w-6 h-6 shrink-0 mt-1 text-cyan }
-                              - type: text
-                                element: span
-                                props: { className: text-gray-700 }
-                                content: Exercices ludiques pour mettre en pratique les notions clés
-                          - type: container
-                            props: { className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check-circle, className: w-6 h-6 shrink-0 mt-1 text-cyan }
-                              - type: text
-                                element: span
-                                props: { className: text-gray-700 }
-                                content: Jeux de rôle bienveillants pour t'entraîner à dire non
-                          - type: container
-                            props: { className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check-circle, className: w-6 h-6 shrink-0 mt-1 text-cyan }
-                              - type: text
-                                element: span
-                                props: { className: text-gray-700 }
-                                content: Mises en situation pour comprendre ce qui influence tes décisions
-                          - type: container
-                            props: { className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check-circle, className: w-6 h-6 shrink-0 mt-1 text-cyan }
-                              - type: text
-                                element: span
-                                props: { className: text-gray-700 }
-                                content: Moments de partage dans un cadre sécurisant
+                        element: span
+                        props: { className: title-font normal-case type-h1 text-pourpre, aria-hidden: 'true' }
+                        content: R
+                      - type: text
+                        element: span
+                        props: { className: font-bold text-bleu-fonce }
+                        content: Révocable
                   - type: container
-                    props:
-                      className: rounded-lg p-8 bg-mauve-light
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card shadow-card p-5 flex flex-col gap-1 }
                     children:
                       - type: text
-                        element: h3
-                        props:
-                          className: text-xl title-font text-mauve mb-6
-                        content: tu pourras emporter
-                      - type: container
-                        props:
-                          className: space-y-4
-                        children:
-                          - type: container
-                            props: { className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: star, className: w-6 h-6 shrink-0 mt-1 text-mauve }
-                              - type: text
-                                element: span
-                                props: { className: text-gray-700 }
-                                content: Une définition claire et mémorisable du consentement
-                          - type: container
-                            props: { className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: star, className: w-6 h-6 shrink-0 mt-1 text-mauve }
-                              - type: text
-                                element: span
-                                props: { className: text-gray-700 }
-                                content: Des clés concrètes pour repérer les situations problématiques
-                          - type: container
-                            props: { className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: star, className: w-6 h-6 shrink-0 mt-1 text-mauve }
-                              - type: text
-                                element: span
-                                props: { className: text-gray-700 }
-                                content: Plus de confiance pour poser tes limites
-                          - type: container
-                            props: { className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: star, className: w-6 h-6 shrink-0 mt-1 text-mauve }
-                              - type: text
-                                element: span
-                                props: { className: text-gray-700 }
-                                content: Des outils pour des relations plus authentiques et respectueuses
+                        element: span
+                        props: { className: title-font normal-case type-h1 text-mauve, aria-hidden: 'true' }
+                        content: È
+                      - type: text
+                        element: span
+                        props: { className: font-bold text-bleu-fonce }
+                        content: Éclairé
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card shadow-card p-5 flex flex-col gap-1 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: title-font normal-case type-h1 text-cyan-ink, aria-hidden: 'true' }
+                        content: G
+                      - type: text
+                        element: span
+                        props: { className: font-bold text-bleu-fonce }
+                        content: Gagnant-gagnant
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card shadow-card p-5 flex flex-col gap-1 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: title-font normal-case type-h1 text-pourpre, aria-hidden: 'true' }
+                        content: L
+                      - type: text
+                        element: span
+                        props: { className: font-bold text-bleu-fonce }
+                        content: Libre
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card shadow-card p-5 flex flex-col gap-1 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: title-font normal-case type-h1 text-mauve, aria-hidden: 'true' }
+                        content: E
+                      - type: text
+                        element: span
+                        props: { className: font-bold text-bleu-fonce }
+                        content: Explicite
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: bg-white rounded-card shadow-card p-5 flex flex-col gap-1 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: title-font normal-case type-h1 text-cyan-ink, aria-hidden: 'true' }
+                        content: S
+                      - type: text
+                        element: span
+                        props: { className: font-bold text-bleu-fonce }
+                        content: Spécifique
 
-      # Section: Testimonials (#temoignages)
+      # Section: Testimonials (#temoignages) — each testimonial exists once.
+      # Three featured quotes (larger), then one CSS-columns list.
       - type: container
         element: section
         props:
           id: temoignages
-          className: bg-white py-16 sm:py-24
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-pourpre-light
         children:
           - type: container
             props:
-              className: max-w-6xl mx-auto px-4 sm:px-6
+              className: max-w-7xl mx-auto flex flex-col gap-block
             children:
-              - type: text
-                element: h2
-                props:
-                  className: title-font text-3xl sm:text-4xl text-center text-bleu-fonce mb-4
-                content: ce qu'iels en disent
-              - type: text
-                element: p
-                props:
-                  className: text-center text-gray-600 mb-12 max-w-xl mx-auto
-                content: Des personnes qui sont venues, et qui en parlent mieux que nous.
-              # Desktop: 3 balanced columns
               - type: container
                 props:
-                  className: hidden lg:flex gap-6 max-w-5xl mx-auto items-start
+                  className: flex flex-col gap-4 max-w-2xl
                 children:
-                  - type: container
+                  - type: text
+                    element: p
                     props:
-                      className: flex-1 flex flex-col gap-6
-                    children:
-                      - component: testimonial-card
-                        vars:
-                          bg: bg-pourpre-light
-                          border: border-l-pourpre
-                          accent: text-pourpre
-                          quote: '"Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l''on se sente à l''aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d''atelier afin d''apprendre de nouvelles choses ou de solidifier les acquis !"'
-                          author: — Camille
-                      - component: testimonial-card
-                        vars:
-                          bg: bg-orange-light
-                          border: border-l-orange
-                          accent: text-orange
-                          quote: '"Atelier riche d''expériences et de questionnements, en douceur et bienveillance."'
-                          author: — Céline
-                      - component: testimonial-card
-                        vars:
-                          bg: bg-mauve-light
-                          border: border-l-mauve
-                          accent: text-mauve
-                          quote: '"Merci pour cet atelier passionnant, ludique et bienveillant. J''ai beaucoup appris. Je recommande !"'
-                          author: — Laetitia
-                  - type: container
+                      className: type-overline text-pourpre-hover
+                    content: Témoignages
+                  - type: text
+                    element: h2
                     props:
-                      className: flex-1 flex flex-col gap-6
-                    children:
-                      - component: testimonial-card
-                        vars:
-                          bg: bg-cyan-light
-                          border: border-l-cyan
-                          accent: text-cyan
-                          quote: '"Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s''exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."'
-                          author: — Sam
-                      - component: testimonial-card
-                        vars:
-                          bg: bg-pourpre-light
-                          border: border-l-pourpre
-                          accent: text-pourpre
-                          quote: '"Je recommande cet atelier à tout le monde ! Les 3h sont passées super vite grâce à une animation de qualité. J''ai hâte de pouvoir pratiquer toute la théorie."'
-                          author: — Juliette
-                      - component: testimonial-card
-                        vars:
-                          bg: bg-orange-light
-                          border: border-l-orange
-                          accent: text-orange
-                          quote: '"Une formation éclairante pour toutes les générations sans oublier les hommes cis."'
-                          author: — Elodie
-                  - type: container
+                      className: type-section text-bleu-fonce
+                    content: ce qu'iels en disent
+                  - type: text
+                    element: p
                     props:
-                      className: flex-1 flex flex-col gap-6
-                    children:
-                      - component: testimonial-card
-                        vars:
-                          bg: bg-mauve-light
-                          border: border-l-mauve
-                          accent: text-mauve
-                          quote: '"Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m''affirmer et oser dire non."'
-                          author: — Lou
-                      - component: testimonial-card
-                        vars:
-                          bg: bg-orange-light
-                          border: border-l-orange
-                          accent: text-orange
-                          quote: '"Cet atelier aurait le mérite d''être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J''ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c''est inspirant."'
-                          author: — Alex
-                      - component: testimonial-card
-                        vars:
-                          bg: bg-mauve-light
-                          border: border-l-mauve
-                          accent: text-mauve
-                          quote: '"Atelier très instructif, avec des mises en pratique peu engageantes et qui font cependant bien réfléchir. Cadre très sécure, chaleureux et accueillant. Je recommande ++. La rencontre avec les autres participant·e·s est aussi très riche. J''en ressors avec de la force et de la bonne humeur."'
-                          author: — Anonyme
-              # Mobile/tablet: masonry 1-2 columns
+                      className: type-lead text-bleu-fonce-70
+                    content: Des personnes qui sont venues, et qui en parlent mieux que nous.
               - type: container
                 props:
-                  className: lg:hidden wall-of-love max-w-5xl mx-auto
+                  className: grid lg:grid-cols-3 gap-6 items-start
                 children:
                   - component: testimonial-card
                     vars:
-                      bg: bg-pourpre-light
-                      border: border-l-pourpre
-                      accent: text-pourpre
-                      quote: '"Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l''on se sente à l''aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d''atelier afin d''apprendre de nouvelles choses ou de solidifier les acquis !"'
-                      author: — Camille
+                      size: type-lead
+                      quote: "C'est la première fois que je participais à un atelier autour de la notion de consentement, et première fois tout court que je participais à un atelier militant, et ce fût une très belle première fois ! […] je me suis sentie en sécurité et à l'aise pour participer facilement. Le contenu en lui-même a été très intéressant et m'a apporté des notions nouvelles alors que je pensais déjà être assez calée sur le sujet. Les exercices pratiques sont un vrai plus ! […]"
+                      author: Leyla
                   - component: testimonial-card
                     vars:
-                      bg: bg-orange-light
-                      border: border-l-orange
-                      accent: text-orange
-                      quote: '"Atelier riche d''expériences et de questionnements, en douceur et bienveillance."'
-                      author: — Céline
+                      size: type-lead
+                      quote: "En tant qu'homme cis, je craignais que la question du consentement ne soit abordée que par le prisme des violences sexistes, dans lesquelles les hommes sont très majoritairement mis en cause. Mais l'angle de l'atelier était bien plus large que ça, et mettait en lumière le fait que poser ses limites, et dépasser les limites d'autrui, était sans rapport avec les questions de genre."
+                      author: Pierre
                   - component: testimonial-card
                     vars:
-                      bg: bg-cyan-light
-                      border: border-l-cyan
-                      accent: text-cyan
-                      quote: '"Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s''exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."'
-                      author: — Sam
+                      size: type-lead
+                      quote: "Une très belle expérience à partager! Venu en couple, j'avais un peu d'appréhension à l'idée de parler de moi ou de nous. La force de l'atelier est d'approcher le consentement avec des exemples simples, progressifs et du quotidien : \"tu me prêtes ton crayon? ...\". Une prise de recul qui permet d'approcher la notion de manière sereine. Merci beaucoup."
+                      author: Nicolas
+              - type: container
+                props:
+                  className: wall-of-love
+                children:
                   - component: testimonial-card
                     vars:
-                      bg: bg-mauve-light
-                      border: border-l-mauve
-                      accent: text-mauve
-                      quote: '"Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m''affirmer et oser dire non."'
-                      author: — Lou
+                      size: type-body
+                      quote: "Atelier très intéressant et enrichissant. Le cadre posé a tout de suite été rassurant et bienveillant. Que l'on se sente à l'aise ou non avec les notions de consentement il est très bon de pouvoir participer à ce genre d'atelier afin d'apprendre de nouvelles choses ou de solidifier les acquis !"
+                      author: Camille
                   - component: testimonial-card
                     vars:
-                      bg: bg-pourpre-light
-                      border: border-l-pourpre
-                      accent: text-pourpre
-                      quote: '"Je recommande cet atelier à tout le monde ! Les 3h sont passées super vite grâce à une animation de qualité. J''ai hâte de pouvoir pratiquer toute la théorie."'
-                      author: — Juliette
+                      size: type-body
+                      quote: "Belle expérience enrichissante. Un collectif motivé, engagé et respectueux qui nous a donné la possibilité de réfléchir et de s'exprimer sur une notion complexe et évolutive, souvent mal comprise dans notre société. Je repars avec des questions, des envies de revenir en discuter et des pistes pour améliorer mes propres relations interpersonnelles."
+                      author: Sam
                   - component: testimonial-card
                     vars:
-                      bg: bg-orange-light
-                      border: border-l-orange
-                      accent: text-orange
-                      quote: '"Cet atelier aurait le mérite d''être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J''ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c''est inspirant."'
-                      author: — Alex
+                      size: type-body
+                      quote: "Je recommande cet atelier à tout le monde, que vous ayez déjà des connaissances sur le sujet du consentement (et pas que sexuel) ou non, vous y apprendrez forcément des choses dans un cadre cool et bienveillant ! Je repars avec plein de clés pour m'affirmer et oser dire non."
+                      author: Lou
                   - component: testimonial-card
                     vars:
-                      bg: bg-mauve-light
-                      border: border-l-mauve
-                      accent: text-mauve
-                      quote: '"Atelier très instructif, avec des mises en pratique peu engageantes et qui font cependant bien réfléchir. Cadre très sécure, chaleureux et accueillant. Je recommande ++. La rencontre avec les autres participant·e·s est aussi très riche. J''en ressors avec de la force et de la bonne humeur."'
-                      author: — Anonyme
+                      size: type-body
+                      quote: "Atelier riche d'expériences et de questionnements, en douceur et bienveillance."
+                      author: Céline
                   - component: testimonial-card
                     vars:
-                      bg: bg-cyan-light
-                      border: border-l-cyan
-                      accent: text-cyan
-                      quote: '"Une formation éclairante pour toutes les générations sans oublier les hommes cis."'
-                      author: — Elodie
+                      size: type-body
+                      quote: "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant."
+                      author: Alex
                   - component: testimonial-card
                     vars:
-                      bg: bg-pourpre-light
-                      border: border-l-pourpre
-                      accent: text-pourpre
-                      quote: '"Merci pour cet atelier passionnant, ludique et bienveillant. J''ai beaucoup appris. Je recommande !"'
-                      author: — Laetitia
+                      size: type-body
+                      quote: "Je recommande cet atelier à tout le monde ! Les 3h sont passées super vite grâce à une animation de qualité. J'ai hâte de pouvoir pratiquer toute la théorie."
+                      author: Juliette
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Atelier très instructif, avec des mises en pratique peu engageantes et qui font cependant bien réfléchir. Cadre très sécure, chaleureux et accueillant. Je recommande ++. La rencontre avec les autres participant·e·s est aussi très riche. J'en ressors avec de la force et de la bonne humeur."
+                      author: Anonyme
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Une formation éclairante pour toutes les générations sans oublier les hommes cis."
+                      author: Elodie
+                  - component: testimonial-card
+                    vars:
+                      size: type-body
+                      quote: "Merci pour cet atelier passionnant, ludique et bienveillant. J'ai beaucoup appris. Je recommande !"
+                      author: Laetitia
 
       # Section: Pour qui ? (#pour-qui)
       - type: container
         element: section
         props:
           id: pour-qui
-          className: relative z-10 px-6 py-16 bg-white
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-orange-light
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto
+              className: max-w-7xl mx-auto flex flex-col gap-block
             children:
               - type: container
                 props:
-                  className: mb-12 text-center
+                  className: grid lg:grid-cols-12 gap-12
                 children:
-                  - type: text
-                    element: h2
+                  - type: container
                     props:
-                      className: text-3xl md:text-4xl title-font text-bleu-fonce
-                    content: cet atelier est pour toi si...
-              - type: container
-                props:
-                  className: grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto
-                children:
-                  - component: audience-card
-                    vars:
-                      bg: bg-pourpre-light
-                      icon: users
-                      accent: text-pourpre
-                      title: tu es parent
-                      text: Tu souhaites améliorer la communication avec tes enfants, respecter leurs limites et leur apprendre à poser les leurs dès le plus jeune âge.
-                  - component: audience-card
-                    vars:
-                      bg: bg-orange-light
-                      icon: briefcase
-                      accent: text-orange
-                      title: tu es professionnel·le
-                      text: Tu cherches à mieux gérer les relations au travail, poser tes limites professionnelles et créer des interactions plus saines avec collègues et clients.
-                  - component: audience-card
-                    vars:
-                      bg: bg-orange-vif-light
-                      icon: heart
-                      accent: text-orange-vif
-                      title: tu es impliqué·e dans une relation
-                      text: 'Couple, relation ouverte, polyamour ou autre forme relationnelle : tu souhaites mieux communiquer tes besoins et désirs, et construire des relations plus équilibrées et authentiques.'
-                  - component: audience-card
-                    vars:
-                      bg: bg-mauve-light
-                      icon: graduation-cap
-                      accent: text-mauve
-                      title: tu es étudiant·e ou jeune actif·ve
-                      text: Tu construis tes relations amicales, amoureuses et professionnelles, et tu aimerais naviguer ces interactions en respectant tes limites.
-                  - component: audience-card
-                    vars:
-                      bg: bg-cyan-light
-                      icon: hand
-                      accent: text-cyan
-                      title: tu as du mal à dire non
-                      text: Tu te sens souvent obligé·e d'accepter des choses qui ne te conviennent pas, et tu cherches à apprendre à t'affirmer sans culpabiliser.
-                  - component: audience-card
-                    vars:
-                      bg: bg-bleu-fonce-light
-                      icon: help-circle
-                      accent: text-bleu-fonce
-                      title: tu es simplement curieux·se
-                      text: Tu souhaites mieux comprendre le consentement au-delà du contexte sexuel et découvrir comment il s'applique dans toutes tes relations quotidiennes.
+                      className: lg:col-span-4 flex flex-col gap-6
+                    children:
+                      - type: text
+                        element: p
+                        props:
+                          className: type-overline text-orange-ink
+                        content: Pour qui
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: cet atelier est pour toi si...
+                      - type: container
+                        props:
+                          className: hidden lg:block photo-frame frame-orange mt-4
+                        children:
+                          - type: image
+                            props:
+                              src: /pictures/stand/carte-consentement-stand-sm.webp
+                              alt: Sur notre stand, une personne tend une carte de mise en situation à une bénévole souriante
+                              loading: lazy
+                              className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/4]
+                  - type: container
+                    props:
+                      className: lg:col-span-8 grid sm:grid-cols-2 gap-6 content-start
+                    children:
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: users
+                          accent: text-orange-ink
+                          title: tu es parent
+                          text: Tu souhaites améliorer la communication avec tes enfants, respecter leurs limites et leur apprendre à poser les leurs dès le plus jeune âge.
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: briefcase
+                          accent: text-orange-ink
+                          title: tu es professionnel·le
+                          text: Tu cherches à mieux gérer les relations au travail, poser tes limites professionnelles et créer des interactions plus saines avec collègues et clients.
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: heart
+                          accent: text-orange-ink
+                          title: tu es impliqué·e dans une relation
+                          text: 'Couple, relation ouverte, polyamour ou autre forme relationnelle : tu souhaites mieux communiquer tes besoins et désirs, et construire des relations plus équilibrées et authentiques.'
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: graduation-cap
+                          accent: text-orange-ink
+                          title: tu es étudiant·e ou jeune actif·ve
+                          text: Tu construis tes relations amicales, amoureuses et professionnelles, et tu aimerais naviguer ces interactions en respectant tes limites.
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: hand
+                          accent: text-orange-ink
+                          title: tu as du mal à dire non
+                          text: Tu te sens souvent obligé·e d'accepter des choses qui ne te conviennent pas, et tu cherches à apprendre à t'affirmer sans culpabiliser.
+                      - component: audience-card
+                        vars:
+                          iconBg: bg-orange-light
+                          icon: circle-help
+                          accent: text-orange-ink
+                          title: tu es simplement curieux·se
+                          text: Tu souhaites mieux comprendre le consentement au-delà du contexte sexuel et découvrir comment il s'applique dans toutes tes relations quotidiennes.
               # Universality message
               - type: container
                 props:
-                  className: mt-12 max-w-3xl mx-auto bg-orange-light rounded-lg p-8 text-center
+                  className: bg-white rounded-card shadow-card p-8 md:p-10 flex flex-col gap-4 max-w-4xl
                 children:
                   - type: text
                     element: h3
                     props:
-                      className: text-xl title-font text-bleu-fonce mb-4
+                      className: type-h4 text-bleu-fonce
                     content: quel que soit ton profil...
                   - type: text
                     element: p
                     props:
-                      className: text-base text-gray-700 leading-relaxed
+                      className: text-bleu-fonce
                     children:
                       - type: text
                         element: span
@@ -1136,7 +1052,7 @@ components:
                   - type: text
                     element: p
                     props:
-                      className: text-gray-600 mt-4
+                      className: type-small text-bleu-fonce-70
                     content: Le consentement est une compétence relationnelle universelle qui nous concerne tou·te·s.
 
       # Section: Programme (#programme)
@@ -1144,345 +1060,378 @@ components:
         element: section
         props:
           id: programme
-          className: relative z-10 px-6 py-16 bg-white
+          className: px-4 sm:px-6 py-band-sm md:py-band
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
             children:
               - type: container
                 props:
-                  className: mb-12 text-center
+                  className: lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28 self-start
                 children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Déroulé
                   - type: text
                     element: h2
                     props:
-                      className: text-3xl md:text-4xl title-font text-bleu-fonce
+                      className: type-section text-bleu-fonce
                     content: programme de l'atelier (3h)
                   - type: text
                     element: p
                     props:
-                      className: text-base text-gray-600 mt-6
+                      className: type-lead text-bleu-fonce-70
                     content: Un parcours progressif pour explorer toutes les dimensions du consentement
-              # Timeline
-              - type: container
-                props:
-                  className: max-w-3xl mx-auto
-                children:
                   - type: container
-                    props: { className: relative pl-10 pb-8 border-l-2 border-gray-200 }
+                    props:
+                      className: photo-frame frame-mauve mt-2
                     children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-pourpre rounded-full }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-lg title-font text-pourpre mb-1 }
-                            content: accueil & cadre
-                          - type: text
-                            element: p
-                            props: { className: text-gray-600 text-sm }
-                            content: Présentation de l'équipe, des objectifs et création d'un cadre sécurisant
-                  - type: container
-                    props: { className: relative pl-10 pb-8 border-l-2 border-gray-200 }
-                    children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-mauve rounded-full }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-lg title-font text-mauve mb-1 }
-                            content: les règles du consentement
-                          - type: text
-                            element: p
-                            props: { className: text-gray-600 text-sm }
-                            content: Découvrir l'acronyme RÈGLES (Révocable, Éclairé, Gagnant-Gagnant, Libre, Explicite, Spécifique)
-                  - type: container
-                    props: { className: relative pl-10 pb-8 border-l-2 border-gray-200 }
-                    children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-orange rounded-full }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-lg title-font text-orange mb-1 }
-                            content: dire non
-                          - type: text
-                            element: p
-                            props: { className: text-gray-600 text-sm }
-                            content: S'entraîner à poser un "non" franc et remercier pour le "non" de l'autre
-                  - type: container
-                    props: { className: relative pl-10 pb-8 border-l-2 border-gray-200 }
-                    children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-mauve rounded-full }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-lg title-font text-mauve mb-1 }
-                            content: repérer les bris
-                          - type: text
-                            element: p
-                            props: { className: text-gray-600 text-sm }
-                            content: Reconnaître les défauts et bris de consentement dans des situations concrètes
-                  - type: container
-                    props: { className: relative pl-10 pb-8 border-l-2 border-gray-200 }
-                    children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center }
-                        children:
-                          - type: icon
-                            props: { name: coffee, className: w-3 h-3 text-white }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-base title-font text-gray-600 mb-1 }
-                            content: pause
-                  - type: container
-                    props: { className: relative pl-10 pb-8 border-l-2 border-gray-200 }
-                    children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-mauve rounded-full }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-lg title-font text-mauve mb-1 }
-                            content: la négociation gagnant-gagnant
-                          - type: text
-                            element: p
-                            props: { className: text-gray-600 text-sm }
-                            content: Explorer le spectre entre OUI et NON, et négocier pour trouver un accord juste
-                  - type: container
-                    props: { className: relative pl-10 pb-8 border-l-2 border-gray-200 }
-                    children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-orange rounded-full }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-lg title-font text-orange mb-1 }
-                            content: changer d'avis (révocable)
-                          - type: text
-                            element: p
-                            props: { className: text-gray-600 text-sm }
-                            content: Pratiquer le retrait du consentement et accueillir le changement d'avis de l'autre
-                  - type: container
-                    props: { className: relative pl-10 pb-8 border-l-2 border-gray-200 }
-                    children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-mauve rounded-full }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-lg title-font text-mauve mb-1 }
-                            content: identifier les biais
-                          - type: text
-                            element: p
-                            props: { className: text-gray-600 text-sm }
-                            content: Comprendre les pressions sociales, affectives et les biais qui influencent nos choix
-                  - type: container
-                    props: { className: relative pl-10 pb-8 border-l-2 border-gray-200 }
-                    children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-orange rounded-full }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-lg title-font text-orange mb-1 }
-                            content: tenir face à l'insistance
-                          - type: text
-                            element: p
-                            props: { className: text-gray-600 text-sm }
-                            content: Muscler sa capacité à résister aux pressions et tenir un "non"
-                  - type: container
-                    props: { className: relative pl-10 }
-                    children:
-                      - type: container
-                        props: { className: absolute -left-3 top-0 w-6 h-6 bg-cyan rounded-full }
-                      - type: container
-                        props: { className: flex-1 }
-                        children:
-                          - type: text
-                            element: h3
-                            props: { className: text-lg title-font text-cyan mb-1 }
-                            content: cercle de clôture
-                          - type: text
-                            element: p
-                            props: { className: text-gray-600 text-sm }
-                            content: Partage des apprentissages et distribution des ressources à emporter
-              # CTA after program
-              - type: container
-                props:
-                  className: text-center mt-12
-                children:
+                      - type: image
+                        props:
+                          src: /pictures/atelier/dilara-mathilde-animent.webp
+                          srcset: /pictures/atelier/dilara-mathilde-animent-sm.webp 800w, /pictures/atelier/dilara-mathilde-animent.webp 1600w
+                          sizes: '(min-width: 1024px) 480px, 100vw'
+                          alt: Dilara et Mathilde, assises face au groupe, animent un temps d'échange
+                          loading: lazy
+                          className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/2]
                   - type: link
                     props:
                       href: '#events'
-                      className: inline-flex items-center gap-2 bg-orange text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-hover transition-colors duration-300 shadow-lg
+                      className: hidden lg:inline-flex items-center gap-2 self-start bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
                     children:
                       - type: text
                         element: span
                         content: Je réserve ma place
                       - type: icon
-                        props: { name: arrow-right, className: w-5 h-5 }
+                        props: { name: arrow-right, size: 20, strokeWidth: 2 }
+              # Timeline
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: lg:col-span-7 flex flex-col
+                children:
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '1'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: accueil & cadre
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Présentation de l'équipe, des objectifs et création d'un cadre sécurisant
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '2'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: les règles du consentement
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Découvrir l'acronyme RÈGLES (Révocable, Éclairé, Gagnant-Gagnant, Libre, Explicite, Spécifique)
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '3'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: dire non
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: S'entraîner à poser un "non" franc et remercier pour le "non" de l'autre
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '4'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: repérer les bris
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Reconnaître les défauts et bris de consentement dans des situations concrètes
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: container
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve-light text-mauve flex items-center justify-center }
+                        children:
+                          - type: icon
+                            props: { name: coffee, size: 18, strokeWidth: 2 }
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce-70 pt-1.5 }
+                        content: pause
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '5'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: la négociation gagnant-gagnant
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Explorer le spectre entre OUI et NON, et négocier pour trouver un accord juste
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '6'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: changer d'avis (révocable)
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Pratiquer le retrait du consentement et accueillir le changement d'avis de l'autre
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '7'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: identifier les biais
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Comprendre les pressions sociales, affectives et les biais qui influencent nos choix
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-mauve-lighter ml-5 }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '8'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: tenir face à l'insistance
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Muscler sa capacité à résister aux pressions et tenir un "non"
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: relative pl-14 ml-5 border-l-2 border-transparent }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-mauve text-white font-bold flex items-center justify-center, aria-hidden: 'true' }
+                        content: '9'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce mb-1 }
+                        content: cercle de clôture
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Partage des apprentissages et distribution des ressources à emporter
+              - type: link
+                props:
+                  href: '#events'
+                  className: lg:hidden inline-flex items-center gap-2 self-start bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
+                children:
+                  - type: text
+                    element: span
+                    content: Je réserve ma place
+                  - type: icon
+                    props: { name: arrow-right, size: 20, strokeWidth: 2 }
 
       # Section: Infos pratiques (#infos-pratiques)
       - type: container
         element: section
         props:
           id: infos-pratiques
-          className: relative z-10 px-6 py-16 bg-cyan-light
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-cyan-light
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto
+              className: max-w-7xl mx-auto flex flex-col gap-block
             children:
               - type: container
                 props:
-                  className: mb-12 text-center
+                  className: flex flex-col gap-4 max-w-2xl
                 children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: En pratique
                   - type: text
                     element: h2
                     props:
-                      className: text-3xl md:text-4xl title-font text-cyan
+                      className: type-section text-bleu-fonce
                     content: infos pratiques
                   - type: text
                     element: p
                     props:
-                      className: text-base text-gray-600 mt-6
+                      className: type-lead text-bleu-fonce-70
                     content: Tout ce qu'il faut savoir avant de s'inscrire
               - type: container
                 props:
-                  className: grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto
+                  className: grid sm:grid-cols-2 lg:grid-cols-4 gap-6
                 children:
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 text-center }
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-2 }
                     children:
                       - type: container
-                        props: { className: rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-pourpre-light }
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-2 }
                         children:
                           - type: icon
-                            props: { name: clock, className: w-8 h-8 text-pourpre }
+                            props: { name: clock, size: 24, strokeWidth: 2, className: text-cyan-ink }
                       - type: text
                         element: h3
-                        props: { className: title-font text-pourpre mb-2 }
+                        props: { className: type-h4 text-bleu-fonce }
                         content: durée
                       - type: text
                         element: p
-                        props: { className: text-gray-700 font-semibold }
+                        props: { className: font-bold text-bleu-fonce }
                         content: 3 heures avec pause
                       - type: text
                         element: p
-                        props: { className: text-sm text-gray-500 mt-1 }
+                        props: { className: type-caption text-bleu-fonce-70 }
                         content: Horaire selon la session
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 text-center }
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-2 }
                     children:
                       - type: container
-                        props: { className: rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-orange-light }
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-2 }
                         children:
                           - type: icon
-                            props: { name: map-pin, className: w-8 h-8 text-orange }
+                            props: { name: map-pin, size: 24, strokeWidth: 2, className: text-cyan-ink }
                       - type: text
                         element: h3
-                        props: { className: title-font text-orange mb-2 }
+                        props: { className: type-h4 text-bleu-fonce }
                         content: lieu
                       - type: text
                         element: p
-                        props: { className: text-gray-700 font-semibold }
+                        props: { className: font-bold text-bleu-fonce }
                         content: Strasbourg
                       - type: text
                         element: p
-                        props: { className: text-sm text-gray-500 mt-1 }
-                        content: Adresse communiquée aux inscrits
+                        props: { className: type-caption text-bleu-fonce-70 }
+                        content: Adresse communiquée aux inscrit·es
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 text-center }
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-2 }
                     children:
                       - type: container
-                        props: { className: rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-mauve-light }
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-2 }
                         children:
                           - type: icon
-                            props: { name: users, className: w-8 h-8 text-mauve }
+                            props: { name: users, size: 24, strokeWidth: 2, className: text-cyan-ink }
                       - type: text
                         element: h3
-                        props: { className: title-font text-mauve mb-2 }
+                        props: { className: type-h4 text-bleu-fonce }
                         content: groupe
                       - type: text
                         element: p
-                        props: { className: text-gray-700 font-semibold }
+                        props: { className: font-bold text-bleu-fonce }
                         content: 6 à 15 personnes
                       - type: text
                         element: p
-                        props: { className: text-sm text-gray-500 mt-1 }
+                        props: { className: type-caption text-bleu-fonce-70 }
                         content: Intimité préservée
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 text-center }
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-2 }
                     children:
                       - type: container
-                        props: { className: rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-cyan-light }
+                        props: { className: w-12 h-12 rounded-pill bg-cyan-light flex items-center justify-center mb-2 }
                         children:
                           - type: icon
-                            props: { name: circle-dollar-sign, className: w-8 h-8 text-cyan }
+                            props: { name: hand-coins, size: 24, strokeWidth: 2, className: text-cyan-ink }
                       - type: text
                         element: h3
-                        props: { className: title-font text-cyan mb-2 }
+                        props: { className: type-h4 text-bleu-fonce }
                         content: prix libre
                       - type: text
                         element: p
-                        props: { className: text-gray-700 font-semibold }
+                        props: { className: font-bold text-bleu-fonce }
                         content: À partir de 0€
                       - type: text
                         element: p
-                        props: { className: text-sm text-gray-500 mt-1 }
+                        props: { className: type-caption text-bleu-fonce-70 }
                         content: Tu donnes ce que tu veux/peux
-              # Important notes
+              # Bon à savoir + photo
               - type: container
                 props:
-                  className: mt-8 max-w-4xl mx-auto
+                  className: grid md:grid-cols-12 gap-8 items-center
                 children:
                   - type: container
                     props:
-                      className: bg-orange-light rounded-xl p-6 border-l-4 border-orange
+                      className: md:col-span-4 photo-frame frame-cyan max-w-xs md:max-w-none
+                    children:
+                      - type: image
+                        props:
+                          src: /pictures/atelier/dilara-explique-sm.webp
+                          alt: Dilara, facilitatrice, explique une notion en s'appuyant sur ses notes
+                          loading: lazy
+                          className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/4]
+                  - type: container
+                    props:
+                      className: md:col-span-8 bg-white rounded-card shadow-card p-6 md:p-8 flex flex-col gap-4
                     children:
                       - type: text
-                        element: h4
+                        element: h3
                         props:
-                          className: font-bold text-gray-600 mb-3 flex items-center gap-2
-                        children:
-                          - type: icon
-                            props: { name: info, className: w-5 h-5 text-gray-600 }
-                          - type: text
-                            element: span
-                            content: Bon à savoir
+                          className: type-h4 text-bleu-fonce flex items-center gap-2
+                        content: bon à savoir
                       - type: container
+                        element: div
                         props:
-                          className: space-y-2 text-sm text-gray-700
+                          role: list
+                          className: flex flex-col gap-3 text-bleu-fonce
                         children:
                           - type: container
-                            props: { className: flex items-start gap-2 }
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
                             children:
-                              - type: text
-                                element: span
-                                props: { className: text-gray-600 font-bold }
-                                content: •
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-1 text-cyan-ink }
                               - type: text
                                 element: span
                                 children:
@@ -1494,12 +1443,11 @@ components:
                                     element: span
                                     content: ' à tout moment (merci de nous prévenir par email pour libérer ta place)'
                           - type: container
-                            props: { className: flex items-start gap-2 }
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
                             children:
-                              - type: text
-                                element: span
-                                props: { className: text-gray-600 font-bold }
-                                content: •
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-1 text-cyan-ink }
                               - type: text
                                 element: span
                                 children:
@@ -1511,12 +1459,11 @@ components:
                                     element: span
                                     content: ' — tu peux juste observer si tu préfères'
                           - type: container
-                            props: { className: flex items-start gap-2 }
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
                             children:
-                              - type: text
-                                element: span
-                                props: { className: text-gray-600 font-bold }
-                                content: •
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: shrink-0 mt-1 text-cyan-ink }
                               - type: text
                                 element: span
                                 children:
@@ -1533,321 +1480,326 @@ components:
         element: section
         props:
           id: mission
-          className: relative z-10 px-6 py-16 bg-orange-light
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-orange-light
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto
+              className: max-w-7xl mx-auto flex flex-col gap-block
             children:
               - type: container
                 props:
-                  className: mb-12 text-center
+                  className: grid lg:grid-cols-12 gap-12 items-center
                 children:
-                  - type: text
-                    element: h2
+                  - type: container
                     props:
-                      className: text-3xl md:text-4xl title-font text-orange
-                    content: notre mission
-              # Mission principale
-              - type: container
-                props:
-                  className: bg-white rounded-lg p-8 md:p-12 mb-12 text-center
-                children:
-                  - type: text
-                    element: p
-                    props:
-                      className: text-xl text-bleu-fonce font-bold mb-6 leading-relaxed
-                    content: Diffuser une culture du consentement à Strasbourg et dans le Grand Est
-                  - type: text
-                    element: p
-                    props:
-                      className: text-base text-gray-700 leading-relaxed max-w-3xl mx-auto
+                      className: lg:col-span-7 flex flex-col gap-6
                     children:
                       - type: text
-                        element: span
-                        content: 'On crée des '
+                        element: p
+                        props:
+                          className: type-overline text-orange-ink
+                        content: L'association
                       - type: text
-                        element: span
-                        props: { className: font-bold text-cyan }
-                        content: espaces sûrs
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: notre mission
                       - type: text
-                        element: span
-                        content: ' où chacun·e peut apprendre à '
+                        element: p
+                        props:
+                          className: type-h4 font-bold text-bleu-fonce
+                        content: Diffuser une culture du consentement à Strasbourg et dans le Grand Est
                       - type: text
-                        element: span
-                        props: { className: font-bold text-orange }
-                        content: dire non
-                      - type: text
-                        element: span
-                        content: ', '
-                      - type: text
-                        element: span
-                        props: { className: font-bold text-orange }
-                        content: poser ses limites
-                      - type: text
-                        element: span
-                        content: ' et construire des '
-                      - type: text
-                        element: span
-                        props: { className: font-bold text-pourpre }
-                        content: relations plus authentiques
-                      - type: text
-                        element: span
-                        content: ' — dans tous les contextes de vie.'
+                        element: p
+                        props:
+                          className: type-lead text-bleu-fonce
+                        children:
+                          - type: text
+                            element: span
+                            content: 'On crée des '
+                          - type: text
+                            element: span
+                            props: { className: font-bold text-cyan-ink }
+                            content: espaces sûrs
+                          - type: text
+                            element: span
+                            content: ' où chacun·e peut apprendre à '
+                          - type: text
+                            element: span
+                            props: { className: font-bold text-orange-ink }
+                            content: dire non
+                          - type: text
+                            element: span
+                            content: ', '
+                          - type: text
+                            element: span
+                            props: { className: font-bold text-orange-ink }
+                            content: poser ses limites
+                          - type: text
+                            element: span
+                            content: ' et construire des '
+                          - type: text
+                            element: span
+                            props: { className: font-bold text-pourpre-hover }
+                            content: relations plus authentiques
+                          - type: text
+                            element: span
+                            content: ' — dans tous les contextes de vie.'
+                  - type: container
+                    props:
+                      className: lg:col-span-5 photo-frame frame-orange max-w-md lg:max-w-none
+                    children:
+                      - type: image
+                        props:
+                          src: /pictures/stand/echange-carte-stand.webp
+                          srcset: /pictures/stand/echange-carte-stand-sm.webp 533w, /pictures/stand/echange-carte-stand.webp 1066w
+                          sizes: '(min-width: 1024px) 420px, 90vw'
+                          alt: Sur notre stand, une bénévole sourit en échangeant avec une visiteuse autour d'une carte
+                          loading: lazy
+                          className: w-full h-auto rounded-media shadow-card object-cover aspect-[4/5]
               # 3 piliers
               - type: container
                 props:
-                  className: grid md:grid-cols-3 gap-6 mb-12
+                  className: grid md:grid-cols-3 gap-6
                 children:
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 text-center }
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
                     children:
-                      - type: container
-                        props: { className: bg-orange-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 }
-                        children:
-                          - type: icon
-                            props: { name: target, className: w-8 h-8 text-orange }
+                      - type: icon
+                        props: { name: target, size: 28, strokeWidth: 2, className: text-orange-ink }
                       - type: text
                         element: h3
-                        props: { className: title-font text-orange mb-3 }
+                        props: { className: type-h4 text-bleu-fonce }
                         content: apprendre à dire non
                       - type: text
                         element: p
-                        props: { className: text-gray-600 }
+                        props: { className: type-small text-bleu-fonce-70 }
                         content: Écouter ses ressentis, poser ses limites et accueillir le "non" de l'autre avec bienveillance
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 text-center }
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
                     children:
-                      - type: container
-                        props: { className: bg-mauve-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 }
-                        children:
-                          - type: icon
-                            props: { name: globe, className: w-8 h-8 text-mauve }
+                      - type: icon
+                        props: { name: globe, size: 28, strokeWidth: 2, className: text-orange-ink }
                       - type: text
                         element: h3
-                        props: { className: title-font text-mauve mb-3 }
+                        props: { className: type-h4 text-bleu-fonce }
                         content: pour tous les contextes
                       - type: text
                         element: p
-                        props: { className: text-gray-600 }
+                        props: { className: type-small text-bleu-fonce-70 }
                         content: Relations amicales, familiales, professionnelles, intimes — le consentement est partout
                   - type: container
-                    props: { className: bg-white rounded-lg p-6 text-center }
+                    props: { className: bg-white rounded-card shadow-card p-6 flex flex-col gap-3 }
                     children:
-                      - type: container
-                        props: { className: bg-pourpre-light rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 }
-                        children:
-                          - type: icon
-                            props: { name: shield, className: w-8 h-8 text-pourpre }
+                      - type: icon
+                        props: { name: shield, size: 28, strokeWidth: 2, className: text-orange-ink }
                       - type: text
                         element: h3
-                        props: { className: title-font text-pourpre mb-3 }
+                        props: { className: type-h4 text-bleu-fonce }
                         content: un enjeu collectif
                       - type: text
                         element: p
-                        props: { className: text-gray-600 }
+                        props: { className: type-small text-bleu-fonce-70 }
                         content: Issu des luttes féministes, le consentement questionne les rapports de pouvoir dans la société
-              # Notre approche
+              # Notre approche + Pourquoi nous faire confiance
               - type: container
                 props:
-                  className: mb-12 text-center
-                children:
-                  - type: text
-                    element: h2
-                    props:
-                      className: text-3xl md:text-4xl title-font text-mauve
-                    content: notre approche
-              - type: container
-                props:
-                  className: bg-white rounded-lg p-8 md:p-12
+                  className: grid lg:grid-cols-2 gap-6
                 children:
                   - type: container
                     props:
-                      className: grid md:grid-cols-2 gap-8
+                      className: bg-white rounded-card shadow-card p-8 flex flex-col gap-6
                     children:
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: notre approche
                       - type: container
+                        props: { className: flex flex-col gap-2 }
                         children:
                           - type: text
-                            element: h3
-                            props: { className: text-xl title-font text-mauve mb-4 }
-                            content: association à but non lucratif
+                            element: h4
+                            props: { className: font-bold text-bleu-fonce }
+                            content: Association à but non lucratif
                           - type: text
                             element: p
-                            props: { className: text-gray-700 leading-relaxed }
+                            props: { className: type-small text-bleu-fonce-70 }
                             children:
                               - type: text
                                 element: span
                                 content: 'Nos ateliers sont à '
                               - type: text
                                 element: span
-                                props: { className: font-bold text-orange }
+                                props: { className: font-bold text-bleu-fonce }
                                 content: prix libre
                               - type: text
                                 element: span
                                 content: ' — personne n''est refusé·e par manque d''argent. On croit que le consentement doit être '
                               - type: text
                                 element: span
-                                props: { className: font-bold text-cyan }
+                                props: { className: font-bold text-bleu-fonce }
                                 content: accessible
                               - type: text
                                 element: span
                                 content: ' à tou·te·s.'
                       - type: container
+                        props: { className: flex flex-col gap-2 }
                         children:
                           - type: text
-                            element: h3
-                            props: { className: text-xl title-font text-orange mb-4 }
-                            content: inclusif et accessible
+                            element: h4
+                            props: { className: font-bold text-bleu-fonce }
+                            content: Inclusif et accessible
                           - type: text
                             element: p
-                            props: { className: text-gray-700 leading-relaxed }
+                            props: { className: type-small text-bleu-fonce-70 }
                             children:
                               - type: text
                                 element: span
                                 content: 'On accueille tous les publics dans leur '
                               - type: text
                                 element: span
-                                props: { className: font-bold text-mauve }
+                                props: { className: font-bold text-bleu-fonce }
                                 content: diversité
                               - type: text
                                 element: span
                                 content: '. Nos espaces sont '
                               - type: text
                                 element: span
-                                props: { className: font-bold text-pourpre }
+                                props: { className: font-bold text-bleu-fonce }
                                 content: bienveillants
                               - type: text
                                 element: span
                                 content: ' et adaptés aux différents vécus et capacités.'
-              # Pourquoi nous faire confiance
-              - type: container
-                props:
-                  className: mb-6 text-center mt-12
-                children:
-                  - type: text
-                    element: h2
-                    props:
-                      className: text-3xl md:text-4xl title-font text-cyan
-                    content: pourquoi nous faire confiance ?
-              - type: container
-                props:
-                  className: max-w-4xl mx-auto bg-orange-light rounded-lg p-8 md:p-12
-                children:
                   - type: container
                     props:
-                      className: grid md:grid-cols-2 gap-6 text-gray-700
+                      className: bg-white rounded-card shadow-card p-8 flex flex-col gap-6
                     children:
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: pourquoi nous faire confiance ?
                       - type: container
-                        props: { className: flex items-start gap-3 }
+                        element: div
+                        props:
+                          role: list
+                          className: flex flex-col gap-3 type-small text-bleu-fonce
                         children:
-                          - type: icon
-                            props: { name: check-circle, className: w-6 h-6 text-orange shrink-0 mt-1 }
-                          - type: text
-                            element: p
-                            content: Formé·es aux pédagogies actives et à la facilitation
-                      - type: container
-                        props: { className: flex items-start gap-3 }
-                        children:
-                          - type: icon
-                            props: { name: check-circle, className: w-6 h-6 shrink-0 mt-1 text-mauve }
-                          - type: text
-                            element: p
-                            content: Expertise en violences sexistes et sexuelles
-                      - type: container
-                        props: { className: flex items-start gap-3 }
-                        children:
-                          - type: icon
-                            props: { name: check-circle, className: w-6 h-6 text-orange shrink-0 mt-1 }
-                          - type: text
-                            element: p
-                            content: Bénévoles passionné·es et engagé·es
-                      - type: container
-                        props: { className: flex items-start gap-3 }
-                        children:
-                          - type: icon
-                            props: { name: check-circle, className: w-6 h-6 shrink-0 mt-1 text-mauve }
-                          - type: text
-                            element: p
-                            content: Association à but non lucratif reconnue
-                      - type: container
-                        props: { className: flex items-start gap-3 }
-                        children:
-                          - type: icon
-                            props: { name: check-circle, className: w-6 h-6 text-orange shrink-0 mt-1 }
-                          - type: text
-                            element: p
-                            content: Ateliers testés et améliorés en continu
-                      - type: container
-                        props: { className: flex items-start gap-3 }
-                        children:
-                          - type: icon
-                            props: { name: check-circle, className: w-6 h-6 shrink-0 mt-1 text-mauve }
-                          - type: text
-                            element: p
-                            content: Cadre sécurisant et bienveillant garanti
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Formé·es aux pédagogies actives et à la facilitation
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Expertise en violences sexistes et sexuelles
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Bénévoles passionné·es et engagé·es
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Association à but non lucratif reconnue
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Ateliers testés et améliorés en continu
+                          - type: container
+                            element: div
+                            props: { role: listitem, className: flex items-start gap-3 }
+                            children:
+                              - type: icon
+                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
+                              - type: text
+                                element: span
+                                content: Cadre sécurisant et bienveillant garanti
 
       # Section: Nos valeurs (#valeurs)
       - type: container
         element: section
         props:
           id: valeurs
-          className: relative z-10 px-6 py-16 bg-white
+          className: px-4 sm:px-6 py-band-sm md:py-band
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto
+              className: max-w-7xl mx-auto flex flex-col gap-block
             children:
               - type: container
                 props:
-                  className: mb-12 text-center
+                  className: flex flex-col gap-4 max-w-2xl
                 children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Ce qui nous guide
                   - type: text
                     element: h2
                     props:
-                      className: text-3xl md:text-4xl title-font text-bleu-fonce
+                      className: type-section text-bleu-fonce
                     content: nos valeurs
               - type: container
                 props:
-                  className: grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto
+                  className: grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10
                 children:
                   - component: value-card
                     vars:
-                      borderTop: border-t-orange
                       icon: gem
-                      accent: text-orange
+                      accent: text-mauve
                       title: intégrité et clarté
                       text: On encourage l'écoute de soi, l'alignement entre ce que l'on ressent, ce que l'on pense et ce que l'on dit et une expression sincère et transparente.
                   - component: value-card
                     vars:
-                      borderTop: border-t-mauve
                       icon: sprout
                       accent: text-mauve
                       title: culture du consentement
                       text: Le respect des limites, des désaccords et des "non" est une forme élevée de soin et de reconnaissance de l'autre conduisant à des relations plus authentiques et respectueuses.
                   - component: value-card
                     vars:
-                      borderTop: border-t-cyan
                       icon: search
-                      accent: text-cyan
+                      accent: text-mauve
                       title: réflexivité et doute
                       text: L'examen de nos croyances, automatismes, biais et privilèges est un levier essentiel pour agir de façon plus juste.
                   - component: value-card
                     vars:
-                      borderTop: border-t-pourpre
                       icon: sparkles
-                      accent: text-pourpre
+                      accent: text-mauve
                       title: accessibilité et inclusion
                       text: On travaille activement à rendre nos espaces compréhensibles, accessibles et accueillants à la diversité des vécus, des origines et des capacités.
                   - component: value-card
                     vars:
-                      borderTop: border-t-orange
                       icon: users
-                      accent: text-orange
+                      accent: text-mauve
                       title: responsabilité collective et individuelle
                       text: Nos choix sont façonnés par nos besoins fondamentaux de liens, des contextes sociaux et des structures de pouvoir qu'on ne peut ignorer, on refuse donc de faire peser l'entière responsabilité sur les individus.
                   - component: value-card
                     vars:
-                      borderTop: border-t-mauve
                       icon: palette
                       accent: text-mauve
                       title: gouvernance démocratique
@@ -1858,29 +1810,34 @@ components:
         element: section
         props:
           id: equipe
-          className: relative z-10 px-6 py-16 bg-mauve-light
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-mauve-light
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto
+              className: max-w-7xl mx-auto flex flex-col gap-block
             children:
               - type: container
                 props:
-                  className: mb-12 text-center
+                  className: flex flex-col gap-4 max-w-2xl
                 children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Qui anime
                   - type: text
                     element: h2
                     props:
-                      className: text-3xl md:text-4xl title-font text-mauve
+                      className: type-section text-bleu-fonce
                     content: l'équipe
                   - type: text
                     element: p
                     props:
-                      className: text-base text-mauve font-bold mt-6
+                      className: type-lead text-bleu-fonce-70
                     content: Rencontre les facilitateur·ices et l'équipe bénévole
               - type: container
                 props:
-                  className: max-w-6xl mx-auto
+                  className: max-w-6xl mx-auto w-full
                 children:
                   # 5 members: 3 + 2 centred (widths in site.css .team-grid)
                   - type: container
@@ -1934,35 +1891,97 @@ components:
                           name: elisa garcia
                           role: Communication
                           photoBg: bg-orange-light
-                          backBg: bg-orange
-                          roleAccent: text-orange
+                          backBg: bg-mauve
+                          roleAccent: text-orange-ink
                           bio: Professionnelle de la communication depuis 8 ans, mes valeurs personnelles colorent mes créations et guident mes missions. Féministe et queer, je suis aussi engagée au sein du groupe Bipan Strasbourg. J'ai rejoint Merci pour ton non après avoir moi-même participé à un atelier de consentement. Aujourd'hui, je mets mes compétences au service de l'association pour faire rayonner ces valeurs de respect, d'écoute et d'émancipation auxquelles je crois profondément.
+
+      # Section: Partenaires (#partenaires)
+      - type: container
+        element: section
+        props:
+          id: partenaires
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-4 flex flex-col gap-4
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Partenaires
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: ils nous soutiennent
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Deux lieux strasbourgeois qui accompagnent l'association.
+              - type: container
+                props:
+                  className: lg:col-span-8 grid sm:grid-cols-2 gap-6
+                children:
+                  - component: partner-card
+                    vars:
+                      logo: /partners/le-labo-des-partenariats.svg
+                      tileBg: bg-white
+                      name: Le Labo des Partenariats
+                      text: Tiers-lieu et incubateur d'innovation sociale de l'Eurométropole de Strasbourg.
+                      href: https://lelabo-partenariats.org
+                      linkLabel: Découvrir Le Labo des Partenariats
+                  - component: partner-card
+                    vars:
+                      logo: /partners/la-plage-digitale-blanc.webp
+                      tileBg: tile-bleu-fonce
+                      name: La Plage Digitale
+                      text: Tiers-lieu de l'innovation et espace de coworking associatif à Strasbourg.
+                      href: https://www.laplagedigitale.fr
+                      linkLabel: Découvrir La Plage Digitale
+
       # Section: FAQ (#faq) — toggle pattern replaces <details>/<summary>
       - type: container
         element: section
         props:
           id: faq
-          className: relative z-10 px-6 py-16 bg-pourpre-light
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-pourpre-light
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
             children:
               - type: container
                 props:
-                  className: mb-12 text-center
+                  className: lg:col-span-4 flex flex-col gap-4 lg:sticky lg:top-28 self-start
                 children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-pourpre-hover
+                    content: FAQ
                   - type: text
                     element: h2
                     props:
-                      className: text-3xl md:text-4xl title-font text-pourpre
+                      className: type-section text-bleu-fonce
                     content: questions fréquentes
+                  - type: link
+                    props:
+                      href: mailto:mercipourtonnon@gmail.com
+                      className: self-start font-bold text-pourpre-hover underline underline-offset-4 hover:text-bleu-fonce
+                    content: Une autre question ? Écris-nous
               - type: container
                 props:
-                  className: space-y-4 max-w-4xl mx-auto
+                  className: lg:col-span-8 flex flex-col gap-3
                 children:
                   - type: container
-                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
                     children:
                       - type: button
                         props: { className: faq-q }
@@ -1972,13 +1991,13 @@ components:
                             element: span
                             content: Pourquoi participer si je connais déjà le consentement ?
                           - type: icon
-                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
                       - type: container
                         props: { id: faq-a-1, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
                             children:
                               - type: text
                                 element: span
@@ -1998,7 +2017,7 @@ components:
                                 element: span
                                 content: ' qui influencent tes choix, et muscler ta capacité à dire "non" dans des situations réelles.'
                   - type: container
-                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
                     children:
                       - type: button
                         props: { className: faq-q }
@@ -2008,13 +2027,13 @@ components:
                             element: span
                             content: Est-ce que 3 heures, c'est vraiment utile ?
                           - type: icon
-                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
                       - type: container
                         props: { id: faq-a-2, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
                             children:
                               - type: text
                                 element: span
@@ -2027,7 +2046,7 @@ components:
                                 element: span
                                 content: ' que tu utiliseras toute ta vie pour améliorer toutes tes relations. Un investissement qui vaut le coup !'
                   - type: container
-                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
                     children:
                       - type: button
                         props: { className: faq-q }
@@ -2037,13 +2056,13 @@ components:
                             element: span
                             content: Est-ce que l'atelier peut être trop intense émotionnellement ?
                           - type: icon
-                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
                       - type: container
                         props: { id: faq-a-3, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
                             children:
                               - type: text
                                 element: span
@@ -2070,7 +2089,7 @@ components:
                                 element: span
                                 content: ', mais des facilitateur·ices formé·es à la pédagogie du consentement.'
                   - type: container
-                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
                     children:
                       - type: button
                         props: { className: faq-q }
@@ -2080,13 +2099,13 @@ components:
                             element: span
                             content: Comment fonctionne le prix libre ?
                           - type: icon
-                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
                       - type: container
                         props: { id: faq-a-4, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
                             children:
                               - type: text
                                 element: span
@@ -2099,7 +2118,7 @@ components:
                                 element: span
                                 content: ' Chacun·e participe selon ses moyens.'
                   - type: container
-                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
                     children:
                       - type: button
                         props: { className: faq-q }
@@ -2109,16 +2128,16 @@ components:
                             element: span
                             content: C'est uniquement sur le consentement sexuel ?
                           - type: icon
-                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
                       - type: container
                         props: { id: faq-a-5, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
                             content: 'Non ! L''atelier explore le consentement dans toutes les dimensions : amicales, familiales, professionnelles... Le consentement concerne tous nos rapports humains.'
                   - type: container
-                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
                     children:
                       - type: button
                         props: { className: faq-q }
@@ -2128,16 +2147,16 @@ components:
                             element: span
                             content: Je suis timide, vais-je devoir parler ?
                           - type: icon
-                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
                       - type: container
                         props: { id: faq-a-6, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
                             content: Tu restes souverain·e ! Tu peux choisir de ne pas participer à certains exercices, juste observer, ou partir quand tu veux. Tout dans la bienveillance.
                   - type: container
-                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
                     children:
                       - type: button
                         props: { className: faq-q }
@@ -2147,16 +2166,16 @@ components:
                             element: span
                             content: Je peux venir seul·e ?
                           - type: icon
-                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
                       - type: container
                         props: { id: faq-a-7, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
                             content: Bien sûr ! La plupart viennent seul·es. C'est même plus enrichissant pour rencontrer de nouvelles personnes dans un cadre bienveillant.
                   - type: container
-                    props: { className: 'faq-card bg-white rounded-xl border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-md' }
+                    props: { className: 'faq-card bg-white rounded-card border border-pourpre-lighter overflow-hidden transition-shadow duration-200 hover:shadow-card' }
                     children:
                       - type: button
                         props: { className: faq-q }
@@ -2166,13 +2185,13 @@ components:
                             element: span
                             content: Je peux annuler ma réservation ?
                           - type: icon
-                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre transition-transform duration-200' }
+                            props: { name: chevron-down, className: 'faq-chevron w-5 h-5 shrink-0 text-pourpre-hover transition-transform duration-200' }
                       - type: container
                         props: { id: faq-a-8, className: 'faq-answer border-t border-pourpre-lighter', style: { display: none } }
                         children:
                           - type: text
                             element: p
-                            props: { className: 'px-5 py-4 text-gray-700 leading-relaxed' }
+                            props: { className: 'px-5 pb-5 pt-4 text-bleu-fonce' }
                             content: Oui, tu peux annuler à tout moment ! Préviens-nous juste pour libérer ta place (6 à 15 personnes maximum).
 
       # Section: Suis-nous (#suis-nous)
@@ -2180,83 +2199,109 @@ components:
         element: section
         props:
           id: suis-nous
-          className: relative z-10 px-6 py-16 bg-white
+          className: px-4 sm:px-6 py-band-sm md:py-band
         children:
           - type: container
             props:
-              className: max-w-4xl mx-auto text-center
+              className: max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center
             children:
-              - type: text
-                element: h2
-                props:
-                  className: text-3xl md:text-4xl title-font text-bleu-fonce mb-4
-                content: suis-nous
-              - type: text
-                element: p
-                props:
-                  className: text-base text-gray-600 mb-10
-                content: Rejoins notre communauté pour suivre nos actualités, événements et partages sur le consentement
               - type: container
                 props:
-                  className: flex flex-wrap justify-center gap-6
+                  className: md:col-span-6 photo-frame frame-cyan
                 children:
-                  - type: link
+                  - type: image
                     props:
-                      href: https://www.instagram.com/mercipourtonnon/
-                      target: _blank
-                      rel: noopener noreferrer
-                      className: social-instagram group flex items-center gap-3 text-white px-6 py-4 rounded-full font-semibold transition-colors duration-300
-                    children:
-                      - type: icon
-                        props: { name: instagram, className: w-6 h-6 }
-                      - type: text
-                        element: span
-                        content: Instagram
-                  - type: link
+                      src: /pictures/stand/equipe-stand-bifurquer.webp
+                      srcset: /pictures/stand/equipe-stand-bifurquer-sm.webp 800w, /pictures/stand/equipe-stand-bifurquer.webp 1600w
+                      sizes: '(min-width: 768px) 600px, 100vw'
+                      alt: L'équipe bénévole rit devant le stand Merci pour ton non, un soir de festival
+                      loading: lazy
+                      className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/2]
+              - type: container
+                props:
+                  className: md:col-span-6 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
                     props:
-                      href: https://www.facebook.com/mercipourtonnon
-                      target: _blank
-                      rel: noopener noreferrer
-                      className: social-facebook group flex items-center gap-3 text-white px-6 py-4 rounded-full font-semibold transition-colors duration-300
-                    children:
-                      - type: icon
-                        props: { name: facebook, className: w-6 h-6 }
-                      - type: text
-                        element: span
-                        content: Facebook
-                  - type: link
+                      className: type-overline text-cyan-ink
+                    content: Communauté
+                  - type: text
+                    element: h2
                     props:
-                      href: https://www.linkedin.com/company/merci-pour-ton-non
-                      target: _blank
-                      rel: noopener noreferrer
-                      className: social-linkedin group flex items-center gap-3 text-white px-6 py-4 rounded-full font-semibold transition-colors duration-300
+                      className: type-section text-bleu-fonce
+                    content: suis-nous
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Rejoins notre communauté pour suivre nos actualités, événements et partages sur le consentement
+                  - type: container
+                    props:
+                      className: flex flex-wrap gap-3
                     children:
-                      - type: icon
-                        props: { name: linkedin, className: w-6 h-6 }
-                      - type: text
-                        element: span
-                        content: LinkedIn
+                      - type: link
+                        props:
+                          href: https://www.instagram.com/mercipourtonnon/
+                          target: _blank
+                          rel: noopener noreferrer
+                          className: inline-flex items-center gap-2 border-2 border-bleu-fonce text-bleu-fonce px-5 py-2.5 rounded-pill font-bold hover:bg-bleu-fonce hover:text-white transition-colors
+                        children:
+                          - type: text
+                            element: span
+                            content: Instagram
+                          - type: icon
+                            props: { name: arrow-up-right, size: 18, strokeWidth: 2 }
+                      - type: link
+                        props:
+                          href: https://www.facebook.com/mercipourtonnon
+                          target: _blank
+                          rel: noopener noreferrer
+                          className: inline-flex items-center gap-2 border-2 border-bleu-fonce text-bleu-fonce px-5 py-2.5 rounded-pill font-bold hover:bg-bleu-fonce hover:text-white transition-colors
+                        children:
+                          - type: text
+                            element: span
+                            content: Facebook
+                          - type: icon
+                            props: { name: arrow-up-right, size: 18, strokeWidth: 2 }
+                      - type: link
+                        props:
+                          href: https://www.linkedin.com/company/merci-pour-ton-non
+                          target: _blank
+                          rel: noopener noreferrer
+                          className: inline-flex items-center gap-2 border-2 border-bleu-fonce text-bleu-fonce px-5 py-2.5 rounded-pill font-bold hover:bg-bleu-fonce hover:text-white transition-colors
+                        children:
+                          - type: text
+                            element: span
+                            content: LinkedIn
+                          - type: icon
+                            props: { name: arrow-up-right, size: 18, strokeWidth: 2 }
 
       # Section: Newsletter (#newsletter) — Brevo form injected by /assets/brevo-embed.js
       - type: container
         element: section
         props:
           id: newsletter
-          className: relative z-10 px-6 py-16 bg-mauve-light
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-mauve-light
         children:
           - type: container
             props:
-              className: max-w-2xl mx-auto text-center
+              className: max-w-2xl mx-auto flex flex-col gap-4 text-center
             children:
+              - type: text
+                element: p
+                props:
+                  className: type-overline text-mauve
+                content: Newsletter
               - type: text
                 element: h2
                 props:
-                  className: text-3xl md:text-4xl title-font text-mauve mb-4
+                  className: type-section text-bleu-fonce
                 content: reste informé·e
               - type: text
                 element: p
                 props:
-                  className: text-base text-gray-600 mb-8
+                  className: type-lead text-bleu-fonce-70 mb-4
                 content: Inscris-toi pour recevoir nos actualités, nos prochains ateliers et nos ressources sur le consentement.
               - type: container
                 props:
@@ -2271,7 +2316,7 @@ components:
         element: section
         props:
           id: events
-          className: relative z-10 px-6 py-16 bg-orange-lighter
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-orange-light
         children:
           - type: container
             props:
@@ -2446,5 +2491,5 @@ components:
                                 element: span
                                 content: Instagram
 
-      # Footer
-      - component: site-footer
+  # Footer
+  - component: site-footer
