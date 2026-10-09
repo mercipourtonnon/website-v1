@@ -1,0 +1,86 @@
+# Authentication and the role ladder of the espace bénévole.
+#
+# Anyone may create an account (allowSignUp: true). A new account is a
+# `candidat`: it sees only /espace/en-attente until a coordinator validates it
+# (validate-member → role `member`). Invitations from an admin or a coordinator
+# keep working, and the first admin still comes from AUTH_ADMIN_EMAIL /
+# AUTH_ADMIN_PASSWORD or `sovrium admin create`.
+#
+# One role per account. Page `access.require` and table permissions do not
+# inherit, so every list spells its roles out:
+#   member+       = [member, facilitateur, coordination, admin]
+#   coordination+ = [coordination, admin]
+#
+# Inert on the static GitHub Pages build.
+strategies:
+  - type: emailAndPassword
+  - type: magicLink
+    # Volunteers often open the mail later, on their phone.
+    expirationMinutes: 30
+allowSignUp: true
+defaultRole: candidat
+invitationTokenExpiry: 7d
+# Post-login resolver: a session sent here is redirected to its role's
+# defaultLanding below (sign-in forms use onSuccess: role-landing). Needs a page
+# at this exact path with `access: { require: authenticated, redirectTo: /connexion }`
+# and no content — it is the guard for anonymous visitors (auth-access/auth-assignments).
+landingPath: /espace/arrivee
+roles:
+  # Signed up, profile awaiting validation by the coordination.
+  - name: candidat
+    description: Candidature en attente de validation
+    level: 5
+    defaultLanding: /espace/en-attente
+  # Built-in (level 40): a validated bénévole.
+  - name: member
+    defaultLanding: /espace
+  # A bénévole who also facilitates workshops (proposes dates, facilitators pages).
+  - name: facilitateur
+    description: Bénévole facilitateur·ice d'ateliers
+    level: 45
+    defaultLanding: /espace
+  # Publishes events and news, validates members, approves workshops.
+  - name: coordination
+    description: Coordination de l'association
+    level: 60
+    canInvite: true
+    defaultLanding: /espace
+emailTemplates:
+  magicLink:
+    subject: Ton lien de connexion à l'espace bénévole
+    text: |
+      Salut $name,
+
+      Voici ton lien pour te connecter à l'espace bénévole de Merci pour ton non :
+      $url
+
+      Il reste valable 30 minutes et ne sert qu'une fois. Si tu n'as rien demandé, tu peux simplement ignorer ce message.
+
+      À très vite,
+      L'équipe de Merci pour ton non
+  welcome:
+    subject: Bienvenue dans l'espace bénévole de Merci pour ton non
+    text: |
+      Salut $name,
+
+      Merci d'avoir rejoint l'espace bénévole ! Ton compte est bien créé.
+
+      Prochaine étape : complète ta fiche bénévole pour qu'on apprenne à te connaître. La coordination la relit et valide ton accès dans les prochains jours ; tu recevras un message dès que c'est fait.
+
+      Ensemble, on construit une culture du consentement, à notre rythme.
+
+      L'équipe de Merci pour ton non
+  invitation:
+    subject: $inviterName t'invite à rejoindre l'espace bénévole de Merci pour ton non
+    text: |
+      Salut,
+
+      $inviterName t'invite à rejoindre l'espace bénévole de Merci pour ton non : l'agenda des rencontres et des événements, les actualités de l'asso, l'annuaire des bénévoles et le lien vers notre communauté WhatsApp.
+
+      Pour accepter et choisir ton mot de passe, suis ce lien :
+      $url
+
+      Le lien est valable 7 jours. Si tu ne t'attendais pas à ce message, tu peux l'ignorer.
+
+      À très vite,
+      L'équipe de Merci pour ton non

@@ -19,15 +19,9 @@ tables:
   - $ref: ./config/tables/workshop_proposals.yaml
   - $ref: ./config/tables/workshops.yaml
 
-# Authentication — needed for the admin console (/_admin) and the design-system
-# console on a dev server. No public sign-up: accounts are created by an admin
-# (first one via AUTH_ADMIN_EMAIL / AUTH_ADMIN_PASSWORD in .env, or `sovrium admin create`).
-# Inert on the static GitHub Pages build.
+# Authentication and roles (candidat → member / facilitateur → coordination → admin).
 auth:
-  strategies:
-    - type: emailAndPassword
-  allowSignUp: false
-  defaultRole: member
+  $ref: ./config/auth.yaml
 
 # Environment the app needs (values live in .env, names in .env.example).
 # HELLOASSO_BILLETERIE_PLUS_API_KEY is deliberately NOT declared: it only serves

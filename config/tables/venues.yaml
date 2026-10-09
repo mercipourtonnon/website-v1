@@ -1,6 +1,6 @@
 # One row per place a workshop can happen. Only the name and the city are
-# public; the street address is given to signed-in members (and to people who
-# register, by HelloAsso).
+# public; the street address is given to signed-in bénévoles, facilitateur·ices
+# and the coordination (and to people who register, by HelloAsso).
 id: 2
 name: venues
 fields:
@@ -18,4 +18,4 @@ permissions:
   update: [admin]
   delete: [admin]
   fields:
-    - { field: street, read: [admin, member], write: [admin] }
+    - { field: street, read: [admin, coordination, facilitateur, member], write: [admin] }

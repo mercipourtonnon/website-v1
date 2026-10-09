@@ -2,9 +2,10 @@
 # approval workflow (proposed → approved → helloasso_draft → published, plus
 # rejected, withdrawn and sync_error). The public catalogue is `workshops`.
 #
-# A member reads only the proposals she made, creates them as `proposed`, and
-# edits or deletes them only while they are still `proposed`. Status, review and
-# HelloAsso fields are written by an admin or by the automations.
+# A facilitateur·ice reads only the proposals she made, creates them as
+# `proposed`, and edits or deletes them only while they are still `proposed`.
+# Status, review and HelloAsso fields are written by an admin or by the
+# automations (HelloAsso actions stay admin-only for now).
 id: 3
 name: workshop_proposals
 fields:
@@ -87,10 +88,10 @@ fields:
     automation: retry-helloasso
     visibleWhen: { field: status, eq: sync_error }
 permissions:
-  read: [admin, member]
-  create: [admin, member]
-  update: [admin, member]
-  delete: [admin, member]
+  read: [admin, coordination, facilitateur]
+  create: [admin, coordination, facilitateur]
+  update: [admin, coordination, facilitateur]
+  delete: [admin, coordination, facilitateur]
   fields:
     - { field: status, write: [admin] }
     - { field: reviewer_note, write: [admin] }
