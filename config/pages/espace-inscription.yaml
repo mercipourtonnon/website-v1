@@ -10,6 +10,8 @@
 # permissions), so the copy says so rather than "accessible to all members".
 # When sign-up is closed (allowSignUp: false), the form is replaced by a
 # short "ask for an invitation" note.
+# The same sign-up block is copied on the public /devenir-benevole (a form
+# with action auth cannot be formRef'd): keep the two synchronised.
 name: espace-inscription
 path: /inscription
 sitemap: false
@@ -39,6 +41,20 @@ components:
                   src: /logo-without-marging.svg
                   alt: Merci pour ton non, retour au site
                   className: h-12 w-auto
+          # The public page tells what the bénévoles do before the form.
+          - type: text
+            element: p
+            props:
+              className: text-sm text-bleu-fonce-70
+            children:
+              - type: text
+                element: span
+                content: "Tu veux d'abord savoir ce qu'on fait ensemble ? "
+              - type: link
+                props:
+                  href: /devenir-benevole
+                  className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                content: Devenir bénévole
           # Open sign-up.
           - type: container
             visibility:

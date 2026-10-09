@@ -120,6 +120,10 @@ components:
   - $ref: ./config/components/term-card.yaml
   # « Besoin d'aide maintenant ? » — on /nos-ateliers#cadre and /ressources.
   - $ref: ./config/components/help-now-band.yaml
+  # One hand-maintained figure (notre-mission#chiffres, home) and one whole-card
+  # link to a way in (notre-mission#agir, home#tu-es).
+  - $ref: ./config/components/figure-tile.yaml
+  - $ref: ./config/components/door-card.yaml
   - $ref: ./config/components/espace-shell.yaml
   # Espace bénévole cards (row templates over events, news and members).
   - $ref: ./config/components/event-card.yaml
@@ -138,6 +142,8 @@ pages:
   - $ref: ./config/pages/newsletter.yaml
   - $ref: ./config/pages/le-consentement.yaml
   - $ref: ./config/pages/ressources.yaml
+  # Public entry into the espace bénévole (carries the sign-up form; /inscription stays the auth-flow entry).
+  - $ref: ./config/pages/devenir-benevole.yaml
   # One page per published workshop date (/ateliers/:slug).
   - $ref: ./config/pages/atelier.yaml
   # Espace facilitateur·ices and coordination (private, noindex, out of the sitemap).

@@ -1,8 +1,11 @@
-# /notre-mission — who we are: mission and approach, our vision of consent
-# (teaser of /le-consentement), values, l'équipe cœur, partners, and the two
-# ways to act with us. Split out of the one-page home (review of 2026-10-09);
-# section ids are the home's old anchors (#mission, #valeurs, #equipe,
-# #partenaires).
+# /notre-mission — the association, told from the Business Plan Social (review
+# of 2026-10-09): mission (#mission), anchor nav, figures (#chiffres), the
+# social need (#pourquoi), our story and timeline (#histoire), vision teaser
+# (#vision), values (#valeurs), l'équipe cœur (#equipe), the bénévoles and how
+# to contribute (#benevoles), governance (#fonctionnement), partners
+# (#partenaires), four ways in (#agir) and what comes next (#ensuite).
+# Section ids #mission, #valeurs, #equipe, #partenaires are the home's old
+# anchors; /nos-interventions links to #chiffres.
 name: notre-mission
 path: /notre-mission
 sitemap:
@@ -11,14 +14,14 @@ sitemap:
 meta:
   lang: fr-FR
   title: "Notre mission et l'équipe - Merci pour ton non"
-  description: "Merci pour ton non diffuse une culture du consentement à Strasbourg et en Alsace : notre mission, nos valeurs, l'équipe cœur et nos partenaires."
+  description: "Merci pour ton non diffuse une culture du consentement à Strasbourg et en Alsace : chiffres, histoire, valeurs, équipe, bénévoles, gouvernance et partenaires."
   author: Merci pour ton non
   robots: index, follow
   canonical: https://mercipourtonnon.fr/notre-mission
   openGraph:
     type: website
     title: "Notre mission | Merci pour ton non"
-    description: "Diffuser une culture du consentement à Strasbourg et en Alsace : notre mission, nos valeurs et l'équipe cœur."
+    description: "Diffuser une culture du consentement à Strasbourg et en Alsace : nos chiffres, notre histoire, nos valeurs, l'équipe et les bénévoles."
     url: https://mercipourtonnon.fr/notre-mission
     image: https://mercipourtonnon.fr/social.png
     imageAlt: "Merci pour ton non — notre mission"
@@ -27,7 +30,7 @@ meta:
   twitter:
     card: summary_large_image
     title: "Notre mission | Merci pour ton non"
-    description: "Diffuser une culture du consentement à Strasbourg et en Alsace : notre mission, nos valeurs et l'équipe cœur."
+    description: "Diffuser une culture du consentement à Strasbourg et en Alsace : nos chiffres, notre histoire, nos valeurs, l'équipe et les bénévoles."
     image: https://mercipourtonnon.fr/social.png
   schema:
     '@context': https://schema.org
@@ -39,6 +42,8 @@ meta:
       '@type': Organization
       name: Merci pour ton non
       url: https://mercipourtonnon.fr
+      foundingDate: '2025-09-21'
+      areaServed: Alsace
   favicons:
     icon: /favicon/favicon-32x32.png
     appleTouchIcon: /favicon/apple-touch-icon.png
@@ -207,19 +212,19 @@ components:
                         element: p
                         props: { className: type-small text-bleu-fonce-70 }
                         content: Issu des luttes féministes, le consentement questionne les rapports de pouvoir dans la société
-              # Notre approche + Pourquoi nous faire confiance
+              # Notre approche — two facts side by side. The trust lines moved to
+              # #equipe (three legitimacy lines, BPS 2.13).
               - type: container
                 props:
-                  className: grid lg:grid-cols-2 gap-6
+                  className: bg-white rounded-card shadow-card p-8 flex flex-col gap-6
                 children:
+                  - type: text
+                    element: h3
+                    props: { className: type-h4 text-bleu-fonce }
+                    content: notre approche
                   - type: container
-                    props:
-                      className: bg-white rounded-card shadow-card p-8 flex flex-col gap-6
+                    props: { className: 'grid md:grid-cols-2 gap-6' }
                     children:
-                      - type: text
-                        element: h3
-                        props: { className: type-h4 text-bleu-fonce }
-                        content: notre approche
                       - type: container
                         props: { className: flex flex-col gap-2 }
                         children:
@@ -276,74 +281,414 @@ components:
                               - type: text
                                 element: span
                                 content: ' et adaptés aux différents vécus et capacités.'
-                  - type: container
+
+      # Anchor nav — horizontal pills, not sticky (the page is long; the header
+      # already is). Modelled on the « Sur cette page » nav of /le-consentement.
+      - type: container
+        element: nav
+        props:
+          className: px-4 sm:px-6 py-4 bg-white border-b border-bleu-fonce-light
+          aria-label: Sur cette page
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-wrap items-center gap-2 type-small
+            children:
+              - type: text
+                element: span
+                props: { className: type-overline text-mauve mr-2 }
+                content: Sur cette page
+              - type: link
+                props: { href: '#chiffres', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
+                content: En chiffres
+              - type: link
+                props: { href: '#pourquoi', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
+                content: Pourquoi
+              - type: link
+                props: { href: '#histoire', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
+                content: Notre histoire
+              - type: link
+                props: { href: '#valeurs', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
+                content: Nos valeurs
+              - type: link
+                props: { href: '#equipe', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
+                content: L'équipe
+              - type: link
+                props: { href: '#benevoles', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
+                content: Les bénévoles
+              - type: link
+                props: { href: '#fonctionnement', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
+                content: Fonctionnement
+              - type: link
+                props: { href: '#partenaires', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
+                content: Partenaires
+              - type: link
+                props: { href: '#agir', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
+                content: Agir avec nous
+
+      # Section: En chiffres (#chiffres)
+      # Constantes tenues à la main — source BPS 1.10 (état au 9 octobre 2026).
+      # Même compteur que le rapport moral : à mettre à jour après chaque atelier.
+      # Un kpi lié à workshops ne rend rien en build statique.
+      # The same four constants sit on the home (#chiffres band): change both.
+      - type: container
+        element: section
+        props:
+          id: chiffres
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-cyan-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
                     props:
-                      className: bg-white rounded-card shadow-card p-8 flex flex-col gap-6
+                      className: type-overline text-cyan-ink
+                    content: Depuis septembre 2025
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: en chiffres
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: grid grid-cols-2 lg:grid-cols-4 gap-4
+                  aria-label: L'association en chiffres
+                children:
+                  - component: figure-tile
+                    vars: { value: '12', label: ateliers Niveau 1, accent: text-cyan-ink }
+                  - component: figure-tile
+                    vars: { value: '108', label: inscriptions, accent: text-mauve }
+                  - component: figure-tile
+                    vars: { value: '9,25 / 10', label: 'note moyenne, 16 questionnaires', accent: text-pourpre-hover }
+                  - component: figure-tile
+                    vars: { value: sept. 2025, label: 'premier atelier, le jour de la création', accent: text-orange-ink }
+              - type: text
+                element: p
+                props:
+                  className: type-small text-bleu-fonce-70 max-w-3xl
+                content: "Et aussi : 5 présences publiques, 4 facilitateur·ices, une première commande de la Ville de Strasbourg, un premier atelier réservé par Unis-Cité."
+
+      # Section: Pourquoi c'est important (#pourquoi) — the social need, sourced
+      # (BPS 1.1–1.6). Pourpre: the emotional register of the figures.
+      - type: container
+        element: section
+        props:
+          id: pourquoi
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-5 flex flex-col gap-6 lg:sticky lg:top-28 self-start
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-pourpre-hover
+                    content: Le besoin
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: pourquoi c'est important
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: "On apprend à lire, à nager, à conduire. Dire non et entendre un non, personne ne nous l'apprend. Merci pour ton non est la pièce manquante entre les politiques de prévention des violences sexistes et sexuelles et la stratégie nationale des compétences psychosociales : apprendre le consentement avant, comme une compétence relationnelle, pour tout le monde."
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: lg:col-span-7 flex flex-col
+                  aria-label: Cinq chiffres sur le besoin
+                children:
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: 'grid grid-cols-[6rem_1fr] sm:grid-cols-[8rem_1fr] gap-4 py-5 border-t-2 border-pourpre-lighter' }
                     children:
                       - type: text
-                        element: h3
-                        props: { className: type-h4 text-bleu-fonce }
-                        content: pourquoi nous faire confiance ?
+                        element: span
+                        props: { className: title-font type-h3 text-pourpre-hover }
+                        content: 21 %
+                      - type: container
+                        props: { className: flex flex-col gap-1 }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: text-bleu-fonce }
+                            content: des femmes déclarent avoir subi un acte sexuel imposé ; 26 % des hommes reconnaissent avoir insisté ou douté du consentement de leur partenaire.
+                          - type: text
+                            element: p
+                            props: { className: type-caption text-bleu-fonce-70 }
+                            content: "Source : HCE, baromètre sexisme 2025."
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: 'grid grid-cols-[6rem_1fr] sm:grid-cols-[8rem_1fr] gap-4 py-5 border-t-2 border-pourpre-lighter' }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: title-font type-h3 text-pourpre-hover }
+                        content: 15 %
+                      - type: container
+                        props: { className: flex flex-col gap-1 }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: text-bleu-fonce }
+                            content: des élèves, au plus, reçoivent les trois séances annuelles d'éducation à la vie affective prévues par la loi.
+                          - type: text
+                            element: p
+                            props: { className: type-caption text-bleu-fonce-70 }
+                            content: "Source : CESE, 2024."
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: 'grid grid-cols-[6rem_1fr] sm:grid-cols-[8rem_1fr] gap-4 py-5 border-t-2 border-pourpre-lighter' }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: title-font type-h3 text-pourpre-hover }
+                        content: '662'
+                      - type: container
+                        props: { className: flex flex-col gap-1 }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: text-bleu-fonce }
+                            content: faits de violences sexuelles enregistrés à Strasbourg en 2025, soit + 129 % depuis 2016.
+                          - type: text
+                            element: p
+                            props: { className: type-caption text-bleu-fonce-70 }
+                            content: "Source : SSMSI."
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: 'grid grid-cols-[6rem_1fr] sm:grid-cols-[8rem_1fr] gap-4 py-5 border-t-2 border-pourpre-lighter' }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: title-font type-h3 text-pourpre-hover }
+                        content: 80 %
+                      - type: container
+                        props: { className: flex flex-col gap-1 }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: text-bleu-fonce }
+                            content: des Français·es sont favorables à un programme scolaire sur la vie affective et le consentement.
+                          - type: text
+                            element: p
+                            props: { className: type-caption text-bleu-fonce-70 }
+                            content: "Source : HCE, 2025."
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: 'grid grid-cols-[6rem_1fr] sm:grid-cols-[8rem_1fr] gap-4 py-5 border-t-2 border-b-2 border-pourpre-lighter' }
+                    children:
+                      - type: text
+                        element: span
+                        props: { className: title-font type-h3 text-pourpre-hover }
+                        content: '2025'
+                      - type: container
+                        props: { className: flex flex-col gap-1 }
+                        children:
+                          - type: text
+                            element: p
+                            props: { className: text-bleu-fonce }
+                            content: "Depuis la loi du 6 novembre 2025, le consentement doit être « libre et éclairé, spécifique, préalable et révocable »."
+                          - type: text
+                            element: p
+                            props: { className: type-caption text-bleu-fonce-70 }
+                            children:
+                              - type: text
+                                element: span
+                                content: 'Source : loi du 6 novembre 2025. '
+                              - type: link
+                                props:
+                                  href: /le-consentement#definitions
+                                  className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
+                                content: Lire nos deux définitions
+
+      # Section: Notre histoire (#histoire) — BPS 1.8 narrative, then the six
+      # dates of BPS 1.9 on a numbered rail.
+      - type: container
+        element: section
+        props:
+          id: histoire
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-orange-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-6 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-orange-ink
+                    content: D'où on vient
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: notre histoire
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: "Merci pour ton non est née de deux expériences et d'un constat partagé : pour Mathilde, un atelier chez Love Experience où elle a découvert qu'un non peut être joyeux ; pour Thomas, une relation où il a mesuré ce que son manque d'éducation au consentement avait coûté à l'autre."
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce-70
+                    content: "On a d'abord animé des ateliers informels dans un collectif strasbourgeois. Sept cofondateur·ices se sont retrouvé·es autour d'une conviction : le consentement n'est pas cantonné à la vie affective et sexuelle, il traverse toutes nos relations. L'association est créée le 21 septembre 2025 — et le premier atelier a lieu le même jour."
+              - type: container
+                props:
+                  className: lg:col-span-6
+                children:
+                  # Numbered rail (the markup of /nos-ateliers#programme). Workaround
+                  # for Sovrium 0.34.1: a structural `timeline` (children, no
+                  # dataSource) draws the rail line but no marker per child —
+                  # sovrium/sovrium#136. Switch back to `type: timeline` once fixed.
+                  - type: container
+                    element: div
+                    props:
+                      role: list
+                      className: flex flex-col
+                      aria-label: Les grandes dates de l'association
+                    children:
                       - type: container
                         element: div
-                        props:
-                          role: list
-                          className: flex flex-col gap-3 type-small text-bleu-fonce
+                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
                         children:
-                          - type: container
-                            element: div
-                            props: { role: listitem, className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
-                              - type: text
-                                element: span
-                                content: Formé·es aux pédagogies actives et à la facilitation
-                          - type: container
-                            element: div
-                            props: { role: listitem, className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
-                              - type: text
-                                element: span
-                                content: Expertise en violences sexistes et sexuelles
-                          - type: container
-                            element: div
-                            props: { role: listitem, className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
-                              - type: text
-                                element: span
-                                content: Bénévoles passionné·es et engagé·es
-                          - type: container
-                            element: div
-                            props: { role: listitem, className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
-                              - type: text
-                                element: span
-                                content: Association à but non lucratif reconnue
-                          - type: container
-                            element: div
-                            props: { role: listitem, className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
-                              - type: text
-                                element: span
-                                content: Ateliers testés et améliorés en continu
-                          - type: container
-                            element: div
-                            props: { role: listitem, className: flex items-start gap-3 }
-                            children:
-                              - type: icon
-                                props: { name: check, size: 20, strokeWidth: 2.5, className: text-orange-ink shrink-0 mt-0.5 }
-                              - type: text
-                                element: span
-                                content: Cadre sécurisant et bienveillant garanti
+                          - type: text
+                            element: span
+                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
+                            content: '1'
+                          - type: text
+                            element: p
+                            props: { className: type-overline text-orange-ink pt-2.5 }
+                            content: 21 sept. 2025
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 text-bleu-fonce mb-1 }
+                            content: assemblée générale constitutive et premier atelier
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: L'association est créée, et le premier atelier Niveau 1 a lieu le jour même.
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
+                        children:
+                          - type: text
+                            element: span
+                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
+                            content: '2'
+                          - type: text
+                            element: p
+                            props: { className: type-overline text-orange-ink pt-2.5 }
+                            content: nov. 2025
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 text-bleu-fonce mb-1 }
+                            content: des ateliers chaque mois
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: Le rythme mensuel s'installe, à La Plage Digitale.
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
+                        children:
+                          - type: text
+                            element: span
+                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
+                            content: '3'
+                          - type: text
+                            element: p
+                            props: { className: type-overline text-orange-ink pt-2.5 }
+                            content: févr.–mars 2026
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 normal-case text-bleu-fonce mb-1 }
+                            content: Labo des Partenariats, Village des associations, Social Cup
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: Soutenance au Labo des Partenariats après dix formations, premier stand au Village des associations, finale de la Social Cup.
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
+                        children:
+                          - type: text
+                            element: span
+                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
+                            content: '4'
+                          - type: text
+                            element: p
+                            props: { className: type-overline text-orange-ink pt-2.5 }
+                            content: mai–juin 2026
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 text-bleu-fonce mb-1 }
+                            content: adhésions en ligne, stands, Fête de la musique
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: Les adhésions ouvrent en ligne ; stands aux distributions de Cop1 et à la Fête de la musique pour la Ville de Strasbourg.
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
+                        children:
+                          - type: text
+                            element: span
+                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
+                            content: '5'
+                          - type: text
+                            element: p
+                            props: { className: type-overline text-orange-ink pt-2.5 }
+                            content: 15 nov. 2026
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 text-bleu-fonce mb-1 }
+                            content: première assemblée générale ordinaire
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: Un an après la création, les membres se réunissent pour la première AG ordinaire.
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: relative pl-14 pb-2 ml-5 }
+                        children:
+                          - type: text
+                            element: span
+                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
+                            content: '6'
+                          - type: text
+                            element: p
+                            props: { className: type-overline text-orange-ink pt-2.5 }
+                            content: déc. 2026
+                          - type: text
+                            element: h3
+                            props: { className: type-h4 text-bleu-fonce mb-1 }
+                            content: premier atelier réservé par une structure
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: Unis-Cité réserve un atelier pour ses volontaires en service civique.
 
       # Section: Notre vision du consentement (#vision) — teaser of /le-consentement
       - type: container
@@ -466,18 +811,58 @@ components:
             children:
               - type: container
                 props:
-                  className: flex flex-col gap-4 max-w-2xl
+                  className: grid lg:grid-cols-12 gap-8 lg:gap-12
                 children:
-                  - type: text
-                    element: p
+                  - type: container
                     props:
-                      className: type-overline text-mauve
-                    content: Qui anime
-                  - type: text
-                    element: h2
+                      className: lg:col-span-4 flex flex-col gap-4
+                    children:
+                      - type: text
+                        element: p
+                        props:
+                          className: type-overline text-mauve
+                        content: Qui anime
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-section text-bleu-fonce
+                        content: l'équipe cœur
+                  # Three legitimacy lines (BPS 2.13) — they replace the six
+                  # trust bullets of the old hero card.
+                  - type: container
+                    element: div
                     props:
-                      className: type-section text-bleu-fonce
-                    content: l'équipe cœur
+                      role: list
+                      className: lg:col-span-8 flex flex-col gap-4 text-bleu-fonce
+                      aria-label: Pourquoi nous faire confiance
+                    children:
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: flex items-start gap-3 }
+                        children:
+                          - type: icon
+                            props: { name: check, size: 22, strokeWidth: 2.5, className: text-mauve shrink-0 mt-1, aria-hidden: 'true' }
+                          - type: text
+                            element: p
+                            content: "Nous sommes tou·tes formé·es au consentement et aux compétences relationnelles — par nos métiers, nos diplômes ou la formation continue : psychologie sociale, droits humains, conseil conjugal et familial, travail social, facilitation."
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: flex items-start gap-3 }
+                        children:
+                          - type: icon
+                            props: { name: check, size: 22, strokeWidth: 2.5, className: text-mauve shrink-0 mt-1, aria-hidden: 'true' }
+                          - type: text
+                            element: p
+                            content: "Notre légitimité vient aussi de nos vécus : chacun·e de nous a mesuré, dans sa propre histoire, ce que l'absence d'éducation au consentement produit."
+                      - type: container
+                        element: div
+                        props: { role: listitem, className: flex items-start gap-3 }
+                        children:
+                          - type: icon
+                            props: { name: check, size: 22, strokeWidth: 2.5, className: text-mauve shrink-0 mt-1, aria-hidden: 'true' }
+                          - type: text
+                            element: p
+                            content: "Une équipe mixte — des femmes et des hommes, des personnes queer, des origines et des parcours divers — dans une association de droit local créée le 21 septembre 2025, bénévole, à direction collégiale."
               - type: container
                 props:
                   className: max-w-6xl mx-auto w-full
@@ -537,6 +922,159 @@ components:
                           backBg: bg-mauve
                           roleAccent: text-orange-ink
                           bio: Professionnelle de la communication depuis 8 ans, mes valeurs personnelles colorent mes créations et guident mes missions. Féministe et queer, je suis aussi engagée au sein du groupe Bipan Strasbourg. J'ai rejoint Merci pour ton non après avoir moi-même participé à un atelier de consentement. Aujourd'hui, je mets mes compétences au service de l'association pour faire rayonner ces valeurs de respect, d'écoute et d'émancipation auxquelles je crois profondément.
+
+      # Section: Les bénévoles (#benevoles) — who contributes beside the équipe
+      # cœur and how (BPS 3.24, 3.30, 3.6, 2.7). No team cards for them (review
+      # of 2026-10-09, A10): this section and /devenir-benevole instead.
+      - type: container
+        element: section
+        props:
+          id: benevoles
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-3xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-orange-ink
+                    content: Et autour
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: les bénévoles
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: "L'association, c'est aussi celles et ceux qui tiennent les stands, diffusent les flyers, améliorent les ateliers, gèrent l'administratif ou dessinent nos visuels. Isabelle, Maxime, Laetitia, Olivia et d'autres y contribuent à leur rythme."
+              - type: container
+                props:
+                  className: flex flex-col gap-6
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: type-h3 text-bleu-fonce
+                    content: comment contribuer
+                  - type: container
+                    props:
+                      className: grid md:grid-cols-3 gap-6
+                    children:
+                      - component: audience-card
+                        vars:
+                          icon: hand
+                          iconBg: bg-orange-light
+                          accent: text-orange-ink
+                          title: un coup de main ponctuel
+                          text: "Tenir un stand, distribuer des flyers, relire un texte, prêter un lieu : tu rejoins le Cercle Abeilles dès ta première adhésion, sans engagement de durée."
+                      - component: audience-card
+                        vars:
+                          icon: users
+                          iconBg: bg-orange-light
+                          accent: text-orange-ink
+                          title: un rôle dans l'équipe
+                          text: "Communication, logistique, trésorerie, pédagogie : chaque rôle a une raison d'être et des redevabilités écrites. Tu le consens, tu peux le quitter à tout moment. Trésorerie et logistique cherchent quelqu'un."
+                      - component: audience-card
+                        vars:
+                          icon: sparkles
+                          iconBg: bg-orange-light
+                          accent: text-orange-ink
+                          title: devenir facilitateur·ice
+                          text: "Le parcours est participant·e → bénévole → facilitateur·ice : formation interne, co-animation en binôme, débrief après chaque atelier, supervision entre pairs. À partir de 2028, une formation d'essaimage de deux jours pour animer ailleurs."
+              - type: link
+                props:
+                  href: /devenir-benevole
+                  className: inline-flex items-center gap-2 self-start whitespace-nowrap bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
+                children:
+                  - type: text
+                    element: span
+                    content: Rejoindre l'équipe bénévole
+                  - type: icon
+                    props: { name: arrow-right, size: 20, strokeWidth: 2 }
+
+      # Section: Comment on fonctionne (#fonctionnement) — the three circles and
+      # the decision rule (BPS 3.20, 3.21, 1.21). Cyan: factual register.
+      - type: container
+        element: section
+        props:
+          id: fonctionnement
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-cyan-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-cyan-ink
+                    content: Gouvernance
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: comment on fonctionne
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: Une direction collégiale, trois cercles, des rôles qu'on consent.
+              - type: container
+                props:
+                  className: grid md:grid-cols-3 gap-6
+                children:
+                  - component: audience-card
+                    vars:
+                      icon: shield
+                      iconBg: bg-cyan-light
+                      accent: text-cyan-ink
+                      title: cercle gardien
+                      text: "La direction collégiale : 2 à 5 membres élu·es pour un an, dont deux co-présidences. Les décisions d'identité, d'éthique, de stratégie et de ressources humaines."
+                  - component: audience-card
+                    vars:
+                      icon: heart
+                      iconBg: bg-cyan-light
+                      accent: text-cyan-ink
+                      title: cercle cœur
+                      text: "Les membres actifs. Une réunion par mois ; c'est ce cercle qui vote à l'assemblée générale."
+                  - component: audience-card
+                    vars:
+                      icon: flower
+                      iconBg: bg-cyan-light
+                      accent: text-cyan-ink
+                      title: cercle abeilles
+                      text: "Les membres usager·es, avec voix consultative. Tu y entres dès ta première adhésion."
+              - type: container
+                props:
+                  className: flex flex-col md:flex-row md:items-center gap-4 md:gap-8
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce max-w-2xl
+                    content: "Chaque rôle décide seul dans son périmètre ; entre rôles, on décide ensemble, sans objection. Un rôle se consent — et se quitte à tout moment."
+                  - type: container
+                    element: div
+                    props:
+                      className: inline-flex items-center gap-2 self-start shrink-0 bg-white border border-cyan-lighter rounded-pill px-4 py-2 type-small font-bold text-bleu-fonce
+                    children:
+                      - type: icon
+                        props: { name: calendar, size: 18, strokeWidth: 2, className: text-cyan-ink, aria-hidden: 'true' }
+                      - type: text
+                        element: span
+                        content: "Prochaine assemblée générale ordinaire : 15 novembre 2026"
 
       # Section: Partenaires (#partenaires) — three groups from the BPS
       # (2.16, 3.31): accompagnent · accueillent · ont fait confiance. Logos
@@ -674,21 +1212,27 @@ components:
                               href: https://cop1.eu
                               linkLabel: Découvrir Cop1
 
-      # Section: Agir avec nous (#agir) — the two ways in: bénévolat and don
+      # Section: Agir avec nous (#agir) — four ways in, one door-card each.
+      # « proposer une idée » links /vos-idees (page in the ideas batch).
       - type: container
         element: section
         props:
           id: agir
-          className: px-4 sm:px-6 pb-band-sm md:pb-band
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-orange-light
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto bg-orange-light rounded-media p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center
+              className: max-w-7xl mx-auto flex flex-col gap-block
             children:
               - type: container
                 props:
-                  className: md:col-span-7 flex flex-col gap-4
+                  className: flex flex-col gap-4 max-w-2xl
                 children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-orange-ink
+                    content: Agir
                   - type: text
                     element: h2
                     props:
@@ -697,35 +1241,149 @@ components:
                   - type: text
                     element: p
                     props:
-                      className: type-lead text-bleu-fonce
-                    content: Rejoins l'équipe bénévole pour tenir un stand, accueillir un atelier ou faire connaître l'association. Tu peux aussi nous soutenir par un don, pour que nos ateliers restent gratuits.
+                      className: type-lead text-bleu-fonce-70
+                    content: Quatre façons de faire vivre l'association, à ton rythme — pour que nos ateliers restent gratuits.
               - type: container
                 props:
-                  className: md:col-span-5 flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 md:items-end lg:justify-end
+                  className: grid md:grid-cols-2 lg:grid-cols-4 gap-6
                 children:
-                  - type: link
-                    props:
-                      href: /inscription
-                      className: inline-flex items-center justify-center gap-2 whitespace-nowrap bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
-                    children:
-                      - type: text
-                        element: span
-                        content: Devenir bénévole
-                      - type: icon
-                        props: { name: arrow-right, size: 20, strokeWidth: 2 }
-                  # HelloAsso donation form — same URL in site-header, site-footer, notre-mission.
-                  - type: link
-                    props:
+                  # HelloAsso adhésion form — URL count in the site-header comment.
+                  - component: door-card
+                    vars:
+                      href: https://www.helloasso.com/associations/merci-pour-ton-non/adhesions/adhesion-a-l-association-merci-pour-ton-non
+                      target: _blank
+                      icon: user-plus
+                      iconBg: bg-mauve-light
+                      accent: text-mauve
+                      title: adhérer
+                      text: "Tu votes à l'assemblée générale et tu fais vivre l'association. Cotisation au choix : 5 €, 20 € ou 50 €."
+                      cta: Adhérer sur HelloAsso
+                  - component: door-card
+                    vars:
+                      href: /devenir-benevole
+                      target: _self
+                      icon: hand-heart
+                      iconBg: bg-orange-lighter
+                      accent: text-orange-ink
+                      title: devenir bénévole
+                      text: "Tenir un stand, accueillir un atelier, faire connaître l'association — ou te former à la facilitation. Tu choisis ton rythme et le rôle que tu consens."
+                      cta: Rejoindre l'équipe bénévole
+                  - component: door-card
+                    vars:
+                      href: /vos-idees
+                      target: _self
+                      icon: lightbulb
+                      iconBg: bg-cyan-light
+                      accent: text-cyan-ink
+                      title: proposer une idée
+                      text: "Un atelier pour un public précis, un contenu, un format, un lieu : dis-nous ce que tu voudrais qu'on construise."
+                      cta: Partager une idée
+                  # HelloAsso donation form — URL count in the site-header comment.
+                  - component: door-card
+                    vars:
                       href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
                       target: _blank
-                      rel: noopener noreferrer
-                      aria-label: Nous faire un don sur HelloAsso (nouvel onglet)
-                      className: inline-flex items-center justify-center gap-2 whitespace-nowrap border-2 border-bleu-fonce text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-bleu-fonce hover:text-white transition-colors
+                      icon: heart
+                      iconBg: bg-pourpre-light
+                      accent: text-pourpre-hover
+                      title: faire un don
+                      text: Chaque don finance les ateliers gratuits. Dons et cotisations ouvrent droit à un reçu fiscal.
+                      cta: Nous faire un don
+
+      # Section: Et ensuite (#ensuite) — the roadmap (BPS 1.17, 3.32).
+      - type: container
+        element: section
+        props:
+          id: ensuite
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Ce qu'on construit
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: et ensuite
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: grid sm:grid-cols-2 lg:grid-cols-4 gap-6
+                children:
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: flex flex-col gap-2 border-t-2 border-mauve-lighter pt-5 }
                     children:
-                      - type: icon
-                        props: { name: heart, size: 18, strokeWidth: 2, aria-hidden: 'true' }
                       - type: text
-                        element: span
-                        content: Nous faire un don
+                        element: p
+                        props: { className: type-overline text-mauve }
+                        content: '2027'
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: atelier Niveau 2
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Deux sessions, pour celles et ceux qui veulent aller plus loin après le Niveau 1.
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: flex flex-col gap-2 border-t-2 border-mauve-lighter pt-5 }
+                    children:
+                      - type: text
+                        element: p
+                        props: { className: type-overline text-mauve }
+                        content: Année 2
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: kit pédagogique libre
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Nos exercices et nos supports, sous licence Creative Commons, pour qui veut s'en servir.
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: flex flex-col gap-2 border-t-2 border-mauve-lighter pt-5 }
+                    children:
+                      - type: text
+                        element: p
+                        props: { className: type-overline text-mauve }
+                        content: Année 3
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: formation d'essaimage
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Deux jours pour que d'autres animent à leur tour, ailleurs qu'à Strasbourg.
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: flex flex-col gap-2 border-t-2 border-mauve-lighter pt-5 }
+                    children:
+                      - type: text
+                        element: p
+                        props: { className: type-overline text-mauve }
+                        content: En exploration
+                      - type: text
+                        element: h3
+                        props: { className: type-h4 text-bleu-fonce }
+                        content: module enfants et adolescent·es
+                      - type: text
+                        element: p
+                        props: { className: type-small text-bleu-fonce-70 }
+                        content: Adapter le consentement aux plus jeunes, avec les personnes qui les accompagnent.
 
   - component: site-footer

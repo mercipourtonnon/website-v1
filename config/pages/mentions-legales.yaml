@@ -463,6 +463,8 @@ components:
                         content: Améliorer l'expérience utilisateur du site
                       - type: list-item
                         content: Répondre à tes demandes d'information
+                      - type: list-item
+                        content: "Gérer ton compte et ta fiche bénévole si tu rejoins l'équipe (inscription sur /devenir-benevole) : ton email et ton mot de passe pour le compte ; prénom et nom, pronom, téléphone, photo et ce que tu écris dans ta fiche pour mieux se connaître. L'email et le téléphone sont lus par la coordination seulement ; la fiche est visible des autres bénévoles une fois validée"
 
                   - type: text
                     element: h3
@@ -582,6 +584,11 @@ components:
                     props:
                       className: mt-3 text-gray-700 leading-relaxed
                     content: "Pour le suivi des ateliers, ton nom, ton email et ton téléphone sont effacés de notre outil interne 12 mois après l'atelier. Nous ne gardons ensuite que des chiffres anonymes (nombre d'inscrit·es, de présent·es, dons éventuels)."
+                  - type: text
+                    element: p
+                    props:
+                      className: mt-3 text-gray-700 leading-relaxed
+                    content: "Pour l'espace bénévole, ton compte et ta fiche sont conservés tant que tu fais partie de l'équipe. Quand tu la quittes, la coordination archive ta fiche et ferme ton accès ; compte et fiche sont supprimés sur simple demande à mercipourtonnon@gmail.com."
 
               # Section 5: Cookies
               - type: container

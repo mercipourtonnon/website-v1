@@ -1,7 +1,7 @@
-# / — the landing page: hero, the consent teaser, the three actions, a
-# testimonials excerpt, social links and the newsletter. The workshop details
-# moved to /nos-ateliers and the association to /notre-mission (review of
-# 2026-10-09).
+# / — the landing page: hero, the figures band (#chiffres), « tu es… » doors
+# (#tu-es), the consent teaser, the three actions, a testimonials excerpt,
+# social links and the newsletter. The workshop details moved to /nos-ateliers
+# and the association to /notre-mission (review of 2026-10-09).
 name: home
 path: /
 sitemap:
@@ -335,6 +335,116 @@ components:
                       sizes: '(min-width: 1024px) 600px, 100vw'
                       alt: Dilara et Mathilde, facilitatrices, rient ensemble pendant un atelier de consentement
                       className: w-full h-auto rounded-media shadow-raised object-cover aspect-[3/2]
+
+      # Section: En chiffres (#chiffres) — the four figures of /notre-mission#chiffres.
+      # Constantes tenues à la main — source BPS 1.10 (état au 9 octobre 2026).
+      # Même compteur que le rapport moral : à mettre à jour après chaque atelier.
+      # Un kpi lié à workshops ne rend rien en build statique. Change both pages.
+      - type: container
+        element: section
+        props:
+          id: chiffres
+          className: px-4 sm:px-6 py-band-sm bg-cyan-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 items-center
+            children:
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: lg:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-4
+                  aria-label: L'association en chiffres
+                children:
+                  - component: figure-tile
+                    vars: { value: '12', label: ateliers Niveau 1, accent: text-cyan-ink }
+                  - component: figure-tile
+                    vars: { value: '108', label: inscriptions, accent: text-mauve }
+                  - component: figure-tile
+                    vars: { value: '9,25 / 10', label: 'note moyenne, 16 questionnaires', accent: text-pourpre-hover }
+                  - component: figure-tile
+                    vars: { value: sept. 2025, label: 'premier atelier, le jour de la création', accent: text-orange-ink }
+              - type: container
+                props:
+                  className: lg:col-span-3 flex lg:justify-end
+                children:
+                  - type: link
+                    props:
+                      href: /notre-mission#chiffres
+                      className: font-bold text-bleu-fonce underline decoration-cyan decoration-2 underline-offset-4 hover:text-cyan-ink
+                    content: Voir les chiffres et le pourquoi →
+
+      # Section: Tu es… (#tu-es) — one door per visitor, in the « cet atelier
+      # est pour toi si… » voice.
+      - type: container
+        element: section
+        props:
+          id: tu-es
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-block
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-orange-ink
+                    content: Par où commencer
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: tu es…
+              - type: container
+                props:
+                  className: grid md:grid-cols-2 lg:grid-cols-4 gap-6
+                children:
+                  - component: door-card
+                    vars:
+                      href: /nos-ateliers
+                      target: _self
+                      icon: circle-help
+                      iconBg: bg-orange-light
+                      accent: text-orange-ink
+                      title: une personne curieuse
+                      text: "Tu veux t'entraîner à dire non, à l'entendre, à changer d'avis — sans qu'on te demande de raconter ta vie. L'atelier est pour toi."
+                      cta: Voir les ateliers
+                  - component: door-card
+                    vars:
+                      href: /ressources#enfants-et-parents
+                      target: _self
+                      icon: users
+                      iconBg: bg-mauve-light
+                      accent: text-mauve
+                      title: un parent
+                      text: "Tu cherches comment en parler avec tes enfants. On a réuni des livres et des outils pour vous — et l'atelier est aussi pour toi, voir « pour qui » sur /nos-ateliers."
+                      cta: Voir les ressources
+                  - component: door-card
+                    vars:
+                      href: /nos-interventions
+                      target: _self
+                      icon: building-2
+                      iconBg: bg-cyan-light
+                      accent: text-cyan-ink
+                      title: une structure ou une entreprise
+                      text: "Une équipe, un établissement, une association : on construit avec toi une intervention d'une demi-journée ou d'une journée. Les participant·es ne paient jamais."
+                      cta: Voir les interventions
+                  - component: door-card
+                    vars:
+                      href: /notre-mission#chiffres
+                      target: _self
+                      icon: newspaper
+                      iconBg: bg-pourpre-light
+                      accent: text-pourpre-hover
+                      title: un·e journaliste ou un financeur
+                      text: "Tu veux les chiffres, le besoin social sourcé, l'histoire et la gouvernance de l'association. Tout est sur une page."
+                      cta: Voir les chiffres
 
       # Section: Le consentement, en clair — teaser of /le-consentement
       - type: container

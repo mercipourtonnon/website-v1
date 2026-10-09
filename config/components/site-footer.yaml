@@ -1,9 +1,9 @@
 # Shared footer — used by every public page.
 # The "Le site" grid mirrors the header's IA (review of 2026-10-09). To add a
 # page link, append one `link` to it — every entry has the same one-line
-# shape; "Nous faire un don" opens the HelloAsso donation form, its URL
-# repeated in 4 places (header ×2, footer, notre-mission) because a page href
-# does not resolve `$env.X` on Sovrium 0.34.1.
+# shape. « Nous faire un don » and « Adhérer » open HelloAsso forms whose URLs
+# are written verbatim (a page href does not resolve `$env.X` on Sovrium
+# 0.34.1); the counts of both URLs are kept in the site-header comment.
 # Links are root-absolute so they work from every page. Social networks are
 # plain text links: Lucide has no brand marks, and the charter allows only
 # Lucide icons.
@@ -83,7 +83,27 @@ children:
               - type: link
                 props: { href: /newsletter, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
                 content: Newsletter
-              # HelloAsso donation form — same URL in site-header, site-footer, notre-mission.
+              - type: link
+                props: { href: /devenir-benevole, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Devenir bénévole
+              - type: link
+                props: { href: /vos-idees, className: py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline }
+                content: Proposer une idée
+              # HelloAsso adhésion form — URL count in the site-header comment.
+              - type: link
+                props:
+                  href: https://www.helloasso.com/associations/merci-pour-ton-non/adhesions/adhesion-a-l-association-merci-pour-ton-non
+                  target: _blank
+                  rel: noopener noreferrer
+                  aria-label: Adhérer sur HelloAsso (nouvel onglet)
+                  className: inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline
+                children:
+                  - type: icon
+                    props: { name: user-plus, size: 18, strokeWidth: 2, aria-hidden: 'true' }
+                  - type: text
+                    element: span
+                    content: Adhérer
+              # HelloAsso donation form — URL count in the site-header comment.
               - type: link
                 props:
                   href: https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1
