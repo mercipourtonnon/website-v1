@@ -3,7 +3,7 @@ name: sovrium-pages
 description: Use when creating, redesigning or polishing the pages of a Sovrium app — routes, layouts and page access, choosing and composing components, binding pages to table data or collections, forms, design tokens in the design block, dark mode and responsive behaviour, empty, error and loading states, and the words on the page. Triggers include "add a page", "make this page look better", "landing page", "dashboard", "list of records", "record detail page", "form", "dark mode", "mobile layout", "the design looks generic", and "rewrite the copy".
 license: BSL-1.1
 metadata:
-  product-version: "0.33.0"
+  product-version: "0.34.1"
   author: sovrium
   version: '1.0.0'
 ---

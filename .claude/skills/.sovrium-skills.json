@@ -1,12 +1,12 @@
 {
   "format": "sovrium-skills",
   "schemaVersion": 1,
-  "engine": "0.33.0",
+  "engine": "0.34.1",
   "target": "claude",
   "files": [
     {
       "path": "sovrium-app/SKILL.md",
-      "sha256": "dfde53f7d929ce67b3554407e9e2ce5dc257d5f64f14c7bbf9a6e2f7cdceaab6"
+      "sha256": "458ecf38780e8f4bac56d3da8d19d541f3f2f2908180bc7fcd078ce107181e46"
     },
     {
       "path": "sovrium-app/references/api-checks.md",
@@ -30,7 +30,7 @@
     },
     {
       "path": "sovrium-automations/SKILL.md",
-      "sha256": "7c04ed2230bd6ff2d3d05649c064b46a7abd0a7e9a40f55ab880c0eb998446b8"
+      "sha256": "983538c14b0a3e2065ddb2f0126b3ecebdc47de4c1d45a0a785edb79b7a11e97"
     },
     {
       "path": "sovrium-automations/references/loops.md",
@@ -50,11 +50,11 @@
     },
     {
       "path": "sovrium-automations/references/triggers-and-actions.generated.md",
-      "sha256": "cfd5ae6c0a1ed071f7648a9effb8df94b8b3c523b8187ca0f8031cc959d5aaf0"
+      "sha256": "7ecd0a52c7393316e50ee70341b642d499a3af0437ec2d6dd0d66a575a54c635"
     },
     {
       "path": "sovrium-data-model/SKILL.md",
-      "sha256": "c29caf33ded934fdc7745f47420559a5fc5647843a90fd72978533d7830c2be4"
+      "sha256": "350677da2a323e2061ace40a07c19de64d5b898f188f2de2dd0bc6ee09324b40"
     },
     {
       "path": "sovrium-data-model/references/field-types.generated.md",
@@ -78,7 +78,7 @@
     },
     {
       "path": "sovrium-pages/SKILL.md",
-      "sha256": "b39463996568b5414fe169b1daf2921a841299d14e55ee92d7d13071a1087103"
+      "sha256": "4ff270dfad247f27278df207d67da14f64e6aede2ab0f668c4a22be982ac7d00"
     },
     {
       "path": "sovrium-pages/references/accessibility.md",
@@ -114,7 +114,7 @@
     },
     {
       "path": "sovrium-seo-geo/SKILL.md",
-      "sha256": "deb0808de2f68d693e21a32d8afe0475fd473b984af4e8f60af2c923193d4ce9"
+      "sha256": "84d5f8ea965a9305f6f527ad53f1cc7a5efc1e97a06439eb1de878fe7b01fecc"
     },
     {
       "path": "sovrium-seo-geo/references/copy-for-search.md",
