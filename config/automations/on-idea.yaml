@@ -1,13 +1,47 @@
-# An idea sent through the public `idees` form: tell the coordination by mail
-# (when ADMIN_NOTIFY_EMAIL is set; the row and the Submissions inbox entry are
-# written by the form itself, whatever happens here).
+# An idea sent through the public `idees` form: write the `ideas` row (the
+# form is not table-bound, see config/forms/idees.yaml and sovrium#138), then
+# tell the coordination by mail when ADMIN_NOTIFY_EMAIL is set. The form's
+# own ledger entry (Submissions inbox) is written by the form itself.
 name: on-idea
-description: Prévient la coordination qu'une idée a été envoyée depuis /vos-idees.
+description: Enregistre une idée envoyée depuis /vos-idees et prévient la coordination.
 trigger:
   type: form
   form: idees
 timeout: 30000
 actions:
+  - name: save
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 15000
+      inputData:
+        kind: '{{trigger.data.kind}}'
+        audience: '{{trigger.data.audience}}'
+        message: '{{trigger.data.message}}'
+        name: '{{trigger.data.name}}'
+        email: '{{trigger.data.email}}'
+        contact_ok: '{{trigger.data.contact_ok}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const text = (v: unknown) => String(v ?? '').trim();
+          const message = text(input.message);
+          if (!message) throw new Error('Idée envoyée sans message.');
+          const raw = text(input.contact_ok).toLowerCase();
+          const contactOk = raw === 'true' || raw === '1' || raw === 'on' || raw === 'oui';
+          const data: Record<string, unknown> = {
+            kind: text(input.kind) || 'autre',
+            message,
+            status: 'nouvelle',
+            contact_ok: contactOk,
+          };
+          for (const key of ['audience', 'name', 'email']) {
+            const value = text(input[key]);
+            if (value) data[key] = value;
+          }
+          const created = await context.actions.record.create({ table: 'ideas', data });
+          return { id: (created as { id?: unknown })?.id ?? null };
+        }
   - name: has_recipient
     type: filter
     operator: continue
