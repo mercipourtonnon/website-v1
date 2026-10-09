@@ -1,5 +1,6 @@
-# Team flip card — flips on hover AND on keyboard focus (tabindex + CSS in
-# /assets/site.css), so the bio is reachable without a mouse.
+# Team flip card — flips on hover AND on keyboard focus: the back face is
+# focusable (tabindex 0), so Tab lands on the bio, flips the card through
+# :focus-within (CSS in /assets/site.css) and lets arrow keys scroll it.
 # Vars: $photo (/pictures/x.jpg), $alt, $name (lowercase display), $role,
 # $bio, $photoBg (bg-orange-light), $backBg (bg-mauve), $roleAccent
 # (text-mauve). Full class tokens only.
@@ -8,8 +9,6 @@ type: container
 element: article
 props:
   className: team-card h-[26rem] perspective-1000 cursor-pointer
-  tabindex: '0'
-  aria-label: $alt — survole ou sélectionne la carte pour lire sa présentation
 children:
   - type: container
     props:
@@ -48,20 +47,22 @@ children:
       - type: container
         props:
           className: team-card-back absolute w-full h-full backface-hidden $backBg text-white rounded-card p-6 overflow-y-auto rotate-y-180
+          tabindex: '0'
+          aria-label: Présentation de $alt
         children:
           - type: text
             element: p
             props:
-              className: title-font type-h4 mb-1
+              className: title-font type-h4 mb-1 text-white
               aria-hidden: 'true'
             content: $name
           - type: text
             element: p
             props:
-              className: type-caption font-bold mb-4
+              className: type-caption font-bold mb-4 text-white
             content: $role
           - type: text
             element: p
             props:
-              className: type-small
+              className: type-small text-white
             content: $bio

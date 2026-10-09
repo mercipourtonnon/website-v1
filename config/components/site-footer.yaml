@@ -1,4 +1,6 @@
 # Shared footer — used by home, mentions-legales, /le-consentement, /ressources.
+# To add a page link, append one `link` to the "Le site" grid below — every
+# entry has the same one-line shape.
 # Links are root-absolute so they work from every page. Social networks are
 # plain text links: Lucide has no brand marks, and the charter allows only
 # Lucide icons.
@@ -103,6 +105,7 @@ children:
                   href: https://www.instagram.com/mercipourtonnon/
                   target: _blank
                   rel: noopener noreferrer
+                  aria-label: Instagram (nouvel onglet)
                   className: inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve
                 children:
                   - type: text
@@ -115,6 +118,7 @@ children:
                   href: https://www.facebook.com/mercipourtonnon
                   target: _blank
                   rel: noopener noreferrer
+                  aria-label: Facebook (nouvel onglet)
                   className: inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve
                 children:
                   - type: text
@@ -127,6 +131,7 @@ children:
                   href: https://www.linkedin.com/company/merci-pour-ton-non
                   target: _blank
                   rel: noopener noreferrer
+                  aria-label: LinkedIn (nouvel onglet)
                   className: inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve
                 children:
                   - type: text

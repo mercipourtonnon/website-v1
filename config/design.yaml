@@ -40,6 +40,26 @@ colors:
   bleu-fonce-50: '#13007780'
   bleu-fonce-70: '#130077B3'
 
+  # Platform role tokens — Sovrium's own components (default buttons, banners,
+  # alerts) read these. Mapped to the brand so nothing renders near-black.
+  primary: '#130077' # bleu foncé — white text on it is 16.2:1
+  primary-hover: '#24109A'
+  primary-active: '#0C004F'
+  primary-fg: '#FFFFFF'
+  primary-foreground: '#FFFFFF'
+  primary-subtle: '#E6E0FF'
+  primary-subtle-fg: '#130077'
+  warning: '#FFF8E6' # orange-light — bleu-foncé text 15.3:1
+  warning-fg: '#130077'
+  warning-foreground: '#130077'
+  warning-bg: '#FFF8E6'
+  warning-border: '#FFAF00'
+  success: '#E6F9F8' # cyan-light — bleu-foncé text 14.9:1
+  success-fg: '#130077'
+  success-foreground: '#130077'
+  success-bg: '#E6F9F8'
+  success-border: '#12A19D'
+
 typeScale:
   families:
     title:

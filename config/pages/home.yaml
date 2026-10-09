@@ -2329,12 +2329,12 @@ components:
                   - type: text
                     element: h2
                     props:
-                      className: text-3xl md:text-4xl title-font text-orange mb-4
+                      className: type-section text-bleu-fonce mb-4
                     content: réserve ta place maintenant
                   - type: text
                     element: p
                     props:
-                      className: text-base text-gray-600
+                      className: type-lead text-bleu-fonce-70
                     content: 6 dates de septembre à décembre — choisis la tienne, prix libre.
               # Workshop card — one card, six dates, one registration URL.
               - type: container
@@ -2442,7 +2442,7 @@ components:
                         content: Tu choisis ta date au moment de l'inscription.
               - type: container
                 props:
-                  className: bg-white rounded-lg p-8 max-w-4xl mx-auto mt-12
+                  className: bg-white rounded-card shadow-card p-8 max-w-4xl mx-auto mt-12
                 children:
                   # Contact option for questions
                   - type: container
@@ -2457,7 +2457,7 @@ components:
                       - type: text
                         element: p
                         props:
-                          className: text-gray-700 mb-4
+                          className: text-bleu-fonce mb-4
                         content: On est là pour échanger avec toi avant que tu t'inscrives. Aucune question n'est bête, on répond avec plaisir !
                       - type: container
                         props:
@@ -2466,7 +2466,7 @@ components:
                           - type: link
                             props:
                               href: mailto:contact@mercipourtonnon.fr
-                              className: inline-flex items-center gap-2 text-orange hover:text-orange-hover font-semibold transition-colors
+                              className: inline-flex items-center gap-2 text-orange-ink underline underline-offset-4 hover:text-bleu-fonce font-semibold transition-colors
                             children:
                               - type: icon
                                 props: { name: mail, className: w-5 h-5 -mt-0.5 }
@@ -2483,10 +2483,10 @@ components:
                               href: https://www.instagram.com/mercipourtonnon/
                               target: _blank
                               rel: noopener noreferrer
-                              className: inline-flex items-center gap-2 text-orange hover:text-orange-hover font-semibold transition-colors
+                              className: inline-flex items-center gap-2 text-orange-ink underline underline-offset-4 hover:text-bleu-fonce font-semibold transition-colors
                             children:
                               - type: icon
-                                props: { name: instagram, className: w-5 h-5 -mt-0.5 }
+                                props: { name: arrow-up-right, className: w-5 h-5 -mt-0.5 }
                               - type: text
                                 element: span
                                 content: Instagram

@@ -45,14 +45,14 @@
 | foreground-inverse | oklch(0.985 0 0) |  |  |
 | border | oklch(0.92 0 0) |  |  |
 | ring | oklch(0.205 0 0) |  |  |
-| primary | oklch(0.205 0 0) |  |  |
-| primary-hover | oklch(0.272 0 0) |  |  |
-| primary-active | oklch(0.14 0 0) |  |  |
-| primary-foreground | oklch(0.985 0 0) |  |  |
-| primary-subtle | oklch(0.965 0 0) |  |  |
+| primary | #130077 |  |  |
+| primary-hover | #24109A |  |  |
+| primary-active | #0C004F |  |  |
+| primary-foreground | #FFFFFF |  |  |
+| primary-subtle | #E6E0FF |  |  |
 | primary-subtle-foreground | oklch(0.205 0 0) |  |  |
-| success | oklch(0.45 0 0) |  |  |
-| warning | oklch(0.72 0 0) |  |  |
+| success | #E6F9F8 |  |  |
+| warning | #FFF8E6 |  |  |
 | error | #c13520 |  |  |
 | info | #398ad6 |  |  |
 | pourpre | #F5004F | Émotion, authenticité, découverte. Témoignages, sections émotionnelles. Jamais en fond de grande section : utiliser pourpre-light. | pourpre-light |
@@ -79,6 +79,16 @@
 | bleu-fonce-light | #E6E0FF |  |  |
 | bleu-fonce-50 | #130077 |  |  |
 | bleu-fonce-70 | #130077 |  |  |
+| primary-fg | #FFFFFF |  |  |
+| primary-subtle-fg | #130077 |  |  |
+| warning-fg | #130077 |  |  |
+| warning-foreground | #130077 |  |  |
+| warning-bg | #FFF8E6 |  |  |
+| warning-border | #FFAF00 |  |  |
+| success-fg | #130077 |  |  |
+| success-foreground | #130077 |  |  |
+| success-bg | #E6F9F8 |  |  |
+| success-border | #12A19D |  |  |
 
 ## Type scale
 
