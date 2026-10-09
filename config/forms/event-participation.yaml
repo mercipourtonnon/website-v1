@@ -25,5 +25,12 @@ fields:
   - kind: table-field
     column: need
     label: Sur quel besoin ? (facultatif)
+    # « Tenir le stand — Fête de quartier »: the needs of every event are
+    # offered (no documented way to filter by the page's event), so each one
+    # names its event.
+    optionsSource:
+      table: event_needs
+      displayField: option_label
+      sort: [{ field: option_label, direction: asc }]
     helpText: Laisse vide si tu viens simplement participer.
   - { kind: table-field, column: comment, label: Un mot pour l'équipe ? (facultatif) }

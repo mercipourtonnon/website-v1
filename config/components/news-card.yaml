@@ -1,6 +1,6 @@
 # News card — one `news` row, as drawn on /espace and /espace/actualites.
 # Place it as the row template of a list bound to `news` (filter status =
-# published for the bénévoles). Reads title, summary and published_at through
+# published for the bénévoles). Reads title, summary and date_label through
 # $record and links to /espace/actualites/<id>. No vars.
 name: news-card
 type: container
@@ -14,9 +14,11 @@ children:
     children:
       - type: icon
         props: { name: newspaper, className: w-4 h-4 shrink-0 text-mauve, aria-hidden: 'true' }
-      - type: record-field
-        props: { field: published_at }
-        format: long-date
+      # date_label is the French text of published_at (« mar. 20 oct. »),
+      # written by label-news-date: record-field prints English dates in 0.33.
+      - type: text
+        element: span
+        content: $record.date_label
   - type: text
     element: h3
     props:

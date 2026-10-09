@@ -81,6 +81,8 @@ automations:
   - $ref: ./config/automations/on-news-published.yaml
   - $ref: ./config/automations/on-participation.yaml
   - $ref: ./config/automations/label-event-date.yaml
+  - $ref: ./config/automations/label-news-date.yaml
+  - $ref: ./config/automations/label-need.yaml
   - $ref: ./config/automations/notify-espace-failure.yaml
 
 components:

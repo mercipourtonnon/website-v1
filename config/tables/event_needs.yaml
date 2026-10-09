@@ -27,11 +27,18 @@ fields:
   - { id: 6, name: signed_up, label: Inscrit·es, type: count, relationshipField: participations }
   - { id: 7, name: remaining, label: Places restantes, type: formula, formula: 'slots - signed_up', resultType: number }
   - { id: 8, name: position, label: Ordre, type: integer, default: 0 }
+  # « Tenir le stand — Fête de quartier »: the choice label in the
+  # event-participation form, so needs of different events are told apart.
+  # Written by label-need (label or event changes) and label-event-date
+  # (event title changes).
+  - { id: 9, name: option_label, label: Besoin (avec l'événement), type: single-line-text }
 permissions:
   read: [member, facilitateur, coordination, admin]
   create: [coordination, admin]
   update: [coordination, admin]
   delete: [coordination, admin]
+  fields:
+    - { field: option_label, write: [admin] }
 # No row rule. A rule reading `event.status` through the relationship is
 # applied by the records API but, in Sovrium 0.33.0, server-side reads (page
 # templates, form options and form validation) then return nothing to

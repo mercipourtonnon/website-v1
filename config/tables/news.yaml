@@ -39,6 +39,9 @@ fields:
   - { id: 11, name: created_by, label: Rédigé par, type: created-by }
   # Technical, see members.editor_role.
   - { id: 12, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+  # French label of published_at for cards, e.g. « mar. 20 oct. » (Europe/Paris).
+  # Written by label-news-date; record-field prints English dates in 0.33.
+  - { id: 13, name: date_label, label: Date (texte), type: single-line-text }
 permissions:
   read: [member, facilitateur, coordination, admin]
   create: [coordination, admin]
@@ -49,6 +52,7 @@ permissions:
     - { field: send_status, read: [coordination, admin], write: [admin] }
     - { field: send_error, read: [coordination, admin], write: [admin] }
     - { field: editor_role, read: [coordination, admin], write: [admin] }
+    - { field: date_label, write: [admin] }
 rowLevelPermissions:
   read:
     when:
