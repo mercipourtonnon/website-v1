@@ -104,6 +104,13 @@ fields:
     format: currency
     currency: EUR
   - { id: 27, name: last_synced_at, label: Dernière synchronisation, type: datetime }
+  # Rollups cannot declare a currency (they would print in USD): these formulas
+  # carry the EUR format for the pages.
+  - { id: 28, name: revenue_online_eur, label: Prix libre en ligne (€), type: formula, formula: 'COALESCE(revenue_online, 0)', resultType: number, format: currency, currency: EUR }
+  - { id: 29, name: revenue_on_site_eur, label: Prix libre sur place (€), type: formula, formula: 'COALESCE(revenue_on_site, 0)', resultType: number, format: currency, currency: EUR }
+  # 0 or 1: whether the date already has its workshop_cash row, so the page
+  # shows the create form or the edit form (a saved 0 € still counts as a row).
+  - { id: 30, name: cash_entries, label: Saisie sur place, type: count, relationshipField: cash }
 permissions:
   read: all
   create: [admin]
@@ -120,3 +127,6 @@ permissions:
     - { field: revenue_on_site, read: [admin, member], write: [admin] }
     - { field: revenue_total, read: [admin, member], write: [admin] }
     - { field: last_synced_at, read: [admin, member], write: [admin] }
+    - { field: revenue_online_eur, read: [admin, member], write: [admin] }
+    - { field: revenue_on_site_eur, read: [admin, member], write: [admin] }
+    - { field: cash_entries, read: [admin, member], write: [admin] }
