@@ -1,0 +1,67 @@
+# Backup sync: every 15 minutes in the day, refresh the registrations of every
+# HelloAsso date from yesterday to two months ahead. Keeps the dashboard right
+# even before the HelloAsso webhook is reachable (Sovrium Cloud) or when a
+# notification is lost.
+name: sync-helloasso-registrations-cron
+description: Rafraîchit toutes les 15 minutes les inscriptions des dates à venir.
+trigger:
+  type: cron
+  expression: '*/15 8-22 * * *'
+  timezone: Europe/Paris
+timeout: 600000
+actions:
+  - name: dates
+    type: record
+    operator: list
+    props:
+      table: workshops
+      fields: [id, session_date]
+      limit: 500
+      filter:
+        logic: and
+        conditions:
+          - { field: booking_provider, operator: equals, value: helloasso }
+          - { field: status, operator: equals, value: published }
+          - { field: helloasso_form_slug, operator: isNotEmpty }
+
+  # The window, in Europe/Paris days.
+  - name: window
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 5000
+      inputData:
+        dates: '{{dates.records}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const rows = Array.isArray(input.dates) ? (input.dates as Array<Record<string, unknown>>) : [];
+          const day = (offset: number) =>
+            new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris' }).format(new Date(Date.now() + offset * 86400000));
+          const from = day(-1);
+          const to = day(60);
+          const ids = rows
+            .filter((r) => {
+              const d = String(r.session_date || '').slice(0, 10);
+              return d >= from && d <= to;
+            })
+            .map((r) => String(r.id));
+          return { ids, count: ids.length };
+        }
+
+  - name: each_date
+    type: loop
+    operator: each
+    props:
+      items: '{{window.ids}}'
+      maxIterations: 200
+      continueOnItemError: true
+      actions:
+        - name: sync
+          type: automation
+          operator: call
+          props:
+            name: sync-workshop-registrations
+            mode: sync
+            inputData:
+              workshopId: '{{loop.item}}'

@@ -1,0 +1,84 @@
+# HelloAsso notification URL → re-sync the date the notification is about.
+#
+# URL to paste in HelloAsso (Mon compte → Intégrations et API → URL de
+# notification), once the app is deployed on Sovrium Cloud:
+#   https://mercipourtonnon.fr/api/automations/helloasso-notification/webhook?token=<HELLOASSO_WEBHOOK_TOKEN>
+#
+# HelloAsso cannot send a header or a signature, so the shared secret travels in
+# the query string. And nothing in the body is trusted: the run only reads which
+# form changed, then re-reads that form's orders from the API itself. A forged
+# call can at worst cause one extra sync.
+name: helloasso-notification
+description: Reçoit les notifications HelloAsso et resynchronise la date concernée.
+trigger:
+  type: webhook
+  method: [POST]
+  respondImmediately: true
+  rateLimit: { maxRequests: 60, windowSeconds: 60 }
+  deduplicationKey: '{{trigger.data.body.eventType}}-{{trigger.data.body.data.id}}'
+  deduplicationWindow: 600
+timeout: 180000
+actions:
+  - name: authorised
+    type: filter
+    operator: continue
+    props:
+      condition:
+        logic: and
+        conditions:
+          - { field: $env.HELLOASSO_WEBHOOK_TOKEN, operator: isNotEmpty }
+          - { field: '{{trigger.data.query.token}}', operator: equals, value: $env.HELLOASSO_WEBHOOK_TOKEN }
+
+  # Order and Payment notifications carry the form slug in different places.
+  - name: event
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 5000
+      inputData:
+        body: '{{trigger.data.body}}'
+      code: |
+        async function execute(context) {
+          const body = (context.inputData as Record<string, any>).body || {};
+          const type = String(body.eventType || '');
+          const data = body.data || {};
+          const formType = String(data.formType || (data.order && data.order.formType) || '');
+          const formSlug = String(data.formSlug || (data.order && data.order.formSlug) || '');
+          const relevant = (type === 'Order' || type === 'Payment') && formType === 'Event' && formSlug !== '';
+          return { relevant, formSlug };
+        }
+
+  - name: relevant
+    type: filter
+    operator: continue
+    props:
+      condition:
+        conditions:
+          - { field: '{{event.relevant}}', operator: equals, value: true }
+
+  - name: dates
+    type: record
+    operator: list
+    props:
+      table: workshops
+      fields: [id]
+      limit: 5
+      filter:
+        conditions:
+          - { field: helloasso_form_slug, operator: equals, value: '{{event.formSlug}}' }
+
+  - name: each_date
+    type: loop
+    operator: each
+    props:
+      items: '{{dates.records}}'
+      maxIterations: 5
+      actions:
+        - name: sync
+          type: automation
+          operator: call
+          props:
+            name: sync-workshop-registrations
+            mode: sync
+            inputData:
+              workshopId: '{{loop.item.id}}'

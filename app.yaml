@@ -18,6 +18,9 @@ tables:
   - $ref: ./config/tables/venues.yaml
   - $ref: ./config/tables/workshop_proposals.yaml
   - $ref: ./config/tables/workshops.yaml
+  # Dashboard /espace/suivi: who registered, who came, what the date brought in.
+  - $ref: ./config/tables/registrations.yaml
+  - $ref: ./config/tables/workshop_cash.yaml
 
 # Authentication — needed for the admin console (/_admin) and the design-system
 # console on a dev server. No public sign-up: accounts are created by an admin
@@ -43,6 +46,9 @@ env:
     description: HelloAsso OAuth2 token endpoint — https://api.helloasso.com/oauth2/token (sandbox https://api.helloasso-sandbox.com/oauth2/token)
     secret: false
   - { key: HELLOASSO_CONTACT_EMAIL, description: Contact email shown on each HelloAsso event, secret: false }
+  - key: HELLOASSO_WEBHOOK_TOKEN
+    description: Secret in the HelloAsso notification URL (?token=…) — sovrium secret generate
+    required: false
   - { key: ADMIN_NOTIFY_EMAIL, description: Who is emailed when a HelloAsso automation fails (optional), required: false, secret: false }
 
 connections:
@@ -59,6 +65,13 @@ automations:
   - $ref: ./config/automations/retry-helloasso.yaml
   - $ref: ./config/automations/publish-workshop-on-site.yaml
   - $ref: ./config/automations/notify-helloasso-failure.yaml
+  # HelloAsso registrations → `registrations` (button, cron, webhook), check-in, retention.
+  - $ref: ./config/automations/sync-workshop-registrations.yaml
+  - $ref: ./config/automations/sync-helloasso-registrations.yaml
+  - $ref: ./config/automations/sync-helloasso-registrations-cron.yaml
+  - $ref: ./config/automations/helloasso-notification.yaml
+  - $ref: ./config/automations/stamp-check-in.yaml
+  - $ref: ./config/automations/anonymise-registrations.yaml
 
 components:
   - $ref: ./config/components/site-footer.yaml

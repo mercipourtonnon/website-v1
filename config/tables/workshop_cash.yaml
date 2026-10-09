@@ -1,0 +1,25 @@
+# Prix libre collected at the venue (cash, card reader), one row per workshop
+# date, entered by a facilitator at the end of the session. Kept out of
+# `workshops` so facilitators never get write access to the public catalogue.
+id: 6
+name: workshop_cash
+fields:
+  - id: 1
+    name: workshop
+    label: Atelier
+    type: relationship
+    relatedTable: workshops
+    relationType: many-to-one
+    displayField: slug
+    required: true
+    unique: true
+    onDelete: restrict
+  - { id: 2, name: amount_on_site, label: Prix libre sur place, type: currency, currency: EUR, precision: 2, default: 0, min: 0 }
+  - { id: 3, name: note, label: Note, type: long-text }
+  - { id: 4, name: updated_by, label: Saisi par, type: updated-by }
+  - { id: 5, name: updated_at, label: Saisi le, type: updated-at }
+permissions:
+  read: [admin, member]
+  create: [admin, member]
+  update: [admin, member]
+  delete: [admin]

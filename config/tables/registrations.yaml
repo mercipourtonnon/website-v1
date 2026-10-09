@@ -1,0 +1,101 @@
+# One row per person expected at a workshop date: a HelloAsso registration
+# (written by sync-workshop-registrations), someone who turned up on the day
+# (added by a facilitator from /espace/suivi/:id) or a one-off import
+# (scripts/import-registrations-csv.mjs, for the legacy Billetterie Plus date).
+#
+# Personal data (names, email, phone): never public. Facilitators read every
+# row, point attendance and leave notes; everything else is written by the sync.
+# anonymise-registrations blanks the personal fields 12 months after the date.
+#
+# No lookup into `workshops` here: workshops counts and sums these rows, and two
+# tables cannot derive from each other. No button field either (0.33.0: a button
+# next to a lookup or rollup breaks inserts).
+id: 5
+name: registrations
+fields:
+  # HelloAsso item id ("import-…" for imported rows, empty for on-site rows).
+  - { id: 1, name: external_id, label: Identifiant HelloAsso, type: single-line-text, unique: true }
+  - { id: 2, name: order_id, label: Commande HelloAsso, type: single-line-text }
+  - id: 3
+    name: workshop
+    label: Atelier
+    type: relationship
+    relatedTable: workshops
+    relationType: many-to-one
+    displayField: slug
+    required: true
+    onDelete: restrict
+    indexed: true
+  - { id: 4, name: first_name, label: Prénom, type: single-line-text }
+  - { id: 5, name: last_name, label: Nom, type: single-line-text }
+  - id: 6
+    name: full_name
+    label: Nom complet
+    type: formula
+    formula: "TRIM(COALESCE(first_name, '') || ' ' || COALESCE(last_name, ''))"
+    resultType: string
+  # Not `email`: in 0.33.0 a field named `email` that a reader cannot read makes
+  # the sign-in block drop its email input.
+  - { id: 7, name: participant_email, label: Email, type: email }
+  - { id: 8, name: phone, label: Téléphone, type: phone-number }
+  # Ticket plus the order's donations (on the order's first ticket only).
+  - { id: 9, name: amount_paid, label: Prix libre payé, type: currency, currency: EUR, precision: 2, default: 0 }
+  - id: 10
+    name: status
+    label: Inscription
+    type: single-select
+    required: true
+    default: valid
+    options: [valid, cancelled, refunded]
+  - id: 11
+    name: source
+    label: Origine
+    type: single-select
+    required: true
+    default: on_site
+    options: [helloasso, on_site, import]
+  # Pointed on the day. The sync never writes it.
+  - id: 12
+    name: attendance
+    label: Présence
+    type: single-select
+    required: true
+    default: unknown
+    options: [unknown, present, absent]
+  # Stamped by stamp-check-in when attendance changes.
+  - { id: 13, name: checked_in_at, label: Pointé·e le, type: datetime }
+  - { id: 14, name: notes, label: Notes, type: long-text }
+  - { id: 15, name: synced_at, label: Synchronisé le, type: datetime }
+  - { id: 16, name: updated_by, label: Modifié par, type: updated-by }
+  # Answer to the HelloAsso question "J'autorise l'association à me photographier/
+  # filmer…" — shown on the check-in screen so nobody is photographed against
+  # their will.
+  - id: 17
+    name: photo_consent
+    label: Photos
+    type: single-select
+    required: true
+    default: unknown
+    options: [unknown, yes, no]
+permissions:
+  # Facilitators (member today; [admin, coordination, facilitateur] once the
+  # espace bénévole roles land). Never `all`.
+  read: [admin, member]
+  # On-site walk-ins (the form locks source, status and attendance).
+  create: [admin, member]
+  update: [admin, member]
+  delete: [admin]
+  fields:
+    - { field: external_id, write: [admin] }
+    - { field: order_id, write: [admin] }
+    - { field: amount_paid, write: [admin] }
+    - { field: status, write: [admin] }
+    - { field: checked_in_at, write: [admin] }
+    - { field: synced_at, write: [admin] }
+    - { field: photo_consent, write: [admin] }
+# Admins bypass these rules; record-event and scheduled automations write as the
+# system. A facilitator may create only an on-site row, and edit only rows of
+# that shape or the attendance / notes of the others (field rules above).
+rowLevelPermissions:
+  create:
+    when: { field: source, operator: eq, value: on_site }

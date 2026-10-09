@@ -67,6 +67,43 @@ fields:
     relationType: many-to-one
     onDelete: set-null
   - { id: 19, name: helloasso_form_slug, label: Slug HelloAsso, type: single-line-text }
+  # ── Suivi (dashboard /espace/suivi). Staff-only: see the field rules below;
+  # the table itself stays public for the site and the sitemap.
+  - { id: 20, name: registrations, label: Inscriptions, type: relationship, relatedTable: registrations, relationType: one-to-many, foreignKey: workshop }
+  - { id: 21, name: cash, label: Prix libre sur place (saisie), type: relationship, relatedTable: workshop_cash, relationType: one-to-many, foreignKey: workshop }
+  - { id: 22, name: registrations_count, label: Inscrit·es, type: count, relationshipField: registrations, filters: { field: status, operator: equals, value: valid } }
+  - id: 23
+    name: present_count
+    label: Présent·es
+    type: count
+    relationshipField: registrations
+    filters:
+      and:
+        - { field: status, operator: equals, value: valid }
+        - { field: attendance, operator: equals, value: present }
+  # Online prix libre. One flat condition only: in 0.33.0 a rollup whose filter
+  # is an and/or group crashes schema initialisation ("e.replace"). Cancelled and
+  # refunded rows already carry 0 (the sync zeroes them) and on-site rows carry
+  # none, so `valid` is enough. On-site money lives in workshop_cash.
+  - id: 24
+    name: revenue_online
+    label: Prix libre en ligne
+    type: rollup
+    relationshipField: registrations
+    relatedField: amount_paid
+    aggregation: SUM
+    format: currency
+    filters: { field: status, operator: equals, value: valid }
+  - { id: 25, name: revenue_on_site, label: Prix libre sur place, type: rollup, relationshipField: cash, relatedField: amount_on_site, aggregation: SUM, format: currency }
+  - id: 26
+    name: revenue_total
+    label: Prix libre total
+    type: formula
+    formula: 'COALESCE(revenue_online, 0) + COALESCE(revenue_on_site, 0)'
+    resultType: number
+    format: currency
+    currency: EUR
+  - { id: 27, name: last_synced_at, label: Dernière synchronisation, type: datetime }
 permissions:
   read: all
   create: [admin]
@@ -75,3 +112,11 @@ permissions:
   fields:
     - { field: proposal, read: [admin], write: [admin] }
     - { field: helloasso_form_slug, read: [admin], write: [admin] }
+    - { field: registrations, read: [admin, member], write: [admin] }
+    - { field: cash, read: [admin, member], write: [admin] }
+    - { field: registrations_count, read: [admin, member], write: [admin] }
+    - { field: present_count, read: [admin, member], write: [admin] }
+    - { field: revenue_online, read: [admin, member], write: [admin] }
+    - { field: revenue_on_site, read: [admin, member], write: [admin] }
+    - { field: revenue_total, read: [admin, member], write: [admin] }
+    - { field: last_synced_at, read: [admin, member], write: [admin] }

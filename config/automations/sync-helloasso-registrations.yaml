@@ -1,0 +1,39 @@
+# "Synchroniser maintenant" on /espace/suivi/:id — the facilitators' way to pull
+# the latest registrations the morning of a workshop, without waiting for the cron.
+# The page's `access` is the grant; requiredRole also opens the API road to members.
+name: sync-helloasso-registrations
+description: Synchronise tout de suite les inscriptions HelloAsso d'une date.
+trigger:
+  type: manual
+  label: Synchroniser les inscriptions
+  requiredRole: member
+  inputSchema: { recordId: { type: string } }
+timeout: 150000
+actions:
+  - name: sync
+    type: automation
+    operator: call
+    props:
+      name: sync-workshop-registrations
+      mode: sync
+      inputData:
+        workshopId: '{{trigger.data.recordId}}'
+
+  # In 0.33.0 a failed callee still lets this run complete, which would show the
+  # button's success toast. The callee returns `count` only when it got to the
+  # end, so a missing count fails this run too (and shows the error toast).
+  - name: check
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 2000
+      inputData:
+        count: '{{sync.result.count}}'
+      code: |
+        async function execute(context) {
+          const count = (context.inputData as Record<string, unknown>).count;
+          if (count === undefined || count === null || count === '') {
+            throw new Error("La synchronisation HelloAsso n'a pas abouti (voir l'historique des runs).");
+          }
+          return { count: Number(count) };
+        }

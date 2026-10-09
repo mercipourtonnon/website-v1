@@ -1,0 +1,28 @@
+# When a facilitator points someone (Présent·e / Absent·e), note when. Started by
+# a record event, so it writes as the system (facilitators cannot write
+# checked_in_at themselves). Loop check: it writes checked_in_at only, which is
+# not a watched field.
+name: stamp-check-in
+description: Horodate le pointage d'une personne inscrite.
+trigger:
+  type: record
+  table: registrations
+  events: [create, update]
+  watchFields: [attendance]
+  condition:
+    logic: and
+    conditions:
+      - { field: '{{trigger.data.record.attendance}}', operator: notEquals, value: unknown }
+      - { field: '{{trigger.data.record.attendance}}', operator: notEquals, value: '{{trigger.data.previousRecord.attendance}}' }
+timeout: 30000
+actions:
+  - name: stamp
+    type: record
+    operator: update
+    props:
+      table: registrations
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{trigger.data.record.id}}' }
+      data:
+        checked_in_at: '{{now}}'

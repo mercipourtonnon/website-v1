@@ -1,0 +1,153 @@
+# The one place that pulls a workshop date's registrations from HelloAsso into
+# `registrations`. Called (never triggered directly) by:
+#   - sync-helloasso-registrations       (button "Synchroniser maintenant")
+#   - sync-helloasso-registrations-cron  (every 15 min, upcoming dates)
+#   - helloasso-notification             (HelloAsso webhook, on Sovrium Cloud)
+#
+# Idempotent: rows are upserted by HelloAsso item id, so a second run updates
+# the same rows. It never writes attendance, checked_in_at or notes, so a sync in
+# the middle of a workshop cannot undo a check-in.
+#
+# Money: HelloAsso amounts are in cents. A participant's amount_paid is their
+# ticket plus, for the order's first live ticket only, the order's donations, so
+# summing amount_paid over a date never counts a donation twice.
+name: sync-workshop-registrations
+description: Récupère les inscriptions HelloAsso d'une date et les range dans `registrations`.
+trigger:
+  type: automation-call
+  inputSchema: { workshopId: { type: string } }
+timeout: 120000
+actions:
+  - name: workshop
+    type: record
+    operator: read
+    props:
+      table: workshops
+      id: '{{trigger.input.workshopId}}'
+
+  # Only HelloAsso v5 dates have orders to read (17 Oct is a one-off import).
+  - name: has_event
+    type: filter
+    operator: continue
+    props:
+      condition:
+        logic: and
+        conditions:
+          - { field: '{{workshop.record.booking_provider}}', operator: equals, value: helloasso }
+          - { field: '{{workshop.record.helloasso_form_slug}}', operator: isNotEmpty }
+
+  # A read: safe to retry. A failure fails the run (notify-helloasso-failure).
+  - name: orders
+    type: connection
+    operator: call
+    timeout: 90000
+    retry: { maxAttempts: 3, delayMs: 2000, strategy: exponential }
+    props:
+      connection: helloasso
+      operation: list-event-orders
+      params:
+        organizationSlug: $env.HELLOASSO_ORGANIZATION_SLUG
+        formType: Event
+        formSlug: '{{workshop.record.helloasso_form_slug}}'
+        withDetails: true
+        pageSize: 100
+      paginate: 20
+
+  - name: rows
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 10000
+      inputData:
+        workshopId: '{{workshop.record.id}}'
+        orders: '{{orders.data}}'
+      code: |
+        async function execute(context) {
+          type Item = Record<string, any>;
+          const input = context.inputData as Record<string, unknown>;
+          if (!Array.isArray(input.orders)) throw new Error('HelloAsso : réponse sans liste de commandes.');
+          const orders = input.orders as Item[];
+          const workshop = String(input.workshopId || '');
+          if (!workshop) throw new Error('Atelier introuvable.');
+
+          const euros = (cents: unknown) => Math.round(Number(cents || 0)) / 100;
+          const statusOf = (state: unknown) => {
+            const s = String(state || '');
+            if (s === 'Canceled') return 'cancelled';
+            if (s === 'Refunded' || s === 'Refunding') return 'refunded';
+            return 'valid';
+          };
+          const text = (v: unknown) => (v === null || v === undefined ? '' : String(v).trim());
+          // Registration questions are free-form: find the phone by its label.
+          const answer = (fields: unknown, pattern: RegExp) => {
+            const list = Array.isArray(fields) ? (fields as Item[]) : [];
+            const hit = list.find((f) => pattern.test(text(f.name)));
+            return hit ? text(hit.answer) : '';
+          };
+
+          const consentOf = (fields: unknown) => {
+            const a = answer(fields, /photographier|filmer/i).toLowerCase();
+            return a === 'oui' ? 'yes' : a === 'non' ? 'no' : 'unknown';
+          };
+
+          const syncedAt = new Date().toISOString();
+          const items: Item[] = [];
+          for (const order of orders) {
+            const lines = Array.isArray(order.items) ? (order.items as Item[]) : [];
+            const tickets = lines.filter((l) => l.type === 'Registration');
+            const donations = lines
+              .filter((l) => l.type === 'Donation' && statusOf(l.state) === 'valid')
+              .reduce((sum, l) => sum + euros(l.amount), 0);
+            const firstLive = tickets.findIndex((t) => statusOf(t.state) === 'valid');
+            const payer = (order.payer || {}) as Item;
+            tickets.forEach((ticket, index) => {
+              const user = (ticket.user || {}) as Item;
+              const status = statusOf(ticket.state);
+              const ticketAmount = status === 'valid' ? euros(ticket.amount) : 0;
+              items.push({
+                external_id: text(ticket.id),
+                order_id: text(order.id),
+                workshop,
+                first_name: text(user.firstName) || (index === 0 ? text(payer.firstName) : ''),
+                last_name: text(user.lastName) || (index === 0 ? text(payer.lastName) : ''),
+                participant_email:
+                  answer(ticket.customFields, /e-?mail|courriel/i) || (index === 0 ? text(payer.email) : ''),
+                phone: answer(ticket.customFields, /t[ée]l[ée]phone|portable|mobile|phone/i),
+                photo_consent: consentOf(ticket.customFields),
+                amount_paid: Math.round((ticketAmount + (index === firstLive ? donations : 0)) * 100) / 100,
+                status,
+                source: 'helloasso',
+                synced_at: syncedAt,
+              });
+            });
+          }
+          context.log.info(`${orders.length} commande(s), ${items.length} participant·e(s).`);
+          return { items, count: items.length };
+        }
+
+  - name: upsert
+    type: record
+    operator: batchUpsert
+    props:
+      table: registrations
+      items: '{{rows.items}}'
+      matchField: external_id
+      continueOnItemError: true
+
+  - name: stamp
+    type: record
+    operator: update
+    props:
+      table: workshops
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{workshop.record.id}}' }
+      data:
+        last_synced_at: '{{now}}'
+
+  - name: done
+    type: automation
+    operator: return
+    props:
+      data:
+        count: '{{rows.count}}'

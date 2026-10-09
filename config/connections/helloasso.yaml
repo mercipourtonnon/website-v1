@@ -1,18 +1,25 @@
 # HelloAsso API v5, machine-to-machine (OAuth2 client credentials).
 # The API client needs the FormAdministration privilege to quick-create events.
 # Development points at the sandbox (api.helloasso-sandbox.com) with its own client.
+#
+# Declared as `tokenExchange`, not `oauth2` + clientCredentials: in Sovrium 0.33.0
+# the oauth2 client-credentials request sends `$env.HELLOASSO_CLIENT_ID` and
+# `$env.HELLOASSO_CLIENT_SECRET` literally (and its tokenUrl does not take
+# $env either), so HelloAsso answered 401. tokenExchange resolves $env in both
+# the body and the tokenUrl, and HelloAsso's token endpoint is exactly this:
+# a form POST answered with { access_token, expires_in }.
 name: helloasso
 label: HelloAsso
 description: Création et lecture des événements (billetterie) de l'association.
-type: oauth2
+type: tokenExchange
 baseUrl: $env.HELLOASSO_API_BASE_URL
 props:
-  grantType: clientCredentials
-  # HelloAsso expects client_id / client_secret as form fields, not HTTP Basic.
-  authenticationMethod: body
-  clientId: $env.HELLOASSO_CLIENT_ID
-  clientSecret: $env.HELLOASSO_CLIENT_SECRET
   tokenUrl: $env.HELLOASSO_TOKEN_URL
+  bodyType: form
+  body:
+    grant_type: client_credentials
+    client_id: $env.HELLOASSO_CLIENT_ID
+    client_secret: $env.HELLOASSO_CLIENT_SECRET
 operations:
   # POST /organizations/{slug}/forms/Event/action/quick-create → { formSlug, publicUrl, ... }
   # The request schema is additionalProperties:false, so the body is written out
@@ -82,3 +89,25 @@ operations:
       organizationSlug: { in: path, type: string, required: true }
       formType: { in: path, type: string, required: true, enum: [Event] }
       formSlug: { in: path, type: string, required: true }
+  # GET /organizations/{slug}/forms/{formType}/{formSlug}/orders → { data: [order], pagination }
+  # Each order carries its payer, its items (type Registration = one participant,
+  # Donation = the open donation; amounts in CENTS, each with a state) and its
+  # payments. Read by sync-workshop-registrations. Paged by pageIndex rather than
+  # continuationToken: HelloAsso keeps returning a token on the last page, while
+  # page paging stops on the first empty page.
+  - name: list-event-orders
+    method: GET
+    path: /organizations/{organizationSlug}/forms/{formType}/{formSlug}/orders
+    summary: Liste les commandes d'un événement (participant·es, dons, paiements).
+    params:
+      organizationSlug: { in: path, type: string, required: true }
+      formType: { in: path, type: string, required: true, enum: [Event] }
+      formSlug: { in: path, type: string, required: true }
+      withDetails: { in: query, type: boolean }
+      pageSize: { in: query, type: integer }
+      pageIndex: { in: query, type: integer }
+    pagination:
+      style: page
+      pageParam: pageIndex
+      startPage: 1
+      itemsPath: data

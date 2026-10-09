@@ -1,0 +1,59 @@
+# Retention promised in the mentions légales: 12 months after a workshop, the
+# participants' name, email, phone and notes are blanked. Counts, amounts and
+# attendance stay, anonymous, for the association's statistics.
+name: anonymise-registrations
+description: Anonymise les inscriptions des ateliers passés depuis plus de 12 mois.
+trigger:
+  type: cron
+  expression: '0 4 1 * *'
+  timezone: Europe/Paris
+timeout: 600000
+actions:
+  - name: cutoff
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 5000
+      code: |
+        async function execute(context) {
+          const now = new Date();
+          const cutoff = new Date(Date.UTC(now.getUTCFullYear() - 1, now.getUTCMonth(), now.getUTCDate()));
+          return { date: cutoff.toISOString().slice(0, 10) };
+        }
+
+  - name: old_dates
+    type: record
+    operator: list
+    props:
+      table: workshops
+      fields: [id]
+      limit: 1000
+      filter:
+        conditions:
+          - { field: session_date, operator: lessThan, value: '{{cutoff.date}}' }
+
+  - name: each_date
+    type: loop
+    operator: each
+    props:
+      items: '{{old_dates.records}}'
+      maxIterations: 1000
+      continueOnItemError: true
+      actions:
+        - name: blank
+          type: record
+          operator: update
+          props:
+            table: registrations
+            filter:
+              logic: and
+              conditions:
+                - { field: workshop, operator: equals, value: '{{loop.item.id}}' }
+                - { field: last_name, operator: isNotEmpty }
+            data:
+              first_name: ''
+              last_name: ''
+              participant_email: ''
+              phone: ''
+              notes: ''
+              photo_consent: unknown
