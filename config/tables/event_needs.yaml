@@ -1,0 +1,43 @@
+# What an event needs from the bénévoles — « Tenir le stand 14h–16h », « Apporter
+# à manger » — with how many people, and how many have signed up already.
+# Read with its event (published events only, drafts for the coordination).
+id: 7
+name: event_needs
+fields:
+  - id: 1
+    name: event
+    label: Événement
+    type: relationship
+    relatedTable: events
+    relationType: many-to-one
+    displayField: title
+    required: true
+    onDelete: cascade
+  - { id: 2, name: label, label: Besoin, type: single-line-text, required: true }
+  - { id: 3, name: description, label: Description, type: long-text }
+  - { id: 4, name: slots, label: Places, type: integer, required: true, default: 1, min: 1, max: 500 }
+  # The sign-ups for this need (event_participations.need), read from here.
+  - id: 5
+    name: participations
+    label: Inscriptions
+    type: relationship
+    relatedTable: event_participations
+    relationType: one-to-many
+    foreignKey: need
+  - { id: 6, name: signed_up, label: Inscrit·es, type: count, relationshipField: participations }
+  - { id: 7, name: remaining, label: Places restantes, type: formula, formula: 'slots - signed_up', resultType: number }
+  - { id: 8, name: position, label: Ordre, type: integer, default: 0 }
+permissions:
+  read: [member, facilitateur, coordination, admin]
+  create: [coordination, admin]
+  update: [coordination, admin]
+  delete: [coordination, admin]
+rowLevelPermissions:
+  read:
+    when:
+      logic: or
+      conditions:
+        - { field: event.status, operator: in, value: [published, cancelled] }
+        - field: event.editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }

@@ -1,0 +1,71 @@
+# member-profile form → the submitter's own `members` row. Upserts on
+# account = submitter, so it works whether on-sign-up already created the row
+# (the usual case) or not. Never touches status, validation or Brevo fields:
+# a new row starts `pending` (the table default).
+#
+# An answer left empty keeps the value already saved (the form is also used to
+# edit a profile, and an unchanged photo picker sends nothing).
+name: save-member-profile
+description: Enregistre la fiche bénévole envoyée par la personne connectée.
+trigger:
+  type: form
+  form: member-profile
+timeout: 30000
+actions:
+  - name: save
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 15000
+      inputData:
+        account: '{{trigger.data.meta.submitterUserId}}'
+        display_name: '{{trigger.data.display_name}}'
+        pronoun: '{{trigger.data.pronoun}}'
+        phone: '{{trigger.data.phone}}'
+        photo: '{{trigger.data.photo}}'
+        image_rights: '{{trigger.data.image_rights}}'
+        why: '{{trigger.data.why}}'
+        intentions: '{{trigger.data.intentions}}'
+        wishes: '{{trigger.data.wishes}}'
+        fears: '{{trigger.data.fears}}'
+        resources: '{{trigger.data.resources}}'
+        skills: '{{trigger.data.skills}}'
+        dislikes: '{{trigger.data.dislikes}}'
+        work_style: '{{trigger.data.work_style}}'
+        preferred_slots: '{{trigger.data.preferred_slots}}'
+      code: |
+        async function execute(context) {
+          const input = context.inputData as Record<string, unknown>;
+          const account = String(input.account || '').trim();
+          if (!account) throw new Error('Fiche envoyée sans compte connecté.');
+
+          const TEXT = [
+            'display_name', 'pronoun', 'phone', 'why', 'intentions', 'wishes', 'fears',
+            'resources', 'skills', 'dislikes', 'work_style', 'preferred_slots',
+          ];
+          const data: Record<string, unknown> = { account };
+          for (const key of TEXT) {
+            const value = input[key];
+            if (typeof value !== 'string') continue;
+            const text = value.trim();
+            if (text === '') continue;
+            if (text.length > 10000) throw new Error(`Réponse trop longue : ${key}`);
+            data[key] = text;
+          }
+          // A checkbox always answers: true / false (or "on" / "").
+          const rights = input.image_rights;
+          data.image_rights = rights === true || rights === 'true' || rights === 'on';
+          // A new photo arrives as { url, name, size, mimeType }; nothing otherwise.
+          const photo = input.photo;
+          if (photo && typeof photo === 'object' && (photo as Record<string, unknown>).url) {
+            data.photo = photo;
+          }
+
+          const res = (await context.actions.record.upsert({
+            table: 'members',
+            filter: { conditions: [{ field: 'account', operator: 'equals', value: account }] },
+            data,
+          })) as unknown as { operation?: string; id?: string };
+          context.log.info(`fiche ${res && res.operation} (${res && res.id})`);
+          return { operation: String(res && res.operation), id: String(res && res.id) };
+        }

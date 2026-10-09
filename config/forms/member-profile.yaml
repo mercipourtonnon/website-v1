@@ -1,0 +1,54 @@
+# The bénévole profile (« Création de ma fiche membre » in Notion), for the
+# signed-in person only. A top-level form can only create rows, so it writes
+# no table itself: save-member-profile upserts the submitter's own `members`
+# row (matched on account = submitter), keeping its status.
+#
+# Shown on /espace/en-attente (candidat) and /espace/profil (member+). Every
+# answer is optional except the name; on /espace/profil the page may prefill
+# the current values with inlinePrefill ($record.<field>) from the person's
+# members row.
+id: 1
+name: member-profile
+title: Ma fiche bénévole
+description: >-
+  Cette fiche nous aide à faire connaissance et à construire ensemble une équipe
+  où chacun·e trouve sa place. Prends le temps qu'il te faut : tu pourras la
+  modifier ensuite depuis ton profil.
+access:
+  require: [candidat, member, facilitateur, coordination, admin]
+  redirectTo: /connexion
+submitTo:
+  automation: save-member-profile
+  storeSubmission: false
+prefill:
+  display_name: $user.name
+onSuccess:
+  type: successPage
+  title: Merci, ta fiche est enregistrée
+  message: Tu peux la retrouver et la modifier à tout moment depuis ton profil.
+fields:
+  - { kind: section, heading: Qui es-tu ? }
+  - { kind: standalone, name: display_name, inputType: short-text, label: Prénom & Nom, required: true }
+  - { kind: standalone, name: pronoun, inputType: short-text, label: Pronom, placeholder: 'elle, il, iel…' }
+  - { kind: standalone, name: phone, inputType: phone, label: Téléphone, helpText: Visible uniquement par la coordination. }
+  - kind: standalone
+    name: photo
+    inputType: attachment
+    label: Photo de profil
+    accept: image/jpeg,image/png,image/webp
+    maxFileSize: 5242880
+  - kind: standalone
+    name: image_rights
+    inputType: checkbox
+    label: J'accepte que des photos de moi prises lors des événements de l'asso soient utilisées pour la communication de Merci pour ton non.
+  - { kind: section, heading: Ton envie de contribuer }
+  - { kind: standalone, name: why, inputType: long-text, label: Pourquoi je souhaite contribuer à Merci pour ton non }
+  - { kind: standalone, name: intentions, inputType: long-text, label: Mes intentions }
+  - { kind: standalone, name: wishes, inputType: long-text, label: Mes envies }
+  - { kind: standalone, name: fears, inputType: long-text, label: Mes peurs }
+  - { kind: standalone, name: resources, inputType: long-text, label: Mes ressources }
+  - { kind: standalone, name: skills, inputType: long-text, label: Mes compétences }
+  - { kind: section, heading: Travailler ensemble }
+  - { kind: standalone, name: dislikes, inputType: long-text, label: Ce que je n'aime pas }
+  - { kind: standalone, name: work_style, inputType: long-text, label: Comment j'aime travailler }
+  - { kind: standalone, name: preferred_slots, inputType: long-text, label: Mes créneaux favoris dans la semaine pour des réunions }

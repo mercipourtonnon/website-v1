@@ -12,12 +12,18 @@ analytics:
 design:
   $ref: ./config/design.yaml
 
-# Data model — workshop catalogue and the facilitators' proposal workflow.
+# Data model — workshop catalogue and the facilitators' proposal workflow,
+# then the espace bénévole (members, agenda, needs, sign-ups, news).
 tables:
   - $ref: ./config/tables/facilitators.yaml
   - $ref: ./config/tables/venues.yaml
   - $ref: ./config/tables/workshop_proposals.yaml
   - $ref: ./config/tables/workshops.yaml
+  - $ref: ./config/tables/members.yaml
+  - $ref: ./config/tables/events.yaml
+  - $ref: ./config/tables/event_needs.yaml
+  - $ref: ./config/tables/event_participations.yaml
+  - $ref: ./config/tables/news.yaml
 
 # Authentication and roles (candidat → member / facilitateur → coordination → admin).
 auth:
@@ -53,6 +59,13 @@ automations:
   - $ref: ./config/automations/retry-helloasso.yaml
   - $ref: ./config/automations/publish-workshop-on-site.yaml
   - $ref: ./config/automations/notify-helloasso-failure.yaml
+  # Espace bénévole.
+  - $ref: ./config/automations/save-member-profile.yaml
+
+# Standalone forms of the espace bénévole (embedded in pages with formRef).
+forms:
+  - $ref: ./config/forms/member-profile.yaml
+  - $ref: ./config/forms/event-participation.yaml
 
 components:
   - $ref: ./config/components/site-footer.yaml

@@ -1,0 +1,29 @@
+# « Je participe » on an event page (/espace/agenda/:id). Creates one
+# event_participations row for the signed-in bénévole.
+#
+# The page embeds it with formRef and locks the event:
+#   - type: form
+#     formRef: event-participation
+#     inlinePrefill: { prefill: { event: $parent.id }, lockPrefill: true }
+# `event` is hidden here, so the server only accepts an event that page shows
+# its submitter. `member` is not a form field: the column's default
+# ($currentUser) fills it with the submitter.
+id: 2
+name: event-participation
+title: Je participe
+access:
+  require: [member, facilitateur, coordination, admin]
+  redirectTo: /connexion
+submitTo:
+  table: event_participations
+onSuccess:
+  type: successPage
+  title: C'est noté, merci !
+  message: Tu vas recevoir un email de confirmation avec les infos pratiques.
+fields:
+  - { kind: table-field, column: event, hidden: true, required: true }
+  - kind: table-field
+    column: need
+    label: Sur quel besoin ? (facultatif)
+    helpText: Laisse vide si tu viens simplement participer.
+  - { kind: table-field, column: comment, label: Un mot pour l'équipe ? (facultatif) }

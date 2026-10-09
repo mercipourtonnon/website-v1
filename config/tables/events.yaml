@@ -1,0 +1,67 @@
+# One row per team meeting or public event of the bénévoles (based on the
+# Notion « Évènements » database). « Atelier Niveau 1 » sessions are NOT here:
+# they live in `workshops`, and the agenda reads both.
+#
+# member+ read published (and cancelled) events; drafts are seen by the
+# coordination only. The coordination creates, edits and publishes.
+id: 6
+name: events
+fields:
+  - { id: 1, name: title, label: Titre, type: single-line-text, required: true }
+  - id: 2
+    name: type
+    label: Type
+    type: single-select
+    required: true
+    options:
+      - Séance de réflexion
+      - Réunion mensuelle de l'équipe
+      - Formation
+      - Réunion écosystème
+      - Réunion de travail
+      - Stand
+  # UTC instants.
+  - { id: 3, name: starts_at, label: Début, type: datetime, required: true, indexed: true }
+  - { id: 4, name: ends_at, label: Fin, type: datetime }
+  - { id: 5, name: location, label: Lieu, type: single-line-text }
+  - { id: 6, name: video_url, label: Lien visio, type: url }
+  - { id: 7, name: purpose, label: Intention, type: rich-text }
+  - { id: 8, name: programme, label: Programme, type: rich-text }
+  - { id: 9, name: practical_info, label: Infos pratiques, type: rich-text }
+  - id: 10
+    name: image
+    label: Image
+    type: single-attachment
+    allowedFileTypes: [image/jpeg, image/png, image/webp]
+    maxFileSize: 5242880
+  - id: 11
+    name: status
+    label: Statut
+    type: status
+    required: true
+    default: draft
+    options:
+      - { value: draft, label: Brouillon }
+      - { value: published, label: Publié }
+      - { value: cancelled, label: Annulé }
+  - { id: 12, name: created_by, label: Créé par, type: created-by }
+  - { id: 13, name: created_at, label: Créé le, type: created-at }
+  # Technical, same role as members.editor_role: lets the coordination through
+  # the read rule on drafts.
+  - { id: 14, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+permissions:
+  read: [member, facilitateur, coordination, admin]
+  create: [coordination, admin]
+  update: [coordination, admin]
+  delete: [coordination, admin]
+  fields:
+    - { field: editor_role, read: [coordination, admin], write: [admin] }
+rowLevelPermissions:
+  read:
+    when:
+      logic: or
+      conditions:
+        - { field: status, operator: in, value: [published, cancelled] }
+        - field: editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }

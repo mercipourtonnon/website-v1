@@ -1,0 +1,127 @@
+# One row per bénévole (replaces the Notion « 👯 Membres » database). Created
+# as `pending` by on-sign-up when someone opens an account, filled in through
+# the member-profile form, then validated or refused by the coordination
+# (validate-member / refuse-member / archive-member buttons).
+#
+# Who sees what:
+#   - member+ read the validated profiles (the directory) and their own row;
+#     the coordination also reads pending, refused and archived rows.
+#   - email, phone and the Brevo id are read by the coordination and admins only.
+#   - each person edits only their own row; status, validation date and the
+#     facilitator link are written by the coordination (or the automations).
+#   - a candidat has no table access at all: her profile goes through the
+#     member-profile form (→ save-member-profile).
+id: 5
+name: members
+fields:
+  # The sign-in account. Unique: one profile per account.
+  - { id: 1, name: account, label: Compte, type: user, unique: true, indexed: true }
+  - { id: 2, name: display_name, label: Prénom & Nom, type: single-line-text, required: true }
+  - { id: 3, name: pronoun, label: Pronom, type: single-line-text }
+  - { id: 4, name: contact_email, label: Email, type: email, indexed: true }
+  - { id: 5, name: phone, label: Téléphone, type: phone-number }
+  - id: 6
+    name: photo
+    label: Photo de profil
+    type: single-attachment
+    allowedFileTypes: [image/jpeg, image/png, image/webp]
+    maxFileSize: 5242880
+  - { id: 7, name: image_rights, label: Droit à l'image, type: checkbox, default: false }
+  - { id: 8, name: why, label: Pourquoi je souhaite contribuer à Merci pour ton non, type: long-text }
+  - { id: 9, name: intentions, label: Mes intentions, type: long-text }
+  - { id: 10, name: wishes, label: Mes envies, type: long-text }
+  - { id: 11, name: fears, label: Mes peurs, type: long-text }
+  - { id: 12, name: resources, label: Mes ressources, type: long-text }
+  - { id: 13, name: skills, label: Mes compétences, type: long-text }
+  - { id: 14, name: dislikes, label: Ce que je n'aime pas, type: long-text }
+  - { id: 15, name: work_style, label: Comment j'aime travailler, type: long-text }
+  - { id: 16, name: preferred_slots, label: Mes créneaux favoris dans la semaine pour des réunions, type: long-text }
+  - id: 17
+    name: status
+    label: Statut
+    type: status
+    required: true
+    default: pending
+    options:
+      - { value: pending, label: En attente }
+      - { value: validated, label: Validé·e }
+      - { value: refused, label: Refusé·e }
+      - { value: archived, label: Archivé·e }
+  - { id: 18, name: validated_at, label: Validé·e le, type: datetime }
+  - id: 19
+    name: facilitator
+    label: Fiche facilitateur·ice
+    type: relationship
+    relatedTable: facilitators
+    relationType: many-to-one
+    displayField: display_name
+    onDelete: set-null
+  # Written by on-member-validated (Brevo contact id, as text).
+  - { id: 20, name: brevo_contact_id, label: Contact Brevo, type: single-line-text }
+  - { id: 21, name: joined_at, label: Inscrit·e le, type: created-at }
+  # Technical: holds `coordination` on every row so the row rules below can
+  # let that role through (a row rule only compares a field with the caller;
+  # it cannot name a role on its own). Never shown, written by admins only.
+  - { id: 22, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: coordination }
+  # Row actions. Visibility only; each automation gates who may run it
+  # (requiredRole coordination), and pressing one needs write access to the row.
+  - id: 23
+    name: validate
+    type: button
+    label: Valider
+    action: automation
+    automation: validate-member
+    visibleWhen: { field: status, in: [pending, refused] }
+  - id: 24
+    name: refuse
+    type: button
+    label: Refuser
+    action: automation
+    automation: refuse-member
+    visibleWhen: { field: status, eq: pending }
+  - id: 25
+    name: archive
+    type: button
+    label: Archiver
+    action: automation
+    automation: archive-member
+    visibleWhen: { field: status, eq: validated }
+permissions:
+  read: [member, facilitateur, coordination, admin]
+  create: [admin]
+  update: [member, facilitateur, coordination, admin]
+  delete: [admin]
+  fields:
+    - { field: account, write: [admin] }
+    - { field: contact_email, read: [coordination, admin], write: [coordination, admin] }
+    # Suggestion-box shape: a bénévole may set her own phone without reading
+    # anyone else's.
+    - { field: phone, read: [coordination, admin], write: [member, facilitateur, coordination, admin] }
+    - { field: status, write: [coordination, admin] }
+    - { field: validated_at, write: [admin] }
+    - { field: facilitator, write: [coordination, admin] }
+    - { field: brevo_contact_id, read: [coordination, admin], write: [admin] }
+    - { field: editor_role, read: [coordination, admin], write: [admin] }
+# Admins bypass these rules; automations write as the system.
+rowLevelPermissions:
+  read:
+    when:
+      logic: or
+      conditions:
+        - { field: status, operator: eq, value: validated }
+        - field: account
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: id } }
+        - field: editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }
+  write:
+    when:
+      logic: or
+      conditions:
+        - field: account
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: id } }
+        - field: editor_role
+          operator: eq
+          value: { kind: currentUser, path: { kind: scalar, name: role } }
