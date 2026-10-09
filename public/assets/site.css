@@ -149,6 +149,21 @@ p {
   transform: rotateY(180deg);
 }
 
+/* Team grid — flex-wrap so an incomplete last row stays centred */
+.team-grid > * {
+  flex: 0 1 100%;
+}
+@media (min-width: 768px) {
+  .team-grid > * {
+    flex-basis: calc(50% - 0.75rem);
+  }
+}
+@media (min-width: 1024px) {
+  .team-grid > * {
+    flex-basis: calc(33.333% - 1rem);
+  }
+}
+
 /* Wall of Love - Masonry Layout */
 .wall-of-love {
   columns: 1;

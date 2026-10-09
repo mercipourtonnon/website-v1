@@ -1882,9 +1882,10 @@ components:
                 props:
                   className: max-w-6xl mx-auto
                 children:
+                  # 5 members: 3 + 2 centred (widths in site.css .team-grid)
                   - type: container
                     props:
-                      className: grid md:grid-cols-2 lg:grid-cols-3 gap-6
+                      className: team-grid flex flex-wrap justify-center gap-6
                     children:
                       - component: team-card
                         vars:
@@ -1928,16 +1929,6 @@ components:
                           bio: En tant que personne ayant un vécu d'homme cisgenre hétéro dans une société patriarcale, j'ai été confronté à mon manque d'éducation au consentement dans mes relations. Coprésident de l'association, formé à la facilitation et au consentement par Zohra de Love Experience, je souhaite contribuer à une éducation populaire pour construire des relations plus apaisées dans notre société. Je met mon expérience en entrepreneuriat et en informatique au service des actions de Merci pour ton non.
                       - component: team-card
                         vars:
-                          photo: /pictures/isabelle.jpg
-                          alt: Isabelle Filin
-                          name: isabelle filin
-                          role: Pédagogie
-                          photoBg: bg-orange-light
-                          backBg: bg-cyan
-                          roleAccent: text-cyan
-                          bio: Travailleuse sociale spécialisée enfance et familles, je suis entrée dans l'association par la porte de la lutte contre les violences sexuelles et sexistes. Comprendre ses besoins, ses limites, et mieux les communiquer sont pour moi des compétences utiles à acquérir dès le plus jeune âge, et tout au long de la vie.
-                      - component: team-card
-                        vars:
                           photo: /pictures/elisa.jpg
                           alt: Elisa Garcia
                           name: elisa garcia
@@ -1946,17 +1937,6 @@ components:
                           backBg: bg-orange
                           roleAccent: text-orange
                           bio: Professionnelle de la communication depuis 8 ans, mes valeurs personnelles colorent mes créations et guident mes missions. Féministe et queer, je suis aussi engagée au sein du groupe Bipan Strasbourg. J'ai rejoint Merci pour ton non après avoir moi-même participé à un atelier de consentement. Aujourd'hui, je mets mes compétences au service de l'association pour faire rayonner ces valeurs de respect, d'écoute et d'émancipation auxquelles je crois profondément.
-                      - component: team-card
-                        vars:
-                          photo: /pictures/maxime.jpg
-                          alt: Maxime Chaboche
-                          name: maxime chaboche
-                          role: Support, administratif
-                          photoBg: bg-pourpre-light
-                          backBg: bg-pourpre
-                          roleAccent: text-pourpre
-                          bio: Issu·e d'une formation en ingénierie informatique et gestion de projets, j'ai depuis plusieurs années développé un attrait bien plus important pour les humain·es que les machines. Soucieux de comprendre nos relations à nous-même et aux autres, je m'intéresse, me forme et met en application ces sujets dans ma vie et mon entourage, dans l'espoir de rendre nos liens plus doux, authentiques et respectueux. Avec Merci pour ton non, j'espère pouvoir apporter ces valeurs au plus grand nombre.
-
       # Section: FAQ (#faq) — toggle pattern replaces <details>/<summary>
       - type: container
         element: section
