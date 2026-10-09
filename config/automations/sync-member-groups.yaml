@@ -14,6 +14,9 @@
 # Skipped (with a warning) while SOVRIUM_ADMIN_API_KEY is unset, and it cannot
 # run on localhost: see config/connections/sovrium-admin.yaml.
 #
+# Workaround for sovrium/sovrium#134 (0.34.1): replace with an auth action once
+# one adds group members.
+#
 # Loop check: watches volunteer_roles and status; writes nothing to members.
 name: sync-member-groups
 description: Applique les rôles bénévoles cochés sur une fiche aux groupes du compte.

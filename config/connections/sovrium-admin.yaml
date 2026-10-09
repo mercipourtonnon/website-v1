@@ -3,7 +3,7 @@
 #
 # Workaround (Sovrium 0.34.1): no automation action and no console screen add a
 # person to a group; only POST /api/auth/organization/add-team-member does, for
-# an admin. The key is an admin's self-service API key (auth.apiKeys), minted
+# an admin (sovrium/sovrium#134). The key is an admin's self-service API key (auth.apiKeys), minted
 # once with POST /api/auth/api-key/create while signed in as an admin.
 # `organizationId` must be sent: an API-key caller has no active organization.
 #
