@@ -47,3 +47,12 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 /Liste des participants*.csv
 /export-atelier-*.csv
 /export-atelier-*.xlsx
+
+# Raw photo shoots and print masters — kept locally, never committed.
+# Web exports live in public/pictures/{stand,atelier}/. The shoot folders also
+# hold an image-release form with participants' personal data.
+/Stand Bifurquer/
+/Atelier niveau 1*/
+/Affiche A3.pdf
+*.csv
+*.xlsx

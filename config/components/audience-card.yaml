@@ -1,25 +1,27 @@
-# "Pour qui" card — vars: $bg (bg-pourpre-light), $icon (lucide name),
-# $accent (text-pourpre), $title, $text. Full class tokens only.
+# "Pour qui" card — vars: $icon (lucide name), $iconBg (bg-pourpre-light),
+# $accent (text-pourpre — icon colour only), $title, $text. Full class tokens.
 name: audience-card
 type: container
 props:
-  className: $bg rounded-lg p-6
+  className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3 h-full
 children:
   - type: container
     props:
-      className: mb-4
+      className: w-12 h-12 rounded-pill flex items-center justify-center $iconBg
     children:
       - type: icon
         props:
           name: $icon
-          className: w-10 h-10 $accent
+          size: 24
+          strokeWidth: 2
+          className: $accent
   - type: text
     element: h3
     props:
-      className: text-xl title-font $accent mb-3
+      className: type-h4 text-bleu-fonce
     content: $title
   - type: text
     element: p
     props:
-      className: text-gray-700
+      className: type-small text-bleu-fonce-70
     content: $text

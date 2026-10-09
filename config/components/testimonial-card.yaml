@@ -1,30 +1,23 @@
-# Testimonial card — vars carry FULL class tokens (the Tailwind scanner can't
-# see classes assembled from fragments): $bg (bg-pourpre-light), $border
-# (border-l-pourpre), $accent (text-pourpre), $quote, $author.
-# NOTE: interactions on a template ROOT are dropped by component resolution,
-# so the scroll-reveal lives on the inner card; the outer div only carries
-# the masonry CSS hooks (.testimonial-card: break-inside + margin).
+# Testimonial card — one instance per testimonial, laid out in CSS columns
+# (.testimonial-card: break-inside avoid). Vars: $quote (verbatim, without
+# surrounding quote marks — the pourpre quote glyph carries them), $author
+# ("Leyla" or "Anonyme"), $size (full class token: type-body, or type-lead for
+# the featured quotes).
 name: testimonial-card
 type: container
+element: div
 props:
-  className: testimonial-card
+  className: testimonial-card bg-white rounded-card shadow-card border border-pourpre-lighter p-6 sm:p-8 flex flex-col gap-4
 children:
-  - type: container
+  - type: icon
+    props: { name: quote, size: 32, strokeWidth: 2, className: text-pourpre }
+  - type: text
+    element: blockquote
     props:
-      className: $bg rounded-2xl p-6 border-l-4 $border
-    interactions:
-      scroll:
-        animation: fadeInUp
-        threshold: 0.1
-        once: true
-    children:
-      - type: text
-        element: p
-        props:
-          className: text-gray-700 leading-relaxed italic mb-4
-        content: $quote
-      - type: text
-        element: p
-        props:
-          className: font-bold $accent text-sm
-        content: $author
+      className: $size text-bleu-fonce
+    content: $quote
+  - type: text
+    element: p
+    props:
+      className: type-caption font-bold text-pourpre-hover
+    content: — $author

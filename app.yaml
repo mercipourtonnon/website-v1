@@ -90,6 +90,11 @@ components:
   - $ref: ./config/components/audience-card.yaml
   - $ref: ./config/components/value-card.yaml
   - $ref: ./config/components/team-card.yaml
+  - $ref: ./config/components/site-header.yaml
+  - $ref: ./config/components/partner-card.yaml
+  - $ref: ./config/components/resource-card.yaml
+  - $ref: ./config/components/knowledge-card.yaml
+  - $ref: ./config/components/term-card.yaml
   - $ref: ./config/components/espace-shell.yaml
   # Espace bénévole cards (row templates over events, news and members).
   - $ref: ./config/components/event-card.yaml
@@ -101,6 +106,8 @@ pages:
   - $ref: ./config/pages/home.yaml
   - $ref: ./config/pages/mentions-legales.yaml
   - $ref: ./config/pages/newsletter.yaml
+  - $ref: ./config/pages/le-consentement.yaml
+  - $ref: ./config/pages/ressources.yaml
   # One page per published workshop date (/ateliers/:slug).
   - $ref: ./config/pages/atelier.yaml
   # Espace facilitateur·ices and coordination (private, noindex, out of the sitemap).
