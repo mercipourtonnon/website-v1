@@ -15,6 +15,8 @@ colors:
   orange-hover: '#E69E00'
   orange-light: '#FFF8E6'
   orange-lighter: '#FFF0D1'
+  # Encre orange — the only orange that reads as small text on white (6.2:1).
+  orange-ink: '#8F5200'
   orange-vif: '#FF7000'
   orange-vif-light: '#FFF4E6'
 
@@ -27,6 +29,8 @@ colors:
   cyan-hover: '#0F8A87'
   cyan-light: '#E6F9F8'
   cyan-lighter: '#D1F2F0'
+  # Encre cyan — cyan itself is 3.2:1 on white; this reads at 6.1:1.
+  cyan-ink: '#0B6E6B'
 
   # Bleu foncé — remplace le noir pour plus de cohérence avec la palette
   bleu-fonce: '#130077'
@@ -50,14 +54,39 @@ typeScale:
       family: Neue Machina
       fallback: Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif
       # The three @font-face weights (300 / 400 / 800) are declared in site.css.
-  # Hiérarchie des titres / corps de texte
+  # Hiérarchie des titres / corps de texte.
+  # Steps are fixed sizes (px/rem only); responsive headings pair two steps,
+  # e.g. `text-h2 md:text-h1` — mobile never gets the 4.5rem display size.
   steps:
-    h1: { size: '4.5rem', lineHeight: 1.1, font: title } # 72px
-    h2: { size: '3rem', lineHeight: 1.15, font: title } # 48px
-    h3: { size: '2.25rem', lineHeight: 1.2, font: title } # 36px
-    body: { size: '1.125rem', lineHeight: 1.7, weight: 400, font: body } # 16–18px, interlignage 1.6–1.8
-    bodySmall: { size: '0.9375rem', lineHeight: 1.6, weight: 300, font: body } # "texte léger" 14–16px
-    caption: { size: '0.875rem', lineHeight: 1.5, weight: 300, font: body } # légendes, métadonnées
+    display: { size: '4.5rem', lineHeight: 0.95, font: title } # 72px — hero only, ≥ lg
+    h1: { size: '3.25rem', lineHeight: 1, font: title } # 52px — page title (desktop)
+    h2: { size: '2.375rem', lineHeight: 1.1, font: title } # 38px — section title (desktop) / page title (mobile)
+    h3: { size: '1.75rem', lineHeight: 1.15, font: title } # 28px — section title (mobile)
+    h4: { size: '1.375rem', lineHeight: 1.25, font: title } # 22px — card titles
+    lead: { size: '1.25rem', lineHeight: 1.6, weight: 400, font: body } # standfirst under a title
+    body: { size: '1.0625rem', lineHeight: 1.7, weight: 400, font: body } # 17px, interlignage 1.6–1.8
+    bodySmall: { size: '0.9375rem', lineHeight: 1.6, weight: 400, font: body } # "texte léger" 14–16px
+    caption: { size: '0.875rem', lineHeight: 1.5, weight: 400, font: body } # légendes, métadonnées
+    overline: { size: '0.8125rem', lineHeight: 1.4, weight: 800, letterSpacing: '0.06em', font: body } # sur-titre de section
+
+# Rythme vertical — one section step, one block step; Tailwind's numeric
+# ladder (4px base) stays available for spacing inside components.
+spacing:
+  section: '6rem' # between sections, desktop
+  section-sm: '4rem' # between sections, mobile
+  block: '3rem' # between a section's heading and its content
+
+# Coins — small on controls, larger on surfaces, largest on photos.
+radius:
+  control: '0.75rem'
+  card: '1.5rem'
+  media: '2rem'
+  pill: '9999px'
+
+# Une seule ombre douce, teintée bleu foncé (jamais noire, jamais colorée vive).
+elevation:
+  card: '0 1px 2px rgb(19 0 119 / 0.04), 0 12px 32px -12px rgb(19 0 119 / 0.14)'
+  raised: '0 2px 4px rgb(19 0 119 / 0.05), 0 24px 48px -16px rgb(19 0 119 / 0.22)'
 
 # Nos principes (ordonnés)
 principles:
@@ -82,7 +111,10 @@ colorRoles:
     usage: "Émotion, authenticité, découverte. Témoignages, sections émotionnelles. Jamais en fond de grande section : utiliser pourpre-light."
     pairsWith: pourpre-light
   orange:
-    usage: "Action, engagement, chaleur. Boutons d'inscription, CTAs principaux, liens actifs. Jamais pour une action contradictoire (annuler ET confirmer)."
+    usage: "Action, engagement, chaleur. Boutons d'inscription, CTAs principaux, liens actifs — en fond, toujours avec un texte bleu-fonce (8,8:1), jamais blanc (1,8:1). Jamais pour une action contradictoire (annuler ET confirmer)."
+    pairsWith: orange-light
+  orange-ink:
+    usage: "Version texte de l'orange : petits libellés, liens et sur-titres orange sur fond blanc ou clair. L'orange vif n'est jamais du texte (1,8:1)."
     pairsWith: orange-light
   orange-vif:
     usage: "Variante chaude, en opposition au violet. Accent ponctuel uniquement."
@@ -91,7 +123,10 @@ colorRoles:
     usage: "Exploration, apprentissage, créativité. Sections pédagogiques, titres secondaires, invitations à la réflexion."
     pairsWith: mauve-light
   cyan:
-    usage: "Validation, calme, ressources. Confirmations, ressources, sections factuelles. Pas en petit texte sur fond blanc (contraste)."
+    usage: "Validation, calme, ressources. Confirmations, ressources, sections factuelles. Pas en petit texte sur fond blanc (contraste) : utiliser cyan-ink."
+    pairsWith: cyan-light
+  cyan-ink:
+    usage: "Version texte du cyan : libellés, liens et titres de cartes cyan sur fond blanc ou cyan-light."
     pairsWith: cyan-light
   bleu-fonce:
     usage: "Texte principal et titres ; remplace le noir partout."
@@ -134,3 +169,5 @@ imagery:
     - Cercles qui se chevauchent (rencontres, co-construction) en fond subtil.
     - Lignes ondulées (fluidité, respect des limites) en filigrane très léger.
     - "Formes géométriques colorées et dégradés clairs (pourpre-light, orange-light, mauve-light, cyan-light) comme fonds ; jamais les teintes vives en fond de section."
+    - "Photos en cadre arrondi (rounded-media) avec un cercle de couleur de marque décalé derrière ; jamais en pleine largeur façon stock, jamais de flou ni de blob animé."
+    - "Une couleur d'accent par section, choisie selon son rôle (colorRoles) ; fonds de section en blanc ou en une seule teinte -light."

@@ -53,10 +53,101 @@ section[id] {
   scroll-margin-top: 6rem;
 }
 
-/* Body text accessibility */
+/* Body text — bleu foncé replaces black everywhere (design.colorRoles) */
 body {
   line-height: 1.7;
-  color: #111827;
+  color: #130077;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible keyboard focus on every interactive element (WCAG 2.4.7).
+   Mauve ring: 6.4:1 on white, 5.4:1 on the lightest tint. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #7b01fe;
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+/* Skip link — hidden until focused */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  background: #130077;
+  color: #fff;
+  font-weight: 800;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Sovrium's `type: button` ships the design-system primary look (dark fill,
+   fixed height). Icon-only toggles (menu open/close) reset it here. */
+.icon-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 9999px !important;
+  background: transparent !important;
+  color: #130077 !important;
+  box-shadow: none !important;
+}
+.icon-btn:hover {
+  background: #f3e6ff !important;
+}
+
+/* Photo frame — rounded photo with offset brand circles behind it
+   (charter pattern: overlapping circles = rencontre, co-construction). */
+.photo-frame {
+  position: relative;
+  isolation: isolate;
+}
+.photo-frame::before,
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+.photo-frame::before {
+  width: 42%;
+  aspect-ratio: 1;
+  right: -6%;
+  top: -7%;
+  background: var(--frame-a, #ffe0ea);
+}
+.photo-frame::after {
+  width: 30%;
+  aspect-ratio: 1;
+  left: -5%;
+  bottom: -6%;
+  background: var(--frame-b, #fff0d1);
+}
+.frame-mauve { --frame-a: #e6d1ff; --frame-b: #d1f2f0; }
+.frame-cyan { --frame-a: #d1f2f0; --frame-b: #fff0d1; }
+.frame-orange { --frame-a: #fff0d1; --frame-b: #ffe0ea; }
+
+/* Respect reduced-motion: no reveal or transition movement */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 p {
