@@ -30,8 +30,8 @@ fields:
     relationType: many-to-one
     displayField: display_name
     onDelete: set-null
-  - { id: 9, name: lead_name, label: Facilitateur·ice, type: lookup, relationshipField: lead_facilitator, relatedField: display_name }
-  - { id: 10, name: co_name, label: Co-facilitateur·ice (nom), type: lookup, relationshipField: co_facilitator, relatedField: display_name }
+  - { id: 9, name: lead_name, label: Facilitateur·ice, type: lookup, relationshipField: lead_facilitator, relatedField: short_name }
+  - { id: 10, name: co_name, label: Co-facilitateur·ice (nom), type: lookup, relationshipField: co_facilitator, relatedField: short_name }
   - id: 11
     name: venue
     label: Lieu

@@ -1,5 +1,5 @@
 # Reference data: the facilitation team (names as credited on HelloAsso).
-# `account`, `email` and `phone` are filled by an admin once each person is
+# `account`, `contact_email` and `phone` are filled by an admin once each person is
 # invited (role: member). Open item: "Mogo" or "Morgane" as the public name.
 mergeOn: [display_name]
 records:

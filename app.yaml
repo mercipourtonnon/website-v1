@@ -5,7 +5,9 @@ description: Ateliers de consentement à prix libre à Strasbourg
 badge: false
 
 # Built-in privacy-friendly analytics (server-side; inert on static hosting)
-analytics: true
+analytics:
+  # The private Espace and sign-in pages are not audience traffic.
+  excludedPaths: [/_admin/*, /api/*, /connexion, /espace, /espace/*]
 
 design:
   $ref: ./config/design.yaml

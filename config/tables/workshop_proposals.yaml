@@ -52,7 +52,14 @@ fields:
     type: status
     required: true
     default: proposed
-    options: [proposed, approved, helloasso_draft, published, rejected, withdrawn, sync_error]
+    options:
+      - { value: proposed, label: À relire, color: '#FFAF00' }
+      - { value: approved, label: Création HelloAsso en cours, color: '#7B01FE' }
+      - { value: helloasso_draft, label: À finaliser sur HelloAsso, color: '#FF7000' }
+      - { value: published, label: En ligne, color: '#12A19D' }
+      - { value: rejected, label: Non retenue, color: '#130077' }
+      - { value: withdrawn, label: Retirée, color: '#130077' }
+      - { value: sync_error, label: Erreur HelloAsso, color: '#F5004F' }
   - { id: 11, name: reviewer_note, label: Note de relecture, type: long-text }
   - { id: 12, name: helloasso_form_slug, label: Slug HelloAsso, type: single-line-text, unique: true }
   - { id: 13, name: helloasso_url, label: Lien HelloAsso, type: url }
