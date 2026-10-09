@@ -26,6 +26,10 @@ invitationTokenExpiry: 7d
 # and no content — it is the guard for anonymous visitors (auth-access/auth-assignments).
 landingPath: /espace/arrivee
 roles:
+  # Built-in (level 80). Listed FIRST on purpose: an admin is sent to the first
+  # role's defaultLanding (auth/auth-overview, role-landing), which would
+  # otherwise be candidat's /espace/en-attente.
+  - { name: admin, defaultLanding: /espace }
   # Signed up, profile awaiting validation by the coordination.
   - name: candidat
     description: Candidature en attente de validation
