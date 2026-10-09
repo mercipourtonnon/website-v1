@@ -465,6 +465,8 @@ components:
                         content: Répondre à tes demandes d'information
                       - type: list-item
                         content: "Gérer ton compte et ta fiche bénévole si tu rejoins l'équipe (inscription sur /devenir-benevole) : ton email et ton mot de passe pour le compte ; prénom et nom, pronom, téléphone, photo et ce que tu écris dans ta fiche pour mieux se connaître. L'email et le téléphone sont lus par la coordination seulement ; la fiche est visible des autres bénévoles une fois validée"
+                      - type: list-item
+                        content: "Lire et étudier les idées envoyées depuis /vos-idees (un atelier pour un public précis, un contenu, un format, un lieu) : le type d'idée, pour qui, et ton message ; ton prénom ou nom, ton e-mail et ton accord pour être recontacté·e sont facultatifs et ne servent qu'à te répondre. Lues par la coordination seulement"
 
                   - type: text
                     element: h3
@@ -589,6 +591,11 @@ components:
                     props:
                       className: mt-3 text-gray-700 leading-relaxed
                     content: "Pour l'espace bénévole, ton compte et ta fiche sont conservés tant que tu fais partie de l'équipe. Quand tu la quittes, la coordination archive ta fiche et ferme ton accès ; compte et fiche sont supprimés sur simple demande à mercipourtonnon@gmail.com."
+                  - type: text
+                    element: p
+                    props:
+                      className: mt-3 text-gray-700 leading-relaxed
+                    content: "Pour les idées envoyées depuis /vos-idees, le message et les coordonnées facultatives sont conservés 24 mois au plus, le temps de les étudier et de te répondre, puis supprimés — ou plus tôt, sur simple demande à mercipourtonnon@gmail.com."
 
               # Section 5: Cookies
               - type: container

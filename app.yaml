@@ -146,6 +146,8 @@ pages:
   - $ref: ./config/pages/ressources.yaml
   # Public entry into the espace bénévole (carries the sign-up form; /inscription stays the auth-flow entry).
   - $ref: ./config/pages/devenir-benevole.yaml
+  # Public ideas form (anyone can send an idea; writes `ideas`, mails the coordination).
+  - $ref: ./config/pages/vos-idees.yaml
   # One page per published workshop date (/ateliers/:slug).
   - $ref: ./config/pages/atelier.yaml
   # Espace facilitateur·ices and coordination (private, noindex, out of the sitemap).

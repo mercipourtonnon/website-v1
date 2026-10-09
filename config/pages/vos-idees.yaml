@@ -1,0 +1,399 @@
+# /vos-idees — the public way to help build the association (review of
+# 2026-10-09, A13): anyone can send an idea — an atelier for a specific
+# audience, a content, a format, a venue — through the public `idees` form
+# (config/forms/idees.yaml, embedded here with formRef; the row lands in the
+# `ideas` table, the coordination is mailed by on-idea). Indexable, in the
+# sitemap. On the static build (GitHub Pages) the form renders but cannot
+# submit (no server): the mailto fallback line below the form covers it (A14).
+# Mauve accent: exploration, co-construction (design.colorRoles).
+name: vos-idees
+path: /vos-idees
+sitemap:
+  priority: 0.6
+  changefreq: monthly
+meta:
+  lang: fr-FR
+  title: Vos idées pour l'association - Merci pour ton non
+  description: "Un atelier pour un public précis, un contenu, un format, un lieu : propose ce que tu voudrais que Merci pour ton non construise, à Strasbourg et en Alsace."
+  author: Merci pour ton non
+  robots: index, follow
+  canonical: https://mercipourtonnon.fr/vos-idees
+  openGraph:
+    type: website
+    title: "Vos idées pour l'association | Merci pour ton non"
+    description: "Un atelier pour un public précis, un contenu, un format, un lieu : dis-nous ce que tu voudrais qu'on construise."
+    url: https://mercipourtonnon.fr/vos-idees
+    image: https://mercipourtonnon.fr/social.png
+    imageAlt: Merci pour ton non — vos idées pour l'association
+    siteName: Merci pour ton non
+    locale: fr_FR
+  twitter:
+    card: summary_large_image
+    title: "Vos idées pour l'association | Merci pour ton non"
+    description: "Un atelier pour un public précis, un contenu, un format, un lieu : dis-nous ce que tu voudrais qu'on construise."
+    image: https://mercipourtonnon.fr/social.png
+  schema:
+    '@context': https://schema.org
+    '@type': ContactPage
+    name: Vos idées pour l'association
+    description: "Proposer une idée à Merci pour ton non : un atelier pour un public précis, un contenu, un format, un lieu ou un partenariat."
+    inLanguage: fr-FR
+    url: https://mercipourtonnon.fr/vos-idees
+    about:
+      '@type': Organization
+      name: Merci pour ton non
+      url: https://mercipourtonnon.fr
+      foundingDate: '2025-09-21'
+      areaServed: Alsace
+  favicons:
+    icon: /favicon/favicon-32x32.png
+    appleTouchIcon: /favicon/apple-touch-icon.png
+    sizes:
+      - size: 32x32
+        href: /favicon/favicon-32x32.png
+      - size: 16x16
+        href: /favicon/favicon-16x16.png
+  preload:
+    - href: /fonts/NeueMachina/NeueMachina-Regular.otf
+      as: font
+      type: font/otf
+      crossorigin: anonymous
+    - href: /fonts/BelyDisplay/BelyDisplay-Regular.woff2
+      as: font
+      type: font/woff2
+      crossorigin: anonymous
+  customElements:
+    - type: meta
+      attrs:
+        name: theme-color
+        content: '#7B01FE'
+    - type: link
+      attrs:
+        rel: manifest
+        href: /favicon/site.webmanifest
+
+scripts:
+  externalScripts:
+    # Mobile menu close-on-link / Escape, current page (site.js)
+    - src: /assets/site.js
+      defer: true
+      position: body-end
+
+components:
+  - component: site-header
+
+  - type: container
+    props:
+      id: contenu
+      className: bg-white overflow-x-clip
+    children:
+      # Hero (#construire)
+      - type: container
+        element: section
+        props:
+          id: construire
+          className: px-4 sm:px-6 pt-10 md:pt-16 pb-band-sm md:pb-band bg-mauve-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-7 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: S'engager
+                  - type: text
+                    element: h1
+                    props:
+                      className: type-page text-bleu-fonce
+                    content: construire l'association avec nous
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce max-w-2xl
+                    content: "Nos ateliers sont nés d'idées et de retours. Les prochains aussi : un atelier pour les parents, pour une équipe, pour des ados ; un contenu, un jeu, un format court, un lieu qui nous accueillerait. Dis-nous ce qui te manque."
+                  - type: container
+                    props:
+                      className: flex flex-col sm:flex-row sm:items-center gap-4 pt-2
+                    children:
+                      - type: link
+                        props:
+                          href: '#formulaire'
+                          className: inline-flex items-center justify-center gap-2 self-start whitespace-nowrap bg-orange text-bleu-fonce px-7 py-4 rounded-pill font-bold type-lead hover:bg-orange-hover transition-colors shadow-card
+                        children:
+                          - type: text
+                            element: span
+                            content: Partager mon idée
+                          - type: icon
+                            props: { name: arrow-down, size: 20, strokeWidth: 2, aria-hidden: 'true' }
+                      - type: link
+                        props:
+                          href: /devenir-benevole
+                          className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve py-2
+                        content: Tu veux plutôt donner un coup de main ?
+              - type: container
+                props:
+                  className: lg:col-span-5 photo-frame frame-mauve max-w-md lg:max-w-none
+                children:
+                  - type: image
+                    variant: hero
+                    props:
+                      src: /pictures/stand/echange-carte-stand.webp
+                      srcset: /pictures/stand/echange-carte-stand-sm.webp 800w, /pictures/stand/echange-carte-stand.webp 1600w
+                      sizes: '(min-width: 1024px) 480px, 90vw'
+                      alt: Sur un stand, une bénévole et une passante échangent autour d'une carte du jeu sur le consentement
+                      className: w-full h-auto rounded-media shadow-card object-cover aspect-[4/3]
+
+      # Section: ce qu'on construit déjà (#en-cours) — BPS 1.17 / 3.32
+      - type: container
+        element: section
+        props:
+          id: en-cours
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto flex flex-col gap-8
+            children:
+              - type: container
+                props:
+                  className: flex flex-col gap-4 max-w-2xl
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Déjà en route
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: ce qu'on construit déjà
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: "Quatre chantiers sont ouverts. Si ton idée en rejoint un, dis-le-nous quand même : c'est ce qui nous aide à les prioriser."
+              - type: container
+                element: div
+                props:
+                  role: list
+                  className: flex flex-wrap gap-3
+                  aria-label: Chantiers en cours
+                children:
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
+                    content: Atelier Niveau 2 (2027, deux sessions)
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
+                    content: Kit pédagogique libre (licence Creative Commons)
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
+                    content: Module enfants et adolescent·es (en exploration)
+                  - type: container
+                    element: div
+                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
+                    content: Formation d'essaimage (pour animer ailleurs)
+              - type: text
+                element: p
+                props:
+                  className: type-small text-bleu-fonce-70
+                children:
+                  - type: text
+                    element: span
+                    content: 'Le détail est sur '
+                  - type: link
+                    props:
+                      href: /notre-mission#ensuite
+                      className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
+                    content: notre mission, « et ensuite »
+                  - type: text
+                    element: span
+                    content: .
+
+      # Section: le formulaire (#formulaire) — the public `idees` form
+      - type: container
+        element: section
+        props:
+          id: formulaire
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-mauve-light
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-start
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-4 flex flex-col gap-4 lg:sticky lg:top-28 self-start
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Ton idée
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce
+                    content: Trois lignes suffisent. Ton nom et ton e-mail sont facultatifs — laisse-les seulement si tu veux une réponse.
+                  - type: text
+                    element: p
+                    props:
+                      className: type-small text-bleu-fonce-70
+                    children:
+                      - type: text
+                        element: span
+                        content: "Ce que tu écris est lu par la coordination seulement, et conservé deux ans au plus — "
+                      - type: link
+                        props:
+                          href: /mentions-legales
+                          className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
+                        content: nos mentions légales
+                      - type: text
+                        element: span
+                        content: .
+              - type: container
+                props:
+                  className: lg:col-span-8 flex flex-col gap-6
+                children:
+                  # Sovrium 0.34.1: a `formRef` embed of a public form bound to a
+                  # table whose `create` excludes the visitor draws nothing for a
+                  # signed-out reader (the standalone /forms/idees renders and
+                  # accepts the submission — sovrium/sovrium#138). Two halves until
+                  # the fix ships or the data side changes: the embed for a signed-in
+                  # reader, a link to the standalone form for everyone else.
+                  - type: container
+                    visibility: { when: authenticated }
+                    props:
+                      className: bg-white rounded-card shadow-card p-6 sm:p-8
+                    children:
+                      - type: form
+                        formRef: idees
+                        props:
+                          headingLevel: h2
+                  - type: container
+                    visibility: { when: unauthenticated }
+                    props:
+                      className: bg-white rounded-card shadow-card p-6 sm:p-8 flex flex-col gap-4
+                    children:
+                      - type: text
+                        element: h2
+                        props:
+                          className: type-h4 text-bleu-fonce
+                        content: une idée pour l'association ?
+                      - type: text
+                        element: p
+                        props:
+                          className: text-bleu-fonce
+                        content: "Un atelier pour un public précis, un contenu, un format, un lieu, un partenariat : dis-nous ce que tu voudrais qu'on construise. On lit tout, on répond si tu le souhaites."
+                      - type: link
+                        props:
+                          href: /forms/idees
+                          className: inline-flex items-center justify-center gap-2 self-start bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
+                        children:
+                          - type: text
+                            element: span
+                            content: Ouvrir le formulaire
+                          - type: icon
+                            props: { name: arrow-right, size: 20, strokeWidth: 2, aria-hidden: 'true' }
+                      - type: text
+                        element: p
+                        props:
+                          className: type-caption text-bleu-fonce-70
+                        content: Trois questions, deux minutes. Aucun compte à créer.
+                  # A14: on the static build the form renders but cannot submit.
+                  - type: text
+                    element: p
+                    props:
+                      className: type-small text-bleu-fonce-70
+                    children:
+                      - type: text
+                        element: span
+                        content: "Le formulaire ne marche pas ? Écris-nous : "
+                      - type: link
+                        props:
+                          href: mailto:mercipourtonnon@gmail.com?subject=Une%20id%C3%A9e%20pour%20l%27association
+                          className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
+                        content: mercipourtonnon@gmail.com
+
+      # Section: et après ? (#et-apres)
+      - type: container
+        element: section
+        props:
+          id: et-apres
+          className: px-4 sm:px-6 py-band-sm md:py-band
+        children:
+          - type: container
+            props:
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-start
+            children:
+              - type: container
+                props:
+                  className: lg:col-span-7 flex flex-col gap-6
+                children:
+                  - type: text
+                    element: p
+                    props:
+                      className: type-overline text-mauve
+                    content: Et après ?
+                  - type: text
+                    element: h2
+                    props:
+                      className: type-section text-bleu-fonce
+                    content: ce que devient ton idée
+                  - type: text
+                    element: p
+                    props:
+                      className: type-lead text-bleu-fonce-70
+                    content: "On lit chaque idée en réunion mensuelle du Cercle Cœur ; les idées retenues entrent dans nos priorités, et on publie ici ce qu'elles sont devenues."
+              - type: container
+                props:
+                  className: lg:col-span-5 bg-orange-light rounded-media p-8 flex flex-col gap-5
+                children:
+                  - type: text
+                    element: h3
+                    props:
+                      className: type-h4 text-bleu-fonce
+                    content: tu veux aller plus loin ?
+                  - type: container
+                    element: div
+                    props:
+                      role: list
+                      className: flex flex-col gap-3
+                    children:
+                      - type: container
+                        element: div
+                        props: { role: listitem }
+                        children:
+                          - type: link
+                            props:
+                              href: /devenir-benevole
+                              className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                            content: Rejoindre l'équipe bénévole
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: Stands, ateliers, communication, logistique — à ton rythme.
+                      - type: container
+                        element: div
+                        props: { role: listitem }
+                        children:
+                          - type: link
+                            props:
+                              href: /nos-interventions
+                              className: font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
+                            content: Organiser un atelier dans ta structure
+                          - type: text
+                            element: p
+                            props: { className: type-small text-bleu-fonce-70 }
+                            content: "Une équipe, une école, une association : on construit le format avec toi."
+
+  - component: site-footer
