@@ -16,7 +16,7 @@ fields:
     label: Heure de début
     type: single-select
     required: true
-    options: ['14:00', '18:30']
+    options: ['10:00', '14:00', '18:30']
   - { id: 3, name: duration_minutes, label: Durée (minutes), type: integer, default: 180, min: 30, max: 600 }
   - id: 4
     name: lead_facilitator

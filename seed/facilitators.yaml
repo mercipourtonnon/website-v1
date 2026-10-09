@@ -13,3 +13,5 @@ records:
     fields: { display_name: Mogo, short_name: Mogo, active: true }
   - key: laetitia
     fields: { display_name: Laetitia B., short_name: Laetitia, active: true }
+  - key: olivia
+    fields: { display_name: Olivia, short_name: Olivia, active: true }

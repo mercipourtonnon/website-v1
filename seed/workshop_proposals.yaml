@@ -1,14 +1,15 @@
 # The three dates migrated through the approval flow, waiting for an admin to
 # press "Approuver" (seeding starts no automation). Fixed dates on purpose:
-# these are real sessions, not demo data.
+# these are real sessions, not demo data. Facilitator pairs follow Notion
+# "Dates d'ateliers" (vue Programmées) as of 2026-10-09.
 records:
   - key: p_2026_11_28
     fields:
       session_date: '2026-11-28'
       start_time: '14:00'
       duration_minutes: 180
-      lead_facilitator: '@facilitators.laetitia'
-      co_facilitator: '@facilitators.mogo'
+      lead_facilitator: '@facilitators.mogo'
+      co_facilitator: '@facilitators.thomas'
       venue: '@venues.plage_digitale'
       capacity: 15
       status: proposed
