@@ -1,7 +1,7 @@
 # Ideas and wishes sent by anyone through the public `idees` form (/vos-idees):
-# a workshop for a specific audience, a content, a format, a venue… Read by the
-# coordination; the form writes the row server-side (no anonymous access to the
-# records API). `status` is the coordination's follow-up.
+# a workshop for a specific audience, a content, a format, a venue… The form
+# writes the row server-side (no anonymous access to the records API); `status`
+# is the Cercle Gardien's follow-up.
 id: 13
 name: ideas
 fields:
@@ -35,8 +35,11 @@ fields:
       - { value: ecartee, label: Écartée }
   - { id: 8, name: notes, label: Notes de la coordination, type: long-text }
   - { id: 9, name: received_at, label: Reçue le, type: created-at }
+# Read by the Cercle Cœur (it reads the ideas at its monthly meeting) and the
+# Cercle Gardien; the public form writes the row as system (on-idea), so no
+# create right is needed below gardien.
 permissions:
-  read: [admin, coordination]
-  create: [admin, coordination]
-  update: [admin, coordination]
+  read: [coeur, gardien, admin]
+  create: [gardien, admin]
+  update: [gardien, admin]
   delete: [admin]
