@@ -82,7 +82,8 @@ fields:
         - { field: status, operator: equals, value: valid }
         - { field: attendance, operator: equals, value: present }
   # Online prix libre. One flat condition only: in 0.33.0 a rollup whose filter
-  # is an and/or group crashes schema initialisation ("e.replace"). Cancelled and
+  # is an and/or group crashes schema initialisation ("e.replace",
+  # sovrium/sovrium#126). Cancelled and
   # refunded rows already carry 0 (the sync zeroes them) and on-site rows carry
   # none, so `valid` is enough. On-site money lives in workshop_cash.
   - id: 24
@@ -104,7 +105,7 @@ fields:
     format: currency
     currency: EUR
   - { id: 27, name: last_synced_at, label: Dernière synchronisation, type: datetime }
-  # Rollups cannot declare a currency (they would print in USD): these formulas
+  # Rollups cannot declare a currency (sovrium/sovrium#129): these formulas
   # carry the EUR format for the pages.
   - { id: 28, name: revenue_online_eur, label: Prix libre en ligne (€), type: formula, formula: 'COALESCE(revenue_online, 0)', resultType: number, format: currency, currency: EUR }
   - { id: 29, name: revenue_on_site_eur, label: Prix libre sur place (€), type: formula, formula: 'COALESCE(revenue_on_site, 0)', resultType: number, format: currency, currency: EUR }

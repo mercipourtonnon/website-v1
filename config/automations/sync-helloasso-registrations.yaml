@@ -19,7 +19,7 @@ actions:
       inputData:
         workshopId: '{{trigger.data.recordId}}'
 
-  # In 0.33.0 a failed callee still lets this run complete, which would show the
+  # In 0.33.0 an exhausted callee (sovrium/sovrium#127) still lets this run complete, which would show the
   # button's success toast. The callee returns `count` only when it got to the
   # end, so a missing count fails this run too (and shows the error toast).
   - name: check
