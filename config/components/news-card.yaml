@@ -1,0 +1,35 @@
+# News card — one `news` row, as drawn on /espace and /espace/actualites.
+# Place it as the row template of a list bound to `news` (filter status =
+# published for the bénévoles). Reads title, summary and published_at through
+# $record and links to /espace/actualites/<id>. No vars.
+name: news-card
+type: container
+element: article
+props:
+  className: flex h-full flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4
+children:
+  - type: container
+    props:
+      className: flex items-center gap-2 text-sm text-gray-700
+    children:
+      - type: icon
+        props: { name: newspaper, className: w-4 h-4 shrink-0 text-mauve, aria-hidden: 'true' }
+      - type: record-field
+        props: { field: published_at }
+        format: long-date
+  - type: text
+    element: h3
+    props:
+      className: text-lg font-bold text-bleu-fonce
+    children:
+      - type: link
+        props:
+          href: /espace/actualites/$record.id
+          className: underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-vif focus-visible:ring-2 focus-visible:ring-bleu-fonce
+        content: $record.title
+  - type: text
+    element: p
+    visibility: { record: { field: summary, isNotEmpty: true } }
+    props:
+      className: line-clamp-3 text-bleu-fonce
+    content: $record.summary

@@ -1,0 +1,47 @@
+# WhatsApp card — the invitation to the bénévoles' WhatsApp community, on /espace.
+# No vars.
+#
+# TODO(WHATSAPP_COMMUNITY_URL): the link below is a PLACEHOLDER. Pages cannot
+# read `$env` in Sovrium 0.33 (`$env.NAME` resolves in automation templates and
+# connections only; on a page it is printed verbatim — checked on a dev
+# server). Paste the community invitation link here, the same value as the
+# WHATSAPP_COMMUNITY_URL env entry the welcome email uses.
+name: whatsapp-card
+type: container
+element: section
+props:
+  aria-labelledby: whatsapp-titre
+  className: flex flex-col gap-3 rounded-lg bg-cyan-light p-5 sm:flex-row sm:items-center sm:justify-between
+children:
+  - type: container
+    props:
+      className: flex items-start gap-3
+    children:
+      - type: icon
+        props: { name: message-circle, className: w-6 h-6 shrink-0 text-cyan-hover mt-0.5, aria-hidden: 'true' }
+      - type: container
+        props:
+          className: flex flex-col gap-1
+        children:
+          - type: text
+            element: h2
+            props:
+              id: whatsapp-titre
+              className: text-lg font-bold text-bleu-fonce
+            content: La communauté WhatsApp
+          - type: text
+            element: p
+            props:
+              className: text-bleu-fonce
+            content: C'est là qu'on se donne des nouvelles au quotidien, qu'on s'organise et qu'on partage les petites annonces de l'asso.
+  - type: link
+    props:
+      href: https://chat.whatsapp.com/A-REMPLACER
+      target: _blank
+      rel: noopener noreferrer
+      aria-label: Rejoindre la communauté WhatsApp (nouvel onglet)
+      className: inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-full bg-orange px-5 py-2.5 text-center font-bold text-bleu-fonce hover:bg-orange-hover focus-visible:ring-2 focus-visible:ring-bleu-fonce focus-visible:ring-offset-2 sm:w-auto sm:whitespace-nowrap
+    children:
+      - { type: text, element: span, content: Rejoindre la communauté }
+      - type: icon
+        props: { name: arrow-up-right, className: w-4 h-4, aria-hidden: 'true' }

@@ -90,6 +90,11 @@ components:
   - $ref: ./config/components/value-card.yaml
   - $ref: ./config/components/team-card.yaml
   - $ref: ./config/components/espace-shell.yaml
+  # Espace bénévole cards (row templates over events, news and members).
+  - $ref: ./config/components/event-card.yaml
+  - $ref: ./config/components/news-card.yaml
+  - $ref: ./config/components/member-card.yaml
+  - $ref: ./config/components/whatsapp-card.yaml
 
 pages:
   - $ref: ./config/pages/home.yaml

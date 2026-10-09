@@ -1,11 +1,11 @@
 # /espace/proposer — the proposal form (config/forms/proposer-un-atelier.yaml).
 name: espace-proposer
 path: /espace/proposer
-access: { require: [admin, member], redirectTo: /connexion }
+access: { require: [admin, coordination, facilitateur], redirectTo: /connexion }
 sitemap: false
 meta:
   lang: fr-FR
-  title: Proposer une date - Espace facilitateur·ices
+  title: Proposer une date - Espace bénévole
   description: Propose une date d'atelier de consentement à l'équipe.
   noindex: true
   robots: noindex, nofollow
