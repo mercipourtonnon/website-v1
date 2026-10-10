@@ -58,9 +58,10 @@ check with `sovrium docs config <path>` (e.g. `pages[].meta.twitter`,
 - **Split layout**: one file per page under `config/pages/`, one per template under
   `config/components/`, each listed with `$ref` in `app.yaml`. Adding one means creating
   the file *and* adding its `$ref` line to `app.yaml`.
-- **Production is a static build** (`sovrium build` → GitHub Pages via
-  `scripts/deploy-pages.sh`). Server-only features (auth, `/_admin`, analytics) are inert
-  there; make sure what you add renders statically.
+- **Production is server-hosted on Sovrium Cloud** (cloud.sovrium.com, deployed with
+  `scripts/deploy.sh` → `sovrium deploy`). Auth, forms, `/_admin` and analytics work in
+  production exactly as on `sovrium start`, so verify what you add on a running server,
+  not on a static export.
 
 ## Stale knowledge to avoid (pre-0.27 habits)
 

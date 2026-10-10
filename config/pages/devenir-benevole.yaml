@@ -2,8 +2,8 @@
 # 2026-10-09, A12): what you find, the parcours, the open roles, and the
 # account sign-up form. Indexable, in the sitemap. /inscription keeps the
 # auth-flow role (role-landing, noindex) and links here from its top line.
-# The form submits to the server; the mailto line below it offers a second
-# route for those who prefer email (A14).
+# The form submits to the server; there is no mailto fallback under it (the
+# closed sign-up message keeps the invitation email, the only way in then).
 name: devenir-benevole
 path: /devenir-benevole
 sitemap:
@@ -454,20 +454,6 @@ components:
                           href: /connexion
                           className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
                         content: J'ai déjà un compte
-                  # A14: mailto alternative to the form.
-                  - type: text
-                    element: p
-                    props:
-                      className: type-small text-bleu-fonce-70
-                    children:
-                      - type: text
-                        element: span
-                        content: "Le formulaire ne marche pas ? Écris-nous : "
-                      - type: link
-                        props:
-                          href: mailto:mercipourtonnon@gmail.com?subject=Devenir%20b%C3%A9n%C3%A9vole
-                          className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
-                        content: mercipourtonnon@gmail.com
 
       # Closing — support without joining
       - type: container

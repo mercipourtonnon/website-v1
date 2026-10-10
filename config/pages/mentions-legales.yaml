@@ -250,17 +250,7 @@ components:
                                 element: span
                                 props:
                                   className: font-bold
-                                content: "Site public :"
-                              - type: text
-                                element: span
-                                content: " GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — service GitHub Pages (publication statique, aucune donnée collectée par le site lui-même)."
-                          - type: list-item
-                            children:
-                              - type: text
-                                element: span
-                                props:
-                                  className: font-bold
-                                content: "Application (espace bénévole, inscriptions, formulaires) :"
+                                content: "Site, application et données :"
                               - type: text
                                 element: span
                                 content: " Sovrium Cloud, "
@@ -273,7 +263,7 @@ components:
                                 content: cloud.sovrium.com
                               - type: text
                                 element: span
-                                content: ", service d'hébergement géré par Sovrium."
+                                content: ", opéré par Sovrium. Les pages publiques, l'espace bénévole, l'espace facilitateur·ices, les formulaires et leurs données sont servis par ce même hébergement."
                       - type: text
                         element: p
                         content: "Les inscriptions aux ateliers sont traitées par HelloAsso et la newsletter par Brevo."
@@ -332,7 +322,7 @@ components:
                                 content: "Hébergement :"
                               - type: text
                                 element: span
-                                content: " Le site public est publié en statique sur GitHub Pages et ne collecte aucune donnée par lui-même. L'application et ses données (ateliers, comptes des bénévoles et des facilitateur·ices, formulaires, statistiques de visite de l'application) sont hébergées sur Sovrium Cloud, conformément au RGPD."
+                                content: " Tout le site (pages publiques, espace bénévole, espace facilitateur·ices) et ses données (ateliers, comptes, formulaires, statistiques de visite) sont hébergés sur Sovrium Cloud, conformément au RGPD. Les formulaires du site enregistrent ce que tu y écris sur ce serveur (voir « données collectées » ci-dessous)."
                       - type: text
                         element: p
                         props:
@@ -436,7 +426,7 @@ components:
                                 content: "Statistiques de navigation :"
                               - type: text
                                 element: span
-                                content: " Sur l'application uniquement (espace bénévole, inscriptions, formulaires), via l'outil de statistiques intégré à notre hébergement : il compte les pages vues, la provenance des visites et le type d'appareil, sans cookie, côté serveur, sans empreinte de navigateur et sans service tiers. Les données restent sur notre serveur, et rien n'est enregistré si ton navigateur demande de ne pas être suivi (Do Not Track). Le site public, lui, n'a aucune statistique."
+                                content: " Sur les pages publiques du site, via l'outil de statistiques intégré à notre hébergement : il compte les pages vues, la provenance des visites et le type d'appareil, sans cookie, côté serveur, sans empreinte de navigateur et sans service tiers. Les données restent sur notre serveur, et rien n'est enregistré si ton navigateur demande de ne pas être suivi (Do Not Track). Les espaces privés (espace bénévole, espace facilitateur·ices) et les pages de connexion ne sont pas comptés."
 
                   - type: text
                     element: h3
@@ -809,7 +799,7 @@ components:
                 children:
                   - type: text
                     element: p
-                    content: "Dernière mise à jour : 9 octobre 2026"
+                    content: "Dernière mise à jour : 10 octobre 2026"
 
       # Footer
       - component: site-footer

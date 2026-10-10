@@ -17,26 +17,22 @@ sovrium docs search <sujet>      # manuel intégré au binaire (hors ligne)
 sovrium design-system app.yaml   # charte graphique (tokens, principes, voix) → DESIGN.md
 ```
 
-## Build statique (GitHub Pages)
+## Déploiement (Sovrium Cloud)
+
+Le site entier (pages publiques, espace bénévole, formulaires, données) tourne
+sur [Sovrium Cloud](https://cloud.sovrium.com), domaine `mercipourtonnon.fr`.
 
 ```bash
-NODE_ENV=production \
-SOVRIUM_DEPLOYMENT=github-pages \
-SOVRIUM_BASE_URL=https://mercipourtonnon.fr \
-SOVRIUM_GENERATE_SITEMAP=true \
-SOVRIUM_GENERATE_ROBOTS=true \
-sovrium build app.yaml           # → dist/
+sovrium login                    # une fois par machine (code à valider dans le navigateur)
+bash scripts/deploy.sh           # valide, empaquette et déploie l'app « mercipourtonnon »
 ```
 
-Le build rend les pages liées à une table (dates d'ateliers, références de
-`/ressources`) depuis la base locale : charger les données de référence avant
-de construire (le script `scripts/deploy-pages.sh` le fait) :
+`sovrium deploy` envoie la config résolue, `public/` et `seed/` — jamais le
+`.env` : les variables de production (`BASE_URL`, clés HelloAsso/Brevo…) se
+règlent sur le cloud. Redéployer un contenu inchangé ne fait rien.
+`SOVRIUM_APP` et `SOVRIUM_HOST` changent l'app et le cloud visés.
 
-```bash
-sovrium seed app.yaml --mode upsert --table facilitators --table venues --table workshops --table ressources
-```
-
-Le déploiement est automatisé par `.github/workflows/deploy.yml` à chaque push
-sur `main` (GitHub Pages, domaine `mercipourtonnon.fr`).
+Le workflow `.github/workflows/deploy.yml` (lancement manuel) fait la même
+chose depuis GitHub Actions avec le secret `SOVRIUM_API_KEY`.
 
 L'ancien site statique (HTML écrit à la main) est conservé dans `archive/`.
