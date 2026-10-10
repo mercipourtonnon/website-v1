@@ -2,9 +2,8 @@
 # d'aide, jeux, textes…). One row per reference; the page draws one list per
 # `block`, sorted by `position`, and a second list of the `featured` rows
 # (« les incontournables »). Reference data: seeded from seed/ressources.yaml
-# (`sovrium seed app.yaml --mode upsert --table ressources`), which the static
-# build needs before `sovrium build` (see scripts/deploy-pages.sh). Public read,
-# admin-only writes; `verified` is flipped by an admin once the link is checked.
+# (`sovrium seed app.yaml --mode upsert --table ressources`) on each
+# environment's database; the page reads it live. Public read, admin-only writes; `verified` is flipped by an admin once the link is checked.
 id: 12
 name: ressources
 fields:

@@ -31,8 +31,6 @@
 #   member+  = [member, coeur, gardien, admin]
 #   coeur+   = [coeur, gardien, admin]
 #   gardien+ = [gardien, admin]
-#
-# Inert on the static GitHub Pages build.
 strategies:
   - type: emailAndPassword
   - type: magicLink

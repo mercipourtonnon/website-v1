@@ -4,7 +4,7 @@ description: Ateliers de consentement gratuits à Strasbourg
 # Hide the "Built with Sovrium" pill rendered bottom-right on every page
 badge: false
 
-# Built-in privacy-friendly analytics (server-side; inert on static hosting)
+# Built-in privacy-friendly analytics (server-side, recorded by the runtime)
 analytics:
   # The private Espace and sign-in pages are not audience traffic.
   excludedPaths: [/_admin/*, /api/*, /connexion, /inscription, /espace, /espace/*]

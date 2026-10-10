@@ -3,8 +3,8 @@
 # audience, a content, a format, a venue — through the public `idees` form
 # (config/forms/idees.yaml, embedded here with formRef; on-idea writes the
 # `ideas` row and mails the coordination). Indexable, in the
-# sitemap. On the static build (GitHub Pages) the form renders but cannot
-# submit (no server): the mailto fallback line below the form covers it (A14).
+# sitemap. The form submits to the server; the mailto line below it offers a
+# second route for those who prefer email (A14).
 # Mauve accent: exploration, co-construction (design.colorRoles).
 name: vos-idees
 path: /vos-idees
@@ -239,7 +239,7 @@ components:
                         formRef: idees
                         props:
                           headingLevel: h2
-                  # A14: on the static build the form renders but cannot submit.
+                  # A14: mailto alternative to the form.
                   - type: text
                     element: p
                     props:

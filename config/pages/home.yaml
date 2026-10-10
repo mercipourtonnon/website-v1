@@ -340,7 +340,9 @@ components:
       # Section: En chiffres (#chiffres) — the four figures of /notre-mission#chiffres.
       # Constantes tenues à la main — source BPS 1.10 (état au 9 octobre 2026).
       # Même compteur que le rapport moral : à mettre à jour après chaque atelier.
-      # Un kpi lié à workshops ne rend rien en build statique. Change both pages.
+      # Héritage du build statique (où un kpi restait vide) : hébergé par le
+      # serveur, un kpi lié à workshops rendrait désormais les données en direct
+      # — à envisager (suivi). Change both pages.
       - type: container
         element: section
         props:

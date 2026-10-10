@@ -6,8 +6,9 @@
 # sections. Place the tiles in a `role: list` container. Full class tokens only.
 # Size: `text-3xl md:text-h2` — the runtime strips an authored `text-h3`
 # (the `type-h*` classes of site.css are unlayered and would beat `md:`).
-# Constants, not a `kpi` card: a kpi queries the records API at load and renders
-# empty on the static build (GitHub Pages).
+# Constants, not a `kpi` card: a holdover from the static build, where a kpi
+# rendered empty. Server-hosted, a kpi bound to `workshops` now renders live
+# data, so these tiles could be swapped for one (follow-up).
 name: figure-tile
 type: container
 element: div
