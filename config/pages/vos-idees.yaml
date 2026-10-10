@@ -16,6 +16,7 @@ meta:
   title: Vos idées pour l'association - Merci pour ton non
   description: "Un atelier pour un public précis, un contenu, un format, un lieu : propose ce que tu voudrais que Merci pour ton non construise, à Strasbourg et en Alsace."
   author: Merci pour ton non
+  noindex: true # PRE-LAUNCH: remove at launch
   robots: index, follow
   canonical: https://mercipourtonnon.fr/vos-idees
   openGraph:

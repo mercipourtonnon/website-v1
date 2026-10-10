@@ -7,6 +7,7 @@ meta:
   lang: fr-FR
   title: Newsletter - Merci pour ton non
   description: Inscris-toi à la newsletter de Merci pour ton non pour recevoir nos actualités, nos prochains ateliers et nos ressources sur le consentement.
+  noindex: true # PRE-LAUNCH: remove at launch
   robots: index, follow
   canonical: https://mercipourtonnon.fr/newsletter
   openGraph:
