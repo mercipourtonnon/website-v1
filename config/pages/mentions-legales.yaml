@@ -253,7 +253,7 @@ components:
                                 content: "Site, application et données :"
                               - type: text
                                 element: span
-                                content: " ESSENTIAL SERVICES, propriétaire de la plateforme Sovrium Cloud ("
+                                content: " ESSENTIAL SERVICES, SAS, 128 rue La Boétie, 75008 Paris, France (SIREN 834 241 481), propriétaire de la plateforme Sovrium Cloud ("
                               - type: link
                                 props:
                                   href: https://cloud.sovrium.com
