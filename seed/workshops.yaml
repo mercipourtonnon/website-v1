@@ -50,8 +50,8 @@ records:
       session_date: '2026-10-17'
       date_label: samedi 17 octobre 2026
       time_label: 14h
-      lead_facilitator: '@facilitators.dilara'
-      co_facilitator: '@facilitators.mogo'
+      lead_facilitator: '@facilitators.mogo'
+      co_facilitator: '@facilitators.thomas'
       venue: '@venues.plage_digitale'
       capacity: 15
       booking_url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
@@ -66,8 +66,8 @@ records:
       session_date: '2026-11-28'
       date_label: samedi 28 novembre 2026
       time_label: 14h
-      lead_facilitator: '@facilitators.laetitia'
-      co_facilitator: '@facilitators.mogo'
+      lead_facilitator: '@facilitators.mogo'
+      co_facilitator: '@facilitators.mathilde'
       venue: '@venues.plage_digitale'
       capacity: 15
       booking_url: https://plusbilletterie.helloasso.com/evenements/6a57a68b6a7a3ea948a15e62
