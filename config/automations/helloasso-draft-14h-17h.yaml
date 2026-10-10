@@ -1,30 +1,32 @@
 # Creates one HelloAsso event as a DRAFT through the admin dashboard
-# (admin.helloasso.com), signed in as HELLOASSO_ACCOUNT_EMAIL. Called by
-# create-helloasso-event and migrate-billetterie-plus; nothing is published:
-# the Cercle Gardien reviews the draft and publishes it on HelloAsso.
+# (admin.helloasso.com), for a workshop from 14:00 to 17:00 (Europe/Paris),
+# signed in as HELLOASSO_ACCOUNT_EMAIL. Called by migrate-billetterie-plus (and
+# create-helloasso-event); nothing is published: the Cercle Gardien reviews
+# the draft and publishes it on HelloAsso.
 #
-# Why a browser and not the v5 API: quick-create needs the FormAdministration
-# privilege and cannot set the event's registration questions.
+# One automation per time slot (helloasso-draft-10h-13h, -14h-17h,
+# -18h30-21h30), identical but for the two time blocks — keep them so. In
+# Sovrium 0.35.0 a time input ignores `fill` and a step's `key` is never
+# templated, so the times are typed as literal key presses; and a browser
+# run inside a `path` branch renders none of its templates, so the slot
+# cannot be a branch here. Merge the three once those are fixed.
 #
 # At most once per event: the « Enregistrer » click that creates the draft is
-# `irreversible` and keyed by `slug`, so a replay with the same slug returns
-# the first draft instead of creating a second one. Callers still look the
-# title up first (list-events).
+# `irreversible` and keyed by `slug`, so a replay returns the first draft.
+# Callers still look the title up first (list-events).
 #
 # Locators are the dashboard's own data-testid attributes (mapped on
-# 2026-10-10). Needs BROWSER_PROVIDER=webview on the server.
-name: helloasso-create-event-browser
-description: Crée un événement HelloAsso en brouillon depuis le tableau de bord.
+# 2026-10-10). Needs BROWSER_PROVIDER=webview, and a real Chrome
+# (BROWSER_CDP_URL): HelloAsso's bot check turns a headless one away.
+name: helloasso-draft-14h-17h
+description: Crée en brouillon un événement HelloAsso (14:00–17:00) depuis le tableau de bord.
 trigger:
   type: automation-call
   inputSchema:
     slug: { type: string }
     title: { type: string }
-    # dd/mm/yyyy, Europe/Paris wall clock
+    # dd/mm/yyyy, Europe/Paris
     date: { type: string }
-    # HH:MM
-    startTime: { type: string }
-    endTime: { type: string }
     placeName: { type: string }
     street: { type: string }
     zipCode: { type: string }
@@ -57,12 +59,13 @@ actions:
           value: $env.HELLOASSO_ACCOUNT_PASSWORD
           optional: true
         - do: click
-          label: Se connecter
-          target: { role: button, name: Se connecter }
+          label: Accéder à mon compte
+          target: { role: button, name: Accéder à mon compte }
           optional: true
         - do: dismiss
           label: Bandeau cookies
           target: { role: button, name: Continuer sans accepter }
+          timeoutMs: 3000
         # Step 1 « Informations générales ».
         - do: fill
           label: Nom de la campagne
@@ -102,21 +105,48 @@ actions:
           label: Date
           target: { testId: input-campaign-start-date }
           value: '{{trigger.input.date}}'
-        - do: press
+        # Escape leaves the date picker open over the time fields; a click outside
+        # closes it.
+        - do: click
           label: Fermer le calendrier
-          target: { testId: input-campaign-start-date }
-          key: Escape
-        - do: fill
+          target: { role: heading, name: Durée de l'événement }
+        - do: click
           label: Heure de début
           target: { testId: input-campaign-start-time }
-          value: '{{trigger.input.startTime}}'
-        - do: fill
+        - do: press
+          label: Heure de début « 1 »
+          key: '1'
+        - do: press
+          label: Heure de début « 4 »
+          key: '4'
+        - do: press
+          label: Heure de début « 0 »
+          key: '0'
+        - do: press
+          label: Heure de début « 0 »
+          key: '0'
+        - do: click
           label: Heure de fin
           target: { testId: input-campaign-end-time }
-          value: '{{trigger.input.endTime}}'
+        - do: press
+          label: Heure de fin « 1 »
+          key: '1'
+        - do: press
+          label: Heure de fin « 7 »
+          key: '7'
+        - do: press
+          label: Heure de fin « 0 »
+          key: '0'
+        - do: press
+          label: Heure de fin « 0 »
+          key: '0'
+        - do: waitFor
+          label: TEMP-REHEARSAL
+          target: { text: TEMP-REHEARSAL-STOP }
+          timeoutMs: 1000
         - do: click
           label: Enregistrer (crée le brouillon)
-          target: { testId: button-submit-step }
+          target: { role: button, name: Enregistrer, exact: true }
           irreversible: true
         # Saved: the dashboard moves on to « Montants et options ».
         - do: waitFor
