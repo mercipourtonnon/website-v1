@@ -2,8 +2,8 @@
 # 2026-10-09, A12): what you find, the parcours, the open roles, and the
 # account sign-up form. Indexable, in the sitemap. /inscription keeps the
 # auth-flow role (role-landing, noindex) and links here from its top line.
-# On the static build (GitHub Pages) the form renders but cannot submit (no
-# server): the mailto fallback line below the form covers it (A14).
+# The form submits to the server; the mailto line below it offers a second
+# route for those who prefer email (A14).
 name: devenir-benevole
 path: /devenir-benevole
 sitemap:
@@ -453,7 +453,7 @@ components:
                           href: /connexion
                           className: self-start text-sm font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve
                         content: J'ai déjà un compte
-                  # A14: on the static build the form renders but cannot submit.
+                  # A14: mailto alternative to the form.
                   - type: text
                     element: p
                     props:

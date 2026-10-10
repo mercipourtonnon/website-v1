@@ -1,7 +1,7 @@
 # /ressources — "nos ressources" (review of 2026-10-09, Batch 4): the numbers
 # to call, our own supports, then the curated references the BPS review
-# gathered, drawn from the `ressources` table (seed/ressources.yaml — the
-# static build seeds it first, see scripts/deploy-pages.sh). Seven blocks, one
+# gathered, drawn live from the `ressources` table (seeded from
+# seed/ressources.yaml). Seven blocks, one
 # server-rendered `list` per block (`children` form; `dataSource.limit: 100`
 # so no pager appears), each sorted by `position` and hidden when empty.
 # Adding a reference = adding a row (console or seed), not editing this page.
