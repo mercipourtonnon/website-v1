@@ -23,7 +23,7 @@ server or UI code to maintain.
   the agent-readable export (`sovrium design-system app.yaml --output DESIGN.md`); read it
   before writing any page so tokens, voice and imagery rules are respected. Regenerate it
   whenever `config/design.yaml` changes. On a dev server the same charter renders at
-  `/_admin/design-system` (admin login required; not part of the static build).
+  `/_admin/design-system` (admin login required).
 
 ## Sovrium agent skills and ownership (Sovrium 0.34)
 
@@ -72,7 +72,8 @@ sovrium start app.yaml         # Run the app (dev server)
 sovrium start app.yaml --watch # Hot-reload on config changes
 sovrium validate app.yaml      # Validate the config against the schema
 sovrium schema                 # Print the full JSON Schema for app.yaml
-sovrium build app.yaml         # Build static output
+sovrium build app.yaml         # Build static output (not used in production)
+bash scripts/deploy.sh         # Deploy to Sovrium Cloud (cloud.sovrium.com) via `sovrium deploy`
 sovrium docs search <topic>    # Search the built-in manual (offline)
 sovrium docs config <path>     # Document one config key, e.g. design.colorRoles
 sovrium design-system app.yaml --output DESIGN.md  # Export the brand charter

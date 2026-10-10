@@ -1,8 +1,9 @@
 # `public/` — static-asset directory
 
 Files dropped here are served by `sovrium start` at their path relative to
-this directory: `public/logo.png` -> `/logo.png`. Same set is copied into the
-static output by `sovrium build`.
+this directory: `public/logo.png` -> `/logo.png`. Same set is packaged by
+`sovrium deploy` (production on Sovrium Cloud, via `scripts/deploy.sh`) and
+copied into the static output by `sovrium build`.
 
 ## Three rules an author should know
 
