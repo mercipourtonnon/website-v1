@@ -14,7 +14,8 @@ meta:
   title: Devenir bénévole - Merci pour ton non
   description: "Rejoins l'équipe bénévole de Merci pour ton non à Strasbourg : stands, ateliers, rôles, parcours vers la facilitation. Crée ton compte en deux minutes."
   author: Merci pour ton non
-  robots: index, follow
+  noindex: true # PRE-LAUNCH: remove at launch
+  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch (noindex: true alone is overridden by robots, Sovrium 0.34.3, #140)
   canonical: https://mercipourtonnon.fr/devenir-benevole
   openGraph:
     type: website

@@ -14,7 +14,8 @@ meta:
   title: Interventions pour les structures - Merci pour ton non
   description: "Intervention sur le consentement pour ta structure, à Strasbourg et en Alsace : atelier découverte, demi-journée ou journée, gratuit pour les participant·es."
   author: Merci pour ton non
-  robots: index, follow
+  noindex: true # PRE-LAUNCH: remove at launch
+  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch (noindex: true alone is overridden by robots, Sovrium 0.34.3, #140)
   canonical: https://mercipourtonnon.fr/nos-interventions
   openGraph:
     type: website
