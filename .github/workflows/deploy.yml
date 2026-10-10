@@ -1,25 +1,30 @@
-# NOTE: This CI build is disabled for now — it depends on `sovrium.com/install`,
-# which is currently unavailable (TLS error). Until it is back up, deploy locally
-# with `bash scripts/deploy-pages.sh` (builds dist/ and pushes the `gh-pages`
-# branch), and keep Pages set to "Deploy from a branch" → gh-pages /(root).
-# Re-enable the `push` trigger below once the installer endpoint is reachable.
-name: Deploy to GitHub Pages
+# Deploy to Sovrium Cloud (https://cloud.sovrium.com).
+#
+# Manual only (workflow_dispatch) for now: installing Sovrium depends on
+# `sovrium.com/install`, which was unavailable (TLS error) when this workflow
+# was last checked. Until a run succeeds, deploy locally with
+# `bash scripts/deploy.sh` (after `sovrium login`).
+#
+# Requires the repository secret SOVRIUM_API_KEY: a Sovrium Cloud API key
+# (create one with `sovrium login` on a trusted machine, or from the cloud).
+name: Deploy to Sovrium Cloud
 
 on:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: sovrium-cloud-deploy
+  cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    env:
+      SOVRIUM_APP: mercipourtonnon
+      SOVRIUM_HOST: https://cloud.sovrium.com
     steps:
       - uses: actions/checkout@v4
 
@@ -36,33 +41,10 @@ jobs:
       - name: Validate configuration
         run: sovrium validate app.yaml
 
-      - name: Build static site
+      - name: Sign in to Sovrium Cloud
         env:
-          NODE_ENV: production
-          SOVRIUM_DEPLOYMENT: github-pages
-          SOVRIUM_BASE_URL: https://mercipourtonnon.fr
-          SOVRIUM_GENERATE_SITEMAP: 'true'
-          SOVRIUM_GENERATE_ROBOTS: 'true'
-        run: sovrium build app.yaml
+          SOVRIUM_API_KEY: ${{ secrets.SOVRIUM_API_KEY }}
+        run: sovrium login --host "$SOVRIUM_HOST" --api-key "$SOVRIUM_API_KEY"
 
-      # The static exporter writes JS asset routes with a .html suffix
-      # (e.g. scroll-animation.js.html) — restore the real extension.
-      - name: Fix exported JS asset names
-        run: |
-          for f in dist/assets/*.js.html; do
-            [ -e "$f" ] && mv "$f" "${f%.html}"
-          done
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy
+        run: sovrium deploy app.yaml --host "$SOVRIUM_HOST" --app "$SOVRIUM_APP"

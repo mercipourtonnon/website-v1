@@ -195,7 +195,7 @@ forms:
   # Public: anyone can send an idea (embedded on /vos-idees, also at /forms/idees).
   - $ref: ./config/forms/idees.yaml
 
-# URLs of the retired static (GitHub Pages) export.
+# Old .html URLs of the retired static export (the site before Sovrium Cloud).
 redirects:
   - { from: /index.html, to: / }
   - { from: /newsletter.html, to: /newsletter }

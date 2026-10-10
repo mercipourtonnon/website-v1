@@ -3,8 +3,8 @@
 # audience, a content, a format, a venue — through the public `idees` form
 # (config/forms/idees.yaml, embedded here with formRef; on-idea writes the
 # `ideas` row and mails the coordination). Indexable, in the
-# sitemap. The form submits to the server; the mailto line below it offers a
-# second route for those who prefer email (A14).
+# sitemap. The form submits to the server; there is no mailto fallback
+# under it.
 # Mauve accent: exploration, co-construction (design.colorRoles).
 name: vos-idees
 path: /vos-idees
@@ -239,20 +239,6 @@ components:
                         formRef: idees
                         props:
                           headingLevel: h2
-                  # A14: mailto alternative to the form.
-                  - type: text
-                    element: p
-                    props:
-                      className: type-small text-bleu-fonce-70
-                    children:
-                      - type: text
-                        element: span
-                        content: "Le formulaire ne marche pas ? Écris-nous : "
-                      - type: link
-                        props:
-                          href: mailto:mercipourtonnon@gmail.com?subject=Une%20id%C3%A9e%20pour%20l%27association
-                          className: font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve
-                        content: mercipourtonnon@gmail.com
 
       # Section: et après ? (#et-apres)
       - type: container
