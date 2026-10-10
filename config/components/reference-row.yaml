@@ -5,8 +5,9 @@
 #   - the title links out when `url` holds a value, and stays plain text when
 #     it does not (a book with no official page);
 #   - « en anglais » / « en français et en anglais » when `lang` is not `fr`;
-#   - « à vérifier » until an admin flips `verified` (the lists ship before
-#     every link has been opened).
+#   - « à vérifier » until an admin flips `verified`. /ressources now lists
+#     only verified rows (review of 2026-10-10), so the tag is a safety net
+#     for any list placed without that filter.
 # Vars: $title, $url, $meta (the `meta_line` formula « Auteur · Type · Année »),
 # $note (one or two sentences, DESIGN.md voice).
 # Model: event-date-row + the text column of resource-card. The row title is a

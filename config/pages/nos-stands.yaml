@@ -219,7 +219,7 @@ components:
                 element: p
                 props:
                   className: type-lead text-bleu-fonce-70
-                content: "On a tenu notre stand au Village des associations (mars et septembre 2026), aux distributions de Cop1 (mai 2026), à la Fête de la musique pour la Ville de Strasbourg (juin 2026), et on sera au marché de Noël en décembre. Les prochaines dates sont dans la newsletter et sur Instagram."
+                content: "On a tenu notre stand au Village des associations (mars et septembre 2026), aux distributions de Cop1 (mai 2026), à la Fête de la musique pour la Ville de Strasbourg (juin 2026). À venir : un stand au marché de Noël, prévu en décembre 2026. Les prochaines dates sont dans la newsletter et sur Instagram."
               - type: container
                 props:
                   className: flex flex-wrap items-center gap-4 pt-2

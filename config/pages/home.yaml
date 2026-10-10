@@ -1,7 +1,8 @@
 # / — the landing page: hero, the figures band (#chiffres), « tu es… » doors
-# (#tu-es), the consent teaser, the three actions, a testimonials excerpt,
-# social links and the newsletter. The workshop details moved to /nos-ateliers
-# and the association to /notre-mission (review of 2026-10-09).
+# (#tu-es, which also carry the stands), the consent teaser, one testimonial
+# and the « reste en lien » band (social links + newsletter, #newsletter).
+# The workshop details moved to /nos-ateliers and the association to
+# /notre-mission (review of 2026-10-09).
 name: home
 path: /
 sitemap:
@@ -376,7 +377,8 @@ components:
                     content: Voir les chiffres et le pourquoi →
 
       # Section: Tu es… (#tu-es) — one door per visitor, in the « cet atelier
-      # est pour toi si… » voice.
+      # est pour toi si… » voice. Five doors: ateliers, ressources, interventions,
+      # stands, chiffres (the old « nos actions » row is folded in here).
       - type: container
         element: section
         props:
@@ -403,7 +405,7 @@ components:
                     content: tu es…
               - type: container
                 props:
-                  className: grid md:grid-cols-2 lg:grid-cols-4 gap-6
+                  className: grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6
                 children:
                   - component: door-card
                     vars:
@@ -435,6 +437,16 @@ components:
                       title: une structure ou une entreprise
                       text: "Une équipe, un établissement, une association : on construit avec toi une intervention d'une demi-journée ou d'une journée. Les participant·es ne paient jamais."
                       cta: Voir les interventions
+                  - component: door-card
+                    vars:
+                      href: /nos-stands
+                      target: _self
+                      icon: messages-square
+                      iconBg: bg-cyan-light
+                      accent: text-cyan-ink
+                      title: un festival ou un événement
+                      text: "Tu organises un festival, un forum, une soirée : on vient avec un stand et nos cartes de mises en situation pour ouvrir la discussion."
+                      cta: Voir les stands
                   - component: door-card
                     vars:
                       href: /notre-mission#chiffres
@@ -575,121 +587,8 @@ components:
                         props: { className: font-bold text-bleu-fonce }
                         content: Spécifique
 
-      # Section: Nos actions (#actions) — one card per action page
-      - type: container
-        element: section
-        props:
-          id: actions
-          className: px-4 sm:px-6 py-band-sm md:py-band
-        children:
-          - type: container
-            props:
-              className: max-w-7xl mx-auto flex flex-col gap-block
-            children:
-              - type: container
-                props:
-                  className: flex flex-col gap-4 max-w-2xl
-                children:
-                  - type: text
-                    element: p
-                    props:
-                      className: type-overline text-cyan-ink
-                    content: Nos actions
-                  - type: text
-                    element: h2
-                    props:
-                      className: type-section text-bleu-fonce
-                    content: trois façons de se rencontrer
-                  - type: text
-                    element: p
-                    props:
-                      className: type-lead text-bleu-fonce-70
-                    content: Un atelier pour s'entraîner, un stand pour en parler, une intervention pour ta structure.
-              - type: container
-                props:
-                  className: grid md:grid-cols-3 gap-6
-                children:
-                  - type: link
-                    props:
-                      href: /nos-ateliers
-                      className: group bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3 h-full hover:shadow-card transition-shadow
-                    children:
-                      - type: container
-                        props:
-                          className: w-12 h-12 rounded-pill flex items-center justify-center bg-orange-light
-                        children:
-                          - type: icon
-                            props: { name: users, size: 24, strokeWidth: 2, className: text-orange-ink }
-                      - type: text
-                        element: h3
-                        props:
-                          className: type-h4 text-bleu-fonce
-                        content: nos ateliers
-                      - type: text
-                        element: p
-                        props:
-                          className: type-small text-bleu-fonce-70 flex-1
-                        content: "3 heures, gratuites, en petit groupe, pour pratiquer le consentement : dire non, l'accueillir, changer d'avis."
-                      - type: text
-                        element: span
-                        props:
-                          className: inline-flex items-center gap-2 font-bold text-mauve group-hover:underline underline-offset-4
-                        content: Découvrir les ateliers →
-                  - type: link
-                    props:
-                      href: /nos-stands
-                      className: group bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3 h-full hover:shadow-card transition-shadow
-                    children:
-                      - type: container
-                        props:
-                          className: w-12 h-12 rounded-pill flex items-center justify-center bg-cyan-light
-                        children:
-                          - type: icon
-                            props: { name: messages-square, size: 24, strokeWidth: 2, className: text-cyan-ink }
-                      - type: text
-                        element: h3
-                        props:
-                          className: type-h4 text-bleu-fonce
-                        content: nos stands de sensibilisation
-                      - type: text
-                        element: p
-                        props:
-                          className: type-small text-bleu-fonce-70 flex-1
-                        content: "En festival ou en événement, on vient avec nos cartes de mises en situation pour ouvrir la discussion."
-                      - type: text
-                        element: span
-                        props:
-                          className: inline-flex items-center gap-2 font-bold text-mauve group-hover:underline underline-offset-4
-                        content: Découvrir les stands →
-                  - type: link
-                    props:
-                      href: /nos-interventions
-                      className: group bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3 h-full hover:shadow-card transition-shadow
-                    children:
-                      - type: container
-                        props:
-                          className: w-12 h-12 rounded-pill flex items-center justify-center bg-mauve-light
-                        children:
-                          - type: icon
-                            props: { name: building-2, size: 24, strokeWidth: 2, className: text-mauve }
-                      - type: text
-                        element: h3
-                        props:
-                          className: type-h4 text-bleu-fonce
-                        content: nos interventions
-                      - type: text
-                        element: p
-                        props:
-                          className: type-small text-bleu-fonce-70 flex-1
-                        content: "Une entreprise, une asso, un établissement ? On construit avec toi une intervention adaptée à ton public."
-                      - type: text
-                        element: span
-                        props:
-                          className: inline-flex items-center gap-2 font-bold text-mauve group-hover:underline underline-offset-4
-                        content: Découvrir les interventions →
-
-      # Section: Testimonials excerpt (#temoignages) — the three featured quotes;
-      # the full wall lives on /nos-ateliers#temoignages.
+      # Section: Testimonials excerpt (#temoignages) — one featured quote; the
+      # full wall lives on /nos-ateliers#temoignages.
       - type: container
         element: section
         props:
@@ -698,11 +597,11 @@ components:
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto flex flex-col gap-block
+              className: max-w-3xl mx-auto flex flex-col gap-block
             children:
               - type: container
                 props:
-                  className: flex flex-col gap-4 max-w-2xl
+                  className: flex flex-col gap-4
                 children:
                   - type: text
                     element: p
@@ -714,78 +613,48 @@ components:
                     props:
                       className: type-section text-bleu-fonce
                     content: ce que les participant·es en disent
-                  - type: text
-                    element: p
-                    props:
-                      className: type-lead text-bleu-fonce-70
-                    content: Des personnes qui sont venues, et qui en parlent mieux que nous.
-              - type: container
-                props:
-                  className: grid lg:grid-cols-3 gap-6 items-start
-                children:
-                  - component: testimonial-card
-                    vars:
-                      size: type-lead
-                      quote: "C'est la première fois que je participais à un atelier autour de la notion de consentement, et première fois tout court que je participais à un atelier militant, et ce fût une très belle première fois ! […] je me suis sentie en sécurité et à l'aise pour participer facilement. Le contenu en lui-même a été très intéressant et m'a apporté des notions nouvelles alors que je pensais déjà être assez calée sur le sujet. Les exercices pratiques sont un vrai plus ! […]"
-                      author: Leyla
-                  - component: testimonial-card
-                    vars:
-                      size: type-lead
-                      quote: "En tant qu'homme cis, je craignais que la question du consentement ne soit abordée que par le prisme des violences sexistes, dans lesquelles les hommes sont très majoritairement mis en cause. Mais l'angle de l'atelier était bien plus large que ça, et mettait en lumière le fait que poser ses limites, et dépasser les limites d'autrui, était sans rapport avec les questions de genre."
-                      author: Pierre
-                  - component: testimonial-card
-                    vars:
-                      size: type-lead
-                      quote: "Une très belle expérience à partager! Venu en couple, j'avais un peu d'appréhension à l'idée de parler de moi ou de nous. La force de l'atelier est d'approcher le consentement avec des exemples simples, progressifs et du quotidien : \"tu me prêtes ton crayon? ...\". Une prise de recul qui permet d'approcher la notion de manière sereine. Merci beaucoup."
-                      author: Nicolas
+              - component: testimonial-card
+                vars:
+                  size: type-lead
+                  quote: "C'est la première fois que je participais à un atelier autour de la notion de consentement, et première fois tout court que je participais à un atelier militant, et ce fût une très belle première fois ! […] je me suis sentie en sécurité et à l'aise pour participer facilement. Le contenu en lui-même a été très intéressant et m'a apporté des notions nouvelles alors que je pensais déjà être assez calée sur le sujet. Les exercices pratiques sont un vrai plus ! […]"
+                  author: Leyla
               - type: link
                 props:
                   href: /nos-ateliers#temoignages
                   className: self-start font-bold text-bleu-fonce underline decoration-pourpre decoration-2 underline-offset-4 hover:text-pourpre-hover
-                content: Lire tous les témoignages
+                content: Lire tous les témoignages →
 
-      # Section: Suis-nous (#suis-nous)
+      # Section: Reste en lien (#newsletter) — social links + the Brevo form,
+      # injected into #newsletter-embed by /assets/brevo-embed.js.
       - type: container
         element: section
         props:
-          id: suis-nous
-          className: px-4 sm:px-6 py-band-sm md:py-band
+          id: newsletter
+          className: px-4 sm:px-6 py-band-sm md:py-band bg-mauve-light
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center
+              className: max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center
             children:
               - type: container
                 props:
-                  className: md:col-span-6 photo-frame frame-cyan
-                children:
-                  - type: image
-                    props:
-                      src: /pictures/stand/equipe-stand-bifurquer.webp
-                      srcset: /pictures/stand/equipe-stand-bifurquer-sm.webp 800w, /pictures/stand/equipe-stand-bifurquer.webp 1600w
-                      sizes: '(min-width: 768px) 600px, 100vw'
-                      alt: L'équipe bénévole rit devant le stand Merci pour ton non, un soir de festival
-                      loading: lazy
-                      className: w-full h-auto rounded-media shadow-card object-cover aspect-[3/2]
-              - type: container
-                props:
-                  className: md:col-span-6 flex flex-col gap-6
+                  className: lg:col-span-5 flex flex-col gap-6
                 children:
                   - type: text
                     element: p
                     props:
-                      className: type-overline text-cyan-ink
+                      className: type-overline text-mauve
                     content: Communauté
                   - type: text
                     element: h2
                     props:
                       className: type-section text-bleu-fonce
-                    content: suis-nous
+                    content: reste en lien
                   - type: text
                     element: p
                     props:
                       className: type-lead text-bleu-fonce-70
-                    content: Rejoins notre communauté pour suivre nos actualités, événements et partages sur le consentement
+                    content: "Inscris-toi pour recevoir nos prochains ateliers et nos ressources sur le consentement, ou suis-nous sur les réseaux."
                   - type: container
                     props:
                       className: flex flex-wrap gap-3
@@ -826,36 +695,10 @@ components:
                             content: LinkedIn
                           - type: icon
                             props: { name: arrow-up-right, size: 18, strokeWidth: 2 }
-
-      # Section: Newsletter (#newsletter) — Brevo form injected by /assets/brevo-embed.js
-      - type: container
-        element: section
-        props:
-          id: newsletter
-          className: px-4 sm:px-6 py-band-sm md:py-band bg-mauve-light
-        children:
-          - type: container
-            props:
-              className: max-w-2xl mx-auto flex flex-col gap-4 text-center
-            children:
-              - type: text
-                element: p
-                props:
-                  className: type-overline text-mauve
-                content: Newsletter
-              - type: text
-                element: h2
-                props:
-                  className: type-section text-bleu-fonce
-                content: reste informé·e
-              - type: text
-                element: p
-                props:
-                  className: type-lead text-bleu-fonce-70 mb-4
-                content: Inscris-toi pour recevoir nos actualités, nos prochains ateliers et nos ressources sur le consentement.
               - type: container
                 props:
                   id: newsletter-embed
+                  className: lg:col-span-7
 
   # Footer
   - component: site-footer

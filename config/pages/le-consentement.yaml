@@ -1,7 +1,7 @@
 # /le-consentement — "notre vision du consentement": the knowledge shared
 # during the Niveau 1 workshop. Since the review of 2026-10-09 the workshop
-# techniques (#insistance, #nuances) live in /nos-ateliers#programme and the
-# bias list keeps six representative cards.
+# techniques are steps of /nos-ateliers#programme and the bias list keeps six
+# representative cards. One booking CTA only: the closing band.
 # Source: the "Apports" blocks of the Notion Déroulé (Niveau 1 – Tout public)
 # and the "Cartes Biais" page (reworked biases). Facilitation material —
 # timings, instructions, materials, exercise scripts, learning objectives — is
@@ -129,16 +129,6 @@ components:
                     props:
                       className: flex flex-wrap items-center gap-4
                     children:
-                      - type: link
-                        props:
-                          href: /nos-ateliers#events
-                          className: inline-flex items-center gap-2 whitespace-nowrap bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
-                        children:
-                          - type: text
-                            element: span
-                            content: Je réserve ma place
-                          - type: icon
-                            props: { name: arrow-right, size: 20, strokeWidth: 2 }
                       - type: link
                         props:
                           href: /ressources
@@ -692,7 +682,7 @@ components:
                               definition: Des écarts de hiérarchie, d'âge, de prestige ou de situation économique entre les personnes.
                               effect: Ils pèsent sur la liberté de dire non.
 
-      # Closing CTA
+      # Closing CTA — the page's only booking button
       - type: container
         element: section
         props:

@@ -1,8 +1,9 @@
 # /nos-interventions — the offer for structures (à but non lucratif, petites
 # structures et ESS, entreprises), written from the BPS (3.16 structures,
-# 1.18 formats, 2.9 / 3.16 tarifs, 2.16 references) in the review of
-# 2026-10-09. Sections: #structures · #formats (with « comment on travaille »)
-# · #tarifs · #references · témoignage · #contact.
+# 1.18 formats, 2.16 references) in the review of 2026-10-09. Sections:
+# #structures · #formats (with « comment on travaille ») · #tarifs (« sur
+# devis », no price published since 2026-10-10) · #references · témoignage ·
+# #contact.
 name: nos-interventions
 path: /nos-interventions
 sitemap:
@@ -114,11 +115,6 @@ components:
                             content: Parler de ton projet
                           - type: icon
                             props: { name: arrow-down, size: 20, strokeWidth: 2 }
-                      - type: link
-                        props:
-                          href: '#tarifs'
-                          className: font-bold text-mauve underline underline-offset-4 hover:text-mauve-hover py-2
-                        content: Voir ce que ça coûte
               - type: container
                 props:
                   className: lg:col-span-6 photo-frame frame-cyan
@@ -174,14 +170,14 @@ components:
                       icon: users
                       accent: text-mauve
                       title: petites structures, collectifs et coopératives
-                      text: "Une équipe, un collectif, une coopérative : un tarif de solidarité, et un format à la taille de ton groupe."
+                      text: "Une équipe, un collectif, une coopérative : un format à la taille de ton groupe."
                   - component: audience-card
                     vars:
                       iconBg: bg-mauve-light
                       icon: building-2
                       accent: text-mauve
                       title: entreprises et grandes institutions
-                      text: "Prévention collective du harcèlement, culture commune du non, qualité de vie au travail — et notre tarif finance nos ateliers gratuits."
+                      text: "Prévention collective du harcèlement, culture commune du non, qualité de vie au travail — et ton intervention finance nos ateliers gratuits."
 
       # Section: Deux formats (#formats) — BPS 1.18, with « comment on travaille »
       - type: container
@@ -324,9 +320,8 @@ components:
                             props: { className: type-small text-bleu-fonce-70 }
                             content: Deux facilitateur·ices animent l'intervention dans un cadre bienveillant, puis on prend un temps avec toi pour en tirer les suites.
 
-      # Section: Tarifs (#tarifs) — decision A1 of the 2026-10-09 review: the
-      # grid of the BPS (2.9 / 3.16) is published as is — gratuit / subvention
-      # ou convention / 500 € / 1 000 € la demi-journée; participants never pay.
+      # Section: Tarifs (#tarifs) — no price grid since 2026-10-10 (author's
+      # decision): « sur devis », pointing to the association's email.
       - type: container
         element: section
         props:
@@ -335,111 +330,38 @@ components:
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto flex flex-col gap-block
+              className: max-w-3xl mx-auto flex flex-col gap-4 text-bleu-fonce
             children:
-              - type: container
+              - type: text
+                element: h2
                 props:
-                  className: flex flex-col gap-4 max-w-2xl
+                  className: type-section text-bleu-fonce
+                content: combien ça coûte ?
+              - type: text
+                element: p
+                props:
+                  className: type-lead text-bleu-fonce
                 children:
                   - type: text
-                    element: p
-                    props:
-                      className: type-overline text-mauve
-                    content: Tarifs
+                    element: span
+                    props: { className: font-bold }
+                    content: Les participant·es ne paient jamais.
                   - type: text
-                    element: h2
+                    element: span
+                    content: " Pour ta structure, c'est sur devis, selon ton public et le format : "
+                  - type: link
                     props:
-                      className: type-section text-bleu-fonce
-                    content: ce que ça coûte, et pourquoi
-              - type: container
-                element: div
+                      href: mailto:mercipourtonnon@gmail.com?subject=Intervention%20dans%20ma%20structure
+                      className: font-bold text-bleu-fonce underline decoration-mauve decoration-2 underline-offset-4 hover:text-mauve
+                    content: écris-nous
+                  - type: text
+                    element: span
+                    content: ", on en parle. Ce qui est facturé finance nos ateliers gratuits."
+              - type: text
+                element: p
                 props:
-                  role: list
-                  className: grid sm:grid-cols-2 lg:grid-cols-4 gap-6
-                children:
-                  - type: container
-                    element: div
-                    props: { role: listitem, className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-2 }
-                    children:
-                      - type: text
-                        element: h3
-                        props: { className: type-h4 text-bleu-fonce }
-                        content: particuliers
-                      - type: text
-                        element: p
-                        props: { className: title-font type-h3 text-mauve }
-                        content: gratuit
-                      - type: text
-                        element: p
-                        props: { className: type-caption text-bleu-fonce-70 }
-                        content: Don libre pour soutenir l'association
-                  - type: container
-                    element: div
-                    props: { role: listitem, className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-2 }
-                    children:
-                      - type: text
-                        element: h3
-                        props: { className: type-h4 text-bleu-fonce }
-                        content: structure à but non lucratif
-                      - type: text
-                        element: p
-                        props: { className: title-font type-h3 text-mauve }
-                        content: subvention ou convention
-                      - type: text
-                        element: p
-                        props: { className: type-caption text-bleu-fonce-70 }
-                        content: À défaut, 500 € la demi-journée
-                  - type: container
-                    element: div
-                    props: { role: listitem, className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-2 }
-                    children:
-                      - type: text
-                        element: h3
-                        props: { className: title-font normal-case type-h4 text-bleu-fonce }
-                        content: petite structure privée ou de l'ESS
-                      - type: text
-                        element: p
-                        props: { className: title-font type-h3 text-mauve }
-                        content: 500 €
-                      - type: text
-                        element: p
-                        props: { className: type-caption text-bleu-fonce-70 }
-                        content: La demi-journée
-                  - type: container
-                    element: div
-                    props: { role: listitem, className: bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-2 }
-                    children:
-                      - type: text
-                        element: h3
-                        props: { className: type-h4 text-bleu-fonce }
-                        content: entreprise, grande institution, grande association
-                      - type: text
-                        element: p
-                        props: { className: title-font type-h3 text-mauve }
-                        content: 1 000 €
-                      - type: text
-                        element: p
-                        props: { className: type-caption text-bleu-fonce-70 }
-                        content: La demi-journée
-              - type: container
-                props:
-                  className: max-w-3xl flex flex-col gap-4 text-bleu-fonce
-                children:
-                  - type: text
-                    element: p
-                    props:
-                      className: type-lead
-                    children:
-                      - type: text
-                        element: span
-                        props: { className: font-bold }
-                        content: Les participant·es ne paient jamais.
-                      - type: text
-                        element: span
-                        content: " Ce qui est facturé finance ce qui est gratuit : nos tarifs sont au bas du marché parce qu'on est une association, et chaque intervention payée paie des ateliers ouverts à tou·tes."
-                  - type: text
-                    element: p
-                    content: "Pas de budget ? On ouvre l'atelier au grand public ou on cherche un financement ensemble — on n'intervient pas gratuitement sur commande."
+                  className: text-bleu-fonce-70
+                content: "Pas de budget ? On ouvre l'atelier au grand public ou on cherche un financement ensemble — on n'intervient pas gratuitement sur commande."
 
       # Section: Références (#references) — BPS 2.16, shipped visible (A6)
       - type: container
@@ -483,7 +405,7 @@ components:
                       icon: graduation-cap
                       role: Premier atelier réservé
                       name: Unis-Cité
-                      text: Un atelier pour 8 volontaires en service civique, décembre 2026.
+                      text: Un atelier prévu en décembre 2026 pour 8 volontaires en service civique.
                       href: https://www.uniscite.fr
                       linkLabel: Découvrir Unis-Cité
 
