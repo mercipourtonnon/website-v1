@@ -6,7 +6,9 @@ Verified against Sovrium v0.10.0 on this machine. Follow these EXACTLY.
 Valid types include: `container`, `flex`, `grid`, `card`, `hero`, `text`, `icon`,
 `image`, `video`, `iframe`, `button`, `badge`, `link`, `divider`, `spacer`, `list`,
 `list-item`, `customHTML`.
-- FORBIDDEN (island components — break in static builds): `accordion`, `tabs`,
+- FORBIDDEN (island components — banned because they broke in the old static build;
+  production is now server-hosted on Sovrium Cloud, so re-check against the current
+  Sovrium before lifting the ban): `accordion`, `tabs`,
   `dialog`, `drawer`, `tooltip`, `popover`, `select`, `navigation-menu`, `carousel`,
   `dropdown-menu`, `hover-card`, `toast`, `command`, `modal`.
 - There is NO `heading` type. Headings = `type: text` + `element: h1`/`h2`/`h3`/`h4`.
