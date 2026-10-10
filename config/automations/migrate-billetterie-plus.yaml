@@ -126,7 +126,9 @@ actions:
       maxIterations: 20
       continueOnItemError: true
       actions:
-        # One draft automation per time slot (see helloasso-draft-14h-17h).
+        # One draft automation per time slot (see helloasso-draft-14h-17h);
+        # called, not inlined: a browser run in a branch renders no template
+        # in Sovrium 0.35.0 (sovrium#144).
         - name: by_slot
           type: path
           operator: branch
