@@ -1,9 +1,11 @@
 # /notre-mission — the association, told from the Business Plan Social (review
 # of 2026-10-09): mission (#mission), anchor nav, figures (#chiffres), the
-# social need (#pourquoi), our story and timeline (#histoire), vision teaser
-# (#vision), values (#valeurs), l'équipe cœur (#equipe), the bénévoles and how
-# to contribute (#benevoles), governance (#fonctionnement), partners
-# (#partenaires), four ways in (#agir) and what comes next (#ensuite).
+# social need with the link to /le-consentement (#pourquoi), our story and
+# timeline (#histoire), values (#valeurs), l'équipe cœur (#equipe), the
+# bénévoles (#benevoles, one paragraph), governance (#fonctionnement), partners
+# (#partenaires), four ways in (#agir, how to contribute included) and what
+# comes next (#ensuite, the one detailed roadmap; /vos-idees links here).
+# Dates after today are marked « à venir » / « prévu ».
 # Section ids #mission, #valeurs, #equipe, #partenaires are the home's old
 # anchors; /nos-interventions links to #chiffres.
 name: notre-mission
@@ -86,7 +88,8 @@ components:
       id: contenu
       className: bg-white overflow-x-clip
     children:
-      # Page hero (#mission) — the mission statement, three pillars, approach and trust
+      # Page hero (#mission) — the mission statement, three pillars and the
+      # free + don libre sentence
       - type: container
         element: section
         props:
@@ -212,75 +215,37 @@ components:
                         element: p
                         props: { className: type-small text-bleu-fonce-70 }
                         content: Issu des luttes féministes, le consentement questionne les rapports de pouvoir dans la société
-              # Notre approche — two facts side by side. The trust lines moved to
-              # #equipe (three legitimacy lines, BPS 2.13).
+              # Notre approche — the free + donation sentence. The trust lines
+              # moved to #equipe (three legitimacy lines, BPS 2.13).
               - type: container
                 props:
-                  className: bg-white rounded-card shadow-card p-8 flex flex-col gap-6
+                  className: bg-white rounded-card shadow-card p-8 flex flex-col gap-3
                 children:
                   - type: text
                     element: h3
                     props: { className: type-h4 text-bleu-fonce }
                     content: notre approche
-                  - type: container
-                    props: { className: 'grid md:grid-cols-2 gap-6' }
+                  - type: text
+                    element: p
+                    props: { className: text-bleu-fonce-70 }
                     children:
-                      - type: container
-                        props: { className: flex flex-col gap-2 }
-                        children:
-                          - type: text
-                            element: h4
-                            props: { className: font-bold text-bleu-fonce }
-                            content: Association à but non lucratif
-                          - type: text
-                            element: p
-                            props: { className: type-small text-bleu-fonce-70 }
-                            children:
-                              - type: text
-                                element: span
-                                content: 'Nos ateliers sont '
-                              - type: text
-                                element: span
-                                props: { className: font-bold text-bleu-fonce }
-                                content: gratuits
-                              - type: text
-                                element: span
-                                content: ' — un don libre soutient l''association, et personne n''est refusé·e par manque d''argent. On croit que le consentement doit être '
-                              - type: text
-                                element: span
-                                props: { className: font-bold text-bleu-fonce }
-                                content: accessible
-                              - type: text
-                                element: span
-                                content: ' à tou·te·s.'
-                      - type: container
-                        props: { className: flex flex-col gap-2 }
-                        children:
-                          - type: text
-                            element: h4
-                            props: { className: font-bold text-bleu-fonce }
-                            content: Inclusif et accessible
-                          - type: text
-                            element: p
-                            props: { className: type-small text-bleu-fonce-70 }
-                            children:
-                              - type: text
-                                element: span
-                                content: 'On accueille tous les publics dans leur '
-                              - type: text
-                                element: span
-                                props: { className: font-bold text-bleu-fonce }
-                                content: diversité
-                              - type: text
-                                element: span
-                                content: '. Nos espaces sont '
-                              - type: text
-                                element: span
-                                props: { className: font-bold text-bleu-fonce }
-                                content: bienveillants
-                              - type: text
-                                element: span
-                                content: ' et adaptés aux différents vécus et capacités.'
+                      - type: text
+                        element: span
+                        content: 'Association à but non lucratif, on garde nos ateliers '
+                      - type: text
+                        element: span
+                        props: { className: font-bold text-bleu-fonce }
+                        content: gratuits
+                      - type: text
+                        element: span
+                        content: ' — un don libre soutient l''association, et personne n''est refusé·e par manque d''argent. On croit que le consentement doit être '
+                      - type: text
+                        element: span
+                        props: { className: font-bold text-bleu-fonce }
+                        content: accessible
+                      - type: text
+                        element: span
+                        content: ' à tou·te·s.'
 
       # Anchor nav — horizontal pills, not sticky (the page is long; the header
       # already is). Modelled on the « Sur cette page » nav of /le-consentement.
@@ -313,9 +278,6 @@ components:
               - type: link
                 props: { href: '#equipe', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
                 content: L'équipe
-              - type: link
-                props: { href: '#benevoles', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
-                content: Les bénévoles
               - type: link
                 props: { href: '#fonctionnement', className: 'rounded-pill border border-bleu-fonce-light px-3 py-1.5 text-bleu-fonce hover:bg-mauve-light hover:text-mauve transition-colors' }
                 content: Fonctionnement
@@ -374,7 +336,7 @@ components:
                 element: p
                 props:
                   className: type-small text-bleu-fonce-70 max-w-3xl
-                content: "Et aussi : 5 présences publiques, 4 facilitateur·ices, une première commande de la Ville de Strasbourg, un premier atelier réservé par Unis-Cité."
+                content: "Et aussi : 5 présences publiques, 4 facilitateur·ices, une première commande de la Ville de Strasbourg, un premier atelier réservé par Unis-Cité, prévu en décembre 2026."
 
       # Section: Pourquoi c'est important (#pourquoi) — the social need, sourced
       # (BPS 1.1–1.6). Pourpre: the emotional register of the figures.
@@ -407,6 +369,12 @@ components:
                     props:
                       className: type-lead text-bleu-fonce
                     content: "On apprend à lire, à nager, à conduire. Dire non et entendre un non, personne ne nous l'apprend. Merci pour ton non est la pièce manquante entre les politiques de prévention des violences sexistes et sexuelles et la stratégie nationale des compétences psychosociales : apprendre le consentement avant, comme une compétence relationnelle, pour tout le monde."
+                  # Was the #vision teaser band (review of 2026-10-10).
+                  - type: link
+                    props:
+                      href: /le-consentement
+                      className: self-start font-bold text-bleu-fonce underline decoration-pourpre decoration-2 underline-offset-4 hover:text-pourpre-hover
+                    content: Lire notre vision du consentement →
               - type: container
                 element: div
                 props:
@@ -519,7 +487,7 @@ components:
                                 content: Lire nos deux définitions
 
       # Section: Notre histoire (#histoire) — BPS 1.8 narrative, then the six
-      # dates of BPS 1.9 on a numbered rail.
+      # dates of BPS 1.9 on a numbered rail (the last two are still to come).
       - type: container
         element: section
         props:
@@ -660,7 +628,7 @@ components:
                           - type: text
                             element: p
                             props: { className: type-overline text-orange-ink pt-2.5 }
-                            content: 15 nov. 2026
+                            content: 15 nov. 2026 · à venir
                           - type: text
                             element: h3
                             props: { className: type-h4 text-bleu-fonce mb-1 }
@@ -668,7 +636,7 @@ components:
                           - type: text
                             element: p
                             props: { className: type-small text-bleu-fonce-70 }
-                            content: Un an après la création, les membres se réunissent pour la première AG ordinaire.
+                            content: Un an après la création, les membres se réuniront pour la première AG ordinaire.
                       - type: container
                         element: div
                         props: { role: listitem, className: relative pl-14 pb-2 ml-5 }
@@ -680,7 +648,7 @@ components:
                           - type: text
                             element: p
                             props: { className: type-overline text-orange-ink pt-2.5 }
-                            content: déc. 2026
+                            content: déc. 2026 · prévu
                           - type: text
                             element: h3
                             props: { className: type-h4 text-bleu-fonce mb-1 }
@@ -688,52 +656,7 @@ components:
                           - type: text
                             element: p
                             props: { className: type-small text-bleu-fonce-70 }
-                            content: Unis-Cité réserve un atelier pour ses volontaires en service civique.
-
-      # Section: Notre vision du consentement (#vision) — teaser of /le-consentement
-      - type: container
-        element: section
-        props:
-          id: vision
-          className: px-4 sm:px-6 py-band-sm md:py-band
-        children:
-          - type: container
-            props:
-              className: max-w-5xl mx-auto bg-mauve-light rounded-media p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center
-            children:
-              - type: container
-                props:
-                  className: md:col-span-8 flex flex-col gap-4
-                children:
-                  - type: text
-                    element: p
-                    props:
-                      className: type-overline text-mauve
-                    content: Ce qu'on défend
-                  - type: text
-                    element: h2
-                    props:
-                      className: type-section text-bleu-fonce
-                    content: notre vision du consentement
-                  - type: text
-                    element: p
-                    props:
-                      className: type-lead text-bleu-fonce
-                    content: "Deux définitions, l'acronyme RÈGLES, l'espace entre le oui et le non, dire et remercier le non, changer d'avis, et les biais qui nous poussent à dire oui : ce sur quoi reposent nos ateliers, en libre accès."
-              - type: container
-                props:
-                  className: md:col-span-4 flex md:justify-end
-                children:
-                  - type: link
-                    props:
-                      href: /le-consentement
-                      className: inline-flex items-center gap-2 whitespace-nowrap bg-mauve text-white px-6 py-3 rounded-pill font-bold hover:bg-mauve-hover transition-colors
-                    children:
-                      - type: text
-                        element: span
-                        content: Lire notre vision
-                      - type: icon
-                        props: { name: arrow-right, size: 20, strokeWidth: 2 }
+                            content: Unis-Cité a réservé un atelier pour ses volontaires en service civique.
 
       # Section: Nos valeurs (#valeurs)
       - type: container
@@ -924,8 +847,9 @@ components:
                           bio: Professionnelle de la communication depuis 8 ans, mes valeurs personnelles colorent mes créations et guident mes missions. Féministe et queer, je suis aussi engagée au sein du groupe Bipan Strasbourg. J'ai rejoint Merci pour ton non après avoir moi-même participé à un atelier de consentement. Aujourd'hui, je mets mes compétences au service de l'association pour faire rayonner ces valeurs de respect, d'écoute et d'émancipation auxquelles je crois profondément.
 
       # Section: Les bénévoles (#benevoles) — who contributes beside the équipe
-      # cœur and how (BPS 3.24, 3.30, 3.6, 2.7). No team cards for them (review
-      # of 2026-10-09, A10): this section and /devenir-benevole instead.
+      # cœur (BPS 3.24). No team cards for them (review of 2026-10-09, A10);
+      # how to contribute is the « devenir bénévole » door of #agir and
+      # /devenir-benevole.
       - type: container
         element: section
         props:
@@ -955,50 +879,6 @@ components:
                     props:
                       className: type-lead text-bleu-fonce
                     content: "L'association, c'est aussi celles et ceux qui tiennent les stands, diffusent les flyers, améliorent les ateliers, gèrent l'administratif ou dessinent nos visuels. Isabelle, Maxime, Laetitia, Olivia et d'autres y contribuent à leur rythme."
-              - type: container
-                props:
-                  className: flex flex-col gap-6
-                children:
-                  - type: text
-                    element: h3
-                    props:
-                      className: type-h3 text-bleu-fonce
-                    content: comment contribuer
-                  - type: container
-                    props:
-                      className: grid md:grid-cols-3 gap-6
-                    children:
-                      - component: audience-card
-                        vars:
-                          icon: hand
-                          iconBg: bg-orange-light
-                          accent: text-orange-ink
-                          title: un coup de main ponctuel
-                          text: "Tenir un stand, distribuer des flyers, relire un texte, prêter un lieu : tu rejoins le Cercle Abeilles dès ta première adhésion, sans engagement de durée."
-                      - component: audience-card
-                        vars:
-                          icon: users
-                          iconBg: bg-orange-light
-                          accent: text-orange-ink
-                          title: un rôle dans l'équipe
-                          text: "Communication, logistique, trésorerie, pédagogie : chaque rôle a une raison d'être et des redevabilités écrites. Tu le consens, tu peux le quitter à tout moment. Trésorerie et logistique cherchent quelqu'un."
-                      - component: audience-card
-                        vars:
-                          icon: sparkles
-                          iconBg: bg-orange-light
-                          accent: text-orange-ink
-                          title: devenir facilitateur·ice
-                          text: "Le parcours est participant·e → bénévole → facilitateur·ice : formation interne, co-animation en binôme, débrief après chaque atelier, supervision entre pairs. À partir de 2028, une formation d'essaimage de deux jours pour animer ailleurs."
-              - type: link
-                props:
-                  href: /devenir-benevole
-                  className: inline-flex items-center gap-2 self-start whitespace-nowrap bg-orange text-bleu-fonce px-6 py-3 rounded-pill font-bold hover:bg-orange-hover transition-colors
-                children:
-                  - type: text
-                    element: span
-                    content: Rejoindre l'équipe bénévole
-                  - type: icon
-                    props: { name: arrow-right, size: 20, strokeWidth: 2 }
 
       # Section: Comment on fonctionne (#fonctionnement) — the three circles and
       # the decision rule (BPS 3.20, 3.21, 1.21). Cyan: factual register.
@@ -1200,7 +1080,7 @@ components:
                               icon: graduation-cap
                               role: Premier atelier réservé
                               name: Unis-Cité
-                              text: Un atelier pour 8 volontaires en service civique, décembre 2026.
+                              text: Un atelier prévu en décembre 2026 pour 8 volontaires en service civique.
                               href: https://www.uniscite.fr
                               linkLabel: Découvrir Unis-Cité
                           - component: partner-row
@@ -1212,7 +1092,8 @@ components:
                               href: https://cop1.eu
                               linkLabel: Découvrir Cop1
 
-      # Section: Agir avec nous (#agir) — four ways in, one door-card each.
+      # Section: Agir avec nous (#agir) — four ways in, one door-card each; the
+      # bénévole door carries the old « comment contribuer » cards.
       # « proposer une idée » links /vos-idees (page in the ideas batch).
       - type: container
         element: section
@@ -1266,7 +1147,7 @@ components:
                       iconBg: bg-orange-lighter
                       accent: text-orange-ink
                       title: devenir bénévole
-                      text: "Tenir un stand, accueillir un atelier, faire connaître l'association — ou te former à la facilitation. Tu choisis ton rythme et le rôle que tu consens."
+                      text: "Un coup de main ponctuel (un stand, des flyers, un lieu), un rôle dans l'équipe, ou le parcours pour devenir facilitateur·ice. Tu choisis ton rythme et le rôle que tu consens, et tu peux le quitter à tout moment."
                       cta: Rejoindre l'équipe bénévole
                   - component: door-card
                     vars:

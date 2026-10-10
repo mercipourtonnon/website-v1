@@ -5,6 +5,8 @@
 # server-rendered `list` per block (`children` form; `dataSource.limit: 100`
 # so no pager appears), each sorted by `position` and hidden when empty.
 # Adding a reference = adding a row (console or seed), not editing this page.
+# Only rows with `verified` set are listed (review of 2026-10-10): a reference
+# appears once an admin has opened its link.
 # The `aide` rows of the table mirror the static `help-now-band` and are not
 # listed here. Our own supports stay hand-placed `resource-card`s: the print
 # masters are hosted on kDrive, only a light thumbnail lives in public/resources/.
@@ -129,11 +131,6 @@ components:
                     props:
                       className: type-lead text-bleu-fonce max-w-xl
                     content: "Des numéros si tu as besoin d'aide, nos affiches, et les livres, films, podcasts, jeux et textes qui nourrissent nos ateliers."
-                  - type: text
-                    element: p
-                    props:
-                      className: type-caption text-bleu-fonce-70
-                    content: Les références marquées « à vérifier » sont en cours de contrôle.
               - type: container
                 props:
                   className: lg:col-span-6 photo-frame frame-orange
@@ -237,27 +234,25 @@ components:
                               text: « Pas touche sans demander », « Si tu fais l'anguille, c'est que c'est non ! », « Recevoir un "non" est un cadeau », « On peut changer de disque ! » et « Dire "non" n'est pas une trahison ». Cinq affiches au format A3, pensées pour être imprimées et affichées.
                               href: https://kdrive.infomaniak.com/app/share/3042221/15e326c4-bee4-4b34-a443-838de7a36201
                               cta: Télécharger les affiches
-                          # In preparation — the flyer and the kit (BPS 1.17, 3.32).
+                          # In preparation — the flyer and the kit (BPS 1.17, 3.32), one line.
                           - type: container
                             props:
-                              className: rounded-card border-2 border-dashed border-cyan-lighter bg-cyan-light p-8 flex flex-col sm:flex-row sm:items-center gap-4
+                              className: rounded-card border-2 border-dashed border-cyan-lighter bg-cyan-light px-6 py-4 flex items-center gap-3
                             children:
                               - type: icon
-                                props: { name: hourglass, size: 28, strokeWidth: 2, className: text-cyan-ink shrink-0, aria-hidden: 'true' }
-                              - type: container
+                                props: { name: hourglass, size: 20, strokeWidth: 2, className: text-cyan-ink shrink-0, aria-hidden: 'true' }
+                              - type: text
+                                element: p
                                 props:
-                                  className: flex flex-col gap-1
+                                  className: type-small text-bleu-fonce
                                 children:
                                   - type: text
-                                    element: p
-                                    props:
-                                      className: font-bold text-bleu-fonce
-                                    content: En préparation
+                                    element: span
+                                    props: { className: font-bold }
+                                    content: 'En préparation : '
                                   - type: text
-                                    element: p
-                                    props:
-                                      className: type-small text-bleu-fonce-70
-                                    content: Le flyer RÈGLES arrive ici, puis le kit pédagogique libre (licence Creative Commons, année 2).
+                                    element: span
+                                    content: le flyer RÈGLES, puis le kit pédagogique libre.
                       - type: text
                         element: p
                         props:
@@ -301,6 +296,7 @@ components:
                           filter:
                             - { field: featured, operator: eq, value: true }
                             - { field: published, operator: eq, value: true }
+                            - { field: verified, operator: eq, value: true }
                           sort: [{ field: position, direction: asc }]
                           limit: 100
                         listDisplay:
@@ -350,6 +346,7 @@ components:
                               filter:
                                 - { field: block, operator: eq, value: lire }
                                 - { field: published, operator: eq, value: true }
+                                - { field: verified, operator: eq, value: true }
                               sort: [{ field: position, direction: asc }]
                               limit: 100
                             listDisplay:
@@ -377,6 +374,7 @@ components:
                               filter:
                                 - { field: block, operator: eq, value: regarder }
                                 - { field: published, operator: eq, value: true }
+                                - { field: verified, operator: eq, value: true }
                               sort: [{ field: position, direction: asc }]
                               limit: 100
                             listDisplay:
@@ -404,6 +402,7 @@ components:
                               filter:
                                 - { field: block, operator: eq, value: ecouter }
                                 - { field: published, operator: eq, value: true }
+                                - { field: verified, operator: eq, value: true }
                               sort: [{ field: position, direction: asc }]
                               limit: 100
                             listDisplay:
@@ -453,6 +452,7 @@ components:
                               filter:
                                 - { field: block, operator: eq, value: jouer }
                                 - { field: published, operator: eq, value: true }
+                                - { field: verified, operator: eq, value: true }
                               sort: [{ field: position, direction: asc }]
                               limit: 100
                             listDisplay:
@@ -480,6 +480,7 @@ components:
                               filter:
                                 - { field: block, operator: eq, value: voisines }
                                 - { field: published, operator: eq, value: true }
+                                - { field: verified, operator: eq, value: true }
                               sort: [{ field: position, direction: asc }]
                               limit: 100
                             listDisplay:
@@ -513,7 +514,7 @@ components:
                             props:
                               href: /nos-ateliers#pour-qui
                               className: font-bold text-bleu-fonce underline decoration-cyan decoration-2 underline-offset-4 hover:text-cyan-ink
-                            content: on t'explique pourquoi
+                            content: voir pour qui
                           - type: text
                             element: span
                             content: .
@@ -526,6 +527,7 @@ components:
                           filter:
                             - { field: block, operator: eq, value: enfants }
                             - { field: published, operator: eq, value: true }
+                            - { field: verified, operator: eq, value: true }
                           sort: [{ field: position, direction: asc }]
                           limit: 100
                         listDisplay:
@@ -575,6 +577,7 @@ components:
                               filter:
                                 - { field: block, operator: eq, value: recherche }
                                 - { field: published, operator: eq, value: true }
+                                - { field: verified, operator: eq, value: true }
                               sort: [{ field: position, direction: asc }]
                               limit: 100
                             listDisplay:
@@ -602,6 +605,7 @@ components:
                               filter:
                                 - { field: block, operator: eq, value: institutions }
                                 - { field: published, operator: eq, value: true }
+                                - { field: verified, operator: eq, value: true }
                               sort: [{ field: position, direction: asc }]
                               limit: 100
                             listDisplay:

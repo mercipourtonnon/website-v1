@@ -181,7 +181,7 @@ components:
                       iconBg: bg-mauve-light
                       accent: text-mauve
                       title: une équipe
-                      text: Six membres actifs, quatre facilitateur·ices, une réunion par mois, un groupe WhatsApp pour se donner des nouvelles.
+                      text: Une équipe cœur de cinq personnes et des bénévoles, une réunion par mois, un groupe WhatsApp pour se donner des nouvelles.
                   - component: audience-card
                     vars:
                       icon: graduation-cap
@@ -280,7 +280,7 @@ components:
                       - type: text
                         element: p
                         props: { className: type-small text-bleu-fonce-70 }
-                        content: Après la formation interne et des co-animations, tu animes à ton tour, rémunéré·e sur les interventions commandées (300 € HT la demi-journée), bénévole sur les ateliers grand public.
+                        content: Après la formation interne et des co-animations, tu animes à ton tour, rémunéré·e sur les interventions commandées, bénévole sur les ateliers grand public.
 
       # Section: Les rôles ouverts (#roles) — BPS 3.24
       - type: container

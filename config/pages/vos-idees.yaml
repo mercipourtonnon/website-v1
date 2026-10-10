@@ -149,67 +149,31 @@ components:
                       alt: Sur un stand, une bénévole et une passante échangent autour d'une carte du jeu sur le consentement
                       className: w-full h-auto rounded-media shadow-card object-cover aspect-[4/3]
 
-      # Section: ce qu'on construit déjà (#en-cours) — BPS 1.17 / 3.32
+      # Section: ce qu'on construit déjà (#en-cours) — one sentence and a link:
+      # the roadmap is detailed once, on /notre-mission#ensuite (BPS 1.17 / 3.32).
       - type: container
         element: section
         props:
           id: en-cours
-          className: px-4 sm:px-6 py-band-sm md:py-band
+          className: px-4 sm:px-6 py-band-sm
         children:
           - type: container
             props:
-              className: max-w-7xl mx-auto flex flex-col gap-8
+              className: max-w-7xl mx-auto flex flex-col gap-4
             children:
-              - type: container
+              - type: text
+                element: h2
                 props:
-                  className: flex flex-col gap-4 max-w-2xl
-                children:
-                  - type: text
-                    element: p
-                    props:
-                      className: type-overline text-mauve
-                    content: Déjà en route
-                  - type: text
-                    element: h2
-                    props:
-                      className: type-section text-bleu-fonce
-                    content: ce qu'on construit déjà
-                  - type: text
-                    element: p
-                    props:
-                      className: type-lead text-bleu-fonce-70
-                    content: "Quatre chantiers sont ouverts. Si ton idée en rejoint un, dis-le-nous quand même : c'est ce qui nous aide à les prioriser."
-              - type: container
-                element: div
-                props:
-                  role: list
-                  className: flex flex-wrap gap-3
-                  aria-label: Chantiers en cours
-                children:
-                  - type: container
-                    element: div
-                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
-                    content: Atelier Niveau 2 (2027, deux sessions)
-                  - type: container
-                    element: div
-                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
-                    content: Kit pédagogique libre (licence Creative Commons)
-                  - type: container
-                    element: div
-                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
-                    content: Module enfants et adolescent·es (en exploration)
-                  - type: container
-                    element: div
-                    props: { role: listitem, className: rounded-pill border border-bleu-fonce-light bg-white px-4 py-2 type-small font-bold text-bleu-fonce }
-                    content: Formation d'essaimage (pour animer ailleurs)
+                  className: type-h3 text-bleu-fonce
+                content: ce qu'on construit déjà
               - type: text
                 element: p
                 props:
-                  className: type-small text-bleu-fonce-70
+                  className: type-lead text-bleu-fonce-70 max-w-3xl
                 children:
                   - type: text
                     element: span
-                    content: 'Le détail est sur '
+                    content: "Quatre chantiers sont déjà ouverts, détaillés dans "
                   - type: link
                     props:
                       href: /notre-mission#ensuite
@@ -217,7 +181,7 @@ components:
                     content: notre mission, « et ensuite »
                   - type: text
                     element: span
-                    content: .
+                    content: ". Si ton idée en rejoint un, dis-le-nous quand même : c'est ce qui nous aide à les prioriser."
 
       # Section: le formulaire (#formulaire) — the public `idees` form
       - type: container
