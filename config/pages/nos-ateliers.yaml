@@ -15,7 +15,7 @@ meta:
   description: "Atelier de consentement gratuit à Strasbourg : 3h pour apprendre à dire non et poser ses limites. Programme, infos pratiques, FAQ et prochaines dates."
   author: Merci pour ton non
   noindex: true # PRE-LAUNCH: remove at launch
-  robots: index, follow
+  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch
   canonical: https://mercipourtonnon.fr/nos-ateliers
   openGraph:
     type: website
