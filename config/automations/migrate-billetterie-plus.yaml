@@ -149,10 +149,7 @@ actions:
                       slug: '{{loop.item.slug}}'
                       title: '{{loop.item.title}}'
                       date: '{{loop.item.date}}'
-                      placeName: '{{loop.item.placeName}}'
-                      street: '{{loop.item.street}}'
-                      zipCode: '{{loop.item.zipCode}}'
-                      city: '{{loop.item.city}}'
+                      capacity: '{{loop.item.capacity}}'
               - name: slot_14h_17h
                 condition:
                   conditions:
@@ -169,10 +166,7 @@ actions:
                       slug: '{{loop.item.slug}}'
                       title: '{{loop.item.title}}'
                       date: '{{loop.item.date}}'
-                      placeName: '{{loop.item.placeName}}'
-                      street: '{{loop.item.street}}'
-                      zipCode: '{{loop.item.zipCode}}'
-                      city: '{{loop.item.city}}'
+                      capacity: '{{loop.item.capacity}}'
               - name: slot_18h30_21h30
                 condition:
                   conditions:
@@ -189,7 +183,4 @@ actions:
                       slug: '{{loop.item.slug}}'
                       title: '{{loop.item.title}}'
                       date: '{{loop.item.date}}'
-                      placeName: '{{loop.item.placeName}}'
-                      street: '{{loop.item.street}}'
-                      zipCode: '{{loop.item.zipCode}}'
-                      city: '{{loop.item.city}}'
+                      capacity: '{{loop.item.capacity}}'

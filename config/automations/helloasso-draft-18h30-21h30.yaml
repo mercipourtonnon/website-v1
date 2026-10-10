@@ -1,25 +1,29 @@
-# Creates one HelloAsso event as a DRAFT through the admin dashboard
-# (admin.helloasso.com), for a workshop from 18:30 to 21:30 (Europe/Paris),
-# signed in as HELLOASSO_ACCOUNT_EMAIL. Called by migrate-billetterie-plus (and
-# create-helloasso-event); nothing is published: the Cercle Gardien reviews
-# the draft and publishes it on HelloAsso.
+# Creates one HelloAsso event as a DRAFT for a workshop from 18:30 to 21:30
+# (Europe/Paris), by duplicating the reference event (16 July 2026: its
+# « Prix libre » tier, its six registration questions, its confirmation text
+# and look) in the admin dashboard, then setting the copy's date, times and
+# seats. Signed in as HELLOASSO_ACCOUNT_EMAIL. Nothing is published: the
+# Cercle Gardien reviews the draft and publishes it on HelloAsso.
+#
+# Why a browser: the v5 API cannot duplicate an event nor set its questions.
 #
 # One automation per time slot (helloasso-draft-10h-13h, -14h-17h,
 # -18h30-21h30), identical but for the two time blocks — keep them so. In
-# Sovrium 0.35.0 a time input ignores `fill` and a step's `key` is never
-# templated, so the times are typed as literal key presses; and a browser
-# run inside a `path` branch renders none of its templates, so the slot
-# cannot be a branch here. Merge the three once those are fixed.
+# Sovrium 0.35.0 a time input ignores `fill` and a step's `key` and `target`
+# are never templated, so the times are typed as literal key presses; and a
+# browser run inside a `path` branch renders none of its templates, so the
+# slot cannot be a branch here. Merge the three once those are fixed.
 #
-# At most once per event: the « Enregistrer » click that creates the draft is
-# `irreversible` and keyed by `slug`, so a replay returns the first draft.
-# Callers still look the title up first (list-events).
+# At most once per event: « Dupliquer » is the `irreversible` click, keyed
+# by `slug`; a replay returns the first copy. Callers still look the title
+# up first (list-events). The URL assert right after it guarantees no later
+# step ever edits the reference event itself.
 #
-# Locators are the dashboard's own data-testid attributes (mapped on
-# 2026-10-10). Needs BROWSER_PROVIDER=webview, and a real Chrome
+# Locators are the dashboard's data-testid / data-test attributes (mapped on
+# 2026-10-10). Needs BROWSER_PROVIDER=webview and a real Chrome
 # (BROWSER_CDP_URL): HelloAsso's bot check turns a headless one away.
 name: helloasso-draft-18h30-21h30
-description: Crée en brouillon un événement HelloAsso (18:30–21:30) depuis le tableau de bord.
+description: Crée en brouillon un atelier HelloAsso (18:30–21:30) en dupliquant l'événement de référence.
 trigger:
   type: automation-call
   inputSchema:
@@ -27,10 +31,8 @@ trigger:
     title: { type: string }
     # dd/mm/yyyy, Europe/Paris
     date: { type: string }
-    placeName: { type: string }
-    street: { type: string }
-    zipCode: { type: string }
-    city: { type: string }
+    # Seats offered on HelloAsso
+    capacity: { type: string }
 timeout: 300000
 actions:
   - name: draft
@@ -44,9 +46,10 @@ actions:
       timeouts: { stepMs: 30000, runMs: 240000 }
       artifacts: { screenshots: steps }
       steps:
+        # The reference event; it is only duplicated, never saved.
         - do: goto
-          label: Page de création
-          url: https://admin.helloasso.com/merci-pour-ton-non/evenements/creation
+          label: Événement de référence
+          url: https://admin.helloasso.com/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026/edition/3
         # Sign-in, skipped while the stored session is still valid.
         - do: fill
           label: Email
@@ -66,50 +69,34 @@ actions:
           label: Bandeau cookies
           target: { role: button, name: Continuer sans accepter }
           timeoutMs: 3000
-        # Step 1 « Informations générales ».
+        - do: click
+          label: Actions de la campagne
+          target: { testId: campaign-actions-button }
+        - do: click
+          label: Dupliquer (menu)
+          target: { text: Dupliquer, exact: true }
         - do: fill
-          label: Nom de la campagne
-          target: { testId: input-campaign-name }
+          label: Nom de la copie
+          target: { testId: modal-duplicate-input-title }
           value: '{{trigger.input.title}}'
-        - do: select
-          label: Type de campagne
-          target: { testId: select-campaign-type }
-          option: Atelier, stage, activité
-        - do: fill
-          label: Lieu
-          target: { testId: input-campaign-place-name }
-          value: '{{trigger.input.placeName}}'
         - do: click
-          label: Adresse manuelle
-          target: { role: button, name: Je veux saisir mon adresse manuellement }
-        - do: fill
-          label: Rue
-          target: { testId: input-place-address }
-          value: '{{trigger.input.street}}'
-        - do: fill
-          label: Code postal
-          target: { testId: input-place-zip-code }
-          value: '{{trigger.input.zipCode}}'
-        - do: fill
-          label: Ville
-          target: { testId: input-place-city }
-          value: '{{trigger.input.city}}'
-        - do: select
-          label: Pays
-          target: { testId: select-place-country }
-          option: France
-        - do: click
-          label: Sur une journée
-          target: { text: Sur une journée, exact: true }
+          label: Dupliquer (crée le brouillon)
+          target: { testId: duplication-submit-button }
+          irreversible: true
+        # Now on the copy (its slug carries « niveau-1-», the reference's does
+        # not): every step below edits the copy only.
+        - do: assert
+          label: Sur la copie
+          url: /evenements/atelier-de-consentement-niveau-1-
         - do: fill
           label: Date
           target: { testId: input-campaign-start-date }
           value: '{{trigger.input.date}}'
-        # Escape leaves the date picker open over the time fields; a click outside
-        # closes it.
+        # The date picker stays open over the time fields; a click outside closes it.
         - do: click
           label: Fermer le calendrier
           target: { role: heading, name: Durée de l'événement }
+        # A time input ignores `fill`: click it, then type HHMM as keys.
         - do: click
           label: Heure de début
           target: { testId: input-campaign-start-time }
@@ -140,20 +127,32 @@ actions:
         - do: press
           label: Heure de fin « 0 »
           key: '0'
-        - do: waitFor
-          label: TEMP-REHEARSAL
-          target: { text: TEMP-REHEARSAL-STOP }
-          timeoutMs: 1000
         - do: click
-          label: Enregistrer (crée le brouillon)
-          target: { role: button, name: Enregistrer, exact: true }
-          irreversible: true
-        # Saved: the dashboard moves on to « Montants et options ».
+          label: Enregistrer l'étape 1
+          target: { selector: '[data-test="button-submit-step"]' }
+        # Step 2: the single « Prix libre » tier gets the seats on offer.
         - do: waitFor
           label: Étape 2
-          target: { text: Montants et options }
+          target: { testId: button-add-tier }
+        - do: click
+          label: Actions du tarif
+          target: { testId: backoffice-button-actions-trigger }
+        - do: click
+          label: Modifier le tarif
+          target: { role: menuitem, name: Modifier }
+        - do: fill
+          label: Places
+          target: { testId: input-tier-max-entries }
+          value: '{{trigger.input.capacity}}'
+        - do: click
+          label: Enregistrer le tarif
+          target: { testId: tier-btn-submit }
+        - do: waitFor
+          label: Tarif enregistré
+          target: { testId: input-tier-max-entries }
+          state: hidden
         - do: screenshot
-          name: brouillon-cree
+          name: brouillon-pret
           fullPage: true
 
   - name: done
