@@ -253,7 +253,7 @@ components:
                                 content: "Site, application et données :"
                               - type: text
                                 element: span
-                                content: " Sovrium Cloud, "
+                                content: " ESSENTIAL SERVICES, propriétaire de la plateforme Sovrium Cloud ("
                               - type: link
                                 props:
                                   href: https://cloud.sovrium.com
@@ -263,7 +263,7 @@ components:
                                 content: cloud.sovrium.com
                               - type: text
                                 element: span
-                                content: ", opéré par Sovrium. Les pages publiques, l'espace bénévole, l'espace facilitateur·ices, les formulaires et leurs données sont servis par ce même hébergement."
+                                content: "). Les pages publiques, l'espace bénévole, l'espace facilitateur·ices, les formulaires et leurs données sont servis par ce même hébergement."
                       - type: text
                         element: p
                         content: "Les inscriptions aux ateliers sont traitées par HelloAsso et la newsletter par Brevo."
