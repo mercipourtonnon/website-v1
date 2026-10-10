@@ -8,7 +8,7 @@ meta:
   title: Newsletter - Merci pour ton non
   description: Inscris-toi à la newsletter de Merci pour ton non pour recevoir nos actualités, nos prochains ateliers et nos ressources sur le consentement.
   noindex: true # PRE-LAUNCH: remove at launch
-  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch
+  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch (noindex: true alone is overridden by robots, Sovrium 0.34.3, #140)
   canonical: https://mercipourtonnon.fr/newsletter
   openGraph:
     type: website
