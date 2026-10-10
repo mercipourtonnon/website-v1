@@ -1,0 +1,169 @@
+# Creates one HelloAsso event as a DRAFT for a workshop from 14:00 to 17:00
+# (Europe/Paris), by duplicating the reference event (16 July 2026: its
+# « Prix libre » tier, its six registration questions, its confirmation text
+# and look) in the admin dashboard, then setting the copy's date, times and
+# seats. Signed in as HELLOASSO_ACCOUNT_EMAIL. Nothing is published: the
+# Cercle Gardien reviews the draft and publishes it on HelloAsso.
+#
+# Why a browser: the v5 API cannot duplicate an event nor set its questions.
+#
+# One automation per time slot (helloasso-draft-10h-13h, -14h-17h,
+# -18h30-21h30), identical but for the two time blocks — keep them so. In
+# Sovrium 0.35.0 a time input ignores `fill` (sovrium#142) and a `press`
+# step's `key` is never templated (sovrium#143), so the times are typed as
+# literal key presses; and a browser run inside a `path` branch renders none
+# of its templates (sovrium#144), so the slot cannot be a branch here. Merge
+# the three once those are fixed.
+#
+# At most once per event: « Dupliquer » is the `irreversible` click, keyed
+# by `slug`; a replay returns the first copy. Sovrium 0.35.0 marks the key
+# pending even when that click never finds its button (sovrium#145): such a
+# run then blocks every retry with outcome_unknown until the
+# `browser-submission:draft:helloasso-event-<slug>` row of
+# system_automation_state is deleted (check first that no copy was made). Callers still look the title
+# up first (list-events). The URL assert right after it guarantees no later
+# step ever edits the reference event itself.
+#
+# Locators are the dashboard's data-testid / data-test attributes (mapped on
+# 2026-10-10). Needs BROWSER_PROVIDER=webview and a real Chrome
+# (BROWSER_CDP_URL): HelloAsso's bot check turns a headless one away.
+name: helloasso-draft-14h-17h
+description: Crée en brouillon un atelier HelloAsso (14:00–17:00) en dupliquant l'événement de référence.
+trigger:
+  type: automation-call
+  inputSchema:
+    slug: { type: string }
+    title: { type: string }
+    # dd/mm/yyyy, Europe/Paris
+    date: { type: string }
+    # Seats offered on HelloAsso
+    capacity: { type: string }
+timeout: 300000
+actions:
+  - name: draft
+    type: browser
+    operator: run
+    timeout: 280000
+    props:
+      allowedHosts: [helloasso.com, '*.helloasso.com']
+      session: helloasso-admin
+      idempotencyKey: 'helloasso-event-{{trigger.input.slug}}'
+      timeouts: { stepMs: 30000, runMs: 240000 }
+      artifacts: { screenshots: steps }
+      steps:
+        # The reference event; it is only duplicated, never saved.
+        - do: goto
+          label: Événement de référence
+          url: https://admin.helloasso.com/merci-pour-ton-non/evenements/atelier-de-consentement-16-juillet-2026/edition/3
+        # Sign-in, skipped while the stored session is still valid.
+        - do: fill
+          label: Email
+          target: { label: Email }
+          value: $env.HELLOASSO_ACCOUNT_EMAIL
+          optional: true
+        - do: fill
+          label: Mot de passe
+          target: { label: Mot de passe }
+          value: $env.HELLOASSO_ACCOUNT_PASSWORD
+          optional: true
+        - do: click
+          label: Accéder à mon compte
+          target: { role: button, name: Accéder à mon compte }
+          optional: true
+        - do: dismiss
+          label: Bandeau cookies
+          target: { role: button, name: Continuer sans accepter }
+          timeoutMs: 3000
+        - do: click
+          label: Actions de la campagne
+          target: { testId: campaign-actions-button }
+        - do: click
+          label: Dupliquer (menu)
+          target: { text: Dupliquer, exact: true }
+        - do: fill
+          label: Nom de la copie
+          target: { testId: modal-duplicate-input-title }
+          value: '{{trigger.input.title}}'
+        - do: click
+          label: Dupliquer (crée le brouillon)
+          target: { testId: duplication-submit-button }
+          irreversible: true
+        # Now on the copy (its slug carries « niveau-1-», the reference's does
+        # not): every step below edits the copy only.
+        - do: assert
+          label: Sur la copie
+          url: /evenements/atelier-de-consentement-niveau-1-
+        - do: fill
+          label: Date
+          target: { testId: input-campaign-start-date }
+          value: '{{trigger.input.date}}'
+        # The date picker stays open over the time fields; a click outside closes it.
+        - do: click
+          label: Fermer le calendrier
+          target: { role: heading, name: Durée de l'événement }
+        # A time input ignores `fill`: click it, then type HHMM as keys.
+        - do: click
+          label: Heure de début
+          target: { testId: input-campaign-start-time }
+        - do: press
+          label: Heure de début « 1 »
+          key: '1'
+        - do: press
+          label: Heure de début « 4 »
+          key: '4'
+        - do: press
+          label: Heure de début « 0 »
+          key: '0'
+        - do: press
+          label: Heure de début « 0 »
+          key: '0'
+        - do: click
+          label: Heure de fin
+          target: { testId: input-campaign-end-time }
+        - do: press
+          label: Heure de fin « 1 »
+          key: '1'
+        - do: press
+          label: Heure de fin « 7 »
+          key: '7'
+        - do: press
+          label: Heure de fin « 0 »
+          key: '0'
+        - do: press
+          label: Heure de fin « 0 »
+          key: '0'
+        - do: click
+          label: Enregistrer l'étape 1
+          target: { selector: '[data-test="button-submit-step"]' }
+        # Step 2: the single « Prix libre » tier gets the seats on offer.
+        - do: waitFor
+          label: Étape 2
+          target: { testId: button-add-tier }
+        - do: click
+          label: Actions du tarif
+          target: { testId: backoffice-button-actions-trigger }
+        - do: click
+          label: Modifier le tarif
+          target: { role: menuitem, name: Modifier }
+        - do: fill
+          label: Places
+          target: { testId: input-tier-max-entries }
+          value: '{{trigger.input.capacity}}'
+        - do: click
+          label: Enregistrer le tarif
+          target: { testId: tier-btn-submit }
+        - do: waitFor
+          label: Tarif enregistré
+          target: { testId: input-tier-max-entries }
+          state: hidden
+        - do: screenshot
+          name: brouillon-pret
+          fullPage: true
+
+  - name: done
+    type: automation
+    operator: return
+    props:
+      data:
+        url: '{{draft.url}}'
+        skipped: '{{draft.skipped}}'

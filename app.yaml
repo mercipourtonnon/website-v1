@@ -38,8 +38,6 @@ auth:
   $ref: ./config/auth.yaml
 
 # Environment the app needs (values live in .env, names in .env.example).
-# HELLOASSO_BILLETERIE_PLUS_API_KEY is deliberately NOT declared: it only serves
-# the legacy script in scripts/.
 env:
   - { key: HELLOASSO_CLIENT_ID, description: HelloAsso API client id (needs the FormAdministration privilege) }
   - { key: HELLOASSO_CLIENT_SECRET, description: HelloAsso API client secret }
@@ -53,6 +51,14 @@ env:
   - { key: HELLOASSO_CONTACT_EMAIL, description: Contact email shown on each HelloAsso event, secret: false }
   - key: HELLOASSO_WEBHOOK_TOKEN
     description: Secret in the HelloAsso notification URL (?token=…) — sovrium secret generate
+    required: false
+  # The HelloAsso admin account the browser signs in with to create events
+  # (helloasso-create-event-browser): the API cannot set an event's questions.
+  - { key: HELLOASSO_ACCOUNT_EMAIL, description: Email of the HelloAsso admin account used by the browser automation }
+  - { key: HELLOASSO_ACCOUNT_PASSWORD, description: Password of that HelloAsso admin account }
+  # Read-only use: migrate-billetterie-plus lists the Billetterie Plus dates.
+  - key: HELLOASSO_BILLETERIE_PLUS_API_KEY
+    description: Billetterie Plus API key (X-API-KEY), read by migrate-billetterie-plus
     required: false
   - { key: ADMIN_NOTIFY_EMAIL, description: Who is emailed when a HelloAsso automation fails (optional), required: false, secret: false }
   # Espace bénévole — Brevo contacts and campaigns (the same key also serves
@@ -74,6 +80,8 @@ connections:
   - $ref: ./library/connection/brevo.yaml
   # Volunteer roles → groups (sync-member-groups).
   - $ref: ./config/connections/sovrium-admin.yaml
+  # Legacy ticketing, read once by migrate-billetterie-plus.
+  - $ref: ./config/connections/billetterie-plus.yaml
 
 # Reusable automation steps.
 actions:
@@ -86,6 +94,12 @@ automations:
   - $ref: ./config/automations/retry-helloasso.yaml
   - $ref: ./config/automations/publish-workshop-on-site.yaml
   - $ref: ./config/automations/notify-helloasso-failure.yaml
+  # Draft creation in the HelloAsso dashboard (browser, one per time slot), and
+  # the one-off Billetterie Plus → HelloAsso migration that uses it.
+  - $ref: ./config/automations/helloasso-draft-10h-13h.yaml
+  - $ref: ./config/automations/helloasso-draft-14h-17h.yaml
+  - $ref: ./config/automations/helloasso-draft-18h30-21h30.yaml
+  - $ref: ./config/automations/migrate-billetterie-plus.yaml
   # Espace bénévole.
   - $ref: ./config/automations/save-member-profile.yaml
   - $ref: ./config/automations/on-sign-up.yaml

@@ -1,0 +1,188 @@
+# One-off: recreate the upcoming Billetterie Plus workshop dates as HelloAsso
+# event DRAFTS (the helloasso-draft-<slot> automations). Existing Billetterie Plus
+# tickets stay valid there, so each draft only offers the seats still free
+# (maxCount minus seats sold net of refunds). Close the Billetterie Plus sales
+# by hand once the drafts are published.
+#
+# Safe to run again: a date whose title is already on HelloAsso is skipped,
+# and the browser step is keyed by the date's slug.
+# Input `only` (optional): a slug such as 2026-10-17-14h, to migrate one date.
+name: migrate-billetterie-plus
+description: Recrée les dates à venir de Billetterie Plus en brouillons HelloAsso.
+trigger:
+  type: manual
+  label: Migrer Billetterie Plus → HelloAsso
+  inputSchema:
+    only: { type: string }
+timeout: 900000
+actions:
+  - name: items
+    type: connection
+    operator: call
+    timeout: 30000
+    retry: { maxAttempts: 3, delayMs: 2000, strategy: exponential }
+    props:
+      connection: billetterie-plus
+      operation: list-selling-items
+      params:
+        eventId: 6a57a68b6a7a3ea948a15e4b
+        limit: 100
+
+  - name: list_events
+    type: connection
+    operator: call
+    timeout: 45000
+    retry: { maxAttempts: 3, delayMs: 2000, strategy: exponential }
+    props:
+      connection: helloasso
+      operation: list-events
+      params:
+        organizationSlug: $env.HELLOASSO_ORGANIZATION_SLUG
+        formTypes: Event
+        pageSize: 100
+      paginate: 5
+
+  # Billetterie Plus item → HelloAsso payload, for the dates still to come
+  # that HelloAsso does not have yet.
+  - name: plan
+    type: code
+    operator: runTypescript
+    props:
+      timeout: 10000
+      inputData:
+        items: '{{items.data.data}}'
+        events: '{{list_events.data}}'
+        only: '{{trigger.input.only}}'
+      code: |
+        async function execute(context) {
+          const MONTHS = [
+            'janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+            'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre',
+          ];
+          const WEEKDAYS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+          const PLACE = { name: 'La Plage Digitale', street: '13 rue Jacques Peirotes', zipCode: '67000', city: 'Strasbourg' };
+          const pad2 = (n: number) => (n < 10 ? `0${n}` : String(n));
+          // "14h" → "14:00", "18h30" → "18:30"
+          const hhmm = (h: string) => {
+            const [hh, mm] = h.split('h');
+            return `${pad2(Number(hh))}:${mm ? mm : '00'}`;
+          };
+
+          const input = context.inputData as Record<string, unknown>;
+          const items = Array.isArray(input.items) ? (input.items as Array<Record<string, unknown>>) : [];
+          if (items.length === 0) throw new Error('Billetterie Plus : aucun tarif lu.');
+          if (!Array.isArray(input.events)) throw new Error('HelloAsso : liste des événements illisible.');
+          const existing = new Set((input.events as Array<Record<string, unknown>>).map((e) => String(e.title || '').trim()));
+          const only = String(input.only || '').trim();
+          const today = new Date().toISOString().slice(0, 10);
+
+          // "Samedi 17 octobre 2026 - 14h à 17h"
+          const RE = /^\S+\s+(\d{1,2})\s+(\S+)\s+(\d{4})\s+-\s+(\d{1,2}h\d{0,2})\s+à\s+(\d{1,2}h\d{0,2})$/i;
+          const todo: Array<Record<string, unknown>> = [];
+          const skipped: string[] = [];
+          for (const item of items) {
+            const name = String(item.name || '').trim();
+            const m = RE.exec(name);
+            if (!m) continue; // the « Soutien à l'association » tiers
+            const month = MONTHS.indexOf(m[2].toLowerCase()) + 1;
+            if (month === 0) throw new Error(`Mois illisible : "${name}"`);
+            const [d, y] = [Number(m[1]), Number(m[3])];
+            const iso = `${y}-${pad2(month)}-${pad2(d)}`;
+            const start = hhmm(m[4]);
+            const end = hhmm(m[5]);
+            const timeLabel = m[4].toLowerCase().replace(/h00$/, 'h');
+            const slug = `${iso}-${timeLabel}`;
+            if (iso < today) continue;
+            // One draft automation per time slot (helloasso-draft-<slot>).
+            const slotName = `${timeLabel}-${m[5].toLowerCase().replace(/h00$/, 'h')}`;
+            if (!['10h-13h', '14h-17h', '18h30-21h30'].includes(slotName)) {
+              throw new Error(`Créneau ${slotName} non pris en charge par la création HelloAsso.`);
+            }
+            if (only && only !== slug) continue;
+            const weekday = WEEKDAYS[new Date(Date.UTC(y, month - 1, d)).getUTCDay()];
+            const title = `Atelier de consentement - Niveau 1 - ${weekday} ${d === 1 ? '1er' : d} ${MONTHS[month - 1]} ${y} à ${timeLabel}`;
+            if (existing.has(title)) { skipped.push(`${slug} (déjà sur HelloAsso)`); continue; }
+            const sold = Number((item.collectedAmounts as Record<string, unknown>)?.quantity || 0)
+              - Number((item.refundedAmounts as Record<string, unknown>)?.quantity || 0);
+            const capacity = Math.max(0, Number(item.maxCount || 15) - sold);
+            const facilitators = (String(item.description || '').split('\n')[0] || '').trim();
+            todo.push({
+              slug, title, date: `${pad2(d)}/${pad2(month)}/${y}`, startTime: start, endTime: end,
+              slot: slotName,
+              placeName: PLACE.name, street: PLACE.street, zipCode: PLACE.zipCode, city: PLACE.city,
+              capacity, sold, facilitators,
+            });
+          }
+          context.log.info(`À créer : ${todo.map((t) => `${t.slug} (${t.capacity} places)`).join(', ') || 'rien'}`);
+          if (skipped.length) context.log.info(`Ignorés : ${skipped.join(', ')}`);
+          return { todo, skipped, count: todo.length };
+        }
+
+  - name: each_date
+    type: loop
+    operator: each
+    props:
+      items: '{{plan.todo}}'
+      maxIterations: 20
+      continueOnItemError: true
+      actions:
+        # One draft automation per time slot (see helloasso-draft-14h-17h);
+        # called, not inlined: a browser run in a branch renders no template
+        # in Sovrium 0.35.0 (sovrium#144).
+        - name: by_slot
+          type: path
+          operator: branch
+          props:
+            mode: first-match
+            paths:
+              - name: slot_10h_13h
+                condition:
+                  conditions:
+                    - { field: '{{loop.item.slot}}', operator: equals, value: 10h-13h }
+                actions:
+                - name: create_10h_13h
+                  type: automation
+                  operator: call
+                  timeout: 300000
+                  props:
+                    name: helloasso-draft-10h-13h
+                    mode: sync
+                    inputData:
+                      slug: '{{loop.item.slug}}'
+                      title: '{{loop.item.title}}'
+                      date: '{{loop.item.date}}'
+                      capacity: '{{loop.item.capacity}}'
+              - name: slot_14h_17h
+                condition:
+                  conditions:
+                    - { field: '{{loop.item.slot}}', operator: equals, value: 14h-17h }
+                actions:
+                - name: create_14h_17h
+                  type: automation
+                  operator: call
+                  timeout: 300000
+                  props:
+                    name: helloasso-draft-14h-17h
+                    mode: sync
+                    inputData:
+                      slug: '{{loop.item.slug}}'
+                      title: '{{loop.item.title}}'
+                      date: '{{loop.item.date}}'
+                      capacity: '{{loop.item.capacity}}'
+              - name: slot_18h30_21h30
+                condition:
+                  conditions:
+                    - { field: '{{loop.item.slot}}', operator: equals, value: 18h30-21h30 }
+                actions:
+                - name: create_18h30_21h30
+                  type: automation
+                  operator: call
+                  timeout: 300000
+                  props:
+                    name: helloasso-draft-18h30-21h30
+                    mode: sync
+                    inputData:
+                      slug: '{{loop.item.slug}}'
+                      title: '{{loop.item.title}}'
+                      date: '{{loop.item.date}}'
+                      capacity: '{{loop.item.capacity}}'
