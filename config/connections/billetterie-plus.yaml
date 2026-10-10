@@ -1,0 +1,21 @@
+# HelloAsso Billetterie Plus (the ticketing used before the v5 events), read
+# only: migrate-billetterie-plus lists its workshop dates. All the dates are
+# selling items of ONE event; the facilitators are in each item's description.
+name: billetterie-plus
+label: Billetterie Plus
+description: Lecture des dates d'ateliers de l'ancienne billetterie (migration).
+type: apiKey
+baseUrl: https://api.plusbilletterie.helloasso.com/v1/organizers/6a578cf16a7a3ea9488bbf75
+props:
+  key: $env.HELLOASSO_BILLETERIE_PLUS_API_KEY
+  header: X-API-KEY
+operations:
+  # GET /events/{eventId}/sellingItems → { data: [{ name, maxCount, description,
+  # collectedAmounts: { quantity }, refundedAmounts: { quantity } }], metadata }
+  - name: list-selling-items
+    method: GET
+    path: /events/{eventId}/sellingItems
+    summary: Liste les tarifs (une date d'atelier par tarif) d'un événement.
+    params:
+      eventId: { in: path, type: string, required: true }
+      limit: { in: query, type: integer }
