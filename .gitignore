@@ -56,3 +56,8 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 /Affiche A3.pdf
 *.csv
 *.xlsx
+
+# Local media (workshop photos, posters): too heavy for git
+archive/Affiche A3.pdf
+archive/Atelier niveau 1 - 18-04-2026-2/
+archive/Stand Bifurquer/
