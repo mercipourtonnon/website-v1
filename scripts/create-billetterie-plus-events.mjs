@@ -47,10 +47,10 @@ const REFERENCE_DESCRIPTION =
 const ATELIERS = [
   { key: '19-septembre-2026', dateLabel: 'samedi 19 septembre 2026 à 14h',  start: '2026-09-19T14:00:00+02:00', end: '2026-09-19T17:00:00+02:00', facilitators: ['Dilara Simsek', 'Thomas Jeanneau'] },
   { key: '6-octobre-2026',    dateLabel: 'mardi 6 octobre 2026 à 18h30',    start: '2026-10-06T18:30:00+02:00', end: '2026-10-06T21:30:00+02:00', facilitators: ['Mathilde Brière', 'Thomas Jeanneau'] },
-  { key: '17-octobre-2026',   dateLabel: 'samedi 17 octobre 2026 à 14h',    start: '2026-10-17T14:00:00+02:00', end: '2026-10-17T17:00:00+02:00', facilitators: ['Dilara Simsek', 'Mogo'] },
-  { key: '28-novembre-2026',  dateLabel: 'samedi 28 novembre 2026 à 14h',   start: '2026-11-28T14:00:00+01:00', end: '2026-11-28T17:00:00+01:00', facilitators: ['Laetitia B.', 'Mogo'] },
+  { key: '17-octobre-2026',   dateLabel: 'samedi 17 octobre 2026 à 14h',    start: '2026-10-17T14:00:00+02:00', end: '2026-10-17T17:00:00+02:00', facilitators: ['Dilara Simsek', 'Morgane'] },
+  { key: '28-novembre-2026',  dateLabel: 'samedi 28 novembre 2026 à 14h',   start: '2026-11-28T14:00:00+01:00', end: '2026-11-28T17:00:00+01:00', facilitators: ['Laetitia B.', 'Morgane'] },
   { key: '12-decembre-2026',  dateLabel: 'samedi 12 décembre 2026 à 14h',   start: '2026-12-12T14:00:00+01:00', end: '2026-12-12T17:00:00+01:00', facilitators: ['Dilara Simsek', 'Mathilde Brière'] },
-  { key: '17-decembre-2026',  dateLabel: 'jeudi 17 décembre 2026 à 18h30',  start: '2026-12-17T18:30:00+01:00', end: '2026-12-17T21:30:00+01:00', facilitators: ['Mogo', 'Thomas Jeanneau'] },
+  { key: '17-decembre-2026',  dateLabel: 'jeudi 17 décembre 2026 à 18h30',  start: '2026-12-17T18:30:00+01:00', end: '2026-12-17T21:30:00+01:00', facilitators: ['Morgane', 'Thomas Jeanneau'] },
 ];
 
 // Formulaire d'inscription — les 6 questions reprises du 16 juillet.

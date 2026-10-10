@@ -1,6 +1,6 @@
 # Reference data: the facilitation team (names as credited on HelloAsso).
 # `account`, `contact_email` and `phone` are filled by an admin once each person is
-# invited (role: member). Open item: "Mogo" or "Morgane" as the public name.
+# invited (role: member).
 mergeOn: [display_name]
 records:
   - key: dilara
@@ -10,7 +10,7 @@ records:
   - key: mathilde
     fields: { display_name: Mathilde Brière, short_name: Mathilde, active: true }
   - key: mogo
-    fields: { display_name: Mogo, short_name: Mogo, active: true }
+    fields: { display_name: Morgane, short_name: Morgane, active: true }
   - key: laetitia
     fields: { display_name: Laetitia B., short_name: Laetitia, active: true }
   - key: olivia

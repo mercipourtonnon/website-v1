@@ -6,8 +6,7 @@
 # replay only touches these six slugs:
 #   sovrium seed app.yaml --mode upsert --table workshops
 # Paris time → UTC: +02:00 until 25 Oct 2026 (CEST), +01:00 after (CET).
-# « Morgane » on HelloAsso is the `mogo` facilitator record (display name still
-# « Mogo » there — open item in seed/facilitators.yaml).
+# « Morgane » on HelloAsso is the `mogo` facilitator record.
 mergeOn: [slug]
 records:
   # item 6a57a68b6a7a3ea948a15e7c — 5/15 sold on 2026-10-09
