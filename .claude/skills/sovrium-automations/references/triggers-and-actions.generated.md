@@ -4,7 +4,7 @@
 
 > Generated from the Sovrium schema by scripts/build/generate-skill-references.ts — do not edit. It carries no version on purpose: when it and the binary you run disagree, the binary is right.
 
-Every trigger an automation can start from (9) and every action a step can run (114), in the words of the schema. An action is chosen by its `type` and, within a family, its `operator`.
+Every trigger an automation can start from (9) and every action a step can run (133), in the words of the schema. An action is chosen by its `type` and, within a family, its `operator`.
 
 ## Contents
 
@@ -19,8 +19,8 @@ Read: `sovrium docs automation-triggers`
 | --- | --- |
 | `webhook` | Trigger automation via incoming HTTP webhook |
 | `cron` | Trigger automation on a schedule using cron expressions |
-| `record` | Trigger automation when records are created, updated, or deleted. The run reads the row as stored at trigger.data.record (id, created_at, updated_at and the stamped columns included) and, for a record created through the records API or written by an automation step, who made the write at trigger.user ({ id, role }, or system for a write no person made). |
-| `auth` | Trigger automation on authentication events (sign-up, sign-in, etc.) |
+| `record` | Trigger automation when records are created, updated, or deleted. The run reads the row as stored at trigger.data.record (id, created_at, updated_at and the stamped columns included) and, for a record created through the records API or written by an automation step, who made the write at trigger.user ({ id, role, email, name }; id and role read system, email and name empty, for a write no person made). |
+| `auth` | Trigger automation on authentication events (sign-up, sign-in, invitation accepted, etc.) |
 | `form` | Trigger automation when a top-level form is submitted. The `form` property references forms[].name (HARD BREAK: was a page path). |
 | `manual` | Admin-initiated workflow execution via button or API call |
 | `automation-call` | Trigger that fires when another automation invokes this one via the automation/call action. Enables sub-workflow composition. |
@@ -58,10 +58,22 @@ Read: `sovrium docs automation-actions`
 | `auth` | `assignRole` | Assign a role to an existing user |
 | `auth` | `banUser` | Ban a user account |
 | `auth` | `unbanUser` | Unban a previously banned user account |
+| `auth` | `addToGroup` | Add a user to a declared group; adding an existing member changes nothing |
+| `auth` | `removeFromGroup` | Remove a user from a declared group; removing a non-member changes nothing |
+| `auth` | `registerOAuthClient` | Register a consent-less, PKCE-only sign-in client for another app, returning its client id and secret |
+| `auth` | `rotateOAuthClientSecret` | Replace a sign-in client's secret; the old one stops working at once |
+| `auth` | `deleteOAuthClient` | Delete a sign-in client; sign-in through it and its tokens stop working |
+| `auth` | `grantAccess` | Give an account access to one record of a scope table under a role; granting it again changes nothing |
+| `auth` | `revokeAccess` | Take one record of a scope table away from an account's grants; revoking it again changes nothing |
+| `auth` | `listGrantees` | List the accounts granted access to one record of a scope table, as { grantees, count } |
+| `auth` | `inviteUser` | Invite a person by email to create their own password and join with a role; reports whether an invitation was sent |
 | `analytics` | `track` | Track custom events in the built-in analytics system |
 | `link` | `create` | Mint a tracked short link and return its address for a later step to use. Fails the step rather than shadowing a config-declared slug or overwriting one a live link already holds. |
 | `link` | `update` | Apply a sparse edit to an existing runtime link. Omitted props are left unchanged; the slug names the target and cannot be renamed. |
 | `link` | `delete` | Soft-delete a runtime link so it stops resolving while its click history survives. Fails the step for a config-declared slug. |
+| `comment` | `create` | Post a comment on a record's thread, through the same content, reply, mention, moderation and comment-trigger rules as the comments API |
+| `comment` | `list` | Read a record's comments, oldest first, as the system or as the triggering user would read them |
+| `comment` | `delete` | Soft-delete one comment of a record's thread, as the system or under the triggering user's comment rules |
 | `webhook` | `send` | Send outgoing webhook (envelope or pass-through mode) |
 | `webhook` | `response` | Construct a custom response for synchronous webhook triggers (respondImmediately: false) |
 | `delay` | `wait` | Pause automation execution for a fixed duration or until a specific datetime |
@@ -76,6 +88,8 @@ Read: `sovrium docs automation-actions`
 | `ai` | `transcribe` | Transcribe a stored audio recording into text with the speech-to-text endpoint the operator configures (STT_* environment variables) |
 | `ai` | `agent` | Delegate a task to an AI agent for autonomous multi-step execution |
 | `approval` | `request` | Pause execution and request human approval. Requires app.auth to be configured. |
+| `browser` | `run` | Drive a browser through fixed steps on a site with no API: sign in, fill a form, read the result. Needs the operator to enable a browser (`BROWSER_PROVIDER`). |
+| `browser` | `agent` | Let an AI agent drive a browser towards a goal on a site with no API, within listed hosts, typing secrets it never sees, its submissions held for approval. Needs the operator to enable a browser (`BROWSER_PROVIDER`) and an AI provider. |
 | `file` | `upload` | Upload a file to storage from binary data, URL, or previous step output |
 | `file` | `download` | Download a file from storage by key |
 | `file` | `delete` | Delete a file from storage by key |
@@ -90,6 +104,7 @@ Read: `sovrium docs automation-actions`
 | `file` | `transformImage` | Resize or convert an image file |
 | `file` | `compress` | Create a ZIP archive from one or more storage files |
 | `file` | `parseXlsx` | Parse a sheet of an .xlsx workbook into structured row data |
+| `file` | `extractAudio` | Copy the audio track of a stored video into an audio-only file, without re-encoding it |
 | `document` | `generatePdf` | Render an HTML template filled with data into a paginated PDF |
 | `document` | `generateImage` | Render an SVG or HTML template filled with data into a PNG, JPEG or WebP image |
 | `document` | `generateDocx` | Fill a Word (.docx) template with data |
@@ -124,6 +139,7 @@ Read: `sovrium docs automation-actions`
 | `crypto` | `hmac` | Compute an HMAC for secure message authentication |
 | `crypto` | `sign` | Make a detached Ed25519 signature with a private key from the environment |
 | `crypto` | `verify` | Check a detached Ed25519 signature and answer { valid } |
+| `calendar` | `importIcs` | Read an iCalendar (`.ics`) feed and create or update one row per event, matched on the event's `UID`. A row whose values already equal the event's is left untouched, so a frequent schedule does not rewrite unchanged rows. |
 | `date` | `format` | Render an instant as a string in a given timezone and locale |
 | `date` | `parse` | Parse a string into an instant, reporting validity as data rather than as a step failure |
 | `date` | `add` | Shift an instant forward by a calendar duration, DST-correct in a given timezone |
@@ -135,10 +151,10 @@ Read: `sovrium docs automation-actions`
 | `flow` | `stop` | Immediately stop automation execution with optional status and output |
 | `sovrium` | `validateConfig` | Decode a candidate app config against AppSchema and expose { valid, errors } |
 | `sovrium` | `validateBundle` | Check a stored bundle archive — its manifest, every entry against its sha256, and the config it carries — and expose { valid, name, manifest, errors } |
-| `instance` | `status` | Read a supervised app's unit state, restart count, memory use and current revision |
+| `instance` | `status` | Read a supervised app's unit state, restart count, memory use, how its last run ended, current revision and the engine it runs |
 | `instance` | `start` | Start a supervised app's socket, so the next request wakes the app |
 | `instance` | `stop` | Suspend a supervised app: stop its socket, its proxy and the app |
-| `instance` | `restart` | Restart a supervised app so it reads its current release and environment again |
+| `instance` | `restart` | Restart a supervised app so it reads its current release and environment again: its proxy and the app stop in one call, then the app starts |
 | `instance` | `apply` | Verify a signed bundle, write it as a new release of a supervised app, and restart the app |
 | `instance` | `rollback` | Point a supervised app back at its previous release and restart it |
 | `instance` | `remove` | Stop a supervised app for good, optionally deleting every release it has on this host |
@@ -146,4 +162,7 @@ Read: `sovrium docs automation-actions`
 | `instance` | `logs` | Read the last journal lines of a supervised app |
 | `instance` | `backup` | Back up a supervised app and store the archive in this app's storage |
 | `instance` | `restore` | Restore a supervised app from a backup archive in this app's storage |
+| `instance` | `seed` | Load a supervised app's seed data from the release it runs, as the app, and return the per-table report |
+| `instance` | `engineInstall` | Download a Sovrium release, verify its checksum, its release signature and its version, and install it into the engine store |
+| `instance` | `enginePrune` | Remove the engine versions no current or previous release links and that are not listed to keep |
 | `ref` | — | Reference to a reusable action template defined in app.actions[], with optional variable overrides |
