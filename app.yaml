@@ -89,11 +89,9 @@ automations:
   - $ref: ./config/automations/retry-helloasso.yaml
   - $ref: ./config/automations/publish-workshop-on-site.yaml
   - $ref: ./config/automations/notify-helloasso-failure.yaml
-  # Draft creation in the HelloAsso dashboard (browser, one per time slot), and
+  # Draft creation in the HelloAsso dashboard (browser), and
   # the one-off Billetterie Plus → HelloAsso migration that uses it.
-  - $ref: ./config/automations/helloasso-draft-10h-13h.yaml
-  - $ref: ./config/automations/helloasso-draft-14h-17h.yaml
-  - $ref: ./config/automations/helloasso-draft-18h30-21h30.yaml
+  - $ref: ./config/automations/helloasso-draft.yaml
   - $ref: ./config/automations/migrate-billetterie-plus.yaml
   # Espace bénévole.
   - $ref: ./config/automations/save-member-profile.yaml

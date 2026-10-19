@@ -1,5 +1,5 @@
 # One-off: recreate the upcoming Billetterie Plus workshop dates as HelloAsso
-# event DRAFTS (the helloasso-draft-<slot> automations). Existing Billetterie Plus
+# event DRAFTS (the helloasso-draft automation). Existing Billetterie Plus
 # tickets stay valid there, so each draft only offers the seats still free
 # (maxCount minus seats sold net of refunds). Close the Billetterie Plus sales
 # by hand once the drafts are published.
@@ -93,11 +93,6 @@ actions:
             const timeLabel = m[4].toLowerCase().replace(/h00$/, 'h');
             const slug = `${iso}-${timeLabel}`;
             if (iso < today) continue;
-            // One draft automation per time slot (helloasso-draft-<slot>).
-            const slotName = `${timeLabel}-${m[5].toLowerCase().replace(/h00$/, 'h')}`;
-            if (!['10h-13h', '14h-17h', '18h30-21h30'].includes(slotName)) {
-              throw new Error(`Créneau ${slotName} non pris en charge par la création HelloAsso.`);
-            }
             if (only && only !== slug) continue;
             const weekday = WEEKDAYS[new Date(Date.UTC(y, month - 1, d)).getUTCDay()];
             const title = `Atelier de consentement - Niveau 1 - ${weekday} ${d === 1 ? '1er' : d} ${MONTHS[month - 1]} ${y} à ${timeLabel}`;
@@ -108,7 +103,6 @@ actions:
             const facilitators = (String(item.description || '').split('\n')[0] || '').trim();
             todo.push({
               slug, title, date: `${pad2(d)}/${pad2(month)}/${y}`, startTime: start, endTime: end,
-              slot: slotName,
               placeName: PLACE.name, street: PLACE.street, zipCode: PLACE.zipCode, city: PLACE.city,
               capacity, sold, facilitators,
             });
@@ -126,63 +120,17 @@ actions:
       maxIterations: 20
       continueOnItemError: true
       actions:
-        # One draft automation per time slot (see helloasso-draft-14h-17h);
-        # called, not inlined: a browser run in a branch renders no template
-        # in Sovrium 0.35.0 (sovrium#144).
-        - name: by_slot
-          type: path
-          operator: branch
+        - name: create_draft
+          type: automation
+          operator: call
+          timeout: 300000
           props:
-            mode: first-match
-            paths:
-              - name: slot_10h_13h
-                condition:
-                  conditions:
-                    - { field: '{{loop.item.slot}}', operator: equals, value: 10h-13h }
-                actions:
-                - name: create_10h_13h
-                  type: automation
-                  operator: call
-                  timeout: 300000
-                  props:
-                    name: helloasso-draft-10h-13h
-                    mode: sync
-                    inputData:
-                      slug: '{{loop.item.slug}}'
-                      title: '{{loop.item.title}}'
-                      date: '{{loop.item.date}}'
-                      capacity: '{{loop.item.capacity}}'
-              - name: slot_14h_17h
-                condition:
-                  conditions:
-                    - { field: '{{loop.item.slot}}', operator: equals, value: 14h-17h }
-                actions:
-                - name: create_14h_17h
-                  type: automation
-                  operator: call
-                  timeout: 300000
-                  props:
-                    name: helloasso-draft-14h-17h
-                    mode: sync
-                    inputData:
-                      slug: '{{loop.item.slug}}'
-                      title: '{{loop.item.title}}'
-                      date: '{{loop.item.date}}'
-                      capacity: '{{loop.item.capacity}}'
-              - name: slot_18h30_21h30
-                condition:
-                  conditions:
-                    - { field: '{{loop.item.slot}}', operator: equals, value: 18h30-21h30 }
-                actions:
-                - name: create_18h30_21h30
-                  type: automation
-                  operator: call
-                  timeout: 300000
-                  props:
-                    name: helloasso-draft-18h30-21h30
-                    mode: sync
-                    inputData:
-                      slug: '{{loop.item.slug}}'
-                      title: '{{loop.item.title}}'
-                      date: '{{loop.item.date}}'
-                      capacity: '{{loop.item.capacity}}'
+            name: helloasso-draft
+            mode: sync
+            inputData:
+              slug: '{{loop.item.slug}}'
+              title: '{{loop.item.title}}'
+              date: '{{loop.item.date}}'
+              startTime: '{{loop.item.startTime}}'
+              endTime: '{{loop.item.endTime}}'
+              capacity: '{{loop.item.capacity}}'
