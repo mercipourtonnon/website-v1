@@ -230,22 +230,11 @@ actions:
                 data:
                   status: sync_error
                   sync_error: '{{outcome.error}}'
+            # End the run as FAILED, so notify-helloasso-failure fires.
+            - name: fail_on_error
+              type: flow
+              operator: stop
+              props:
+                status: error
+                message: 'HelloAsso : {{outcome.error}}'
 
-  # 6b. End a failed attempt as a FAILED run, so notify-helloasso-failure fires.
-  #     (A `flow/stop` with status error inside the branch ended the run as
-  #     `completed-with-errors` in Sovrium 0.33.0, which no failure trigger sees:
-  #     sovrium/sovrium#132.)
-  - name: fail_on_error
-    type: code
-    operator: runTypescript
-    props:
-      timeout: 2000
-      inputData:
-        ok: '{{outcome.ok}}'
-        error: '{{outcome.error}}'
-      code: |
-        async function execute(context) {
-          const input = context.inputData as Record<string, unknown>;
-          if (input.ok === true || input.ok === 'true') return { ok: true };
-          throw new Error(`HelloAsso : ${String(input.error || 'erreur inconnue')}`);
-        }

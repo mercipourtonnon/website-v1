@@ -234,19 +234,27 @@ actions:
         send_status: '{{outcome.status}}'
         send_error: '{{outcome.error}}'
 
-  # End a failed send as a FAILED run so notify-espace-failure fires (see
-  # create-helloasso-event: flow/stop ends as completed-with-errors in 0.33.0).
+  # End a failed send as a FAILED run so notify-espace-failure fires.
   - name: fail_on_error
-    type: code
-    operator: runTypescript
+    type: path
+    operator: branch
     props:
-      timeout: 2000
-      inputData:
-        ok: '{{outcome.ok}}'
-        error: '{{outcome.error}}'
-      code: |
-        async function execute(context) {
-          const input = context.inputData as Record<string, unknown>;
-          if (input.ok === true || input.ok === 'true') return { ok: true };
-          throw new Error(String(input.error || 'Envoi Brevo : erreur inconnue'));
-        }
+      mode: first-match
+      paths:
+        - name: failed
+          condition:
+            conditions:
+              - { field: '{{outcome.ok}}', operator: equals, value: false }
+          actions:
+            - name: stop_failed
+              type: flow
+              operator: stop
+              props:
+                status: error
+                message: '{{outcome.error}}'
+        - name: sent
+          actions:
+            - name: stop_sent
+              type: flow
+              operator: stop
+              props: { status: success, message: Actualité envoyée. }
