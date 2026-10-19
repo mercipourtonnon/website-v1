@@ -10,7 +10,7 @@
 # facilitateur·ice.
 #
 # Why not the logistique group: a button's automation and a field `write` grant
-# read the caller's role only (Sovrium 0.34.1), and a facilitator holds the same
+# read the caller's role only (still so in Sovrium 0.40), and a facilitator holds the same
 # role (coeur) as a logisticien·ne. Opening approval to a role would open it to
 # every facilitator, on her own dates too.
 id: 3
@@ -73,8 +73,6 @@ fields:
   - { id: 13, name: helloasso_url, label: Lien HelloAsso, type: url }
   - { id: 14, name: sync_error, label: Erreur de synchronisation, type: long-text }
   # Row actions. Visibility only; each automation gates who may run it.
-  # No lookup/count on this table: in Sovrium 0.33.0 one next to a button field
-  # breaks every insert (sovrium/sovrium#130). Names are read in build-workshop-payload.
   - id: 15
     name: approve
     type: button
@@ -101,6 +99,12 @@ fields:
   # row rules, being admin-equivalent). Never shown; admins only.
   # Existing rows: see the note at the end of this file.
   - { id: 18, name: editor_role, label: Rôle gestionnaire (technique), type: single-line-text, default: gardien }
+  # Read by build-workshop-payload (HelloAsso title, description and place).
+  - { id: 19, name: lead_name, label: Facilitateur·ice principal·e (nom), type: lookup, relationshipField: lead_facilitator, relatedField: display_name }
+  - { id: 20, name: co_name, label: Co-facilitateur·ice (nom), type: lookup, relationshipField: co_facilitator, relatedField: display_name }
+  - { id: 21, name: venue_name, label: Nom du lieu, type: lookup, relationshipField: venue, relatedField: name }
+  - { id: 22, name: venue_city, label: Ville du lieu, type: lookup, relationshipField: venue, relatedField: city }
+  - { id: 23, name: venue_zip_code, label: Code postal du lieu, type: lookup, relationshipField: venue, relatedField: zip_code }
 permissions:
   read: ['group:facilitation', gardien, admin]
   create: ['group:facilitation', gardien, admin]

@@ -27,8 +27,8 @@ Every option that decides how a Sovrium app is found — page metadata, sitemaps
 | `sovrium docs config pages[].meta.keywords` | string | Comma-separated keywords for SEO |
 | `sovrium docs config pages[].meta.author` | string | Page author or organization name |
 | `sovrium docs config pages[].meta.canonical` | string | Canonical URL to prevent duplicate content issues |
-| `sovrium docs config pages[].meta.robots` | string | Robot directives (e.g., noindex, nofollow, noindex, nofollow) |
-| `sovrium docs config pages[].meta.noindex` | boolean | Prevent indexing by search engines (shorthand for robots: noindex) |
+| `sovrium docs config pages[].meta.robots` | string | Directives for search-engine crawlers, as the content of the page's robots meta tag (for example `noindex, nofollow`, or `follow`). A page that sets neither this nor `noindex` gets no robots tag and stays indexable. |
+| `sovrium docs config pages[].meta.noindex` | boolean | Keep this page out of search results and out of the sitemap (the shorthand for `robots: noindex`). When `robots` is also set, `noindex` is added to its directives: `robots: follow` renders `noindex, follow`. A `robots` string that asks for indexing (`index` or `all`) beside `noindex: true` is refused. |
 | `sovrium docs config pages[].meta.favicon` | string | Default favicon path |
 | `sovrium docs config pages[].meta.favicons` | array \| object | Icons for this page, in either of two forms: an explicit set naming each size and file, or the generated form that derives every size from one source image. |
 | `sovrium docs config pages[].meta.favicons[]` | object | Favicon item |
@@ -221,7 +221,7 @@ Every option that decides how a Sovrium app is found — page metadata, sitemaps
 | Option | Kind | What it does |
 | --- | --- | --- |
 | `sovrium docs config redirects[]` | object | A single URL redirect: the retired path, its replacement, and the HTTP status to answer with. |
-| `sovrium docs config redirects[].from` | string | Root-relative path to redirect FROM (e.g. '/products/platform'). Matched locale-agnostically unless it already begins with a configured language segment. |
-| `sovrium docs config redirects[].to` | string | Redirect target — a root-relative path (e.g. '/') or an absolute http(s) URL. A path target inherits the request's language prefix; an absolute URL is used verbatim. |
+| `sovrium docs config redirects[].from` | string | Root-relative path to redirect FROM (e.g. '/products/platform', '/tables/:table'). A ':name' segment matches any one segment and can be reused in 'to'. Matched locale-agnostically unless it already begins with a configured language segment. |
+| `sovrium docs config redirects[].to` | string | Redirect target — a root-relative path (e.g. '/', '/records/:table?tab=access') or an absolute http(s) URL. A ':name' declared in 'from' is replaced by the segment it captured, in the path or the query. A path target inherits the request's language prefix; an absolute URL is used verbatim. |
 | `sovrium docs config redirects[].status` | enum | HTTP redirect status code. Defaults to 301 (Moved Permanently) when omitted. |
 | `sovrium docs config redirects[].localizeTarget` | boolean | Whether a root-relative target inherits the language prefix matched by 'from' (default: true). Set false when the target lives outside the locale namespace (e.g. '/_admin/login'), so it is emitted verbatim. |

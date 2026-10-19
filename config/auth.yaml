@@ -20,7 +20,7 @@
 #   profile (/espace/coordination/membres) and sync-member-groups applies it.
 #   facilitation, logistique, communication, tresorerie, polyvalent.
 #
-# Sovrium 0.34.1 limits that decide where a right can live:
+# Sovrium limits (still so in 0.40) that decide where a right can live:
 #   - row rules compare `$currentUser.role` only, so "sees every row" is a role
 #     (the editor_role columns), never a group;
 #   - a field `write` grant and a manual automation's requiredRole /
@@ -81,8 +81,8 @@ groups:
     description: Trésorerie — suivi des finances, des dons et des recettes des ateliers
   - name: polyvalent
     description: Contributeur·ice polyvalent·e — appui régulier là où il y a besoin
-# Self-service API keys: an admin mints the key sync-member-groups uses to call
-# the team endpoints (SOVRIUM_ADMIN_API_KEY). See that automation.
+# Self-service API keys: an admin mints the key scripts/import-notion.mjs uses
+# (SOVRIUM_ADMIN_API_KEY).
 apiKeys: true
 emailTemplates:
   magicLink:

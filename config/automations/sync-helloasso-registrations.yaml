@@ -21,21 +21,3 @@ actions:
       inputData:
         workshopId: '{{trigger.data.recordId}}'
 
-  # In 0.33.0 an exhausted callee (sovrium/sovrium#127) still lets this run complete, which would show the
-  # button's success toast. The callee returns `count` only when it got to the
-  # end, so a missing count fails this run too (and shows the error toast).
-  - name: check
-    type: code
-    operator: runTypescript
-    props:
-      timeout: 2000
-      inputData:
-        count: '{{sync.result.count}}'
-      code: |
-        async function execute(context) {
-          const count = (context.inputData as Record<string, unknown>).count;
-          if (count === undefined || count === null || count === '') {
-            throw new Error("La synchronisation HelloAsso n'a pas abouti (voir l'historique des runs).");
-          }
-          return { count: Number(count) };
-        }

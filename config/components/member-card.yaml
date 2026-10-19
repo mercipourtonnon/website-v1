@@ -38,11 +38,8 @@ children:
         props:
           className: text-sm text-bleu-fonce-70
         content: $record.pronoun
-      # Page text, not a record-field: in a list row a record-field prints a
-      # multi-select as raw JSON (Sovrium 0.34.1, sovrium/sovrium#135).
-      - type: text
-        element: span
+      - type: record-field
         visibility: { record: { field: volunteer_roles, isNotEmpty: true } }
         props:
+          field: volunteer_roles
           className: mt-1 text-sm text-bleu-fonce
-        content: $record.volunteer_roles

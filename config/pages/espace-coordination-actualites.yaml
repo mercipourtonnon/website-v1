@@ -38,16 +38,40 @@ components:
           - type: alert
             alertVariant: info
             content: "Publier avec « Envoyer par email » coché envoie tout de suite une campagne à toute la liste des bénévoles. Relis le titre, le chapô et l'article avant de changer le statut."
+          - type: container
+            props:
+              role: toolbar
+              aria-label: Rechercher et filtrer
+              className: flex flex-wrap items-center gap-2
+            children:
+              - type: search-input
+                placeholder: Rechercher
+                props:
+                  aria-label: Rechercher
+                  className: "h-8 w-full sm:w-[250px]"
+                publishes: { bindTo: espace-coordination-actualites-news-1, param: q }
+              - type: filter-bar
+                publishes: { bindTo: espace-coordination-actualites-news-1 }
+                fieldsFrom: { table: news }
+              - type: button
+                label: Importer un CSV
+                variant: outline
+                size: sm
+                props: { className: sm:ml-auto }
+                action: { action: openImport, table: news }
           - type: table
             caption: Actualités
             classes: { parts: { caption: sr-only } }
-            phoneLayout: rows
+            # phoneLayout rows drops the « Nouvelle ligne » entry and the empty
+            # message on a phone in Sovrium 0.40; scroll keeps both (remove once fixed).
+            phoneLayout: scroll
             dataSource:
+              bindTo: espace-coordination-actualites-news-1
+              sharedFilter: {}
               table: news
               sort: [{ field: published_at, direction: desc }]
               pagination: { pageSize: 25 }
-            toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
-            emptyMessage: Aucune actualité pour l'instant. Écris la première avec « Nouvel enregistrement ».
+            emptyMessage: Aucune actualité pour l'instant. Écris la première avec « Nouvelle ligne ».
             rowExpand:
               title: Actualité
               fields: [title, summary, body, image, status, published_at, send_email, send_status, send_error]

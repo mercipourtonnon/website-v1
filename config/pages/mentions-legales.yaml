@@ -8,7 +8,7 @@ meta:
   title: Mentions légales - Merci pour ton non
   description: Mentions légales de l'association Merci pour ton non - Informations légales, éditeur, hébergement, RGPD et protection des données.
   noindex: true # PRE-LAUNCH: remove at launch
-  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch (noindex: true alone is overridden by robots, Sovrium 0.34.3, #140)
+  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch
   canonical: https://mercipourtonnon.fr/mentions-legales
   favicons:
     icon: /favicon/favicon-32x32.png
@@ -244,7 +244,7 @@ components:
                         props:
                           className: list-disc list-inside space-y-2 ml-4
                         children:
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -293,7 +293,7 @@ components:
                         props:
                           className: list-disc list-inside space-y-2 ml-4
                         children:
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -303,7 +303,7 @@ components:
                               - type: text
                                 element: span
                                 content: " Le site utilise JavaScript pour le menu de navigation mobile, les animations et certaines interactions. Certaines fonctionnalités peuvent être limitées si JavaScript est désactivé."
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -313,7 +313,7 @@ components:
                               - type: text
                                 element: span
                                 content: " Nous recommandons d'utiliser les versions récentes de Chrome, Firefox, Safari ou Edge pour une expérience optimale."
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -357,7 +357,7 @@ components:
                         props:
                           className: list-disc list-inside space-y-2 ml-4
                         children:
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -377,7 +377,7 @@ components:
                               - type: text
                                 element: span
                                 content: " pour plus d'informations."
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -387,7 +387,7 @@ components:
                               - type: text
                                 element: span
                                 content: " Quand tu t'inscris à un atelier, nous copions depuis HelloAsso dans l'outil interne de l'association ton nom, ton email, ton téléphone si tu l'as donné, le don éventuel, l'état de ton inscription et ta réponse sur les photos. Le jour de l'atelier, nous y notons ta présence. Si tu viens sans t'être inscrit·e, nous y notons ton nom (et ton email ou ton téléphone si tu nous les donnes). Seul·es les bénévoles qui accueillent les ateliers (facilitation et logistique) et le Cercle Gardien de l'association y ont accès."
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -397,7 +397,7 @@ components:
                               - type: text
                                 element: span
                                 content: " Les personnes qui animent nos ateliers ont un compte sur l'espace facilitateur·ices (nom, adresse email, mot de passe chiffré, propositions de dates). Ces comptes sont créés sur invitation par l'association, et servent uniquement à organiser les ateliers."
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -417,7 +417,7 @@ components:
                               - type: text
                                 element: span
                                 content: " pour plus d'informations."
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -442,21 +442,21 @@ components:
                     props:
                       className: list-disc list-inside space-y-2 ml-4 text-gray-700
                     children:
-                      - type: list-item
+                      - type: item
                         content: Gérer les inscriptions aux ateliers
-                      - type: list-item
+                      - type: item
                         content: Te contacter concernant les ateliers auxquels tu t'es inscrit·e
-                      - type: list-item
+                      - type: item
                         content: "Organiser l'accueil et le suivi des ateliers : t'accueillir, noter ta présence, te joindre en cas d'imprévu le jour J, et établir des statistiques globales (nombre de personnes, dons éventuels)"
-                      - type: list-item
+                      - type: item
                         content: T'envoyer notre newsletter si tu t'y es inscrit·e (actualités, dates d'ateliers, ressources sur le consentement)
-                      - type: list-item
+                      - type: item
                         content: Améliorer l'expérience utilisateur du site
-                      - type: list-item
+                      - type: item
                         content: Répondre à tes demandes d'information
-                      - type: list-item
+                      - type: item
                         content: "Gérer ton compte et ta fiche bénévole si tu rejoins l'équipe (inscription sur /devenir-benevole) : ton email et ton mot de passe pour le compte ; prénom et nom, pronom, téléphone, photo et ce que tu écris dans ta fiche pour mieux se connaître. L'email et le téléphone sont lus par la coordination seulement ; la fiche est visible des autres bénévoles une fois validée"
-                      - type: list-item
+                      - type: item
                         content: "Lire et étudier les idées envoyées depuis /vos-idees (un atelier pour un public précis, un contenu, un format, un lieu) : le type d'idée, pour qui, et ton message ; ton prénom ou nom, ton e-mail et ton accord pour être recontacté·e sont facultatifs et ne servent qu'à te répondre. Lues par la coordination seulement"
 
                   - type: text
@@ -475,7 +475,7 @@ components:
                         props:
                           className: list-disc list-inside space-y-2 ml-4
                         children:
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -485,7 +485,7 @@ components:
                               - type: text
                                 element: span
                                 content: " Tu peux demander l'accès aux données personnelles que nous détenons sur toi"
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -495,7 +495,7 @@ components:
                               - type: text
                                 element: span
                                 content: " Tu peux demander la correction de données inexactes ou incomplètes"
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -505,7 +505,7 @@ components:
                               - type: text
                                 element: span
                                 content: " Tu peux demander la suppression de tes données personnelles"
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -515,7 +515,7 @@ components:
                               - type: text
                                 element: span
                                 content: " Tu peux demander la limitation du traitement de tes données"
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -525,7 +525,7 @@ components:
                               - type: text
                                 element: span
                                 content: " Tu peux demander de recevoir tes données dans un format structuré"
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -610,9 +610,9 @@ components:
                         props:
                           className: list-disc list-inside space-y-2 ml-4
                         children:
-                          - type: list-item
+                          - type: item
                             content: "Le cookie de session de l'espace facilitateur·ices : posé uniquement quand une personne se connecte, il la garde connectée. Il n'est lisible que par le serveur (httpOnly) et disparaît à la déconnexion ou à son expiration."
-                          - type: list-item
+                          - type: item
                             content: "Le formulaire d'inscription à la newsletter (Brevo) peut utiliser des cookies techniques nécessaires à son fonctionnement."
                       - type: text
                         element: p
@@ -673,11 +673,11 @@ components:
                         props:
                           className: list-disc list-inside space-y-2 ml-4
                         children:
-                          - type: list-item
+                          - type: item
                             content: Des dommages directs ou indirects résultant de l'accès au site ou de son utilisation
-                          - type: list-item
+                          - type: item
                             content: Des interruptions temporaires d'accès au site pour des opérations de maintenance ou pour toute autre raison
-                          - type: list-item
+                          - type: item
                             content: Du contenu des sites externes vers lesquels le site renvoie par des liens hypertextes
 
               # Section 8: Liens hypertextes
@@ -751,7 +751,7 @@ components:
                         props:
                           className: list-none space-y-2 ml-4
                         children:
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -766,7 +766,7 @@ components:
                                   href: mailto:mercipourtonnon@gmail.com
                                   className: text-orange hover:underline
                                 content: mercipourtonnon@gmail.com
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span
@@ -776,7 +776,7 @@ components:
                               - type: text
                                 element: span
                                 content: " 249 avenue de Colmar, 67100 Strasbourg"
-                          - type: list-item
+                          - type: item
                             children:
                               - type: text
                                 element: span

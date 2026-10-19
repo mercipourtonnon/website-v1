@@ -3,7 +3,7 @@ name: sovrium-automations
 description: Use when building, reviewing or debugging automations in a Sovrium app — record, webhook, cron, form, auth, comment, manual or failure triggers; http, record, email, code, loop, digest or AI actions; connections and secrets for external services; retries, timeouts, duplicate deliveries, runaway loops, failed runs, notifications and digests. Triggers include "when a record changes", "send an email when", "sync with", "call this API", "webhook", "every night", "sovrium library add recipe", "the automation fired twice", and "why did this run fail".
 license: BSL-1.1
 metadata:
-  product-version: "0.34.1"
+  product-version: "0.40.0"
   author: sovrium
   version: '1.0.0'
 ---

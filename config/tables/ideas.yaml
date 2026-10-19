@@ -36,7 +36,7 @@ fields:
   - { id: 8, name: notes, label: Notes de la coordination, type: long-text }
   - { id: 9, name: received_at, label: Reçue le, type: created-at }
 # Read by the Cercle Cœur (it reads the ideas at its monthly meeting) and the
-# Cercle Gardien; the public form writes the row as system (on-idea), so no
+# Cercle Gardien; the public form writes the row with its own authority, so no
 # create right is needed below gardien.
 permissions:
   read: [coeur, gardien, admin]

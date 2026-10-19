@@ -1,34 +1,22 @@
-# Creates one HelloAsso event as a DRAFT for a workshop from 10:00 to 13:00
-# (Europe/Paris), by duplicating the reference event (16 July 2026: its
-# « Prix libre » tier, its six registration questions, its confirmation text
-# and look) in the admin dashboard, then setting the copy's date, times and
-# seats. Signed in as HELLOASSO_ACCOUNT_EMAIL. Nothing is published: the
-# Cercle Gardien reviews the draft and publishes it on HelloAsso.
+# Creates one HelloAsso event as a DRAFT for a workshop date by duplicating
+# the reference event (16 July 2026: its « Prix libre » tier, its six
+# registration questions, its confirmation text and look) in the admin
+# dashboard, then setting the copy's date, times and seats. Signed in as
+# HELLOASSO_ACCOUNT_EMAIL. Nothing is published: the Cercle Gardien reviews the
+# draft and publishes it on HelloAsso.
 #
 # Why a browser: the v5 API cannot duplicate an event nor set its questions.
 #
-# One automation per time slot (helloasso-draft-10h-13h, -14h-17h,
-# -18h30-21h30), identical but for the two time blocks — keep them so. In
-# Sovrium 0.35.0 a time input ignores `fill` (sovrium#142) and a `press`
-# step's `key` is never templated (sovrium#143), so the times are typed as
-# literal key presses; and a browser run inside a `path` branch renders none
-# of its templates (sovrium#144), so the slot cannot be a branch here. Merge
-# the three once those are fixed.
-#
 # At most once per event: « Dupliquer » is the `irreversible` click, keyed
-# by `slug`; a replay returns the first copy. Sovrium 0.35.0 marks the key
-# pending even when that click never finds its button (sovrium#145): such a
-# run then blocks every retry with outcome_unknown until the
-# `browser-submission:draft:helloasso-event-<slug>` row of
-# system_automation_state is deleted (check first that no copy was made). Callers still look the title
+# by `slug`; a replay returns the first copy. Callers still look the title
 # up first (list-events). The URL assert right after it guarantees no later
 # step ever edits the reference event itself.
 #
 # Locators are the dashboard's data-testid / data-test attributes (mapped on
 # 2026-10-10). Needs BROWSER_PROVIDER=webview and a real Chrome
 # (BROWSER_CDP_URL): HelloAsso's bot check turns a headless one away.
-name: helloasso-draft-10h-13h
-description: Crée en brouillon un atelier HelloAsso (10:00–13:00) en dupliquant l'événement de référence.
+name: helloasso-draft
+description: Crée en brouillon un atelier HelloAsso en dupliquant l'événement de référence.
 trigger:
   type: automation-call
   inputSchema:
@@ -36,6 +24,9 @@ trigger:
     title: { type: string }
     # dd/mm/yyyy, Europe/Paris
     date: { type: string }
+    # HH:MM, Europe/Paris
+    startTime: { type: string }
+    endTime: { type: string }
     # Seats offered on HelloAsso
     capacity: { type: string }
 timeout: 300000
@@ -101,37 +92,14 @@ actions:
         - do: click
           label: Fermer le calendrier
           target: { role: heading, name: Durée de l'événement }
-        # A time input ignores `fill`: click it, then type HHMM as keys.
-        - do: click
+        - do: fill
           label: Heure de début
           target: { testId: input-campaign-start-time }
-        - do: press
-          label: Heure de début « 1 »
-          key: '1'
-        - do: press
-          label: Heure de début « 0 »
-          key: '0'
-        - do: press
-          label: Heure de début « 0 »
-          key: '0'
-        - do: press
-          label: Heure de début « 0 »
-          key: '0'
-        - do: click
+          value: '{{trigger.input.startTime}}'
+        - do: fill
           label: Heure de fin
           target: { testId: input-campaign-end-time }
-        - do: press
-          label: Heure de fin « 1 »
-          key: '1'
-        - do: press
-          label: Heure de fin « 3 »
-          key: '3'
-        - do: press
-          label: Heure de fin « 0 »
-          key: '0'
-        - do: press
-          label: Heure de fin « 0 »
-          key: '0'
+          value: '{{trigger.input.endTime}}'
         - do: click
           label: Enregistrer l'étape 1
           target: { selector: '[data-test="button-submit-step"]' }

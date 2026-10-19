@@ -108,6 +108,24 @@ elevation:
   card: '0 1px 2px rgb(19 0 119 / 0.04), 0 12px 32px -12px rgb(19 0 119 / 0.14)'
   raised: '0 2px 4px rgb(19 0 119 / 0.05), 0 24px 48px -16px rgb(19 0 119 / 0.22)'
 
+# Engine component styles. `item` (formerly `list-item`) became shadcn/ui's
+# Item row in Sovrium 0.38 (a wrapping flex card, small muted text). The site
+# only uses it for prose bullets (mentions légales, proposal checklist), so
+# it keeps the plain list row it had before: a bullet, body size, ink colour
+# (classes merged over the recipe; `replace: true` is not honoured on item in
+# Sovrium 0.40).
+components:
+  item:
+    parts:
+      root: list-item rounded-none border-0 px-3 py-2 text-base text-foreground
+  # shadcn/ui draws form fields on a transparent ground; on the cream and
+  # tinted sections they would take the section colour. Fields stay white, as
+  # before 0.38. The form's `input` part reaches only hosted (formRef) forms,
+  # so the root styles every field it holds, auth and inline forms included.
+  form:
+    parts:
+      root: "[&_input:not([type=checkbox]):not([type=radio])]:bg-white [&_textarea]:bg-white [&_button[role=combobox]]:bg-white"
+
 # Nos principes (ordonnés)
 principles:
   - "Authenticité — design sincère et transparent, pas de surenchère visuelle ni de promesses exagérées."

@@ -15,7 +15,7 @@ meta:
   description: "Rejoins l'équipe bénévole de Merci pour ton non à Strasbourg : stands, ateliers, rôles, parcours vers la facilitation. Crée ton compte en deux minutes."
   author: Merci pour ton non
   noindex: true # PRE-LAUNCH: remove at launch
-  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch (noindex: true alone is overridden by robots, Sovrium 0.34.3, #140)
+  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch
   canonical: https://mercipourtonnon.fr/devenir-benevole
   openGraph:
     type: website
@@ -421,7 +421,9 @@ components:
                           fields:
                             - { name: email, label: Adresse email, placeholder: toi@exemple.fr }
                             - { name: password, label: Mot de passe }
-                          onSuccess: { type: role-landing }
+                          # Sign-up cannot use role-landing since 0.40; the landingPath resolver
+                          # sends the new session to its role landing.
+                          onSuccess: { type: navigate, navigate: /espace/arrivee }
                       - type: container
                         props:
                           className: flex flex-wrap gap-1 border-t border-mauve-lighter pt-4 text-sm text-bleu-fonce

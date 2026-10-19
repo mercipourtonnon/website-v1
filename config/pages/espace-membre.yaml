@@ -67,14 +67,12 @@ components:
                       className: text-bleu-fonce-70
                     content: $record.pronoun
 
-          # Volunteer roles, for every reader. `detail: $record…`, not `field:`:
-          # a field entry prints a multi-select as raw JSON (Sovrium 0.34.1,
-          # sovrium/sovrium#135); page text prints the labels as a list.
+          # Volunteer roles, for every reader.
           - type: description-list
             visibility: { record: { field: volunteer_roles, isNotEmpty: true } }
             layout: stacked
             items:
-              - { term: Rôles bénévoles, detail: $record.volunteer_roles }
+              - { term: Rôles bénévoles, field: volunteer_roles }
 
           # Cercle Gardien only: contact and status.
           - type: container

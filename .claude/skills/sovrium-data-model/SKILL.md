@@ -3,7 +3,7 @@ name: sovrium-data-model
 description: Use when designing, reviewing or changing the tables of a Sovrium app — adding a table or field, choosing a field type, linking tables with relationship, lookup, rollup or count fields, setting table, field or row-level permissions and roles, planning a rename, a type change or a column drop, or writing seed data. Triggers include "model this data", "add a table", "which field type", "one-to-many", "who can see this", "rename a field", "migration", "sovrium seed", and a spreadsheet or Airtable base to bring into Sovrium.
 license: BSL-1.1
 metadata:
-  product-version: "0.34.1"
+  product-version: "0.40.0"
   author: sovrium
   version: '1.0.0'
 ---

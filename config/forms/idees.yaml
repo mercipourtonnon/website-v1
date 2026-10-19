@@ -1,9 +1,6 @@
-# Public form: anyone can send an idea (no `access` block = everyone). The
-# fields are standalone and the row is written by on-idea, not by a
-# `submitTo.table` binding: a public form bound to a table the visitor may not
-# create in renders nothing when embedded with formRef (Sovrium 0.34.1,
-# sovrium/sovrium#138), while the standalone route works. The ledger keeps a
-# copy (Submissions inbox), also for the formRef embed on /vos-idees.
+# Public form: anyone can send an idea (no `access` block = everyone). It writes
+# the `ideas` row itself; on-idea then tells the coordination by mail. The
+# ledger keeps a copy (Submissions inbox), also for the formRef embed on /vos-idees.
 # Reachable at /forms/idees (a custom `path` may not collide with the page).
 id: 6
 name: idees
@@ -13,6 +10,7 @@ description: >-
   dis-nous ce que tu voudrais qu'on construise. On lit tout, on répond si tu le
   souhaites, et les idées retenues nourrissent nos priorités de l'année.
 submitTo:
+  table: ideas
   automation: on-idea
   storeSubmission: true
 antiSpam:
@@ -25,21 +23,10 @@ onSuccess:
   title: Merci, c'est reçu
   message: On lit chaque idée en réunion mensuelle. Si tu as laissé ton e-mail et coché la case, on te répond.
 fields:
-  - kind: standalone
-    name: kind
-    inputType: select
-    label: C'est plutôt…
-    required: true
-    # Same values as ideas.kind.
-    options:
-      - { value: atelier, label: Un atelier pour un public précis }
-      - { value: contenu, label: Un contenu ou une ressource }
-      - { value: format, label: Un format ou un programme }
-      - { value: lieu, label: Un lieu ou un partenariat }
-      - { value: autre, label: Autre }
-  - { kind: standalone, name: audience, inputType: short-text, label: Pour qui ?, placeholder: 'des parents, mon équipe, des lycéen·nes…' }
-  - { kind: standalone, name: message, inputType: long-text, label: Ton idée, required: true, helpText: "Ce que tu voudrais qu'on propose, et pourquoi ça manque." }
+  - { kind: table-field, column: kind, label: C'est plutôt…, required: true }
+  - { kind: table-field, column: audience, label: Pour qui ?, placeholder: 'des parents, mon équipe, des lycéen·nes…' }
+  - { kind: table-field, column: message, label: Ton idée, required: true, helpText: "Ce que tu voudrais qu'on propose, et pourquoi ça manque." }
   - { kind: section, heading: Si tu veux qu'on te réponde (facultatif) }
-  - { kind: standalone, name: name, inputType: short-text, label: Prénom ou nom }
-  - { kind: standalone, name: email, inputType: email, label: E-mail }
-  - { kind: standalone, name: contact_ok, inputType: checkbox, label: Vous pouvez me recontacter à ce sujet }
+  - { kind: table-field, column: name, label: Prénom ou nom }
+  - { kind: table-field, column: email, label: E-mail }
+  - { kind: table-field, column: contact_ok, label: Vous pouvez me recontacter à ce sujet }

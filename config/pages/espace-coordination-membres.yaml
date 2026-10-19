@@ -63,18 +63,34 @@ components:
                   id: attente-titre
                   className: text-2xl title-font text-bleu-fonce
                 content: candidatures en attente
+              - type: container
+                props:
+                  role: toolbar
+                  aria-label: Rechercher et filtrer
+                  className: flex flex-wrap items-center gap-2
+                children:
+                  - type: search-input
+                    placeholder: Rechercher
+                    props:
+                      aria-label: Rechercher
+                      className: "h-8 w-full sm:w-[250px]"
+                    publishes: { bindTo: espace-coordination-membres-members-1, param: q }
+                  - type: filter-bar
+                    publishes: { bindTo: espace-coordination-membres-members-1 }
+                    fieldsFrom: { table: members }
               - type: table
                 caption: Candidatures en attente
                 classes: { parts: { caption: sr-only } }
                 readOnly: true
                 phoneLayout: rows
                 dataSource:
+                  bindTo: espace-coordination-membres-members-1
+                  sharedFilter: {}
                   table: members
                   filter:
                     - { field: status, operator: eq, value: pending }
                   sort: [{ field: joined_at, direction: asc }]
                   pagination: { pageSize: 25 }
-                toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
                 emptyMessage: Aucune candidature en attente. Les nouvelles inscriptions arrivent ici.
                 rowExpand:
                   title: Fiche bénévole
@@ -108,18 +124,34 @@ components:
                   id: equipe-titre
                   className: text-2xl title-font text-bleu-fonce
                 content: toute l'équipe
+              - type: container
+                props:
+                  role: toolbar
+                  aria-label: Rechercher et filtrer
+                  className: flex flex-wrap items-center gap-2
+                children:
+                  - type: search-input
+                    placeholder: Rechercher
+                    props:
+                      aria-label: Rechercher
+                      className: "h-8 w-full sm:w-[250px]"
+                    publishes: { bindTo: espace-coordination-membres-members-2, param: q }
+                  - type: filter-bar
+                    publishes: { bindTo: espace-coordination-membres-members-2 }
+                    fieldsFrom: { table: members }
               - type: table
                 caption: Toute l'équipe
                 classes: { parts: { caption: sr-only } }
                 readOnly: true
                 phoneLayout: rows
                 dataSource:
+                  bindTo: espace-coordination-membres-members-2
+                  sharedFilter: {}
                   table: members
                   filter:
                     - { field: status, operator: neq, value: pending }
                   sort: [{ field: display_name, direction: asc }]
                   pagination: { pageSize: 25 }
-                toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
                 emptyMessage: Personne pour l'instant.
                 rowExpand:
                   title: Fiche bénévole

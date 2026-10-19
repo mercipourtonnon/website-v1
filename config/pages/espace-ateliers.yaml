@@ -46,7 +46,6 @@ components:
               table: workshops
               sort: [{ field: starts_at, direction: desc }]
               pagination: { pageSize: 25 }
-            toolbar: { search: false, filters: false, sort: false, export: false, refresh: false }
             emptyMessage: Aucun atelier en ligne pour l'instant. Une date apparaît ici quand tu la publies depuis « À valider ».
             rowExpand:
               title: Atelier

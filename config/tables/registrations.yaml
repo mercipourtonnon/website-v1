@@ -8,8 +8,7 @@
 # anonymise-registrations blanks the personal fields 12 months after the date.
 #
 # No lookup into `workshops` here: workshops counts and sums these rows, and two
-# tables cannot derive from each other. No button field either (0.33.0: a button
-# next to a lookup or rollup breaks inserts).
+# tables cannot derive from each other.
 id: 10
 name: registrations
 fields:
@@ -34,8 +33,6 @@ fields:
     type: formula
     formula: "TRIM(COALESCE(first_name, '') || ' ' || COALESCE(last_name, ''))"
     resultType: string
-  # Not `email`: in 0.33.0 a field named `email` that a reader cannot read makes
-  # the sign-in block drop its email input.
   - { id: 7, name: participant_email, label: Email, type: email }
   - { id: 8, name: phone, label: Téléphone, type: phone-number }
   # Ticket plus the order's donations (on the order's first ticket only).

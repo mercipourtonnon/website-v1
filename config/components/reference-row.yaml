@@ -61,12 +61,9 @@ children:
           className: type-caption text-cyan-ink
         content: en français et en anglais
       # Orange-ink on white keeps the hue readable (6.2:1); the vivid orange is never text.
-      # Sovrium 0.34.1: a record gate on a checkbox compares the stored 0/1, not
-      # the boolean the manual documents (`neq: true` matched every row). Keep
-      # `neq: 1` until the fix ships (sovrium/sovrium#137).
       - type: text
         element: span
-        visibility: { record: { field: verified, neq: 1 } }
+        visibility: { record: { field: verified, neq: true } }
         props:
           className: type-caption font-bold text-orange-ink border border-orange rounded-pill px-2 py-0.5
         content: à vérifier
