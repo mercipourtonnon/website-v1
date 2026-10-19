@@ -17,7 +17,7 @@ meta:
   description: "Un atelier pour un public précis, un contenu, un format, un lieu : propose ce que tu voudrais que Merci pour ton non construise, à Strasbourg et en Alsace."
   author: Merci pour ton non
   noindex: true # PRE-LAUNCH: remove at launch
-  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch (noindex: true alone is overridden by robots, Sovrium 0.34.3, #140)
+  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch
   canonical: https://mercipourtonnon.fr/vos-idees
   openGraph:
     type: website
@@ -229,9 +229,6 @@ components:
                 props:
                   className: lg:col-span-8 flex flex-col gap-6
                 children:
-                  # The `idees` form is standalone (no submitTo.table; on-idea writes
-                  # the row): on 0.34.1 a public form bound to a table the visitor may
-                  # not create in renders nothing when embedded (sovrium/sovrium#138).
                   - type: container
                     props:
                       className: bg-white rounded-card shadow-card p-6 sm:p-8

@@ -17,7 +17,7 @@ meta:
   description: Notre vision du consentement - définitions, l'acronyme RÈGLES, dire et remercier le non, changer d'avis, les biais qui poussent à dire oui. En libre accès.
   author: Merci pour ton non
   noindex: true # PRE-LAUNCH: remove at launch
-  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch (noindex: true alone is overridden by robots, Sovrium 0.34.3, #140)
+  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch
   canonical: https://mercipourtonnon.fr/le-consentement
   openGraph:
     type: article

@@ -19,7 +19,7 @@ meta:
   description: "Merci pour ton non diffuse une culture du consentement à Strasbourg et en Alsace : chiffres, histoire, valeurs, équipe, bénévoles, gouvernance et partenaires."
   author: Merci pour ton non
   noindex: true # PRE-LAUNCH: remove at launch
-  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch (noindex: true alone is overridden by robots, Sovrium 0.34.3, #140)
+  robots: noindex, nofollow # PRE-LAUNCH: restore "index, follow" at launch
   canonical: https://mercipourtonnon.fr/notre-mission
   openGraph:
     type: website
@@ -529,25 +529,34 @@ components:
                 props:
                   className: lg:col-span-6
                 children:
-                  # Numbered rail (the markup of /nos-ateliers#programme). Workaround
-                  # for Sovrium 0.34.1: a structural `timeline` (children, no
-                  # dataSource) draws the rail line but no marker per child —
-                  # sovrium/sovrium#136. Switch back to `type: timeline` once fixed.
-                  - type: container
-                    element: div
+                  # The association's milestones on the structural timeline rail,
+                  # numbered like /nos-ateliers#programme: an orange disc per date
+                  # (a CSS counter) on a bleu-fonce-light rail. The rail's parts
+                  # take no `classes` in 0.40, so the root styles them by data-slot.
+                  - type: timeline
                     props:
-                      role: list
-                      className: flex flex-col
                       aria-label: Les grandes dates de l'association
+                      className: >-
+                        [counter-reset:jalon]
+                        [&_[data-slot=timeline-item]]:gap-4
+                        [&_[data-slot=timeline-item]]:[counter-increment:jalon]
+                        [&_[data-slot=timeline-item]>span:first-child]:w-10
+                        [&_[data-slot=timeline-marker]]:mt-0
+                        [&_[data-slot=timeline-marker]]:size-10
+                        [&_[data-slot=timeline-marker]]:bg-orange
+                        [&_[data-slot=timeline-marker]]:ring-0
+                        [&_[data-slot=timeline-marker]]:flex
+                        [&_[data-slot=timeline-marker]]:items-center
+                        [&_[data-slot=timeline-marker]]:justify-center
+                        [&_[data-slot=timeline-marker]]:font-bold
+                        [&_[data-slot=timeline-marker]]:text-bleu-fonce
+                        [&_[data-slot=timeline-marker]]:after:content-[counter(jalon)]
+                        [&_[data-slot=timeline-connector]]:mt-0
+                        [&_[data-slot=timeline-connector]]:w-0.5
+                        [&_[data-slot=timeline-connector]]:bg-bleu-fonce-light
                     children:
                       - type: container
-                        element: div
-                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
                         children:
-                          - type: text
-                            element: span
-                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
-                            content: '1'
                           - type: text
                             element: p
                             props: { className: type-overline text-orange-ink pt-2.5 }
@@ -561,13 +570,7 @@ components:
                             props: { className: type-small text-bleu-fonce-70 }
                             content: L'association est créée, et le premier atelier Niveau 1 a lieu le jour même.
                       - type: container
-                        element: div
-                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
                         children:
-                          - type: text
-                            element: span
-                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
-                            content: '2'
                           - type: text
                             element: p
                             props: { className: type-overline text-orange-ink pt-2.5 }
@@ -581,13 +584,7 @@ components:
                             props: { className: type-small text-bleu-fonce-70 }
                             content: Le rythme mensuel s'installe, à La Plage Digitale.
                       - type: container
-                        element: div
-                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
                         children:
-                          - type: text
-                            element: span
-                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
-                            content: '3'
                           - type: text
                             element: p
                             props: { className: type-overline text-orange-ink pt-2.5 }
@@ -601,13 +598,7 @@ components:
                             props: { className: type-small text-bleu-fonce-70 }
                             content: Soutenance au Labo des Partenariats après dix formations, premier stand au Village des associations, finale de la Social Cup.
                       - type: container
-                        element: div
-                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
                         children:
-                          - type: text
-                            element: span
-                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
-                            content: '4'
                           - type: text
                             element: p
                             props: { className: type-overline text-orange-ink pt-2.5 }
@@ -621,13 +612,7 @@ components:
                             props: { className: type-small text-bleu-fonce-70 }
                             content: Les adhésions ouvrent en ligne ; stands aux distributions de Cop1 et à la Fête de la musique pour la Ville de Strasbourg.
                       - type: container
-                        element: div
-                        props: { role: listitem, className: relative pl-14 pb-8 border-l-2 border-bleu-fonce-light ml-5 }
                         children:
-                          - type: text
-                            element: span
-                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
-                            content: '5'
                           - type: text
                             element: p
                             props: { className: type-overline text-orange-ink pt-2.5 }
@@ -641,13 +626,7 @@ components:
                             props: { className: type-small text-bleu-fonce-70 }
                             content: Un an après la création, les membres se réuniront pour la première AG ordinaire.
                       - type: container
-                        element: div
-                        props: { role: listitem, className: relative pl-14 pb-2 ml-5 }
                         children:
-                          - type: text
-                            element: span
-                            props: { className: absolute -left-5 top-0 w-10 h-10 rounded-pill bg-orange text-bleu-fonce font-bold flex items-center justify-center, aria-hidden: 'true' }
-                            content: '6'
                           - type: text
                             element: p
                             props: { className: type-overline text-orange-ink pt-2.5 }
