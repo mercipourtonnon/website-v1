@@ -91,7 +91,7 @@ components:
                   loadMore: button
                   emptyMessage: Aucun rendez-vous à venir pour ce choix. Retire le filtre pour tout revoir, ou repasse bientôt.
                 onRowClick: { type: navigate, path: /espace/agenda/$record.id }
-              - type: calendar
+              - type: event-calendar
                 dataSource:
                   table: events
                   filter:

@@ -20,7 +20,7 @@
 #   profile (/espace/coordination/membres) and sync-member-groups applies it.
 #   facilitation, logistique, communication, tresorerie, polyvalent.
 #
-# Sovrium 0.34.1 limits that decide where a right can live:
+# Sovrium limits (still so in 0.40) that decide where a right can live:
 #   - row rules compare `$currentUser.role` only, so "sees every row" is a role
 #     (the editor_role columns), never a group;
 #   - a field `write` grant and a manual automation's requiredRole /

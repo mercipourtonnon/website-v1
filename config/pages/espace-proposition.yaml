@@ -273,7 +273,7 @@ components:
                     props:
                       className: list-decimal space-y-3 pl-6 text-bleu-fonce
                     children:
-                      - type: list-item
+                      - type: item
                         children:
                           - type: text
                             element: span
@@ -282,17 +282,17 @@ components:
                             props:
                               className: mt-2 list-disc space-y-1 pl-6 text-sm
                             children:
-                              - { type: list-item, content: "Email (obligatoire, format email)" }
-                              - { type: list-item, content: "Numéro de téléphone (pour te prévenir en cas d'imprévu ou d'information importante avant l'atelier) (obligatoire, format téléphone)" }
-                              - { type: list-item, content: "Comment j'ai entendu parler de cet événement (obligatoire)" }
-                              - { type: list-item, content: "Qu'est-ce qui me motive, me donne envie de participer ? (obligatoire)" }
-                              - { type: list-item, content: "J'autorise l'association à me photographier/filmer lors de l'événement et à utiliser ces images sur ses supports de communication. Consentement retirable à tout moment : mercipourtonnon@gmail.com (obligatoire, choix Oui / Non)" }
-                              - { type: list-item, content: "Veux-tu nous laisser un petit mot ? (facultatif)" }
-                      - type: list-item
+                              - { type: item, content: "Email (obligatoire, format email)" }
+                              - { type: item, content: "Numéro de téléphone (pour te prévenir en cas d'imprévu ou d'information importante avant l'atelier) (obligatoire, format téléphone)" }
+                              - { type: item, content: "Comment j'ai entendu parler de cet événement (obligatoire)" }
+                              - { type: item, content: "Qu'est-ce qui me motive, me donne envie de participer ? (obligatoire)" }
+                              - { type: item, content: "J'autorise l'association à me photographier/filmer lors de l'événement et à utiliser ces images sur ses supports de communication. Consentement retirable à tout moment : mercipourtonnon@gmail.com (obligatoire, choix Oui / Non)" }
+                              - { type: item, content: "Veux-tu nous laisser un petit mot ? (facultatif)" }
+                      - type: item
                         content: "Vérifie le tarif « Prix libre » à 0 €, les dons ouverts, le nombre de places et la bannière."
-                      - type: list-item
+                      - type: item
                         content: Publie l'événement sur HelloAsso.
-                      - type: list-item
+                      - type: item
                         content: Reviens ici et appuie sur « Publier sur le site ».
                   - type: button
                     label: Publier sur le site

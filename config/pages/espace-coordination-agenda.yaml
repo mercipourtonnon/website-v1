@@ -47,15 +47,31 @@ components:
                   id: evenements-titre
                   className: text-2xl title-font text-bleu-fonce
                 content: rendez-vous
+              - type: container
+                props:
+                  role: toolbar
+                  aria-label: Rechercher et filtrer
+                  className: flex flex-wrap items-center gap-2
+                children:
+                  - type: search-input
+                    placeholder: Rechercher
+                    props:
+                      aria-label: Rechercher
+                      className: "h-8 w-full sm:w-[250px]"
+                    publishes: { bindTo: espace-coordination-agenda-events-1, param: q }
+                  - type: filter-bar
+                    publishes: { bindTo: espace-coordination-agenda-events-1 }
+                    fieldsFrom: { table: events }
               - type: table
                 caption: Rendez-vous
                 classes: { parts: { caption: sr-only } }
                 phoneLayout: rows
                 dataSource:
+                  bindTo: espace-coordination-agenda-events-1
+                  sharedFilter: {}
                   table: events
                   sort: [{ field: starts_at, direction: desc }]
                   pagination: { pageSize: 25 }
-                toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
                 emptyMessage: Aucun rendez-vous pour l'instant. Crée le premier avec « Nouvel enregistrement ».
                 rowExpand:
                   title: Rendez-vous
@@ -92,15 +108,31 @@ components:
                 props:
                   className: text-bleu-fonce
                 content: Ce dont chaque rendez-vous a besoin (« Tenir le stand 14h–16h », « Apporter à manger »), avec le nombre de places. Les places restantes se calculent toutes seules.
+              - type: container
+                props:
+                  role: toolbar
+                  aria-label: Rechercher et filtrer
+                  className: flex flex-wrap items-center gap-2
+                children:
+                  - type: search-input
+                    placeholder: Rechercher
+                    props:
+                      aria-label: Rechercher
+                      className: "h-8 w-full sm:w-[250px]"
+                    publishes: { bindTo: espace-coordination-agenda-event_needs-2, param: q }
+                  - type: filter-bar
+                    publishes: { bindTo: espace-coordination-agenda-event_needs-2 }
+                    fieldsFrom: { table: event_needs }
               - type: table
                 caption: Besoins
                 classes: { parts: { caption: sr-only } }
                 phoneLayout: rows
                 dataSource:
+                  bindTo: espace-coordination-agenda-event_needs-2
+                  sharedFilter: {}
                   table: event_needs
                   sort: [{ field: event, direction: desc }, { field: position, direction: asc }]
                   pagination: { pageSize: 50 }
-                toolbar: { search: true, filters: true, sort: false, export: false, refresh: true }
                 emptyMessage: Aucun besoin pour l'instant. Ajoute-en un avec « Nouvel enregistrement » et choisis son rendez-vous.
                 columns:
                   - { field: event, label: Rendez-vous }
@@ -126,16 +158,38 @@ components:
                   id: inscriptions-titre
                   className: text-2xl title-font text-bleu-fonce
                 content: qui vient à quoi
+              - type: container
+                props:
+                  role: toolbar
+                  aria-label: Rechercher et filtrer
+                  className: flex flex-wrap items-center gap-2
+                children:
+                  - type: search-input
+                    placeholder: Rechercher
+                    props:
+                      aria-label: Rechercher
+                      className: "h-8 w-full sm:w-[250px]"
+                    publishes: { bindTo: espace-coordination-agenda-event_participations-3, param: q }
+                  - type: filter-bar
+                    publishes: { bindTo: espace-coordination-agenda-event_participations-3 }
+                    fieldsFrom: { table: event_participations }
+                  - type: button
+                    label: Exporter en CSV
+                    variant: outline
+                    size: sm
+                    props: { className: sm:ml-auto }
+                    action: { type: fetch, mode: download, url: /api/tables/event_participations/export?format=csv, filename: event_participations.csv }
               - type: table
                 caption: Inscriptions des bénévoles
                 classes: { parts: { caption: sr-only } }
                 readOnly: true
                 phoneLayout: rows
                 dataSource:
+                  bindTo: espace-coordination-agenda-event_participations-3
+                  sharedFilter: {}
                   table: event_participations
                   sort: [{ field: event, direction: desc }, { field: created_at, direction: asc }]
                   pagination: { pageSize: 50 }
-                toolbar: { search: true, filters: true, sort: false, export: true, refresh: true }
                 emptyMessage: Aucune inscription pour l'instant.
                 columns:
                   - { field: event, label: Rendez-vous }

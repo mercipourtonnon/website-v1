@@ -91,7 +91,9 @@ components:
                   fields:
                     - { name: email, label: Adresse email, placeholder: toi@exemple.fr }
                     - { name: password, label: Mot de passe }
-                  onSuccess: { type: role-landing }
+                  # Sign-up cannot use role-landing since 0.40; the landingPath resolver
+                  # sends the new session to its role landing.
+                  onSuccess: { type: navigate, navigate: /espace/arrivee }
               - type: container
                 props:
                   className: flex flex-wrap gap-1 border-t border-mauve-lighter pt-4 text-sm text-bleu-fonce

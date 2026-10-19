@@ -135,7 +135,6 @@ components:
                       sort: [{ field: session_date, direction: asc }]
                       pagination: { pageSize: 25 }
                     onRowClick: { type: navigate, path: /espace/suivi/$record.id }
-                    toolbar: { search: false, filters: false, sort: false, export: false, refresh: false }
                     emptyMessage: Aucune date à venir pour l'instant. Une date apparaît ici dès qu'elle est publiée sur le site.
                     columns:
                       - { field: session_date, label: Date, format: short-date, frozen: true, minWidth: 110 }
@@ -166,7 +165,6 @@ components:
                       sort: [{ field: session_date, direction: desc }]
                       pagination: { pageSize: 25 }
                     onRowClick: { type: navigate, path: /espace/suivi/$record.id }
-                    toolbar: { search: false, filters: false, sort: false, export: false, refresh: false }
                     emptyMessage: Aucune date passée pour l'instant.
                     columns:
                       - { field: session_date, label: Date, format: short-date, frozen: true, minWidth: 110 }

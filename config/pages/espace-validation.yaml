@@ -50,7 +50,6 @@ components:
               filter:
                 - { field: status, operator: in, value: [proposed, approved, helloasso_draft, sync_error] }
               sort: [{ field: session_date, direction: asc }]
-            toolbar: { search: false, filters: false, sort: false, export: false, refresh: true }
             emptyMessage: Rien à valider pour l'instant. Les nouvelles propositions des facilitateur·ices arrivent ici.
             onRowClick: { type: navigate, path: /espace/propositions/$record.id }
             # Status chips read the option labels and colours declared on
@@ -123,7 +122,6 @@ components:
                     - { field: status, operator: in, value: [published, rejected, withdrawn] }
                   sort: [{ field: session_date, direction: desc }]
                   pagination: { pageSize: 20 }
-                toolbar: { search: false, filters: false, sort: false, export: false, refresh: false }
                 emptyMessage: Aucune proposition traitée pour l'instant.
                 onRowClick: { type: navigate, path: /espace/propositions/$record.id }
                 columns:
