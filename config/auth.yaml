@@ -81,8 +81,8 @@ groups:
     description: Trésorerie — suivi des finances, des dons et des recettes des ateliers
   - name: polyvalent
     description: Contributeur·ice polyvalent·e — appui régulier là où il y a besoin
-# Self-service API keys: an admin mints the key sync-member-groups uses to call
-# the team endpoints (SOVRIUM_ADMIN_API_KEY). See that automation.
+# Self-service API keys: an admin mints the key scripts/import-notion.mjs uses
+# (SOVRIUM_ADMIN_API_KEY).
 apiKeys: true
 emailTemplates:
   magicLink:

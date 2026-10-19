@@ -68,9 +68,6 @@ env:
   - { key: BREVO_SENDER_EMAIL, description: Sender address of the news campaigns (a verified Brevo sender), secret: false }
   - { key: BREVO_SENDER_NAME, description: Sender name of the news campaigns (e.g. Merci pour ton non), secret: false }
   - { key: WHATSAPP_COMMUNITY_URL, description: Invitation link to the bénévoles' WhatsApp community, secret: false }
-  - key: SOVRIUM_ADMIN_API_KEY
-    description: An admin's API key (POST /api/auth/api-key/create), used by sync-member-groups to set volunteer-role groups
-    required: false
   - key: BASE_URL
     description: Public origin of the app (https://mercipourtonnon.fr), used for links in emails
     secret: false
@@ -78,8 +75,6 @@ env:
 connections:
   - $ref: ./config/connections/helloasso.yaml
   - $ref: ./library/connection/brevo.yaml
-  # Volunteer roles → groups (sync-member-groups).
-  - $ref: ./config/connections/sovrium-admin.yaml
   # Legacy ticketing, read once by migrate-billetterie-plus.
   - $ref: ./config/connections/billetterie-plus.yaml
 
