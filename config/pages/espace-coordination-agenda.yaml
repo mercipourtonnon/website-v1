@@ -1,5 +1,5 @@
 # /espace/coordination/agenda — logistique, communication and the Cercle Gardien edit events and their needs
-# in grids (in-cell editing, « Nouvel enregistrement », the row panel for the
+# in grids (in-cell editing, « Nouvelle ligne », the row panel for the
 # rich-text fields), and reads who signed up to what. Every status shows here,
 # drafts included. Publishing = setting the status to Publié.
 name: espace-coordination-agenda
@@ -72,7 +72,7 @@ components:
                   table: events
                   sort: [{ field: starts_at, direction: desc }]
                   pagination: { pageSize: 25 }
-                emptyMessage: Aucun rendez-vous pour l'instant. Crée le premier avec « Nouvel enregistrement ».
+                emptyMessage: Aucun rendez-vous pour l'instant. Crée le premier avec « Nouvelle ligne ».
                 rowExpand:
                   title: Rendez-vous
                   fields: [title, type, status, starts_at, ends_at, location, video_url, purpose, programme, practical_info, image]
@@ -133,7 +133,7 @@ components:
                   table: event_needs
                   sort: [{ field: event, direction: desc }, { field: position, direction: asc }]
                   pagination: { pageSize: 50 }
-                emptyMessage: Aucun besoin pour l'instant. Ajoute-en un avec « Nouvel enregistrement » et choisis son rendez-vous.
+                emptyMessage: Aucun besoin pour l'instant. Ajoute-en un avec « Nouvelle ligne » et choisis son rendez-vous.
                 columns:
                   - { field: event, label: Rendez-vous }
                   - { field: label, label: Besoin }

@@ -192,6 +192,18 @@ components:
                 props:
                   className: text-bleu-fonce
                 content: Appuie sur « Présent·e » quand une personne arrive. Une personne marquée « Pas de photo » ne doit apparaître sur aucune photo ni vidéo. Touche une ligne pour voir son téléphone, son email et ajouter une note.
+              - type: container
+                props:
+                  role: toolbar
+                  aria-label: Rechercher et filtrer
+                  className: flex flex-wrap items-center gap-2
+                children:
+                  - type: search-input
+                    placeholder: Rechercher
+                    props:
+                      aria-label: Rechercher
+                      className: "h-8 w-full sm:w-[250px]"
+                    publishes: { bindTo: espace-suivi-date-registrations-1, param: q }
               - type: table
                 caption: Personnes inscrites à cette date
                 classes: { parts: { caption: sr-only } }
@@ -200,6 +212,8 @@ components:
                 phoneLayout: scroll
                 rowHeight: tall
                 dataSource:
+                  bindTo: espace-suivi-date-registrations-1
+                  sharedFilter: {}
                   table: registrations
                   filter:
                     - { field: workshop, operator: eq, value: $param.id }
@@ -208,7 +222,6 @@ components:
                   pagination: { pageSize: 100 }
                   refreshMode: poll
                   pollIntervalMs: 15000
-                toolbar: { search: true, filters: false, sort: false, export: false, refresh: false }
                 emptyMessage: Personne n'est encore inscrit·e à cette date. Appuie sur « Synchroniser maintenant » pour récupérer les dernières inscriptions HelloAsso, ou ajoute les personnes venues sur place.
                 rowExpand:
                   title: Personne inscrite
@@ -304,7 +317,6 @@ components:
                   table: workshop_cash
                   filter:
                     - { field: workshop, operator: eq, value: $param.id }
-                toolbar: { search: false, filters: false, sort: false, export: false, refresh: false }
                 rowExpand:
                   title: Prix libre sur place
                   fields: [amount_on_site, note]

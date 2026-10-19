@@ -63,7 +63,7 @@ components:
               table: news
               sort: [{ field: published_at, direction: desc }]
               pagination: { pageSize: 25 }
-            emptyMessage: Aucune actualité pour l'instant. Écris la première avec « Nouvel enregistrement ».
+            emptyMessage: Aucune actualité pour l'instant. Écris la première avec « Nouvelle ligne ».
             rowExpand:
               title: Actualité
               fields: [title, summary, body, image, status, published_at, send_email, send_status, send_error]
