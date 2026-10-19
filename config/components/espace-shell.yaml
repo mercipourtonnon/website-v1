@@ -88,10 +88,13 @@ children:
             rail: { below: md }
             props:
               aria-label: Navigation de l'espace bénévole
-              className: &sidebarClassName w-full flex-none
+              # Since Sovrium 0.38 the sidebar is shadcn/ui's: its own grey ground
+              # and a pb-12 under each one. The stacked sidebars sit on the
+              # column's cream instead, with no gap, at body size.
+              className: &sidebarClassName "w-full flex-none bg-transparent [&_[data-slot=sidebar-content]]:pb-0"
             classes: &sidebarClasses
               parts:
-                link: rounded-md text-bleu-fonce hover:bg-orange-light
+                link: h-auto py-1.5 rounded-md text-md text-bleu-fonce hover:bg-orange-light
                 groupLabel: text-xs font-bold uppercase tracking-wide text-bleu-fonce-70
               states:
                 current: { link: bg-white font-bold text-bleu-fonce shadow-sm }

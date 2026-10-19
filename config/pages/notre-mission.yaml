@@ -538,7 +538,8 @@ components:
                       aria-label: Les grandes dates de l'association
                       className: >-
                         [counter-reset:jalon]
-                        [&_[data-slot=timeline-item]]:gap-4
+                        [&_[data-slot=timeline-item]]:gap-9
+                        [&_[data-slot=timeline-item]>div]:pb-8
                         [&_[data-slot=timeline-item]]:[counter-increment:jalon]
                         [&_[data-slot=timeline-item]>span:first-child]:w-10
                         [&_[data-slot=timeline-marker]]:mt-0

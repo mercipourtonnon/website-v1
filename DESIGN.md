@@ -31,64 +31,67 @@
 
 ## Colour tokens
 
-| Token | Value | Usage | Pairs with |
-| --- | --- | --- | --- |
-| background | oklch(0.985 0 0) |  |  |
-| background-subtle | oklch(0.965 0 0) |  |  |
-| background-raised | oklch(0.995 0 0) |  |  |
-| background-overlay | oklch(0.995 0 0) |  |  |
-| background-inset | oklch(0.952 0 0) |  |  |
-| foreground | oklch(0.14 0 0) |  |  |
-| foreground-muted | oklch(0.445 0 0) |  |  |
-| foreground-subtle | oklch(0.54 0 0) |  |  |
-| foreground-disabled | oklch(0.71 0 0) |  |  |
-| foreground-inverse | oklch(0.985 0 0) |  |  |
-| border | oklch(0.92 0 0) |  |  |
-| ring | oklch(0.205 0 0) |  |  |
-| primary | #130077 |  |  |
-| primary-hover | #24109A |  |  |
-| primary-active | #0C004F |  |  |
-| primary-foreground | #FFFFFF |  |  |
-| primary-subtle | #E6E0FF |  |  |
-| primary-subtle-foreground | oklch(0.205 0 0) |  |  |
-| success | #E6F9F8 |  |  |
-| warning | #FFF8E6 |  |  |
-| error | #c13520 |  |  |
-| info | #398ad6 |  |  |
-| pourpre | #F5004F | Émotion, authenticité, découverte. Témoignages, sections émotionnelles. Jamais en fond de grande section : utiliser pourpre-light. | pourpre-light |
-| pourpre-hover | #D10042 |  |  |
-| pourpre-light | #FFF0F5 |  |  |
-| pourpre-lighter | #FFE0EA |  |  |
-| orange | #FFAF00 | Action, engagement, chaleur. Boutons d'inscription, CTAs principaux, liens actifs — en fond, toujours avec un texte bleu-fonce (8,8:1), jamais blanc (1,8:1). Jamais pour une action contradictoire (annuler ET confirmer). | orange-light |
-| orange-hover | #E69E00 |  |  |
-| orange-light | #FFF8E6 |  |  |
-| orange-lighter | #FFF0D1 |  |  |
-| orange-ink | #8F5200 | Version texte de l'orange : petits libellés, liens et sur-titres orange sur fond blanc ou clair. L'orange vif n'est jamais du texte (1,8:1). | orange-light |
-| orange-vif | #FF7000 | Variante chaude, en opposition au violet. Accent ponctuel uniquement. | orange-vif-light |
-| orange-vif-light | #FFF4E6 |  |  |
-| mauve | #7B01FE | Exploration, apprentissage, créativité. Sections pédagogiques, titres secondaires, invitations à la réflexion. | mauve-light |
-| mauve-hover | #6A01DB |  |  |
-| mauve-light | #F3E6FF |  |  |
-| mauve-lighter | #E6D1FF |  |  |
-| cyan | #12A19D | Validation, calme, ressources. Confirmations, ressources, sections factuelles. Pas en petit texte sur fond blanc (contraste) : utiliser cyan-ink. | cyan-light |
-| cyan-hover | #0F8A87 |  |  |
-| cyan-light | #E6F9F8 |  |  |
-| cyan-lighter | #D1F2F0 |  |  |
-| cyan-ink | #0B6E6B | Version texte du cyan : libellés, liens et titres de cartes cyan sur fond blanc ou cyan-light. | cyan-light |
-| bleu-fonce | #130077 | Texte principal et titres ; remplace le noir partout. | pourpre-light |
-| bleu-fonce-light | #E6E0FF |  |  |
-| bleu-fonce-50 | #130077 |  |  |
-| bleu-fonce-70 | #130077 |  |  |
-| primary-fg | #FFFFFF |  |  |
-| primary-subtle-fg | #130077 |  |  |
-| warning-fg | #130077 |  |  |
-| warning-foreground | #130077 |  |  |
-| warning-bg | #FFF8E6 |  |  |
-| warning-border | #FFAF00 |  |  |
-| success-fg | #130077 |  |  |
-| success-foreground | #130077 |  |  |
-| success-bg | #E6F9F8 |  |  |
-| success-border | #12A19D |  |  |
+The Light column is the default scheme; the Dark column is what the app paints under `.dark`.
+
+| Token | Light | Dark | Usage | Pairs with |
+| --- | --- | --- | --- | --- |
+| background | oklch(1 0 0) | oklch(0.145 0 0) |  |  |
+| foreground | oklch(0.145 0 0) | oklch(0.985 0 0) |  |  |
+| card | oklch(1 0 0) | oklch(0.205 0 0) |  |  |
+| card-foreground | oklch(0.145 0 0) | oklch(0.985 0 0) |  |  |
+| popover | oklch(1 0 0) | oklch(0.205 0 0) |  |  |
+| popover-foreground | oklch(0.145 0 0) | oklch(0.985 0 0) |  |  |
+| primary | #130077 | #130077 |  |  |
+| primary-foreground | #FFFFFF | #FFFFFF |  |  |
+| secondary | oklch(0.97 0 0) | oklch(0.269 0 0) |  |  |
+| secondary-foreground | oklch(0.205 0 0) | oklch(0.985 0 0) |  |  |
+| muted | oklch(0.97 0 0) | oklch(0.269 0 0) |  |  |
+| muted-foreground | oklch(0.52 0 0) | oklch(0.708 0 0) |  |  |
+| accent | oklch(0.97 0 0) | oklch(0.269 0 0) |  |  |
+| accent-foreground | oklch(0.205 0 0) | oklch(0.985 0 0) |  |  |
+| destructive | oklch(0.5 0.245 27.325) | oklch(0.704 0.191 22.216) |  |  |
+| border | oklch(0.922 0 0) | oklch(1 0 0 / 0.1) |  |  |
+| input | oklch(0.65 0 0) | oklch(1 0 0 / 0.4) |  |  |
+| ring | oklch(0.708 0 0) | oklch(0.556 0 0) |  |  |
+| pourpre | #F5004F | #F5004F | Émotion, authenticité, découverte. Témoignages, sections émotionnelles. Jamais en fond de grande section : utiliser pourpre-light. | pourpre-light |
+| pourpre-hover | #D10042 | #D10042 |  |  |
+| pourpre-light | #FFF0F5 | #FFF0F5 |  |  |
+| pourpre-lighter | #FFE0EA | #FFE0EA |  |  |
+| orange | #FFAF00 | #FFAF00 | Action, engagement, chaleur. Boutons d'inscription, CTAs principaux, liens actifs — en fond, toujours avec un texte bleu-fonce (8,8:1), jamais blanc (1,8:1). Jamais pour une action contradictoire (annuler ET confirmer). | orange-light |
+| orange-hover | #E69E00 | #E69E00 |  |  |
+| orange-light | #FFF8E6 | #FFF8E6 |  |  |
+| orange-lighter | #FFF0D1 | #FFF0D1 |  |  |
+| orange-ink | #8F5200 | #8F5200 | Version texte de l'orange : petits libellés, liens et sur-titres orange sur fond blanc ou clair. L'orange vif n'est jamais du texte (1,8:1). | orange-light |
+| orange-vif | #FF7000 | #FF7000 | Variante chaude, en opposition au violet. Accent ponctuel uniquement. | orange-vif-light |
+| orange-vif-light | #FFF4E6 | #FFF4E6 |  |  |
+| mauve | #7B01FE | #7B01FE | Exploration, apprentissage, créativité. Sections pédagogiques, titres secondaires, invitations à la réflexion. | mauve-light |
+| mauve-hover | #6A01DB | #6A01DB |  |  |
+| mauve-light | #F3E6FF | #F3E6FF |  |  |
+| mauve-lighter | #E6D1FF | #E6D1FF |  |  |
+| cyan | #12A19D | #12A19D | Validation, calme, ressources. Confirmations, ressources, sections factuelles. Pas en petit texte sur fond blanc (contraste) : utiliser cyan-ink. | cyan-light |
+| cyan-hover | #0F8A87 | #0F8A87 |  |  |
+| cyan-light | #E6F9F8 | #E6F9F8 |  |  |
+| cyan-lighter | #D1F2F0 | #D1F2F0 |  |  |
+| cyan-ink | #0B6E6B | #0B6E6B | Version texte du cyan : libellés, liens et titres de cartes cyan sur fond blanc ou cyan-light. | cyan-light |
+| bleu-fonce | #130077 | #130077 | Texte principal et titres ; remplace le noir partout. | pourpre-light |
+| bleu-fonce-light | #E6E0FF | #E6E0FF |  |  |
+| bleu-fonce-50 | #130077 | #130077 |  |  |
+| bleu-fonce-70 | #130077 | #130077 |  |  |
+| primary-hover | #24109A | #24109A |  |  |
+| primary-active | #0C004F | #0C004F |  |  |
+| primary-fg | #FFFFFF | #FFFFFF |  |  |
+| primary-subtle | #E6E0FF | #E6E0FF |  |  |
+| primary-subtle-fg | #130077 | #130077 |  |  |
+| warning | #FFF8E6 | #FFF8E6 |  |  |
+| warning-fg | #130077 | #130077 |  |  |
+| warning-foreground | #130077 | #130077 |  |  |
+| warning-bg | #FFF8E6 | #FFF8E6 |  |  |
+| warning-border | #FFAF00 | #FFAF00 |  |  |
+| success | #E6F9F8 | #E6F9F8 |  |  |
+| success-fg | #130077 | #130077 |  |  |
+| success-foreground | #130077 | #130077 |  |  |
+| success-bg | #E6F9F8 | #E6F9F8 |  |  |
+| success-border | #12A19D | #12A19D |  |  |
 
 ## Type scale
 
@@ -120,11 +123,14 @@ Each step emits `--text-{step}` and a matching `text-{step}` utility that carrie
 | Token | Value |
 | --- | --- |
 | none | 0px |
-| sm | 2px |
+| sm | 0.375rem |
 | base | 4px |
-| md | 6px |
-| lg | 8px |
-| xl | 12px |
+| md | 0.5rem |
+| lg | 0.625rem |
+| xl | 0.875rem |
+| 2xl | 1.125rem |
+| 3xl | 1.375rem |
+| 4xl | 1.625rem |
 | full | 9999px |
 | control | 0.75rem |
 | card | 1.5rem |
@@ -145,8 +151,8 @@ Each step emits `--text-{step}` and a matching `text-{step}` utility that carrie
 
 | Token | Stack |
 | --- | --- |
-| sans | IBM Plex Sans Variable, IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, system-ui, sans-serif |
-| mono | JetBrains Mono Variable, JetBrains Mono, ui-monospace, SF Mono, Menlo, Consolas, monospace |
+| sans | Geist Variable, sans-serif |
+| mono | Geist Mono Variable, monospace |
 | title | Bely Display, Archivo Black, cursive |
 | body | Neue Machina, Space Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif |
 
@@ -203,20 +209,25 @@ Every component type this build ships. A row carrying a reason is NOT drawn — 
 | Type | Category | Variants | Not drawn because |
 | --- | --- | --- | --- |
 | alert | interactive | default, destructive, warning, info, success |  |
-| badge | interactive | default, secondary, destructive, outline |  |
+| badge | interactive | default, secondary, destructive, outline, ghost, link |  |
 | button | interactive | default, destructive, outline, secondary, ghost, link, fab |  |
 | button-group | interactive |  |  |
 | link | interactive |  |  |
 | theme-toggle | interactive |  |  |
+| calendar | form-controls |  |  |
 | checkbox | form-controls |  |  |
 | code-editor | form-controls |  |  |
+| combobox | form-controls |  |  |
 | date-picker | form-controls |  |  |
 | date-range-picker | form-controls |  |  |
 | field | form-controls |  |  |
 | input | form-controls |  |  |
 | input-group | form-controls |  |  |
+| input-otp | form-controls |  |  |
+| label | form-controls |  |  |
+| native-select | form-controls |  |  |
 | radio-group | form-controls |  |  |
-| rating | form-controls |  | rating ships in this build and has no specimen in the catalogue yet, so there is nothing here to draw it from. |
+| rating | form-controls |  |  |
 | record-picker | form-controls |  | Searches a table of yours and links the row it finds. This page is bound to no table — and binding it to one of yours is what the confidentiality bound forbids — so there are no candidates for it to offer. Its states, its paging and its create path are drawn as authored option sections on its own page. |
 | rich-text-editor | form-controls |  |  |
 | select | form-controls |  |  |
@@ -224,29 +235,34 @@ Every component type this build ships. A row carrying a reason is NOT drawn — 
 | slider | form-controls |  |  |
 | switch | form-controls |  |  |
 | textarea | form-controls |  |  |
-| toggle | form-controls |  |  |
-| toggle-group | form-controls |  |  |
-| calendar | data |  |  |
+| toggle | form-controls | default, outline |  |
+| toggle-group | form-controls | default, outline |  |
+| carousel | data |  |  |
 | chart | data |  |  |
+| event-calendar | data |  |  |
 | filter-bar | data |  |  |
 | form | data |  | Renders a live submit control — over the fields you declare on it, or writing a record back to the table it binds; a preview frame may carry no write path (ADR-022 A3 clause 2). |
 | gallery | data |  |  |
-| graph | data |  | Places the nodes of a bound graph into ordered columns and draws the edges between them. The only graph this instance can read is your own access map, and binding a preview frame to it is what the confidentiality bound forbids; the platform’s specimen fixture publishes rows rather than nodes and edges, so there is no path for it to lay out here. |
+| graph | data |  |  |
 | kanban | data |  |  |
 | kpi | data |  |  |
 | list | data |  |  |
-| map | data |  | Places one pin per record at its location, with a list of the same pins a keyboard can use. It needs a geolocation field on a table of yours, and this console reads none of yours; the platform’s specimen rows carry no location, so there is nothing to pin. See it on a data-bound page. |
-| matrix | data |  | Crosses two sets of nodes from a bound graph and marks each intersection an edge connects, so an absent pair stays a visible empty cell. It reads the same envelope the map next door does and meets the same wall: your own access map is the one graph this instance holds, and a fixture of flat rows gives it no two sets to cross. |
+| map | data |  |  |
+| matrix | data |  |  |
+| questionnaire | data |  | Submits each answer through the form it names; a preview frame may carry no write path (ADR-022 A3 clause 2). |
 | table | data |  |  |
-| tree | data |  | Nests the records of one table under their parents and opens them branch by branch. The hierarchy lives in a relationship that points back at the same table, and the platform’s specimen rows are flat, with no parent to nest under; your own tables are what this console may not read. See it on a data-bound page. |
+| tree | data |  |  |
+| aspect-ratio | layout |  |  |
 | card | layout |  |  |
 | container | layout |  |  |
 | flex | layout |  |  |
 | grid | layout |  |  |
+| message-scroller | layout |  |  |
+| resizable | layout |  |  |
 | sidebar | layout |  |  |
-| split-pane | layout |  |  |
+| attachment | content |  |  |
 | audio | content |  |  |
-| code | content |  |  |
+| code | content | default, destructive |  |
 | file-preview | content |  | Shows a stored file inline: an image with zoom, a PDF in its viewer, anything else as a download. Every face is drawn from a file signed for the reader, and the only files this instance holds are in your buckets, which this console may not read. See it on a data-bound page. |
 | icon | content |  |  |
 | iframe | content |  | Not drawn here, and this is a refusal rather than a gap: this console renders every specimen flat, in one document, because a design system inside a nested scrolling document is not one a reader can read. Drawing an iframe specimen would put the frame back. Look at the page you embedded it on. |
@@ -259,18 +275,22 @@ Every component type this build ships. A row carrying a reason is NOT drawn — 
 | video | content |  |  |
 | accordion | display |  |  |
 | avatar | display |  |  |
+| bubble | display |  |  |
+| collapsible | display |  |  |
 | description-list | display |  |  |
-| empty-state | display |  |  |
-| list-item | display |  |  |
+| empty | display |  |  |
+| item | display | default, outline, muted |  |
+| marker | display | default, border, separator |  |
 | marquee | display |  |  |
+| message | display |  |  |
 | record-field | display |  | Draws ONE field of the record the page it sits on is bound to. This page is bound to no record — and binding it to one of yours is what the confidentiality bound forbids — so there is nothing for it to read. The field CONTROLS it draws from are in the composed form below. |
 | scroll-area | display |  |  |
 | stepper | display |  |  |
 | swatch | display |  |  |
-| tabs | display |  |  |
+| tabs | display | default, line |  |
 | timeline | display |  |  |
 | breadcrumb | navigation |  |  |
-| command-palette | navigation |  |  |
+| command | navigation |  |  |
 | context-menu | navigation |  |  |
 | dropdown-menu | navigation |  |  |
 | menubar | navigation |  |  |
@@ -278,15 +298,16 @@ Every component type this build ships. A row carrying a reason is NOT drawn — 
 | pagination | navigation |  |  |
 | alert-dialog | overlays |  | Opens as a blocking confirmation that holds focus until it is answered, so there is nothing of it to draw until a reader has already been interrupted. It portals outside this preview’s theme scope, so an opened one resolves the console’s tokens rather than yours. Look at it on the page you put it on. |
 | dialog | overlays |  | Opens as a modal panel over the whole page and makes the rest of the document inert while it is open, so it has no resting appearance to document. It portals outside this preview’s theme scope, so an opened one resolves the console’s tokens rather than yours. Look at it on the page you put it on. |
-| drawer | overlays |  | Slides in from an edge and covers the page for as long as it is open, so it would cover the kit rather than sit in it. It portals outside this preview’s theme scope, so an opened one resolves the console’s tokens rather than yours. Look at it on the page you put it on. |
+| drawer | overlays |  | Rises from the bottom edge over the page for as long as it is open, so it would cover the kit rather than sit in it. It portals outside this preview’s theme scope, so an opened one resolves the console’s tokens rather than yours. Look at it on the page you put it on. |
 | hover-card | overlays |  |  |
 | popover | overlays |  |  |
-| toast | overlays |  |  |
+| sheet | overlays |  | Slides in from an edge and covers the page for as long as it is open, so it would cover the kit rather than sit in it. It portals outside this preview’s theme scope, so an opened one resolves the console’s tokens rather than yours. Look at it on the page you put it on. |
+| toast | overlays | success, error, warning, info, loading |  |
 | tooltip | overlays |  |  |
 | progress | feedback | bar, circle, steps |  |
 | skeleton | feedback | text, circular, rectangular |  |
 | spinner | feedback |  |  |
-| divider | structural |  |  |
+| separator | structural |  |  |
 | spacer | structural |  |  |
 | comments | specialty |  | Hydrates a comment composer — a form with a live submit control that posts a comment onto a record. A read-only console may carry no write path, so it is named here rather than drawn. It renders on your own pages. |
 | field-specimen | specialty |  | Has no appearance of its own: it draws whatever control the fieldType you name gets, so a card here would document one field type instead of this component. The field types are all drawn, in every state, in the field catalogue. |
