@@ -3,10 +3,8 @@
 # French labels, the slug and the HTML description.
 #
 # Contract: the calling automation must have read the proposal first, in a
-# `record/read` step named `proposal`. The facilitators' names and the venue are
-# read here through the proposal's links (workshop_proposals carries no lookup:
-# in Sovrium 0.33.0 a lookup next to a button field breaks every insert,
-# sovrium/sovrium#130).
+# `record/read` step named `proposal`. The facilitators' names and the venue
+# come from the proposal's lookups.
 # Used by create-helloasso-event and publish-workshop-on-site.
 name: build-workshop-payload
 action:
@@ -19,9 +17,11 @@ action:
       start_time: '{{proposal.record.start_time}}'
       duration_minutes: '{{proposal.record.duration_minutes}}'
       capacity: '{{proposal.record.capacity}}'
-      lead_facilitator: '{{proposal.record.lead_facilitator}}'
-      co_facilitator: '{{proposal.record.co_facilitator}}'
-      venue: '{{proposal.record.venue}}'
+      lead_name: '{{proposal.record.lead_name}}'
+      co_name: '{{proposal.record.co_name}}'
+      venue_name: '{{proposal.record.venue_name}}'
+      venue_city: '{{proposal.record.venue_city}}'
+      venue_zip_code: '{{proposal.record.venue_zip_code}}'
     code: |
       async function execute(context) {
         // Workshop text, kept word for word from scripts/create-billetterie-plus-events.mjs.
@@ -43,15 +43,6 @@ action:
           if (Array.isArray(value)) return text(value.find((v) => v !== null && v !== undefined && v !== ''));
           if (value === null || value === undefined) return '';
           return String(value).trim();
-        }
-
-        // One field of a linked record, '' when there is no link.
-        async function readField(table: string, id: string, field: string): Promise<string> {
-          if (!id) return '';
-          const res = (await context.actions.record.read({ table, id })) as unknown as {
-            record?: Record<string, unknown>;
-          };
-          return text(res && res.record ? res.record[field] : '');
         }
 
         function pad2(n: number): string {
@@ -121,12 +112,11 @@ action:
         const startTime = text(input.start_time).slice(0, 5);
         const duration = Number(text(input.duration_minutes) || '180');
         const capacity = Number(text(input.capacity) || '15');
-        const venueId = text(input.venue);
-        const leadName = await readField('facilitators', text(input.lead_facilitator), 'display_name');
-        const coName = await readField('facilitators', text(input.co_facilitator), 'display_name');
-        const venueName = await readField('venues', venueId, 'name');
-        const venueCity = await readField('venues', venueId, 'city');
-        const venueZip = await readField('venues', venueId, 'zip_code');
+        const leadName = text(input.lead_name);
+        const coName = text(input.co_name);
+        const venueName = text(input.venue_name);
+        const venueCity = text(input.venue_city);
+        const venueZip = text(input.venue_zip_code);
 
         if (!/^\d{4}-\d{2}-\d{2}$/.test(sessionDate) || Number.isNaN(Date.parse(`${sessionDate}T00:00:00Z`))) {
           throw new Error(`session_date invalide : "${sessionDate}" (attendu AAAA-MM-JJ)`);
