@@ -81,11 +81,8 @@ fields:
       and:
         - { field: status, operator: equals, value: valid }
         - { field: attendance, operator: equals, value: present }
-  # Online prix libre. One flat condition only: in 0.33.0 a rollup whose filter
-  # is an and/or group crashes schema initialisation ("e.replace",
-  # sovrium/sovrium#126). Cancelled and
-  # refunded rows already carry 0 (the sync zeroes them) and on-site rows carry
-  # none, so `valid` is enough. On-site money lives in workshop_cash.
+  # Online prix libre: `valid` alone excludes cancelled and refunded rows (the
+  # only other statuses). On-site money lives in workshop_cash.
   - id: 24
     name: revenue_online
     label: Prix libre en ligne
@@ -94,8 +91,9 @@ fields:
     relatedField: amount_paid
     aggregation: SUM
     format: currency
+    currency: EUR
     filters: { field: status, operator: equals, value: valid }
-  - { id: 25, name: revenue_on_site, label: Prix libre sur place, type: rollup, relationshipField: cash, relatedField: amount_on_site, aggregation: SUM, format: currency }
+  - { id: 25, name: revenue_on_site, label: Prix libre sur place, type: rollup, relationshipField: cash, relatedField: amount_on_site, aggregation: SUM, format: currency, currency: EUR }
   - id: 26
     name: revenue_total
     label: Prix libre total
@@ -105,10 +103,6 @@ fields:
     format: currency
     currency: EUR
   - { id: 27, name: last_synced_at, label: Dernière synchronisation, type: datetime }
-  # Rollups cannot declare a currency (sovrium/sovrium#129): these formulas
-  # carry the EUR format for the pages.
-  - { id: 28, name: revenue_online_eur, label: Prix libre en ligne (€), type: formula, formula: 'COALESCE(revenue_online, 0)', resultType: number, format: currency, currency: EUR }
-  - { id: 29, name: revenue_on_site_eur, label: Prix libre sur place (€), type: formula, formula: 'COALESCE(revenue_on_site, 0)', resultType: number, format: currency, currency: EUR }
   # 0 or 1: whether the date already has its workshop_cash row, so the page
   # shows the create form or the edit form (a saved 0 € still counts as a row).
   - { id: 30, name: cash_entries, label: Saisie sur place, type: count, relationshipField: cash }
@@ -129,6 +123,4 @@ permissions:
     - { field: revenue_on_site, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
     - { field: revenue_total, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
     - { field: last_synced_at, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
-    - { field: revenue_online_eur, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
-    - { field: revenue_on_site_eur, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
     - { field: cash_entries, read: ['group:facilitation', 'group:logistique', 'group:tresorerie', gardien, admin], write: [admin] }
