@@ -1,0 +1,145 @@
+# /espace/crm/affaires/:id — one deal: who it is with, where it stands, and
+# its activities. « Ajouter une activité » opens the crm-nouvelle-activite form
+# in a dialog with the deal locked to this page's deal (inlinePrefill: a page
+# form never creates rows, and a create sheet takes no prefill). « Fait » ticks
+# an activity done; crm-stamp-activity-done notes when.
+# The details tab is an edit form on the deal (the update idiom of
+# /espace/suivi/:id).
+name: espace-crm-affaire
+path: /espace/crm/affaires/:id
+access: { require: [gardien, admin], redirectTo: /connexion }
+sitemap: false
+dataSource: { table: crm_deals, mode: single, param: id }
+meta:
+  lang: fr-FR
+  title: $record.title - CRM
+  description: Une affaire du pipeline du Cercle Gardien et ses activités.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: link
+            props:
+              href: /espace/crm/affaires
+              className: self-start text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-orange-vif
+            content: ← Pipeline
+
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-4 md:flex-row md:items-start md:justify-between
+            children:
+              - type: container
+                props: { className: flex min-w-0 flex-col gap-2 }
+                children:
+                  - type: text
+                    element: h1
+                    props:
+                      className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                    content: $record.title
+                  # A relationship in page text prints its id in 0.41 (a card
+                  # prints the label); the description list prints the label.
+                  - type: description-list
+                    layout: stacked
+                    items:
+                      - { term: Organisation, field: organisation }
+                      - { term: Contact, field: contact }
+                      - { term: Type, field: type }
+                      - { term: Étape, field: stage }
+                      - { term: Montant, field: amount }
+                      - { term: Échéance prévue, field: expected_close }
+                      - { term: Suivie par, field: owner }
+              - type: container
+                props: { className: flex flex-col gap-2 sm:flex-row md:flex-col md:items-end }
+                children:
+                  - type: button
+                    label: Ajouter une activité
+                    props:
+                      interactions: { click: { modal: crm-ajout-activite } }
+                  - type: link
+                    visibility: { record: { field: organisation, isNotEmpty: true } }
+                    props:
+                      href: /espace/crm/organisations/$record.organisation
+                      className: text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-orange-vif
+                    content: Voir l'organisation
+
+          - type: tabs
+            defaultTab: activites
+            panels:
+              - { id: activites, label: Activités }
+              - { id: details, label: Détails }
+            children:
+              - type: container
+                props: { className: flex flex-col gap-3 }
+                children:
+                  - type: table
+                    caption: Activités de cette affaire
+                    classes: { parts: { caption: sr-only } }
+                    readOnly: true
+                    # rows drops the action column on a phone.
+                    phoneLayout: scroll
+                    dataSource:
+                      table: crm_activities
+                      filter:
+                        - { field: deal, operator: eq, value: $param.id }
+                      sort: [{ field: done, direction: asc }, { field: due_at, direction: asc }]
+                      pagination: { pageSize: 50 }
+                    emptyMessage: Aucune activité pour l'instant. Ajoute un appel, un email ou un rendez-vous pour ne pas perdre le fil.
+                    rowExpand:
+                      title: Activité
+                      fields: [subject, kind, due_at, contact, assignee, notes, done, done_at]
+                    columns:
+                      - { field: subject, label: Objet, frozen: true }
+                      - type: actions
+                        label: Cocher
+                        actions:
+                          - label: Fait
+                            icon: check
+                            visibleWhen: { field: done, eq: false }
+                            action:
+                              type: crud
+                              operation: update
+                              table: crm_activities
+                              data: { done: true }
+                              onError: { toast: { message: "L'activité n'a pas pu être cochée. Vérifie ta connexion, puis réessaie.", variant: error } }
+                      - { field: kind, label: Type }
+                      - { field: due_at, label: À faire pour le, format: datetime }
+                      - { field: assignee, label: Pour }
+                      - { field: contact, label: Avec }
+                      - { field: done, label: Faite }
+              - type: form
+                dataSource: { table: crm_deals, mode: single, param: id }
+                action:
+                  type: crud
+                  operation: update
+                  table: crm_deals
+                  submitLabel: Enregistrer
+                  onSuccess: { toast: { message: Affaire enregistrée., variant: success } }
+                  onError: { toast: { message: "L'affaire n'a pas pu être enregistrée. Recharge la page, puis réessaie.", variant: error } }
+                fields:
+                  - { field: title, label: Affaire }
+                  - { field: type, label: Type }
+                  - { field: stage, label: Étape }
+                  - { field: amount, label: Montant }
+                  - { field: expected_close, label: Échéance prévue }
+                  - { field: organisation, label: Organisation }
+                  - { field: contact, label: Contact }
+                  - { field: owner, label: Suivie par }
+                  - { field: lost_reason, label: Pourquoi c'est perdu, description: Seulement si l'affaire est perdue. }
+                  - { field: notes, label: Notes }
+
+  - type: dialog
+    props: { id: crm-ajout-activite, title: Ajouter une activité }
+    children:
+      - type: form
+        formRef: crm-nouvelle-activite
+        showHeader: false
+        inlinePrefill:
+          prefill: { deal: $parent.id }
+          lockPrefill: true

@@ -1,0 +1,38 @@
+# CRM du Cercle Gardien — one row per person we talk to, usually at one
+# organisation (a contact works at one organisation; an organisation has many
+# contacts). Deleting the organisation keeps the person, unlinked.
+# Contact data (RGPD): gardien + admin only.
+id: 15
+name: crm_contacts
+label: Contact
+labelPlural: Contacts
+description: Les personnes avec qui le Cercle Gardien échange, rattachées à leur organisation.
+fields:
+  - { id: 1, name: first_name, label: Prénom, type: single-line-text }
+  - { id: 2, name: last_name, label: Nom, type: single-line-text, required: true }
+  - id: 3
+    name: full_name
+    label: Nom complet
+    type: formula
+    formula: "TRIM(COALESCE(first_name, '') || ' ' || COALESCE(last_name, ''))"
+    resultType: string
+  - id: 4
+    name: organisation
+    label: Organisation
+    type: relationship
+    relatedTable: crm_organisations
+    relationType: many-to-one
+    displayField: name
+    onDelete: set-null
+    indexed: true
+  - { id: 5, name: job_title, label: Fonction, type: single-line-text }
+  - { id: 6, name: email, label: Email, type: email }
+  - { id: 7, name: phone, label: Téléphone, type: phone-number }
+  - { id: 8, name: notes, label: Notes, type: long-text }
+  - { id: 9, name: owner, label: Suivi par, type: user }
+  - { id: 10, name: created_at, label: Ajouté·e le, type: created-at }
+permissions:
+  read: [gardien, admin]
+  create: [gardien, admin]
+  update: [gardien, admin]
+  delete: [gardien, admin]

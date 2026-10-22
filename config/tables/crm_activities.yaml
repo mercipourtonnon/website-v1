@@ -1,0 +1,52 @@
+# CRM du Cercle Gardien — one row per follow-up: a call, an email, a meeting,
+# a to-do, usually on one deal (deleted with it) and optionally with one
+# contact. /espace/crm/activites lists what is due; crm-stamp-activity-done
+# notes when it was done. Gardien + admin only.
+id: 17
+name: crm_activities
+label: Activité
+labelPlural: Activités
+description: Appels, emails, rendez-vous et tâches à faire sur les affaires du CRM.
+fields:
+  - { id: 1, name: subject, label: Objet, type: single-line-text, required: true }
+  - id: 2
+    name: kind
+    label: Type
+    type: single-select
+    required: true
+    default: tache
+    options:
+      - { value: appel, label: Appel }
+      - { value: email, label: Email }
+      - { value: rdv, label: Rendez-vous }
+      - { value: tache, label: Tâche }
+  # UTC instants.
+  - { id: 3, name: due_at, label: À faire pour le, type: datetime, indexed: true }
+  - { id: 4, name: done, label: Fait, type: checkbox, default: false }
+  # Written by crm-stamp-activity-done.
+  - { id: 5, name: done_at, label: Fait le, type: datetime }
+  - id: 6
+    name: deal
+    label: Affaire
+    type: relationship
+    relatedTable: crm_deals
+    relationType: many-to-one
+    displayField: title
+    onDelete: cascade
+    indexed: true
+  - id: 7
+    name: contact
+    label: Contact
+    type: relationship
+    relatedTable: crm_contacts
+    relationType: many-to-one
+    displayField: full_name
+    onDelete: set-null
+  - { id: 8, name: assignee, label: Pour, type: user, default: $currentUser, indexed: true }
+  - { id: 9, name: notes, label: Notes, type: long-text }
+  - { id: 10, name: created_at, label: Créée le, type: created-at }
+permissions:
+  read: [gardien, admin]
+  create: [gardien, admin]
+  update: [gardien, admin]
+  delete: [gardien, admin]

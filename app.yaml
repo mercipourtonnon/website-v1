@@ -31,6 +31,11 @@ tables:
   - $ref: ./config/tables/ressources.yaml
   # /vos-idees: ideas sent by the public (coordination-only read).
   - $ref: ./config/tables/ideas.yaml
+  # CRM du Cercle Gardien: organisations, people, the deal pipeline, follow-ups.
+  - $ref: ./config/tables/crm_organisations.yaml
+  - $ref: ./config/tables/crm_contacts.yaml
+  - $ref: ./config/tables/crm_deals.yaml
+  - $ref: ./config/tables/crm_activities.yaml
 
 # Authentication: circles as roles (candidat → member/Abeilles → coeur → gardien,
 # + admin) and volunteer roles as groups (facilitation, logistique, …).
@@ -117,6 +122,9 @@ automations:
   - $ref: ./config/automations/anonymise-registrations.yaml
   # Public ideas form → mail to the coordination.
   - $ref: ./config/automations/on-idea.yaml
+  # CRM: stamp a deal's stage change and an activity done.
+  - $ref: ./config/automations/crm-stamp-stage.yaml
+  - $ref: ./config/automations/crm-stamp-activity-done.yaml
 
 components:
   - $ref: ./config/components/site-footer.yaml
@@ -188,6 +196,14 @@ pages:
   # Le jour J: figures per date, and each date's check-in screen.
   - $ref: ./config/pages/espace-suivi.yaml
   - $ref: ./config/pages/espace-suivi-date.yaml
+  # CRM du Cercle Gardien: pipeline, deals, organisations, contacts, à faire, bilan.
+  - $ref: ./config/pages/espace-crm-affaires.yaml
+  - $ref: ./config/pages/espace-crm-affaire.yaml
+  - $ref: ./config/pages/espace-crm-organisations.yaml
+  - $ref: ./config/pages/espace-crm-organisation.yaml
+  - $ref: ./config/pages/espace-crm-contacts.yaml
+  - $ref: ./config/pages/espace-crm-activites.yaml
+  - $ref: ./config/pages/espace-crm-bilan.yaml
 
 # Standalone forms, embedded in pages with formRef.
 forms:
@@ -201,9 +217,15 @@ forms:
   - $ref: ./config/forms/prix-libre-sur-place.yaml
   # Public: anyone can send an idea (embedded on /vos-idees, also at /forms/idees).
   - $ref: ./config/forms/idees.yaml
+  # CRM: add an activity (deal page, à faire), a contact (organisation page, contacts) and a deal (pipeline).
+  - $ref: ./config/forms/crm-nouvelle-activite.yaml
+  - $ref: ./config/forms/crm-nouveau-contact.yaml
+  - $ref: ./config/forms/crm-nouvelle-affaire.yaml
 
 # Old .html URLs of the retired static export (the site before Sovrium Cloud).
 redirects:
   - { from: /index.html, to: / }
   - { from: /newsletter.html, to: /newsletter }
   - { from: /mentions-legales.html, to: /mentions-legales }
+  # The CRM's entry point is its pipeline.
+  - { from: /espace/crm, to: /espace/crm/affaires }

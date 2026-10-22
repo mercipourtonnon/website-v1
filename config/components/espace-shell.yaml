@@ -16,6 +16,7 @@
 #   Trésorerie       [group:tresorerie]               Recettes des ateliers (/espace/suivi: figures, prix libre)
 #   Cercle Gardien   [gardien, admin]                 Bénévoles, Ateliers à valider, Ateliers en ligne,
 #                                                     Agenda à gérer, Actualités à publier, Suivi, Proposer une date
+#                    + group « Relations » (CRM)      Pipeline, Organisations, Contacts, À faire, Bilan
 # Group sections deliberately leave gardien/admin out: a gardien·ne sees
 # « Espace bénévole » + « Cercle Gardien » with no duplicate. A Cœur member
 # holding several volunteer roles sees a shared tool (e.g. Suivi) under each of
@@ -176,6 +177,16 @@ children:
                   - { label: Actualités à publier, href: /espace/coordination/actualites, icon: megaphone }
                   - { label: Suivi des ateliers, href: /espace/suivi, icon: clipboard-check, activeMatch: prefix }
                   - { label: Proposer une date, href: /espace/proposer, icon: calendar-plus }
+              # CRM: the pipeline and its organisations, people and follow-ups.
+              # Pipeline and Organisations match by prefix so a deal's or an
+              # organisation's own page keeps its entry current.
+              - label: Relations
+                items:
+                  - { label: Pipeline, href: /espace/crm/affaires, icon: kanban, activeMatch: prefix }
+                  - { label: Organisations, href: /espace/crm/organisations, icon: building-2, activeMatch: prefix }
+                  - { label: Contacts, href: /espace/crm/contacts, icon: contact-round }
+                  - { label: À faire, href: /espace/crm/activites, icon: list-todo }
+                  - { label: Bilan, href: /espace/crm/bilan, icon: chart-column }
       - type: container
         props:
           id: contenu

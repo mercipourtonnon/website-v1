@@ -1,0 +1,147 @@
+# /espace/crm/organisations/:id — one organisation: its deals, its people and
+# its details. « Nouvelle affaire » and « Ajouter un contact » open
+# crm-nouvelle-affaire and crm-nouveau-contact in dialogs, with the
+# organisation locked to this page's (inlinePrefill).
+name: espace-crm-organisation
+path: /espace/crm/organisations/:id
+access: { require: [gardien, admin], redirectTo: /connexion }
+sitemap: false
+dataSource: { table: crm_organisations, mode: single, param: id }
+meta:
+  lang: fr-FR
+  title: $record.name - CRM
+  description: Une organisation suivie par le Cercle Gardien, ses affaires et ses contacts.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: link
+            props:
+              href: /espace/crm/organisations
+              className: self-start text-sm font-medium text-bleu-fonce underline underline-offset-4 hover:text-orange-vif
+            content: ← Toutes les organisations
+
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-4 md:flex-row md:items-start md:justify-between
+            children:
+              - type: container
+                props: { className: flex min-w-0 flex-col gap-2 }
+                children:
+                  - type: text
+                    element: h1
+                    props:
+                      className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                    content: $record.name
+                  - type: description-list
+                    layout: stacked
+                    items:
+                      - { term: Type, field: kind }
+                      - { term: Ville, field: city }
+                      - { term: Affaires en cours, field: open_deals_count }
+                      - { term: Montant gagné, field: won_amount }
+                      - { term: Suivi par, field: owner }
+              - type: container
+                props: { className: flex flex-col gap-2 sm:flex-row md:items-start }
+                children:
+                  - type: button
+                    label: Nouvelle affaire
+                    props:
+                      interactions: { click: { modal: crm-ajout-affaire } }
+                  - type: button
+                    label: Ajouter un contact
+                    variant: outline
+                    props:
+                      interactions: { click: { modal: crm-ajout-contact } }
+
+          - type: tabs
+            defaultTab: affaires
+            panels:
+              - { id: affaires, label: Affaires }
+              - { id: contacts, label: Contacts }
+              - { id: details, label: Détails }
+            children:
+              - type: table
+                caption: Affaires de cette organisation
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: rows
+                dataSource:
+                  table: crm_deals
+                  filter:
+                    - { field: organisation, operator: eq, value: $param.id }
+                  sort: [{ field: created_at, direction: desc }]
+                  pagination: { pageSize: 25 }
+                onRowClick: { type: navigate, path: /espace/crm/affaires/$record.id }
+                emptyMessage: Aucune affaire avec cette organisation pour l'instant. Crée la première avec « Nouvelle affaire ».
+                columns:
+                  - { field: title, label: Affaire, frozen: true }
+                  - { field: stage, label: Étape, badgeForm: outline-dot }
+                  - { field: type, label: Type }
+                  - { field: amount, label: Montant, format: currency, align: right }
+                  - { field: expected_close, label: Échéance prévue, format: short-date }
+                  - { field: owner, label: Suivie par }
+              - type: table
+                caption: Contacts de cette organisation
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: rows
+                dataSource:
+                  table: crm_contacts
+                  filter:
+                    - { field: organisation, operator: eq, value: $param.id }
+                  sort: [{ field: last_name, direction: asc }]
+                  pagination: { pageSize: 25 }
+                emptyMessage: Aucun contact pour l'instant. Ajoute la première personne avec « Ajouter un contact ».
+                rowExpand:
+                  title: Contact
+                  fields: [first_name, last_name, job_title, email, phone, owner, notes]
+                columns:
+                  - { field: last_name, label: Nom, frozen: true }
+                  - { field: first_name, label: Prénom }
+                  - { field: job_title, label: Fonction }
+                  - { field: email, label: Email }
+                  - { field: phone, label: Téléphone }
+              - type: form
+                dataSource: { table: crm_organisations, mode: single, param: id }
+                action:
+                  type: crud
+                  operation: update
+                  table: crm_organisations
+                  submitLabel: Enregistrer
+                  onSuccess: { toast: { message: Organisation enregistrée., variant: success } }
+                  onError: { toast: { message: "L'organisation n'a pas pu être enregistrée. Recharge la page, puis réessaie.", variant: error } }
+                fields:
+                  - { field: name, label: Nom }
+                  - { field: kind, label: Type d'organisation }
+                  - { field: city, label: Ville }
+                  - { field: website, label: Site web }
+                  - { field: owner, label: Suivi par }
+                  - { field: notes, label: Notes }
+
+  - type: dialog
+    props: { id: crm-ajout-contact, title: Ajouter un contact }
+    children:
+      - type: form
+        formRef: crm-nouveau-contact
+        showHeader: false
+        inlinePrefill:
+          prefill: { organisation: $parent.id }
+          lockPrefill: true
+
+  - type: dialog
+    props: { id: crm-ajout-affaire, title: Nouvelle affaire }
+    children:
+      - type: form
+        formRef: crm-nouvelle-affaire
+        showHeader: false
+        inlinePrefill:
+          prefill: { organisation: $parent.id }
+          lockPrefill: true

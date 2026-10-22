@@ -1,0 +1,97 @@
+# /espace/crm/organisations — every organisation the Cercle Gardien talks to.
+# A row opens the organisation's page (its deals and its people).
+# « Nouvelle organisation » opens a create sheet (a sheet opened with no
+# record creates one).
+name: espace-crm-organisations
+path: /espace/crm/organisations
+access: { require: [gardien, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Organisations - Espace bénévole
+  description: Les écoles, partenaires et financeurs suivis par le Cercle Gardien.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: organisations
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Les écoles, associations, entreprises et financeurs avec qui on échange. Ouvre une ligne pour voir ses affaires et ses contacts.
+          - type: container
+            element: section
+            props:
+              aria-label: Organisations
+              className: flex flex-col gap-3
+            children:
+              - type: container
+                props:
+                  role: toolbar
+                  aria-label: Rechercher et filtrer
+                  className: flex flex-wrap items-center gap-2
+                children:
+                  - type: search-input
+                    placeholder: Rechercher
+                    props:
+                      aria-label: Rechercher une organisation
+                      className: "h-8 w-full sm:w-[250px]"
+                    publishes: { bindTo: crm-organisations, param: q }
+                  - type: filter-bar
+                    publishes: { bindTo: crm-organisations }
+                    fieldsFrom: { table: crm_organisations }
+                  - type: button
+                    label: Nouvelle organisation
+                    size: sm
+                    props: { className: sm:ml-auto }
+                    action: { action: openSheet, component: crm-nouvelle-organisation }
+              - type: table
+                caption: Organisations
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: rows
+                dataSource:
+                  bindTo: crm-organisations
+                  sharedFilter: {}
+                  table: crm_organisations
+                  sort: [{ field: name, direction: asc }]
+                  pagination: { pageSize: 25 }
+                onRowClick: { type: navigate, path: /espace/crm/organisations/$record.id }
+                emptyMessage: Aucune organisation pour l'instant. Ajoute la première avec « Nouvelle organisation ».
+                columns:
+                  - { field: name, label: Nom, frozen: true }
+                  - { field: kind, label: Type }
+                  - { field: city, label: Ville }
+                  - { field: open_deals_count, label: Affaires en cours, align: right }
+                  - { field: won_amount, label: Montant gagné, format: currency, align: right }
+                  - { field: contacts_count, label: Contacts, align: right }
+                  - { field: owner, label: Suivi par }
+
+  - type: sheet
+    id: crm-nouvelle-organisation
+    title: Nouvelle organisation
+    drawerSize: md
+    dataSource: { table: crm_organisations }
+    recordFields:
+      - { name: name, type: single-line-text, label: Nom }
+      - { name: kind, type: single-select, label: Type d'organisation }
+      - { name: city, type: single-line-text, label: Ville }
+      - { name: website, type: url, label: Site web }
+      - { name: owner, type: user, label: Suivi par }
+      - { name: notes, type: long-text, label: Notes }

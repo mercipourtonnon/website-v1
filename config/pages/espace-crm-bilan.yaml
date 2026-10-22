@@ -1,0 +1,203 @@
+# /espace/crm/bilan — the pipeline in figures. The type select publishes on
+# crm-bilan, which every KPI and chart reads.
+# A chart grouped by a user (« par personne ») is grouped in the browser from
+# one page of records (at most 100), so it is approximate past 100 deals.
+name: espace-crm-bilan
+path: /espace/crm/bilan
+access: { require: [gardien, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Bilan du CRM - Espace bénévole
+  description: Le pipeline du Cercle Gardien en chiffres.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: bilan
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Où en est le pipeline, et ce qu'il a déjà rapporté. Choisis un type pour ne voir que lui.
+          - type: container
+            props:
+              role: toolbar
+              aria-label: Filtrer
+              className: flex flex-wrap items-center gap-2
+            children:
+              - type: select
+                emptyOption: { label: Tous les types }
+                props:
+                  aria-label: Type d'affaire
+                  className: "h-8 w-full sm:w-[200px]"
+                options:
+                  - { value: intervention, label: Intervention }
+                  - { value: partenariat, label: Partenariat }
+                  - { value: financement, label: Financement }
+                publishes: { bindTo: crm-bilan, field: type, operator: eq, url: true }
+          - type: grid
+            props:
+              className: grid grid-cols-2 gap-3 lg:grid-cols-4
+            children:
+              - type: kpi
+                label: Affaires en cours
+                icon: briefcase
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_deals
+                  bindTo: crm-bilan
+                  sharedFilter: {}
+                  filter:
+                    - { field: stage, operator: in, value: [prospect, contact, proposition, negociation] }
+                kpiAggregate: { function: count }
+                kpiFormat: { type: number }
+              - type: kpi
+                label: Montant en jeu
+                icon: coins
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_deals
+                  bindTo: crm-bilan
+                  sharedFilter: {}
+                  filter:
+                    - { field: stage, operator: in, value: [prospect, contact, proposition, negociation] }
+                kpiAggregate: { function: sum, field: amount }
+                kpiFormat: { type: currency, options: { currency: EUR } }
+              - type: kpi
+                label: Gagné sur 12 mois
+                icon: trophy
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_deals
+                  bindTo: crm-bilan
+                  sharedFilter: {}
+                  filter:
+                    - { field: stage, operator: eq, value: gagne }
+                    - { field: stage_changed_at, operator: gte, value: $now-52w }
+                kpiAggregate: { function: sum, field: amount }
+                kpiFormat: { type: currency, options: { currency: EUR } }
+              - type: kpi
+                label: Taux de réussite
+                icon: percent
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_deals
+                  bindTo: crm-bilan
+                  sharedFilter: {}
+                kpiAggregate:
+                  function: ratio
+                  numerator:
+                    filter:
+                      - { field: stage, operator: eq, value: gagne }
+                  denominator:
+                    filter:
+                      - { field: stage, operator: in, value: [gagne, perdu] }
+                kpiFormat: { type: percentage, options: { maximumFractionDigits: '0' } }
+          - type: grid
+            props:
+              className: grid grid-cols-1 gap-6 lg:grid-cols-2
+            children:
+              - type: container
+                element: section
+                props:
+                  aria-labelledby: bilan-etapes-titre
+                  className: flex flex-col gap-3
+                children:
+                  - type: text
+                    element: h2
+                    props: { id: bilan-etapes-titre, className: text-xl title-font text-bleu-fonce }
+                    content: montant en jeu par étape
+                  - type: chart
+                    chartType: bar
+                    dataSource:
+                      table: crm_deals
+                      bindTo: crm-bilan
+                      sharedFilter: {}
+                      filter:
+                        - { field: stage, operator: in, value: [prospect, contact, proposition, negociation] }
+                    chartAggregate: { function: sum, field: amount, groupBy: stage, order: option }
+                    yAxis: { field: amount, format: currency, gridLines: true }
+                    emptyMessage: Aucune affaire en cours.
+                    emptyState: { role: region, name: Montant en jeu par étape, title: Aucune affaire en cours. }
+              - type: container
+                element: section
+                props:
+                  aria-labelledby: bilan-types-titre
+                  className: flex flex-col gap-3
+                children:
+                  - type: text
+                    element: h2
+                    props: { id: bilan-types-titre, className: text-xl title-font text-bleu-fonce }
+                    content: affaires en cours par type
+                  - type: chart
+                    chartType: donut
+                    dataSource:
+                      table: crm_deals
+                      bindTo: crm-bilan
+                      sharedFilter: {}
+                      filter:
+                        - { field: stage, operator: in, value: [prospect, contact, proposition, negociation] }
+                    chartAggregate: { function: count, groupBy: type }
+                    legend: { position: bottom, visible: true }
+                    emptyMessage: Aucune affaire en cours.
+                    emptyState: { role: region, name: Affaires en cours par type, title: Aucune affaire en cours. }
+              - type: container
+                element: section
+                props:
+                  aria-labelledby: bilan-gagne-titre
+                  className: flex flex-col gap-3
+                children:
+                  - type: text
+                    element: h2
+                    props: { id: bilan-gagne-titre, className: text-xl title-font text-bleu-fonce }
+                    content: gagné par mois
+                  - type: chart
+                    chartType: bar
+                    dataSource:
+                      table: crm_deals
+                      bindTo: crm-bilan
+                      sharedFilter: {}
+                      filter:
+                        - { field: stage, operator: eq, value: gagne }
+                    chartAggregate: { function: sum, field: amount, groupBy: stage_changed_at, interval: month, color: '#12A19D' }
+                    xAxis: { field: stage_changed_at, format: date }
+                    yAxis: { field: amount, format: currency, gridLines: true }
+                    emptyMessage: Aucune affaire gagnée pour l'instant.
+                    emptyState: { role: region, name: Gagné par mois, title: Aucune affaire gagnée pour l'instant. }
+              - type: container
+                element: section
+                props:
+                  aria-labelledby: bilan-personnes-titre
+                  className: flex flex-col gap-3
+                children:
+                  - type: text
+                    element: h2
+                    props: { id: bilan-personnes-titre, className: text-xl title-font text-bleu-fonce }
+                    content: affaires en cours par personne
+                  - type: chart
+                    chartType: bar
+                    dataSource:
+                      table: crm_deals
+                      bindTo: crm-bilan
+                      sharedFilter: {}
+                      filter:
+                        - { field: stage, operator: in, value: [prospect, contact, proposition, negociation] }
+                    chartAggregate: { function: count, groupBy: owner, color: '#7B01FE' }
+                    emptyMessage: Aucune affaire en cours.
+                    emptyState: { role: region, name: Affaires en cours par personne, title: Aucune affaire en cours. }

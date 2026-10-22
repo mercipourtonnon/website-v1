@@ -1,0 +1,26 @@
+# CRM: note when a deal changes stage (a drag on the board, the deal form), for
+# « Gagné ce mois » and the won-per-month chart. Loop check: it writes
+# stage_changed_at only, which is not a watched field.
+name: crm-stamp-stage
+description: Horodate le changement d'étape d'une affaire du CRM.
+trigger:
+  type: record
+  table: crm_deals
+  events: [create, update]
+  watchFields: [stage]
+  condition:
+    logic: and
+    conditions:
+      - { field: '{{trigger.data.record.stage}}', operator: notEquals, value: '{{trigger.data.previousRecord.stage}}' }
+timeout: 30000
+actions:
+  - name: stamp
+    type: record
+    operator: update
+    props:
+      table: crm_deals
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{trigger.data.record.id}}' }
+      data:
+        stage_changed_at: '{{now}}'

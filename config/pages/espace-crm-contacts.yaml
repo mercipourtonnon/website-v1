@@ -1,0 +1,129 @@
+# /espace/crm/contacts — every person the Cercle Gardien talks to. A row
+# opens the person in a sheet: her fields (editable) and, below, her deals
+# and activities. « Nouveau contact » opens crm-nouveau-contact in a dialog,
+# where the organisation is picked.
+name: espace-crm-contacts
+path: /espace/crm/contacts
+access: { require: [gardien, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Contacts - Espace bénévole
+  description: Les personnes avec qui le Cercle Gardien échange.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: contacts
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Les personnes avec qui on échange. Ouvre une ligne pour modifier sa fiche et voir ses affaires et ses activités.
+          - type: container
+            element: section
+            props:
+              aria-label: Contacts
+              className: flex flex-col gap-3
+            children:
+              - type: container
+                props:
+                  role: toolbar
+                  aria-label: Rechercher et filtrer
+                  className: flex flex-wrap items-center gap-2
+                children:
+                  - type: search-input
+                    placeholder: Rechercher
+                    props:
+                      aria-label: Rechercher un contact
+                      className: "h-8 w-full sm:w-[250px]"
+                    publishes: { bindTo: crm-contacts, param: q }
+                  - type: filter-bar
+                    publishes: { bindTo: crm-contacts }
+                    fieldsFrom: { table: crm_contacts }
+                  - type: button
+                    label: Nouveau contact
+                    size: sm
+                    props:
+                      className: sm:ml-auto
+                      interactions: { click: { modal: crm-ajout-contact } }
+              - type: table
+                caption: Contacts
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: rows
+                dataSource:
+                  bindTo: crm-contacts
+                  sharedFilter: {}
+                  table: crm_contacts
+                  sort: [{ field: last_name, direction: asc }]
+                  pagination: { pageSize: 25 }
+                onRowClick: { action: openSheet, component: crm-contact }
+                emptyMessage: Aucun contact pour l'instant. Ajoute la première personne avec « Nouveau contact ».
+                columns:
+                  - { field: last_name, label: Nom, frozen: true }
+                  - { field: first_name, label: Prénom }
+                  - { field: organisation, label: Organisation }
+                  - { field: job_title, label: Fonction }
+                  - { field: email, label: Email }
+                  - { field: phone, label: Téléphone }
+                  - { field: owner, label: Suivi par }
+
+  - type: sheet
+    id: crm-contact
+    title: $record.full_name
+    drawerSize: md
+    dataSource: { table: crm_contacts }
+    navigation: { siblings: true }
+    recordFields:
+      - { name: first_name, type: single-line-text, label: Prénom }
+      - { name: last_name, type: single-line-text, label: Nom }
+      - { name: organisation, type: relationship, label: Organisation }
+      - { name: job_title, type: single-line-text, label: Fonction }
+      - { name: email, type: email, label: Email }
+      - { name: phone, type: phone-number, label: Téléphone }
+      - { name: owner, type: user, label: Suivi par }
+      - { name: notes, type: long-text, label: Notes }
+    related:
+      - label: Affaires
+        table: crm_deals
+        field: contact
+        # No stage column: a related section prints an option's stored value
+        # (`contact`), not its label (Sovrium 0.41).
+        columns:
+          - { field: title, label: Affaire }
+        sort: [{ field: created_at, direction: desc }]
+        emptyMessage: Aucune affaire avec cette personne.
+        onRowClick: { type: navigate, path: /espace/crm/affaires/$record.id }
+      - label: Activités
+        table: crm_activities
+        field: contact
+        columns:
+          - { field: subject, label: Objet }
+          - { field: due_at, label: À faire pour le }
+          - { field: done, label: Fait }
+        sort: [{ field: due_at, direction: desc }]
+        limit: 10
+        emptyMessage: Aucune activité avec cette personne.
+
+  - type: dialog
+    props: { id: crm-ajout-contact, title: Nouveau contact }
+    children:
+      - type: form
+        formRef: crm-nouveau-contact
+        showHeader: false
