@@ -532,7 +532,7 @@ components:
                   # The association's milestones on the structural timeline rail,
                   # numbered like /nos-ateliers#programme: an orange disc per date
                   # (a CSS counter) on a bleu-fonce-light rail. The rail's parts
-                  # take no `classes` in 0.40, so the root styles them by data-slot.
+                  # take no `classes` in 0.41, so the root styles them by data-slot.
                   - type: timeline
                     props:
                       aria-label: Les grandes dates de l'association
