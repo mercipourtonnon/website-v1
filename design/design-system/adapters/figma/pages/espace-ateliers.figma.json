@@ -1,0 +1,395 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-ateliers",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-ateliers:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-ateliers:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-ateliers:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 4,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-ateliers:/components/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "ateliers en ligne",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-ateliers:/components/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Les dates que le site affiche. « Retirer du site » enlève une date de la page d'accueil et de sa page, tout de suite. Pense aussi à fermer l'événement sur HelloAsso et à prévenir les personnes inscrites.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "table",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-ateliers:/components/0/children/0/children/1",
+                            "type": "table"
+                          },
+                          "locked": true,
+                          "layoutMode": "VERTICAL",
+                          "children": [
+                            {
+                              "name": "header",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Date",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Statut",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Heure",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Facilitation",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Co-facilitation",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Lieu",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Inscription",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "row 1",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "2026-03-12",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "published",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Sample time label 1",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "https://example.com",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "row 2",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "2026-03-12",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "cancelled",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Sample time label 2",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "https://example.com",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "row 3",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "2026-03-12",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "published",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Sample time label 3",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "https://example.com",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-ateliers:/components/0",
+      "contentHash": "d1b60046d040cc29312b2320ddf7eb1dead80636ed60af763b358796518e3da6"
+    },
+    {
+      "id": "espace-ateliers:/components/0/children/0",
+      "contentHash": "2d473d03020b8e555c644446db40c5c991717cc3c149bd6ca8edc0e383bd9ec3"
+    },
+    {
+      "id": "espace-ateliers:/components/0/children/0/children/0",
+      "contentHash": "979444133d9d9cf4e3ba1d2b3e45fd195af0659a05c347f87d08ceabcb3f2bc7"
+    },
+    {
+      "id": "espace-ateliers:/components/0/children/0/children/0/children/0",
+      "contentHash": "77ff67dbe1b592d9642dabbf8abc311617cfce86309f9680b93aeeb3245d1481"
+    },
+    {
+      "id": "espace-ateliers:/components/0/children/0/children/0/children/1",
+      "contentHash": "a37aa1e4d3248119fdc12e825b33f968ff6e19726707471800a04a62476d0ca9"
+    },
+    {
+      "id": "espace-ateliers:/components/0/children/0/children/1",
+      "contentHash": "bc02c04d32c8e204a0f667a650b42f143ab4ae5ee5e83adbd9b1338a58bca03c"
+    }
+  ]
+}

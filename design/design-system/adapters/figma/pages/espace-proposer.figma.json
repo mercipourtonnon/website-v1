@@ -1,0 +1,172 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-proposer",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-proposer:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-proposer:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposer:/components/0/children/0/children/0",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "← Mes propositions",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "form",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposer:/components/0/children/0/children/1",
+                            "type": "form"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-proposer:/components/0",
+      "contentHash": "33582a9704a1e5b15e656bd962e9b2bbffe786ca6a102dd4ba6caed2321944a8"
+    },
+    {
+      "id": "espace-proposer:/components/0/children/0",
+      "contentHash": "0fd1c18183746baaa3512d6b14666e94046be154c60d69ab7cfa046c91f1899a"
+    },
+    {
+      "id": "espace-proposer:/components/0/children/0/children/0",
+      "contentHash": "4b874f586e49b35dd063d6192f9c3e058ace66ad400277c308593bc0aac0b576"
+    },
+    {
+      "id": "espace-proposer:/components/0/children/0/children/1",
+      "contentHash": "d6d985cd7e08ef53883730aabb3abf0ff0a97c2c88899e71d6fe85e4b8a9b3d8"
+    }
+  ]
+}

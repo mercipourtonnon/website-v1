@@ -1,0 +1,1954 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "notre-mission",
+  "nodes": [
+    {
+      "id": "notre-mission:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    },
+    {
+      "id": "notre-mission:/components/1",
+      "type": "container",
+      "children": [
+        {
+          "id": "notre-mission:/components/1/children/0",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/0/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "3rem"
+                    },
+                    "align": {
+                      "value": "center"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/0",
+                          "type": "text",
+                          "content": "L'association",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/1",
+                          "type": "text",
+                          "content": "notre mission",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/2",
+                          "type": "text",
+                          "content": "Diffuser une culture du consentement à Strasbourg et en Alsace",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3/children/0",
+                              "type": "text",
+                              "content": "On crée des ",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3/children/1",
+                              "type": "text",
+                              "content": "espaces sûrs",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3/children/2",
+                              "type": "text",
+                              "content": " où chacun·e peut apprendre à ",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3/children/3",
+                              "type": "text",
+                              "content": "dire non",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3/children/4",
+                              "type": "text",
+                              "content": ", ",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3/children/5",
+                              "type": "text",
+                              "content": "poser ses limites",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3/children/6",
+                              "type": "text",
+                              "content": " et construire des ",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3/children/7",
+                              "type": "text",
+                              "content": "relations plus authentiques",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/0/children/0/children/0/children/0/children/3/children/8",
+                              "type": "text",
+                              "content": " — dans tous les contextes de vie.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/0/children/0/children/0/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/0/children/1/children/0",
+                          "type": "image",
+                          "variant": "hero",
+                          "layout": {
+                            "width": {
+                              "value": "100%"
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/0/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/0/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.5rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/1/children/0/children/0",
+                          "type": "icon",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/1/children/0/children/1",
+                          "type": "text",
+                          "content": "apprendre à dire non",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/1/children/0/children/2",
+                          "type": "text",
+                          "content": "Écouter ses ressentis, poser ses limites et accueillir le \"non\" de l'autre avec bienveillance",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/0/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.5rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/1/children/1/children/0",
+                          "type": "icon",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "pour tous les contextes",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/1/children/1/children/2",
+                          "type": "text",
+                          "content": "Relations amicales, familiales, professionnelles, intimes — le consentement est partout",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/0/children/0/children/1/children/2",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.5rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/1/children/2/children/0",
+                          "type": "icon",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/1/children/2/children/1",
+                          "type": "text",
+                          "content": "un enjeu collectif",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/1/children/2/children/2",
+                          "type": "text",
+                          "content": "Issu des luttes féministes, le consentement questionne les rapports de pouvoir dans la société",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/0/children/0/children/2",
+                  "type": "container",
+                  "layout": {
+                    "padding": {
+                      "value": "2rem"
+                    },
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/0/children/0/children/2/children/0",
+                      "type": "text",
+                      "content": "notre approche",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/0/children/0/children/2/children/1",
+                      "type": "text",
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/2/children/1/children/0",
+                          "type": "text",
+                          "content": "Association à but non lucratif, on garde nos ateliers ",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/2/children/1/children/1",
+                          "type": "text",
+                          "content": "gratuits",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/2/children/1/children/2",
+                          "type": "text",
+                          "content": " — un don libre soutient l'association, et personne n'est refusé·e par manque d'argent. On croit que le consentement doit être ",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/2/children/1/children/3",
+                          "type": "text",
+                          "content": "accessible",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/0/children/0/children/2/children/1/children/4",
+                          "type": "text",
+                          "content": " à tou·te·s.",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/1/children/0",
+              "type": "container",
+              "layout": {
+                "align": {
+                  "value": "center"
+                },
+                "gap": {
+                  "value": "0.5rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/1/children/0/children/0",
+                  "type": "text",
+                  "content": "Sur cette page",
+                  "children": []
+                },
+                {
+                  "id": "notre-mission:/components/1/children/1/children/0/children/1",
+                  "type": "link",
+                  "content": "En chiffres",
+                  "children": []
+                },
+                {
+                  "id": "notre-mission:/components/1/children/1/children/0/children/2",
+                  "type": "link",
+                  "content": "Pourquoi",
+                  "children": []
+                },
+                {
+                  "id": "notre-mission:/components/1/children/1/children/0/children/3",
+                  "type": "link",
+                  "content": "Notre histoire",
+                  "children": []
+                },
+                {
+                  "id": "notre-mission:/components/1/children/1/children/0/children/4",
+                  "type": "link",
+                  "content": "Nos valeurs",
+                  "children": []
+                },
+                {
+                  "id": "notre-mission:/components/1/children/1/children/0/children/5",
+                  "type": "link",
+                  "content": "L'équipe",
+                  "children": []
+                },
+                {
+                  "id": "notre-mission:/components/1/children/1/children/0/children/6",
+                  "type": "link",
+                  "content": "Fonctionnement",
+                  "children": []
+                },
+                {
+                  "id": "notre-mission:/components/1/children/1/children/0/children/7",
+                  "type": "link",
+                  "content": "Partenaires",
+                  "children": []
+                },
+                {
+                  "id": "notre-mission:/components/1/children/1/children/0/children/8",
+                  "type": "link",
+                  "content": "Agir avec nous",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/2",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/2/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/2/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/2/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Depuis septembre 2025",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/2/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "en chiffres",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/2/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/2/children/0/children/1/children/0",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/2/children/0/children/1/children/1",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/2/children/0/children/1/children/2",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/2/children/0/children/1/children/3",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/2/children/0/children/2",
+                  "type": "text",
+                  "content": "Et aussi : 5 présences publiques, 4 facilitateur·ices, une première commande de la Ville de Strasbourg, un premier atelier réservé par Unis-Cité, prévu en décembre 2026.",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/3",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/3/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/3/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/3/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Le besoin",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/3/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "pourquoi c'est important",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/3/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "On apprend à lire, à nager, à conduire. Dire non et entendre un non, personne ne nous l'apprend. Merci pour ton non est la pièce manquante entre les politiques de prévention des violences sexistes et sexuelles et la stratégie nationale des compétences psychosociales : apprendre le consentement avant, comme une compétence relationnelle, pour tout le monde.",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/3/children/0/children/0/children/3",
+                      "type": "link",
+                      "content": "Lire notre vision du consentement →",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/3/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/3/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "content": "21 %",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/0/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.25rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/0/children/1/children/0",
+                              "type": "text",
+                              "content": "des femmes déclarent avoir subi un acte sexuel imposé ; 26 % des hommes reconnaissent avoir insisté ou douté du consentement de leur partenaire.",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/0/children/1/children/1",
+                              "type": "text",
+                              "content": "Source : HCE, baromètre sexisme 2025.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/3/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "content": "15 %",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/1/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.25rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/1/children/1/children/0",
+                              "type": "text",
+                              "content": "des élèves, au plus, reçoivent les trois séances annuelles d'éducation à la vie affective prévues par la loi.",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/1/children/1/children/1",
+                              "type": "text",
+                              "content": "Source : CESE, 2024.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/3/children/0/children/1/children/2",
+                      "type": "container",
+                      "layout": {
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/2/children/0",
+                          "type": "text",
+                          "content": "662",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/2/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.25rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/2/children/1/children/0",
+                              "type": "text",
+                              "content": "faits de violences sexuelles enregistrés à Strasbourg en 2025, soit + 129 % depuis 2016.",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/2/children/1/children/1",
+                              "type": "text",
+                              "content": "Source : SSMSI.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/3/children/0/children/1/children/3",
+                      "type": "container",
+                      "layout": {
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/3/children/0",
+                          "type": "text",
+                          "content": "80 %",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/3/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.25rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/3/children/1/children/0",
+                              "type": "text",
+                              "content": "des Français·es sont favorables à un programme scolaire sur la vie affective et le consentement.",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/3/children/1/children/1",
+                              "type": "text",
+                              "content": "Source : HCE, 2025.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/3/children/0/children/1/children/4",
+                      "type": "container",
+                      "layout": {
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/4/children/0",
+                          "type": "text",
+                          "content": "2025",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/3/children/0/children/1/children/4/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.25rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/4/children/1/children/0",
+                              "type": "text",
+                              "content": "Depuis la loi du 6 novembre 2025, le consentement doit être « libre et éclairé, spécifique, préalable et révocable ».",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/3/children/0/children/1/children/4/children/1/children/1",
+                              "type": "text",
+                              "children": [
+                                {
+                                  "id": "notre-mission:/components/1/children/3/children/0/children/1/children/4/children/1/children/1/children/0",
+                                  "type": "text",
+                                  "content": "Source : loi du 6 novembre 2025. ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "notre-mission:/components/1/children/3/children/0/children/1/children/4/children/1/children/1/children/1",
+                                  "type": "link",
+                                  "content": "Lire nos deux définitions",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/4",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/4/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/4/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/4/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "D'où on vient",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/4/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "notre histoire",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/4/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Merci pour ton non est née de deux expériences et d'un constat partagé : pour Mathilde, un atelier chez Love Experience où elle a découvert qu'un non peut être joyeux ; pour Thomas, une relation où il a mesuré ce que son manque d'éducation au consentement avait coûté à l'autre.",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/4/children/0/children/0/children/3",
+                      "type": "text",
+                      "content": "On a d'abord animé des ateliers informels dans un collectif strasbourgeois. Sept cofondateur·ices se sont retrouvé·es autour d'une conviction : le consentement n'est pas cantonné à la vie affective et sexuelle, il traverse toutes nos relations. L'association est créée le 21 septembre 2025 — et le premier atelier a lieu le même jour.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/4/children/0/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0",
+                      "type": "timeline",
+                      "responsive": {
+                        "[&_[data-slot=timeline-item]]": {
+                          "gap": {
+                            "value": "2.25rem"
+                          }
+                        },
+                        "[&_[data-slot=timeline-item]>span:first-child]": {
+                          "width": {
+                            "value": "2.5rem"
+                          }
+                        },
+                        "[&_[data-slot=timeline-marker]]": {
+                          "align": {
+                            "value": "center"
+                          },
+                          "justify": {
+                            "value": "center"
+                          }
+                        },
+                        "[&_[data-slot=timeline-connector]]": {
+                          "width": {
+                            "value": "0.125rem"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/0",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/0/children/0",
+                              "type": "text",
+                              "content": "21 sept. 2025",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/0/children/1",
+                              "type": "text",
+                              "content": "assemblée générale constitutive et premier atelier",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/0/children/2",
+                              "type": "text",
+                              "content": "L'association est créée, et le premier atelier Niveau 1 a lieu le jour même.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/1/children/0",
+                              "type": "text",
+                              "content": "nov. 2025",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/1/children/1",
+                              "type": "text",
+                              "content": "des ateliers chaque mois",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/1/children/2",
+                              "type": "text",
+                              "content": "Le rythme mensuel s'installe, à La Plage Digitale.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/2",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/2/children/0",
+                              "type": "text",
+                              "content": "févr.–mars 2026",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/2/children/1",
+                              "type": "text",
+                              "content": "Labo des Partenariats, Village des associations, Social Cup",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/2/children/2",
+                              "type": "text",
+                              "content": "Soutenance au Labo des Partenariats après dix formations, premier stand au Village des associations, finale de la Social Cup.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/3",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/3/children/0",
+                              "type": "text",
+                              "content": "mai–juin 2026",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/3/children/1",
+                              "type": "text",
+                              "content": "adhésions en ligne, stands, Fête de la musique",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/3/children/2",
+                              "type": "text",
+                              "content": "Les adhésions ouvrent en ligne ; stands aux distributions de Cop1 et à la Fête de la musique pour la Ville de Strasbourg.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/4",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/4/children/0",
+                              "type": "text",
+                              "content": "15 nov. 2026 · à venir",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/4/children/1",
+                              "type": "text",
+                              "content": "première assemblée générale ordinaire",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/4/children/2",
+                              "type": "text",
+                              "content": "Un an après la création, les membres se réuniront pour la première AG ordinaire.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/5",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/5/children/0",
+                              "type": "text",
+                              "content": "déc. 2026 · prévu",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/5/children/1",
+                              "type": "text",
+                              "content": "premier atelier réservé par une structure",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/4/children/0/children/1/children/0/children/5/children/2",
+                              "type": "text",
+                              "content": "Unis-Cité a réservé un atelier pour ses volontaires en service civique.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/5",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/5/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/5/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/5/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Ce qui nous guide",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/5/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "nos valeurs",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/5/children/0/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/5/children/0/children/1/children/0",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/5/children/0/children/1/children/1",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/5/children/0/children/1/children/2",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/5/children/0/children/1/children/3",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/5/children/0/children/1/children/4",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/6",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/6/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/6/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "2rem"
+                    }
+                  },
+                  "responsive": {
+                    "lg": {
+                      "gap": {
+                        "value": "3rem"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/6/children/0/children/0/children/0",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/0/children/0/children/0",
+                          "type": "text",
+                          "content": "Qui anime",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/0/children/0/children/1",
+                          "type": "text",
+                          "content": "l'équipe cœur",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1/children/0",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "start"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1/children/0/children/0",
+                              "type": "icon",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1/children/0/children/1",
+                              "type": "text",
+                              "content": "Nous sommes tou·tes formé·es au consentement et aux compétences relationnelles — par nos métiers, nos diplômes ou la formation continue : psychologie sociale, droits humains, conseil conjugal et familial, travail social, facilitation.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1/children/1",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "start"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1/children/1/children/0",
+                              "type": "icon",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1/children/1/children/1",
+                              "type": "text",
+                              "content": "Notre légitimité vient aussi de nos vécus : chacun·e de nous a mesuré, dans sa propre histoire, ce que l'absence d'éducation au consentement produit.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1/children/2",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "start"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1/children/2/children/0",
+                              "type": "icon",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/6/children/0/children/0/children/1/children/2/children/1",
+                              "type": "text",
+                              "content": "Une équipe mixte — des femmes et des hommes, des personnes queer, des origines et des parcours divers — dans une association de droit local créée le 21 septembre 2025, bénévole, à direction collégiale.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/6/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "width": {
+                      "value": "100%"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/6/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "justify": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/1/children/0/children/0",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/1/children/0/children/1",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/1/children/0/children/2",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/1/children/0/children/3",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/6/children/0/children/1/children/0/children/4",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/7",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/7/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/7/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/7/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Et autour",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/7/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "les bénévoles",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/7/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "L'association, c'est aussi celles et ceux qui tiennent les stands, diffusent les flyers, améliorent les ateliers, gèrent l'administratif ou dessinent nos visuels. Isabelle, Maxime, Laetitia, Olivia et d'autres y contribuent à leur rythme.",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/8",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/8/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/8/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/8/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Gouvernance",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/8/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "comment on fonctionne",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/8/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Une direction collégiale, trois cercles, des rôles qu'on consent.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/8/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/8/children/0/children/1/children/0",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/8/children/0/children/1/children/1",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/8/children/0/children/1/children/2",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/8/children/0/children/2",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "responsive": {
+                    "md": {
+                      "direction": {
+                        "value": "row"
+                      },
+                      "align": {
+                        "value": "center"
+                      },
+                      "gap": {
+                        "value": "2rem"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/8/children/0/children/2/children/0",
+                      "type": "text",
+                      "content": "Chaque rôle décide seul dans son périmètre ; entre rôles, on décide ensemble, sans objection. Un rôle se consent — et se quitte à tout moment.",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/8/children/0/children/2/children/1",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/8/children/0/children/2/children/1/children/0",
+                          "type": "icon",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/8/children/0/children/2/children/1/children/1",
+                          "type": "text",
+                          "content": "Prochaine assemblée générale ordinaire : 15 novembre 2026",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/9",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/9/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/9/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/9/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Partenaires",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/9/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "ils nous soutiennent",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/9/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Celles et ceux qui accompagnent, accueillent et commandent nos actions.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/9/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/9/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/9/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "content": "ils nous accompagnent",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/9/children/0/children/1/children/0/children/1",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/9/children/0/children/1/children/0/children/1/children/0",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/9/children/0/children/1/children/0/children/1/children/1",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/9/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/9/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "content": "ils nous accueillent",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/9/children/0/children/1/children/1/children/1",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/9/children/0/children/1/children/1/children/1/children/0",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/9/children/0/children/1/children/1/children/1/children/1",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/9/children/0/children/1/children/2",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/9/children/0/children/1/children/2/children/0",
+                          "type": "text",
+                          "content": "ils nous ont fait confiance",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/9/children/0/children/1/children/2/children/1",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "notre-mission:/components/1/children/9/children/0/children/1/children/2/children/1/children/0",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/9/children/0/children/1/children/2/children/1/children/1",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "notre-mission:/components/1/children/9/children/0/children/1/children/2/children/1/children/2",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/10",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/10/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/10/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/10/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Agir",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/10/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "agir avec nous",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/10/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Quatre façons de faire vivre l'association, à ton rythme — pour que nos ateliers restent gratuits.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/10/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/10/children/0/children/1/children/0",
+                      "type": "link",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/10/children/0/children/1/children/1",
+                      "type": "link",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/10/children/0/children/1/children/2",
+                      "type": "link",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/10/children/0/children/1/children/3",
+                      "type": "link",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notre-mission:/components/1/children/11",
+          "type": "container",
+          "children": [
+            {
+              "id": "notre-mission:/components/1/children/11/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "notre-mission:/components/1/children/11/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/11/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Ce qu'on construit",
+                      "children": []
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/11/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "et ensuite",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "notre-mission:/components/1/children/11/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "notre-mission:/components/1/children/11/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "content": "2027",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/0/children/1",
+                          "type": "text",
+                          "content": "atelier Niveau 2",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/0/children/2",
+                          "type": "text",
+                          "content": "Deux sessions, pour celles et ceux qui veulent aller plus loin après le Niveau 1.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/11/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "content": "Année 2",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "kit pédagogique libre",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/1/children/2",
+                          "type": "text",
+                          "content": "Nos exercices et nos supports, sous licence Creative Commons, pour qui veut s'en servir.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/11/children/0/children/1/children/2",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/2/children/0",
+                          "type": "text",
+                          "content": "Année 3",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/2/children/1",
+                          "type": "text",
+                          "content": "formation d'essaimage",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/2/children/2",
+                          "type": "text",
+                          "content": "Deux jours pour que d'autres animent à leur tour, ailleurs qu'à Strasbourg.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "notre-mission:/components/1/children/11/children/0/children/1/children/3",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/3/children/0",
+                          "type": "text",
+                          "content": "En exploration",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/3/children/1",
+                          "type": "text",
+                          "content": "module enfants et adolescent·es",
+                          "children": []
+                        },
+                        {
+                          "id": "notre-mission:/components/1/children/11/children/0/children/1/children/3/children/2",
+                          "type": "text",
+                          "content": "Adapter le consentement aux plus jeunes, avec les personnes qui les accompagnent.",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "notre-mission:/components/2",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    }
+  ]
+}

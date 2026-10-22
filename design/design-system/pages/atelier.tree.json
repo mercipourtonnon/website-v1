@@ -1,0 +1,425 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "atelier",
+  "nodes": [
+    {
+      "id": "atelier:/components/0",
+      "type": "container",
+      "layout": {
+        "direction": {
+          "value": "column"
+        }
+      },
+      "children": [
+        {
+          "id": "atelier:/components/0/children/0",
+          "type": "container",
+          "layout": {
+            "width": {
+              "value": "100%"
+            }
+          },
+          "children": [
+            {
+              "id": "atelier:/components/0/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "justify": {
+                  "value": "space-between"
+                },
+                "align": {
+                  "value": "center"
+                },
+                "gap": {
+                  "value": "1rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "atelier:/components/0/children/0/children/0/children/0",
+                  "type": "link",
+                  "layout": {
+                    "align": {
+                      "value": "center"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "atelier:/components/0/children/0/children/0/children/0/children/0",
+                      "type": "image",
+                      "layout": {
+                        "width": {
+                          "value": "auto"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "atelier:/components/0/children/0/children/0/children/1",
+                  "type": "link",
+                  "content": "Toutes les dates",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "atelier:/components/0/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "atelier:/components/0/children/1/children/0",
+              "type": "container",
+              "layout": {
+                "padding": {
+                  "value": "1.5rem"
+                },
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "2rem"
+                }
+              },
+              "responsive": {
+                "sm": {
+                  "padding": {
+                    "value": "2.5rem"
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "atelier:/components/0/children/1/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Atelier de consentement · Niveau 1 · Tout public",
+                      "children": []
+                    },
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/0/children/1",
+                      "type": "text",
+                      "children": []
+                    },
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Un atelier de 3h pour explorer le consentement dans un cadre bienveillant et participatif. Apprends à dire non, à poser tes limites et à construire des relations plus authentiques.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "atelier:/components/0/children/1/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "start"
+                        },
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/1/children/0/children/0",
+                          "type": "icon",
+                          "layout": {
+                            "width": {
+                              "value": "1.25rem"
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/1/children/0/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/0/children/1/children/0",
+                              "type": "text",
+                              "content": "Horaire",
+                              "children": []
+                            },
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/0/children/1/children/1",
+                              "type": "text",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "start"
+                        },
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/1/children/1/children/0",
+                          "type": "icon",
+                          "layout": {
+                            "width": {
+                              "value": "1.25rem"
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/1/children/1/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/1/children/1/children/0",
+                              "type": "text",
+                              "content": "Lieu",
+                              "children": []
+                            },
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/1/children/1/children/1",
+                              "type": "text",
+                              "children": []
+                            },
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/1/children/1/children/2",
+                              "type": "text",
+                              "content": "L'adresse exacte est envoyée aux personnes inscrites.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/1/children/2",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "start"
+                        },
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/1/children/2/children/0",
+                          "type": "icon",
+                          "layout": {
+                            "width": {
+                              "value": "1.25rem"
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/1/children/2/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/2/children/1/children/0",
+                              "type": "text",
+                              "content": "Facilitation",
+                              "children": []
+                            },
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/2/children/1/children/1",
+                              "type": "text",
+                              "children": []
+                            },
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/2/children/1/children/2",
+                              "type": "text",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/1/children/3",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "start"
+                        },
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/1/children/3/children/0",
+                          "type": "icon",
+                          "layout": {
+                            "width": {
+                              "value": "1.25rem"
+                            }
+                          },
+                          "children": []
+                        },
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/1/children/3/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/3/children/1/children/0",
+                              "type": "text",
+                              "content": "Participation",
+                              "children": []
+                            },
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/3/children/1/children/1",
+                              "type": "text",
+                              "children": []
+                            },
+                            {
+                              "id": "atelier:/components/0/children/1/children/0/children/1/children/3/children/1/children/2",
+                              "type": "text",
+                              "content": "Personne ne paie pour participer. Un don libre est possible pour soutenir l'association.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "atelier:/components/0/children/1/children/0/children/2",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "responsive": {
+                    "sm": {
+                      "direction": {
+                        "value": "row"
+                      },
+                      "align": {
+                        "value": "center"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/2/children/0",
+                      "type": "link",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "justify": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/2/children/0/children/0",
+                          "type": "text",
+                          "content": "Réserver ma place",
+                          "children": []
+                        },
+                        {
+                          "id": "atelier:/components/0/children/1/children/0/children/2/children/0/children/1",
+                          "type": "icon",
+                          "layout": {
+                            "width": {
+                              "value": "1.25rem"
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/2/children/1",
+                      "type": "text",
+                      "content": "L'inscription se fait sur HelloAsso, dans un nouvel onglet.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "atelier:/components/0/children/1/children/0/children/3",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/3/children/0",
+                      "type": "text",
+                      "content": "Une question avant de t'inscrire ? ",
+                      "children": []
+                    },
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/3/children/1",
+                      "type": "link",
+                      "content": "Lis la FAQ",
+                      "children": []
+                    },
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/3/children/2",
+                      "type": "text",
+                      "content": " ou écris-nous à ",
+                      "children": []
+                    },
+                    {
+                      "id": "atelier:/components/0/children/1/children/0/children/3/children/3",
+                      "type": "link",
+                      "content": "mercipourtonnon@gmail.com",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "atelier:/components/0/children/2",
+          "type": "container",
+          "locked": "template",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

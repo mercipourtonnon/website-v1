@@ -1,0 +1,170 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "espace-coordination-membres",
+  "nodes": [
+    {
+      "id": "espace-coordination-membres:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": [
+        {
+          "id": "espace-coordination-membres:/components/0/children/0",
+          "type": "container",
+          "layout": {
+            "direction": {
+              "value": "column"
+            },
+            "gap": {
+              "value": "2rem"
+            }
+          },
+          "children": [
+            {
+              "id": "espace-coordination-membres:/components/0/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.25rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-coordination-membres:/components/0/children/0/children/0/children/0",
+                  "type": "text",
+                  "content": "bénévoles",
+                  "children": []
+                },
+                {
+                  "id": "espace-coordination-membres:/components/0/children/0/children/0/children/1",
+                  "type": "text",
+                  "content": "Les candidatures à relire, puis toute l'équipe. Ouvre une ligne pour lire la fiche complète et cocher ses rôles bénévoles.",
+                  "children": []
+                },
+                {
+                  "id": "espace-coordination-membres:/components/0/children/0/children/0/children/2",
+                  "type": "text",
+                  "content": "Cocher un rôle bénévole donne à la personne les outils qui vont avec, dès que son compte est dans le Cercle Cœur. Le cercle lui-même se change dans la console d'administration (« Changer le rôle »).",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-coordination-membres:/components/0/children/0/children/1",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.75rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-coordination-membres:/components/0/children/0/children/1/children/0",
+                  "type": "text",
+                  "content": "candidatures en attente",
+                  "children": []
+                },
+                {
+                  "id": "espace-coordination-membres:/components/0/children/0/children/1/children/1",
+                  "type": "container",
+                  "layout": {
+                    "align": {
+                      "value": "center"
+                    },
+                    "gap": {
+                      "value": "0.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-coordination-membres:/components/0/children/0/children/1/children/1/children/0",
+                      "type": "search-input",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "espace-coordination-membres:/components/0/children/0/children/1/children/1/children/1",
+                      "type": "filter-bar",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-coordination-membres:/components/0/children/0/children/1/children/2",
+                  "type": "table",
+                  "locked": "island",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-coordination-membres:/components/0/children/0/children/2",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.75rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-coordination-membres:/components/0/children/0/children/2/children/0",
+                  "type": "text",
+                  "content": "toute l'équipe",
+                  "children": []
+                },
+                {
+                  "id": "espace-coordination-membres:/components/0/children/0/children/2/children/1",
+                  "type": "container",
+                  "layout": {
+                    "align": {
+                      "value": "center"
+                    },
+                    "gap": {
+                      "value": "0.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-coordination-membres:/components/0/children/0/children/2/children/1/children/0",
+                      "type": "search-input",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "espace-coordination-membres:/components/0/children/0/children/2/children/1/children/1",
+                      "type": "filter-bar",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-coordination-membres:/components/0/children/0/children/2/children/2",
+                  "type": "table",
+                  "locked": "island",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

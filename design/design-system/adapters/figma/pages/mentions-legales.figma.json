@@ -1,0 +1,3162 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "mentions-legales",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "mentions-legales:/components/0",
+            "type": "container"
+          },
+          "layoutMode": "VERTICAL",
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "mentions-legales:/components/0/children/0",
+                "type": "container"
+              },
+              "layoutMode": "NONE",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "mentions-legales:/components/0/children/0/children/0",
+                    "type": "container"
+                  },
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/0/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "primaryAxisAlignItems": "SPACE_BETWEEN",
+                      "counterAxisAlignItems": "CENTER",
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/0/children/0/children/0/children/0",
+                            "type": "link"
+                          },
+                          "layoutMode": "NONE",
+                          "counterAxisAlignItems": "CENTER",
+                          "children": [
+                            {
+                              "name": "image",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/0/children/0/children/0/children/0/children/0",
+                                "type": "image"
+                              },
+                              "layoutMode": "NONE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/0/children/0/children/0/children/1",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "← Retour à l'accueil",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "mentions-legales:/components/0/children/1",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "mentions-legales:/components/0/children/1/children/0",
+                    "type": "container"
+                  },
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/0",
+                        "type": "text"
+                      },
+                      "characters": "mentions légales",
+                      "children": []
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/1",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/0",
+                            "type": "text"
+                          },
+                          "characters": "éditeur du site",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/0",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Nom de l'association :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/0/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " Merci pour ton non",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/1",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/1/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Forme juridique :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/1/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " Association de droit local (Bas-Rhin, Haut-Rhin et Moselle)",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/2",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/2/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "SIREN :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/2/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " 993 877 893",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/3",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/3/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "SIRET :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/3/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " 993 877 893 00012",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/4",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/4/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Code NAF/APE :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/4/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " 94.99Z (Autres organisations fonctionnant par adhésion volontaire)",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "customHTML",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/5",
+                                "type": "customHTML"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "<p><strong>Siège social :</strong><br />249 avenue de Colmar<br />67100 Strasbourg<br />France</p>",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Email :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " ",
+                                  "children": []
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6/children/2",
+                                    "type": "link"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "mercipourtonnon@gmail.com",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Site web :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " ",
+                                  "children": []
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7/children/2",
+                                    "type": "link"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "https://mercipourtonnon.fr",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/8",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/8/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Objet de l'association :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/8/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " L'association œuvre à diffuser une culture du consentement auprès de chaque citoyen·ne, dans une démarche d'éducation populaire en Alsace. Elle crée des espaces de réflexion et de pratique où chacun·e peut explorer les enjeux du consentement - dans son rapport à soi, à l'autre et à la société.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/9",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/9/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Directeur·ice de publication :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/9/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " Mathilde Brière et Thomas Jeanneau, co-président·es de l'association Merci pour ton non",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/10",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/10/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Date de création :",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/10/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": " 21 septembre 2025",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/2",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/0",
+                            "type": "text"
+                          },
+                          "characters": "hébergement",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Le site est hébergé par :",
+                              "children": []
+                            },
+                            {
+                              "name": "list",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1",
+                                "type": "list"
+                              },
+                              "children": [
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Site, application et données :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " ESSENTIAL SERVICES, SAS, 128 rue La Boétie, 75008 Paris, France (SIREN 834 241 481), propriétaire de la plateforme Sovrium Cloud (",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "link",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/2",
+                                        "type": "link"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "cloud.sovrium.com",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/3",
+                                        "type": "text"
+                                      },
+                                      "characters": "). Les pages publiques, l'espace bénévole, l'espace facilitateur·ices, les formulaires et leurs données sont servis par ce même hébergement.",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/2",
+                                "type": "text"
+                              },
+                              "characters": "Les inscriptions aux ateliers sont traitées par HelloAsso et la newsletter par Brevo.",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/3",
+                                "type": "text"
+                              },
+                              "characters": "Les données sont hébergées conformément au RGPD (Règlement Général sur la Protection des Données).",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/3",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/0",
+                            "type": "text"
+                          },
+                          "characters": "limitations techniques",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Le site mercipourtonnon.fr utilise les technologies web modernes pour te garantir la meilleure expérience possible. Pour profiter pleinement de toutes les fonctionnalités du site, nous te recommandons :",
+                              "children": []
+                            },
+                            {
+                              "name": "list",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1",
+                                "type": "list"
+                              },
+                              "children": [
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/0",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/0/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "JavaScript activé :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/0/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Le site utilise JavaScript pour le menu de navigation mobile, les animations et certaines interactions. Certaines fonctionnalités peuvent être limitées si JavaScript est désactivé.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/1",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/1/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Navigateur moderne :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/1/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Nous recommandons d'utiliser les versions récentes de Chrome, Firefox, Safari ou Edge pour une expérience optimale.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/2",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/2/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Hébergement :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/2/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Tout le site (pages publiques, espace bénévole, espace facilitateur·ices) et ses données (ateliers, comptes, formulaires, statistiques de visite) sont hébergés sur Sovrium Cloud, conformément au RGPD. Les formulaires du site enregistrent ce que tu y écris sur ce serveur (voir « données collectées » ci-dessous).",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/2",
+                                "type": "text"
+                              },
+                              "characters": "L'association Merci pour ton non met tout en œuvre pour assurer l'accessibilité et la disponibilité du site. Toutefois, nous ne pouvons être tenus responsables des difficultés d'accès temporaires liées à des problèmes techniques indépendants de notre volonté, à la maintenance programmée, ou aux caractéristiques de ton équipement.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/4",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/0",
+                            "type": "text"
+                          },
+                          "characters": "protection des données personnelles",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/1",
+                            "type": "text"
+                          },
+                          "characters": "données collectées",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Dans le cadre de ton utilisation du site, nous sommes susceptibles de collecter les données suivantes :",
+                              "children": []
+                            },
+                            {
+                              "name": "list",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1",
+                                "type": "list"
+                              },
+                              "children": [
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Inscriptions aux ateliers :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Gérées via la plateforme tierce HelloAsso, qui traite tes données d'inscription et de paiement (nom, prénom, email, réponses au formulaire d'inscription, téléphone si fourni, et ton paiement ou ton don si tu en fais un). Consulte la ",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "link",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/2",
+                                        "type": "link"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "politique de confidentialité de HelloAsso",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/3",
+                                        "type": "text"
+                                      },
+                                      "characters": " pour plus d'informations.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/1",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/1/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Suivi des ateliers :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/1/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Quand tu t'inscris à un atelier, nous copions depuis HelloAsso dans l'outil interne de l'association ton nom, ton email, ton téléphone si tu l'as donné, le don éventuel, l'état de ton inscription et ta réponse sur les photos. Le jour de l'atelier, nous y notons ta présence. Si tu viens sans t'être inscrit·e, nous y notons ton nom (et ton email ou ton téléphone si tu nous les donnes). Seul·es les bénévoles qui accueillent les ateliers (facilitation et logistique) et le Cercle Gardien de l'association y ont accès.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/2",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/2/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Comptes des facilitateur·ices :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/2/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Les personnes qui animent nos ateliers ont un compte sur l'espace facilitateur·ices (nom, adresse email, mot de passe chiffré, propositions de dates). Ces comptes sont créés sur invitation par l'association, et servent uniquement à organiser les ateliers.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Newsletter :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Gérée via la plateforme tierce Brevo (prénom ou pseudo, adresse email). Ces données sont collectées uniquement avec ton consentement explicite lors de l'inscription. Consulte la ",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "link",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/2",
+                                        "type": "link"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "politique de confidentialité de Brevo",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/3",
+                                        "type": "text"
+                                      },
+                                      "characters": " pour plus d'informations.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/4",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/4/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Statistiques de navigation :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/4/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Sur les pages publiques du site, via l'outil de statistiques intégré à notre hébergement : il compte les pages vues, la provenance des visites et le type d'appareil, sans cookie, côté serveur, sans empreinte de navigateur et sans service tiers. Les données restent sur notre serveur, et rien n'est enregistré si ton navigateur demande de ne pas être suivi (Do Not Track). Les espaces privés (espace bénévole, espace facilitateur·ices) et les pages de connexion ne sont pas comptés.",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/3",
+                            "type": "text"
+                          },
+                          "characters": "finalité du traitement",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/4",
+                            "type": "text"
+                          },
+                          "characters": "Les données collectées sont utilisées uniquement pour :",
+                          "children": []
+                        },
+                        {
+                          "name": "list",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5",
+                            "type": "list"
+                          },
+                          "children": [
+                            {
+                              "name": "item",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/0",
+                                "type": "item"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "Gérer les inscriptions aux ateliers",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "item",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/1",
+                                "type": "item"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "Te contacter concernant les ateliers auxquels tu t'es inscrit·e",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "item",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/2",
+                                "type": "item"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "Organiser l'accueil et le suivi des ateliers : t'accueillir, noter ta présence, te joindre en cas d'imprévu le jour J, et établir des statistiques globales (nombre de personnes, dons éventuels)",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "item",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/3",
+                                "type": "item"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "T'envoyer notre newsletter si tu t'y es inscrit·e (actualités, dates d'ateliers, ressources sur le consentement)",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "item",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/4",
+                                "type": "item"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "Améliorer l'expérience utilisateur du site",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "item",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/5",
+                                "type": "item"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "Répondre à tes demandes d'information",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "item",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/6",
+                                "type": "item"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "Gérer ton compte et ta fiche bénévole si tu rejoins l'équipe (inscription sur /devenir-benevole) : ton email et ton mot de passe pour le compte ; prénom et nom, pronom, téléphone, photo et ce que tu écris dans ta fiche pour mieux se connaître. L'email et le téléphone sont lus par la coordination seulement ; la fiche est visible des autres bénévoles une fois validée",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "item",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/7",
+                                "type": "item"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "Lire et étudier les idées envoyées depuis /vos-idees (un atelier pour un public précis, un contenu, un format, un lieu) : le type d'idée, pour qui, et ton message ; ton prénom ou nom, ton e-mail et ton accord pour être recontacté·e sont facultatifs et ne servent qu'à te répondre. Lues par la coordination seulement",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/6",
+                            "type": "text"
+                          },
+                          "characters": "tes droits",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Conformément au RGPD et à la loi Informatique et Libertés, tu disposes des droits suivants :",
+                              "children": []
+                            },
+                            {
+                              "name": "list",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1",
+                                "type": "list"
+                              },
+                              "children": [
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/0",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/0/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Droit d'accès :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/0/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Tu peux demander l'accès aux données personnelles que nous détenons sur toi",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/1",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/1/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Droit de rectification :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/1/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Tu peux demander la correction de données inexactes ou incomplètes",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/2",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/2/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Droit à l'effacement :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/2/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Tu peux demander la suppression de tes données personnelles",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/3",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/3/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Droit à la limitation du traitement :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/3/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Tu peux demander la limitation du traitement de tes données",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/4",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/4/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Droit à la portabilité :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/4/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Tu peux demander de recevoir tes données dans un format structuré",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/5",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/5/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Droit d'opposition :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/5/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " Tu peux t'opposer au traitement de tes données",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/2",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/2/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Pour exercer ces droits, contacte-nous à : ",
+                                  "children": []
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/2/children/1",
+                                    "type": "link"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "mercipourtonnon@gmail.com",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/3",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/3/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Si tu estimes que tes droits ne sont pas respectés, tu peux déposer une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) : ",
+                                  "children": []
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/3/children/1",
+                                    "type": "link"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "www.cnil.fr",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/8",
+                            "type": "text"
+                          },
+                          "characters": "durée de conservation",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/9",
+                            "type": "text"
+                          },
+                          "characters": "Tes données personnelles sont conservées uniquement le temps nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées, conformément aux obligations légales applicables.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/10",
+                            "type": "text"
+                          },
+                          "characters": "Pour le suivi des ateliers, ton nom, ton email et ton téléphone sont effacés de notre outil interne 12 mois après l'atelier. Nous ne gardons ensuite que des chiffres anonymes (nombre d'inscrit·es, de présent·es, dons éventuels).",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/11",
+                            "type": "text"
+                          },
+                          "characters": "Pour l'espace bénévole, ton compte et ta fiche sont conservés tant que tu fais partie de l'équipe. Quand tu la quittes, la coordination archive ta fiche et ferme ton accès ; compte et fiche sont supprimés sur simple demande à mercipourtonnon@gmail.com.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/12",
+                            "type": "text"
+                          },
+                          "characters": "Pour les idées envoyées depuis /vos-idees, le message et les coordonnées facultatives sont conservés 24 mois au plus, le temps de les étudier et de te répondre, puis supprimés — ou plus tôt, sur simple demande à mercipourtonnon@gmail.com.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/5",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/0",
+                            "type": "text"
+                          },
+                          "characters": "cookies",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Notre site n'utilise aucun cookie publicitaire ni de suivi. Les seuls cookies sont techniques :",
+                              "children": []
+                            },
+                            {
+                              "name": "list",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/1",
+                                "type": "list"
+                              },
+                              "children": [
+                                {
+                                  "name": "item",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/1/children/0",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "Le cookie de session de l'espace facilitateur·ices : posé uniquement quand une personne se connecte, il la garde connectée. Il n'est lisible que par le serveur (httpOnly) et disparaît à la déconnexion ou à son expiration.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/1/children/1",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "Le formulaire d'inscription à la newsletter (Brevo) peut utiliser des cookies techniques nécessaires à son fonctionnement.",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/2",
+                                "type": "text"
+                              },
+                              "characters": "Nos statistiques de visite ne posent aucun cookie : elles comptent les visites de façon anonyme, sans identifier personne. C'est pourquoi le site n'affiche pas de bandeau de consentement.",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/3",
+                                "type": "text"
+                              },
+                              "characters": "Tu peux néanmoins désactiver les cookies dans les paramètres de ton navigateur si tu le souhaites. Note que la connexion à l'espace facilitateur·ices ne fonctionnera plus.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/6",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/0",
+                            "type": "text"
+                          },
+                          "characters": "propriété intellectuelle",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "L'ensemble du contenu présent sur ce site (textes, images, graphismes, logo, icônes, etc.) est la propriété exclusive de l'association Merci pour ton non, sauf mention contraire.",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de l'association.",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1/children/2",
+                                "type": "text"
+                              },
+                              "characters": "Toute exploitation non autorisée du site ou de l'un des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/7",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/0",
+                            "type": "text"
+                          },
+                          "characters": "limitation de responsabilité",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "L'association Merci pour ton non s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, elle ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/1",
+                                "type": "text"
+                              },
+                              "characters": "L'association ne saurait être tenue responsable :",
+                              "children": []
+                            },
+                            {
+                              "name": "list",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2",
+                                "type": "list"
+                              },
+                              "children": [
+                                {
+                                  "name": "item",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2/children/0",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "Des dommages directs ou indirects résultant de l'accès au site ou de son utilisation",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2/children/1",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "Des interruptions temporaires d'accès au site pour des opérations de maintenance ou pour toute autre raison",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2/children/2",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "Du contenu des sites externes vers lesquels le site renvoie par des liens hypertextes",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/8",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/0",
+                            "type": "text"
+                          },
+                          "characters": "liens hypertextes",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Le site peut contenir des liens hypertextes vers d'autres sites. L'association Merci pour ton non n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou à leur politique de confidentialité.",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/1",
+                                "type": "text"
+                              },
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/1/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "La mise en place de liens hypertextes vers le site mercipourtonnon.fr nécessite une autorisation préalable. Pour toute demande, contacte-nous à : ",
+                                  "children": []
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/1/children/1",
+                                    "type": "link"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "mercipourtonnon@gmail.com",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/9",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/9/children/0",
+                            "type": "text"
+                          },
+                          "characters": "droit applicable et juridiction compétente",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/9/children/1",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/9/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Les présentes mentions légales sont régies par le droit français. En cas de litige et à défaut d'accord amiable, le tribunal compétent sera celui du ressort du siège social de l'association.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/10",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/0",
+                            "type": "text"
+                          },
+                          "characters": "contact",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Pour toute question concernant ces mentions légales ou l'utilisation de tes données personnelles, tu peux nous contacter :",
+                              "children": []
+                            },
+                            {
+                              "name": "list",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1",
+                                "type": "list"
+                              },
+                              "children": [
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Email :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " ",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "link",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0/children/2",
+                                        "type": "link"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "mercipourtonnon@gmail.com",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/1",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/1/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Adresse postale :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/1/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " 249 avenue de Colmar, 67100 Strasbourg",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "item",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2",
+                                    "type": "item"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2/children/0",
+                                        "type": "text"
+                                      },
+                                      "characters": "Site web :",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2/children/1",
+                                        "type": "text"
+                                      },
+                                      "characters": " ",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "link",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2/children/2",
+                                        "type": "link"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "https://mercipourtonnon.fr",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "mentions-legales:/components/0/children/1/children/0/children/11",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "mentions-legales:/components/0/children/1/children/0/children/11/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Dernière mise à jour : 10 octobre 2026",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "INSTANCE",
+              "sovrium": {
+                "id": "mentions-legales:/components/0/children/2",
+                "type": "container"
+              },
+              "locked": true,
+              "componentProperties": {},
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "image",
+                              "nodeType": "FRAME",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "On anime des ateliers de consentement gratuits à Strasbourg. En 3h, on apprend à poser ses limites, à dire non et à accueillir celui des autres — dans un cadre bienveillant, ouvert à tou·te·s.",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "mercipourtonnon@gmail.com",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Le site",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Notre mission",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Nos ateliers",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Nos stands",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Nos interventions",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Le consentement",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Ressources",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "L'équipe",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Newsletter",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Devenir bénévole",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Proposer une idée",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Adhérer",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Nous faire un don",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Mentions légales",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Espace bénévole",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Nous suivre",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Instagram",
+                                  "children": []
+                                },
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Facebook",
+                                  "children": []
+                                },
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "LinkedIn",
+                                  "children": []
+                                },
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "© 2026 Merci pour ton non. Tous droits réservés.",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "mentions-legales:/components/0",
+      "contentHash": "9430bc29099fa4a6e17a0c760d5aefff3611ec91a9de247c25612d6ab69e3cdb"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/0",
+      "contentHash": "56d1c605d2e7eb5f033664c401a69bc52961e82669988ed5822b0a242c2c06a8"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/0/children/0",
+      "contentHash": "7b05916ef97264ec3318cb80dfceec9ab6ecc6ea3e3f269e5d087c6db5544e13"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/0/children/0/children/0",
+      "contentHash": "a38bb0a8a05f37c5fc1b7f549410c5ab91a785bf10ce71a58fe9c86e1b2d1356"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/0/children/0/children/0/children/0",
+      "contentHash": "6bb04f802d0a0cfe8cb52849db1bdf6369c09c2b28022a541e88eac44fa1d60c"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/0/children/0/children/0/children/0/children/0",
+      "contentHash": "14d1d2a9adb95d4aa5199dc328bbc0d7af4e11cf945f3b424a7441b08b20380d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/0/children/0/children/0/children/1",
+      "contentHash": "83d8a4f547bb852215467a7738fd44979e65e3dc2a71fbac8d2948dbb5b12238"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1",
+      "contentHash": "0f76b2ddb71044788ed54775882b5fcaf63a5316abd0b2b027def121698de507"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0",
+      "contentHash": "708e45e315f238f1d4558051175625a0b17f2a423646b2986a6be2f0f38a4925"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/0",
+      "contentHash": "67d0bbad8764c07410b61ce328bbb7b358618699abc77ff47fb17a1f06c4cf08"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1",
+      "contentHash": "9994534abf01fec74b082f170bd05c7da9444d28b417aa7a99c038410b354601"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/0",
+      "contentHash": "9236b52f294fc49d3926312eb0e2db9aa91a2b9025560197def8497d1466d9d6"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1",
+      "contentHash": "2458b94a3f6808f1301b57914b04cdc4519f320ab26b144bea4ae8c2a8263843"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/0",
+      "contentHash": "53f60e0cc021169295b24ab190804309255667e5975d9d23895ca0e1fe86bc54"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/0/children/0",
+      "contentHash": "eac43492caa686033211a994e0cc14f78eae10ddf93383f1c4d896808b6b3308"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/0/children/1",
+      "contentHash": "177b318602e5a7598c407223eb139797a615c9ce736c499271a3449b93819fa1"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/1",
+      "contentHash": "690fbff0d4387379aa6fbd258642907a02c22cb3f962ac981d54865bbe2050ce"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/1/children/0",
+      "contentHash": "87d2bb51c59395cc8aa223eba59df481bb0b39023e3d9c93035b7435f250d64a"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/1/children/1",
+      "contentHash": "60f04ebf13517e62cb595954cf3056440415b8f347e39ac84db73c30d1ef15ff"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/2",
+      "contentHash": "78490579427c6c411e27bb6fdff316edf98fe382f1a10d41aacb89bb1ecf8a46"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/2/children/0",
+      "contentHash": "b34c752e562c9609f23d0f87302fbd19e65d93dc822cb35c9fda0271611bf831"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/2/children/1",
+      "contentHash": "5c6dd9ffdb34049f73081f8303bb712e40bee21ca92ba80eeef9245079259da3"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/3",
+      "contentHash": "8e3b3422f6f2cecabea3c5698f8eafa8d71ea64e151eccc2952fd5361ecb7f05"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/3/children/0",
+      "contentHash": "f234968e3ed548ac6fd19701f7e65312cc00bb136ac6b1f228faa26ca046ec66"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/3/children/1",
+      "contentHash": "a50177dac404580729dcafa529d4bc97e61fff81e4666f60989ebdd3f06af74d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/4",
+      "contentHash": "4b78573795dad86b7589fb592a99551ef2e2de2302fa1d3ca6186b3a037b43fe"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/4/children/0",
+      "contentHash": "760c44d903de42159cb45164f1fb774e783f2c2cd2f3ef6c6ce54692aaade47b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/4/children/1",
+      "contentHash": "094ae64b6f01e403804d6e0c12108adcf0596ccf8f5e100027e5298e0c3fbec7"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/5",
+      "contentHash": "b9c825271f5bc13457e48a67216fbc3b42e6f7edca95b168969e1fe5621a1c0c"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6",
+      "contentHash": "44f35b69539ae012bc8ccfce280dd5b53f7294b8892b5a41f960abbe2ea54d9b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6/children/0",
+      "contentHash": "6e785e1274e4d1bfc1985c8cfc7b372c5755b74187ffa1288ca821a494fb438e"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6/children/1",
+      "contentHash": "5a1cf007b806ed319abd2b332ebec6536617f732532aa5fa679cab92b2343987"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6/children/2",
+      "contentHash": "465215cdc2fe6529ce54476658c64ea9ba51e0d4be11136d381a239a0669a24d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7",
+      "contentHash": "e18b6eedf42a9c6e55faab81c93a48952c270ae6507265cd1802f3e80e4a0dd0"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7/children/0",
+      "contentHash": "d7d5e01f4b43b73f9cec25be853441d696cc52b522efd638348f4e66bc8ec3f1"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7/children/1",
+      "contentHash": "5b8a68cfd826bfca2d9da50afea7783b8b35ea66f39f9028741008b293a165d5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7/children/2",
+      "contentHash": "20edd1b29a182d7b64afc99f4c6812b61d92258331feee1f0743a239998d2fbc"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/8",
+      "contentHash": "81a62d0c29737f16d6094b39c8e8d605ce02657dc88adc0c007e33caf364dbbf"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/8/children/0",
+      "contentHash": "e2a637a7299bfbfed071471bc62f67379338f3ace3bbac4fd5e31f797c6244ae"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/8/children/1",
+      "contentHash": "42de0e40df1a256e2f2fb2fa40e088642cdc6639a5a65e6ade2e2bcf4e7e7cd8"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/9",
+      "contentHash": "8feac7adf222804d74bd5d795ea6082b3f37e78e7f9b096f67c7dbcf30eeff83"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/9/children/0",
+      "contentHash": "ed96e263cd40f2f44d3b4f7f71b86201987a77c8c05892db065b29cbadf0fde1"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/9/children/1",
+      "contentHash": "a53b04655b498aa8770b88a8460e00132f229834ab4da77d4f7fffd2afefb127"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/10",
+      "contentHash": "2284c1fcc049dd0111c5f9bea32a409fec201be058edcb7274e6e7774f1d5bcf"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/10/children/0",
+      "contentHash": "51ec7c594f5ca25a4bfb93f68c0aff75073292c4357d6632119f67af1fb5e90b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/10/children/1",
+      "contentHash": "9e4c024391af6bb6a0a720b6c4252f7eae10f66354bcc9882de04e568a454aa6"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2",
+      "contentHash": "227fb3b2de326adbb96d0979018913db3cad2cf2b929ff85b363c0f5e3f55f2e"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/0",
+      "contentHash": "0c825791b6a94ccd759d79a1cd631de465907d0bafeaa95caeca4f79307b12c5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1",
+      "contentHash": "2a81169b781279ecf65377da4cebf9ffa4fa4fa4b309eefa576485cb555cb4e7"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/0",
+      "contentHash": "119111ec67ab01767561d7ab752a4bf79ab14fe11c18d590698b6cff81130ccc"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1",
+      "contentHash": "5c9aa9fffbd9c3cc37584904fee4dd632a39a31eb5029326e96dd81530c7b6be"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0",
+      "contentHash": "00333287aea28415ad6974b0fbd8ac1b26cac2f5156672b3a086b9275ec09c14"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/0",
+      "contentHash": "51a10f8ff8257dbca5ba3259e1b7f750b4507df4cb8d024f49ec5bd31f4aafda"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/1",
+      "contentHash": "05339e73b818f5ecfda60b90297d3f69e884797bd7b4b912c38cdcec8c54bd45"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/2",
+      "contentHash": "2401f1746c92d715f36e25a4caea87740026392a0df911e979ca50e15ad65eb5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/3",
+      "contentHash": "1d116e091b3025ec5f8479fa677fd4ff2b0879cadb7a22820ac78e98da4605f2"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/2",
+      "contentHash": "df451fc3ffbb95fab12898be7cf41eb2cc317587c7d61e25543f33b5981001b5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/3",
+      "contentHash": "d2f00f07d36bc302914afacff05837f759f8e9eb8ba9e5bfc786d846af1e3225"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3",
+      "contentHash": "850b421b8b8e8466ab8e7755d8564ace605c1bef8877e992ccee1fe9e6f551b5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/0",
+      "contentHash": "a081b4953b4ff13271cac0f5c7c4bce86f8c4e4cee6ea91c0429934c26554954"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1",
+      "contentHash": "da51c932a882c51990abd2c5196aa0d6cec035811441f6b165bf4fa34de5178b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/0",
+      "contentHash": "d7c2dd59365ece6e454b4ae92c96dd02572449d532677bc13c1c8d35891c1ff6"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1",
+      "contentHash": "7d511d79984445d5db17353c052220f44ada2268909de90bd225d3b0931ca654"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/0",
+      "contentHash": "77bf6469052dcefcb0e27c155649d75654c8b89d9db4b12221ade8ef11223df3"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/0/children/0",
+      "contentHash": "6e734f78ce9826e7e343dd74634e58213fa44f733611d8dfdc39aa68f87d127b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/0/children/1",
+      "contentHash": "442aa254e426e1ad6a718f13a923734dbfa7e6a7617928385d815f028d91b4c9"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/1",
+      "contentHash": "7763afc0c8449befa1161d841c51e8a9c4c5ffc92b5f210f6bd5ed7786bb73b0"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/1/children/0",
+      "contentHash": "238f3888976d3092a632e55d2b8e8584f7987f1013da9fcfb25767497ecb48f4"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/1/children/1",
+      "contentHash": "758e754027f03df89cc18b9bcd15c2b8097964a8719300b2ad0ef3372ede2c55"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/2",
+      "contentHash": "1d90551a77ef0d4a68049029224c44e425d5427a39ad9c7af13596fd9d564421"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/2/children/0",
+      "contentHash": "9ae41c69fe160bbe08ab178b64b7192d359296c6b0f98cd4d2a51722fbcd5d8b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/2/children/1",
+      "contentHash": "b625d86e71ef31a9462f92c317a1368427936b9f3e09f750213a45b75430cf9d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/2",
+      "contentHash": "268a2a304ce8aa30db53a0fcb6d3243ab941bca4cef2086ee53ff02f5a42f4d0"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4",
+      "contentHash": "7b52f672161f558fb06474a350e4c1e4bff0e5fe7df6aefcfbcdf3aacad26afb"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/0",
+      "contentHash": "38c0588c688fb376959bef2567b1a6189b9ce7e34d2c97c2c6ed166fda6341e2"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/1",
+      "contentHash": "3bac88b3f981507422b8adbe41fc7fce195c8bdf2427545c04332996d48afbe6"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2",
+      "contentHash": "c7ae908e1681d4f2b71f39ff13a6365393ec40a05d492ef99b53404194575bce"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/0",
+      "contentHash": "cf1e19cfb2c282b8fd96348552d9b6e4e854cc44b94ca36982a1f03c94ad71c8"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1",
+      "contentHash": "b42154fc11e047488ca5c49cd0cf16aaa356633929ad06df66480ed294438c49"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0",
+      "contentHash": "206d84b0f71c0e2ee1c7320e52954817782311d2caa7e546a6cf16c2d6b17661"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/0",
+      "contentHash": "4d5c3b9e1a87486b64aa8140b8505a3f6ec71b5959723fe93f91b18d9b8e8d76"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/1",
+      "contentHash": "6dbff3ff8814ef80b53d6271cc8192c2ea85da60d8d3bb809b6cf03bb035f11e"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/2",
+      "contentHash": "1dd067408f82987db67ed0fb075e3d64de8fe5356dd8c3724e9d21f3213235de"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/3",
+      "contentHash": "9483a114cef4956741e16cc158e8ff28121bf0eca1c019f3508fff68bc1e9592"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/1",
+      "contentHash": "619abecaf76693c0bef8c968a3ec4c0848200e7062ba57828c20977d74faaee5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/1/children/0",
+      "contentHash": "61b6e7b406df8ea57acba83b24d3adb67552b4b558a3e68bc456334d462eb9d2"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/1/children/1",
+      "contentHash": "2eefaf19d59b48c915fb1f0176be582794c2b9987289f56ca5a7128e4a07a99a"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/2",
+      "contentHash": "9c4cce1c38b76517ce888fc30ac25eff57c045f3af03d7fd95294862b798d827"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/2/children/0",
+      "contentHash": "5b79b8f2839702746d5e34f4a60dd8567619233c407f710f6c05c029cc1cfa6b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/2/children/1",
+      "contentHash": "c2a90cceb363f7cb632cb3a637c275b59f011f943bf1a09e1263da28e3370f09"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3",
+      "contentHash": "c27269041ead15b344f4817344e49559c866f93c212671704b210be5a49e23b6"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/0",
+      "contentHash": "345d16e1e8f72c41fab0c593c461ea933ae710e94f2b1ac1cc39873630a69bf8"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/1",
+      "contentHash": "05960637f0728f8669fd6ca3bec0a647d452018febf945b67c4c4fec83282265"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/2",
+      "contentHash": "3d0c5c92f3f18c116430b69c3be55aede1064c15171ee6ddde4ecfefb628abff"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/3",
+      "contentHash": "f6f7308616aaabe044233606f62c4bc15df72e67aedac2702764a0948f5f9245"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/4",
+      "contentHash": "957feeb0ac67d789dac52e21938f81068509a4f756c497388632bb6cc740e602"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/4/children/0",
+      "contentHash": "f14ab2084f341629b47f80cfd75cc13645800cf5d165cfb373ab5effc11988d3"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/4/children/1",
+      "contentHash": "18ac7666a32c23c908d212fa7c3fad9d93fba28cf85e8888de67ad9f6bcca6a1"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/3",
+      "contentHash": "5244019e91f90a3aff9ea85dba8de967fa4803e34909266910b38494eb1a709b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/4",
+      "contentHash": "d532e1bf91c2bfe8f4a945e1ddbeb80805584263a3bc0b4b4d2fc03a10805424"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5",
+      "contentHash": "bd694a736e64cf092afb1d7fc172c273f656640db06982cbeaaab111312c66f8"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/0",
+      "contentHash": "f14c653579cd230ddb96098e735a9b051a4307d01e559fb6b2aa6a0098fb0a70"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/1",
+      "contentHash": "149b9c7bcc543aad43307b1bf242d0fbd60d18f1bdb38a21726aab446cf39a9a"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/2",
+      "contentHash": "c5ba9354ff1068b9e506fd9559b2ad2935a86272df915740c59d0ec2101702b5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/3",
+      "contentHash": "d7383fe1c19e615a38c27a5e962cfe33959d3d27fce9d4784ac7c04d4e55d98c"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/4",
+      "contentHash": "7727decffe53da2637a108f34dc68718020baa8309225ef6f0d13ecd7981d06a"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/5",
+      "contentHash": "c5e6ab5c4cf08598a6831915b3de7eeef78747fdb2ef3bf0a4521f870ab07f9e"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/6",
+      "contentHash": "17102be1b9d78ca15e3a14162b4955b71a746212b274289e400da5353d1557d2"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/7",
+      "contentHash": "1d9fe288f6491a75cfe50f9343fb273136f2573ee924dc4ba34d3f1f2222296b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/6",
+      "contentHash": "685e3f9d7d0186240b7112a4dc814b52a4f4e12f383fbff7a321c82d430453d4"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7",
+      "contentHash": "fca07ae4ca673d6acb675d4951c070135b238c1d29ed8fb8cc333d66e6d2e392"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/0",
+      "contentHash": "45b1a615473d28dee335029995fbbbba7452073134c1de0a6bd296a4980d5af5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1",
+      "contentHash": "9b623998ddfa7ead39fdd7ebea0463d5498c4d36252c752f7d746f7f3c7f4dcd"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/0",
+      "contentHash": "a3bc53ca243f8ec02725a63bd55bd09d96cb45b222fa075447aff85382cf614a"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/0/children/0",
+      "contentHash": "c5b478cd0e0f6c88e01e7730045cca9d4eec86391b4cf00657b3992edb495633"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/0/children/1",
+      "contentHash": "187dd01dae5bb3ab1092bbd4d81910be385c948c9225310aa8b88647221d63e5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/1",
+      "contentHash": "eb8a47683b15065ce9481b0a60b7cbcec8f1665c7553a2f48861407c224fb4d9"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/1/children/0",
+      "contentHash": "81449f9046b57199de40dae1c2e73d440d7a005884f8e619b7b98c06c56506b5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/1/children/1",
+      "contentHash": "8a791f38634d1e16f25e00a898b9bb946299482c8ede25bca539b0256043277b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/2",
+      "contentHash": "c16a65a4a7d1ace2865ff99d376dd619b498c37294565d21aa9c49472d43c295"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/2/children/0",
+      "contentHash": "17a83e40d74413527df6718945421eed77941d1990de2b80f9397d2a7640d19e"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/2/children/1",
+      "contentHash": "ec9c459c86f8b67bb31e898134a84dcbddb1fc5fcdb7ffc3e122a7ec81e97db1"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/3",
+      "contentHash": "3fd8d80c367fb1215148b14e95806191c8919fd352318b4dd3b65b261ce4cfd3"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/3/children/0",
+      "contentHash": "7972add37d6902838de869e6c553d9c8c8358ff216823c113dca31d9b2653957"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/3/children/1",
+      "contentHash": "f43e394681938787d8d77867ad87a7db46f1c194ac59c6c073562c09564e6c96"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/4",
+      "contentHash": "5cc901b40c70b9140129970e3520b2feb12f1defd50615c42b819742c8d7912b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/4/children/0",
+      "contentHash": "225f7c3528e0a751fcc58df20cc274b683aa76890dd2e8451f3036cf8cd368cc"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/4/children/1",
+      "contentHash": "d4e90cfae996e805c7982f6abe1568a4e3d57e18564ec104f5310c98467d597d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/5",
+      "contentHash": "3419eb39ebe0cef62a4412ecce880106169d2499d70ba6ef531d8080fae71ccc"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/5/children/0",
+      "contentHash": "dfd6fe0e36891de44330695df373ac2b3c81c309eed57defba7dbbeb43f95cdb"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/5/children/1",
+      "contentHash": "ff573d7816511ef4e5a7b7b630954c2df607ecd9e45355fddd74872affd5d092"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/2",
+      "contentHash": "c121f028df8d61079ffa3e771aed7924c826e6c8998ecd9d4a8f8cd07a70fa42"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/2/children/0",
+      "contentHash": "1502f23628fcd25edc55c29bde1052596e3e9be10069653c03f5ca1af0685a5f"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/2/children/1",
+      "contentHash": "dcda0ec2f55d1d2a46d9b92e62a1bd22f8e3b94297106c40f2492463fce1c593"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/3",
+      "contentHash": "b67bcf88c2446a51c15debf387d3a17f0680ba7fe35036b1eba268e9a31f6f89"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/3/children/0",
+      "contentHash": "d8ab9db5ef2aee8dc2ff3c86b148c6b9d5ead827be278c27fa533c59f451c10f"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/3/children/1",
+      "contentHash": "d7e5945ffc33aa2abe05ec91168917fc470095010a7c0eddb4eb8a8f2ba32546"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/8",
+      "contentHash": "a405245433a665d640aa799edaa456f47b87e222736cdae9871f5922dbd82429"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/9",
+      "contentHash": "65ff653573e0b2add762b33c6b947178c7fa9075ca5cc24e8ccfe78256d3c9e3"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/10",
+      "contentHash": "f170eaa0f2850b417710fb000f492ef5db991a8b332419eae29e41f81876bf20"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/11",
+      "contentHash": "dad5ad94cdadcf1ed5bd260d0b3d8d02cc7a4c93c89ee3e3d7b72d414fd25fd4"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/12",
+      "contentHash": "e264f8f44e2eac12773253a36fdb49eb6eed90d2abd44bd44010ca25a864b45a"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/5",
+      "contentHash": "0a5abc4ce60bb6619375a59c2b51678fe710f3b189336976ff2c3491af6d060b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/0",
+      "contentHash": "010f8ca6a9ff488f92f7e81139d4503a472f9773a0dbf1f778828318be377e66"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1",
+      "contentHash": "077a611734ce349b251318b7f6153ae2520638fdb2832c2741f4f2e5f0d721f3"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/0",
+      "contentHash": "88afa5b2705b6720cbdc66ab7fb074043c29671453916d33eea25b79fe48fdbe"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/1",
+      "contentHash": "67c8b900ba309a17a77527e5984f16364db9b7768adf334557efce0a68b608dd"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/1/children/0",
+      "contentHash": "4c6d8fdadd87f742c490b48901b0d37ffe672d2e29bd1d06d21a723cd10cd751"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/1/children/1",
+      "contentHash": "384d0781f6e53f0d6ac3594521b5f0d1cb10eb754ee19e35525cb1382af9377d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/2",
+      "contentHash": "09b4b100b42b7fcd4c6b9d5378f65efb985312d749400329a43e2a5c2a9fcf3a"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/3",
+      "contentHash": "3d0979af2fe541af7118a4d0a1bf8bb07d54ecd1e2acaa8ca465f9e6a50e4e77"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/6",
+      "contentHash": "91cba2e9de7ce1805bf4d621e7e44780f2ed854f5c245de70a49ca2ffb31a4af"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/0",
+      "contentHash": "e9f2b1486694550b055db9a7c008d56a0daf0d9e6366e0793b6c793f012c20c8"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1",
+      "contentHash": "c50e7651d6151b5bb94b144679e5c9ae86f8e96bfacb416e74ccb290e03a1f49"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1/children/0",
+      "contentHash": "67fcec34efe8b8b41ff0986477cefb745214fcacbe593f5b8116427872491903"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1/children/1",
+      "contentHash": "1876d6ae626085537fdeecdd3091dae40ae0dbcb003f02d9b80f095684259b3c"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1/children/2",
+      "contentHash": "a28823be58ed3f24513d6e8a3bda99857b7fed071e5919e72b576564c75d55b6"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/7",
+      "contentHash": "ade7ae7c9347d7000d699d10e151e255e5822d53e494b187857f6a7956c5f91f"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/0",
+      "contentHash": "a99d69ec88667c2139ba3a5463d087c180c6267cb23bc8066aa4c1cc7d715c03"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1",
+      "contentHash": "121b99acccd0ab4adfc6073469c80471d1443f47c6980e1ca4640ab8ab6c957d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/0",
+      "contentHash": "08bd1f607347e3ca3bda5f529ac9289fece30362c1a9efd28b3f7964c0d6b604"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/1",
+      "contentHash": "1d6d735f4e2f0d38f59ca91efcbeb1fcfeb315578d04fb2c01a3aa5262b206f5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2",
+      "contentHash": "6d73899d19708606a09304b25b3e231a7421d78b2de36f04a74209640e0dd68d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2/children/0",
+      "contentHash": "4313a0d99ec9ff25154bfb6e3ff6cd9a451c4fe5097804129470faf5e874f475"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2/children/1",
+      "contentHash": "f9a0d6a443ff402fbbcf2d61f6f61aaf63ad9fcdccaff2b0c6a92cf58d2cf671"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2/children/2",
+      "contentHash": "254eb8b30566a0b2c70a03f492ee054e6c07b1f682e0d988a8339f2d4cf25ece"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/8",
+      "contentHash": "e37132d61594921e53d6c71bde34bff94cf2307552bd537965d16f36237a4cb8"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/0",
+      "contentHash": "90d8b3eb83d18d8cedb7f1da15b0fd95db9e7aff44dbba988ab34aa895215588"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1",
+      "contentHash": "cb26d75b830216172e72e097ad1dd94e33d3f6c65a328f911ebd7a21767addcb"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/0",
+      "contentHash": "e7210c67153111cb0d92dba35422841e7f3462e66053bb2c784eda684b5c6bb8"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/1",
+      "contentHash": "87107d9ed88c4363cb3965220670d3f22782ff492c6c70c856b55743f0b7a9e0"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/1/children/0",
+      "contentHash": "068b228412fe509651dbdbd3865a226dbc1a403efcc9a00946ea49c63298cd28"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/1/children/1",
+      "contentHash": "d59dc84e6568460e9b66c0e08772fa1daa1be49da06340c7dc1ae75588f8fdad"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/9",
+      "contentHash": "6e91c20a6b9765cbfd7cd877f2e24762d68d5e3ea5f4d91be9d9f4d95e32343d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/9/children/0",
+      "contentHash": "7606b44a566f56dbe5eba80acf7be0940f30cae7d70dfd6698520489f4b7c91e"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/9/children/1",
+      "contentHash": "1ad1eff098564898df66691e9422fd8b56c6febf45902db8536d57a87bf03384"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/9/children/1/children/0",
+      "contentHash": "1354e19f77578bb86812ea70ff652e5576cf062fed11245a5db42498a53923bb"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10",
+      "contentHash": "5ef20f92e21ebde60134c239a4f1276a4d3ff2bfb6d0938d18b4d91a6dab40df"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/0",
+      "contentHash": "81a2ba877f0457e4e8fc1fe2548c6aba10a254228047657e6edca14f539aa00a"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1",
+      "contentHash": "17c933e58791a0565a048e8517a45acd61c3a26db0d90e4025e89e5b99ca3478"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/0",
+      "contentHash": "7783982e7aee408a5502a132f377d9b24f88f845176b4bce18fde6e78c676a06"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1",
+      "contentHash": "dd528f0a93c8399a5da4c9988f38b2b09ff1654f502e8b5144afc38d64ceb609"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0",
+      "contentHash": "b43351bc5fff4746694ccc5cc82c0fec8a6a586422f4e399186c3ca0f8280e54"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0/children/0",
+      "contentHash": "72f41fc433983c9a447f0a336108c15f2931c4d5aa0226b8a3e5bd06554e81d2"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0/children/1",
+      "contentHash": "ea8ef538fe229842801ae280d0c9cbed7c1719681941cfb11b76255df1da835d"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0/children/2",
+      "contentHash": "2d136b685fd822b4e446657a647f523af4c1934619326a39b67a01c193507ec5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/1",
+      "contentHash": "7ba5d7aafef41b2a7efa7a24647728d1b1a8c2313e8ee230235b8f146f871bca"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/1/children/0",
+      "contentHash": "75d54038d79c0ce1842d0dc50e74bf91e07bdb03fa9098fb3b15029f515330e6"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/1/children/1",
+      "contentHash": "726b8eab080957dcb6da6a2aee7ab85615f95005f94569fdcca4aa40c1fc3e9b"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2",
+      "contentHash": "666359311256d8540beccc961f84f7221da07ccec17f23d529353cdfc70ef081"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2/children/0",
+      "contentHash": "63db5c052c19929ebd45d46ec3b3545029967397e1cdfa7f0b18b5009d81ea35"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2/children/1",
+      "contentHash": "e4016d0a119ee153605b0389ce59c6219ce94f0001f90de38a1abc78366a21c8"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2/children/2",
+      "contentHash": "8dc8e05e508e44f3930b7fd5a8f8612c7442cbfa87b4aa2cf3e0237e4bfcbe72"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/11",
+      "contentHash": "cc64978056c371fe7b24280610f095c8670974547bad92bf6345e366ac414fb5"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/1/children/0/children/11/children/0",
+      "contentHash": "fa4c0d361eac0808d3a01967a2f8174c49333019f1d12d6102ba58a9cd7fb3aa"
+    },
+    {
+      "id": "mentions-legales:/components/0/children/2",
+      "contentHash": "aaff3f3af46441fbc549cd2c8d6b3d6c68c4b26971c501f41b1a71b9e4f9e171"
+    }
+  ]
+}

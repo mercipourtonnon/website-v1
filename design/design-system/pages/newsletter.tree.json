@@ -1,0 +1,171 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "newsletter",
+  "nodes": [
+    {
+      "id": "newsletter:/components/0",
+      "type": "container",
+      "children": [
+        {
+          "id": "newsletter:/components/0/children/0",
+          "type": "container",
+          "children": [
+            {
+              "id": "newsletter:/components/0/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "align": {
+                  "value": "center"
+                },
+                "justify": {
+                  "value": "space-between"
+                }
+              },
+              "children": [
+                {
+                  "id": "newsletter:/components/0/children/0/children/0/children/0",
+                  "type": "link",
+                  "layout": {
+                    "align": {
+                      "value": "center"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "newsletter:/components/0/children/0/children/0/children/0/children/0",
+                      "type": "image",
+                      "layout": {
+                        "width": {
+                          "value": "auto"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "newsletter:/components/0/children/0/children/0/children/1",
+                  "type": "link",
+                  "layout": {
+                    "align": {
+                      "value": "center"
+                    },
+                    "gap": {
+                      "value": "0.25rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "newsletter:/components/0/children/0/children/0/children/1/children/0",
+                      "type": "icon",
+                      "layout": {
+                        "width": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "newsletter:/components/0/children/0/children/0/children/1/children/1",
+                      "type": "text",
+                      "content": "Retour au site",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "newsletter:/components/0/children/1",
+          "type": "container",
+          "layout": {
+            "align": {
+              "value": "center"
+            },
+            "justify": {
+              "value": "center"
+            }
+          },
+          "children": [
+            {
+              "id": "newsletter:/components/0/children/1/children/0",
+              "type": "container",
+              "layout": {
+                "width": {
+                  "value": "100%"
+                }
+              },
+              "children": [
+                {
+                  "id": "newsletter:/components/0/children/1/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "width": {
+                      "value": "100%"
+                    },
+                    "padding": {
+                      "value": "2rem"
+                    }
+                  },
+                  "responsive": {
+                    "sm": {
+                      "padding": {
+                        "value": "2.5rem"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "newsletter:/components/0/children/1/children/0/children/0/children/0",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "newsletter:/components/0/children/1/children/0/children/0/children/0/children/0",
+                          "type": "text",
+                          "content": "reste informé·e",
+                          "children": []
+                        },
+                        {
+                          "id": "newsletter:/components/0/children/1/children/0/children/0/children/0/children/1",
+                          "type": "text",
+                          "content": "Inscris-toi pour suivre nos actualités, nos prochains ateliers et nos ressources sur le consentement.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "newsletter:/components/0/children/1/children/0/children/0/children/1",
+                      "type": "container",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "newsletter:/components/0/children/2",
+          "type": "container",
+          "children": [
+            {
+              "id": "newsletter:/components/0/children/2/children/0",
+              "type": "link",
+              "content": "← Retour sur mercipourtonnon.fr",
+              "children": []
+            },
+            {
+              "id": "newsletter:/components/0/children/2/children/1",
+              "type": "text",
+              "content": "© 2026 Merci pour ton non. Tous droits réservés.",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

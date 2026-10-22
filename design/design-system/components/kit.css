@@ -259,10 +259,10 @@
     --color-bleu-fonce-50: #13007780;
     --color-bleu-fonce-70: #130077B3;
     --color-primary-fg: #FFFFFF;
-    --color-warning: #FFF8E6;
-    --color-warning-foreground: #130077;
-    --color-success: #E6F9F8;
-    --color-success-foreground: #130077;
+    --color-warning: #8F5200;
+    --color-warning-foreground: #FFFFFF;
+    --color-success: #0B6E6B;
+    --color-success-foreground: #FFFFFF;
     --font-title: Bely Display, Archivo Black, cursive;
     --font-title-transform: lowercase;
     --font-title-letter-spacing: 0.05em;
@@ -9509,8 +9509,8 @@
   --sv-primary-active: #0C004F;
   --primary-foreground: #FFFFFF;
   --sv-primary-subtle: #E6E0FF;
-  --sv-warning-solid: #FFF8E6;
-  --sv-success-solid: #E6F9F8;
+  --sv-warning-solid: #8F5200;
+  --sv-success-solid: #0B6E6B;
 }
 :is(html.dark, html[data-theme='dark'], .dark) {
   --primary: #130077;

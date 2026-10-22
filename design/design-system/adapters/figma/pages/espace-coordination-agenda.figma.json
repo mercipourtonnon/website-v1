@@ -1,0 +1,1058 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-coordination-agenda",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-coordination-agenda:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-coordination-agenda:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 32,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-coordination-agenda:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 4,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "agenda à gérer",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Crée un rendez-vous en brouillon, ajoute ses besoins, puis passe-le en « Publié » : il apparaît alors dans l'agenda des bénévoles.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-coordination-agenda:/components/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "rendez-vous",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "search-input",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/1/children/0",
+                                    "type": "search-input"
+                                  },
+                                  "layoutMode": "NONE",
+                                  "children": []
+                                },
+                                {
+                                  "name": "filter-bar",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/1/children/1",
+                                    "type": "filter-bar"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/1/children/2",
+                                    "type": "button"
+                                  },
+                                  "componentProperties": {
+                                    "variant": "outline",
+                                    "size": "sm"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "table",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/2",
+                                "type": "table"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": [
+                                {
+                                  "name": "header",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Titre",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Statut",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Type",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Début",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Fin",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Lieu",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Visio",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 1",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample title 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "draft",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Séance de réflexion",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample location 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "https://example.com",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 2",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample title 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "published",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Réunion mensuelle de l'équipe",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample location 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "https://example.com",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 3",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample title 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "cancelled",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Formation",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample location 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "https://example.com",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-coordination-agenda:/components/0/children/0/children/2",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/0",
+                                "type": "text"
+                              },
+                              "characters": "besoins",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Ce dont chaque rendez-vous a besoin (« Tenir le stand 14h–16h », « Apporter à manger »), avec le nombre de places. Les places restantes se calculent toutes seules.",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/2",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "search-input",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/2/children/0",
+                                    "type": "search-input"
+                                  },
+                                  "layoutMode": "NONE",
+                                  "children": []
+                                },
+                                {
+                                  "name": "filter-bar",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/2/children/1",
+                                    "type": "filter-bar"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/2/children/2",
+                                    "type": "button"
+                                  },
+                                  "componentProperties": {
+                                    "variant": "outline",
+                                    "size": "sm"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "table",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/3",
+                                "type": "table"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": [
+                                {
+                                  "name": "header",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Rendez-vous",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Besoin",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Description",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Places",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Inscrit·es",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Restantes",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Ordre",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 1",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample label 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample description 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "3",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 2",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample label 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample description 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "6",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "6",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 3",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample label 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample description 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "9",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "9",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-coordination-agenda:/components/0/children/0/children/3",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/0",
+                                "type": "text"
+                              },
+                              "characters": "qui vient à quoi",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "search-input",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/1/children/0",
+                                    "type": "search-input"
+                                  },
+                                  "layoutMode": "NONE",
+                                  "children": []
+                                },
+                                {
+                                  "name": "filter-bar",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/1/children/1",
+                                    "type": "filter-bar"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/1/children/2",
+                                    "type": "button"
+                                  },
+                                  "componentProperties": {
+                                    "variant": "outline",
+                                    "size": "sm"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "table",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/2",
+                                "type": "table"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": [
+                                {
+                                  "name": "header",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Rendez-vous",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Bénévole",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Besoin",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Commentaire",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Inscrit·e le",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 1",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample comment 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "2026-03-12T09:30:00.000Z",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 2",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample comment 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "2026-03-12T09:30:00.000Z",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 3",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample comment 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "2026-03-12T09:30:00.000Z",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-coordination-agenda:/components/0",
+      "contentHash": "05c1be1fec9e7681cb1baeedd86f55832360a668bee7d12593bf87b7f78f0101"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0",
+      "contentHash": "d6eea045e1bbcf8b567c543372fdb45541120a23907fdc8978202af0aa7a1669"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/0",
+      "contentHash": "b39d5c28e2674eb3f5a8bb3de306afe24e94e4dfb8e2b44e6da251972e63672f"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/0/children/0",
+      "contentHash": "93e509cd63b597af5a0bf649ed29d1d514e235405bd2d3357d9fb3fd3c7dad53"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/0/children/1",
+      "contentHash": "8220d984023e5c4fe5fa00a1a294e66ac8b68194403421b944681d641eea0394"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/1",
+      "contentHash": "742722b2b5f244e7f10c30f5bd9ac0b481b99bc3d19f37f712cd4b1664cc5889"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/0",
+      "contentHash": "55ee09957800da428153714a26813e9a554c08e0a9734ee11ddc708026d7a97c"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/1",
+      "contentHash": "48acf5cae5e1ebe93114d9fd040af17a8001d95bb14f828a0c4f146f5590603d"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/1/children/0",
+      "contentHash": "27e1f2660736636ef710e17577220786a03c90b3d06111931f34a6129a9c89de"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/1/children/1",
+      "contentHash": "4a588255484b0c25ec8b8a6ec86ce41caee6c6d912e6ba4cb4f93ce8eb32ece4"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/1/children/2",
+      "contentHash": "509c3c2c47383d465e07a68ac36455d22858e03fbbe803325dcb5f84dd81bf9a"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/1/children/2",
+      "contentHash": "d469ae59ad116727e4af152f7531061768a04780ccaed9e9cb768ddf3aa27277"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/2",
+      "contentHash": "bc3149af0bfe2586830920df4327266b5ffbabc1e6c4ae64b8f5dcf18d48ac18"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/0",
+      "contentHash": "65f08bbc085e84c8c51296d6f92b8cbe7ea5baf1b562d08506284a1bf3e4fb12"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/1",
+      "contentHash": "d058f3da7a5894875d765eae755fd3eadc5e696ead8c2e3e677185c9d5938afa"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/2",
+      "contentHash": "2054f42ff80eeebb11b1592b6db30d57fb4a90ff1efa42f5ec7c9febe59e1f72"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/2/children/0",
+      "contentHash": "ff82bdd5432266c425001f562562cbd9dd9594d6221482012c36b324c764f859"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/2/children/1",
+      "contentHash": "351cb51b1f5d25dba2ecb1413be3d47bf8586c3a8bec2b28352a18d2278d5676"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/2/children/2",
+      "contentHash": "a415ded8a7d00448f5a7508af94b019283f5297675e52014bc56424890cd0a5d"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/2/children/3",
+      "contentHash": "98104d88a0031d862db44098edcc251a17b949d52cd16d36418c4d42a517579d"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/3",
+      "contentHash": "72a5073d7c3568aecd6da7514494ce1e5412130ed9a5de08355f9b22aa763c1f"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/0",
+      "contentHash": "933b241971e1e4682de30df0263df3e60aa902e6338aaf20f8d6bc5ba21e6904"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/1",
+      "contentHash": "1e13a69959974668e2f25ae8b5548a31122513de2b60a7514ce87404e06dcb34"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/1/children/0",
+      "contentHash": "3f2831fbce03b1ae6ffd6b2ea119f3950a98ba6a549de719d0bd09542143e67c"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/1/children/1",
+      "contentHash": "728f60efbfd8329ccc44d3dbb365ddb02c81c0778a27a6bef0ae681a31ff1a2d"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/1/children/2",
+      "contentHash": "353f02e86c30e81fc0ce83040f885b5c721cafc1c887ba76bc9958c6c01249e1"
+    },
+    {
+      "id": "espace-coordination-agenda:/components/0/children/0/children/3/children/2",
+      "contentHash": "8c10d0dbe1ea73f9d1944e078ad80799e61c2af9451ef66b04a695c8287a64a3"
+    }
+  ]
+}

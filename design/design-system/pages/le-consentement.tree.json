@@ -1,0 +1,1262 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "le-consentement",
+  "nodes": [
+    {
+      "id": "le-consentement:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    },
+    {
+      "id": "le-consentement:/components/1",
+      "type": "container",
+      "children": [
+        {
+          "id": "le-consentement:/components/1/children/0",
+          "type": "container",
+          "children": [
+            {
+              "id": "le-consentement:/components/1/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "le-consentement:/components/1/children/0/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "le-consentement:/components/1/children/0/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Notre vision · Atelier niveau 1",
+                      "children": []
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/0/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "notre vision du consentement",
+                      "children": []
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/0/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "En atelier, on partage des notions qui changent la façon de demander, de dire non et d'accueillir le non des autres. On les met ici en libre accès, parce que le consentement ne devrait jamais dépendre d'un ticket d'entrée : relis-les à ton rythme, partage-les, discutes-en autour de toi. Elles ne remplacent pas le fait de s'entraîner ensemble, mais elles t'en ouvrent la porte.",
+                      "children": []
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/0/children/0/children/0/children/3",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "le-consentement:/components/1/children/0/children/0/children/0/children/3/children/0",
+                          "type": "link",
+                          "content": "Voir les ressources",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "le-consentement:/components/1/children/0/children/0/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "le-consentement:/components/1/children/0/children/0/children/1/children/0",
+                      "type": "image",
+                      "variant": "hero",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "le-consentement:/components/1/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "le-consentement:/components/1/children/1/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "le-consentement:/components/1/children/1/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "padding": {
+                      "value": "1.25rem"
+                    },
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "responsive": {
+                    "lg": {
+                      "padding": {
+                        "value": "0rem"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "le-consentement:/components/1/children/1/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Sur cette page",
+                      "children": []
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/1/children/0/children/0/children/1",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.25rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/0/children/1/children/0",
+                          "type": "link",
+                          "content": "Deux définitions",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/0/children/1/children/1",
+                          "type": "link",
+                          "content": "RÈGLES, six lettres",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/0/children/1/children/2",
+                          "type": "link",
+                          "content": "Dire non, remercier le non",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/0/children/1/children/3",
+                          "type": "link",
+                          "content": "Changer d'avis",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/0/children/1/children/4",
+                          "type": "link",
+                          "content": "Les biais",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "le-consentement:/components/1/children/1/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "content": "deux définitions",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/1",
+                          "type": "text",
+                          "content": "Le dictionnaire et la loi ne disent pas la même chose — et l'écart est parlant.",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            },
+                            "align": {
+                              "value": "start"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/0",
+                              "type": "container",
+                              "layout": {
+                                "padding": {
+                                  "value": "1.5rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/0/children/0",
+                                  "type": "text",
+                                  "content": "le dictionnaire",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/0/children/1",
+                                  "type": "text",
+                                  "content": "« Action de donner son accord à une action, un projet ; acquiescement, approbation, assentiment. »",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/0/children/2",
+                                  "type": "text",
+                                  "content": "Larousse. Une définition courte, qui dit peu de ce que demande un vrai oui.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1",
+                              "type": "container",
+                              "layout": {
+                                "padding": {
+                                  "value": "1.5rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1/children/0",
+                                  "type": "text",
+                                  "content": "la loi",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1/children/1",
+                                  "type": "text",
+                                  "content": "Depuis la loi du 6 novembre 2025, le Code pénal (article 222-22) définit l'agression sexuelle à partir du non-consentement.",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1/children/2",
+                                  "type": "text",
+                                  "content": "« Constitue une agression sexuelle tout acte sexuel non consenti commis sur la personne d'autrui ou sur la personne de l'auteur. »",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1/children/3",
+                                  "type": "text",
+                                  "content": "« Le consentement est libre et éclairé, spécifique, préalable et révocable. Il est apprécié au regard des circonstances. Il ne peut être déduit du seul silence ou de la seule absence de réaction de la victime. »",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1/children/4",
+                                  "type": "text",
+                                  "content": "« Il n'y a pas de consentement si l'acte à caractère sexuel est commis avec violence, contrainte, menace ou surprise, quelle que soit leur nature. »",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1/children/5",
+                                  "type": "text",
+                                  "content": "Concrètement : quelqu'un d'endormi·e, d'inconscient·e, sous emprise ou en état de sidération ne consent pas.",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1/children/6",
+                                  "type": "link",
+                                  "layout": {
+                                    "align": {
+                                      "value": "center"
+                                    },
+                                    "gap": {
+                                      "value": "0.375rem"
+                                    }
+                                  },
+                                  "children": [
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1/children/6/children/0",
+                                      "type": "text",
+                                      "content": "Lire l'article 222-22 sur Légifrance",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/0/children/2/children/1/children/6/children/1",
+                                      "type": "icon",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/0/children/0",
+                              "type": "text",
+                              "content": "six lettres pour s'en souvenir : ",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/0/children/1",
+                              "type": "text",
+                              "content": "RÈGLES",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "L'acronyme qu'on te propose pour vérifier qu'un oui en est vraiment un.",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/2",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/2/children/0",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/2/children/1",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/2/children/2",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/2/children/3",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/2/children/4",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/2/children/5",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/3",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/3/children/0",
+                              "type": "container",
+                              "layout": {
+                                "padding": {
+                                  "value": "1.5rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                },
+                                "gap": {
+                                  "value": "1rem"
+                                }
+                              },
+                              "responsive": {
+                                "md": {
+                                  "padding": {
+                                    "value": "2rem"
+                                  }
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/3/children/0/children/0",
+                                  "type": "text",
+                                  "content": "entre le oui et le non, tout un spectre",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/3/children/0/children/1",
+                                  "type": "text",
+                                  "content": "« Je ne sais pas trop si je vais aimer, mais j'ai envie d'essayer » ou « ça me fait un peu peur, mais je me sens assez en sécurité pour oser » ne ressemblent pas à « je ne me sens pas assez en sécurité pour dire non », « j'ai peur des conséquences si je dis non » ou « d'habitude j'aime bien, donc aujourd'hui je suis censé·e aimer aussi ».",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/3/children/0/children/2",
+                                  "type": "text",
+                                  "content": "Attention aussi à l'injonction à la joie — l'enthousiasme ne se force pas.",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/3/children/0/children/3",
+                                  "type": "text",
+                                  "content": "D'autres acronymes disent la même chose autrement : RÉELS, RELIÉS, CALIBRES, PALIERS.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/3/children/1",
+                              "type": "container",
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/1/children/3/children/1/children/0",
+                                  "type": "image",
+                                  "layout": {
+                                    "width": {
+                                      "value": "100%"
+                                    }
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/0",
+                          "type": "text",
+                          "content": "dire non, remercier le non",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/1",
+                          "type": "text",
+                          "content": "Culturellement, on vit souvent mal le fait de recevoir un non, et on peut avoir du mal à en dire un. Pourtant, un non peut être joyeux — il ouvre une relation plus franche et plus transparente, où chacun·e pose ses limites et laisse à l'autre la possibilité de poser les siennes.",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/2",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/2/children/0",
+                              "type": "container",
+                              "layout": {
+                                "padding": {
+                                  "value": "1.5rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/2/children/0/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/2/children/0/children/1",
+                                  "type": "text",
+                                  "content": "poser son non",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/2/children/0/children/2",
+                                  "type": "text",
+                                  "content": "Pas besoin de faire l'anguille. Pose ton non franchement, sans en avoir peur — tu es légitime à refuser. Tu peux te justifier si tu en as envie, mais garde ton refus clair.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/2/children/1",
+                              "type": "container",
+                              "layout": {
+                                "padding": {
+                                  "value": "1.5rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/2/children/1/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/2/children/1/children/1",
+                                  "type": "text",
+                                  "content": "remercier le non",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/2/children/1/children/2",
+                                  "type": "text",
+                                  "content": "Dire merci à un non, c'est encourager l'autre à en redire, et montrer que tu l'as écouté·e et accueilli·e. Une preuve d'empathie visible, et un soin porté à la relation. Et quand quelqu'un te demande ton consentement avant d'agir, tu peux l'en remercier aussi.",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/3",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "start"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            },
+                            "padding": {
+                              "value": "1.25rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/3/children/0",
+                              "type": "icon",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/3/children/1",
+                              "type": "text",
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/3/children/1/children/0",
+                                  "type": "text",
+                                  "content": "Une phrase pour demander : ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/2/children/3/children/1/children/1",
+                                  "type": "text",
+                                  "content": "« Tu peux me dire non, et je voulais te demander… »",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/0",
+                          "type": "text",
+                          "content": "changer d'avis, c'est OK",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/1",
+                          "type": "text",
+                          "content": "Le consentement est révocable. Avant de répondre, et après, prends le temps de te sonder. Retirer un oui déjà donné peut réveiller des tensions ou des automatismes — culpabilité, frustration, peur de blesser — qui rendent plus difficile de revenir sur sa décision, ou d'accueillir le changement d'avis de l'autre.",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0",
+                              "type": "container",
+                              "layout": {
+                                "padding": {
+                                  "value": "1.5rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/0",
+                                  "type": "text",
+                                  "content": "quand c'est toi qui changes d'avis",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1",
+                                  "type": "container",
+                                  "layout": {
+                                    "direction": {
+                                      "value": "column"
+                                    },
+                                    "gap": {
+                                      "value": "0.5rem"
+                                    }
+                                  },
+                                  "children": [
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1/children/0",
+                                      "type": "container",
+                                      "layout": {
+                                        "align": {
+                                          "value": "start"
+                                        },
+                                        "gap": {
+                                          "value": "0.5rem"
+                                        }
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1/children/0/children/0",
+                                          "type": "icon",
+                                          "children": []
+                                        },
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1/children/0/children/1",
+                                          "type": "text",
+                                          "content": "Ce n'est pas une trahison, c'est un ajustement à toi.",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1/children/1",
+                                      "type": "container",
+                                      "layout": {
+                                        "align": {
+                                          "value": "start"
+                                        },
+                                        "gap": {
+                                          "value": "0.5rem"
+                                        }
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1/children/1/children/0",
+                                          "type": "icon",
+                                          "children": []
+                                        },
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1/children/1/children/1",
+                                          "type": "text",
+                                          "content": "C'est OK de temporiser.",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1/children/2",
+                                      "type": "container",
+                                      "layout": {
+                                        "align": {
+                                          "value": "start"
+                                        },
+                                        "gap": {
+                                          "value": "0.5rem"
+                                        }
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1/children/2/children/0",
+                                          "type": "icon",
+                                          "children": []
+                                        },
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/0/children/1/children/2/children/1",
+                                          "type": "text",
+                                          "content": "Tu n'as pas à te justifier si on te demande pourquoi.",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1",
+                              "type": "container",
+                              "layout": {
+                                "padding": {
+                                  "value": "1.5rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/0",
+                                  "type": "text",
+                                  "content": "quand c'est l'autre qui change d'avis",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1",
+                                  "type": "container",
+                                  "layout": {
+                                    "direction": {
+                                      "value": "column"
+                                    },
+                                    "gap": {
+                                      "value": "0.5rem"
+                                    }
+                                  },
+                                  "children": [
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1/children/0",
+                                      "type": "container",
+                                      "layout": {
+                                        "align": {
+                                          "value": "start"
+                                        },
+                                        "gap": {
+                                          "value": "0.5rem"
+                                        }
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1/children/0/children/0",
+                                          "type": "icon",
+                                          "children": []
+                                        },
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1/children/0/children/1",
+                                          "type": "text",
+                                          "content": "Accueillir un retrait n'est pas un rejet personnel : c'est respecter la relation.",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1/children/1",
+                                      "type": "container",
+                                      "layout": {
+                                        "align": {
+                                          "value": "start"
+                                        },
+                                        "gap": {
+                                          "value": "0.5rem"
+                                        }
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1/children/1/children/0",
+                                          "type": "icon",
+                                          "children": []
+                                        },
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1/children/1/children/1",
+                                          "type": "text",
+                                          "content": "Il y a sans doute des raisons que tu ne connais pas.",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1/children/2",
+                                      "type": "container",
+                                      "layout": {
+                                        "align": {
+                                          "value": "start"
+                                        },
+                                        "gap": {
+                                          "value": "0.5rem"
+                                        }
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1/children/2/children/0",
+                                          "type": "icon",
+                                          "children": []
+                                        },
+                                        {
+                                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/2/children/1/children/1/children/2/children/1",
+                                          "type": "text",
+                                          "content": "Tu peux demander « pourquoi as-tu changé d'avis ? » — et l'autre peut choisir de ne pas répondre.",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/3",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "start"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            },
+                            "padding": {
+                              "value": "1.25rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/3/children/0",
+                              "type": "icon",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/3/children/1",
+                              "type": "container",
+                              "layout": {
+                                "direction": {
+                                  "value": "column"
+                                },
+                                "gap": {
+                                  "value": "0.25rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/3/children/1/children/0",
+                                  "type": "text",
+                                  "content": "Des phrases pour revenir sur un oui :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/3/children/1/children/1",
+                                  "type": "text",
+                                  "content": "« En prenant du recul, j'ai décidé que… »",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/3/children/1/children/2",
+                                  "type": "text",
+                                  "content": "« En y réfléchissant mieux, je vais… »",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/3/children/3/children/1/children/3",
+                                  "type": "text",
+                                  "content": "« Finalement, j'ai changé d'avis… »",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/0",
+                          "type": "text",
+                          "content": "les biais qui nous poussent à dire oui",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1/children/0",
+                              "type": "container",
+                              "layout": {
+                                "direction": {
+                                  "value": "column"
+                                },
+                                "gap": {
+                                  "value": "1rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1/children/0/children/0",
+                                  "type": "text",
+                                  "content": "Des biais cognitifs, liés au fonctionnement automatique de notre cerveau, des dynamiques affectives et des structures sociales, éducatives ou économiques réduisent notre marge de manœuvre pour dire un vrai non.",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1/children/0/children/1",
+                                  "type": "text",
+                                  "content": "S'en libérer complètement est impossible ; les connaître aide déjà à les repérer et à faire avec. Et tout ne dépend pas de nous individuellement — la société, et même notre biologie, ont leur part dans les défauts et les bris de consentement.",
+                                  "children": []
+                                },
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1/children/0/children/2",
+                                  "type": "text",
+                                  "children": [
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1/children/0/children/2/children/0",
+                                      "type": "text",
+                                      "content": "« Libre », c'est un bien grand mot. Disons déjà : ",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1/children/0/children/2/children/1",
+                                      "type": "text",
+                                      "content": "sans pression, menaces, intimidation ni chantage",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1/children/0/children/2/children/2",
+                                      "type": "text",
+                                      "content": " — et avec une meilleure conscience des biais, des dynamiques et des structures en jeu.",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1/children/1",
+                              "type": "container",
+                              "children": [
+                                {
+                                  "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/1/children/1/children/0",
+                                  "type": "image",
+                                  "layout": {
+                                    "width": {
+                                      "value": "100%"
+                                    }
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/2",
+                          "type": "text",
+                          "content": "Six exemples, parmi tous ceux qu'on explore en atelier.",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/3",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/3/children/0",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/3/children/1",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/3/children/2",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/3/children/3",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/3/children/4",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "le-consentement:/components/1/children/1/children/0/children/1/children/4/children/3/children/5",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "le-consentement:/components/1/children/2",
+          "type": "container",
+          "children": [
+            {
+              "id": "le-consentement:/components/1/children/2/children/0",
+              "type": "container",
+              "layout": {
+                "padding": {
+                  "value": "2rem"
+                },
+                "gap": {
+                  "value": "2rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "responsive": {
+                "md": {
+                  "padding": {
+                    "value": "3rem"
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "le-consentement:/components/1/children/2/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "le-consentement:/components/1/children/2/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "envie d'aller plus loin ?",
+                      "children": []
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/2/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "Ces notions prennent tout leur sens quand on les pratique ensemble, dans un cadre bienveillant. Rejoins-nous pour 3 heures d'atelier, gratuites, à Strasbourg.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "le-consentement:/components/1/children/2/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "responsive": {
+                    "md": {
+                      "align": {
+                        "value": "end"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "le-consentement:/components/1/children/2/children/0/children/1/children/0",
+                      "type": "link",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "justify": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "le-consentement:/components/1/children/2/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "content": "Je réserve ma place",
+                          "children": []
+                        },
+                        {
+                          "id": "le-consentement:/components/1/children/2/children/0/children/1/children/0/children/1",
+                          "type": "icon",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "le-consentement:/components/1/children/2/children/0/children/1/children/1",
+                      "type": "link",
+                      "content": "Voir ce qu'on pratique en atelier",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "le-consentement:/components/2",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    }
+  ]
+}

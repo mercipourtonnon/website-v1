@@ -1,0 +1,839 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "devenir-benevole",
+  "nodes": [
+    {
+      "id": "devenir-benevole:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    },
+    {
+      "id": "devenir-benevole:/components/1",
+      "type": "container",
+      "children": [
+        {
+          "id": "devenir-benevole:/components/1/children/0",
+          "type": "container",
+          "children": [
+            {
+              "id": "devenir-benevole:/components/1/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "devenir-benevole:/components/1/children/0/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/0/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "S'engager",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/0/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "rejoindre l'équipe bénévole",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/0/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Un collectif engagé, une formation, un rythme que tu choisis et des rôles que tu consens. Pas de contribution exigée par défaut : chacun·e donne le temps qu'iel a envie de donner, quand iel en a l'espace.",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/0/children/0/children/0/children/3",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "responsive": {
+                        "sm": {
+                          "direction": {
+                            "value": "row"
+                          },
+                          "align": {
+                            "value": "center"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/0/children/0/children/0/children/3/children/0",
+                          "type": "link",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "devenir-benevole:/components/1/children/0/children/0/children/0/children/3/children/0/children/0",
+                              "type": "text",
+                              "content": "Créer mon compte bénévole",
+                              "children": []
+                            },
+                            {
+                              "id": "devenir-benevole:/components/1/children/0/children/0/children/0/children/3/children/0/children/1",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/0/children/0/children/0/children/3/children/1",
+                          "type": "link",
+                          "content": "Qui sont les bénévoles ?",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "devenir-benevole:/components/1/children/0/children/0/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/0/children/0/children/1/children/0",
+                      "type": "image",
+                      "variant": "hero",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "devenir-benevole:/components/1/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "devenir-benevole:/components/1/children/1/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "devenir-benevole:/components/1/children/1/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/1/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Concrètement",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/1/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "ce que tu trouves",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "devenir-benevole:/components/1/children/1/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/1/children/0/children/1/children/0",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/1/children/0/children/1/children/1",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/1/children/0/children/1/children/2",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "devenir-benevole:/components/1/children/2",
+          "type": "container",
+          "children": [
+            {
+              "id": "devenir-benevole:/components/1/children/2/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "devenir-benevole:/components/1/children/2/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/2/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Étape par étape",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/2/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "le parcours",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/2/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Personne ne commence facilitateur·ice. On avance à son rythme, et chaque étape est déjà une façon de contribuer.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "devenir-benevole:/components/1/children/2/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/0",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "1",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/0/children/1",
+                          "type": "text",
+                          "content": "participant·e",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/0/children/2",
+                          "type": "text",
+                          "content": "Tu viens à un atelier.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "2",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "bénévole",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/1/children/2",
+                          "type": "text",
+                          "content": "Tu crées ton compte, tu remplis ta fiche, la coordination t'ouvre l'espace bénévole. Tu rejoins les stands, la communication, la logistique…",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/2",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/2/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "3",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/2/children/1",
+                          "type": "text",
+                          "content": "facilitateur·ice",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/2/children/0/children/1/children/2/children/2",
+                          "type": "text",
+                          "content": "Après la formation interne et des co-animations, tu animes à ton tour, rémunéré·e sur les interventions commandées, bénévole sur les ateliers grand public.",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "devenir-benevole:/components/1/children/3",
+          "type": "container",
+          "children": [
+            {
+              "id": "devenir-benevole:/components/1/children/3/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "2rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "devenir-benevole:/components/1/children/3/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Les rôles",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "les rôles ouverts",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Chaque rôle a une raison d'être et des redevabilités écrites. Deux cherchent quelqu'un en ce moment.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "devenir-benevole:/components/1/children/3/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/0",
+                      "type": "container",
+                      "content": "Gardien·ne (direction collégiale)",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/1",
+                      "type": "container",
+                      "content": "Facilitateur·rice",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/2",
+                      "type": "container",
+                      "content": "Communication",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/3",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/3/children/0",
+                          "type": "text",
+                          "content": "Logisticien·ne",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/3/children/1",
+                          "type": "text",
+                          "content": "ouvert",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/4",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/4/children/0",
+                          "type": "text",
+                          "content": "Trésorerie",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/4/children/1",
+                          "type": "text",
+                          "content": "ouvert",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/5",
+                      "type": "container",
+                      "content": "Contributeur·ice polyvalent·e",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/3/children/0/children/1/children/6",
+                      "type": "container",
+                      "content": "Abeille (coups de main)",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "devenir-benevole:/components/1/children/4",
+          "type": "container",
+          "children": [
+            {
+              "id": "devenir-benevole:/components/1/children/4/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "start"
+                }
+              },
+              "children": [
+                {
+                  "id": "devenir-benevole:/components/1/children/4/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/4/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Deux minutes",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/4/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "créer mon compte bénévole",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/4/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Crée ton compte, puis remplis ta fiche bénévole. Elle sera visible par les autres bénévoles de Merci pour ton non et contient ce qu'il faut pour mieux se connaître. La coordination la relit et t'ouvre l'espace bénévole.",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/4/children/0/children/0/children/3",
+                      "type": "text",
+                      "content": "Ton email et ton téléphone restent réservés à la coordination. En créant ton compte, tu acceptes qu'ils servent à t'inviter dans notre communauté WhatsApp.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "devenir-benevole:/components/1/children/4/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    },
+                    "padding": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "responsive": {
+                    "md": {
+                      "padding": {
+                        "value": "2rem"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/4/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/4/children/0/children/1/children/0/children/0",
+                          "type": "form",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/4/children/0/children/1/children/0/children/1",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "0.25rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "devenir-benevole:/components/1/children/4/children/0/children/1/children/0/children/1/children/0",
+                              "type": "text",
+                              "content": "Déjà un compte ?",
+                              "children": []
+                            },
+                            {
+                              "id": "devenir-benevole:/components/1/children/4/children/0/children/1/children/0/children/1/children/1",
+                              "type": "link",
+                              "content": "Me connecter",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/4/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/4/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "content": "sur invitation pour l'instant",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/4/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "Les inscriptions se font pour l'instant sur invitation. Écris-nous à mercipourtonnon@gmail.com, on t'envoie un lien pour créer ton compte.",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/4/children/0/children/1/children/1/children/2",
+                          "type": "link",
+                          "content": "J'ai déjà un compte",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "devenir-benevole:/components/1/children/5",
+          "type": "container",
+          "children": [
+            {
+              "id": "devenir-benevole:/components/1/children/5/children/0",
+              "type": "container",
+              "layout": {
+                "padding": {
+                  "value": "2rem"
+                },
+                "gap": {
+                  "value": "2rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "responsive": {
+                "md": {
+                  "padding": {
+                    "value": "3rem"
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "devenir-benevole:/components/1/children/5/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/5/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "tu préfères soutenir sans t'engager ?",
+                      "children": []
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/5/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "Adhérer te donne une voix à l'assemblée générale ; un don finance les ateliers gratuits. Les deux ouvrent droit à un reçu fiscal.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "devenir-benevole:/components/1/children/5/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "responsive": {
+                    "sm": {
+                      "direction": {
+                        "value": "row"
+                      }
+                    },
+                    "md": {
+                      "direction": {
+                        "value": "column"
+                      },
+                      "align": {
+                        "value": "end"
+                      }
+                    },
+                    "lg": {
+                      "direction": {
+                        "value": "row"
+                      },
+                      "justify": {
+                        "value": "end"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "devenir-benevole:/components/1/children/5/children/0/children/1/children/0",
+                      "type": "link",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "justify": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/5/children/0/children/1/children/0/children/0",
+                          "type": "icon",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/5/children/0/children/1/children/0/children/1",
+                          "type": "text",
+                          "content": "Adhérer",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "devenir-benevole:/components/1/children/5/children/0/children/1/children/1",
+                      "type": "link",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "justify": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "devenir-benevole:/components/1/children/5/children/0/children/1/children/1/children/0",
+                          "type": "icon",
+                          "children": []
+                        },
+                        {
+                          "id": "devenir-benevole:/components/1/children/5/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "Faire un don",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devenir-benevole:/components/2",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    }
+  ]
+}

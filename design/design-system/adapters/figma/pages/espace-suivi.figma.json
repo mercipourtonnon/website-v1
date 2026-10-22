@@ -1,0 +1,853 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-suivi",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-suivi:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-suivi:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 32,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 4,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi:/components/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "suivi des ateliers",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi:/components/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Qui est inscrit·e, qui est venu·e, et le prix libre de chaque date. Le jour J, ouvre le suivi de ta date pour pointer les présences.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi:/components/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi:/components/0/children/0/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "en chiffres",
+                              "children": []
+                            },
+                            {
+                              "name": "grid",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi:/components/0/children/0/children/1/children/1",
+                                "type": "grid"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 12,
+                              "children": [
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi:/components/0/children/0/children/1/children/1/children/0",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi:/components/0/children/0/children/1/children/1/children/1",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi:/components/0/children/0/children/1/children/1/children/2",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi:/components/0/children/0/children/1/children/1/children/3",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi:/components/0/children/0/children/2",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi:/components/0/children/0/children/2/children/0",
+                                "type": "text"
+                              },
+                              "characters": "les dates",
+                              "children": []
+                            },
+                            {
+                              "name": "tabs",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi:/components/0/children/0/children/2/children/1",
+                                "type": "tabs"
+                              },
+                              "children": [
+                                {
+                                  "name": "table",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi:/components/0/children/0/children/2/children/1/children/0",
+                                    "type": "table"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": [
+                                    {
+                                      "name": "header",
+                                      "nodeType": "FRAME",
+                                      "layoutMode": "HORIZONTAL",
+                                      "children": [
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Date",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Heure",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Facilitation",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Inscrit·es",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Places",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Présent·es",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "En ligne",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Sur place",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Total",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "row 1",
+                                      "nodeType": "FRAME",
+                                      "layoutMode": "HORIZONTAL",
+                                      "children": [
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "2026-03-12",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Sample time label 1",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "3",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "row 2",
+                                      "nodeType": "FRAME",
+                                      "layoutMode": "HORIZONTAL",
+                                      "children": [
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "2026-03-12",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Sample time label 2",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "6",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "row 3",
+                                      "nodeType": "FRAME",
+                                      "layoutMode": "HORIZONTAL",
+                                      "children": [
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "2026-03-12",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Sample time label 3",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "9",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "table",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi:/components/0/children/0/children/2/children/1/children/1",
+                                    "type": "table"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": [
+                                    {
+                                      "name": "header",
+                                      "nodeType": "FRAME",
+                                      "layoutMode": "HORIZONTAL",
+                                      "children": [
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Date",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Heure",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Facilitation",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Inscrit·es",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Places",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Présent·es",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "En ligne",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Sur place",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Total",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "row 1",
+                                      "nodeType": "FRAME",
+                                      "layoutMode": "HORIZONTAL",
+                                      "children": [
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "2026-03-12",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Sample time label 1",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "3",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "row 2",
+                                      "nodeType": "FRAME",
+                                      "layoutMode": "HORIZONTAL",
+                                      "children": [
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "2026-03-12",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Sample time label 2",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "6",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "row 3",
+                                      "nodeType": "FRAME",
+                                      "layoutMode": "HORIZONTAL",
+                                      "children": [
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "2026-03-12",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "Sample time label 3",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "9",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "cell",
+                                          "nodeType": "TEXT",
+                                          "characters": "",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-suivi:/components/0",
+      "contentHash": "d4c0229d866c446dfcde3c9e3daf0d971afa196a069d0c65e84177f133c79c10"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0",
+      "contentHash": "aa4a5893a0e5be854def0b9962e5a08562954022514383f4b540bbcdaf1d5391"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/0",
+      "contentHash": "de7ad6ebc83cefc12ee3e3d728a2386d610862116cc92452f934806dbbd6bcfd"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/0/children/0",
+      "contentHash": "7ab065a56ad187fdabcca79c14991b82c3a0eb00728c1512af63caf4cbd66fe5"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/0/children/1",
+      "contentHash": "e15396486d9dec668c0583bf4287b6c8a5a8dfd6b7eb263352a13a5a3524185b"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/1",
+      "contentHash": "44066e533a763427dcb6045d01defb0abbd42f7e668bd7191713f6949b74fbc6"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/1/children/0",
+      "contentHash": "1288f542e4006975cc2e3835636a98ae1800ccec965da6c7e2842fd9461b0eac"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/1/children/1",
+      "contentHash": "a285fd04b37baa2d9ee3af8b31eb764762d756f2723b80a0c10ad8d91e28af51"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/1/children/1/children/0",
+      "contentHash": "816964f8a1e62a3f360a9ee2a1d523f699f544048f4020cb7d9d1e9a53bae705"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/1/children/1/children/1",
+      "contentHash": "90f9d204d651dd6d55963a1924b8851591d638ac402093768d04306c8fb54b9a"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/1/children/1/children/2",
+      "contentHash": "ecca02373c3a25b499cd7c154e1954b77fa83cad29dd6b3d6d2d446e03a4751d"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/1/children/1/children/3",
+      "contentHash": "85f23461c43aa8fbce87a061037f1cac61694ee851d4717a0705e2416963dff3"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/2",
+      "contentHash": "0c4440c912a10ee786eb247f4162305e8ac2cc1a33be558f77a67ca1ebbc2369"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/2/children/0",
+      "contentHash": "54134b72f0936c064a1fd47e1e904237a090ef1f43a75c927c4b22c3f559bc87"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/2/children/1",
+      "contentHash": "a7d6e5f17f7f49d5ef07b0133df411463976ef0aba76a41ae640e31635fe5d9e"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/2/children/1/children/0",
+      "contentHash": "ec7029d47422daabb518855d71dbd1970ddfbf217176d5715bf047b79507096b"
+    },
+    {
+      "id": "espace-suivi:/components/0/children/0/children/2/children/1/children/1",
+      "contentHash": "53a220b64e48bb8d7e1cac4545f6b2fc5dfc387a3c5f7fa29386b14917778e92"
+    }
+  ]
+}

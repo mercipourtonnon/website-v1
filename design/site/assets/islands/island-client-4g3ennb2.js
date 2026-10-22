@@ -1,0 +1,2 @@
+import{ue}from"./island-client-spke4qqd.js";import{_o}from"./island-client-8t1zsg02.js";import{ke}from"./island-client-hsc1eb5s.js";import{r,n}from"./island-client-8zpysdkq.js";n();function Wc(i={}){let{highlightItemOnHover:m,highlightedIndex:c,onHighlightedIndexChange:u}=_o(),{ref:d,index:t}=ke(i),o=c===t,s=r(null),f=ue(d,s);return{compositeProps:{tabIndex:o?0:-1,onFocus(){u(t)},onMouseMove(){let e=s.current;if(!m||!e)return;let p=e.hasAttribute("disabled")||e.ariaDisabled==="true";if(!o&&!p)e.focus()}},compositeRef:f,index:t}}
+export{Wc};

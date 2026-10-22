@@ -1,0 +1,503 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "newsletter",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "newsletter:/components/0",
+            "type": "container"
+          },
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "newsletter:/components/0/children/0",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "newsletter:/components/0/children/0/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "primaryAxisAlignItems": "SPACE_BETWEEN",
+                  "counterAxisAlignItems": "CENTER",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "newsletter:/components/0/children/0/children/0/children/0",
+                        "type": "link"
+                      },
+                      "layoutMode": "NONE",
+                      "counterAxisAlignItems": "CENTER",
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/0/children/0/children/0/children/0",
+                            "type": "image"
+                          },
+                          "layoutMode": "NONE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "newsletter:/components/0/children/0/children/0/children/1",
+                        "type": "link"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 4,
+                      "counterAxisAlignItems": "CENTER",
+                      "children": [
+                        {
+                          "name": "icon",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/0/children/0/children/1/children/0",
+                            "type": "icon"
+                          },
+                          "layoutMode": "NONE",
+                          "width": 16,
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/0/children/0/children/1/children/1",
+                            "type": "text"
+                          },
+                          "characters": "Retour au site",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "newsletter:/components/0/children/1",
+                "type": "container"
+              },
+              "layoutMode": "NONE",
+              "primaryAxisAlignItems": "CENTER",
+              "counterAxisAlignItems": "CENTER",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "newsletter:/components/0/children/1/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "newsletter:/components/0/children/1/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "paddingTop": 32,
+                      "paddingRight": 32,
+                      "paddingBottom": 32,
+                      "paddingLeft": 32,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/1/children/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "newsletter:/components/0/children/1/children/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "reste informé·e",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "newsletter:/components/0/children/1/children/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Inscris-toi pour suivre nos actualités, nos prochains ateliers et nos ressources sur le consentement.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/1/children/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "newsletter:/components/0/children/2",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "INSTANCE",
+                  "sovrium": {
+                    "id": "newsletter:/components/0/children/2/children/0",
+                    "type": "link"
+                  },
+                  "children": [
+                    {
+                      "name": "label",
+                      "nodeType": "TEXT",
+                      "characters": "← Retour sur mercipourtonnon.fr",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "text",
+                  "nodeType": "TEXT",
+                  "sovrium": {
+                    "id": "newsletter:/components/0/children/2/children/1",
+                    "type": "text"
+                  },
+                  "characters": "© 2026 Merci pour ton non. Tous droits réservés.",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "breakpoint": "sm",
+      "width": 640,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "newsletter:/components/0",
+            "type": "container"
+          },
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "newsletter:/components/0/children/0",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "newsletter:/components/0/children/0/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "primaryAxisAlignItems": "SPACE_BETWEEN",
+                  "counterAxisAlignItems": "CENTER",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "newsletter:/components/0/children/0/children/0/children/0",
+                        "type": "link"
+                      },
+                      "layoutMode": "NONE",
+                      "counterAxisAlignItems": "CENTER",
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/0/children/0/children/0/children/0",
+                            "type": "image"
+                          },
+                          "layoutMode": "NONE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "newsletter:/components/0/children/0/children/0/children/1",
+                        "type": "link"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 4,
+                      "counterAxisAlignItems": "CENTER",
+                      "children": [
+                        {
+                          "name": "icon",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/0/children/0/children/1/children/0",
+                            "type": "icon"
+                          },
+                          "layoutMode": "NONE",
+                          "width": 16,
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/0/children/0/children/1/children/1",
+                            "type": "text"
+                          },
+                          "characters": "Retour au site",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "newsletter:/components/0/children/1",
+                "type": "container"
+              },
+              "layoutMode": "NONE",
+              "primaryAxisAlignItems": "CENTER",
+              "counterAxisAlignItems": "CENTER",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "newsletter:/components/0/children/1/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "newsletter:/components/0/children/1/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "paddingTop": 40,
+                      "paddingRight": 40,
+                      "paddingBottom": 40,
+                      "paddingLeft": 40,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/1/children/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "newsletter:/components/0/children/1/children/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "reste informé·e",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "newsletter:/components/0/children/1/children/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Inscris-toi pour suivre nos actualités, nos prochains ateliers et nos ressources sur le consentement.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "newsletter:/components/0/children/1/children/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "newsletter:/components/0/children/2",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "INSTANCE",
+                  "sovrium": {
+                    "id": "newsletter:/components/0/children/2/children/0",
+                    "type": "link"
+                  },
+                  "children": [
+                    {
+                      "name": "label",
+                      "nodeType": "TEXT",
+                      "characters": "← Retour sur mercipourtonnon.fr",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "text",
+                  "nodeType": "TEXT",
+                  "sovrium": {
+                    "id": "newsletter:/components/0/children/2/children/1",
+                    "type": "text"
+                  },
+                  "characters": "© 2026 Merci pour ton non. Tous droits réservés.",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "newsletter:/components/0",
+      "contentHash": "91616861ad528488a93a8fa8147450b430604c3aedcaaffffa985e570718b870"
+    },
+    {
+      "id": "newsletter:/components/0/children/0",
+      "contentHash": "5816fb1a60318b8bd3a4b1f6dc562306d0609ffdd8aa2a2b0bf2e01a8022ed85"
+    },
+    {
+      "id": "newsletter:/components/0/children/0/children/0",
+      "contentHash": "0b4fa10c0886c5a3879f1a9ff1356e57bfde54f6eb2f79d0169dc8547bb1b9ed"
+    },
+    {
+      "id": "newsletter:/components/0/children/0/children/0/children/0",
+      "contentHash": "5f686da7d3bf1c653478853265aa541e2f0dd7eb15ef52c8d58959d0c8b47c73"
+    },
+    {
+      "id": "newsletter:/components/0/children/0/children/0/children/0/children/0",
+      "contentHash": "5c8522791c85c19ec212f66caa7f56adae5e4b8ac87c4e9c3e49aefcedce12ba"
+    },
+    {
+      "id": "newsletter:/components/0/children/0/children/0/children/1",
+      "contentHash": "7b9a2b1bc04d293a894143592c89d07338515bf0ab2cb71839ad3fc89177827d"
+    },
+    {
+      "id": "newsletter:/components/0/children/0/children/0/children/1/children/0",
+      "contentHash": "fa6ebf7a4785f6f4e3e1e77a0fa01429294265eedf2f90d74e34409ed3a9ff30"
+    },
+    {
+      "id": "newsletter:/components/0/children/0/children/0/children/1/children/1",
+      "contentHash": "4db7f13387aaf9a58c9b311e3011165aabaaec14309628dffee4c6e527314718"
+    },
+    {
+      "id": "newsletter:/components/0/children/1",
+      "contentHash": "457959548334a54a83c343657ef1b51dd11d2d784061a895964d6f92ae0e071a"
+    },
+    {
+      "id": "newsletter:/components/0/children/1/children/0",
+      "contentHash": "54422e1362bff1fc0a1b29879d256ea3804943357b5f383efe59b49614f6f012"
+    },
+    {
+      "id": "newsletter:/components/0/children/1/children/0/children/0",
+      "contentHash": "b083fe9b16a506676fa2e8e210d0ae69df0ea63cc81a0bfb916f6ff029162587"
+    },
+    {
+      "id": "newsletter:/components/0/children/1/children/0/children/0/children/0",
+      "contentHash": "aec08602101552362a9620fabaf8a87218009089db14f97ed570ba98220bf658"
+    },
+    {
+      "id": "newsletter:/components/0/children/1/children/0/children/0/children/0/children/0",
+      "contentHash": "e1935a4a58613bce1cd3a9002da4db9fbe62c57ecef70fb9f35b8369831ea177"
+    },
+    {
+      "id": "newsletter:/components/0/children/1/children/0/children/0/children/0/children/1",
+      "contentHash": "a830880ffd4568210ce22cddc39c5f924fc2b6d3187128dff6e0a8908a87050d"
+    },
+    {
+      "id": "newsletter:/components/0/children/1/children/0/children/0/children/1",
+      "contentHash": "10b8abc398014783ef3a6735392920963451e9630a065f6df87c48a990c3ab18"
+    },
+    {
+      "id": "newsletter:/components/0/children/2",
+      "contentHash": "6943c787e32f113f2e45b45dabcbd5c95d5448b3382217c1417dda22cae89fce"
+    },
+    {
+      "id": "newsletter:/components/0/children/2/children/0",
+      "contentHash": "e1bcdfbb818fef8bbd12640fd57c6f44da00401bcbc076c7ea58a1f1b040e016"
+    },
+    {
+      "id": "newsletter:/components/0/children/2/children/1",
+      "contentHash": "8467c332eb12c5bcd4df12c65078cf0d81f6a7d87427881fffe0359564f5a094"
+    }
+  ]
+}

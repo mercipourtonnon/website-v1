@@ -1,0 +1,310 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "espace-suivi-date",
+  "nodes": [
+    {
+      "id": "espace-suivi-date:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": [
+        {
+          "id": "espace-suivi-date:/components/0/children/0",
+          "type": "container",
+          "layout": {
+            "direction": {
+              "value": "column"
+            },
+            "gap": {
+              "value": "2rem"
+            }
+          },
+          "children": [
+            {
+              "id": "espace-suivi-date:/components/0/children/0/children/0",
+              "type": "link",
+              "content": "← Toutes les dates",
+              "children": []
+            },
+            {
+              "id": "espace-suivi-date:/components/0/children/0/children/1",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "1rem"
+                }
+              },
+              "responsive": {
+                "md": {
+                  "direction": {
+                    "value": "row"
+                  },
+                  "align": {
+                    "value": "start"
+                  },
+                  "justify": {
+                    "value": "space-between"
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/1/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/0",
+                      "type": "text",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/1",
+                      "type": "text",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/2",
+                      "type": "text",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/3",
+                      "type": "text",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/4",
+                      "type": "text",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/5",
+                      "type": "description-list",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/6",
+                      "type": "text",
+                      "content": "Pas encore synchronisée avec HelloAsso.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/1/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.5rem"
+                    }
+                  },
+                  "responsive": {
+                    "sm": {
+                      "direction": {
+                        "value": "row"
+                      }
+                    },
+                    "md": {
+                      "direction": {
+                        "value": "column"
+                      },
+                      "align": {
+                        "value": "end"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/0",
+                      "type": "button",
+                      "variant": "outline",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/1",
+                      "type": "button",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "espace-suivi-date:/components/0/children/0/children/2",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.75rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/2/children/0",
+                  "type": "text",
+                  "content": "en direct",
+                  "children": []
+                },
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/2/children/1",
+                  "type": "grid",
+                  "layout": {
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/0",
+                      "type": "kpi",
+                      "locked": "island",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/1",
+                      "type": "kpi",
+                      "locked": "island",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/2",
+                      "type": "kpi",
+                      "locked": "island",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/3",
+                      "type": "kpi",
+                      "locked": "island",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "espace-suivi-date:/components/0/children/0/children/3",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.75rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/3/children/0",
+                  "type": "text",
+                  "content": "pointage",
+                  "children": []
+                },
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/3/children/1",
+                  "type": "text",
+                  "content": "Appuie sur « Présent·e » quand une personne arrive. Une personne marquée « Pas de photo » ne doit apparaître sur aucune photo ni vidéo. Touche une ligne pour voir son téléphone, son email et ajouter une note.",
+                  "children": []
+                },
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/3/children/2",
+                  "type": "container",
+                  "layout": {
+                    "align": {
+                      "value": "center"
+                    },
+                    "gap": {
+                      "value": "0.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-suivi-date:/components/0/children/0/children/3/children/2/children/0",
+                      "type": "search-input",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/3/children/3",
+                  "type": "table",
+                  "locked": "island",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-suivi-date:/components/0/children/0/children/4",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.75rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/4/children/0",
+                  "type": "text",
+                  "content": "prix libre sur place",
+                  "children": []
+                },
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/4/children/1",
+                  "type": "text",
+                  "content": "À la fin de l'atelier, compte ce qui a été donné sur place (espèces et terminal de paiement) et note le total ici. Pour le corriger, change-le et enregistre à nouveau.",
+                  "children": []
+                },
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/4/children/2",
+                  "type": "form",
+                  "children": []
+                },
+                {
+                  "id": "espace-suivi-date:/components/0/children/0/children/4/children/3",
+                  "type": "form",
+                  "locked": "island",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "espace-suivi-date:/components/1",
+      "type": "dialog",
+      "children": [
+        {
+          "id": "espace-suivi-date:/components/1/children/0",
+          "type": "form",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

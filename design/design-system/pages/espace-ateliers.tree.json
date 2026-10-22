@@ -1,0 +1,60 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "espace-ateliers",
+  "nodes": [
+    {
+      "id": "espace-ateliers:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": [
+        {
+          "id": "espace-ateliers:/components/0/children/0",
+          "type": "container",
+          "layout": {
+            "direction": {
+              "value": "column"
+            },
+            "gap": {
+              "value": "1.5rem"
+            }
+          },
+          "children": [
+            {
+              "id": "espace-ateliers:/components/0/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.25rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-ateliers:/components/0/children/0/children/0/children/0",
+                  "type": "text",
+                  "content": "ateliers en ligne",
+                  "children": []
+                },
+                {
+                  "id": "espace-ateliers:/components/0/children/0/children/0/children/1",
+                  "type": "text",
+                  "content": "Les dates que le site affiche. « Retirer du site » enlève une date de la page d'accueil et de sa page, tout de suite. Pense aussi à fermer l'événement sur HelloAsso et à prévenir les personnes inscrites.",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-ateliers:/components/0/children/0/children/1",
+              "type": "table",
+              "locked": "island",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

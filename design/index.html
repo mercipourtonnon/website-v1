@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Merci pour ton non</title>
-<meta name="description" content="Le design system et les pages publiques du site Merci pour ton non, exportés depuis la configuration Sovrium.">
-<link rel="icon" href="pages/favicon/favicon-32x32.png">
+<meta name="description" content="Le site interactif de Merci pour ton non, son design system et le dessin de chaque page, exportés depuis la configuration Sovrium.">
+<link rel="icon" href="site/favicon/favicon-32x32.png">
 <link rel="stylesheet" href="design-system/css/theme.css">
 <link rel="stylesheet" href="design-system/css/brand-fonts.css">
 <style>
@@ -101,6 +101,19 @@
     background: var(--tint); border-radius: 16px; padding: 20px; font-size: 0.9375rem; line-height: 1.6;
   }
   .note ul { margin: 8px 0 0; padding-left: 20px; }
+  .cols { display: grid; gap: 24px; grid-template-columns: 1fr; }
+  @media (min-width: 768px) { .cols { grid-template-columns: repeat(2, 1fr); } }
+  .cols > div { min-width: 0; }
+  .list a span { min-width: 0; }
+  .list a code { flex-shrink: 1; min-width: 0; }
+  .list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 16px; background: var(--card); }
+  .list li + li { border-top: 1px solid var(--line); }
+  .list a { display: flex; justify-content: space-between; gap: 12px; padding: 10px 16px; text-decoration: none; font-size: 0.9375rem; line-height: 1.5; }
+  .list a:hover { background: var(--tint); }
+  .list code { font-size: 0.8125rem; color: var(--ink-soft); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  h3 { font-size: 1rem; font-weight: 800; margin: 0 0 8px; }
+  .hero-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; padding: 12px 20px; border-radius: 999px; background: var(--pourpre, #F5004F); color: #fff; font-weight: 800; text-decoration: none; }
+  .hero-link:hover { filter: brightness(1.08); }
   footer { padding: 32px 0 48px; font-size: 0.875rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
   @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
 </style>
@@ -108,10 +121,11 @@
 <body>
 <div class="wrap">
   <header>
-    <img class="logo" src="pages/logo.svg" alt="Merci pour ton non">
-    <p class="overline">Design system et pages</p>
+    <img class="logo" src="site/logo.svg" alt="Merci pour ton non">
+    <p class="overline">Site, design system et pages</p>
     <h1>Le site, tel qu'il est construit</h1>
-    <p class="lead">Tout ce qui fait l'identité de Merci pour ton non : la charte, les jetons de design, la bibliothèque de composants et les pages publiques du site, exportées depuis la configuration Sovrium.</p>
+    <p class="lead">Le site public de Merci pour ton non, cliquable comme en ligne, avec sa charte, ses jetons de design, sa bibliothèque de composants et le dessin de chaque page, exportés depuis la configuration Sovrium.</p>
+    <a class="hero-link" href="site/index.html">Ouvrir le site interactif →</a>
     <div class="stripe" aria-hidden="true">
       <span style="background: var(--pourpre, #F5004F)"></span>
       <span style="background: var(--orange, #FFAF00)"></span>
@@ -120,13 +134,50 @@
     </div>
   </header>
 
+  <section aria-labelledby="site">
+    <h2 id="site">Le site interactif</h2>
+    <p class="section-intro">Les pages publiques telles que le serveur les sert, avec leurs scripts : menu mobile, menus déroulants, questions fréquentes, palette de commandes (Ctrl K), animations au défilement, validation des formulaires. Les fiches d'atelier viennent des données de démonstration.</p>
+    <div class="cols">
+      <div>
+        <h3>Pages</h3>
+        <ul class="list">
+      <li><a href="site/index.html"><span>Accueil</span><code>/</code></a></li>
+      <li><a href="site/notre-mission.html"><span>Notre mission</span><code>/notre-mission</code></a></li>
+      <li><a href="site/nos-ateliers.html"><span>Nos ateliers</span><code>/nos-ateliers</code></a></li>
+      <li><a href="site/nos-stands.html"><span>Nos stands</span><code>/nos-stands</code></a></li>
+      <li><a href="site/nos-interventions.html"><span>Nos interventions</span><code>/nos-interventions</code></a></li>
+      <li><a href="site/le-consentement.html"><span>Le consentement</span><code>/le-consentement</code></a></li>
+      <li><a href="site/ressources.html"><span>Ressources</span><code>/ressources</code></a></li>
+      <li><a href="site/devenir-benevole.html"><span>Devenir bénévole</span><code>/devenir-benevole</code></a></li>
+      <li><a href="site/vos-idees.html"><span>Vos idées</span><code>/vos-idees</code></a></li>
+      <li><a href="site/newsletter.html"><span>Newsletter</span><code>/newsletter</code></a></li>
+      <li><a href="site/mentions-legales.html"><span>Mentions légales</span><code>/mentions-legales</code></a></li>
+      <li><a href="site/connexion.html"><span>Connexion</span><code>/connexion</code></a></li>
+      <li><a href="site/inscription.html"><span>Inscription bénévole</span><code>/inscription</code></a></li>
+      <li><a href="site/accept-invitation.html"><span>Invitation (lien indisponible)</span><code>/accept-invitation</code></a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Fiches d'atelier</h3>
+        <ul class="list">
+      <li><a href="site/ateliers/2026-09-19-14h.html"><span>samedi 19 septembre 2026, 14h</span><code>/ateliers/2026-09-19-14h</code></a></li>
+      <li><a href="site/ateliers/2026-10-06-18h30.html"><span>mardi 6 octobre 2026, 18h30</span><code>/ateliers/2026-10-06-18h30</code></a></li>
+      <li><a href="site/ateliers/2026-10-17-14h.html"><span>samedi 17 octobre 2026, 14h</span><code>/ateliers/2026-10-17-14h</code></a></li>
+      <li><a href="site/ateliers/2026-11-28-14h.html"><span>samedi 28 novembre 2026, 14h</span><code>/ateliers/2026-11-28-14h</code></a></li>
+      <li><a href="site/ateliers/2026-12-12-14h.html"><span>samedi 12 décembre 2026, 14h</span><code>/ateliers/2026-12-12-14h</code></a></li>
+      <li><a href="site/ateliers/2026-12-17-18h30.html"><span>jeudi 17 décembre 2026, 18h30</span><code>/ateliers/2026-12-17-18h30</code></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section aria-labelledby="ds">
     <h2 id="ds">Design system</h2>
     <p class="section-intro">La charte de marque (principes, voix, couleurs, typographie) et les composants dessinés avec nos jetons, en clair et en sombre.</p>
     <div class="grid">
       <a class="card c-pourpre" href="design-system/components/index.html">
         <strong>Bibliothèque de composants</strong>
-        <span>Chaque type de composant, rendu avec nos couleurs, en mode clair et sombre.</span>
+        <span>Chaque type de composant, y compris les fenêtres, tiroirs et panneaux, rendu avec nos couleurs en clair et en sombre.</span>
         <code>design-system/components/</code>
       </a>
       <a class="card c-orange" href="design-system/DESIGN.md">
@@ -139,10 +190,10 @@
         <span>Les valeurs au format DTCG, pour les outils de design.</span>
         <code>tokens/base.tokens.json</code>
       </a>
-      <a class="card c-cyan" href="design-system/tokens.dark.json">
+      <a class="card c-cyan" href="design-system/tokens/dark.tokens.json">
         <strong>Jetons, mode sombre</strong>
         <span>La palette sombre complète, au format DTCG.</span>
-        <code>tokens.dark.json</code>
+        <code>tokens/dark.tokens.json</code>
       </a>
       <a class="card c-pourpre" href="design-system/css/theme.css">
         <strong>Thème CSS</strong>
@@ -157,40 +208,70 @@
     </div>
   </section>
 
-  <section aria-labelledby="pages">
-    <h2 id="pages">Pages du site</h2>
-    <p class="section-intro">Les pages publiques, rendues en HTML statique avec leurs images et leurs polices.</p>
-    <div class="grid">
-      <a class="card c-pourpre" href="pages/index.html"><strong>Accueil</strong><span>La porte d'entrée : qui on est, nos ateliers, comment nous rejoindre.</span><code>/</code></a>
-      <a class="card c-orange" href="pages/nos-ateliers.html"><strong>Nos ateliers</strong><span>Les ateliers de consentement gratuits à Strasbourg.</span><code>/nos-ateliers</code></a>
-      <a class="card c-mauve" href="pages/nos-stands.html"><strong>Nos stands</strong><span>Notre stand de sensibilisation, en festival, en soirée ou en événement associatif.</span><code>/nos-stands</code></a>
-      <a class="card c-cyan" href="pages/nos-interventions.html"><strong>Nos interventions</strong><span>Ce qu'on propose aux associations, aux petites structures et aux entreprises.</span><code>/nos-interventions</code></a>
-      <a class="card c-pourpre" href="pages/notre-mission.html"><strong>Notre mission</strong><span>Pourquoi l'association existe, et l'équipe qui la fait vivre.</span><code>/notre-mission</code></a>
-      <a class="card c-orange" href="pages/le-consentement.html"><strong>Le consentement</strong><span>Notre vision du consentement et les notions partagées en atelier.</span><code>/le-consentement</code></a>
-      <a class="card c-mauve" href="pages/ressources.html"><strong>Ressources</strong><span>Numéros d'aide, nos affiches, et des livres, films, podcasts et jeux pour aller plus loin.</span><code>/ressources</code></a>
-      <a class="card c-cyan" href="pages/devenir-benevole.html"><strong>Devenir bénévole</strong><span>Comment rejoindre l'équipe et ce qu'on y fait ensemble.</span><code>/devenir-benevole</code></a>
-      <a class="card c-pourpre" href="pages/vos-idees.html"><strong>Vos idées</strong><span>Le formulaire pour proposer une idée à l'association.</span><code>/vos-idees</code></a>
-      <a class="card c-orange" href="pages/newsletter.html"><strong>Newsletter</strong><span>L'inscription à la lettre d'information.</span><code>/newsletter</code></a>
-      <a class="card c-mauve" href="pages/mentions-legales.html"><strong>Mentions légales</strong><span>L'éditeur du site et les informations légales de l'association.</span><code>/mentions-legales</code></a>
-      <a class="card c-cyan" href="pages/connexion.html"><strong>Connexion</strong><span>L'entrée de l'espace bénévole.</span><code>/connexion</code></a>
-      <a class="card c-pourpre" href="pages/inscription.html"><strong>Inscription bénévole</strong><span>La création de compte pour rejoindre l'équipe.</span><code>/inscription</code></a>
-      <a class="card c-orange" href="pages/accept-invitation.html"><strong>Invitation</strong><span>La page d'acceptation d'invitation, ici dans son état « lien indisponible ».</span><code>/accept-invitation</code></a>
+  <section aria-labelledby="dessins">
+    <h2 id="dessins">Le dessin de chaque page</h2>
+    <p class="section-intro">Chaque page de la configuration, dessinée nœud par nœud par Sovrium pour un outil de design, sans script. Les listes y sont remplies de données fictives. C'est la seule vue de l'espace bénévole dans cet export : ses vraies pages demandent une connexion.</p>
+    <div class="cols">
+      <div>
+        <h3>Site public</h3>
+        <ul class="list">
+      <li><a href="design-system/pages/home.page.html"><span>Merci pour ton non</span><code>/</code></a></li>
+      <li><a href="design-system/pages/notre-mission.page.html"><span>Notre mission et l'équipe</span><code>/notre-mission</code></a></li>
+      <li><a href="design-system/pages/nos-ateliers.page.html"><span>Atelier de consentement à Strasbourg</span><code>/nos-ateliers</code></a></li>
+      <li><a href="design-system/pages/nos-stands.page.html"><span>Nos stands de sensibilisation</span><code>/nos-stands</code></a></li>
+      <li><a href="design-system/pages/nos-interventions.page.html"><span>Interventions pour les structures</span><code>/nos-interventions</code></a></li>
+      <li><a href="design-system/pages/mentions-legales.page.html"><span>Mentions légales</span><code>/mentions-legales</code></a></li>
+      <li><a href="design-system/pages/newsletter.page.html"><span>Newsletter</span><code>/newsletter</code></a></li>
+      <li><a href="design-system/pages/le-consentement.page.html"><span>Notre vision du consentement</span><code>/le-consentement</code></a></li>
+      <li><a href="design-system/pages/ressources.page.html"><span>Ressources sur le consentement</span><code>/ressources</code></a></li>
+      <li><a href="design-system/pages/devenir-benevole.page.html"><span>Devenir bénévole</span><code>/devenir-benevole</code></a></li>
+      <li><a href="design-system/pages/vos-idees.page.html"><span>Vos idées pour l'association</span><code>/vos-idees</code></a></li>
+      <li><a href="design-system/pages/atelier.page.html"><span>Fiche d’un atelier</span><code>/ateliers/:slug</code></a></li>
+      <li><a href="design-system/pages/espace-connexion.page.html"><span>Connexion</span><code>/connexion</code></a></li>
+      <li><a href="design-system/pages/espace-inscription.page.html"><span>Rejoindre l'équipe bénévole</span><code>/inscription</code></a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Espace bénévole</h3>
+        <ul class="list">
+      <li><a href="design-system/pages/espace-accueil.page.html"><span>Accueil</span><code>/espace</code></a></li>
+      <li><a href="design-system/pages/espace-proposer.page.html"><span>Proposer une date</span><code>/espace/proposer</code></a></li>
+      <li><a href="design-system/pages/espace-proposition.page.html"><span>Proposition</span><code>/espace/propositions/:id</code></a></li>
+      <li><a href="design-system/pages/espace-validation.page.html"><span>À valider</span><code>/espace/validation</code></a></li>
+      <li><a href="design-system/pages/espace-ateliers.page.html"><span>Ateliers en ligne</span><code>/espace/ateliers</code></a></li>
+      <li><a href="design-system/pages/espace-en-attente.page.html"><span>Candidature en cours</span><code>/espace/en-attente</code></a></li>
+      <li><a href="design-system/pages/espace-agenda.page.html"><span>Agenda</span><code>/espace/agenda</code></a></li>
+      <li><a href="design-system/pages/espace-agenda-evenement.page.html"><span>Rendez-vous</span><code>/espace/agenda/:id</code></a></li>
+      <li><a href="design-system/pages/espace-actualites.page.html"><span>Actualités</span><code>/espace/actualites</code></a></li>
+      <li><a href="design-system/pages/espace-actualite.page.html"><span>Actualité</span><code>/espace/actualites/:id</code></a></li>
+      <li><a href="design-system/pages/espace-membres.page.html"><span>Membres</span><code>/espace/membres</code></a></li>
+      <li><a href="design-system/pages/espace-membre.page.html"><span>Fiche bénévole</span><code>/espace/membres/:id</code></a></li>
+      <li><a href="design-system/pages/espace-profil.page.html"><span>Mon profil</span><code>/espace/profil</code></a></li>
+      <li><a href="design-system/pages/espace-coordination-membres.page.html"><span>Bénévoles</span><code>/espace/coordination/membres</code></a></li>
+      <li><a href="design-system/pages/espace-coordination-agenda.page.html"><span>Agenda à gérer</span><code>/espace/coordination/agenda</code></a></li>
+      <li><a href="design-system/pages/espace-coordination-actualites.page.html"><span>Actualités à publier</span><code>/espace/coordination/actualites</code></a></li>
+      <li><a href="design-system/pages/espace-suivi.page.html"><span>Suivi des ateliers</span><code>/espace/suivi</code></a></li>
+      <li><a href="design-system/pages/espace-suivi-date.page.html"><span>Suivi d'un atelier</span><code>/espace/suivi/:id</code></a></li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section aria-labelledby="absent">
-    <h2 id="absent">Ce qui n'est pas ici</h2>
+  <section aria-labelledby="hors-ligne">
+    <h2 id="hors-ligne">Ce qui ne marche pas hors ligne</h2>
     <div class="note">
-      Ces pages ne peuvent pas être rendues en statique :
+      Cet aperçu n'a pas de serveur derrière lui. Tout ce qui se passe dans le navigateur fonctionne ; ce qui a besoin du serveur affiche un court message à la place :
       <ul>
-        <li><strong>L'espace bénévole</strong> (<code>/espace/…</code>, 20 pages) : réservé aux membres connecté·es, et construit à partir des données de l'association.</li>
-        <li><strong>La fiche d'un atelier</strong> (<code>/ateliers/:slug</code>) : une page par atelier, générée depuis la base de données.</li>
+        <li><strong>Envoyer un formulaire</strong> (vos idées, devenir bénévole, la newsletter Brevo) : rien n'est envoyé.</li>
+        <li><strong>Se connecter, créer un compte</strong> : la connexion n'aboutit pas.</li>
+        <li><strong>L'espace bénévole</strong> (<code>/espace/…</code>) : non inclus, il est réservé aux membres connecté·es. Ses pages sont visibles dans « Le dessin de chaque page ».</li>
+        <li><strong>La recherche</strong> de la palette de commandes ne trouve rien.</li>
       </ul>
-      Les formulaires et la connexion ne fonctionnent pas dans cet aperçu : ils ont besoin du serveur.
+      Les liens vers HelloAsso, Instagram ou LinkedIn mènent aux vrais sites.
     </div>
   </section>
 
-  <footer>Exporté depuis la configuration Sovrium 0.40 avec <code>scripts/export-design.sh</code>.</footer>
+  <footer>Exporté depuis la configuration Sovrium 0.41 avec <code>scripts/export-design.sh</code>.</footer>
 </div>
 </body>
 </html>

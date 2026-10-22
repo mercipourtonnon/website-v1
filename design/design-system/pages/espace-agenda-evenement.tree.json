@@ -1,0 +1,307 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "espace-agenda-evenement",
+  "nodes": [
+    {
+      "id": "espace-agenda-evenement:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": [
+        {
+          "id": "espace-agenda-evenement:/components/0/children/0",
+          "type": "container",
+          "layout": {
+            "direction": {
+              "value": "column"
+            },
+            "gap": {
+              "value": "2rem"
+            }
+          },
+          "children": [
+            {
+              "id": "espace-agenda-evenement:/components/0/children/0/children/0",
+              "type": "link",
+              "content": "← Agenda",
+              "children": []
+            },
+            {
+              "id": "espace-agenda-evenement:/components/0/children/0/children/1",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.75rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/1/children/0",
+                  "type": "container",
+                  "layout": {
+                    "align": {
+                      "value": "center"
+                    },
+                    "gap": {
+                      "value": "0.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-agenda-evenement:/components/0/children/0/children/1/children/0/children/0",
+                      "type": "text",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-agenda-evenement:/components/0/children/0/children/1/children/0/children/1",
+                      "type": "text",
+                      "content": "Annulé",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/1/children/1",
+                  "type": "text",
+                  "children": []
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/1/children/2",
+                  "type": "description-list",
+                  "children": []
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/1/children/3",
+                  "type": "link",
+                  "layout": {
+                    "align": {
+                      "value": "center"
+                    },
+                    "gap": {
+                      "value": "0.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-agenda-evenement:/components/0/children/0/children/1/children/3/children/0",
+                      "type": "icon",
+                      "layout": {
+                        "width": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "espace-agenda-evenement:/components/0/children/0/children/1/children/3/children/1",
+                      "type": "text",
+                      "content": "Rejoindre en visio (nouvel onglet)",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "espace-agenda-evenement:/components/0/children/0/children/2",
+              "type": "alert",
+              "content": "Ce rendez-vous est annulé. L'équipe te tient au courant s'il est reprogrammé.",
+              "children": []
+            },
+            {
+              "id": "espace-agenda-evenement:/components/0/children/0/children/3",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.5rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/3/children/0",
+                  "type": "text",
+                  "content": "intention",
+                  "children": []
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/3/children/1",
+                  "type": "record-field",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-agenda-evenement:/components/0/children/0/children/4",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.5rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/4/children/0",
+                  "type": "text",
+                  "content": "programme",
+                  "children": []
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/4/children/1",
+                  "type": "record-field",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-agenda-evenement:/components/0/children/0/children/5",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.5rem"
+                },
+                "padding": {
+                  "value": "1.25rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/5/children/0",
+                  "type": "text",
+                  "content": "infos pratiques",
+                  "children": []
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/5/children/1",
+                  "type": "record-field",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-agenda-evenement:/components/0/children/0/children/6",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.75rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/6/children/0",
+                  "type": "text",
+                  "content": "on a besoin de toi pour…",
+                  "children": []
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/6/children/1",
+                  "type": "list",
+                  "locked": "island",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-agenda-evenement:/components/0/children/0/children/7",
+              "type": "container",
+              "layout": {
+                "padding": {
+                  "value": "1.25rem"
+                }
+              },
+              "responsive": {
+                "sm": {
+                  "padding": {
+                    "value": "1.5rem"
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/7/children/0",
+                  "type": "text",
+                  "content": "je participe",
+                  "children": []
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/7/children/1",
+                  "type": "container",
+                  "layout": {
+                    "align": {
+                      "value": "start"
+                    },
+                    "gap": {
+                      "value": "0.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-agenda-evenement:/components/0/children/0/children/7/children/1/children/0",
+                      "type": "icon",
+                      "layout": {
+                        "width": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "espace-agenda-evenement:/components/0/children/0/children/7/children/1/children/1",
+                      "type": "text",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/7/children/2",
+                  "type": "form",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-agenda-evenement:/components/0/children/0/children/8",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.75rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/8/children/0",
+                  "type": "text",
+                  "content": "qui vient ?",
+                  "children": []
+                },
+                {
+                  "id": "espace-agenda-evenement:/components/0/children/0/children/8/children/1",
+                  "type": "list",
+                  "locked": "island",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

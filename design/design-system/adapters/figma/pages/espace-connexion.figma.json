@@ -1,0 +1,356 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-connexion",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "espace-connexion:/components/0",
+            "type": "container"
+          },
+          "layoutMode": "NONE",
+          "primaryAxisAlignItems": "CENTER",
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "espace-connexion:/components/0/children/0",
+                "type": "container"
+              },
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 24,
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/0",
+                    "type": "link"
+                  },
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/0/children/0",
+                        "type": "image"
+                      },
+                      "layoutMode": "NONE",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "flex",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/1",
+                    "type": "flex"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 8,
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/1/children/0",
+                        "type": "text"
+                      },
+                      "characters": "espace bénévole",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/1/children/1",
+                        "type": "text"
+                      },
+                      "characters": "Connecte-toi pour retrouver l'agenda de l'équipe, les actualités de l'asso et les autres bénévoles.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "form",
+                  "nodeType": "INSTANCE",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/2",
+                    "type": "form"
+                  },
+                  "children": []
+                },
+                {
+                  "name": "link",
+                  "nodeType": "INSTANCE",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/3",
+                    "type": "link"
+                  },
+                  "children": [
+                    {
+                      "name": "label",
+                      "nodeType": "TEXT",
+                      "characters": "Mot de passe oublié ?",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/4",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "itemSpacing": 4,
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/4/children/0",
+                        "type": "text"
+                      },
+                      "characters": "Pas encore de compte ?",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/4/children/1",
+                        "type": "link"
+                      },
+                      "children": [
+                        {
+                          "name": "label",
+                          "nodeType": "TEXT",
+                          "characters": "Rejoindre l'équipe bénévole",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "breakpoint": "sm",
+      "width": 640,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "espace-connexion:/components/0",
+            "type": "container"
+          },
+          "layoutMode": "NONE",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "espace-connexion:/components/0/children/0",
+                "type": "container"
+              },
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 24,
+              "paddingTop": 32,
+              "paddingRight": 32,
+              "paddingBottom": 32,
+              "paddingLeft": 32,
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/0",
+                    "type": "link"
+                  },
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/0/children/0",
+                        "type": "image"
+                      },
+                      "layoutMode": "NONE",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "flex",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/1",
+                    "type": "flex"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 8,
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/1/children/0",
+                        "type": "text"
+                      },
+                      "characters": "espace bénévole",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/1/children/1",
+                        "type": "text"
+                      },
+                      "characters": "Connecte-toi pour retrouver l'agenda de l'équipe, les actualités de l'asso et les autres bénévoles.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "form",
+                  "nodeType": "INSTANCE",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/2",
+                    "type": "form"
+                  },
+                  "children": []
+                },
+                {
+                  "name": "link",
+                  "nodeType": "INSTANCE",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/3",
+                    "type": "link"
+                  },
+                  "children": [
+                    {
+                      "name": "label",
+                      "nodeType": "TEXT",
+                      "characters": "Mot de passe oublié ?",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-connexion:/components/0/children/0/children/4",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "itemSpacing": 4,
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/4/children/0",
+                        "type": "text"
+                      },
+                      "characters": "Pas encore de compte ?",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-connexion:/components/0/children/0/children/4/children/1",
+                        "type": "link"
+                      },
+                      "children": [
+                        {
+                          "name": "label",
+                          "nodeType": "TEXT",
+                          "characters": "Rejoindre l'équipe bénévole",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-connexion:/components/0",
+      "contentHash": "114f088daefb960746f29fca6af95b48981fa4a9301c5642181207c5770fa84e"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0",
+      "contentHash": "0b73bc9a59502476952577da466b252a14a95a97b6eb12a8ccf4047f4fd1f8b6"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/0",
+      "contentHash": "084b5098e710f399787ed9eaf4469c3fe00546cb131969c69bef1f1d760d16ca"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/0/children/0",
+      "contentHash": "b2c7191972878fd62947a4790653e71ecc4f1637e7e757602b1870e75e650e10"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/1",
+      "contentHash": "125fa931a68f09efd2a985eecee758706845bb8bbc6b41ecef96c8f326914d85"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/1/children/0",
+      "contentHash": "0378192193622dc0c2cc8faddfbd0fa591514eb9f2d265e39659d4efb1f9793d"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/1/children/1",
+      "contentHash": "0530730842e9004efb7c7339f00d3de12f0ec060016ebaf5f11aba3eafad3d2c"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/2",
+      "contentHash": "4aae020a46ad50a5cd74bf05e18667503aa80f0e00b055683d1dcfbf2f735f90"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/3",
+      "contentHash": "4b2a9a95a7f1e49e0e78004e6a9b024c562d0678e126be40e21d9f13d3bf102c"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/4",
+      "contentHash": "20c9b66e746fbd28283039974dd3bdb86b697c3a9da6c2394bd44e0486bc078b"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/4/children/0",
+      "contentHash": "42f3eb61421dc2c8ddd2ec0a7be39aae8d44792e525c1ec621ef0991f2c79ad0"
+    },
+    {
+      "id": "espace-connexion:/components/0/children/0/children/4/children/1",
+      "contentHash": "bf0fc2406f72e145f55daa3da4b49dc1fae0be54c4289954a17f9be0e5e683aa"
+    }
+  ]
+}

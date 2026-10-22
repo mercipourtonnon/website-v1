@@ -1,0 +1,568 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-inscription",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "espace-inscription:/components/0",
+            "type": "container"
+          },
+          "layoutMode": "NONE",
+          "primaryAxisAlignItems": "CENTER",
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "espace-inscription:/components/0/children/0",
+                "type": "container"
+              },
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 24,
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-inscription:/components/0/children/0/children/0",
+                    "type": "link"
+                  },
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/0/children/0",
+                        "type": "image"
+                      },
+                      "layoutMode": "NONE",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "text",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-inscription:/components/0/children/0/children/1",
+                    "type": "text"
+                  },
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/1/children/0",
+                        "type": "text"
+                      },
+                      "characters": "Tu veux d'abord savoir ce qu'on fait ensemble ? ",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/1/children/1",
+                        "type": "link"
+                      },
+                      "children": [
+                        {
+                          "name": "label",
+                          "nodeType": "TEXT",
+                          "characters": "Devenir bénévole",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-inscription:/components/0/children/0/children/2",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 24,
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/2/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 12,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "rejoindre l'équipe bénévole",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "Crée ton compte, puis remplis ta fiche bénévole. Elle sera visible par les autres bénévoles de Merci pour ton non (MPTN) et contient ce qu'il faut pour mieux se connaître. Le Cercle Gardien la relit et t'ouvre l'espace bénévole.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/2",
+                            "type": "text"
+                          },
+                          "characters": "Ton email et ton téléphone restent réservés au Cercle Gardien. En créant ton compte, tu acceptes qu'ils servent à t'inviter dans notre communauté WhatsApp.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "form",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/2/children/1",
+                        "type": "form"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/2/children/2",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 4,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/2/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Déjà un compte ?",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/2/children/1",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Me connecter",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-inscription:/components/0/children/0/children/3",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 12,
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/3/children/0",
+                        "type": "text"
+                      },
+                      "characters": "rejoindre l'équipe bénévole",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/3/children/1",
+                        "type": "text"
+                      },
+                      "characters": "Les inscriptions se font pour l'instant sur invitation. Écris-nous à mercipourtonnon@gmail.com, on t'envoie un lien pour créer ton compte.",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/3/children/2",
+                        "type": "link"
+                      },
+                      "children": [
+                        {
+                          "name": "label",
+                          "nodeType": "TEXT",
+                          "characters": "J'ai déjà un compte",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "breakpoint": "sm",
+      "width": 640,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "espace-inscription:/components/0",
+            "type": "container"
+          },
+          "layoutMode": "NONE",
+          "primaryAxisAlignItems": "CENTER",
+          "counterAxisAlignItems": "CENTER",
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "espace-inscription:/components/0/children/0",
+                "type": "container"
+              },
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 24,
+              "paddingTop": 32,
+              "paddingRight": 32,
+              "paddingBottom": 32,
+              "paddingLeft": 32,
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-inscription:/components/0/children/0/children/0",
+                    "type": "link"
+                  },
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/0/children/0",
+                        "type": "image"
+                      },
+                      "layoutMode": "NONE",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "text",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-inscription:/components/0/children/0/children/1",
+                    "type": "text"
+                  },
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/1/children/0",
+                        "type": "text"
+                      },
+                      "characters": "Tu veux d'abord savoir ce qu'on fait ensemble ? ",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/1/children/1",
+                        "type": "link"
+                      },
+                      "children": [
+                        {
+                          "name": "label",
+                          "nodeType": "TEXT",
+                          "characters": "Devenir bénévole",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-inscription:/components/0/children/0/children/2",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 24,
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/2/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 12,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "rejoindre l'équipe bénévole",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "Crée ton compte, puis remplis ta fiche bénévole. Elle sera visible par les autres bénévoles de Merci pour ton non (MPTN) et contient ce qu'il faut pour mieux se connaître. Le Cercle Gardien la relit et t'ouvre l'espace bénévole.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/2",
+                            "type": "text"
+                          },
+                          "characters": "Ton email et ton téléphone restent réservés au Cercle Gardien. En créant ton compte, tu acceptes qu'ils servent à t'inviter dans notre communauté WhatsApp.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "form",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/2/children/1",
+                        "type": "form"
+                      },
+                      "children": []
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/2/children/2",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 4,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/2/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Déjà un compte ?",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-inscription:/components/0/children/0/children/2/children/2/children/1",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Me connecter",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-inscription:/components/0/children/0/children/3",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 12,
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/3/children/0",
+                        "type": "text"
+                      },
+                      "characters": "rejoindre l'équipe bénévole",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/3/children/1",
+                        "type": "text"
+                      },
+                      "characters": "Les inscriptions se font pour l'instant sur invitation. Écris-nous à mercipourtonnon@gmail.com, on t'envoie un lien pour créer ton compte.",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-inscription:/components/0/children/0/children/3/children/2",
+                        "type": "link"
+                      },
+                      "children": [
+                        {
+                          "name": "label",
+                          "nodeType": "TEXT",
+                          "characters": "J'ai déjà un compte",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-inscription:/components/0",
+      "contentHash": "e5a049ef4712ae388e8ffb9b83b252f5b1c19d12462b0667f72c539c85ac7eb9"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0",
+      "contentHash": "50fed4a38b9d22fa3fc6e9d08636f2450ac122af3cd029ff9d948cc9672812df"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/0",
+      "contentHash": "5486f79e17731f680079ba6b34f86ef7ed10b92cea06db123a5aa2c957357f86"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/0/children/0",
+      "contentHash": "b52cbf9b60dedc46a44a21c3232b251ee80b9db1c12c54bb45d718363c2c08de"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/1",
+      "contentHash": "c6f23e5503bc9f2bb1f0288642bdd884217040d54231474d070bb79d68ba9fe2"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/1/children/0",
+      "contentHash": "cd4ea5971000266ca74531749588138ce74a4f0b88d0dac4929f13fbabff98dc"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/1/children/1",
+      "contentHash": "dcd5ad02c293862cde3ee8e5345faf32e75e507b1ea0031c5c449d27467a1431"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/2",
+      "contentHash": "1e54b810251257df72faf93db685526213e18a2a209e9673cdf54b177e60f670"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/2/children/0",
+      "contentHash": "ddfb2843a8199f96947b162f341270e60cd5f7a164d77011ec57e83b7305ce6e"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/0",
+      "contentHash": "9451b5792a1634a53452d4bbcd1c4910164455ca36c92807e8945c4b5e691e00"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/1",
+      "contentHash": "df3b9937416b64ef1eb5ec16bcd1a194c8ee8865a0a22d12104c1df59e549381"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/2",
+      "contentHash": "647b6cf5f2cdc40dd4658c8569fd9c7a8aa5ad7c3a781709c8bb520e53eb24e1"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/2/children/1",
+      "contentHash": "4c16845349aa2420ed26f7db3009af8c836318a3a5bba9046ce10d6a22d8f678"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/2/children/2",
+      "contentHash": "9cd247ed736f1118fb7ca6c3f09eec69120a8dd76d112cf9d0b11926f5c35b2e"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/2/children/2/children/0",
+      "contentHash": "9a1ebd99a59780449644c12cceae88aa21932816de6cb7fa115b08ef5a0aa08e"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/2/children/2/children/1",
+      "contentHash": "16f285717ed2197ea293fc722c234fcf5ee0957c81951a9e279625922586cc14"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/3",
+      "contentHash": "d38d559d0a1daacde3777baac77feecdf0a5377b1c78b560e896806cad9a1fe7"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/3/children/0",
+      "contentHash": "715bae833f3ddcac6be4c2eb2da91a631883658581c4996d3d579549c16461bd"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/3/children/1",
+      "contentHash": "9d729039357efb001ccee5764fea20bccabe728d1a5ac45eecbc5c8161180a8e"
+    },
+    {
+      "id": "espace-inscription:/components/0/children/0/children/3/children/2",
+      "contentHash": "b7903d94b4eef995a7e338b7db3de487d5652d437bf050d0556f05c3f53329e4"
+    }
+  ]
+}

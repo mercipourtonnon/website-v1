@@ -1,0 +1,2 @@
+import{e}from"./island-client-p5ze071j.js";var vp="inline-flex items-center gap-2",Nh="flex min-w-0 flex-1 items-center gap-2";function Ns(){return e("svg",{width:"12",height:"12",viewBox:"0 0 16 16",fill:"none","aria-hidden":"true",className:"transition-transform group-data-[popup-open]:rotate-180",children:e("path",{d:"M4 6l4 4 4-4",stroke:"currentColor",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})})}
+export{vp,Nh,Ns};

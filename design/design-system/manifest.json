@@ -13,8 +13,267 @@
       "path": "DESIGN.md",
       "mediaType": "text/markdown",
       "bytes": 19187,
-      "sha256": "93a16de7ce88b8aec15c5924ecf958a77035f366e530d7c54b8ba26663eea8d8",
+      "sha256": "f012d811c6bdb9d6b13e16a2b095e8586827794afb4261572df59e588d85d42b",
       "role": "brief"
+    },
+    {
+      "path": "adapters/claude-design/canvas/atelier/Atelier.dc.html",
+      "mediaType": "text/html",
+      "bytes": 33939,
+      "sha256": "3418524f0e79557de0aa77ff667c695db2b7a7cee249ddebffcd68bbf33c1ade",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/canvas.json",
+      "mediaType": "application/json",
+      "bytes": 10563,
+      "sha256": "cd906a329be74ca61022c60ddb29eb7116f712fc1652f27f7a19c9ec28e59f0b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/devenir-benevole/DevenirBenevole.dc.html",
+      "mediaType": "text/html",
+      "bytes": 80117,
+      "sha256": "db648cf9a91c4f158a54e0e78e91711e43fc14264d12733da6af768900cd04b9",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/ds/mercipourtonnon/fonts/geist-19f9c925.woff2",
+      "mediaType": "font/woff2",
+      "bytes": 29400,
+      "sha256": "19f9c92546aa300c312235e3125af1b81394d8db9a4bc4a425cd5b641d2d54e1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/ds/mercipourtonnon/fonts/geist-mono-684ad5b5.woff2",
+      "mediaType": "font/woff2",
+      "bytes": 23128,
+      "sha256": "684ad5b531f81d43c1e8c7038262d5db7cdc1f68006e04d6c7769efa8d33c8cc",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/ds/mercipourtonnon/tokens.json",
+      "mediaType": "application/json",
+      "bytes": 17913,
+      "sha256": "7acaae83e8c8f357f8017d4fb93daf19cd0101dabfa22ed8f34798f69ba9b37c",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-accueil/EspaceAccueil.dc.html",
+      "mediaType": "text/html",
+      "bytes": 51215,
+      "sha256": "963060bccd783161d626d321525f1d6fd951cab8a43d2265374c1822d20183a1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-actualite/EspaceActualite.dc.html",
+      "mediaType": "text/html",
+      "bytes": 31584,
+      "sha256": "5d0bf5827dda4c3e50a3b46975fd33975ed089acd4fb37783019a84f0e6841ce",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-actualites/EspaceActualites.dc.html",
+      "mediaType": "text/html",
+      "bytes": 31128,
+      "sha256": "c58b95367edcc7aba125d0e21275c3ab208bea4647caad22fdc3637f9caaf7f4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-agenda-evenement/EspaceAgendaEvenement.dc.html",
+      "mediaType": "text/html",
+      "bytes": 50047,
+      "sha256": "4cfde07d30e4175b0cdeda0b69f76d77393dab5c13646263a1b46357f97e9a9d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-agenda/EspaceAgenda.dc.html",
+      "mediaType": "text/html",
+      "bytes": 41859,
+      "sha256": "0b13dad2e647de2531582ddca683533b594e5b1dc70124a73039536229e09666",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-ateliers/EspaceAteliers.dc.html",
+      "mediaType": "text/html",
+      "bytes": 35048,
+      "sha256": "e7ea14ad907c22e120066ab6d703738255021bb29c006ab8ac70d8ee01694197",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-connexion/EspaceConnexion.dc.html",
+      "mediaType": "text/html",
+      "bytes": 11290,
+      "sha256": "e900a1f091c5d7689f105dd6a9e64bd7ddf514d435e5ccc2eabf980e015eead9",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-coordination-actualites/EspaceCoordinationActualites.dc.html",
+      "mediaType": "text/html",
+      "bytes": 53205,
+      "sha256": "304cedfdb01fce43138d49a6d1e185d05f0c1fa4768d4cfef95a296ba1ad04ba",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-coordination-agenda/EspaceCoordinationAgenda.dc.html",
+      "mediaType": "text/html",
+      "bytes": 89307,
+      "sha256": "76150cab5b2bc1f07786106df620a6de34234cd6c686e3527b8449aea22cf204",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-coordination-membres/EspaceCoordinationMembres.dc.html",
+      "mediaType": "text/html",
+      "bytes": 63885,
+      "sha256": "0e8ffd3181f115a321c70b1f0950a412d447ff3f6e2c2fe8ab1761f12704be9f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-en-attente/EspaceEnAttente.dc.html",
+      "mediaType": "text/html",
+      "bytes": 8736,
+      "sha256": "da6da29d0d34ff2195fba3587f280390bb7f7f5737f7e12be62c9a83e5f36b1f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-inscription/EspaceInscription.dc.html",
+      "mediaType": "text/html",
+      "bytes": 15162,
+      "sha256": "fb455fb7d687a6bea20ce8b08292f201f985e5cd58ce33bc32ce74fd40ea336d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-membre/EspaceMembre.dc.html",
+      "mediaType": "text/html",
+      "bytes": 46564,
+      "sha256": "994f321a07b43e0e2d0c99d488314e943b6a535b067f0eb4185846240f05d306",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-membres/EspaceMembres.dc.html",
+      "mediaType": "text/html",
+      "bytes": 31242,
+      "sha256": "2438a14941a15701eeea4804bb34264541f1687fc4394e9f92f04467803295b6",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-profil/EspaceProfil.dc.html",
+      "mediaType": "text/html",
+      "bytes": 30789,
+      "sha256": "3bdc380e145c713c9a11affe3fe97c94ba30ae1d76652f1b3af6070c15129473",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-proposer/EspaceProposer.dc.html",
+      "mediaType": "text/html",
+      "bytes": 29487,
+      "sha256": "169764fdd26e359c135f5ddd9b1ed97663af21f23e272608a775a409dd529fed",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-proposition/EspaceProposition.dc.html",
+      "mediaType": "text/html",
+      "bytes": 112653,
+      "sha256": "abe8b9426a98cdc57fbfac6c063c76b52a837eed9d5cf58b02177bedbe3da60a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-suivi-date/EspaceSuiviDate.dc.html",
+      "mediaType": "text/html",
+      "bytes": 75640,
+      "sha256": "671673014228e77f0ff20e43c2a94f80db2412c3b4cb24a130989a0a14ac4146",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-suivi/EspaceSuivi.dc.html",
+      "mediaType": "text/html",
+      "bytes": 68744,
+      "sha256": "a0c2e35e41eefd8341f07927c69afcc740d82e4dda55c8295be3bd882c533654",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/espace-validation/EspaceValidation.dc.html",
+      "mediaType": "text/html",
+      "bytes": 40476,
+      "sha256": "6d22943283566670de0a3b96dd72e41205a351fe4ae71440ce1ee003380ed85d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/home/Home.dc.html",
+      "mediaType": "text/html",
+      "bytes": 87901,
+      "sha256": "6e12b907c8c94fa3d96e522369c1fa3cd73174453dd7310c9eece7bd89056b20",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/le-consentement/LeConsentement.dc.html",
+      "mediaType": "text/html",
+      "bytes": 117092,
+      "sha256": "4ca2d3c68873795289672cf0fbd866d2f862385a78256d4a798d25343406c829",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/mentions-legales/MentionsLegales.dc.html",
+      "mediaType": "text/html",
+      "bytes": 113714,
+      "sha256": "f9359acd61f3154193fff3539d020a5dcff161a38ae241802cf175e2e22c31a9",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/newsletter/Newsletter.dc.html",
+      "mediaType": "text/html",
+      "bytes": 8604,
+      "sha256": "f5495e6bc8d9578c4c4fd51b70ad454cbe212a55d3b87e74b81396bec72d580d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/nos-ateliers/NosAteliers.dc.html",
+      "mediaType": "text/html",
+      "bytes": 182939,
+      "sha256": "305fd7479e3c7ef48b9cd7cb8319ad61075072acad835d13fb6fc9cdf81a0a38",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/nos-interventions/NosInterventions.dc.html",
+      "mediaType": "text/html",
+      "bytes": 78946,
+      "sha256": "9547141fdf60a0e3d03bbb57b991b48c4dd08a487c9147cc5c750982021927ae",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/nos-stands/NosStands.dc.html",
+      "mediaType": "text/html",
+      "bytes": 55386,
+      "sha256": "d795f26fc4cdd6b4d8840b82525de9e33ab5bf4d20afcc191fb851a8afae1759",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/notre-mission/NotreMission.dc.html",
+      "mediaType": "text/html",
+      "bytes": 176679,
+      "sha256": "65f374b40d9bc59b0d871b5ed26051a1533027cefa9573b8834029d91ddfc9e9",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/pages.css",
+      "mediaType": "text/css",
+      "bytes": 317078,
+      "sha256": "046eae4dfaebf5a6fbbd0795c24c123c6fb6a952bb14995f7cb4717c711ceba4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/ressources/Ressources.dc.html",
+      "mediaType": "text/html",
+      "bytes": 89531,
+      "sha256": "0a1f30871fffe704d0cbf32d1c6d3f28a90fe050cec4eeb1000231adb0c8a5e7",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/canvas/vos-idees/VosIdees.dc.html",
+      "mediaType": "text/html",
+      "bytes": 52141,
+      "sha256": "dfe799dd5108882d67f9e3e050df3aa9f73cb2ceae1c1de7b477f12a7b6481d8",
+      "role": "adapter"
     },
     {
       "path": "adapters/claude-design/project/README.md",
@@ -1434,7 +1693,7 @@
       "path": "adapters/claude-design/project/components/bundle.css",
       "mediaType": "text/css",
       "bytes": 347942,
-      "sha256": "36a29d1ee00c2a139abb85468f960cca569fbbd609ee40c45da0a0f38a7fc022",
+      "sha256": "3d1cf5c5c9b83e5f7ef270070bdc646a57c209fd45cd6e25494f2efa691b1ed8",
       "role": "adapter"
     },
     {
@@ -1469,21 +1728,252 @@
       "path": "adapters/claude-design/project/tokens.json",
       "mediaType": "application/json",
       "bytes": 17913,
-      "sha256": "1f145af8ed8b9b3a7a881cd2ebc604034ff02500765a5c2ec72bc882713c0311",
+      "sha256": "7acaae83e8c8f357f8017d4fb93daf19cd0101dabfa22ed8f34798f69ba9b37c",
       "role": "adapter"
     },
     {
       "path": "adapters/figma/dark.tokens.json",
       "mediaType": "application/json",
-      "bytes": 18090,
-      "sha256": "70620aec7e787ae7b459f5b2ba3e170d6d25f82741408acab9555bd29a570ea2",
+      "bytes": 18064,
+      "sha256": "d2af0cf34a27cff761dcb050b1151169d4ee0b23629e32125780d4855c4e17b2",
       "role": "adapter"
     },
     {
       "path": "adapters/figma/light.tokens.json",
       "mediaType": "application/json",
-      "bytes": 18077,
-      "sha256": "41a2c809689d2059e89fcda1c861f64b2e1af0f9e87ece24b5a3ea0c99c82c5b",
+      "bytes": 18051,
+      "sha256": "fb9f71bfb10d3518a9e26172489c1562ee1e90b3e635a028ef62e0ff82e507cf",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/atelier.figma.json",
+      "mediaType": "application/json",
+      "bytes": 77846,
+      "sha256": "aae22f9bf2b0ba86c514c3e2e82e99f5042d146bd87612d205afbcfb46491457",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/devenir-benevole.figma.json",
+      "mediaType": "application/json",
+      "bytes": 297000,
+      "sha256": "44af89a65f684d61f269f2630457a85446201606f6af83b4a11989a35e60f44e",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-accueil.figma.json",
+      "mediaType": "application/json",
+      "bytes": 47806,
+      "sha256": "83657a1055fc10a7ac83d7ed3068d8a1329f080808f6ef3c75aff602d4b5dfad",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-actualite.figma.json",
+      "mediaType": "application/json",
+      "bytes": 8717,
+      "sha256": "692de9c7d266f6b6e2e6967e84fc3c77f6702f6d4082ff3c6bb28b8434fea1ea",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-actualites.figma.json",
+      "mediaType": "application/json",
+      "bytes": 6800,
+      "sha256": "3f7dc67f6e11ee2da6d93115d7cc9f7fc0df71b15ca1dc010c09d2e818e24644",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-agenda-evenement.figma.json",
+      "mediaType": "application/json",
+      "bytes": 48974,
+      "sha256": "eaccf48942ff36eae4a1e3b1a20c3f3558be6e8e54719693bac8649a392add38",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-agenda.figma.json",
+      "mediaType": "application/json",
+      "bytes": 13200,
+      "sha256": "d22316585e4d7683ad38132c183685c82f5a80c03b12e753910932e52ca179f1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-ateliers.figma.json",
+      "mediaType": "application/json",
+      "bytes": 15999,
+      "sha256": "b89b214fc2631ddb6052f405ff42021a403a2baf17689d89784ed1e19f93f8e0",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-connexion.figma.json",
+      "mediaType": "application/json",
+      "bytes": 12764,
+      "sha256": "4ed7f0b70d73c39292e5b1a5d0e821efd33b74b3c72121738b55d891cdf6624c",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-coordination-actualites.figma.json",
+      "mediaType": "application/json",
+      "bytes": 19048,
+      "sha256": "9d08269ceb9725720ee98e1992ad05c4b748c48b7ad8b29a8de2d0fd88f71f38",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-coordination-agenda.figma.json",
+      "mediaType": "application/json",
+      "bytes": 50329,
+      "sha256": "6f03aeb5657a577ccfc15040eae043913a983dd893fe5448b7a682b551422a5d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-coordination-membres.figma.json",
+      "mediaType": "application/json",
+      "bytes": 40920,
+      "sha256": "517253ecbe25dbba2c62009594ab918a43b0bb3798d38883c658b0abfe1aec68",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-en-attente.figma.json",
+      "mediaType": "application/json",
+      "bytes": 16039,
+      "sha256": "1629f08d5142df9e544232643164cc419ed655e3395c787b9bb0cb34b0029671",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-inscription.figma.json",
+      "mediaType": "application/json",
+      "bytes": 23246,
+      "sha256": "1b8de4bacc8e62a4914e633cb45aecbaaee5acd5d670d87db782a499a283f9dd",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-membre.figma.json",
+      "mediaType": "application/json",
+      "bytes": 32627,
+      "sha256": "0494b9e534f646f40b544203593c449cdbd8aea72801568d0ae79e3121ac06d8",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-membres.figma.json",
+      "mediaType": "application/json",
+      "bytes": 6780,
+      "sha256": "02b373e35634e943035c1d94113f2f3135d0f557502a8dc16507f8e2ed3be55b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-profil.figma.json",
+      "mediaType": "application/json",
+      "bytes": 7680,
+      "sha256": "e5753d2eaa8d91bc35f31b3b3f59076244cc61b078fe7e7e55de6faf5e73ea52",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-proposer.figma.json",
+      "mediaType": "application/json",
+      "bytes": 5439,
+      "sha256": "4a124b1bc14b67d414d197ad78fbc1a599e33d6ba25df1608dd4ac630ce39f8c",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-proposition.figma.json",
+      "mediaType": "application/json",
+      "bytes": 100976,
+      "sha256": "edfb2eea39dd5b1b776f10ee19d46f5625c17d41875ed503e759106ebae78523",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-suivi-date.figma.json",
+      "mediaType": "application/json",
+      "bytes": 96830,
+      "sha256": "bd2f128c4cef9f8b2fd8d2043550b8894095cce73fd64eb5b1ce631f7e19ee66",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-suivi.figma.json",
+      "mediaType": "application/json",
+      "bytes": 41176,
+      "sha256": "c6ef7c6e8f674571b2bbc6475dcc03087e8931651fde3558f6a59c10e8067262",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/espace-validation.figma.json",
+      "mediaType": "application/json",
+      "bytes": 24178,
+      "sha256": "31bfb23e366d12f8e89b8f79f048ca5b68995219d9a1e7542c956b74103bd45b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/home.figma.json",
+      "mediaType": "application/json",
+      "bytes": 280074,
+      "sha256": "0bf87a83edba41174e3a30f86e9ca758ee02c109ee6bef6e02b5be9583546d79",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/le-consentement.figma.json",
+      "mediaType": "application/json",
+      "bytes": 441668,
+      "sha256": "b3c015e86bfe77de139aadd8be3c21c1ddb3574e7cb404f267b7ed49a2f4b45a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/mentions-legales.figma.json",
+      "mediaType": "application/json",
+      "bytes": 169058,
+      "sha256": "9211847d194c6049bc5fdf2aeae77679a391d46344735c86975de87e241dd5f2",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/newsletter.figma.json",
+      "mediaType": "application/json",
+      "bytes": 19377,
+      "sha256": "aa63633eb491efd40c7865bd9695e8a8e8da7fa63a025f48e32d714e177feff3",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/nos-ateliers.figma.json",
+      "mediaType": "application/json",
+      "bytes": 624862,
+      "sha256": "d6756259fdce1588466b25f38f70085803585cc6946e6ad7ecbfcc9b1c02fcee",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/nos-interventions.figma.json",
+      "mediaType": "application/json",
+      "bytes": 170671,
+      "sha256": "c7533247e965f8cf8e5f7794237f7810db56dbfc14ad6b3615d0940bad0b281b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/nos-stands.figma.json",
+      "mediaType": "application/json",
+      "bytes": 102516,
+      "sha256": "46cf751b37db5d0511f31efe7e77923d40a4b765ed62942451d214c0b3e6e857",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/notre-mission.figma.json",
+      "mediaType": "application/json",
+      "bytes": 696491,
+      "sha256": "b218c71e76083ec304dac8036525fb7aa439202527cb2e11460c38c9b829fb74",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/ressources.figma.json",
+      "mediaType": "application/json",
+      "bytes": 354883,
+      "sha256": "080bf8f2438cf29114f90b3e24af3f71b4a457e2525a6d9881e861f38a9ad3d4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/pages/vos-idees.figma.json",
+      "mediaType": "application/json",
+      "bytes": 95965,
+      "sha256": "91d77492ab229d792af46368ac79b9478acfb1df7acb5968a14b7aefe5d5f72a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/penpot/mercipourtonnon.penpot",
+      "mediaType": "application/zip",
+      "bytes": 3241317,
+      "sha256": "891b9cca8a2f2c9d8cdf296af81795f850a5435f6c2509efd5c24e4fbff40f56",
       "role": "adapter"
     },
     {
@@ -1504,7 +1994,7 @@
       "path": "adapters/tokens-studio/tokens.json",
       "mediaType": "application/json",
       "bytes": 14049,
-      "sha256": "243bb00c8c54d6fbcb3fec726f91261843e5253dbb17e23ead5b62716e6a2f52",
+      "sha256": "2b1de5aa8fc007e7dc349de7b4dd85649b617026b55be3bec9ff3a8a9d1d16f6",
       "role": "adapter"
     },
     {
@@ -1889,7 +2379,7 @@
       "path": "components/kit.css",
       "mediaType": "text/css",
       "bytes": 348306,
-      "sha256": "301de8228404940d4337425824ca206ffd07c8c429a7d2eddbc3b198b5b2a679",
+      "sha256": "3b20901b43d2450d471bef8b5098c69002efdcb3f9948b51497fbbdd995de3f1",
       "role": "kit"
     },
     {
@@ -2267,7 +2757,7 @@
       "path": "css/theme.css",
       "mediaType": "text/css",
       "bytes": 3532,
-      "sha256": "443ca774d201bd2170ed7cf9476090de72dbcf2f98ea1f0b5585bdb8a49a36ac",
+      "sha256": "1b822532b98db4a482670113f25b436611698bd690b18fe15b6de27135eaf79b",
       "role": "css"
     },
     {
@@ -2292,17 +2782,479 @@
       "role": "index"
     },
     {
+      "path": "pages/atelier.page.html",
+      "mediaType": "text/html",
+      "bytes": 26632,
+      "sha256": "ca8e7b3ef1ac03394e9b955520471a9b64176e7f8b1cb9a873fd91599c23800e",
+      "role": "page"
+    },
+    {
+      "path": "pages/atelier.tree.json",
+      "mediaType": "application/json",
+      "bytes": 16816,
+      "sha256": "55cf26ba043c363fcd340dc4149c92e39afa431c6efa8d277734fb1ce3960439",
+      "role": "page"
+    },
+    {
+      "path": "pages/devenir-benevole.page.html",
+      "mediaType": "text/html",
+      "bytes": 67211,
+      "sha256": "3fd906d0fd3ce8ca28a5923c100b54445f8b60a63a7b29d31f95d5e1a4446c82",
+      "role": "page"
+    },
+    {
+      "path": "pages/devenir-benevole.tree.json",
+      "mediaType": "application/json",
+      "bytes": 33952,
+      "sha256": "7be34c5cb2fb691bb6b7f57a43ce84330a11f611218cb770b653aa7cdce83962",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-accueil.page.html",
+      "mediaType": "text/html",
+      "bytes": 47767,
+      "sha256": "6e9a5981ea6cc098f87efa3e9010cdd60482b1bdfb3213de206194b05a299465",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-accueil.tree.json",
+      "mediaType": "application/json",
+      "bytes": 10933,
+      "sha256": "351647e60c00651cb570b5d1ddbd434b2ff956cd6187eaa727a971633993eb8d",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-actualite.page.html",
+      "mediaType": "text/html",
+      "bytes": 29937,
+      "sha256": "686bc60339295582ce2c343bff9f8e713c9c6b94d06a5b949105c43a020f880a",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-actualite.tree.json",
+      "mediaType": "application/json",
+      "bytes": 2233,
+      "sha256": "09b26042e826ab4c6a84bf0af7ae49d1bad2476989407669b2f2a65b4ac6653f",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-actualites.page.html",
+      "mediaType": "text/html",
+      "bytes": 30346,
+      "sha256": "e0dfa0a7fac1da0bcf68c011afbad52cb0528a7d542afed4e596be0e09b5d3f2",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-actualites.tree.json",
+      "mediaType": "application/json",
+      "bytes": 1933,
+      "sha256": "d07a235c0bc47c2912b443717fe839d0f7fb8e8d47ee5f9b23dbdbda8433cf4e",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-agenda-evenement.page.html",
+      "mediaType": "text/html",
+      "bytes": 43743,
+      "sha256": "9d3b9400d27c63c06f7f498c8c7133f103f04c692022ba20df024a61bcda732b",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-agenda-evenement.tree.json",
+      "mediaType": "application/json",
+      "bytes": 10493,
+      "sha256": "96d24d059b87403c84ba3bf867e708e69c0ce56ff917d24c8af5b1dfb7cb7ca4",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-agenda.page.html",
+      "mediaType": "text/html",
+      "bytes": 39430,
+      "sha256": "9cffee8727bce06208c663ec7e1794df7d7091d4528f4ab73ec71732a6ad20d7",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-agenda.tree.json",
+      "mediaType": "application/json",
+      "bytes": 4764,
+      "sha256": "9d53e85e416aaee5b3345a092ede4cf836bb99de153ca8c9db013c8c4c7346f5",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-ateliers.page.html",
+      "mediaType": "text/html",
+      "bytes": 33906,
+      "sha256": "85c5c0d1a34ed9917643d0551bdf92a0fc398fea17bce02d459e1bb9a690707a",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-ateliers.tree.json",
+      "mediaType": "application/json",
+      "bytes": 1846,
+      "sha256": "f995753d0e6de8a060ab687cdf40ef960e88c35acdcb0b6cbe8097c29e7cdca1",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-connexion.page.html",
+      "mediaType": "text/html",
+      "bytes": 8839,
+      "sha256": "4bb379fb41da4263c2dfe85a545150496938a802a0d3072b5ba79f98e20ba431",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-connexion.tree.json",
+      "mediaType": "application/json",
+      "bytes": 3643,
+      "sha256": "fefb8cb183b5634b5cda90e1b985bd77dd1f418b2b4267ea5d25d6ce8f497405",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-coordination-actualites.page.html",
+      "mediaType": "text/html",
+      "bytes": 51005,
+      "sha256": "d85befb75d0482558e1182a719aff57c5071dfa27b6e5956838e0b55358e9d74",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-coordination-actualites.tree.json",
+      "mediaType": "application/json",
+      "bytes": 3558,
+      "sha256": "fb6a5d014e25309391dab1b8cdc12ca63b4573048caae12a7aa21014bbe3f8f5",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-coordination-agenda.page.html",
+      "mediaType": "text/html",
+      "bytes": 83903,
+      "sha256": "15890e1be0693618d902d78aba7312d9732636b5678e31460566967b46ea1bcb",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-coordination-agenda.tree.json",
+      "mediaType": "application/json",
+      "bytes": 9022,
+      "sha256": "8a4c8e842780e010547b93508672f29375675edae88d6b6dc88834fa84698cef",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-coordination-membres.page.html",
+      "mediaType": "text/html",
+      "bytes": 60279,
+      "sha256": "cd0ad6abac86c459c255fd345b25e2e5800935451705963f908325c72e7f0beb",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-coordination-membres.tree.json",
+      "mediaType": "application/json",
+      "bytes": 6118,
+      "sha256": "587e807040f2a7e88783d2359d13d3181757b4bb8567beb32114ef701fde2c38",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-en-attente.page.html",
+      "mediaType": "text/html",
+      "bytes": 5776,
+      "sha256": "d992fb222d10e1601465bd607223fb0ad848fdfbcc02264d04c35f678eddb3aa",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-en-attente.tree.json",
+      "mediaType": "application/json",
+      "bytes": 5242,
+      "sha256": "66b24d02473685bb35763972191a124a3dcf16a89d83e720043bc9b8c8fdab73",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-inscription.page.html",
+      "mediaType": "text/html",
+      "bytes": 11108,
+      "sha256": "d2c397666beb2bb59a410641c46f460b1095505a8c288ef6767b91b95bca85c0",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-inscription.tree.json",
+      "mediaType": "application/json",
+      "bytes": 6677,
+      "sha256": "e0b01cdecaf54215622fdafc852704bbd2201d1e6bcf5a5a798b2a14d2efb63a",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-membre.page.html",
+      "mediaType": "text/html",
+      "bytes": 39109,
+      "sha256": "bcd6bdbba6a3a2b2123984d94248312ffe4912beb84b476967eea34765690e50",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-membre.tree.json",
+      "mediaType": "application/json",
+      "bytes": 12872,
+      "sha256": "2f51e7acad0f5637dd16cab4681a6d2a6c130a2165c584107ff22c006b05b93f",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-membres.page.html",
+      "mediaType": "text/html",
+      "bytes": 30456,
+      "sha256": "2812dae22d9ada07fa15a285b14ed0a5f97d293977e9629d0631164541133718",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-membres.tree.json",
+      "mediaType": "application/json",
+      "bytes": 1931,
+      "sha256": "afc8669ee8320b2cda3041413b5deac08bac4a345136dcecc071fbaa609742c4",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-profil.page.html",
+      "mediaType": "text/html",
+      "bytes": 29447,
+      "sha256": "329837bb7ba8a60f3dbf8b730524de4a298888b463471183c03481b6acea7ee4",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-profil.tree.json",
+      "mediaType": "application/json",
+      "bytes": 2003,
+      "sha256": "894debd766f21172361191b95223f1c1accf8e1989084b4d8a9a8d3ed8823943",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-proposer.page.html",
+      "mediaType": "text/html",
+      "bytes": 28673,
+      "sha256": "2b86d8528110d30d32c9d8ad9a81a937393a139c1972bfd263be82424096cffc",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-proposer.tree.json",
+      "mediaType": "application/json",
+      "bytes": 950,
+      "sha256": "b9b9d8cf0974aa362649fe8202ab8bd5a94c2522edc2e4f7a21bf6241c142852",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-proposition.page.html",
+      "mediaType": "text/html",
+      "bytes": 101986,
+      "sha256": "955fa5207c0595169eb434a455475ae4adf9d604a720653242241653f895bb17",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-proposition.tree.json",
+      "mediaType": "application/json",
+      "bytes": 20288,
+      "sha256": "2acd41750c2fbb765fb5c4006751d35f650ffb2905a5ab38ccb23b67c221085c",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-suivi-date.page.html",
+      "mediaType": "text/html",
+      "bytes": 69255,
+      "sha256": "f25de500bfa3b851750bf301f90e0e9d1fb2627b5ac28808aa28c7d4cca973ed",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-suivi-date.tree.json",
+      "mediaType": "application/json",
+      "bytes": 11042,
+      "sha256": "c820183e13fea21f50fc6879930a2cca6c0eb1210584808a1fc618b13559c446",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-suivi.page.html",
+      "mediaType": "text/html",
+      "bytes": 65671,
+      "sha256": "8454691cc026ecdd314ff47f9eda236f3c276de755fa9130916b58936bc287ce",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-suivi.tree.json",
+      "mediaType": "application/json",
+      "bytes": 4940,
+      "sha256": "a600383db320a47cdec296db6a4e236253269dd274a2882e05d7b5943bfcca63",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-validation.page.html",
+      "mediaType": "text/html",
+      "bytes": 38604,
+      "sha256": "7d97c9aa4d985370734de6d7eb8f1da211047432e88a358c971952e8765b3f67",
+      "role": "page"
+    },
+    {
+      "path": "pages/espace-validation.tree.json",
+      "mediaType": "application/json",
+      "bytes": 3187,
+      "sha256": "1211e894149a121b53cc71b69aa7215feb49ed0b8a5efd9fcfeab39602af2ccd",
+      "role": "page"
+    },
+    {
+      "path": "pages/home.page.html",
+      "mediaType": "text/html",
+      "bytes": 74319,
+      "sha256": "1f6a6628c571b1db63cf03b6ab50efef607b6058607c29b9ccd9900de96fe997",
+      "role": "page"
+    },
+    {
+      "path": "pages/home.tree.json",
+      "mediaType": "application/json",
+      "bytes": 36818,
+      "sha256": "daf846315b7eb9378273af69cca3cfcb88f1ae1f3a845037292f912ae2cbe13c",
+      "role": "page"
+    },
+    {
+      "path": "pages/le-consentement.page.html",
+      "mediaType": "text/html",
+      "bytes": 94521,
+      "sha256": "72875a4f8192e17925077106786f6a248b96b8970223272eb3b32b4e345efbbf",
+      "role": "page"
+    },
+    {
+      "path": "pages/le-consentement.tree.json",
+      "mediaType": "application/json",
+      "bytes": 66392,
+      "sha256": "41f1302c2a042b1b9e0b24d4c4962a855cbfe86f8d51a979834b90fb449e5c0d",
+      "role": "page"
+    },
+    {
+      "path": "pages/mentions-legales.page.html",
+      "mediaType": "text/html",
+      "bytes": 76946,
+      "sha256": "7c93fb5fde9c16cb5a7bd5e4c0730fbb5f130c451e5bf6907635ab179a64c24a",
+      "role": "page"
+    },
+    {
+      "path": "pages/mentions-legales.tree.json",
+      "mediaType": "application/json",
+      "bytes": 71509,
+      "sha256": "1fa3e24a6506aa13ce2895c2b17659cbe8d7571f60214e01d5df7e7ca5b3e9e8",
+      "role": "page"
+    },
+    {
+      "path": "pages/newsletter.page.html",
+      "mediaType": "text/html",
+      "bytes": 4985,
+      "sha256": "41073bb4a2a0d4f934dafa3b6efab6185943fcae74876cdbd1603ea6638dc77e",
+      "role": "page"
+    },
+    {
+      "path": "pages/newsletter.tree.json",
+      "mediaType": "application/json",
+      "bytes": 5625,
+      "sha256": "a54af5faf0e1d8640abbd082c0c5482c822e18badb2ac4556665c44bd13b58d3",
+      "role": "page"
+    },
+    {
+      "path": "pages/node-map.json",
+      "mediaType": "application/json",
+      "bytes": 570611,
+      "sha256": "f5a3e92663fd411e9984989cf2a97e4fbbdcfd3e45e7d9562b9f15dea70991a2",
+      "role": "page"
+    },
+    {
+      "path": "pages/nos-ateliers.page.html",
+      "mediaType": "text/html",
+      "bytes": 142354,
+      "sha256": "514a261c0ea052986477458a361c576b15172c5f6fd426dc3a818f53db119df9",
+      "role": "page"
+    },
+    {
+      "path": "pages/nos-ateliers.tree.json",
+      "mediaType": "application/json",
+      "bytes": 99543,
+      "sha256": "6c51d2eddd4dac45f4f5270ceaa0e9ee9d2e2b4d5ab174e953a2a09ccf46b3d0",
+      "role": "page"
+    },
+    {
+      "path": "pages/nos-interventions.page.html",
+      "mediaType": "text/html",
+      "bytes": 67245,
+      "sha256": "6e822813f1de4fbd8e824d3730a393ca89b3372ce60d946d4c697a0f3e5f29a8",
+      "role": "page"
+    },
+    {
+      "path": "pages/nos-interventions.tree.json",
+      "mediaType": "application/json",
+      "bytes": 34035,
+      "sha256": "e93920f7e3e8713b7c739c7eaa3350cf7ccefacf3193675b997147ba0c26f5a1",
+      "role": "page"
+    },
+    {
+      "path": "pages/nos-stands.page.html",
+      "mediaType": "text/html",
+      "bytes": 51673,
+      "sha256": "0b24695fb7c119361de043984589dd184f5b39bfe2ce424cb884a69df9e5be26",
+      "role": "page"
+    },
+    {
+      "path": "pages/nos-stands.tree.json",
+      "mediaType": "application/json",
+      "bytes": 15617,
+      "sha256": "455d308f0d527153627013ac32e010176d4be12c5aad926575377e131f4215ab",
+      "role": "page"
+    },
+    {
+      "path": "pages/notre-mission.page.html",
+      "mediaType": "text/html",
+      "bytes": 144503,
+      "sha256": "95f57e0082798512cff7449dc8a5c3664c549d5f8f52c33b3bd53cb5b0120c54",
+      "role": "page"
+    },
+    {
+      "path": "pages/notre-mission.tree.json",
+      "mediaType": "application/json",
+      "bytes": 86699,
+      "sha256": "7d209b36992db819c1859624b57b10ab8b2efe8da202dc79d9dad0bf51bf796c",
+      "role": "page"
+    },
+    {
+      "path": "pages/pages.css",
+      "mediaType": "text/css",
+      "bytes": 317046,
+      "sha256": "48a335d50b0d225c80bc1f7e8836949033b1b1840ed610399c24e1731e76cb68",
+      "role": "page"
+    },
+    {
+      "path": "pages/ressources.page.html",
+      "mediaType": "text/html",
+      "bytes": 79733,
+      "sha256": "b4032f533db952444a9ffcff1c9605cacc3ea2c0c03d9fbd3619cdd4d10bdee0",
+      "role": "page"
+    },
+    {
+      "path": "pages/ressources.tree.json",
+      "mediaType": "application/json",
+      "bytes": 40610,
+      "sha256": "95ff825e2fd4e6102c0436b65d53beb60efba7bf25dc693892e4721b4c4f1bf1",
+      "role": "page"
+    },
+    {
+      "path": "pages/vos-idees.page.html",
+      "mediaType": "text/html",
+      "bytes": 46382,
+      "sha256": "d9dd9c9e8c6b860bf8241bc454a8cfbfd1025c1e34e53a1a80b23b50f908d202",
+      "role": "page"
+    },
+    {
+      "path": "pages/vos-idees.tree.json",
+      "mediaType": "application/json",
+      "bytes": 17059,
+      "sha256": "6cbd9fcac7edd2e693fcf37798287b9e8db120012cff02c81d9b68c77b48f2f2",
+      "role": "page"
+    },
+    {
       "path": "tokens/base.tokens.json",
       "mediaType": "application/json",
-      "bytes": 43185,
-      "sha256": "65251c5b0d79d90da4ffa7f99a947e1e27adc72c8474bef8ea9f5410a0aa3886",
+      "bytes": 43159,
+      "sha256": "e68c8ae2eaab9c735e6b3a12ab32a5e87d776fd2e5b43c749fd7342b67d81fd2",
       "role": "tokens"
     },
     {
       "path": "tokens/dark.tokens.json",
       "mediaType": "application/json",
-      "bytes": 43240,
-      "sha256": "e4f8ff11f59667c619c55e66a42e49ed30468336b4fa5d5eaafb1c331b1f1460",
+      "bytes": 43214,
+      "sha256": "9b7cd51170c1b9027abfeb5f17ae63aabdfa1ccf84eb6b949843d9c713e5741e",
       "role": "tokens"
     },
     {
@@ -2316,6 +3268,7 @@
   "adapters": [
     "claude-design",
     "figma",
+    "penpot",
     "style-dictionary",
     "tokens-studio"
   ]

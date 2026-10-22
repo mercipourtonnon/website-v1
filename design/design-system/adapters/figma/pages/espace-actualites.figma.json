@@ -1,0 +1,198 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-actualites",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-actualites:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-actualites:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-actualites:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 4,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-actualites:/components/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "actualités",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-actualites:/components/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Ce qui bouge dans l'asso. Les actualités importantes arrivent aussi dans ta boîte mail.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "list",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-actualites:/components/0/children/0/children/1",
+                            "type": "list"
+                          },
+                          "locked": true,
+                          "layoutMode": "VERTICAL",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-actualites:/components/0",
+      "contentHash": "7c6995570648cf55ae531b1da0a51ac1b824ab432e216e02f155931fa633925e"
+    },
+    {
+      "id": "espace-actualites:/components/0/children/0",
+      "contentHash": "1af942922690cba0258ac5825e5a4cf5ac06f200cde11106b68adaea4557dfb6"
+    },
+    {
+      "id": "espace-actualites:/components/0/children/0/children/0",
+      "contentHash": "fc99f96da27bb42a32bff04fe8f9d29536b6a14811286834db3ba16617a56c29"
+    },
+    {
+      "id": "espace-actualites:/components/0/children/0/children/0/children/0",
+      "contentHash": "1ae16f3273794cde04690dda2aec06c2d2076d024701ead09ebbef2e4b494306"
+    },
+    {
+      "id": "espace-actualites:/components/0/children/0/children/0/children/1",
+      "contentHash": "f1f3198461a941bedee3fd6a0f1b44124b26c57132c442b8a5c9138c4dccbf21"
+    },
+    {
+      "id": "espace-actualites:/components/0/children/0/children/1",
+      "contentHash": "356544408baac05b2ca9944663b386d3300468c9bc06b63724b565d14496bd36"
+    }
+  ]
+}

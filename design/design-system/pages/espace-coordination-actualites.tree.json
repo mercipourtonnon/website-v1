@@ -1,0 +1,102 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "espace-coordination-actualites",
+  "nodes": [
+    {
+      "id": "espace-coordination-actualites:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": [
+        {
+          "id": "espace-coordination-actualites:/components/0/children/0",
+          "type": "container",
+          "layout": {
+            "direction": {
+              "value": "column"
+            },
+            "gap": {
+              "value": "2rem"
+            }
+          },
+          "children": [
+            {
+              "id": "espace-coordination-actualites:/components/0/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.25rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-coordination-actualites:/components/0/children/0/children/0/children/0",
+                  "type": "text",
+                  "content": "actualités à publier",
+                  "children": []
+                },
+                {
+                  "id": "espace-coordination-actualites:/components/0/children/0/children/0/children/1",
+                  "type": "text",
+                  "content": "Écris une actualité en brouillon, coche « Envoyer par email » si elle doit partir dans les boîtes mail, puis passe-la en « Publiée ». L'email ne part qu'une fois.",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-coordination-actualites:/components/0/children/0/children/1",
+              "type": "alert",
+              "content": "Publier avec « Envoyer par email » coché envoie tout de suite une campagne à toute la liste des bénévoles. Relis le titre, le chapô et l'article avant de changer le statut.",
+              "children": []
+            },
+            {
+              "id": "espace-coordination-actualites:/components/0/children/0/children/2",
+              "type": "container",
+              "layout": {
+                "align": {
+                  "value": "center"
+                },
+                "gap": {
+                  "value": "0.5rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-coordination-actualites:/components/0/children/0/children/2/children/0",
+                  "type": "search-input",
+                  "layout": {
+                    "width": {
+                      "value": "100%"
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "id": "espace-coordination-actualites:/components/0/children/0/children/2/children/1",
+                  "type": "filter-bar",
+                  "children": []
+                },
+                {
+                  "id": "espace-coordination-actualites:/components/0/children/0/children/2/children/2",
+                  "type": "button",
+                  "variant": "outline",
+                  "size": "sm",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-coordination-actualites:/components/0/children/0/children/3",
+              "type": "table",
+              "locked": "island",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

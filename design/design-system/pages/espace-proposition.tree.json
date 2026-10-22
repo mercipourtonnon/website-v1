@@ -1,0 +1,467 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "espace-proposition",
+  "nodes": [
+    {
+      "id": "espace-proposition:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": [
+        {
+          "id": "espace-proposition:/components/0/children/0",
+          "type": "container",
+          "layout": {
+            "direction": {
+              "value": "column"
+            },
+            "gap": {
+              "value": "2rem"
+            }
+          },
+          "children": [
+            {
+              "id": "espace-proposition:/components/0/children/0/children/0",
+              "type": "container",
+              "children": [
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/0/children/0",
+                  "type": "link",
+                  "content": "← Mes propositions",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/0/children/1",
+                  "type": "link",
+                  "content": "← À valider",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/1",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.5rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/1/children/0",
+                  "type": "text",
+                  "content": "proposition de date",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/1/children/1",
+                  "type": "text",
+                  "content": "Atelier de consentement, niveau 1, 3h, prix libre.",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/2",
+              "type": "alert",
+              "content": "Ta proposition attend la relecture de l'équipe. Tu peux la modifier ou la supprimer d'ici là.",
+              "children": []
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/3",
+              "type": "alert",
+              "content": "Proposition validée. La création de l'événement sur HelloAsso est en cours, ça prend quelques secondes. Recharge la page pour voir la suite.",
+              "children": []
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/4",
+              "type": "alert",
+              "content": "Proposition validée. L'équipe prépare la page d'inscription sur HelloAsso ; la date apparaîtra sur le site dès qu'elle sera prête.",
+              "children": []
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/5",
+              "type": "alert",
+              "content": "Cette date est en ligne sur le site, les inscriptions sont ouvertes.",
+              "children": []
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/6",
+              "type": "alert",
+              "content": "Cette proposition n'a pas été retenue. La note de relecture ci-dessous t'explique pourquoi ; n'hésite pas à proposer une autre date.",
+              "children": []
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/7",
+              "type": "alert",
+              "content": "Cette proposition a été retirée.",
+              "children": []
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/8",
+              "type": "description-list",
+              "children": []
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/9",
+              "type": "container",
+              "children": [
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/9/children/0",
+                  "type": "text",
+                  "content": "Facilitation",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/9/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/9/children/1/children/0",
+                      "type": "container",
+                      "locked": "island",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/9/children/1/children/1",
+                      "type": "container",
+                      "locked": "island",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/9/children/2",
+                  "type": "text",
+                  "content": "Lieu",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/9/children/3",
+                  "type": "container",
+                  "locked": "island",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/9/children/4",
+                  "type": "text",
+                  "content": "Choisi par l'équipe à la relecture.",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/10",
+              "type": "description-list",
+              "children": []
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/11",
+              "type": "description-list",
+              "children": []
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/12",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "1rem"
+                },
+                "padding": {
+                  "value": "1.25rem"
+                }
+              },
+              "responsive": {
+                "sm": {
+                  "padding": {
+                    "value": "1.5rem"
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/12/children/0",
+                  "type": "text",
+                  "content": "modifier ma proposition",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/12/children/1",
+                  "type": "form",
+                  "locked": "island",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/12/children/2",
+                  "type": "button",
+                  "variant": "outline",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/12/children/3",
+                  "type": "alert-dialog",
+                  "content": "La proposition disparaît de ta liste et l'équipe ne la verra plus. Tu pourras toujours proposer une nouvelle date.",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/13",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "1.25rem"
+                },
+                "padding": {
+                  "value": "1.25rem"
+                }
+              },
+              "responsive": {
+                "sm": {
+                  "padding": {
+                    "value": "1.5rem"
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/13/children/0",
+                  "type": "text",
+                  "content": "validation par le cercle gardien",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/13/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/0",
+                      "type": "text",
+                      "content": "Vérifie la date, l'heure, les facilitateur·ices, le lieu et le nombre de places. Approuver crée tout de suite un vrai événement sur HelloAsso.",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/1",
+                      "type": "alert",
+                      "content": "Choisis d'abord un lieu dans « Relecture et détails » ci-dessous, puis enregistre. Le bouton d'approbation apparaît ensuite.",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/2",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/2/children/0",
+                          "type": "button",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/13/children/2",
+                  "type": "text",
+                  "content": "La création sur HelloAsso est en cours. Recharge la page dans quelques secondes.",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/13/children/3",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/0",
+                      "type": "alert",
+                      "content": "L'événement existe sur HelloAsso mais n'est pas encore prêt. Termine ces étapes dans le back-office HelloAsso avant de le publier sur le site.",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/1",
+                      "type": "link",
+                      "content": "Ouvrir l'événement sur HelloAsso (nouvel onglet)",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2",
+                      "type": "list",
+                      "children": [
+                        {
+                          "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0",
+                          "type": "item",
+                          "children": [
+                            {
+                              "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/0",
+                              "type": "text",
+                              "content": "Ajoute les 6 questions du formulaire d'inscription, mot pour mot :",
+                              "children": []
+                            },
+                            {
+                              "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1",
+                              "type": "list",
+                              "children": [
+                                {
+                                  "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/0",
+                                  "type": "item",
+                                  "content": "Email (obligatoire, format email)",
+                                  "children": []
+                                },
+                                {
+                                  "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/1",
+                                  "type": "item",
+                                  "content": "Numéro de téléphone (pour te prévenir en cas d'imprévu ou d'information importante avant l'atelier) (obligatoire, format téléphone)",
+                                  "children": []
+                                },
+                                {
+                                  "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/2",
+                                  "type": "item",
+                                  "content": "Comment j'ai entendu parler de cet événement (obligatoire)",
+                                  "children": []
+                                },
+                                {
+                                  "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/3",
+                                  "type": "item",
+                                  "content": "Qu'est-ce qui me motive, me donne envie de participer ? (obligatoire)",
+                                  "children": []
+                                },
+                                {
+                                  "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/4",
+                                  "type": "item",
+                                  "content": "J'autorise l'association à me photographier/filmer lors de l'événement et à utiliser ces images sur ses supports de communication. Consentement retirable à tout moment : mercipourtonnon@gmail.com (obligatoire, choix Oui / Non)",
+                                  "children": []
+                                },
+                                {
+                                  "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/5",
+                                  "type": "item",
+                                  "content": "Veux-tu nous laisser un petit mot ? (facultatif)",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/1",
+                          "type": "item",
+                          "content": "Vérifie le tarif « Prix libre » à 0 €, les dons ouverts, le nombre de places et la bannière.",
+                          "children": []
+                        },
+                        {
+                          "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/2",
+                          "type": "item",
+                          "content": "Publie l'événement sur HelloAsso.",
+                          "children": []
+                        },
+                        {
+                          "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/3",
+                          "type": "item",
+                          "content": "Reviens ici et appuie sur « Publier sur le site ».",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/3",
+                      "type": "button",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/13/children/4",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/0",
+                      "type": "alert",
+                      "content": "La création sur HelloAsso a échoué. Aucun événement en double n'a été créé : avant de recréer, la relance cherche d'abord un événement du même titre.",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/1",
+                      "type": "description-list",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/2",
+                      "type": "button",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "espace-proposition:/components/0/children/0/children/14",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "1rem"
+                },
+                "padding": {
+                  "value": "1.25rem"
+                }
+              },
+              "responsive": {
+                "sm": {
+                  "padding": {
+                    "value": "1.5rem"
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/14/children/0",
+                  "type": "text",
+                  "content": "relecture et détails",
+                  "children": []
+                },
+                {
+                  "id": "espace-proposition:/components/0/children/0/children/14/children/1",
+                  "type": "form",
+                  "locked": "island",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

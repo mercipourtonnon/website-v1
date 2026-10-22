@@ -1,0 +1,561 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-validation",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-validation:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-validation:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-validation:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 4,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-validation:/components/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "à valider",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-validation:/components/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Les propositions en cours, de la relecture à la mise en ligne. Ouvre une ligne pour lire la proposition, écrire une note de relecture ou la refuser.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-validation:/components/0/children/0/children/1",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "« Approuver » crée un vrai événement sur HelloAsso. Une date « À finaliser sur HelloAsso » attend tes réglages dans le back-office HelloAsso (les 6 questions d'inscription, le tarif, les places, la bannière, la publication) : la liste détaillée est dans la proposition. Ensuite seulement, « Publier sur le site ».",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "table",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-validation:/components/0/children/0/children/2",
+                            "type": "table"
+                          },
+                          "locked": true,
+                          "layoutMode": "VERTICAL",
+                          "children": [
+                            {
+                              "name": "header",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Date",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Statut",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Début",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Facilitation",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Co-facilitation",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Lieu",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "row 1",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "2026-03-12",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "proposed",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "10:00",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "row 2",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "2026-03-12",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "approved",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "14:00",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "row 3",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "2026-03-12",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "helloasso_draft",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "18:30",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-validation:/components/0/children/0/children/3",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-validation:/components/0/children/0/children/3/children/0",
+                                "type": "text"
+                              },
+                              "characters": "déjà traitées",
+                              "children": []
+                            },
+                            {
+                              "name": "table",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-validation:/components/0/children/0/children/3/children/1",
+                                "type": "table"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": [
+                                {
+                                  "name": "header",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Date",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Facilitation",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Co-facilitation",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Statut",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 1",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "2026-03-12",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "proposed",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 2",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "2026-03-12",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "approved",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 3",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "2026-03-12",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "helloasso_draft",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-validation:/components/0",
+      "contentHash": "db7367a410e0243315aef6a54125aea31288b3ae844d4c4834ef36ba17d4fc86"
+    },
+    {
+      "id": "espace-validation:/components/0/children/0",
+      "contentHash": "e5143e71ab934e5166f580a7a8eb66ac8f14eadb26fbe42050ce703d94908741"
+    },
+    {
+      "id": "espace-validation:/components/0/children/0/children/0",
+      "contentHash": "9986f3a1b64f80452d8b8aa0d5551e6e895fa4a06a1cfb7e355b3b06cdf30ac7"
+    },
+    {
+      "id": "espace-validation:/components/0/children/0/children/0/children/0",
+      "contentHash": "4d2b87ab76fe205660866983d890099517390b0fe26be4e654fe0084728fab20"
+    },
+    {
+      "id": "espace-validation:/components/0/children/0/children/0/children/1",
+      "contentHash": "06c92134b44c7f57b6d01c589f5c6a15789f77cb82b9b7f781c0bbe641a7f50f"
+    },
+    {
+      "id": "espace-validation:/components/0/children/0/children/1",
+      "contentHash": "07d217aaa62d3f0d6ae69a62780ddea2e13c90f6203710ca2f2ff0a87816918f"
+    },
+    {
+      "id": "espace-validation:/components/0/children/0/children/2",
+      "contentHash": "7e71d13992199afc7800e904e40eeee8fa2f0c41b4f8d5fc962406d96fdc5be8"
+    },
+    {
+      "id": "espace-validation:/components/0/children/0/children/3",
+      "contentHash": "d292970d122244f484c43057da3d54e78133f65c9babd89e513748d253a1688f"
+    },
+    {
+      "id": "espace-validation:/components/0/children/0/children/3/children/0",
+      "contentHash": "164a7a89d4144baae0b6c5c2b666eac95edf70c2719b775179d2eba605c21113"
+    },
+    {
+      "id": "espace-validation:/components/0/children/0/children/3/children/1",
+      "contentHash": "078543019834a35b56e11d1a320c3dd3fda8885e143864416ab2c1da1b38d998"
+    }
+  ]
+}
