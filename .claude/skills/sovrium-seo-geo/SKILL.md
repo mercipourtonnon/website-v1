@@ -3,7 +3,7 @@ name: sovrium-seo-geo
 description: Use when a Sovrium app's public pages need to be found, shared or cited — search engine optimisation, titles and meta descriptions, canonical URLs, redirects, hreflang and multilingual pages, sitemap.xml, robots.txt, noindex, structured data and JSON-LD, Open Graph and social share previews, llms.txt and markdown twins, AI crawlers (GPTBot, ClaudeBot, Google-Extended), AI Overviews and generative engine optimisation (GEO), Core Web Vitals, or an SEO audit of a Sovrium site.
 license: BSL-1.1
 metadata:
-  product-version: "0.40.0"
+  product-version: "0.41.0"
   author: sovrium
   version: '1.0.0'
 ---

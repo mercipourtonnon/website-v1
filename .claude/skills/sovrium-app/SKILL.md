@@ -4,7 +4,7 @@ description: Use when creating, editing, debugging or reviewing a Sovrium app â€
 license: BSL-1.1
 compatibility: Needs the sovrium binary on PATH or the sovrium config MCP; a browser MCP (Playwright MCP, Chrome DevTools MCP or Claude in Chrome) is optional but recommended
 metadata:
-  product-version: "0.40.0"
+  product-version: "0.41.0"
   author: sovrium
   version: '1.0.0'
 ---

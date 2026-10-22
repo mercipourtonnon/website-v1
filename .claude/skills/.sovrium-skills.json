@@ -1,12 +1,12 @@
 {
   "format": "sovrium-skills",
   "schemaVersion": 1,
-  "engine": "0.40.0",
+  "engine": "0.41.0",
   "target": "claude",
   "files": [
     {
       "path": "sovrium-app/SKILL.md",
-      "sha256": "56dbba0511addec0c80ef62e148a458cf4a80c9c52fad3ef9d621ee7a038e01c"
+      "sha256": "6c827b62349e4c04c5e653741a889dfdde75c5d1834d45af73ee79890c3a9405"
     },
     {
       "path": "sovrium-app/references/api-checks.md",
@@ -18,7 +18,7 @@
     },
     {
       "path": "sovrium-app/references/cli-verbs.generated.md",
-      "sha256": "79016968907442c27bc10f9c86bea0764e687b4de7e27aa117ba70b0f19d6583"
+      "sha256": "18f3a4bdcb16f0ba33339da5d2a9d81b0fddab6bd304f68fc266933ff478e953"
     },
     {
       "path": "sovrium-app/references/config-mcp.md",
@@ -30,7 +30,7 @@
     },
     {
       "path": "sovrium-automations/SKILL.md",
-      "sha256": "c8b652eecb47aeb154a884ef253801da486125b35d197b0e8e85aa066d7c8cde"
+      "sha256": "07690c10b87c894ebf6106721aebf9faa07f796b8bedc96251c2899b42709dc3"
     },
     {
       "path": "sovrium-automations/references/loops.md",
@@ -50,15 +50,15 @@
     },
     {
       "path": "sovrium-automations/references/triggers-and-actions.generated.md",
-      "sha256": "909de35067972980a96c19cbf7f22d34bc4f5cfb57e24e0d76249f94b1790741"
+      "sha256": "72c6996b3f15e69d2abaacec931b511b58b2f3878375d254b14eabc7d33a12d0"
     },
     {
       "path": "sovrium-data-model/SKILL.md",
-      "sha256": "cd120af3212edcd32ef1901957998d3057c07167bcafe998cc68131e4364aa48"
+      "sha256": "51bc9e4f32d92a0250e3ec1d109ef740ba26f0a6e590a2854bdab2fce1adccce"
     },
     {
       "path": "sovrium-data-model/references/field-types.generated.md",
-      "sha256": "e7a0f6356d65346b87d416835b110be8544976fe4d2abccca033a7d78fc29590"
+      "sha256": "5b799bee4cb38deeaf35bb696ef1ac9e42b6d5bcc3cae2245dbf636db1d22293"
     },
     {
       "path": "sovrium-data-model/references/migrations.md",
@@ -78,7 +78,7 @@
     },
     {
       "path": "sovrium-pages/SKILL.md",
-      "sha256": "f1a4237e25e240d1823a1557df61f9ebfcdf0c4fb14ae1ea709ac37ae78b8db6"
+      "sha256": "ba1a34aee2af62c3f947ab481e0daad337381c913e3787980a6bca2ed2e1f709"
     },
     {
       "path": "sovrium-pages/references/accessibility.md",
@@ -113,8 +113,24 @@
       "sha256": "3888fa4102e568efe4283b94d51c57313fd761d7a4317bf5b2c267661fba48ca"
     },
     {
+      "path": "sovrium-report-issue/SKILL.md",
+      "sha256": "060d7f06d75b1d20e52ce6b341ad3985fce5e502c431023b6981e4a1589c8604"
+    },
+    {
+      "path": "sovrium-report-issue/references/issue-address.md",
+      "sha256": "68918b29515828f3c36f4b010e148931658d29ad5b744c580c585845572e84be"
+    },
+    {
+      "path": "sovrium-report-issue/references/redaction.md",
+      "sha256": "56664b0b6941ba3a28dea2b1321b61b907fe03a139636e718158a39234c95e17"
+    },
+    {
+      "path": "sovrium-report-issue/references/sources.md",
+      "sha256": "23bc10511eb7f333d499a8822678479e08a3f58d3f406b6be0921aa83e2943c0"
+    },
+    {
       "path": "sovrium-seo-geo/SKILL.md",
-      "sha256": "e56206ff37663d14ba216800fc51469166f94c6b0b1065a99dc6bee4cdb2f572"
+      "sha256": "6da8850382d2573776e1a324ded2b72d2ef268a6d6ee399d78637288e54e480f"
     },
     {
       "path": "sovrium-seo-geo/references/copy-for-search.md",
