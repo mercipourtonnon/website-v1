@@ -6,8 +6,8 @@
 # (crm-affaires) that the KPI row and the board both read. « Mine » is the
 # filter bar's « Suivie par » filter: a control's `publishes.value` is sent as
 # written, so `$currentUser.id` there would match nobody (Sovrium 0.41).
-# A card opens the deal's own page. « Nouvelle affaire » opens a create sheet
-# (a sheet opened with no record creates one).
+# A card opens the deal's own page. « Nouvelle affaire » opens the
+# crm-nouvelle-affaire form in a dialog.
 name: espace-crm-affaires
 path: /espace/crm/affaires
 access: { require: [gardien, admin], redirectTo: /connexion }
@@ -69,8 +69,9 @@ components:
               - type: button
                 label: Nouvelle affaire
                 size: sm
-                props: { className: sm:ml-auto }
-                action: { action: openSheet, component: crm-nouvelle-affaire }
+                props:
+                  className: sm:ml-auto
+                  interactions: { click: { modal: crm-ajout-affaire } }
           - type: grid
             props:
               className: grid grid-cols-2 gap-3 lg:grid-cols-4
@@ -133,7 +134,8 @@ components:
           # display font at 12 px), so they read in the body face. The column's
           # colour dot and fold chevron are `inline-block size-2`, but design.spacing.block
           # makes Tailwind emit `.inline-block { inline-size: 3rem }`, which
-          # stretches it to 48 px and truncates the header; w-2 puts it back.
+          # stretches it to 48 px and truncates the header; w-2 puts it back
+          # (Sovrium 0.41, sovrium/sovrium#442; remove once fixed).
           # Long stage names (« Proposition envoyée ») wrap rather than truncate.
           - type: kanban
             props:
@@ -144,6 +146,10 @@ components:
               bindTo: crm-affaires
               sharedFilter: {}
               sort: [{ field: expected_close, direction: asc }]
+              # Moves and edits made by others show without a reload. A deal added
+              # through the crm-nouvelle-affaire form does not reach the change
+              # feed in Sovrium 0.41: it shows on the next change or reload.
+              refreshMode: realtime
             kanbanGroupBy:
               field: stage
               columnSizing: fill
@@ -177,26 +183,15 @@ components:
                 - { field: next_activity_due, format: relative-date }
                 - { field: owner, format: avatar }
 
-  # Create a deal (opened by « Nouvelle affaire » with no record).
-  # Sovrium 0.41: a create sheet sends a user field's `default: $currentUser`
-  # as the literal text `$currentUser` (even when the field is not listed
-  # here), and the save is refused (400). « Suivie par » is therefore shown
-  # and must be picked; remove this note once fixed upstream.
-  - type: sheet
-    id: crm-nouvelle-affaire
-    title: Nouvelle affaire
-    description: Elle arrive dans la colonne « À contacter » ; tu pourras changer son étape ensuite.
-    drawerSize: md
-    dataSource: { table: crm_deals }
-    recordFields:
-      - { name: title, type: single-line-text, label: Affaire }
-      - { name: type, type: single-select, label: Type }
-      - { name: organisation, type: relationship, label: Organisation }
-      - { name: contact, type: relationship, label: Contact }
-      - { name: amount, type: currency, label: Montant }
-      - { name: expected_close, type: date, label: Échéance prévue }
-      - { name: owner, type: user, label: Suivie par, description: Choisis la personne qui suit l'affaire. }
-      - { name: notes, type: rich-text, label: Notes }
+  # Create a deal (opened by « Nouvelle affaire »): the crm-nouvelle-affaire
+  # form, which resolves the owner default server-side. Not a create sheet:
+  # one sends `$currentUser` literally (Sovrium 0.41, sovrium/sovrium#441).
+  - type: dialog
+    props: { id: crm-ajout-affaire, title: Nouvelle affaire }
+    children:
+      - type: form
+        formRef: crm-nouvelle-affaire
+        showHeader: false
 
   # Asked once a card lands in « Gagné » (the stage is already saved).
   - type: sheet

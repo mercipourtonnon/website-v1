@@ -1,6 +1,7 @@
 # /espace/crm/organisations/:id — one organisation: its deals, its people and
-# its details. « Ajouter un contact » opens crm-nouveau-contact in a dialog
-# with the organisation locked to this page's (inlinePrefill).
+# its details. « Nouvelle affaire » and « Ajouter un contact » open
+# crm-nouvelle-affaire and crm-nouveau-contact in dialogs, with the
+# organisation locked to this page's (inlinePrefill).
 name: espace-crm-organisation
 path: /espace/crm/organisations/:id
 access: { require: [gardien, admin], redirectTo: /connexion }
@@ -47,11 +48,18 @@ components:
                       - { term: Affaires en cours, field: open_deals_count }
                       - { term: Montant gagné, field: won_amount }
                       - { term: Suivi par, field: owner }
-              - type: button
-                label: Ajouter un contact
-                variant: outline
-                props:
-                  interactions: { click: { modal: crm-ajout-contact } }
+              - type: container
+                props: { className: flex flex-col gap-2 sm:flex-row md:items-start }
+                children:
+                  - type: button
+                    label: Nouvelle affaire
+                    props:
+                      interactions: { click: { modal: crm-ajout-affaire } }
+                  - type: button
+                    label: Ajouter un contact
+                    variant: outline
+                    props:
+                      interactions: { click: { modal: crm-ajout-contact } }
 
           - type: tabs
             defaultTab: affaires
@@ -72,7 +80,7 @@ components:
                   sort: [{ field: created_at, direction: desc }]
                   pagination: { pageSize: 25 }
                 onRowClick: { type: navigate, path: /espace/crm/affaires/$record.id }
-                emptyMessage: Aucune affaire avec cette organisation pour l'instant. Crée-la depuis le pipeline.
+                emptyMessage: Aucune affaire avec cette organisation pour l'instant. Crée la première avec « Nouvelle affaire ».
                 columns:
                   - { field: title, label: Affaire, frozen: true }
                   - { field: stage, label: Étape, badgeForm: outline-dot }
@@ -123,6 +131,16 @@ components:
     children:
       - type: form
         formRef: crm-nouveau-contact
+        showHeader: false
+        inlinePrefill:
+          prefill: { organisation: $parent.id }
+          lockPrefill: true
+
+  - type: dialog
+    props: { id: crm-ajout-affaire, title: Nouvelle affaire }
+    children:
+      - type: form
+        formRef: crm-nouvelle-affaire
         showHeader: false
         inlinePrefill:
           prefill: { organisation: $parent.id }

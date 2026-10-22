@@ -2,7 +2,7 @@
 # /espace/crm/affaires and /espace/crm/organisations/:id (which locks
 # `organisation`). A form, not a create sheet: in Sovrium 0.41 a create sheet
 # sends `owner`'s default `$currentUser` as the literal string and the save is
-# refused; the form resolves it server-side. The deal lands in « À contacter »
+# refused (sovrium/sovrium#441); the form resolves it server-side. The deal lands in « À contacter »
 # (the stage default).
 id: 9
 name: crm-nouvelle-affaire
