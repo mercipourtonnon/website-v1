@@ -1,0 +1,84 @@
+# CRM du Cercle Gardien — one row per opportunity, in one pipeline for three
+# kinds: an intervention to run, a partnership, a funding application. An
+# organisation has many deals; a deal has many activities (crm_activities).
+# `stage` drives the board on /espace/crm/affaires; crm-stamp-stage notes when
+# it last moved. Gardien + admin only.
+id: 16
+name: crm_deals
+label: Affaire
+labelPlural: Affaires
+description: Le pipeline du Cercle Gardien — interventions, partenariats et financements, du premier contact au résultat.
+fields:
+  - { id: 1, name: title, label: Affaire, type: single-line-text, required: true }
+  # Option colours tint the board cards (card.colorField).
+  - id: 2
+    name: type
+    label: Type
+    type: single-select
+    required: true
+    default: intervention
+    options:
+      - { value: intervention, label: Intervention, color: '#FFF0F5' }
+      - { value: partenariat, label: Partenariat, color: '#E6D1FF' }
+      - { value: financement, label: Financement, color: '#E6F9F8' }
+  # Option colours draw the grid chips: cellStyle tones draw none in 0.41
+  # (sovrium/sovrium#438).
+  - id: 3
+    name: stage
+    label: Étape
+    type: status
+    required: true
+    default: prospect
+    indexed: true
+    options:
+      - { value: prospect, label: À contacter, color: '#E6E0FF' }
+      - { value: contact, label: Premier contact, color: '#F3E6FF' }
+      - { value: proposition, label: Proposition envoyée, color: '#FFF0D1' }
+      - { value: negociation, label: En discussion, color: '#FFF8E6' }
+      - { value: gagne, label: Gagné, color: '#D1F2F0' }
+      - { value: perdu, label: Perdu, color: '#FFE0EA' }
+  - { id: 4, name: amount, label: Montant, type: currency, currency: EUR, precision: 0 }
+  - { id: 5, name: expected_close, label: Échéance prévue, type: date }
+  - id: 6
+    name: organisation
+    label: Organisation
+    type: relationship
+    relatedTable: crm_organisations
+    relationType: many-to-one
+    displayField: name
+    onDelete: set-null
+    indexed: true
+  - id: 7
+    name: contact
+    label: Contact
+    type: relationship
+    relatedTable: crm_contacts
+    relationType: many-to-one
+    displayField: full_name
+    onDelete: set-null
+  - { id: 8, name: owner, label: Suivie par, type: user, default: $currentUser, indexed: true }
+  - { id: 9, name: lost_reason, label: Pourquoi c'est perdu, type: single-line-text }
+  - { id: 10, name: notes, label: Notes, type: rich-text }
+  # Written by crm-stamp-stage (UTC).
+  - { id: 11, name: stage_changed_at, label: Étape changée le, type: datetime }
+  - { id: 12, name: created_at, label: Créée le, type: created-at }
+  - { id: 13, name: activities, label: Activités, type: relationship, relatedTable: crm_activities, relationType: one-to-many, foreignKey: deal }
+  - id: 14
+    name: next_activity_due
+    label: Prochaine activité
+    type: rollup
+    relationshipField: activities
+    relatedField: due_at
+    aggregation: MIN
+    filters: { field: done, operator: equals, value: false }
+  - id: 15
+    name: open_activities_count
+    label: Activités à faire
+    type: count
+    relationshipField: activities
+    filters: { field: done, operator: equals, value: false }
+permissions:
+  read: [gardien, admin]
+  create: [gardien, admin]
+  update: [gardien, admin]
+  delete: [gardien, admin]

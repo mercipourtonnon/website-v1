@@ -1,0 +1,54 @@
+# CRM du Cercle Gardien — one row per organisation the association talks to:
+# a school asking for an intervention, a festival, a partner, a funder. Its
+# people are in crm_contacts, its opportunities in crm_deals.
+# Contact data (RGPD): gardien + admin only.
+id: 14
+name: crm_organisations
+label: Organisation
+labelPlural: Organisations
+description: Écoles, entreprises, associations, collectivités et financeurs suivis par le Cercle Gardien.
+fields:
+  - { id: 1, name: name, label: Nom, type: single-line-text, required: true, unique: true }
+  - id: 2
+    name: kind
+    label: Type d'organisation
+    type: single-select
+    options:
+      - { value: ecole, label: École ou établissement }
+      - { value: entreprise, label: Entreprise }
+      - { value: association, label: Association }
+      - { value: collectivite, label: Collectivité }
+      - { value: festival, label: Festival ou lieu culturel }
+      - { value: financeur, label: Financeur ou fondation }
+      - { value: autre, label: Autre }
+  - { id: 3, name: website, label: Site web, type: url }
+  - { id: 4, name: city, label: Ville, type: single-line-text }
+  - { id: 5, name: notes, label: Notes, type: long-text }
+  - { id: 6, name: owner, label: Suivi par, type: user }
+  - { id: 7, name: created_at, label: Ajoutée le, type: created-at }
+  - { id: 8, name: contacts, label: Contacts, type: relationship, relatedTable: crm_contacts, relationType: one-to-many, foreignKey: organisation }
+  - { id: 9, name: deals, label: Affaires, type: relationship, relatedTable: crm_deals, relationType: one-to-many, foreignKey: organisation }
+  - { id: 10, name: contacts_count, label: Contacts, type: count, relationshipField: contacts }
+  # Open = every stage but gagne / perdu.
+  - id: 11
+    name: open_deals_count
+    label: Affaires en cours
+    type: count
+    relationshipField: deals
+    filters: { field: stage, operator: in, value: [prospect, contact, proposition, negociation] }
+  - id: 12
+    name: won_amount
+    label: Montant gagné
+    type: rollup
+    relationshipField: deals
+    relatedField: amount
+    aggregation: SUM
+    format: currency
+    currency: EUR
+    precision: 0
+    filters: { field: stage, operator: equals, value: gagne }
+permissions:
+  read: [gardien, admin]
+  create: [gardien, admin]
+  update: [gardien, admin]
+  delete: [gardien, admin]

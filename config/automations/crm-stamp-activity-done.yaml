@@ -1,0 +1,28 @@
+# CRM: note when an activity is ticked « Fait », for the « Faites » list. A
+# tick taken back is not un-stamped: done_at then reads as the last time it
+# was done, and the lists filter on `done`. Loop check: it writes done_at
+# only, which is not a watched field.
+name: crm-stamp-activity-done
+description: Horodate une activité du CRM marquée faite.
+trigger:
+  type: record
+  table: crm_activities
+  events: [create, update]
+  watchFields: [done]
+  condition:
+    logic: and
+    conditions:
+      - { field: '{{trigger.data.record.done}}', operator: equals, value: true }
+      - { field: '{{trigger.data.record.done}}', operator: notEquals, value: '{{trigger.data.previousRecord.done}}' }
+timeout: 30000
+actions:
+  - name: stamp
+    type: record
+    operator: update
+    props:
+      table: crm_activities
+      filter:
+        conditions:
+          - { field: id, operator: equals, value: '{{trigger.data.record.id}}' }
+      data:
+        done_at: '{{now}}'

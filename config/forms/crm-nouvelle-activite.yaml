@@ -1,0 +1,21 @@
+# CRM: add a call, email, meeting or to-do. Embedded in the « Ajouter une
+# activité » dialog of /espace/crm/affaires/:id, which locks `deal` to the
+# page's deal, and of /espace/crm/activites, where the deal is picked.
+id: 7
+name: crm-nouvelle-activite
+title: Ajouter une activité
+access:
+  require: [gardien, admin]
+  redirectTo: /connexion
+submitTo:
+  table: crm_activities
+display:
+  submitLabel: Ajouter l'activité
+fields:
+  - { kind: table-field, column: subject, label: Objet, required: true, placeholder: Rappeler pour fixer la date }
+  - { kind: table-field, column: kind, label: Type }
+  - { kind: table-field, column: due_at, label: À faire pour le }
+  - { kind: table-field, column: deal, label: Affaire }
+  - { kind: table-field, column: contact, label: Avec (facultatif) }
+  - { kind: table-field, column: assignee, label: Pour }
+  - { kind: table-field, column: notes, label: Notes }

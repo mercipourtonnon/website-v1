@@ -1,0 +1,22 @@
+# CRM: add a person. Embedded in the « Nouveau contact » dialog of
+# /espace/crm/organisations/:id, which locks `organisation` to the page's
+# organisation, and of /espace/crm/contacts, where it is picked.
+id: 8
+name: crm-nouveau-contact
+title: Nouveau contact
+access:
+  require: [gardien, admin]
+  redirectTo: /connexion
+submitTo:
+  table: crm_contacts
+display:
+  submitLabel: Ajouter le contact
+fields:
+  - { kind: table-field, column: first_name, label: Prénom }
+  - { kind: table-field, column: last_name, label: Nom, required: true }
+  - { kind: table-field, column: organisation, label: Organisation }
+  - { kind: table-field, column: job_title, label: Fonction }
+  - { kind: table-field, column: email, label: Email }
+  - { kind: table-field, column: phone, label: Téléphone }
+  - { kind: table-field, column: owner, label: Suivi par }
+  - { kind: table-field, column: notes, label: Notes }
