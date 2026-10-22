@@ -14,9 +14,15 @@ submitTo:
   table: crm_deals
 display:
   submitLabel: Ajouter l'affaire
+# Opens the new deal: a row the form creates does not reach a board's
+# realtime feed in 0.41, so staying on the pipeline would not show it.
+onSuccess:
+  type: redirect
+  url: /espace/crm/affaires/$record.id
+  delaySeconds: 0
 fields:
   - { kind: table-field, column: title, label: Affaire, required: true, placeholder: Intervention au collège Pasteur }
-  - { kind: table-field, column: type, label: Type }
+  - { kind: table-field, column: type, label: Type, defaultValue: intervention }
   - { kind: table-field, column: organisation, label: Organisation }
   - { kind: table-field, column: contact, label: Contact }
   - { kind: table-field, column: amount, label: Montant }
