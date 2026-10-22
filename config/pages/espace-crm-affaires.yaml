@@ -1,0 +1,220 @@
+# /espace/crm/affaires — the Cercle Gardien's pipeline: every opportunity
+# (intervention, partenariat, financement) as a card in the column of its
+# stage. Dragging a card saves its new stage (crm-stamp-stage notes when);
+# dropping it in « Gagné » asks for the amount, in « Perdu » for the reason.
+# The search, the type select and the filter bar publish on one channel
+# (crm-affaires) that the KPI row and the board both read. « Mine » is the
+# filter bar's « Suivie par » filter: a control's `publishes.value` is sent as
+# written, so `$currentUser.id` there would match nobody (Sovrium 0.41).
+# A card opens the deal's own page. « Nouvelle affaire » opens a create sheet
+# (a sheet opened with no record creates one).
+name: espace-crm-affaires
+path: /espace/crm/affaires
+access: { require: [gardien, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: Pipeline - Espace bénévole
+  description: Le pipeline du Cercle Gardien, des premiers contacts aux affaires gagnées.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-7xl flex-col gap-8
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-1
+            children:
+              - type: text
+                element: h1
+                props:
+                  className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                content: pipeline
+              - type: text
+                element: p
+                props:
+                  className: text-bleu-fonce
+                content: Les interventions, partenariats et financements en cours, étape par étape. Fais glisser une carte pour changer son étape ; ouvre-la pour voir ses activités.
+          - type: container
+            props:
+              role: toolbar
+              aria-label: Rechercher et filtrer
+              className: flex flex-wrap items-center gap-2
+            children:
+              - type: search-input
+                placeholder: Rechercher
+                props:
+                  aria-label: Rechercher une affaire
+                  className: "h-8 w-full sm:w-[250px]"
+                publishes: { bindTo: crm-affaires, param: q }
+              - type: select
+                emptyOption: { label: Tous les types }
+                props:
+                  aria-label: Type d'affaire
+                  className: "h-8 w-full sm:w-[200px]"
+                options:
+                  - { value: intervention, label: Intervention }
+                  - { value: partenariat, label: Partenariat }
+                  - { value: financement, label: Financement }
+                publishes: { bindTo: crm-affaires, field: type, operator: eq, url: true }
+              - type: filter-bar
+                publishes: { bindTo: crm-affaires }
+                fieldsFrom: { table: crm_deals }
+              - type: button
+                label: Nouvelle affaire
+                size: sm
+                props: { className: sm:ml-auto }
+                action: { action: openSheet, component: crm-nouvelle-affaire }
+          - type: grid
+            props:
+              className: grid grid-cols-2 gap-3 lg:grid-cols-4
+            children:
+              - type: kpi
+                label: Affaires en cours
+                icon: briefcase
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_deals
+                  bindTo: crm-affaires
+                  sharedFilter: {}
+                  filter:
+                    - { field: stage, operator: in, value: [prospect, contact, proposition, negociation] }
+                kpiAggregate: { function: count }
+                kpiFormat: { type: number }
+              - type: kpi
+                label: Montant en jeu
+                icon: coins
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_deals
+                  bindTo: crm-affaires
+                  sharedFilter: {}
+                  filter:
+                    - { field: stage, operator: in, value: [prospect, contact, proposition, negociation] }
+                kpiAggregate: { function: sum, field: amount }
+                kpiFormat: { type: currency, options: { currency: EUR } }
+              - type: kpi
+                label: Gagné ce mois-ci
+                icon: trophy
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_deals
+                  bindTo: crm-affaires
+                  sharedFilter: {}
+                  filter:
+                    - { field: stage, operator: eq, value: gagne }
+                    - { field: stage_changed_at, operator: gte, value: $startOfMonth }
+                kpiAggregate: { function: sum, field: amount }
+                kpiFormat: { type: currency, options: { currency: EUR } }
+              - type: kpi
+                label: Taux de réussite
+                icon: percent
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_deals
+                  bindTo: crm-affaires
+                  sharedFilter: {}
+                kpiAggregate:
+                  function: ratio
+                  numerator:
+                    filter:
+                      - { field: stage, operator: eq, value: gagne }
+                  denominator:
+                    filter:
+                      - { field: stage, operator: in, value: [gagne, perdu] }
+                kpiFormat: { type: percentage, options: { maximumFractionDigits: '0' } }
+          # Column headers: the board's h2 would take the title face (lowercase
+          # display font at 12 px), so they read in the body face. The column's
+          # colour dot and fold chevron are `inline-block size-2`, but design.spacing.block
+          # makes Tailwind emit `.inline-block { inline-size: 3rem }`, which
+          # stretches it to 48 px and truncates the header; w-2 puts it back.
+          # Long stage names (« Proposition envoyée ») wrap rather than truncate.
+          - type: kanban
+            props:
+              aria-label: Pipeline des affaires
+              className: "[&_[data-slot=kanban-column-header]_.inline-block]:w-2 [&_h2]:font-[family-name:var(--font-body)] [&_h2]:normal-case [&_h2]:tracking-normal [&_h2]:whitespace-normal [&_h2_button]:shrink [&_h2_button]:text-left"
+            dataSource:
+              table: crm_deals
+              bindTo: crm-affaires
+              sharedFilter: {}
+              sort: [{ field: expected_close, direction: asc }]
+            kanbanGroupBy:
+              field: stage
+              columnSizing: fill
+              collapsed: [perdu]
+              columnWidths: { gagne: 14rem, perdu: 14rem }
+            emptyColumnMessage: Aucune affaire à cette étape.
+            drag:
+              enabled: true
+              persistAction:
+                type: crud
+                operation: update
+                table: crm_deals
+                onError: { toast: { message: "L'étape n'a pas pu être enregistrée. Vérifie ta connexion, puis réessaie.", variant: error } }
+              onDrop:
+                - { when: { value: gagne }, action: { action: openSheet, component: crm-affaire-gagnee } }
+                - { when: { value: perdu }, action: { action: openSheet, component: crm-affaire-perdue } }
+            card:
+              colorField: type
+              onClick: { type: navigate, path: /espace/crm/affaires/$record.id }
+              children:
+                - type: text
+                  element: h3
+                  props: { className: text-sm font-bold text-bleu-fonce }
+                  content: $record.title
+                - type: text
+                  element: p
+                  props: { className: text-sm text-bleu-fonce }
+                  content: $record.organisation
+              footer:
+                - { field: amount, format: currency }
+                - { field: next_activity_due, format: relative-date }
+                - { field: owner, format: avatar }
+
+  # Create a deal (opened by « Nouvelle affaire » with no record).
+  # Sovrium 0.41: a create sheet sends a user field's `default: $currentUser`
+  # as the literal text `$currentUser` (even when the field is not listed
+  # here), and the save is refused (400). « Suivie par » is therefore shown
+  # and must be picked; remove this note once fixed upstream.
+  - type: sheet
+    id: crm-nouvelle-affaire
+    title: Nouvelle affaire
+    description: Elle arrive dans la colonne « À contacter » ; tu pourras changer son étape ensuite.
+    drawerSize: md
+    dataSource: { table: crm_deals }
+    recordFields:
+      - { name: title, type: single-line-text, label: Affaire }
+      - { name: type, type: single-select, label: Type }
+      - { name: organisation, type: relationship, label: Organisation }
+      - { name: contact, type: relationship, label: Contact }
+      - { name: amount, type: currency, label: Montant }
+      - { name: expected_close, type: date, label: Échéance prévue }
+      - { name: owner, type: user, label: Suivie par, description: Choisis la personne qui suit l'affaire. }
+      - { name: notes, type: rich-text, label: Notes }
+
+  # Asked once a card lands in « Gagné » (the stage is already saved).
+  - type: sheet
+    id: crm-affaire-gagnee
+    title: Affaire gagnée
+    description: Bravo ! Vérifie le montant et la date pour que le bilan reste juste.
+    drawerSize: sm
+    dataSource: { table: crm_deals }
+    recordFields:
+      - { name: amount, type: currency, label: Montant }
+      - { name: expected_close, type: date, label: Date de signature ou de début }
+
+  # Asked once a card lands in « Perdu » (the stage is already saved).
+  - type: sheet
+    id: crm-affaire-perdue
+    title: Pourquoi c'est perdu ?
+    description: Une phrase suffit. Elle aidera la prochaine fois.
+    drawerSize: sm
+    dataSource: { table: crm_deals }
+    recordFields:
+      - { name: lost_reason, type: single-line-text, label: Raison }

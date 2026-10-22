@@ -1,0 +1,186 @@
+# /espace/crm/activites — what is due in the CRM: mine first, then what is
+# overdue, every open activity, and what is done. « Fait » ticks one done
+# (crm-stamp-activity-done notes when). « Nouvelle activité » opens
+# crm-nouvelle-activite in a dialog, where the deal is picked.
+# Grids keep `scroll` on a phone: `rows` drops the action column.
+name: espace-crm-activites
+path: /espace/crm/activites
+access: { require: [gardien, admin], redirectTo: /connexion }
+sitemap: false
+meta:
+  lang: fr-FR
+  title: À faire - Espace bénévole
+  description: Les appels, emails, rendez-vous et tâches à faire dans le CRM du Cercle Gardien.
+  noindex: true
+  robots: noindex, nofollow
+  favicon: ./favicon/favicon-32x32.png
+components:
+  - component: espace-shell
+    children:
+      - type: container
+        props:
+          className: mx-auto flex max-w-6xl flex-col gap-8
+        children:
+          - type: container
+            element: header
+            props:
+              className: flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between
+            children:
+              - type: container
+                props: { className: flex flex-col gap-1 }
+                children:
+                  - type: text
+                    element: h1
+                    props:
+                      className: text-3xl sm:text-4xl title-font text-bleu-fonce
+                    content: à faire
+                  - type: text
+                    element: p
+                    props:
+                      className: text-bleu-fonce
+                    content: Les appels, emails, rendez-vous et tâches qui attendent. Appuie sur « Fait » quand c'est fait.
+              - type: button
+                label: Nouvelle activité
+                props:
+                  interactions: { click: { modal: crm-ajout-activite } }
+          - type: grid
+            props:
+              className: grid grid-cols-2 gap-3 lg:grid-cols-4
+            children:
+              - type: kpi
+                label: Pour moi
+                icon: user-round
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_activities
+                  filter:
+                    - { field: assignee, operator: eq, value: $currentUser.id }
+                    - { field: done, operator: eq, value: false }
+                kpiAggregate: { function: count }
+                kpiFormat: { type: number }
+              - type: kpi
+                label: En retard
+                icon: alarm-clock
+                tone: warning
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_activities
+                  filter:
+                    - { field: done, operator: eq, value: false }
+                    - { field: due_at, operator: lt, value: $now }
+                kpiAggregate: { function: count }
+                kpiFormat: { type: number }
+              - type: kpi
+                label: Cette semaine
+                icon: calendar-clock
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_activities
+                  filter:
+                    - { field: done, operator: eq, value: false }
+                    - { field: due_at, operator: gte, value: $now }
+                    - { field: due_at, operator: lte, value: $now+7d }
+                kpiAggregate: { function: count }
+                kpiFormat: { type: number }
+              - type: kpi
+                label: Faites ce mois-ci
+                icon: circle-check
+                size: { mobile: sm, md: md }
+                dataSource:
+                  table: crm_activities
+                  filter:
+                    - { field: done, operator: eq, value: true }
+                    - { field: done_at, operator: gte, value: $startOfMonth }
+                kpiAggregate: { function: count }
+                kpiFormat: { type: number }
+          - type: tabs
+            defaultTab: pour-moi
+            panels:
+              - { id: pour-moi, label: Pour moi }
+              - { id: en-retard, label: En retard }
+              - { id: toutes, label: Toutes }
+              - { id: faites, label: Faites }
+            children:
+              - &activitiesTable
+                type: table
+                caption: Mes activités à faire
+                classes: { parts: { caption: sr-only } }
+                readOnly: true
+                phoneLayout: scroll
+                dataSource:
+                  table: crm_activities
+                  filter:
+                    - { field: assignee, operator: eq, value: $currentUser.id }
+                    - { field: done, operator: eq, value: false }
+                  sort: [{ field: due_at, direction: asc }]
+                  pagination: { pageSize: 25 }
+                emptyMessage: Rien à faire pour toi pour l'instant.
+                rowExpand:
+                  title: Activité
+                  fields: [subject, kind, due_at, deal, contact, assignee, notes, done, done_at]
+                columns: &activityColumns
+                  - { field: subject, label: Objet, frozen: true }
+                  - type: actions
+                    label: Actions
+                    actions:
+                      - label: Fait
+                        icon: check
+                        visibleWhen: { field: done, eq: false }
+                        action:
+                          type: crud
+                          operation: update
+                          table: crm_activities
+                          data: { done: true }
+                          onError: { toast: { message: "L'activité n'a pas pu être cochée. Vérifie ta connexion, puis réessaie.", variant: error } }
+                      - label: Voir l'affaire
+                        icon: arrow-right
+                        variant: ghost
+                        visibleWhen: { field: deal, isNotEmpty: true }
+                        action: { type: fetch, mode: navigate, url: /espace/crm/affaires/$record.deal }
+                  - { field: due_at, label: À faire pour le, format: datetime }
+                  - { field: kind, label: Type }
+                  - { field: deal, label: Affaire }
+                  - { field: contact, label: Avec }
+                  - { field: assignee, label: Pour }
+              - <<: *activitiesTable
+                caption: Activités en retard
+                dataSource:
+                  table: crm_activities
+                  filter:
+                    - { field: done, operator: eq, value: false }
+                    - { field: due_at, operator: lt, value: $now }
+                  sort: [{ field: due_at, direction: asc }]
+                  pagination: { pageSize: 25 }
+                emptyMessage: Rien en retard. Bravo !
+              - <<: *activitiesTable
+                caption: Toutes les activités à faire
+                dataSource:
+                  table: crm_activities
+                  filter:
+                    - { field: done, operator: eq, value: false }
+                  sort: [{ field: due_at, direction: asc }]
+                  pagination: { pageSize: 25 }
+                emptyMessage: Aucune activité à faire. Ajoute-en une depuis une affaire ou avec « Nouvelle activité ».
+              - <<: *activitiesTable
+                caption: Activités faites
+                dataSource:
+                  table: crm_activities
+                  filter:
+                    - { field: done, operator: eq, value: true }
+                  sort: [{ field: done_at, direction: desc }]
+                  pagination: { pageSize: 25 }
+                emptyMessage: Aucune activité faite pour l'instant.
+                columns:
+                  - { field: subject, label: Objet, frozen: true }
+                  - { field: done_at, label: Fait le, format: datetime }
+                  - { field: kind, label: Type }
+                  - { field: deal, label: Affaire }
+                  - { field: contact, label: Avec }
+                  - { field: assignee, label: Pour }
+
+  - type: dialog
+    props: { id: crm-ajout-activite, title: Nouvelle activité }
+    children:
+      - type: form
+        formRef: crm-nouvelle-activite
+        showHeader: false
