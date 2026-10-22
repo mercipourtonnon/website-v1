@@ -9,7 +9,7 @@ trigger:
   # who may press it and can only narrow requiredRole. Pressing it runs with
   # the presser's rights, so gardien needs write on the rows it changes.
   # Not the logistique group: requiredRole and permissions.trigger read the
-  # caller's role only (still so in Sovrium 0.40); see workshop_proposals.yaml.
+  # caller's role only (still so in Sovrium 0.41); see workshop_proposals.yaml.
   requiredRole: gardien
 permissions:
   trigger: [gardien, admin]

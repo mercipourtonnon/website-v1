@@ -10,7 +10,7 @@
 # facilitateur·ice.
 #
 # Why not the logistique group: a button's automation and a field `write` grant
-# read the caller's role only (still so in Sovrium 0.40), and a facilitator holds the same
+# read the caller's role only (still so in Sovrium 0.41), and a facilitator holds the same
 # role (coeur) as a logisticien·ne. Opening approval to a role would open it to
 # every facilitator, on her own dates too.
 id: 3
