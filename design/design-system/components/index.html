@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mercipourtonnon component kit</title>
+<link rel="stylesheet" href="../css/brand-fonts.css">
+<link rel="stylesheet" href="kit.css">
+</head>
+<body class="bg-background text-foreground">
+<main class="flex flex-col gap-4 p-6"><h1>mercipourtonnon component kit</h1>
+<h2>Interactive</h2>
+<ul>
+<li><a href="alert.html">alert</a> — A message the reader must see before going on, set in an alert: what changed, what it costs, what to do.</li>
+<li><a href="badge.html">badge</a> — A Badge: a short status word pinned to a thing, never a sentence.</li>
+<li><a href="button.html">button</a> — One action, stated as a verb. A link when href is set, a button otherwise.</li>
+<li><a href="button-group.html">button-group</a> — A Button Group: several exclusive actions of equal weight, joined so they read as one control.</li>
+<li><a href="link.html">link</a> — Navigation inside a run of text, underlined so it reads as a link at a glance.</li>
+<li><a href="theme-toggle.html">theme-toggle</a> — The one control that flips the colour scheme and remembers the choice.</li>
+</ul>
+<h2>Form controls</h2>
+<ul>
+<li><a href="calendar.html">calendar</a> — A calendar: a month of days to pick one date, a range, or several, inline on the page.</li>
+<li><a href="checkbox.html">checkbox</a> — A yes or no the reader sets in a checkbox, with room for several in a list.</li>
+<li><a href="code-editor.html">code-editor</a> — Source text the reader edits, highlighted by language and indented to your width.</li>
+<li><a href="combobox.html">combobox</a> — One choice found by typing into a combobox, from a list that narrows with each keystroke.</li>
+<li><a href="date-picker.html">date-picker</a> — A Date Picker: a calendar date, typed or picked, in the reader's locale.</li>
+<li><a href="date-range-picker.html">date-range-picker</a> — A period rather than a date: two months side by side, and presets that resolve against today.</li>
+<li><a href="field.html">field</a> — A labelled control with its help and its error, laid out the same way in every field.</li>
+<li><a href="input.html">input</a> — A single line of text, typed by the reader into an input.</li>
+<li><a href="input-group.html">input-group</a> — One input with a fixed prefix, suffix or action fused to its edge, in one input group.</li>
+<li><a href="input-otp.html">input-otp</a> — A short verification code typed into an input OTP, one character per box, pasted or autofilled.</li>
+<li><a href="label.html">label</a> — The label of one form control, wired to it so a click on the name focuses the control.</li>
+<li><a href="native-select.html">native-select</a> — One choice in a native select, the browser's own dropdown, with no script to load.</li>
+<li><a href="radio-group.html">radio-group</a> — One choice among a few in a radio group, all visible at once.</li>
+<li><a href="rating.html">rating</a> — A row of stars that reads a rating, and writes a whole one inside a form.</li>
+<li>record-picker — not drawn: Searches a table of yours and links the row it finds. This page is bound to no table — and binding it to one of yours is what the confidentiality bound forbids — so there are no candidates for it to offer. Its states, its paging and its create path are drawn as authored option sections on its own page.</li>
+<li><a href="rich-text-editor.html">rich-text-editor</a> — Formatted prose, written in place, with only the marks you allow.</li>
+<li><a href="select.html">select</a> — One choice among many in a select, folded until opened.</li>
+<li>signature-pad — not drawn: A well to sign in, or a name to type, under the statement being agreed to. Pressing Sign uploads the mark and writes it onto the record the page is bound to, so the pad is a write path of its own, and a read-only console may carry none. Once signed it reads &quot;Signed by … on …&quot; from that record. See it on a data-bound page.</li>
+<li><a href="slider.html">slider</a> — A number in a range, dragged along a slider rather than typed.</li>
+<li><a href="switch.html">switch</a> — A setting that applies as soon as its switch flips.</li>
+<li><a href="textarea.html">textarea</a> — Several lines of text in a textarea, growing with what is written.</li>
+<li><a href="toggle.html">toggle</a> — A pressed or released toggle that holds its state.</li>
+<li><a href="toggle-group.html">toggle-group</a> — A toggle group: a row of toggles where one, or several, stay pressed.</li>
+</ul>
+<h2>Data</h2>
+<ul>
+<li><a href="carousel.html">carousel</a> — A Carousel: slides on one track, moved through one at a time with arrows, dots or a swipe.</li>
+<li><a href="chart.html">chart</a> — A Chart over rows: bars, lines, areas or a donut, one series per colour.</li>
+<li><a href="event-calendar.html">event-calendar</a> — Records on a month or week grid, placed by their date field.</li>
+<li><a href="filter-bar.html">filter-bar</a> — One set of conditions, published to every data component bound to the same channel.</li>
+<li>form — not drawn: Renders a live submit control — over the fields you declare on it, or writing a record back to the table it binds; a preview frame may carry no write path (ADR-022 A3 clause 2).</li>
+<li><a href="gallery.html">gallery</a> — Records as cards with an image, in a responsive grid.</li>
+<li><a href="graph.html">graph</a> — Nodes in ordered columns with the edges between them: the things the system read `dataSource` names, laid out left to right by kind, so an operator can follow a path rather than look a pair up.</li>
+<li><a href="kanban.html">kanban</a> — Records as cards in columns, one column per value of a select field.</li>
+<li><a href="kpi.html">kpi</a> — One number that matters, with its label and its movement.</li>
+<li><a href="list.html">list</a> — Records as rows with a title, a subtitle and a trailing value.</li>
+<li><a href="map.html">map</a> — Records placed as pins at their location, with a list twin a keyboard can use.</li>
+<li><a href="matrix.html">matrix</a> — Two sets of things crossed, each intersection a glyph rather than a word: rows and columns are nodes of the graph `dataSource` names, and a cell is the edge between them.</li>
+<li>questionnaire — not drawn: Submits each answer through the form it names; a preview frame may carry no write path (ADR-022 A3 clause 2).</li>
+<li><a href="table.html">table</a> — A Data Table: the records of a table as a grid — sorting, filtering, grouping, selection, paging — or the rows you write in the config.</li>
+<li><a href="tree.html">tree</a> — The records of one table nested under their parents, opened branch by branch.</li>
+</ul>
+<h2>Layout</h2>
+<ul>
+<li><a href="aspect-ratio.html">aspect-ratio</a> — An aspect ratio frame: one image, video or map held at a fixed width-to-height shape, whatever the screen.</li>
+<li><a href="card.html">card</a> — A Card: a bounded surface for one thing, on the page background.</li>
+<li><a href="container.html">container</a> — A box that gives its children padding and a width.</li>
+<li><a href="flex.html">flex</a> — Children in a row or a column, spaced by one gap.</li>
+<li><a href="grid.html">grid</a> — Children in equal columns, collapsing to one on a narrow screen.</li>
+<li><a href="message-scroller.html">message-scroller</a> — A message scroller: the scroll frame of a conversation, opening at the latest turn and keeping its place.</li>
+<li><a href="resizable.html">resizable</a> — Resizable panels: two side by side, with a draggable handle between them.</li>
+<li><a href="sidebar.html">sidebar</a> — The Sidebar: the left rail of grouped navigation, with an active entry.</li>
+</ul>
+<h2>Content</h2>
+<ul>
+<li><a href="attachment.html">attachment</a> — An attachment chip: one file drawn by its icon or thumbnail, its name and size, and a way to open it.</li>
+<li><a href="audio.html">audio</a> — An audio file with play, progress and duration.</li>
+<li><a href="code.html">code</a> — A Code Block: source text in a monospace frame, highlighted by language, with a copy button.</li>
+<li>file-preview — not drawn: Shows a stored file inline: an image with zoom, a PDF in its viewer, anything else as a download. Every face is drawn from a file signed for the reader, and the only files this instance holds are in your buckets, which this console may not read. See it on a data-bound page.</li>
+<li><a href="icon.html">icon</a> — One glyph from the app's icon set, sized and coloured by the text around it.</li>
+<li>iframe — not drawn: Not drawn here, and this is a refusal rather than a gap: this console renders every specimen flat, in one document, because a design system inside a nested scrolling document is not one a reader can read. Drawing an iframe specimen would put the frame back. Look at the page you embedded it on.</li>
+<li><a href="image.html">image</a> — A picture with its alt text, lazy unless it is above the fold.</li>
+<li><a href="kbd.html">kbd</a> — The keys a reader is meant to press, drawn as Kbd keycaps.</li>
+<li><a href="qr-code.html">qr-code</a> — A value drawn as a scannable code.</li>
+<li><a href="search-input.html">search-input</a> — Search within the page, or filter a bound list as you type.</li>
+<li><a href="text.html">text</a> — Typography: a run of prose at one step of the type scale.</li>
+<li><a href="toc.html">toc</a> — The headings of the page as a list that follows the reader.</li>
+<li><a href="video.html">video</a> — A video file with a poster, play and progress.</li>
+</ul>
+<h2>Display</h2>
+<ul>
+<li><a href="accordion.html">accordion</a> — An Accordion: stacked sections that open one at a time.</li>
+<li><a href="avatar.html">avatar</a> — An Avatar: a person or a thing as a small round mark — a picture, initials, or nothing at all.</li>
+<li><a href="bubble.html">bubble</a> — A Bubble: the surface of one chat turn, set to its side of the thread.</li>
+<li><a href="collapsible.html">collapsible</a> — A collapsible region behind one trigger, shown or hidden in place, with no siblings to close.</li>
+<li><a href="description-list.html">description-list</a> — Pairs of a term and its detail, read down rather than across.</li>
+<li><a href="empty.html">empty</a> — An Empty state: what a view says when it has nothing to show, and what to do about it.</li>
+<li><a href="item.html">item</a> — An Item: one row of a list — a leading mark, a title, a subtitle, a trailing value.</li>
+<li><a href="marker.html">marker</a> — A marker line inside a thread or a list: a status, a system note, a labelled break.</li>
+<li><a href="marquee.html">marquee</a> — A strip of logos or words that scrolls sideways.</li>
+<li><a href="message.html">message</a> — A message: one turn of a conversation — who said it, when, on which side — around the bubble that holds it.</li>
+<li>record-field — not drawn: Draws ONE field of the record the page it sits on is bound to. This page is bound to no record — and binding it to one of yours is what the confidentiality bound forbids — so there is nothing for it to read. The field CONTROLS it draws from are in the composed form below.</li>
+<li><a href="scroll-area.html">scroll-area</a> — A Scroll Area: a region that scrolls inside the page with a thin scrollbar.</li>
+<li><a href="stepper.html">stepper</a> — One task split into ordered steps, each a body of its own, with a rail that shows progress.</li>
+<li><a href="swatch.html">swatch</a> — One colour drawn as a filled square with its value and its name.</li>
+<li><a href="tabs.html">tabs</a> — Tabs: a short list of views, one visible at a time.</li>
+<li><a href="timeline.html">timeline</a> — Events on a line: declared in the config, or every record of a table between two dates.</li>
+</ul>
+<h2>Navigation</h2>
+<ul>
+<li><a href="breadcrumb.html">breadcrumb</a> — A Breadcrumb: where the reader is, as a path they can climb back up.</li>
+<li><a href="command.html">command</a> — A Command palette: search everything from anywhere, opened with a keyboard shortcut.</li>
+<li><a href="context-menu.html">context-menu</a> — A Context Menu of actions on the thing under the pointer, opened on right click.</li>
+<li><a href="dropdown-menu.html">dropdown-menu</a> — A Dropdown Menu of actions gathered behind one button, opened on click.</li>
+<li><a href="menubar.html">menubar</a> — A Menubar: a row of menus, as in a desktop application.</li>
+<li><a href="navigation-menu.html">navigation-menu</a> — A Navigation Menu: the top navigation of a site, with menus that open on hover.</li>
+<li><a href="pagination.html">pagination</a> — Pagination: move between the pages of a long list.</li>
+</ul>
+<h2>Overlays</h2>
+<ul>
+<li><a href="alert-dialog.html">alert-dialog</a> — An Alert Dialog asking the reader to confirm an action that loses data.</li>
+<li><a href="dialog.html">dialog</a> — A Dialog holding a focused task over the page, dismissed by the overlay or a button.</li>
+<li><a href="drawer.html">drawer</a> — A drawer: a panel that rises from the bottom edge and is dragged down to dismiss.</li>
+<li><a href="hover-card.html">hover-card</a> — A Hover Card: a preview that opens when the pointer rests on a name.</li>
+<li><a href="popover.html">popover</a> — A Popover: a small panel anchored to its trigger, opened on click.</li>
+<li><a href="sheet.html">sheet</a> — A Sheet: a panel that slides in from an edge and keeps the page visible behind it.</li>
+<li><a href="toast.html">toast</a> — A Toast, drawn by Sonner: a short confirmation that leaves on its own.</li>
+<li><a href="tooltip.html">tooltip</a> — A Tooltip: one line of help on hover or focus.</li>
+</ul>
+<h2>Feedback</h2>
+<ul>
+<li><a href="progress.html">progress</a> — A Progress bar: how far a known task has run.</li>
+<li><a href="skeleton.html">skeleton</a> — A Skeleton: the shape of content that is still loading.</li>
+<li><a href="spinner.html">spinner</a> — A Spinner: waiting, when nothing else can be shown.</li>
+</ul>
+<h2>Structural</h2>
+<ul>
+<li><a href="separator.html">separator</a> — A Separator: a hairline between two things that are not the same thing.</li>
+<li><a href="spacer.html">spacer</a> — Empty room, sized from the spacing ladder.</li>
+</ul>
+<h2>Specialty</h2>
+<ul>
+<li>comments — not drawn: Hydrates a comment composer — a form with a live submit control that posts a comment onto a record. A read-only console may carry no write path, so it is named here rather than drawn. It renders on your own pages.</li>
+<li>field-specimen — not drawn: Has no appearance of its own: it draws whatever control the fieldType you name gets, so a card here would document one field type instead of this component. The field types are all drawn, in every state, in the field catalogue.</li>
+<li><a href="file-upload.html">file-upload</a> — Files into a bucket, dropped or picked.</li>
+<li>language-switcher — not drawn: Draws the languages an app declares in languages[]. This console’s own surface app declares none — it carries your design system and deliberately nothing else — so the component has no list to draw. It renders on your pages.</li>
+<li><a href="number-input.html">number-input</a> — A number, typed or stepped one unit at a time.</li>
+<li><a href="preview.html">preview</a> — One option of one type, drawn at the value you name, so a setting can be seen rather than described.</li>
+<li><a href="reorderable-list.html">reorderable-list</a> — Rows the reader can drag into a new order.</li>
+<li>specimen — not drawn: A frame around a drawn component and the config that produced it. It refuses to hold another one — each level would print the level below, with no bottom — so it cannot be drawn inside this page. Every card here is one.</li>
+<li><a href="time-picker.html">time-picker</a> — A time of day, typed or picked.</li>
+</ul>
+<h2>AI</h2>
+<ul>
+<li><a href="ai-chat.html">ai-chat</a> — A thread with an agent declared in agents[].</li>
+</ul>
+</main>
+</body>
+</html>

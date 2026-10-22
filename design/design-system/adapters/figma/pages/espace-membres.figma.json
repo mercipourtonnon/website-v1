@@ -1,0 +1,198 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-membres",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-membres:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-membres:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-membres:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 4,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-membres:/components/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "membres",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-membres:/components/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Les bénévoles de l'asso. Ouvre une fiche pour découvrir ce qui anime chacun·e, ses envies et ses ressources.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "list",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-membres:/components/0/children/0/children/1",
+                            "type": "list"
+                          },
+                          "locked": true,
+                          "layoutMode": "VERTICAL",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-membres:/components/0",
+      "contentHash": "47019898262eae65432e77ee2f250e3fafafbc367b07e8d2cc3495be20069d2d"
+    },
+    {
+      "id": "espace-membres:/components/0/children/0",
+      "contentHash": "88b7f9cf128f8b1e6620d5d10c1fc23408a949171cf2ea8f2221e2ce6ce1e5f6"
+    },
+    {
+      "id": "espace-membres:/components/0/children/0/children/0",
+      "contentHash": "3c3787f0cddc03cef29660fe01bf9a70d94ac786ec22e15fcb46ea871703f314"
+    },
+    {
+      "id": "espace-membres:/components/0/children/0/children/0/children/0",
+      "contentHash": "1a1e362555a410df4ee6fc17ea801a8e4c785b6e71567301e9c100200f3fa6b1"
+    },
+    {
+      "id": "espace-membres:/components/0/children/0/children/0/children/1",
+      "contentHash": "d281fcaec666cb418a8b50001a0436a7fe8c39814ef22ba92171ec5d0e210dc2"
+    },
+    {
+      "id": "espace-membres:/components/0/children/0/children/1",
+      "contentHash": "8edfaa2760a0d2e45bad7b2a41eb0d2194fd5a1d79fa41da41dc732b59cee31f"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+import{te}from"./island-client-spke4qqd.js";import{Ti}from"./island-client-ddsmry9b.js";var t=0;class He{static create(){return new He}currentId=t;start(e,r){this.clear(),this.currentId=setTimeout(()=>{this.currentId=t,r()},e)}isStarted(){return this.currentId!==t}clear=()=>{if(this.currentId!==t)clearTimeout(this.currentId),this.currentId=t};disposeEffect=()=>this.clear}function H(){let e=te(He.create).current;return Ti(e.disposeEffect),e}
+export{He,H};

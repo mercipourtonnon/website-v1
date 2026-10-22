@@ -1,0 +1,3847 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "nos-interventions",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "nos-interventions:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "link",
+              "nodeType": "TEXT",
+              "characters": "Aller au contenu",
+              "children": []
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "navigation-menu",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "icon",
+                          "nodeType": "FRAME",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Nous faire un don",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Je réserve ma place",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "button",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "icon",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": []
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "children": []
+                        },
+                        {
+                          "name": "button",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Nos actions",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Nos ateliers",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Nos stands de sensibilisation",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Nos interventions",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Comprendre",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Le consentement",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Ressources",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "L'association",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "S'engager",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Adhérer",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Devenir bénévole",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Proposer une idée",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Faire un don",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Je réserve ma place",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "nos-interventions:/components/1",
+            "type": "container"
+          },
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/0",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/0/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "itemSpacing": 48,
+                  "counterAxisAlignItems": "CENTER",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/0/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Nos actions · Interventions",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "nos interventions auprès de structures",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/2",
+                            "type": "text"
+                          },
+                          "characters": "On intervient dans les structures à but non lucratif, les petites structures et les entreprises, à Strasbourg et en Alsace, avec un format construit avec toi. Les participant·es ne paient jamais.",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3",
+                            "type": "container"
+                          },
+                          "layoutMode": "NONE",
+                          "itemSpacing": 16,
+                          "counterAxisAlignItems": "CENTER",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3/children/0",
+                                "type": "link"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Parler de ton projet",
+                                  "children": []
+                                },
+                                {
+                                  "name": "icon",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3/children/0/children/1",
+                                    "type": "icon"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/0/children/0/children/1",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/1/children/0",
+                            "type": "image"
+                          },
+                          "layoutMode": "NONE",
+                          "componentProperties": {
+                            "variant": "hero"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/1",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/1/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/1/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 16,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Pour qui",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "pour quelles structures ?",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/1/children/0/children/1",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/1/children/0",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "iconBg": "bg-mauve-light",
+                            "icon": "heart-handshake",
+                            "accent": "text-mauve",
+                            "title": "structures à but non lucratif",
+                            "text": "Écoles, centres socio-culturels, CROUS, associations, médiathèques : l'atelier contribue directement à ta mission. On cherche un financement par subvention ou convention avec toi."
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "structures à but non lucratif",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Écoles, centres socio-culturels, CROUS, associations, médiathèques : l'atelier contribue directement à ta mission. On cherche un financement par subvention ou convention avec toi.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/1/children/1",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "iconBg": "bg-mauve-light",
+                            "icon": "users",
+                            "accent": "text-mauve",
+                            "title": "petites structures, collectifs et coopératives",
+                            "text": "Une équipe, un collectif, une coopérative : un format à la taille de ton groupe."
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "petites structures, collectifs et coopératives",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Une équipe, un collectif, une coopérative : un format à la taille de ton groupe.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/1/children/2",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "iconBg": "bg-mauve-light",
+                            "icon": "building-2",
+                            "accent": "text-mauve",
+                            "title": "entreprises et grandes institutions",
+                            "text": "Prévention collective du harcèlement, culture commune du non, qualité de vie au travail — et ton intervention finance nos ateliers gratuits."
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "entreprises et grandes institutions",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Prévention collective du harcèlement, culture commune du non, qualité de vie au travail — et ton intervention finance nos ateliers gratuits.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/2",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/2/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/2/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 16,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Formats",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "deux formats",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/0/children/2",
+                            "type": "text"
+                          },
+                          "characters": "Le même atelier que pour le grand public, dans ta structure, avec deux facilitateur·ices.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/2/children/0/children/1",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "paddingTop": 24,
+                          "paddingRight": 24,
+                          "paddingBottom": 24,
+                          "paddingLeft": 24,
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "width": 48,
+                              "primaryAxisAlignItems": "CENTER",
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/0/children/0",
+                                    "type": "icon"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Une demi-journée",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/2",
+                                "type": "text"
+                              },
+                              "characters": "atelier découverte",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/3",
+                                "type": "text"
+                              },
+                              "characters": "3 h à 3 h 30, de 6 à 15 personnes, deux facilitateur·ices. Nos exercices et l'acronyme RÈGLES, pour poser ses limites et entendre celles des autres.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "paddingTop": 24,
+                          "paddingRight": 24,
+                          "paddingBottom": 24,
+                          "paddingLeft": 24,
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "width": 48,
+                              "primaryAxisAlignItems": "CENTER",
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/0/children/0",
+                                    "type": "icon"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Une journée",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/2",
+                                "type": "text"
+                              },
+                              "characters": "deux temps dans la journée",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/3",
+                                "type": "text"
+                              },
+                              "characters": "Deux ateliers pour deux groupes, ou un atelier le matin et, l'après-midi, un temps de travail sur vos situations.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/2/children/0/children/2",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/0",
+                            "type": "text"
+                          },
+                          "characters": "comment on travaille",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "NONE",
+                          "itemSpacing": 24,
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "paddingTop": 24,
+                              "paddingRight": 24,
+                              "paddingBottom": 24,
+                              "paddingLeft": 24,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "1",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "on échange sur tes besoins",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0/children/2",
+                                    "type": "text"
+                                  },
+                                  "characters": "Ton public, ce qui se passe dans ta structure, ce que tu aimerais voir changer.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "paddingTop": 24,
+                              "paddingRight": 24,
+                              "paddingBottom": 24,
+                              "paddingLeft": 24,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "2",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "on construit le format ensemble",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1/children/2",
+                                    "type": "text"
+                                  },
+                                  "characters": "Demi-journée ou journée, nombre de personnes, lieu et date, à partir de nos notions et de nos exercices.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "paddingTop": 24,
+                              "paddingRight": 24,
+                              "paddingBottom": 24,
+                              "paddingLeft": 24,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "3",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "on intervient, puis on fait le point",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2/children/2",
+                                    "type": "text"
+                                  },
+                                  "characters": "Deux facilitateur·ices animent l'intervention dans un cadre bienveillant, puis on prend un temps avec toi pour en tirer les suites.",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/3",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/3/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 16,
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/3/children/0/children/0",
+                        "type": "text"
+                      },
+                      "characters": "combien ça coûte ?",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/3/children/0/children/1",
+                        "type": "text"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Les participant·es ne paient jamais.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/1",
+                            "type": "text"
+                          },
+                          "characters": " Pour ta structure, c'est sur devis, selon ton public et le format : ",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/2",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "écris-nous",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/3",
+                            "type": "text"
+                          },
+                          "characters": ", on en parle. Ce qui est facturé finance nos ateliers gratuits.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/3/children/0/children/2",
+                        "type": "text"
+                      },
+                      "characters": "Pas de budget ? On ouvre l'atelier au grand public ou on cherche un financement ensemble — on n'intervient pas gratuitement sur commande.",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/4",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/4/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/4/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 16,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/4/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Références",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/4/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "ils nous ont fait confiance",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/4/children/0/children/1",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/4/children/0/children/1/children/0",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "icon": "landmark",
+                            "role": "Première commande",
+                            "name": "Ville de Strasbourg",
+                            "text": "Animation d'un stand à la Fête de la musique, juin 2026.",
+                            "href": "https://www.strasbourg.eu",
+                            "linkLabel": "Découvrir la Ville de Strasbourg"
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Première commande",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Ville de Strasbourg",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Animation d'un stand à la Fête de la musique, juin 2026.",
+                                  "children": []
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "FRAME",
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "characters": "Découvrir la Ville de Strasbourg",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "icon",
+                                      "nodeType": "FRAME",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/4/children/0/children/1/children/1",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "icon": "graduation-cap",
+                            "role": "Premier atelier réservé",
+                            "name": "Unis-Cité",
+                            "text": "Un atelier prévu en décembre 2026 pour 8 volontaires en service civique.",
+                            "href": "https://www.uniscite.fr",
+                            "linkLabel": "Découvrir Unis-Cité"
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Premier atelier réservé",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Unis-Cité",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Un atelier prévu en décembre 2026 pour 8 volontaires en service civique.",
+                                  "children": []
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "FRAME",
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "characters": "Découvrir Unis-Cité",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "icon",
+                                      "nodeType": "FRAME",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/5",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/5/children/0",
+                    "type": "container"
+                  },
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/5/children/0/children/0",
+                        "type": "container"
+                      },
+                      "locked": true,
+                      "componentProperties": {
+                        "size": "type-lead",
+                        "quote": "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant.",
+                        "author": "Alex"
+                      },
+                      "children": [
+                        {
+                          "name": "icon",
+                          "nodeType": "FRAME",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "— Alex",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/6",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/6/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "itemSpacing": 32,
+                  "paddingTop": 32,
+                  "paddingRight": 32,
+                  "paddingBottom": 32,
+                  "paddingLeft": 32,
+                  "counterAxisAlignItems": "CENTER",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/6/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 16,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "parlons de ton projet",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "Dis-nous qui tu es, quel public tu accueilles et ce que tu imagines. On te répond par email pour en discuter.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2",
+                            "type": "text"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Tu es un financeur ou une collectivité ? Les chiffres et le besoin social sont sur ",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2/children/1",
+                                "type": "link"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "notre mission",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2/children/2",
+                                "type": "text"
+                              },
+                              "characters": ".",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/6/children/0/children/1",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/6/children/0/children/1/children/0",
+                            "type": "link"
+                          },
+                          "layoutMode": "NONE",
+                          "itemSpacing": 8,
+                          "counterAxisAlignItems": "CENTER",
+                          "children": [
+                            {
+                              "name": "icon",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/1/children/0/children/0",
+                                "type": "icon"
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/1/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Écrire à l'association",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "nos-interventions:/components/2",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "On anime des ateliers de consentement gratuits à Strasbourg. En 3h, on apprend à poser ses limites, à dire non et à accueillir celui des autres — dans un cadre bienveillant, ouvert à tou·te·s.",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "mercipourtonnon@gmail.com",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Le site",
+                      "children": []
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Notre mission",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Nos ateliers",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Nos stands",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Nos interventions",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Le consentement",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Ressources",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "L'équipe",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Newsletter",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Devenir bénévole",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Proposer une idée",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Adhérer",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Nous faire un don",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Mentions légales",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Espace bénévole",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Nous suivre",
+                      "children": []
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Instagram",
+                              "children": []
+                            },
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Facebook",
+                              "children": []
+                            },
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "LinkedIn",
+                              "children": []
+                            },
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "text",
+                  "nodeType": "TEXT",
+                  "characters": "© 2026 Merci pour ton non. Tous droits réservés.",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "breakpoint": "md",
+      "width": 768,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "nos-interventions:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "link",
+              "nodeType": "TEXT",
+              "characters": "Aller au contenu",
+              "children": []
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "navigation-menu",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "icon",
+                          "nodeType": "FRAME",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Nous faire un don",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Je réserve ma place",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "button",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "icon",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": []
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "children": []
+                        },
+                        {
+                          "name": "button",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Nos actions",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Nos ateliers",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Nos stands de sensibilisation",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Nos interventions",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Comprendre",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Le consentement",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Ressources",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "L'association",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "S'engager",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Adhérer",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Devenir bénévole",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "TEXT",
+                              "characters": "Proposer une idée",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Faire un don",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Je réserve ma place",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "nos-interventions:/components/1",
+            "type": "container"
+          },
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/0",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/0/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "itemSpacing": 48,
+                  "counterAxisAlignItems": "CENTER",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/0/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Nos actions · Interventions",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "nos interventions auprès de structures",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/2",
+                            "type": "text"
+                          },
+                          "characters": "On intervient dans les structures à but non lucratif, les petites structures et les entreprises, à Strasbourg et en Alsace, avec un format construit avec toi. Les participant·es ne paient jamais.",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3",
+                            "type": "container"
+                          },
+                          "layoutMode": "NONE",
+                          "itemSpacing": 16,
+                          "counterAxisAlignItems": "CENTER",
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3/children/0",
+                                "type": "link"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Parler de ton projet",
+                                  "children": []
+                                },
+                                {
+                                  "name": "icon",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3/children/0/children/1",
+                                    "type": "icon"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/0/children/0/children/1",
+                        "type": "container"
+                      },
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/0/children/0/children/1/children/0",
+                            "type": "image"
+                          },
+                          "layoutMode": "NONE",
+                          "componentProperties": {
+                            "variant": "hero"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/1",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/1/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/1/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 16,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Pour qui",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "pour quelles structures ?",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/1/children/0/children/1",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/1/children/0",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "iconBg": "bg-mauve-light",
+                            "icon": "heart-handshake",
+                            "accent": "text-mauve",
+                            "title": "structures à but non lucratif",
+                            "text": "Écoles, centres socio-culturels, CROUS, associations, médiathèques : l'atelier contribue directement à ta mission. On cherche un financement par subvention ou convention avec toi."
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "structures à but non lucratif",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Écoles, centres socio-culturels, CROUS, associations, médiathèques : l'atelier contribue directement à ta mission. On cherche un financement par subvention ou convention avec toi.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/1/children/1",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "iconBg": "bg-mauve-light",
+                            "icon": "users",
+                            "accent": "text-mauve",
+                            "title": "petites structures, collectifs et coopératives",
+                            "text": "Une équipe, un collectif, une coopérative : un format à la taille de ton groupe."
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "petites structures, collectifs et coopératives",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Une équipe, un collectif, une coopérative : un format à la taille de ton groupe.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/1/children/0/children/1/children/2",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "iconBg": "bg-mauve-light",
+                            "icon": "building-2",
+                            "accent": "text-mauve",
+                            "title": "entreprises et grandes institutions",
+                            "text": "Prévention collective du harcèlement, culture commune du non, qualité de vie au travail — et ton intervention finance nos ateliers gratuits."
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "entreprises et grandes institutions",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Prévention collective du harcèlement, culture commune du non, qualité de vie au travail — et ton intervention finance nos ateliers gratuits.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/2",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/2/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/2/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 16,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Formats",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "deux formats",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/0/children/2",
+                            "type": "text"
+                          },
+                          "characters": "Le même atelier que pour le grand public, dans ta structure, avec deux facilitateur·ices.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/2/children/0/children/1",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "paddingTop": 32,
+                          "paddingRight": 32,
+                          "paddingBottom": 32,
+                          "paddingLeft": 32,
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "width": 48,
+                              "primaryAxisAlignItems": "CENTER",
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/0/children/0",
+                                    "type": "icon"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Une demi-journée",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/2",
+                                "type": "text"
+                              },
+                              "characters": "atelier découverte",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/3",
+                                "type": "text"
+                              },
+                              "characters": "3 h à 3 h 30, de 6 à 15 personnes, deux facilitateur·ices. Nos exercices et l'acronyme RÈGLES, pour poser ses limites et entendre celles des autres.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "paddingTop": 32,
+                          "paddingRight": 32,
+                          "paddingBottom": 32,
+                          "paddingLeft": 32,
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "width": 48,
+                              "primaryAxisAlignItems": "CENTER",
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/0/children/0",
+                                    "type": "icon"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Une journée",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/2",
+                                "type": "text"
+                              },
+                              "characters": "deux temps dans la journée",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/3",
+                                "type": "text"
+                              },
+                              "characters": "Deux ateliers pour deux groupes, ou un atelier le matin et, l'après-midi, un temps de travail sur vos situations.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/2/children/0/children/2",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/0",
+                            "type": "text"
+                          },
+                          "characters": "comment on travaille",
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "NONE",
+                          "itemSpacing": 24,
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "paddingTop": 24,
+                              "paddingRight": 24,
+                              "paddingBottom": 24,
+                              "paddingLeft": 24,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "1",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "on échange sur tes besoins",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0/children/2",
+                                    "type": "text"
+                                  },
+                                  "characters": "Ton public, ce qui se passe dans ta structure, ce que tu aimerais voir changer.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "paddingTop": 24,
+                              "paddingRight": 24,
+                              "paddingBottom": 24,
+                              "paddingLeft": 24,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "2",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "on construit le format ensemble",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1/children/2",
+                                    "type": "text"
+                                  },
+                                  "characters": "Demi-journée ou journée, nombre de personnes, lieu et date, à partir de nos notions et de nos exercices.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "paddingTop": 24,
+                              "paddingRight": 24,
+                              "paddingBottom": 24,
+                              "paddingLeft": 24,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "3",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "on intervient, puis on fait le point",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2/children/2",
+                                    "type": "text"
+                                  },
+                                  "characters": "Deux facilitateur·ices animent l'intervention dans un cadre bienveillant, puis on prend un temps avec toi pour en tirer les suites.",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/3",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/3/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 16,
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/3/children/0/children/0",
+                        "type": "text"
+                      },
+                      "characters": "combien ça coûte ?",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/3/children/0/children/1",
+                        "type": "text"
+                      },
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Les participant·es ne paient jamais.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/1",
+                            "type": "text"
+                          },
+                          "characters": " Pour ta structure, c'est sur devis, selon ton public et le format : ",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/2",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "écris-nous",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/3",
+                            "type": "text"
+                          },
+                          "characters": ", on en parle. Ce qui est facturé finance nos ateliers gratuits.",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/3/children/0/children/2",
+                        "type": "text"
+                      },
+                      "characters": "Pas de budget ? On ouvre l'atelier au grand public ou on cherche un financement ensemble — on n'intervient pas gratuitement sur commande.",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/4",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/4/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/4/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 16,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/4/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "Références",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/4/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "ils nous ont fait confiance",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/4/children/0/children/1",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/4/children/0/children/1/children/0",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "icon": "landmark",
+                            "role": "Première commande",
+                            "name": "Ville de Strasbourg",
+                            "text": "Animation d'un stand à la Fête de la musique, juin 2026.",
+                            "href": "https://www.strasbourg.eu",
+                            "linkLabel": "Découvrir la Ville de Strasbourg"
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Première commande",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Ville de Strasbourg",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Animation d'un stand à la Fête de la musique, juin 2026.",
+                                  "children": []
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "FRAME",
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "characters": "Découvrir la Ville de Strasbourg",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "icon",
+                                      "nodeType": "FRAME",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/4/children/0/children/1/children/1",
+                            "type": "container"
+                          },
+                          "locked": true,
+                          "componentProperties": {
+                            "icon": "graduation-cap",
+                            "role": "Premier atelier réservé",
+                            "name": "Unis-Cité",
+                            "text": "Un atelier prévu en décembre 2026 pour 8 volontaires en service civique.",
+                            "href": "https://www.uniscite.fr",
+                            "linkLabel": "Découvrir Unis-Cité"
+                          },
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Premier atelier réservé",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Unis-Cité",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "characters": "Un atelier prévu en décembre 2026 pour 8 volontaires en service civique.",
+                                  "children": []
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "FRAME",
+                                  "children": [
+                                    {
+                                      "name": "text",
+                                      "nodeType": "TEXT",
+                                      "characters": "Découvrir Unis-Cité",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "icon",
+                                      "nodeType": "FRAME",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/5",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/5/children/0",
+                    "type": "container"
+                  },
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/5/children/0/children/0",
+                        "type": "container"
+                      },
+                      "locked": true,
+                      "componentProperties": {
+                        "size": "type-lead",
+                        "quote": "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant.",
+                        "author": "Alex"
+                      },
+                      "children": [
+                        {
+                          "name": "icon",
+                          "nodeType": "FRAME",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "Cet atelier aurait le mérite d'être proposé en milieu professionnel, en milieu associatif, dans les lycées, dans les facs, sur les sites de rencontres amoureux et amicaux, et partout dans le monde en fait. J'ai encore appris de nouvelles choses sur moi-même et sur les relations interpersonnelles en général. Ça fait grandir et c'est inspirant.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "characters": "— Alex",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "nos-interventions:/components/1/children/6",
+                "type": "container"
+              },
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "nos-interventions:/components/1/children/6/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "itemSpacing": 32,
+                  "paddingTop": 48,
+                  "paddingRight": 48,
+                  "paddingBottom": 48,
+                  "paddingLeft": 48,
+                  "counterAxisAlignItems": "CENTER",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/6/children/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 16,
+                      "children": [
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/0",
+                            "type": "text"
+                          },
+                          "characters": "parlons de ton projet",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "Dis-nous qui tu es, quel public tu accueilles et ce que tu imagines. On te répond par email pour en discuter.",
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2",
+                            "type": "text"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Tu es un financeur ou une collectivité ? Les chiffres et le besoin social sont sur ",
+                              "children": []
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2/children/1",
+                                "type": "link"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "notre mission",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2/children/2",
+                                "type": "text"
+                              },
+                              "characters": ".",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "nos-interventions:/components/1/children/6/children/0/children/1",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "primaryAxisAlignItems": "MAX",
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "nos-interventions:/components/1/children/6/children/0/children/1/children/0",
+                            "type": "link"
+                          },
+                          "layoutMode": "NONE",
+                          "itemSpacing": 8,
+                          "counterAxisAlignItems": "CENTER",
+                          "children": [
+                            {
+                              "name": "icon",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/1/children/0/children/0",
+                                "type": "icon"
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "nos-interventions:/components/1/children/6/children/0/children/1/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Écrire à l'association",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "nos-interventions:/components/2",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "On anime des ateliers de consentement gratuits à Strasbourg. En 3h, on apprend à poser ses limites, à dire non et à accueillir celui des autres — dans un cadre bienveillant, ouvert à tou·te·s.",
+                      "children": []
+                    },
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "mercipourtonnon@gmail.com",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Le site",
+                      "children": []
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Notre mission",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Nos ateliers",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Nos stands",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Nos interventions",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Le consentement",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Ressources",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "L'équipe",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Newsletter",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Devenir bénévole",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Proposer une idée",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Adhérer",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Nous faire un don",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Mentions légales",
+                          "children": []
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "TEXT",
+                          "characters": "Espace bénévole",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Nous suivre",
+                      "children": []
+                    },
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Instagram",
+                              "children": []
+                            },
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "Facebook",
+                              "children": []
+                            },
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "link",
+                          "nodeType": "FRAME",
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "characters": "LinkedIn",
+                              "children": []
+                            },
+                            {
+                              "name": "icon",
+                              "nodeType": "FRAME",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "text",
+                  "nodeType": "TEXT",
+                  "characters": "© 2026 Merci pour ton non. Tous droits réservés.",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "nos-interventions:/components/0",
+      "contentHash": "0ba137dcf2192dbfac957bd4282ce1313c7d42dca867c38921795ebafa3d418f"
+    },
+    {
+      "id": "nos-interventions:/components/1",
+      "contentHash": "03b765a0862310011833791d4151c3d753b753f726c9cc5d0cedb3b63dcd0564"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0",
+      "contentHash": "ba6b583c7ddd61ec88c9dd6ed5900ed50db47ff0f5cc6f4b2893f80e1f27fc4b"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0",
+      "contentHash": "7e14a6e5490aae7cd754a14a61bdeee93a8c9912847e5383ef71fec46497f3f4"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/0",
+      "contentHash": "5859bb3220bdb9a7528d6dc59f1c432148d9aa708975a6c5b67c6ac09a981ec6"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/0",
+      "contentHash": "242a1864c8a7ba74a63b9ea5c1a232991cad9a772b25a9b72de1ab243e4b4587"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/1",
+      "contentHash": "65e461cb5f49165d248d364cad84ea7e4ee414017d55f49930d6d23013d2c2ce"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/2",
+      "contentHash": "282d82a575d6ffb91356c3af0956f8556150cbd8888e215c2a7b32f06ad90771"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3",
+      "contentHash": "0c05f6ba30d8eab830f0b05502124c2a8a93cb4a4263ae2403fec4734749e74a"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3/children/0",
+      "contentHash": "de924fca477ec4d179ccbe17b2f499ccefe8dbca67cc162aa6691290a060c359"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3/children/0/children/0",
+      "contentHash": "9c7712634d64676b48d80199d11f53935c721d49e74175f84e3920c87276a088"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/0/children/3/children/0/children/1",
+      "contentHash": "4eb0740b968d64be626a43219b32aea20019c3e628213dc19de13f8434401792"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/1",
+      "contentHash": "14dad56aeacd79eae649336f99035ed0616a940e86e1fea60779f75582e54ed0"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/0/children/0/children/1/children/0",
+      "contentHash": "dcbb22db90eddc59e34a8d1e97a8ac6bbea38eec6fc00a4c3992f8799800ab5c"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/1",
+      "contentHash": "6c913b5fc5e033e714838c7bd07dd23fa19f47df96987853a6cf8647ac72d55e"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/1/children/0",
+      "contentHash": "cbaa64b6f7356dc1fa37240a7c6274e7ddc6933b643fe9c87c1f33fcd0c54cde"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/1/children/0/children/0",
+      "contentHash": "4d0fef06120b8432b0fa07d9b23f6f36d4bc582b0764b92ace3f811964c084e4"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/1/children/0/children/0/children/0",
+      "contentHash": "f717d343f5c5f5348d55f854e09cb23dc3bd5b1a577eaf917908f4c235f12afc"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/1/children/0/children/0/children/1",
+      "contentHash": "dbc9376032611d0ecaf9db865892eff4e98562e89b800aed2a3718a0d8ce98a7"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/1/children/0/children/1",
+      "contentHash": "36afcdebdaff670edc994c5987492ff0857acd04d3f7fa00b6065b6d986b4bb0"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/1/children/0/children/1/children/0",
+      "contentHash": "470c40d63dcfc92d87e210d171bec3b677b145724357652e2f62f35593a20b58"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/1/children/0/children/1/children/1",
+      "contentHash": "a7de975775bd0c2afaa7b81902c3aea77fa8335eca70a4f2e5895a75c670a50a"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/1/children/0/children/1/children/2",
+      "contentHash": "a0fb400bdfde9e1479c7610296e37e5c0213939c381ce7df4d30cfcb685ad5f6"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2",
+      "contentHash": "a5a37db7de984357d7bcc828769168a8db6f0c9adceb79ec7408ed6f79d6f463"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0",
+      "contentHash": "381f1faafb4726c5262639e345a0b77e496bf5fc4d5bdc6928e424cc5bfd532a"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/0",
+      "contentHash": "4f298c79be6f0e56cdfe83a270a5cfed8b5be3f2ae9cc03d3f7e53c9d7a1e721"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/0/children/0",
+      "contentHash": "f036169e398acb99e1914a8bb91464e56a8adc456ab8fa98188fc7f0f8a5d809"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/0/children/1",
+      "contentHash": "69be2d4dab1c22336ea0e9c866272c1c715118049e6ec46e018880e67c40180c"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/0/children/2",
+      "contentHash": "866b58b43d40684cd839beb115c41116e20b8fe9b8ec280f097dda1528f394ac"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1",
+      "contentHash": "93c8e16162f654628c6d6d2d220342ac7689b72ee4e77879588d79ca5b6cea0d"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0",
+      "contentHash": "787ef32abf456da26841e681376b15855dd988a257206448372ff8ada1b386d5"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/0",
+      "contentHash": "70cd138b9a7aaeac9e4f9c0a367a93bdde4d288a43d000e3de1b3a862adf0b2f"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/0/children/0",
+      "contentHash": "471dc5b55783fec0ec6818e1ef7d645069837774f1deb82454ee63b16d651e20"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/1",
+      "contentHash": "48ed4580805c760b1b6563b2a239776abe478260aef62c6428931b93ed22768c"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/2",
+      "contentHash": "0a92245a61a08b0a14f564ba4380faf86c4576e47408d2e0fbd796f193319423"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/0/children/3",
+      "contentHash": "62d8030667ab118c71fca3ce3b270dd0a217182afb3aac8ccdb216934c70e247"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1",
+      "contentHash": "1790c52b627bd973ea424d18bed4ebd97c75fc0e19f2bf26d070132410bd1d90"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/0",
+      "contentHash": "5b14a5c0d9cf16063c0abe257497547259771447dfcbc0a7464ca56faf61e994"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/0/children/0",
+      "contentHash": "98ce56fc3c832ed3a1bfb210ca077fec57a6ebebf59fbbf7ec33516060da04c1"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/1",
+      "contentHash": "5535220cfbaf99755b46cc954393a1f55204e21b26c3f579864b84b74e123543"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/2",
+      "contentHash": "ae520af3696563f87b71f39435fd816319ed829ad0fb13962def3cadd2cce20d"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/1/children/1/children/3",
+      "contentHash": "d35f2a5908082bdff19f65bc56dc770340ab8d5dbc06aa8c0f7c2e7033894f9a"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2",
+      "contentHash": "3a845d8ad675320aab1049b2a35e288ec5e6257b586251896e8a56e299232eba"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/0",
+      "contentHash": "c36a2f68242d8d47332ca29c070f5683fd33d7372480b65360ae22841664307c"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1",
+      "contentHash": "58ce4f9923b75d654363162c51bea5562dc02bc33aa73299e014bc73d320f1ae"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0",
+      "contentHash": "4c6d6902e1a534b0a4a161ad2966b73833b9f4079fb5efac612b7dd8b7297e56"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0/children/0",
+      "contentHash": "4af167a106eef05b070195cb6decda18f932516162b95a6be0a2eaeb76112b91"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0/children/1",
+      "contentHash": "7f0ce7935e4ee2b5187b4555d789b72d62d168655ac9b72b8ad09fde2f7431ab"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/0/children/2",
+      "contentHash": "421b695bd5809a8f302808564c61971da14a2cfb721ac699d0bdb2fb91a029a1"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1",
+      "contentHash": "db71510f0efb14e937d07b0ecb0ab895aab24cf75da8531c6e76f7046fbc0f2c"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1/children/0",
+      "contentHash": "1294931c2fc3e9329e4189a9fde3c72438c0313771643298cee9707900f279f8"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1/children/1",
+      "contentHash": "c0aff8c2e433a129049e659fae1745f2489b3755173cbed289fefa897dc5aee2"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/1/children/2",
+      "contentHash": "a4ba63af82bbf33dfd7d5a38528ce67afabaecd33939edc3bc424cfc44b3aa4e"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2",
+      "contentHash": "6cbf525ef167bb5973dccbbf8d393a02c2e5a7491def8d3e221ff87fbdff2989"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2/children/0",
+      "contentHash": "da391226ded7c0a979c54588c0e21731dfe65b8b4d63e8f9604c754a79ff4236"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2/children/1",
+      "contentHash": "d3285a24c9438c37d911b1396bf7f25700c948a4b4ae4bf83c2ce39e03076e27"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/2/children/0/children/2/children/1/children/2/children/2",
+      "contentHash": "0425898f46072f3108717d33d33e390d6e2c33ed6bcc1c921a339aa1c1ab2d65"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/3",
+      "contentHash": "7111d7bc47e469aa53d3a976757611bff39a189d8d48565761b9c5f29cb2b34c"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/3/children/0",
+      "contentHash": "2d04073194e397eda9ead438c5ebe426a91d8b31eb821af70b6629bc347a411f"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/3/children/0/children/0",
+      "contentHash": "f12610666d070973537d8407ff718054bc11f95e533924ff0c50b2b6def05afa"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/3/children/0/children/1",
+      "contentHash": "a7e9b83b37fe5b01b9ff6db0629341339043bcf1582fd1bc9cdb0b7bad724156"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/0",
+      "contentHash": "0a456a3b5cc9ff4b579ddf87fa035d3726ea34aaeec1e18f27b842fe0cb376f0"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/1",
+      "contentHash": "b9951f4dbfc0b7ed4b743b915dca24f3d1d9161fc75a5066a5d531d624b42c99"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/2",
+      "contentHash": "ee42f4ce1b92ce284e407f49923411ed809a4480f4bb86e9c59ce6bb41c31d5d"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/3/children/0/children/1/children/3",
+      "contentHash": "1c27c033b7f0c1792b6feab0f6fe7e7fdaf26580dbe2380e86f4e4e46d32b2ac"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/3/children/0/children/2",
+      "contentHash": "8a2820fbc0c9c6affce8ab19f79750206191970a598c0e8580e408e976ee977c"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/4",
+      "contentHash": "f5e44e7b036b1937ae6b9372f72227fa156f2d7e18ad25a8c7863a85805705f7"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/4/children/0",
+      "contentHash": "7adcdfb9721f26a8505b598d88246508c2fa284282d3bb279187f4783e7a59b9"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/4/children/0/children/0",
+      "contentHash": "6ad4d9e6c5becf2227ebf53a35fd2993c8bfcb6f9c9421b17e6efe8a62d19b03"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/4/children/0/children/0/children/0",
+      "contentHash": "5f950971a2c3fdb63c2b133cd4f10489f72a8279a3c6d500fcff3026c5523788"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/4/children/0/children/0/children/1",
+      "contentHash": "aa8fe5f3405dee8f83cd8d6a20e7ffad6bbdf860619422a10e1a55e0693cb6e3"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/4/children/0/children/1",
+      "contentHash": "871a9a8a89648d43fb812f565e10b3f0f07a4d81509fe3346ba095a42708b5b6"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/4/children/0/children/1/children/0",
+      "contentHash": "6601b454871aa0ceff848c8c9ef56ec0d4100534ccf06bfadc294fa457defa7e"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/4/children/0/children/1/children/1",
+      "contentHash": "59ad1a367bbbc1be30f17326e6f3a047597271c93da6b5def06fe304ffe47a28"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/5",
+      "contentHash": "c1c20ce648b85bf2b8e9858959a9514311b71abaccf6548803cdf73ed093b596"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/5/children/0",
+      "contentHash": "35bec541aa7d7583e2db2f7106dca38c519220dc1a68692c4a0652b195252e39"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/5/children/0/children/0",
+      "contentHash": "535e01d7d3dc4e1a8fdadfff698f99a813da1f796a972258d02985cdb5b7e915"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6",
+      "contentHash": "e3b0edf0c719d1f7fb16bec96f8a55d0f18c8743537e4a8b8dd082f24cc22ae1"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0",
+      "contentHash": "b6dc0d43ee459edcd7d07accd90f24c85e9623e66b495ef9a8601cd9e40b5a01"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/0",
+      "contentHash": "cfd061733038d133fffb3408826c83203ef54caafbf3903905a5a73428c3bc34"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/0",
+      "contentHash": "5c19101a2a550889db20e88148fa1efc15ee32dad83cee14415807359deca05c"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/1",
+      "contentHash": "43d737f97cf4cef0791fb76176cfd9610c298665c9b1a30e43068cb107376bb5"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2",
+      "contentHash": "414e793cd3367194526570e52b068bd964b6228039a1fef738219e61c6ccdcc1"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2/children/0",
+      "contentHash": "177aac1fae43c60cca12e945495fa448dc9030011881353e3eb60cef754751ba"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2/children/1",
+      "contentHash": "bb4ca28920776c71b14b985f911ca15769f5b88b269f2443c1fee542c7fd4c72"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/0/children/2/children/2",
+      "contentHash": "9f48c0bdc86c3a78dea0a4ba61ff1b575261488f9c48cff0169421a1a057bd8a"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/1",
+      "contentHash": "53bc20711996c3776bdf185e26684bc3669fdc1578cf9d21e1b62f513b7baee1"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/1/children/0",
+      "contentHash": "c882ea595443217f7e3637b2d5ed2867855201e11b95ad20fcd10bb6c71b25a4"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/1/children/0/children/0",
+      "contentHash": "0c7bfeed3b4f9f8575d5bb37c359549d2887b5d8b68193a6be3233783eb92b1b"
+    },
+    {
+      "id": "nos-interventions:/components/1/children/6/children/0/children/1/children/0/children/1",
+      "contentHash": "cff859c06cf50dadc55d5bc8db9eb72496868ae551df4ed0c08debe229ffe48d"
+    },
+    {
+      "id": "nos-interventions:/components/2",
+      "contentHash": "13cf74ac852844c192178bbfe19b8f2d01057995374f2b0aded1c8133b5aa7dc"
+    }
+  ]
+}

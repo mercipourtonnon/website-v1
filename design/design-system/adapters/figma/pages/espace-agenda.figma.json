@@ -1,0 +1,331 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-agenda",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-agenda:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-agenda:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 40,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-agenda:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 4,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-agenda:/components/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "agenda",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-agenda:/components/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Réunions, formations, stands… Ouvre un rendez-vous pour lire son programme, voir ce dont l'équipe a besoin et t'inscrire.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-agenda:/components/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 16,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-agenda:/components/0/children/0/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "prochains rendez-vous",
+                              "children": []
+                            },
+                            {
+                              "name": "filter-bar",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-agenda:/components/0/children/0/children/1/children/1",
+                                "type": "filter-bar"
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "list",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-agenda:/components/0/children/0/children/1/children/2",
+                                "type": "list"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            },
+                            {
+                              "name": "event-calendar",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-agenda:/components/0/children/0/children/1/children/3",
+                                "type": "event-calendar"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-agenda:/components/0/children/0/children/2",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 16,
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-agenda:/components/0/children/0/children/2/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-agenda:/components/0/children/0/children/2/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "prochains ateliers",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-agenda:/components/0/children/0/children/2/children/0/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "Les ateliers de consentement ouverts au public. Parles-en autour de toi !",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "list",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-agenda:/components/0/children/0/children/2/children/1",
+                                "type": "list"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-agenda:/components/0",
+      "contentHash": "b9b63b062d91b61ec889a048a161eceeeb27fb76b33ca8cd4e5a84951fcc2821"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0",
+      "contentHash": "2876717370968d47f5fd880f22a5fa9a212c4b621c5b306d9ebc86dad8e527d9"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/0",
+      "contentHash": "e9d2e02fdc14393cc6bed3d83d436233e39c82c947b4ff4e40cd7923a6c71d0c"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/0/children/0",
+      "contentHash": "88f6ece8cfb9ca85ef0ea0a8e14f09d744f782d5b921f6b5d1d336af89861104"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/0/children/1",
+      "contentHash": "2d5e9d956bb9752731e93e8369c4c719425836a6ccb3ace3762a54c28fe4391c"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/1",
+      "contentHash": "7ae0890f8d95fae9a7f9d32384f56c9660a01e0f1c18055cf26ed61edda78512"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/1/children/0",
+      "contentHash": "6cf55ae7d17b6753345e1fb3fd1363ededc5688df30667627dfc166e169c1b7c"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/1/children/1",
+      "contentHash": "d60b9dea65f7256e361ab5bfcf64b13239de6e5841694d949836834bd4218f16"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/1/children/2",
+      "contentHash": "ed764877ddb3f5fb80d06a63b88a56b25e66707ed2895fae1560963de0be633b"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/1/children/3",
+      "contentHash": "a333807e07dc926cbebebe92e27303c9e552d1771546826d30bfd364e9dc9671"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/2",
+      "contentHash": "3ab09f417828d2151d2370b876be02cdfc34b043399ab7256ad9132a10eb016f"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/2/children/0",
+      "contentHash": "6d921439172cf7a39f64c0758d9fadd69a29e33dc0dcfeae1349d914f79d3ce2"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/2/children/0/children/0",
+      "contentHash": "47845688586b4bf32f3daf62ceba387b2b28fc96a0f2d4d7ba11da84ab0331fd"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/2/children/0/children/1",
+      "contentHash": "ed9d315da08a96d278c905acaa9be4442c6addbd9f0ea9711dddbebdd2a317cd"
+    },
+    {
+      "id": "espace-agenda:/components/0/children/0/children/2/children/1",
+      "contentHash": "c33b15f395d713f0bfe19a8d0b8f6874b9515a9f308219363b048a2b04de7660"
+    }
+  ]
+}

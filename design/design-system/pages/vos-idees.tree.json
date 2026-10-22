@@ -1,0 +1,434 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "vos-idees",
+  "nodes": [
+    {
+      "id": "vos-idees:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    },
+    {
+      "id": "vos-idees:/components/1",
+      "type": "container",
+      "children": [
+        {
+          "id": "vos-idees:/components/1/children/0",
+          "type": "container",
+          "children": [
+            {
+              "id": "vos-idees:/components/1/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "vos-idees:/components/1/children/0/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "vos-idees:/components/1/children/0/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "S'engager",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/0/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "construire l'association avec nous",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/0/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Nos ateliers sont nés d'idées et de retours. Les prochains aussi : un atelier pour les parents, pour une équipe, pour des ados ; un contenu, un jeu, un format court, un lieu qui nous accueillerait. Dis-nous ce qui te manque.",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/0/children/0/children/0/children/3",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "responsive": {
+                        "sm": {
+                          "direction": {
+                            "value": "row"
+                          },
+                          "align": {
+                            "value": "center"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "vos-idees:/components/1/children/0/children/0/children/0/children/3/children/0",
+                          "type": "link",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "vos-idees:/components/1/children/0/children/0/children/0/children/3/children/0/children/0",
+                              "type": "text",
+                              "content": "Partager mon idée",
+                              "children": []
+                            },
+                            {
+                              "id": "vos-idees:/components/1/children/0/children/0/children/0/children/3/children/0/children/1",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "vos-idees:/components/1/children/0/children/0/children/0/children/3/children/1",
+                          "type": "link",
+                          "content": "Tu veux plutôt donner un coup de main ?",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "vos-idees:/components/1/children/0/children/0/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "vos-idees:/components/1/children/0/children/0/children/1/children/0",
+                      "type": "image",
+                      "variant": "hero",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vos-idees:/components/1/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "vos-idees:/components/1/children/1/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "1rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "vos-idees:/components/1/children/1/children/0/children/0",
+                  "type": "text",
+                  "content": "ce qu'on construit déjà",
+                  "children": []
+                },
+                {
+                  "id": "vos-idees:/components/1/children/1/children/0/children/1",
+                  "type": "text",
+                  "children": [
+                    {
+                      "id": "vos-idees:/components/1/children/1/children/0/children/1/children/0",
+                      "type": "text",
+                      "content": "Quatre chantiers sont déjà ouverts, détaillés dans ",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/1/children/0/children/1/children/1",
+                      "type": "link",
+                      "content": "notre mission, « et ensuite »",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/1/children/0/children/1/children/2",
+                      "type": "text",
+                      "content": ". Si ton idée en rejoint un, dis-le-nous quand même : c'est ce qui nous aide à les prioriser.",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vos-idees:/components/1/children/2",
+          "type": "container",
+          "children": [
+            {
+              "id": "vos-idees:/components/1/children/2/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "start"
+                }
+              },
+              "children": [
+                {
+                  "id": "vos-idees:/components/1/children/2/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "vos-idees:/components/1/children/2/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Ton idée",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/2/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "Trois lignes suffisent. Ton nom et ton e-mail sont facultatifs — laisse-les seulement si tu veux une réponse.",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/2/children/0/children/0/children/2",
+                      "type": "text",
+                      "children": [
+                        {
+                          "id": "vos-idees:/components/1/children/2/children/0/children/0/children/2/children/0",
+                          "type": "text",
+                          "content": "Ce que tu écris est lu par la coordination seulement, et conservé deux ans au plus — ",
+                          "children": []
+                        },
+                        {
+                          "id": "vos-idees:/components/1/children/2/children/0/children/0/children/2/children/1",
+                          "type": "link",
+                          "content": "nos mentions légales",
+                          "children": []
+                        },
+                        {
+                          "id": "vos-idees:/components/1/children/2/children/0/children/0/children/2/children/2",
+                          "type": "text",
+                          "content": ".",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "vos-idees:/components/1/children/2/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "vos-idees:/components/1/children/2/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "responsive": {
+                        "sm": {
+                          "padding": {
+                            "value": "2rem"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "vos-idees:/components/1/children/2/children/0/children/1/children/0/children/0",
+                          "type": "form",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vos-idees:/components/1/children/3",
+          "type": "container",
+          "children": [
+            {
+              "id": "vos-idees:/components/1/children/3/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "start"
+                }
+              },
+              "children": [
+                {
+                  "id": "vos-idees:/components/1/children/3/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "vos-idees:/components/1/children/3/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Et après ?",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/3/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "ce que devient ton idée",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/3/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "On lit chaque idée en réunion mensuelle du Cercle Cœur ; les idées retenues entrent dans nos priorités, et on publie ici ce qu'elles sont devenues.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "vos-idees:/components/1/children/3/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "padding": {
+                      "value": "2rem"
+                    },
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.25rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "vos-idees:/components/1/children/3/children/0/children/1/children/0",
+                      "type": "text",
+                      "content": "tu veux aller plus loin ?",
+                      "children": []
+                    },
+                    {
+                      "id": "vos-idees:/components/1/children/3/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "vos-idees:/components/1/children/3/children/0/children/1/children/1/children/0",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "vos-idees:/components/1/children/3/children/0/children/1/children/1/children/0/children/0",
+                              "type": "link",
+                              "content": "Rejoindre l'équipe bénévole",
+                              "children": []
+                            },
+                            {
+                              "id": "vos-idees:/components/1/children/3/children/0/children/1/children/1/children/0/children/1",
+                              "type": "text",
+                              "content": "Stands, ateliers, communication, logistique — à ton rythme.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "vos-idees:/components/1/children/3/children/0/children/1/children/1/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "vos-idees:/components/1/children/3/children/0/children/1/children/1/children/1/children/0",
+                              "type": "link",
+                              "content": "Organiser un atelier dans ta structure",
+                              "children": []
+                            },
+                            {
+                              "id": "vos-idees:/components/1/children/3/children/0/children/1/children/1/children/1/children/1",
+                              "type": "text",
+                              "content": "Une équipe, une école, une association : on construit le format avec toi.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vos-idees:/components/2",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    }
+  ]
+}

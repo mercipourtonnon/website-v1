@@ -1,0 +1,29 @@
+# mercipourtonnon design system
+
+> How mercipourtonnon looks and speaks: its tokens in both colour modes, the stylesheet it paints with, the rules for writing in its voice, and a rendered kit of every component.
+
+Read DESIGN.md first. Build against the tokens and the stylesheet; open the component kit to see what each type looks like in light and in dark.
+
+## Brief
+
+- [DESIGN.md](DESIGN.md): principles, voice, colour roles and component guidance, written for an agent
+
+## Tokens
+
+- [tokens/base.tokens.json](tokens/base.tokens.json): the light design tokens, W3C DTCG 2025.10
+- [tokens/dark.tokens.json](tokens/dark.tokens.json): the same tokens with the dark colours
+- [tokens/sovrium.resolver.json](tokens/sovrium.resolver.json): the DTCG resolver choosing a mode
+
+## Stylesheets
+
+- [css/theme.css](css/theme.css): shadcn/ui variables, `:root` for light and `.dark` for dark
+- [css/tailwind.css](css/tailwind.css): a Tailwind v4 `@theme` over the theme
+
+## Component kit
+
+- [components/index.html](components/index.html): the gallery of every drawn component type
+- [components/manifest.json](components/manifest.json): every catalogued type, its anatomy, its variants, and why a type is not drawn
+
+## Optional
+
+- [manifest.json](manifest.json): every file of this bundle with its size and SHA-256

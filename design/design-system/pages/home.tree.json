@@ -1,0 +1,925 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "home",
+  "nodes": [
+    {
+      "id": "home:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    },
+    {
+      "id": "home:/components/1",
+      "type": "container",
+      "children": [
+        {
+          "id": "home:/components/1/children/0",
+          "type": "container",
+          "children": [
+            {
+              "id": "home:/components/1/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "home:/components/1/children/0/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/0/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Ateliers gratuits · Strasbourg et Alsace",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/0/children/0/children/0/children/1",
+                      "type": "text",
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/1/children/0",
+                          "type": "text",
+                          "content": "ateliers ",
+                          "children": []
+                        },
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/1/children/1",
+                          "type": "text",
+                          "content": "de sensibilisation ",
+                          "children": []
+                        },
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/1/children/2",
+                          "type": "text",
+                          "content": "et de consentement ",
+                          "children": []
+                        },
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/1/children/3",
+                          "type": "text",
+                          "content": "à strasbourg",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "home:/components/1/children/0/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Ateliers, stands et interventions : on t'invite à apprendre à dire non, à poser tes limites et à accueillir celles des autres.",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/0/children/0/children/0/children/3",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/3/children/0",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/3/children/0/children/0",
+                              "type": "icon",
+                              "children": []
+                            },
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/3/children/0/children/1",
+                              "type": "text",
+                              "content": "6 à 15 personnes",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/3/children/1",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/3/children/1/children/0",
+                              "type": "icon",
+                              "children": []
+                            },
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/3/children/1/children/1",
+                              "type": "text",
+                              "content": "3 heures",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/3/children/2",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/3/children/2/children/0",
+                              "type": "icon",
+                              "children": []
+                            },
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/3/children/2/children/1",
+                              "type": "text",
+                              "content": "Gratuit, don libre",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/3/children/3",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/3/children/3/children/0",
+                              "type": "icon",
+                              "children": []
+                            },
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/3/children/3/children/1",
+                              "type": "text",
+                              "content": "Strasbourg, Alsace",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "home:/components/1/children/0/children/0/children/0/children/4",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "responsive": {
+                        "sm": {
+                          "direction": {
+                            "value": "row"
+                          },
+                          "align": {
+                            "value": "center"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/4/children/0",
+                          "type": "link",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/4/children/0/children/0",
+                              "type": "text",
+                              "content": "Je réserve ma place",
+                              "children": []
+                            },
+                            {
+                              "id": "home:/components/1/children/0/children/0/children/0/children/4/children/0/children/1",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "home:/components/1/children/0/children/0/children/0/children/4/children/1",
+                          "type": "list",
+                          "layout": {
+                            "padding": {
+                              "value": "0rem"
+                            }
+                          },
+                          "locked": "island",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "home:/components/1/children/0/children/0/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/0/children/0/children/1/children/0",
+                      "type": "image",
+                      "variant": "hero",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "home:/components/1/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "home:/components/1/children/1/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "2rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "home:/components/1/children/1/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/1/children/0/children/0/children/0",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/1/children/0/children/0/children/1",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/1/children/0/children/0/children/2",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/1/children/0/children/0/children/3",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "home:/components/1/children/1/children/0/children/1",
+                  "type": "container",
+                  "responsive": {
+                    "lg": {
+                      "justify": {
+                        "value": "end"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/1/children/0/children/1/children/0",
+                      "type": "link",
+                      "content": "Voir les chiffres et le pourquoi →",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "home:/components/1/children/2",
+          "type": "container",
+          "children": [
+            {
+              "id": "home:/components/1/children/2/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "home:/components/1/children/2/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/2/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Par où commencer",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/2/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "tu es…",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "home:/components/1/children/2/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/2/children/0/children/1/children/0",
+                      "type": "link",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/2/children/0/children/1/children/1",
+                      "type": "link",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/2/children/0/children/1/children/2",
+                      "type": "link",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/2/children/0/children/1/children/3",
+                      "type": "link",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/2/children/0/children/1/children/4",
+                      "type": "link",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "home:/components/1/children/3",
+          "type": "container",
+          "children": [
+            {
+              "id": "home:/components/1/children/3/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "home:/components/1/children/3/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Savoirs",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "le consentement, en clair",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Six lettres pour t'en souvenir. On a mis en ligne les notions qu'on partage en atelier : deux définitions, l'acronyme RÈGLES, les biais qui nous poussent à dire oui et quelques phrases pour tenir un non.",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/0/children/3",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/0/children/3/children/0",
+                          "type": "link",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "home:/components/1/children/3/children/0/children/0/children/3/children/0/children/0",
+                              "type": "text",
+                              "content": "Lire les notions",
+                              "children": []
+                            },
+                            {
+                              "id": "home:/components/1/children/3/children/0/children/0/children/3/children/0/children/1",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/0/children/3/children/1",
+                          "type": "link",
+                          "content": "Voir les ressources",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "home:/components/1/children/3/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.25rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.25rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "content": "R",
+                          "children": []
+                        },
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/0/children/1",
+                          "type": "text",
+                          "content": "Révocable",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.25rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.25rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "content": "È",
+                          "children": []
+                        },
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "Éclairé",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/1/children/2",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.25rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.25rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/2/children/0",
+                          "type": "text",
+                          "content": "G",
+                          "children": []
+                        },
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/2/children/1",
+                          "type": "text",
+                          "content": "Gagnant-gagnant",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/1/children/3",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.25rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.25rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/3/children/0",
+                          "type": "text",
+                          "content": "L",
+                          "children": []
+                        },
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/3/children/1",
+                          "type": "text",
+                          "content": "Libre",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/1/children/4",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.25rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.25rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/4/children/0",
+                          "type": "text",
+                          "content": "E",
+                          "children": []
+                        },
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/4/children/1",
+                          "type": "text",
+                          "content": "Explicite",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "home:/components/1/children/3/children/0/children/1/children/5",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.25rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.25rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/5/children/0",
+                          "type": "text",
+                          "content": "S",
+                          "children": []
+                        },
+                        {
+                          "id": "home:/components/1/children/3/children/0/children/1/children/5/children/1",
+                          "type": "text",
+                          "content": "Spécifique",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "home:/components/1/children/4",
+          "type": "container",
+          "children": [
+            {
+              "id": "home:/components/1/children/4/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "home:/components/1/children/4/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/4/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Témoignages",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/4/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "ce que les participant·es en disent",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "home:/components/1/children/4/children/0/children/1",
+                  "type": "container",
+                  "locked": "template",
+                  "children": []
+                },
+                {
+                  "id": "home:/components/1/children/4/children/0/children/2",
+                  "type": "link",
+                  "content": "Lire tous les témoignages →",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "home:/components/1/children/5",
+          "type": "container",
+          "children": [
+            {
+              "id": "home:/components/1/children/5/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "home:/components/1/children/5/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "home:/components/1/children/5/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Communauté",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/5/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "reste en lien",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/5/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Inscris-toi pour recevoir nos prochains ateliers et nos ressources sur le consentement, ou suis-nous sur les réseaux.",
+                      "children": []
+                    },
+                    {
+                      "id": "home:/components/1/children/5/children/0/children/0/children/3",
+                      "type": "container",
+                      "layout": {
+                        "gap": {
+                          "value": "0.75rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "home:/components/1/children/5/children/0/children/0/children/3/children/0",
+                          "type": "link",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "home:/components/1/children/5/children/0/children/0/children/3/children/0/children/0",
+                              "type": "text",
+                              "content": "Instagram",
+                              "children": []
+                            },
+                            {
+                              "id": "home:/components/1/children/5/children/0/children/0/children/3/children/0/children/1",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "home:/components/1/children/5/children/0/children/0/children/3/children/1",
+                          "type": "link",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "home:/components/1/children/5/children/0/children/0/children/3/children/1/children/0",
+                              "type": "text",
+                              "content": "Facebook",
+                              "children": []
+                            },
+                            {
+                              "id": "home:/components/1/children/5/children/0/children/0/children/3/children/1/children/1",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "home:/components/1/children/5/children/0/children/0/children/3/children/2",
+                          "type": "link",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "home:/components/1/children/5/children/0/children/0/children/3/children/2/children/0",
+                              "type": "text",
+                              "content": "LinkedIn",
+                              "children": []
+                            },
+                            {
+                              "id": "home:/components/1/children/5/children/0/children/0/children/3/children/2/children/1",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "home:/components/1/children/5/children/0/children/1",
+                  "type": "container",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home:/components/2",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    }
+  ]
+}

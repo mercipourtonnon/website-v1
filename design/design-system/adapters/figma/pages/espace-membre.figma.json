@@ -1,0 +1,723 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-membre",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-membre:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-membre:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 24,
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-membre:/components/0/children/0/children/0",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "← Membres",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-membre:/components/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "NONE",
+                          "itemSpacing": 16,
+                          "counterAxisAlignItems": "CENTER",
+                          "children": [
+                            {
+                              "name": "image",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/1/children/0",
+                                "type": "image"
+                              },
+                              "layoutMode": "NONE",
+                              "width": 64,
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/1/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "width": 64,
+                              "primaryAxisAlignItems": "CENTER",
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "icon",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/1/children/1/children/0",
+                                    "type": "icon"
+                                  },
+                                  "layoutMode": "NONE",
+                                  "width": 28,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/1/children/2",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/1/children/2/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "[display_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/1/children/2/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[pronoun]",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "description-list",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-membre:/components/0/children/0/children/2",
+                            "type": "description-list"
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-membre:/components/0/children/0/children/3",
+                            "type": "container"
+                          },
+                          "layoutMode": "NONE",
+                          "paddingTop": 16,
+                          "paddingRight": 16,
+                          "paddingBottom": 16,
+                          "paddingLeft": 16,
+                          "children": [
+                            {
+                              "name": "description-list",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/3/children/0",
+                                "type": "description-list"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-membre:/components/0/children/0/children/4",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/4/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Pourquoi je souhaite contribuer à Merci pour ton non",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/0/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[why]",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/4/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/1/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Mes intentions",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/1/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[intentions]",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/4/children/2",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/2/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Mes envies",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/2/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[wishes]",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/4/children/3",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/3/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Mes peurs",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/3/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[fears]",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/4/children/4",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/4/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Mes ressources",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/4/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[resources]",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/4/children/5",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/5/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Mes compétences",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/5/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[skills]",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/4/children/6",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/6/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Ce que je n'aime pas",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/6/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[dislikes]",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/4/children/7",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/7/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Comment j'aime travailler",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/7/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[work_style]",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-membre:/components/0/children/0/children/4/children/8",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 4,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/8/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Mes créneaux favoris pour des réunions",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-membre:/components/0/children/0/children/4/children/8/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "[preferred_slots]",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-membre:/components/0",
+      "contentHash": "559b2015cc2e8d78c4ad3cd17b88b04bef192994171ac1dffe3bedd161caf57e"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0",
+      "contentHash": "7cb57085d709f2ac651059ebe54aaf98a24e89857d61d6f0a58eb811a3f3e308"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/0",
+      "contentHash": "0ba1d2ff74d513f63138ecf35d9ba8815ddf33419b227b4c1d09c56ec31adbb5"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/1",
+      "contentHash": "ca420495690fe33552d3ebfb3a63faccf32b7b58fef0ab69852bd3aec1789777"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/1/children/0",
+      "contentHash": "05d77318b938be60865fe9059591debb6d57b7a9b8019687048f969f337c6e37"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/1/children/1",
+      "contentHash": "ddea78ef37c33172894e4fa65adbf4f261db502e4eb2423fe717a80c8f981384"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/1/children/1/children/0",
+      "contentHash": "0bbde1c9c81e500a97465db2a7c07221ccecd958c80a2be232ef1677de6883ea"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/1/children/2",
+      "contentHash": "0e17cb39c9ece110d8804eb471ef5d9c6dba2ace33313e6bce1bfa82f010976e"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/1/children/2/children/0",
+      "contentHash": "15dae79007d13c972e409c3bfd997bdfbb90dda6f14a3f0a3651247e3a757198"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/1/children/2/children/1",
+      "contentHash": "5b01cef90c202c2405ccfc910af31431e4a9ca85c7fcec1f711c2ce7692a586e"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/2",
+      "contentHash": "997b3aeef98a07f46b6cb44e319ac8722a7f5eb595228b21e86def7b7b301285"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/3",
+      "contentHash": "bd3d4b611009b47f3c9bfd7afc7b42953742a2c2bd5aaae4cb726e3cb738f971"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/3/children/0",
+      "contentHash": "efba871d10569e3f797933ae9295adcf97473e396e376d976052b9caf41ca9c6"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4",
+      "contentHash": "26ee5d2fd17176b61463e3cd15040216cfee05028a6d03dc3094ac4e039fca4c"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/0",
+      "contentHash": "ae89c7786b80c8f1089fd358973add6a9db03c9f10ebf4acebb4cf5289db6608"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/0/children/0",
+      "contentHash": "46dc3140078a7c316afbd49b7d655e85a5f722cd948d5a6474557c89fe7d5681"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/0/children/1",
+      "contentHash": "7650ce63338578e15980504f32d0665a923f57a6810a34d3f21446e0b23cc3df"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/1",
+      "contentHash": "d20326901a471de3d080670190408d66c0e86a3437459d334c799cdf76958f1a"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/1/children/0",
+      "contentHash": "c8ddfe4c7a303999bf6e278decef01a54df8fa1d1e7c40a71489b5c50c67016e"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/1/children/1",
+      "contentHash": "7372a209430c09373b02e31e4518f69d69ca9032e44c5003ebc594a836855341"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/2",
+      "contentHash": "9af47c89dedf02afa52024794c79134976e1dd78c73fcbf262df00a1b4c88e7b"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/2/children/0",
+      "contentHash": "472fcf4e8b1a5fcd3659a510f4d681a2313187e2d0c2a7f471d944648c2b74e2"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/2/children/1",
+      "contentHash": "11432763a3c6f9656aca8745341e82d42037748ae40956e484d1097535588490"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/3",
+      "contentHash": "1658df2d3b3e59d84af2f43a07a3564597aa6049ff34ebb77472ebe52417d37a"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/3/children/0",
+      "contentHash": "ac77addc489d7cc93b0931f0ffbb77c36176511fc94d19062ea2e3c1692ea6e5"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/3/children/1",
+      "contentHash": "ad51a49a26079cbba7404e6c2745b60a02b46966ff7538e41003ef8c5c0f560a"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/4",
+      "contentHash": "6e9311f82ab3e5b52750400a6b6a9dcf98475f2075401ac3dac120f2c66e84fa"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/4/children/0",
+      "contentHash": "00da480d490a0a66f485ed396b93c6ca33d7c5e1ff8bdc48505d3008d5dad503"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/4/children/1",
+      "contentHash": "ab209bc6cf44d97a77f670b7d298ca73523bb1a00c03604dbc862563c08c0d61"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/5",
+      "contentHash": "8dd44995b925f872dcd151fe43ec04e2a704bb52e6ca8b827aadc71b3b92fde9"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/5/children/0",
+      "contentHash": "beae9a251270ecf6fdfa6476f3bb41ae919abcf83107f915bedd515680ea966b"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/5/children/1",
+      "contentHash": "bc496d2d4694ce7bddcd7e46ddec3a5dfbaccee678475a9d311c86992022290f"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/6",
+      "contentHash": "1a51c8e62cb60d8f2d2cb694f178c3c78fd2c6f38452281a6426df51a550bb1f"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/6/children/0",
+      "contentHash": "0e3cf7a07118bad7609c6f75afa99827351fe24da8598d996d80f45377a60432"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/6/children/1",
+      "contentHash": "7e052ffbfd39cba8708468780cdc37156f91cc97858f204ec1d4832c046563b2"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/7",
+      "contentHash": "38c3653da0b4fa9bcc2e0f932495667f8d118043614244a1a1fc4071f940aa15"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/7/children/0",
+      "contentHash": "8c133ffb220a1b1d354d4cfaf77dd60b4ddca35d90118cd0aac24a0ccd765b67"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/7/children/1",
+      "contentHash": "026f936175871b3048d069c77f17b7e2484c0b92aab52a50fd70c277df23fe7c"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/8",
+      "contentHash": "6ce2d184504ff0c60f0890f6e4b106aca1096f66bc90be9da381bae270f61a50"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/8/children/0",
+      "contentHash": "82d86543fb5142bb7e33b9a67aa5361a175ed084ad390af2631b2e8c5ec16667"
+    },
+    {
+      "id": "espace-membre:/components/0/children/0/children/4/children/8/children/1",
+      "contentHash": "8b134cf25f644e3123486631f7d11c35434a26832052f90135f46379aaff1faa"
+    }
+  ]
+}

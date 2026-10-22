@@ -1,0 +1,189 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "espace-inscription",
+  "nodes": [
+    {
+      "id": "espace-inscription:/components/0",
+      "type": "container",
+      "layout": {
+        "justify": {
+          "value": "center"
+        }
+      },
+      "responsive": {
+        "sm": {
+          "align": {
+            "value": "center"
+          }
+        }
+      },
+      "children": [
+        {
+          "id": "espace-inscription:/components/0/children/0",
+          "type": "container",
+          "layout": {
+            "width": {
+              "value": "100%"
+            },
+            "direction": {
+              "value": "column"
+            },
+            "gap": {
+              "value": "1.5rem"
+            }
+          },
+          "responsive": {
+            "sm": {
+              "padding": {
+                "value": "2rem"
+              }
+            }
+          },
+          "children": [
+            {
+              "id": "espace-inscription:/components/0/children/0/children/0",
+              "type": "link",
+              "children": [
+                {
+                  "id": "espace-inscription:/components/0/children/0/children/0/children/0",
+                  "type": "image",
+                  "layout": {
+                    "width": {
+                      "value": "auto"
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-inscription:/components/0/children/0/children/1",
+              "type": "text",
+              "children": [
+                {
+                  "id": "espace-inscription:/components/0/children/0/children/1/children/0",
+                  "type": "text",
+                  "content": "Tu veux d'abord savoir ce qu'on fait ensemble ? ",
+                  "children": []
+                },
+                {
+                  "id": "espace-inscription:/components/0/children/0/children/1/children/1",
+                  "type": "link",
+                  "content": "Devenir bénévole",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "espace-inscription:/components/0/children/0/children/2",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "1.5rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-inscription:/components/0/children/0/children/2/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/0",
+                      "type": "text",
+                      "content": "rejoindre l'équipe bénévole",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/1",
+                      "type": "text",
+                      "content": "Crée ton compte, puis remplis ta fiche bénévole. Elle sera visible par les autres bénévoles de Merci pour ton non (MPTN) et contient ce qu'il faut pour mieux se connaître. Le Cercle Gardien la relit et t'ouvre l'espace bénévole.",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-inscription:/components/0/children/0/children/2/children/0/children/2",
+                      "type": "text",
+                      "content": "Ton email et ton téléphone restent réservés au Cercle Gardien. En créant ton compte, tu acceptes qu'ils servent à t'inviter dans notre communauté WhatsApp.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "espace-inscription:/components/0/children/0/children/2/children/1",
+                  "type": "form",
+                  "children": []
+                },
+                {
+                  "id": "espace-inscription:/components/0/children/0/children/2/children/2",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "0.25rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "espace-inscription:/components/0/children/0/children/2/children/2/children/0",
+                      "type": "text",
+                      "content": "Déjà un compte ?",
+                      "children": []
+                    },
+                    {
+                      "id": "espace-inscription:/components/0/children/0/children/2/children/2/children/1",
+                      "type": "link",
+                      "content": "Me connecter",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "espace-inscription:/components/0/children/0/children/3",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "0.75rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "espace-inscription:/components/0/children/0/children/3/children/0",
+                  "type": "text",
+                  "content": "rejoindre l'équipe bénévole",
+                  "children": []
+                },
+                {
+                  "id": "espace-inscription:/components/0/children/0/children/3/children/1",
+                  "type": "text",
+                  "content": "Les inscriptions se font pour l'instant sur invitation. Écris-nous à mercipourtonnon@gmail.com, on t'envoie un lien pour créer ton compte.",
+                  "children": []
+                },
+                {
+                  "id": "espace-inscription:/components/0/children/0/children/3/children/2",
+                  "type": "link",
+                  "content": "J'ai déjà un compte",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

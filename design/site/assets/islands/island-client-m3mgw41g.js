@@ -1,0 +1,2 @@
+import{ne}from"./island-client-p9baqzqa.js";import{e}from"./island-client-p5ze071j.js";var Un=1;function cs(r,t){return Math.max(0,r-t)}function zr(r,t){if(t<=0)return 0;let l=ne(r,0,t),o=l,s=t-l,c=o<=Un,i=s<=Un;if(c&&i)return o<=s?0:t;if(c)return 0;if(i)return t;return l}var n="base-ui-disable-scrollbar",Lo={className:n,getElement(r){return e("style",{nonce:r,href:n,precedence:"base-ui:low",children:`.${n}{scrollbar-width:none}.${n}::-webkit-scrollbar{display:none}`})}};
+export{Un,cs,zr,Lo};

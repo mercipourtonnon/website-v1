@@ -1,0 +1,407 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-en-attente",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "espace-en-attente:/components/0",
+            "type": "container"
+          },
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "espace-en-attente:/components/0/children/0",
+                "type": "container"
+              },
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 24,
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-en-attente:/components/0/children/0/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "itemSpacing": 16,
+                  "primaryAxisAlignItems": "SPACE_BETWEEN",
+                  "counterAxisAlignItems": "CENTER",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/0/children/0",
+                        "type": "link"
+                      },
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-en-attente:/components/0/children/0/children/0/children/0/children/0",
+                            "type": "image"
+                          },
+                          "layoutMode": "NONE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/0/children/1",
+                        "type": "button"
+                      },
+                      "componentProperties": {
+                        "variant": "outline",
+                        "size": "sm"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-en-attente:/components/0/children/0/children/1",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 12,
+                  "paddingTop": 20,
+                  "paddingRight": 20,
+                  "paddingBottom": 20,
+                  "paddingLeft": 20,
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/1/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 12,
+                      "counterAxisAlignItems": "CENTER",
+                      "children": [
+                        {
+                          "name": "icon",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-en-attente:/components/0/children/0/children/1/children/0/children/0",
+                            "type": "icon"
+                          },
+                          "layoutMode": "NONE",
+                          "width": 24,
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-en-attente:/components/0/children/0/children/1/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "ta candidature est en cours de validation",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/1/children/1",
+                        "type": "text"
+                      },
+                      "characters": "Merci de vouloir rejoindre l'équipe ! Le Cercle Gardien relit ta fiche et t'ouvre l'espace bénévole dans les prochains jours. Tu recevras un email dès que c'est fait, avec le lien vers notre communauté WhatsApp.",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/1/children/2",
+                        "type": "text"
+                      },
+                      "characters": "En attendant, complète ta fiche ci-dessous. Tu peux l'envoyer plusieurs fois, la dernière version compte.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-en-attente:/components/0/children/0/children/2",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "paddingTop": 20,
+                  "paddingRight": 20,
+                  "paddingBottom": 20,
+                  "paddingLeft": 20,
+                  "children": [
+                    {
+                      "name": "form",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/2/children/0",
+                        "type": "form"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "breakpoint": "sm",
+      "width": 640,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "espace-en-attente:/components/0",
+            "type": "container"
+          },
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "sovrium": {
+                "id": "espace-en-attente:/components/0/children/0",
+                "type": "container"
+              },
+              "layoutMode": "VERTICAL",
+              "itemSpacing": 24,
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-en-attente:/components/0/children/0/children/0",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "itemSpacing": 16,
+                  "primaryAxisAlignItems": "SPACE_BETWEEN",
+                  "counterAxisAlignItems": "CENTER",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/0/children/0",
+                        "type": "link"
+                      },
+                      "children": [
+                        {
+                          "name": "image",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-en-attente:/components/0/children/0/children/0/children/0/children/0",
+                            "type": "image"
+                          },
+                          "layoutMode": "NONE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/0/children/1",
+                        "type": "button"
+                      },
+                      "componentProperties": {
+                        "variant": "outline",
+                        "size": "sm"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-en-attente:/components/0/children/0/children/1",
+                    "type": "container"
+                  },
+                  "layoutMode": "VERTICAL",
+                  "itemSpacing": 12,
+                  "paddingTop": 32,
+                  "paddingRight": 32,
+                  "paddingBottom": 32,
+                  "paddingLeft": 32,
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/1/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "NONE",
+                      "itemSpacing": 12,
+                      "counterAxisAlignItems": "CENTER",
+                      "children": [
+                        {
+                          "name": "icon",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-en-attente:/components/0/children/0/children/1/children/0/children/0",
+                            "type": "icon"
+                          },
+                          "layoutMode": "NONE",
+                          "width": 24,
+                          "children": []
+                        },
+                        {
+                          "name": "text",
+                          "nodeType": "TEXT",
+                          "sovrium": {
+                            "id": "espace-en-attente:/components/0/children/0/children/1/children/0/children/1",
+                            "type": "text"
+                          },
+                          "characters": "ta candidature est en cours de validation",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/1/children/1",
+                        "type": "text"
+                      },
+                      "characters": "Merci de vouloir rejoindre l'équipe ! Le Cercle Gardien relit ta fiche et t'ouvre l'espace bénévole dans les prochains jours. Tu recevras un email dès que c'est fait, avec le lien vers notre communauté WhatsApp.",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/1/children/2",
+                        "type": "text"
+                      },
+                      "characters": "En attendant, complète ta fiche ci-dessous. Tu peux l'envoyer plusieurs fois, la dernière version compte.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "sovrium": {
+                    "id": "espace-en-attente:/components/0/children/0/children/2",
+                    "type": "container"
+                  },
+                  "layoutMode": "NONE",
+                  "paddingTop": 32,
+                  "paddingRight": 32,
+                  "paddingBottom": 32,
+                  "paddingLeft": 32,
+                  "children": [
+                    {
+                      "name": "form",
+                      "nodeType": "INSTANCE",
+                      "sovrium": {
+                        "id": "espace-en-attente:/components/0/children/0/children/2/children/0",
+                        "type": "form"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-en-attente:/components/0",
+      "contentHash": "8284430e3331bac700184b519b18a61b3de23b060166d82592a8422ee1113c9e"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0",
+      "contentHash": "6643304ec6d0eb4e08e0c89a8d191279d3b61a0639cb547e150fbac984ee5523"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/0",
+      "contentHash": "0f33f0f9b92a623e642235d3d05942bd673bcb98172dd7448a76dc30d4f3a277"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/0/children/0",
+      "contentHash": "c1bdd5b98c63729e9bba8ca7960c67bfacc12e0ee39dd97faa2d8b6b08dcf17c"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/0/children/0/children/0",
+      "contentHash": "95aa832c39133f3805431fd13335e8fcb5ce8b6bf2175c2841508892921912d3"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/0/children/1",
+      "contentHash": "6a4e64913c4660afa2c758fabe7c7e69bed109ccc599639faa8f3aa6e949b83e"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/1",
+      "contentHash": "661358c60c7eb494948c3c97ad5d9198edd7abe2c55515f6b39364e3cf15af59"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/1/children/0",
+      "contentHash": "ee594ccec6c24b805b34c108352e1c918dbc41440d717e07f45b5e426b403ffc"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/1/children/0/children/0",
+      "contentHash": "5271e776f33f67c6492cb888d651c4d963d8526e2d64234ccb9e051721b2f40a"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/1/children/0/children/1",
+      "contentHash": "bdf78bf5fff715d3e95e6143bee8a2558b423c669efd72b2f7fb2f5680b0fe9e"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/1/children/1",
+      "contentHash": "5129f35e9ede40611ebf16c38c9f502abc3fe878ccd164035165463666a92367"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/1/children/2",
+      "contentHash": "9525b54276e6e0ed9e35050624371ef727db48f23dc20082a7e4e0a65e040133"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/2",
+      "contentHash": "687862d8520a973f82fc2dd3fe58f41d349d3cdbbc84575042bc592c49f0dd67"
+    },
+    {
+      "id": "espace-en-attente:/components/0/children/0/children/2/children/0",
+      "contentHash": "3e2ef51c3734890220bec1b4c0464eec931ee8538515ef6a610b9a682c80baba"
+    }
+  ]
+}

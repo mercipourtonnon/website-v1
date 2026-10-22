@@ -1,0 +1,2100 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-suivi-date",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-suivi-date:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-suivi-date:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 32,
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/0",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "← Toutes les dates",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 16,
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/1/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 8,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "atelier du [date_label] [time_label]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "Lieu : [venue_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/2",
+                                    "type": "text"
+                                  },
+                                  "characters": "Facilitation : [lead_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/3",
+                                    "type": "text"
+                                  },
+                                  "characters": "Co-facilitation : [co_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/4",
+                                    "type": "text"
+                                  },
+                                  "characters": "[capacity] places",
+                                  "children": []
+                                },
+                                {
+                                  "name": "description-list",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/5",
+                                    "type": "description-list"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/6",
+                                    "type": "text"
+                                  },
+                                  "characters": "Pas encore synchronisée avec HelloAsso.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/1/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 8,
+                              "children": [
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/0",
+                                    "type": "button"
+                                  },
+                                  "componentProperties": {
+                                    "variant": "outline"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/1",
+                                    "type": "button"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/2",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/2/children/0",
+                                "type": "text"
+                              },
+                              "characters": "en direct",
+                              "children": []
+                            },
+                            {
+                              "name": "grid",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/2/children/1",
+                                "type": "grid"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 12,
+                              "children": [
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/0",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/1",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/2",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/3",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/3",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/0",
+                                "type": "text"
+                              },
+                              "characters": "pointage",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Appuie sur « Présent·e » quand une personne arrive. Une personne marquée « Pas de photo » ne doit apparaître sur aucune photo ni vidéo. Touche une ligne pour voir son téléphone, son email et ajouter une note.",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/2",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "search-input",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/3/children/2/children/0",
+                                    "type": "search-input"
+                                  },
+                                  "layoutMode": "NONE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "table",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/3",
+                                "type": "table"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": [
+                                {
+                                  "name": "header",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Nom",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Prénom",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Photos",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Présence",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Origine",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Prix libre",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 1",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample last name 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample first name 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "unknown",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "unknown",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "helloasso",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "1200",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 2",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample last name 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample first name 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "yes",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "present",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "on_site",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "2400",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 3",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample last name 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample first name 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "no",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "absent",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "import",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "3600",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/4",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/0",
+                                "type": "text"
+                              },
+                              "characters": "prix libre sur place",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/1",
+                                "type": "text"
+                              },
+                              "characters": "À la fin de l'atelier, compte ce qui a été donné sur place (espèces et terminal de paiement) et note le total ici. Pour le corriger, change-le et enregistre à nouveau.",
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/2",
+                                "type": "form"
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/3",
+                                "type": "form"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "dialog",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "espace-suivi-date:/components/1",
+            "type": "dialog"
+          },
+          "children": [
+            {
+              "name": "form",
+              "nodeType": "INSTANCE",
+              "sovrium": {
+                "id": "espace-suivi-date:/components/1/children/0",
+                "type": "form"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "breakpoint": "sm",
+      "width": 640,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-suivi-date:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-suivi-date:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 32,
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/0",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "← Toutes les dates",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 16,
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/1/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 8,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "atelier du [date_label] [time_label]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "Lieu : [venue_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/2",
+                                    "type": "text"
+                                  },
+                                  "characters": "Facilitation : [lead_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/3",
+                                    "type": "text"
+                                  },
+                                  "characters": "Co-facilitation : [co_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/4",
+                                    "type": "text"
+                                  },
+                                  "characters": "[capacity] places",
+                                  "children": []
+                                },
+                                {
+                                  "name": "description-list",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/5",
+                                    "type": "description-list"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/6",
+                                    "type": "text"
+                                  },
+                                  "characters": "Pas encore synchronisée avec HelloAsso.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/1/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "HORIZONTAL",
+                              "itemSpacing": 8,
+                              "children": [
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/0",
+                                    "type": "button"
+                                  },
+                                  "componentProperties": {
+                                    "variant": "outline"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/1",
+                                    "type": "button"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/2",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/2/children/0",
+                                "type": "text"
+                              },
+                              "characters": "en direct",
+                              "children": []
+                            },
+                            {
+                              "name": "grid",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/2/children/1",
+                                "type": "grid"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 12,
+                              "children": [
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/0",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/1",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/2",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/3",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/3",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/0",
+                                "type": "text"
+                              },
+                              "characters": "pointage",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Appuie sur « Présent·e » quand une personne arrive. Une personne marquée « Pas de photo » ne doit apparaître sur aucune photo ni vidéo. Touche une ligne pour voir son téléphone, son email et ajouter une note.",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/2",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "search-input",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/3/children/2/children/0",
+                                    "type": "search-input"
+                                  },
+                                  "layoutMode": "NONE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "table",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/3",
+                                "type": "table"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": [
+                                {
+                                  "name": "header",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Nom",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Prénom",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Photos",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Présence",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Origine",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Prix libre",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 1",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample last name 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample first name 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "unknown",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "unknown",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "helloasso",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "1200",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 2",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample last name 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample first name 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "yes",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "present",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "on_site",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "2400",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 3",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample last name 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample first name 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "no",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "absent",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "import",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "3600",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/4",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/0",
+                                "type": "text"
+                              },
+                              "characters": "prix libre sur place",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/1",
+                                "type": "text"
+                              },
+                              "characters": "À la fin de l'atelier, compte ce qui a été donné sur place (espèces et terminal de paiement) et note le total ici. Pour le corriger, change-le et enregistre à nouveau.",
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/2",
+                                "type": "form"
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/3",
+                                "type": "form"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "dialog",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "espace-suivi-date:/components/1",
+            "type": "dialog"
+          },
+          "children": [
+            {
+              "name": "form",
+              "nodeType": "INSTANCE",
+              "sovrium": {
+                "id": "espace-suivi-date:/components/1/children/0",
+                "type": "form"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "breakpoint": "md",
+      "width": 768,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-suivi-date:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-suivi-date:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 32,
+                      "children": [
+                        {
+                          "name": "link",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/0",
+                            "type": "link"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "← Toutes les dates",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "HORIZONTAL",
+                          "itemSpacing": 16,
+                          "primaryAxisAlignItems": "SPACE_BETWEEN",
+                          "counterAxisAlignItems": "MIN",
+                          "children": [
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/1/children/0",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 8,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "atelier du [date_label] [time_label]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/1",
+                                    "type": "text"
+                                  },
+                                  "characters": "Lieu : [venue_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/2",
+                                    "type": "text"
+                                  },
+                                  "characters": "Facilitation : [lead_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/3",
+                                    "type": "text"
+                                  },
+                                  "characters": "Co-facilitation : [co_name]",
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/4",
+                                    "type": "text"
+                                  },
+                                  "characters": "[capacity] places",
+                                  "children": []
+                                },
+                                {
+                                  "name": "description-list",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/5",
+                                    "type": "description-list"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/6",
+                                    "type": "text"
+                                  },
+                                  "characters": "Pas encore synchronisée avec HelloAsso.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/1/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "MAX",
+                              "children": [
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/0",
+                                    "type": "button"
+                                  },
+                                  "componentProperties": {
+                                    "variant": "outline"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/1",
+                                    "type": "button"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/2",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/2/children/0",
+                                "type": "text"
+                              },
+                              "characters": "en direct",
+                              "children": []
+                            },
+                            {
+                              "name": "grid",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/2/children/1",
+                                "type": "grid"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 12,
+                              "children": [
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/0",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/1",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/2",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "kpi",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/3",
+                                    "type": "kpi"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/3",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/0",
+                                "type": "text"
+                              },
+                              "characters": "pointage",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Appuie sur « Présent·e » quand une personne arrive. Une personne marquée « Pas de photo » ne doit apparaître sur aucune photo ni vidéo. Touche une ligne pour voir son téléphone, son email et ajouter une note.",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/2",
+                                "type": "container"
+                              },
+                              "layoutMode": "NONE",
+                              "itemSpacing": 8,
+                              "counterAxisAlignItems": "CENTER",
+                              "children": [
+                                {
+                                  "name": "search-input",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-suivi-date:/components/0/children/0/children/3/children/2/children/0",
+                                    "type": "search-input"
+                                  },
+                                  "layoutMode": "NONE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "table",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/3/children/3",
+                                "type": "table"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": [
+                                {
+                                  "name": "header",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Nom",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Prénom",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Photos",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Présence",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Origine",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Prix libre",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 1",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample last name 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample first name 1",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "unknown",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "unknown",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "helloasso",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "1200",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 2",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample last name 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample first name 2",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "yes",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "present",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "on_site",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "2400",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "row 3",
+                                  "nodeType": "FRAME",
+                                  "layoutMode": "HORIZONTAL",
+                                  "children": [
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample last name 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "Sample first name 3",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "no",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "absent",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "import",
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "cell",
+                                      "nodeType": "TEXT",
+                                      "characters": "3600",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-suivi-date:/components/0/children/0/children/4",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 12,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/0",
+                                "type": "text"
+                              },
+                              "characters": "prix libre sur place",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/1",
+                                "type": "text"
+                              },
+                              "characters": "À la fin de l'atelier, compte ce qui a été donné sur place (espèces et terminal de paiement) et note le total ici. Pour le corriger, change-le et enregistre à nouveau.",
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/2",
+                                "type": "form"
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-suivi-date:/components/0/children/0/children/4/children/3",
+                                "type": "form"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "dialog",
+          "nodeType": "FRAME",
+          "sovrium": {
+            "id": "espace-suivi-date:/components/1",
+            "type": "dialog"
+          },
+          "children": [
+            {
+              "name": "form",
+              "nodeType": "INSTANCE",
+              "sovrium": {
+                "id": "espace-suivi-date:/components/1/children/0",
+                "type": "form"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-suivi-date:/components/0",
+      "contentHash": "e657144873a2820bccaaf4c14e066ea78750e327cbbd280832bfe62e45fd42cc"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0",
+      "contentHash": "8cd9db582593fd0be55e24912a6ecebef04b54e7ecab2eff8285b408ebfeaebf"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/0",
+      "contentHash": "25decf7a1fb7fc3e405e05ca16feef8d6d27f97f9e19001f717316aee774d6c6"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1",
+      "contentHash": "c94807aa2ffd41879f9df4dd399f28af608431e5b937506042354c6f51789348"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0",
+      "contentHash": "3e317d6a86d35e5f8cb1b4b812e000ec9a4e844bf91d975241377ac2a0903e41"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/0",
+      "contentHash": "e1820f0fd35a041805794781f93c12419fb16f6d3cccf924229c9408b6a06e37"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/1",
+      "contentHash": "bd66b4b532108b808d1ad65624d06491c0ea1681dd6cd861fae0767df08913f9"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/2",
+      "contentHash": "fc728fea81d63c44b5677656e247cc5716e10165e61ee511f172b09aefa6d2a6"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/3",
+      "contentHash": "896649dd866b78931d432d3d3714fc9f78eed485c20eb21d018f221199247699"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/4",
+      "contentHash": "f426f9138852c2804ffbf44a6c29ec33ef36a69747dc960c62e2cf840319343d"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/5",
+      "contentHash": "145baf02de066bcd03a80e6f0eae2a2b33098c5d7c288cfe43ce3d112ab407dc"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/0/children/6",
+      "contentHash": "104fe1d6c67c7bfc87272b34737e44ce9b36906bd24a17991ef6328af4c61da7"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/1",
+      "contentHash": "a3f11d515fc71c56b1f1399d67f6b9423cf45d1d8819bd04b71452b313bccfa4"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/0",
+      "contentHash": "8f7c3f1285302c95e2bc57022cdfbc5dc0ce806800f0a11e895740980f8cfb74"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/1/children/1/children/1",
+      "contentHash": "65c8ec9291d0979c873eaa6c5637108c71b1cf1148fd083cc8b94834ace0aa13"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/2",
+      "contentHash": "dd08490a4e5708fe0a257500425920717b775a49ff2e4060e7f18b0f7bec2f74"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/2/children/0",
+      "contentHash": "9e3575aa30e32a875298927e6882ac3cee26ebe708cca6d0d20cac93500e1d7e"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/2/children/1",
+      "contentHash": "ccd012c14b00e657c1fdee70fe552caf052aa82833e0a36e002816597d5cc222"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/0",
+      "contentHash": "0cf9aea868438a6c85a8a048817365b3abaf2aad40f2891f49c285f6525dea98"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/1",
+      "contentHash": "c993e4565e14911f6953a597a7e91f6f453ddcd193d57b048e41921ad3eb6f5f"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/2",
+      "contentHash": "8ebbd12925d91e518762dc12ddc0347464fc3ecce27c9e2f8671c467faf1e1cc"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/2/children/1/children/3",
+      "contentHash": "bc7d04aede30455a8d54e8131fe309bf620daeb53970be4dd65b9487dbcdfcee"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/3",
+      "contentHash": "f5544bb5e54083359c2ad690e11380fad77cc418f3e1a81d967558e9dedc26b9"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/3/children/0",
+      "contentHash": "f48502a77b526216fdfebfb41af3df2f36218b664dfee6a3c5da7e42cb18d9b2"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/3/children/1",
+      "contentHash": "4c86483103bda7a0ffedbbdb1e7fe2ce058e697d5472e252e9f5f636aecc4422"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/3/children/2",
+      "contentHash": "c0a7615d0c900575eec83df57ff59fdc9e380064fa2d1265960f09fdf82f2a58"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/3/children/2/children/0",
+      "contentHash": "83227e959948d1bc3b76d92c83f1ee69291bb5b23b82c93a07e42739aba075c4"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/3/children/3",
+      "contentHash": "1939d21f3d2441ccab9633155431caa3214e988cba3c4e3e00387cfd8d980697"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/4",
+      "contentHash": "0c0d5c296854b80f9fdb10ba535f9115d13a4cb287c12fd44eab11524647137c"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/4/children/0",
+      "contentHash": "dd65f608d0375be823e1b92818f1ed0af500a36caf521f76194f7c578d411867"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/4/children/1",
+      "contentHash": "8f8687740e52520f8eec2de62a641e0910bf397a5a9efbb0141045c84ad76e8d"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/4/children/2",
+      "contentHash": "bc9aaeef274fabf3b4f4dcb53fbd7b017bffaf31799c58178dfb2673803de6f7"
+    },
+    {
+      "id": "espace-suivi-date:/components/0/children/0/children/4/children/3",
+      "contentHash": "46ddc63b403f9a8e55279dc0e49c2e002fc05c32d3a08027adb1d4757dcbedac"
+    },
+    {
+      "id": "espace-suivi-date:/components/1",
+      "contentHash": "79297c5b3122af1117b00f16265900323f3b9b7e08906a64b5aed3a5562cfef0"
+    },
+    {
+      "id": "espace-suivi-date:/components/1/children/0",
+      "contentHash": "265adf8436e9cf6766265b7188d871e3cb07a25d6f49703685cbf985bc97e349"
+    }
+  ]
+}

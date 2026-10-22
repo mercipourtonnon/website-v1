@@ -1,0 +1,415 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "nos-stands",
+  "nodes": [
+    {
+      "id": "nos-stands:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    },
+    {
+      "id": "nos-stands:/components/1",
+      "type": "container",
+      "children": [
+        {
+          "id": "nos-stands:/components/1/children/0",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-stands:/components/1/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-stands:/components/1/children/0/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-stands:/components/1/children/0/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Nos actions · Stands",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/0/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "nos stands de sensibilisation",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/0/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "En festival, en soirée ou dans un événement associatif, on installe notre stand pour parler consentement avec les personnes qui passent : quelques minutes, une carte, une discussion.",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/0/children/0/children/0/children/3",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-stands:/components/1/children/0/children/0/children/0/children/3/children/0",
+                          "type": "link",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-stands:/components/1/children/0/children/0/children/0/children/3/children/0/children/0",
+                              "type": "text",
+                              "content": "Nous inviter",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-stands:/components/1/children/0/children/0/children/0/children/3/children/0/children/1",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-stands:/components/1/children/0/children/0/children/0/children/3/children/1",
+                          "type": "link",
+                          "content": "Voir nos ateliers",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-stands:/components/1/children/0/children/0/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "nos-stands:/components/1/children/0/children/0/children/1/children/0",
+                      "type": "image",
+                      "variant": "hero",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-stands:/components/1/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-stands:/components/1/children/1/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "start"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-stands:/components/1/children/1/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-stands:/components/1/children/1/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Sur le stand",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/1/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "comment ça se passe",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/1/children/0/children/0/children/2",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-stands:/components/1/children/1/children/0/children/0/children/2/children/0",
+                          "type": "image",
+                          "layout": {
+                            "width": {
+                              "value": "100%"
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-stands:/components/1/children/1/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-stands:/components/1/children/1/children/0/children/1/children/0",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/1/children/0/children/1/children/1",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/1/children/0/children/1/children/2",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/1/children/0/children/1/children/3",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-stands:/components/1/children/2",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-stands:/components/1/children/2/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                },
+                "gap": {
+                  "value": "1rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-stands:/components/1/children/2/children/0/children/0",
+                  "type": "text",
+                  "content": "où nous croiser",
+                  "children": []
+                },
+                {
+                  "id": "nos-stands:/components/1/children/2/children/0/children/1",
+                  "type": "text",
+                  "content": "On a tenu notre stand au Village des associations (mars et septembre 2026), aux distributions de Cop1 (mai 2026), à la Fête de la musique pour la Ville de Strasbourg (juin 2026). À venir : un stand au marché de Noël, prévu en décembre 2026. Les prochaines dates sont dans la newsletter et sur Instagram.",
+                  "children": []
+                },
+                {
+                  "id": "nos-stands:/components/1/children/2/children/0/children/2",
+                  "type": "container",
+                  "layout": {
+                    "align": {
+                      "value": "center"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-stands:/components/1/children/2/children/0/children/2/children/0",
+                      "type": "link",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "content": "S'inscrire à la newsletter",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/2/children/0/children/2/children/1",
+                      "type": "link",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.375rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-stands:/components/1/children/2/children/0/children/2/children/1/children/0",
+                          "type": "text",
+                          "content": "Instagram",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-stands:/components/1/children/2/children/0/children/2/children/1/children/1",
+                          "type": "icon",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-stands:/components/1/children/3",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-stands:/components/1/children/3/children/0",
+              "type": "container",
+              "layout": {
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-stands:/components/1/children/3/children/0/children/0",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "nos-stands:/components/1/children/3/children/0/children/0/children/0",
+                      "type": "image",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-stands:/components/1/children/3/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "padding": {
+                      "value": "2rem"
+                    },
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "responsive": {
+                    "md": {
+                      "padding": {
+                        "value": "2.5rem"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-stands:/components/1/children/3/children/0/children/1/children/0",
+                      "type": "text",
+                      "content": "tu organises un événement ?",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/3/children/0/children/1/children/1",
+                      "type": "text",
+                      "content": "Tu aimerais nous inviter avec notre stand dans ton festival, ta soirée ou ton événement ? Écris-nous, on en parle.",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-stands:/components/1/children/3/children/0/children/1/children/2",
+                      "type": "link",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-stands:/components/1/children/3/children/0/children/1/children/2/children/0",
+                          "type": "icon",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-stands:/components/1/children/3/children/0/children/1/children/2/children/1",
+                          "type": "text",
+                          "content": "Écrire à l'association",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nos-stands:/components/2",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+var s="data-admin-base-path";var o="/_admin";var i=(n,t)=>t==="/"||t.startsWith("/?")||t.startsWith("/#")?`${n}${t.slice(1)}`:`${n}${t}`;var e=(n,t)=>{if(t==="/_admin")return n;let r=n.slice(7);if(!n.startsWith("/_admin")||!/^(?:$|[/?#])/.test(r))return n;return i(t,r.startsWith("/")?r:`/${r}`)};var fa=()=>{if(typeof document>"u")return o;let t=document.querySelector(`[${s}]`)?.getAttribute(s);return t!==null&&t!==void 0&&t!==""?t:o},wy=(n)=>e(n,fa()),Mm=(n)=>{let t=fa();return n===t||n.startsWith(`${t}/`)};
+export{fa,wy,Mm};

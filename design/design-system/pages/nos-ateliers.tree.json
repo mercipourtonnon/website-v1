@@ -1,0 +1,2172 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "nos-ateliers",
+  "nodes": [
+    {
+      "id": "nos-ateliers:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    },
+    {
+      "id": "nos-ateliers:/components/1",
+      "type": "container",
+      "children": [
+        {
+          "id": "nos-ateliers:/components/1/children/0",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-ateliers:/components/1/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-ateliers:/components/1/children/0/children/0/children/0",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/0/children/0/children/0/children/0",
+                      "type": "image",
+                      "variant": "hero",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/0/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/0",
+                      "type": "text",
+                      "content": "Nos actions · Ateliers de 3 heures",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/1",
+                      "type": "text",
+                      "content": "nos ateliers de consentement",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/2",
+                      "type": "text",
+                      "content": "Cet atelier t'invite à explorer le consentement dans un cadre bienveillant et participatif.",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/3",
+                      "type": "container",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/3/children/0",
+                          "type": "icon",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/3/children/1",
+                          "type": "text",
+                          "content": "6 à 15 personnes",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/0",
+                          "type": "text",
+                          "content": "tu pourras emporter",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/0",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "start"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/0/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/0/children/1",
+                                  "type": "text",
+                                  "content": "Une définition claire et mémorisable du consentement",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/1",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "start"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/1/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/1/children/1",
+                                  "type": "text",
+                                  "content": "Des clés concrètes pour repérer les situations problématiques",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/2",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "start"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/2/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/2/children/1",
+                                  "type": "text",
+                                  "content": "Plus de confiance pour poser tes limites",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/3",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "start"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/3/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/4/children/1/children/3/children/1",
+                                  "type": "text",
+                                  "content": "Des outils pour des relations plus authentiques et respectueuses",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/5",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "responsive": {
+                        "sm": {
+                          "direction": {
+                            "value": "row"
+                          },
+                          "align": {
+                            "value": "center"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/5/children/0",
+                          "type": "link",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/5/children/0/children/0",
+                              "type": "text",
+                              "content": "Voir les dates",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/5/children/0/children/1",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/0/children/0/children/1/children/5/children/1",
+                          "type": "list",
+                          "layout": {
+                            "padding": {
+                              "value": "0rem"
+                            }
+                          },
+                          "locked": "island",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-ateliers:/components/1/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-ateliers:/components/1/children/1/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-ateliers:/components/1/children/1/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "3rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/0",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/0/children/0",
+                          "type": "text",
+                          "content": "Pour qui",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/0/children/1",
+                          "type": "text",
+                          "content": "cet atelier est pour toi si...",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/0/children/2",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/0/children/2/children/0",
+                              "type": "image",
+                              "layout": {
+                                "width": {
+                                  "value": "100%"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/1",
+                      "type": "container",
+                      "layout": {
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/1/children/0",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/1/children/1",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/1/children/2",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/1/children/3",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/1/children/4",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/1/children/0/children/0/children/1/children/5",
+                          "type": "container",
+                          "locked": "template",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/1/children/0/children/1",
+                  "type": "text",
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/1/children/0/children/1/children/0",
+                      "type": "text",
+                      "content": "Pour l'instant, nos ateliers sont réservés aux adultes : un module pour les enfants et les adolescent·es est en exploration. En attendant, on a réuni des livres et des outils pour en parler avec eux dans ",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/1/children/0/children/1/children/1",
+                      "type": "link",
+                      "content": "les ressources",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/1/children/0/children/1/children/2",
+                      "type": "text",
+                      "content": ".",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-ateliers:/components/1/children/2",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-ateliers:/components/1/children/2/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-ateliers:/components/1/children/2/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Déroulé",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "programme de l'atelier (3h)",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Un parcours progressif pour explorer toutes les dimensions du consentement",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/0/children/3",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/0/children/3/children/0",
+                          "type": "image",
+                          "layout": {
+                            "width": {
+                              "value": "100%"
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/2/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/0",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "1",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/0/children/1",
+                          "type": "text",
+                          "content": "accueil & cadre",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/0/children/2",
+                          "type": "text",
+                          "content": "Présentation de l'équipe, des objectifs et création d'un cadre sécurisant",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "2",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "les règles du consentement",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/1/children/2",
+                          "type": "text",
+                          "content": "Découvrir l'acronyme RÈGLES (Révocable, Éclairé, Gagnant-Gagnant, Libre, Explicite, Spécifique)",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/2",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/2/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "3",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/2/children/1",
+                          "type": "text",
+                          "content": "dire non",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/2/children/2",
+                          "type": "text",
+                          "content": "S'entraîner à poser un \"non\" franc et remercier pour le \"non\" de l'autre",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/3",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/3/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "4",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/3/children/1",
+                          "type": "text",
+                          "content": "repérer les bris",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/3/children/2",
+                          "type": "text",
+                          "content": "Reconnaître les défauts et bris de consentement dans des situations concrètes",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/4",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/4/children/0",
+                          "type": "container",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/4/children/0/children/0",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/4/children/1",
+                          "type": "text",
+                          "content": "pause",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/5",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/5/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "5",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/5/children/1",
+                          "type": "text",
+                          "content": "la négociation gagnant-gagnant",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/5/children/2",
+                          "type": "text",
+                          "content": "Explorer le spectre entre OUI et NON, et négocier pour trouver un accord juste",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/6",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/6/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "6",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/6/children/1",
+                          "type": "text",
+                          "content": "changer d'avis (révocable)",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/6/children/2",
+                          "type": "text",
+                          "content": "Pratiquer le retrait du consentement et accueillir le changement d'avis de l'autre",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/7",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/7/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "7",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/7/children/1",
+                          "type": "text",
+                          "content": "identifier les biais",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/7/children/2",
+                          "type": "text",
+                          "content": "Comprendre les pressions sociales, affectives et les biais qui influencent nos choix",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/8",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/8/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "8",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/8/children/1",
+                          "type": "text",
+                          "content": "tenir face à l'insistance",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/8/children/2",
+                          "type": "text",
+                          "content": "Muscler sa capacité à résister aux pressions et tenir un \"non\"",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/9",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/9/children/0",
+                          "type": "text",
+                          "layout": {
+                            "width": {
+                              "value": "2.5rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "content": "9",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/9/children/1",
+                          "type": "text",
+                          "content": "cercle de clôture",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/2/children/0/children/1/children/9/children/2",
+                          "type": "text",
+                          "content": "Partage des apprentissages et distribution des ressources à emporter",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-ateliers:/components/1/children/3",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-ateliers:/components/1/children/3/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-ateliers:/components/1/children/3/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/3/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "En pratique",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/3/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "infos pratiques",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/3/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Tout ce qu'il faut savoir avant de s'inscrire",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/3/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.5rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/0/children/0",
+                          "type": "container",
+                          "layout": {
+                            "width": {
+                              "value": "3rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/0/children/0/children/0",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/0/children/1",
+                          "type": "text",
+                          "content": "durée",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/0/children/2",
+                          "type": "text",
+                          "content": "3 heures avec pause",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/0/children/3",
+                          "type": "text",
+                          "content": "Horaire selon la session",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.5rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/1/children/0",
+                          "type": "container",
+                          "layout": {
+                            "width": {
+                              "value": "3rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/1/children/0/children/0",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "lieu",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/1/children/2",
+                          "type": "text",
+                          "content": "Strasbourg",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/1/children/3",
+                          "type": "text",
+                          "content": "Adresse communiquée aux inscrit·es · accessible PMR",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/2",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.5rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/2/children/0",
+                          "type": "container",
+                          "layout": {
+                            "width": {
+                              "value": "3rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/2/children/0/children/0",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/2/children/1",
+                          "type": "text",
+                          "content": "groupe",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/2/children/2",
+                          "type": "text",
+                          "content": "6 à 15 personnes",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/2/children/3",
+                          "type": "text",
+                          "content": "Intimité préservée",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/3",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.5rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/3/children/0",
+                          "type": "container",
+                          "layout": {
+                            "width": {
+                              "value": "3rem"
+                            },
+                            "align": {
+                              "value": "center"
+                            },
+                            "justify": {
+                              "value": "center"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/3/children/0/children/0",
+                              "type": "icon",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/3/children/1",
+                          "type": "text",
+                          "content": "gratuit",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/3/children/2",
+                          "type": "text",
+                          "content": "0 €, pour tout le monde",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/1/children/3/children/3",
+                          "type": "text",
+                          "content": "Un don libre est possible pour soutenir l'association",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "2rem"
+                    },
+                    "align": {
+                      "value": "center"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/0",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/0/children/0",
+                          "type": "image",
+                          "layout": {
+                            "width": {
+                              "value": "100%"
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "1.5rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1rem"
+                        }
+                      },
+                      "responsive": {
+                        "md": {
+                          "padding": {
+                            "value": "2rem"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/0",
+                          "type": "text",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            },
+                            "gap": {
+                              "value": "0.5rem"
+                            }
+                          },
+                          "content": "bon à savoir",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/0",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "start"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/0/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/0/children/1",
+                                  "type": "text",
+                                  "children": [
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/0/children/1/children/0",
+                                      "type": "text",
+                                      "content": "Annulation possible",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/0/children/1/children/1",
+                                      "type": "text",
+                                      "content": " à tout moment (merci de nous prévenir par email pour libérer ta place)",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/1",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "start"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/1/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/1/children/1",
+                                  "type": "text",
+                                  "children": [
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/1/children/1/children/0",
+                                      "type": "text",
+                                      "content": "Lieux accessibles PMR",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/1/children/1/children/1",
+                                      "type": "text",
+                                      "content": ", vérifiés avant chaque atelier",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/2",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "start"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/2/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/2/children/1",
+                                  "type": "text",
+                                  "children": [
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/2/children/1/children/0",
+                                      "type": "text",
+                                      "content": "En français uniquement",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/2/children/1/children/1",
+                                      "type": "text",
+                                      "content": " pour l'instant",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/3",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "start"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/3/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/3/children/1",
+                                  "type": "text",
+                                  "children": [
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/3/children/1/children/0",
+                                      "type": "text",
+                                      "content": "Pas de garde d'enfants",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/3/children/1/children/1",
+                                      "type": "text",
+                                      "content": " — on sait que le besoin existe",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/4",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "start"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/4/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/4/children/1",
+                                  "type": "text",
+                                  "children": [
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/4/children/1/children/0",
+                                      "type": "text",
+                                      "content": "Le soir ou le samedi",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "nos-ateliers:/components/1/children/3/children/0/children/2/children/1/children/1/children/4/children/1/children/1",
+                                      "type": "text",
+                                      "content": ", dans des lieux centraux",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-ateliers:/components/1/children/4",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-ateliers:/components/1/children/4/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-ateliers:/components/1/children/4/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/4/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Notre cadre",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/4/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "notre cadre",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/4/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Ce qu'on s'engage à tenir, pour que chacun·e puisse explorer à son rythme.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/4/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/4/children/0/children/1/children/0",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/4/children/0/children/1/children/1",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/4/children/0/children/1/children/2",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/4/children/0/children/1/children/3",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/4/children/0/children/2",
+                  "type": "container",
+                  "locked": "template",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-ateliers:/components/1/children/5",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-ateliers:/components/1/children/5/children/0",
+              "type": "container",
+              "layout": {
+                "direction": {
+                  "value": "column"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-ateliers:/components/1/children/5/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/5/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Témoignages",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/5/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "ce que les participant·es en disent",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/5/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Des personnes qui sont venues, et qui en parlent mieux que nous.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/5/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "1.5rem"
+                    },
+                    "align": {
+                      "value": "start"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/5/children/0/children/1/children/0",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/5/children/0/children/1/children/1",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/5/children/0/children/1/children/2",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/5/children/0/children/2",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/5/children/0/children/2/children/0",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/5/children/0/children/2/children/1",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/5/children/0/children/2/children/2",
+                      "type": "container",
+                      "locked": "template",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-ateliers:/components/1/children/6",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-ateliers:/components/1/children/6/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "nos-ateliers:/components/1/children/6/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "FAQ",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "questions fréquentes",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/0/children/2",
+                      "type": "link",
+                      "content": "Une autre question ? Écris-nous",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/6/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/0",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/0/children/0",
+                          "type": "button",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/0/children/0/children/0",
+                              "type": "text",
+                              "content": "Pourquoi participer si je connais déjà le consentement ?",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/0/children/0/children/1",
+                              "type": "icon",
+                              "layout": {
+                                "width": {
+                                  "value": "1.25rem"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/0/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/0/children/1/children/0",
+                              "type": "text",
+                              "content": "L'atelier va au-delà de la théorie : on pratique avec des exercices, on repère les biais qui influencent nos choix et on s'entraîne à dire non dans des situations concrètes.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/1/children/0",
+                          "type": "button",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/1/children/0/children/0",
+                              "type": "text",
+                              "content": "Est-ce que l'atelier peut être trop intense émotionnellement ?",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/1/children/0/children/1",
+                              "type": "icon",
+                              "layout": {
+                                "width": {
+                                  "value": "1.25rem"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/1/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/1/children/1/children/0",
+                              "type": "text",
+                              "content": "Tu n'as jamais à raconter ton vécu et chaque exercice est facultatif : voir notre cadre plus haut. On est des facilitateur·ices formé·es, pas des thérapeutes.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/2",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/2/children/0",
+                          "type": "button",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/2/children/0/children/0",
+                              "type": "text",
+                              "content": "C'est vraiment gratuit ?",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/2/children/0/children/1",
+                              "type": "icon",
+                              "layout": {
+                                "width": {
+                                  "value": "1.25rem"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/2/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/2/children/1/children/0",
+                              "type": "text",
+                              "content": "Oui, personne ne paie pour participer. Si tu veux et peux soutenir l'association, tu peux faire un don sur HelloAsso : c'est le don, et seulement lui, qui ouvre droit à un reçu fiscal. Deux tiers des participant·es ne donnent rien, et c'est très bien.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/3",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/3/children/0",
+                          "type": "button",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/3/children/0/children/0",
+                              "type": "text",
+                              "content": "C'est uniquement sur le consentement sexuel ?",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/3/children/0/children/1",
+                              "type": "icon",
+                              "layout": {
+                                "width": {
+                                  "value": "1.25rem"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/3/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/3/children/1/children/0",
+                              "type": "text",
+                              "content": "Non. L'atelier explore le consentement dans toutes nos relations : amicales, familiales, professionnelles, amoureuses.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/4",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/4/children/0",
+                          "type": "button",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/4/children/0/children/0",
+                              "type": "text",
+                              "content": "Je suis timide, vais-je devoir parler ?",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/4/children/0/children/1",
+                              "type": "icon",
+                              "layout": {
+                                "width": {
+                                  "value": "1.25rem"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/4/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/4/children/1/children/0",
+                              "type": "text",
+                              "content": "Non. Tu peux observer, passer un exercice ou sortir quand tu veux.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/5",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/5/children/0",
+                          "type": "button",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/5/children/0/children/0",
+                              "type": "text",
+                              "content": "Je peux venir seul·e ?",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/5/children/0/children/1",
+                              "type": "icon",
+                              "layout": {
+                                "width": {
+                                  "value": "1.25rem"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/5/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/5/children/1/children/0",
+                              "type": "text",
+                              "content": "Oui, la plupart des personnes viennent seules.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/6",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/6/children/0",
+                          "type": "button",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/6/children/0/children/0",
+                              "type": "text",
+                              "content": "Je peux annuler ma réservation ?",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/6/children/0/children/1",
+                              "type": "icon",
+                              "layout": {
+                                "width": {
+                                  "value": "1.25rem"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/6/children/1",
+                          "type": "container",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/6/children/0/children/1/children/6/children/1/children/0",
+                              "type": "text",
+                              "content": "Oui, à tout moment : préviens-nous par email pour libérer ta place.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nos-ateliers:/components/1/children/7",
+          "type": "container",
+          "children": [
+            {
+              "id": "nos-ateliers:/components/1/children/7/children/0",
+              "type": "container",
+              "children": [
+                {
+                  "id": "nos-ateliers:/components/1/children/7/children/0/children/0",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/7/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "réserve ta place maintenant",
+                      "children": []
+                    },
+                    {
+                      "id": "nos-ateliers:/components/1/children/7/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "Choisis la date qui te convient. Chaque atelier est gratuit — tu peux faire un don si tu le souhaites.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "nos-ateliers:/components/1/children/7/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "gap": {
+                      "value": "2rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "2rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "content": "Atelier de consentement - Niveau 1 - Tout public",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1",
+                          "type": "container",
+                          "layout": {
+                            "align": {
+                              "value": "center"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1/children/0",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "center"
+                                },
+                                "gap": {
+                                  "value": "0.5rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1/children/0/children/0",
+                                  "type": "icon",
+                                  "layout": {
+                                    "width": {
+                                      "value": "1.25rem"
+                                    }
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1/children/0/children/1",
+                                  "type": "text",
+                                  "content": "Strasbourg — adresse communiquée aux inscrit·es",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1/children/1",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "center"
+                                },
+                                "gap": {
+                                  "value": "0.5rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1/children/1/children/0",
+                                  "type": "icon",
+                                  "layout": {
+                                    "width": {
+                                      "value": "1.25rem"
+                                    }
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1/children/1/children/1",
+                                  "type": "text",
+                                  "content": "6 à 15 places",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1/children/2",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "center"
+                                },
+                                "gap": {
+                                  "value": "0.5rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1/children/2/children/0",
+                                  "type": "icon",
+                                  "layout": {
+                                    "width": {
+                                      "value": "1.25rem"
+                                    }
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/1/children/2/children/1",
+                                  "type": "text",
+                                  "content": "gratuit, don libre",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/2",
+                          "type": "list",
+                          "layout": {
+                            "padding": {
+                              "value": "0rem"
+                            },
+                            "direction": {
+                              "value": "column"
+                            }
+                          },
+                          "locked": "island",
+                          "children": []
+                        },
+                        {
+                          "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/3",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/3/children/0",
+                              "type": "text",
+                              "content": "Aucune date ne te convient ? ",
+                              "children": []
+                            },
+                            {
+                              "id": "nos-ateliers:/components/1/children/7/children/0/children/1/children/0/children/3/children/1",
+                              "type": "link",
+                              "content": "Reçois les prochaines par la newsletter",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nos-ateliers:/components/2",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    }
+  ]
+}

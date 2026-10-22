@@ -1,0 +1,2 @@
+import{ky,Iy,Ay}from"./island-client-paw2whmy.js";import{D}from"./island-client-rfe3dkc9.js";import{e,t}from"./island-client-p5ze071j.js";function i(r){let n=Ay;return e("svg",{className:D(ky,void 0,r),"data-loading":n["data-loading"],xmlns:n.xmlns,fill:n.fill,stroke:n.stroke,strokeWidth:n["stroke-width"],strokeLinecap:n["stroke-linecap"],viewBox:n.viewBox,width:n.width,height:n.height,"aria-hidden":n["aria-hidden"],children:e("path",{d:Iy})},"spinner-mark")}function Et(r){return t("span",{className:"inline-flex items-center gap-1.5 align-top",children:[i(),r]})}
+export{Et};

@@ -1,0 +1,31 @@
+/* Brand @font-face rules, copied from site/assets/site.css (Sovrium 0.41, sovrium/sovrium#434 workaround). */
+@font-face {
+  font-family: "Bely Display";
+  src: url("../../site/fonts/BelyDisplay/BelyDisplay-Regular.woff2") format("woff2"),
+       url("../../site/fonts/BelyDisplay/BelyDisplay-Regular.woff") format("woff"),
+       url("../../site/fonts/BelyDisplay/BelyDisplay-Regular.svg#BelyDisplay") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../../site/fonts/NeueMachina/NeueMachina-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../../site/fonts/NeueMachina/NeueMachina-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../../site/fonts/NeueMachina/NeueMachina-Ultrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

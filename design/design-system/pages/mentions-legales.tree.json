@@ -1,0 +1,1210 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "mentions-legales",
+  "nodes": [
+    {
+      "id": "mentions-legales:/components/0",
+      "type": "container",
+      "layout": {
+        "direction": {
+          "value": "column"
+        }
+      },
+      "children": [
+        {
+          "id": "mentions-legales:/components/0/children/0",
+          "type": "container",
+          "layout": {
+            "width": {
+              "value": "100%"
+            }
+          },
+          "children": [
+            {
+              "id": "mentions-legales:/components/0/children/0/children/0",
+              "type": "container",
+              "children": [
+                {
+                  "id": "mentions-legales:/components/0/children/0/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "justify": {
+                      "value": "space-between"
+                    },
+                    "align": {
+                      "value": "center"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/0/children/0/children/0/children/0",
+                      "type": "link",
+                      "layout": {
+                        "align": {
+                          "value": "center"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/0/children/0/children/0/children/0/children/0",
+                          "type": "image",
+                          "layout": {
+                            "width": {
+                              "value": "auto"
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/0/children/0/children/0/children/1",
+                      "type": "link",
+                      "content": "← Retour à l'accueil",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mentions-legales:/components/0/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "mentions-legales:/components/0/children/1/children/0",
+              "type": "container",
+              "children": [
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/0",
+                  "type": "text",
+                  "content": "mentions légales",
+                  "children": []
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/0",
+                      "type": "text",
+                      "content": "éditeur du site",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/0/children/0",
+                              "type": "text",
+                              "content": "Nom de l'association :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/0/children/1",
+                              "type": "text",
+                              "content": " Merci pour ton non",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/1/children/0",
+                              "type": "text",
+                              "content": "Forme juridique :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/1/children/1",
+                              "type": "text",
+                              "content": " Association de droit local (Bas-Rhin, Haut-Rhin et Moselle)",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/2",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/2/children/0",
+                              "type": "text",
+                              "content": "SIREN :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/2/children/1",
+                              "type": "text",
+                              "content": " 993 877 893",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/3",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/3/children/0",
+                              "type": "text",
+                              "content": "SIRET :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/3/children/1",
+                              "type": "text",
+                              "content": " 993 877 893 00012",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/4",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/4/children/0",
+                              "type": "text",
+                              "content": "Code NAF/APE :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/4/children/1",
+                              "type": "text",
+                              "content": " 94.99Z (Autres organisations fonctionnant par adhésion volontaire)",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/5",
+                          "type": "customHTML",
+                          "content": "<p><strong>Siège social :</strong><br />249 avenue de Colmar<br />67100 Strasbourg<br />France</p>",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6/children/0",
+                              "type": "text",
+                              "content": "Email :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6/children/1",
+                              "type": "text",
+                              "content": " ",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/6/children/2",
+                              "type": "link",
+                              "content": "mercipourtonnon@gmail.com",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7/children/0",
+                              "type": "text",
+                              "content": "Site web :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7/children/1",
+                              "type": "text",
+                              "content": " ",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/7/children/2",
+                              "type": "link",
+                              "content": "https://mercipourtonnon.fr",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/8",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/8/children/0",
+                              "type": "text",
+                              "content": "Objet de l'association :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/8/children/1",
+                              "type": "text",
+                              "content": " L'association œuvre à diffuser une culture du consentement auprès de chaque citoyen·ne, dans une démarche d'éducation populaire en Alsace. Elle crée des espaces de réflexion et de pratique où chacun·e peut explorer les enjeux du consentement - dans son rapport à soi, à l'autre et à la société.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/9",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/9/children/0",
+                              "type": "text",
+                              "content": "Directeur·ice de publication :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/9/children/1",
+                              "type": "text",
+                              "content": " Mathilde Brière et Thomas Jeanneau, co-président·es de l'association Merci pour ton non",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/10",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/10/children/0",
+                              "type": "text",
+                              "content": "Date de création :",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/1/children/1/children/10/children/1",
+                              "type": "text",
+                              "content": " 21 septembre 2025",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/2",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/0",
+                      "type": "text",
+                      "content": "hébergement",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/0",
+                          "type": "text",
+                          "content": "Le site est hébergé par :",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1",
+                          "type": "list",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/0",
+                                  "type": "text",
+                                  "content": "Site, application et données :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/1",
+                                  "type": "text",
+                                  "content": " ESSENTIAL SERVICES, SAS, 128 rue La Boétie, 75008 Paris, France (SIREN 834 241 481), propriétaire de la plateforme Sovrium Cloud (",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/2",
+                                  "type": "link",
+                                  "content": "cloud.sovrium.com",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/1/children/0/children/3",
+                                  "type": "text",
+                                  "content": "). Les pages publiques, l'espace bénévole, l'espace facilitateur·ices, les formulaires et leurs données sont servis par ce même hébergement.",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/2",
+                          "type": "text",
+                          "content": "Les inscriptions aux ateliers sont traitées par HelloAsso et la newsletter par Brevo.",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/2/children/1/children/3",
+                          "type": "text",
+                          "content": "Les données sont hébergées conformément au RGPD (Règlement Général sur la Protection des Données).",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/3",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/0",
+                      "type": "text",
+                      "content": "limitations techniques",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/0",
+                          "type": "text",
+                          "content": "Le site mercipourtonnon.fr utilise les technologies web modernes pour te garantir la meilleure expérience possible. Pour profiter pleinement de toutes les fonctionnalités du site, nous te recommandons :",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1",
+                          "type": "list",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/0",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/0/children/0",
+                                  "type": "text",
+                                  "content": "JavaScript activé :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/0/children/1",
+                                  "type": "text",
+                                  "content": " Le site utilise JavaScript pour le menu de navigation mobile, les animations et certaines interactions. Certaines fonctionnalités peuvent être limitées si JavaScript est désactivé.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/1",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/1/children/0",
+                                  "type": "text",
+                                  "content": "Navigateur moderne :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/1/children/1",
+                                  "type": "text",
+                                  "content": " Nous recommandons d'utiliser les versions récentes de Chrome, Firefox, Safari ou Edge pour une expérience optimale.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/2",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/2/children/0",
+                                  "type": "text",
+                                  "content": "Hébergement :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/1/children/2/children/1",
+                                  "type": "text",
+                                  "content": " Tout le site (pages publiques, espace bénévole, espace facilitateur·ices) et ses données (ateliers, comptes, formulaires, statistiques de visite) sont hébergés sur Sovrium Cloud, conformément au RGPD. Les formulaires du site enregistrent ce que tu y écris sur ce serveur (voir « données collectées » ci-dessous).",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/3/children/1/children/2",
+                          "type": "text",
+                          "content": "L'association Merci pour ton non met tout en œuvre pour assurer l'accessibilité et la disponibilité du site. Toutefois, nous ne pouvons être tenus responsables des difficultés d'accès temporaires liées à des problèmes techniques indépendants de notre volonté, à la maintenance programmée, ou aux caractéristiques de ton équipement.",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/4",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/0",
+                      "type": "text",
+                      "content": "protection des données personnelles",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/1",
+                      "type": "text",
+                      "content": "données collectées",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/0",
+                          "type": "text",
+                          "content": "Dans le cadre de ton utilisation du site, nous sommes susceptibles de collecter les données suivantes :",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1",
+                          "type": "list",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/0",
+                                  "type": "text",
+                                  "content": "Inscriptions aux ateliers :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/1",
+                                  "type": "text",
+                                  "content": " Gérées via la plateforme tierce HelloAsso, qui traite tes données d'inscription et de paiement (nom, prénom, email, réponses au formulaire d'inscription, téléphone si fourni, et ton paiement ou ton don si tu en fais un). Consulte la ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/2",
+                                  "type": "link",
+                                  "content": "politique de confidentialité de HelloAsso",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/0/children/3",
+                                  "type": "text",
+                                  "content": " pour plus d'informations.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/1",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/1/children/0",
+                                  "type": "text",
+                                  "content": "Suivi des ateliers :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/1/children/1",
+                                  "type": "text",
+                                  "content": " Quand tu t'inscris à un atelier, nous copions depuis HelloAsso dans l'outil interne de l'association ton nom, ton email, ton téléphone si tu l'as donné, le don éventuel, l'état de ton inscription et ta réponse sur les photos. Le jour de l'atelier, nous y notons ta présence. Si tu viens sans t'être inscrit·e, nous y notons ton nom (et ton email ou ton téléphone si tu nous les donnes). Seul·es les bénévoles qui accueillent les ateliers (facilitation et logistique) et le Cercle Gardien de l'association y ont accès.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/2",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/2/children/0",
+                                  "type": "text",
+                                  "content": "Comptes des facilitateur·ices :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/2/children/1",
+                                  "type": "text",
+                                  "content": " Les personnes qui animent nos ateliers ont un compte sur l'espace facilitateur·ices (nom, adresse email, mot de passe chiffré, propositions de dates). Ces comptes sont créés sur invitation par l'association, et servent uniquement à organiser les ateliers.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/0",
+                                  "type": "text",
+                                  "content": "Newsletter :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/1",
+                                  "type": "text",
+                                  "content": " Gérée via la plateforme tierce Brevo (prénom ou pseudo, adresse email). Ces données sont collectées uniquement avec ton consentement explicite lors de l'inscription. Consulte la ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/2",
+                                  "type": "link",
+                                  "content": "politique de confidentialité de Brevo",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/3/children/3",
+                                  "type": "text",
+                                  "content": " pour plus d'informations.",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/4",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/4/children/0",
+                                  "type": "text",
+                                  "content": "Statistiques de navigation :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/2/children/1/children/4/children/1",
+                                  "type": "text",
+                                  "content": " Sur les pages publiques du site, via l'outil de statistiques intégré à notre hébergement : il compte les pages vues, la provenance des visites et le type d'appareil, sans cookie, côté serveur, sans empreinte de navigateur et sans service tiers. Les données restent sur notre serveur, et rien n'est enregistré si ton navigateur demande de ne pas être suivi (Do Not Track). Les espaces privés (espace bénévole, espace facilitateur·ices) et les pages de connexion ne sont pas comptés.",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/3",
+                      "type": "text",
+                      "content": "finalité du traitement",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/4",
+                      "type": "text",
+                      "content": "Les données collectées sont utilisées uniquement pour :",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5",
+                      "type": "list",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/0",
+                          "type": "item",
+                          "content": "Gérer les inscriptions aux ateliers",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/1",
+                          "type": "item",
+                          "content": "Te contacter concernant les ateliers auxquels tu t'es inscrit·e",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/2",
+                          "type": "item",
+                          "content": "Organiser l'accueil et le suivi des ateliers : t'accueillir, noter ta présence, te joindre en cas d'imprévu le jour J, et établir des statistiques globales (nombre de personnes, dons éventuels)",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/3",
+                          "type": "item",
+                          "content": "T'envoyer notre newsletter si tu t'y es inscrit·e (actualités, dates d'ateliers, ressources sur le consentement)",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/4",
+                          "type": "item",
+                          "content": "Améliorer l'expérience utilisateur du site",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/5",
+                          "type": "item",
+                          "content": "Répondre à tes demandes d'information",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/6",
+                          "type": "item",
+                          "content": "Gérer ton compte et ta fiche bénévole si tu rejoins l'équipe (inscription sur /devenir-benevole) : ton email et ton mot de passe pour le compte ; prénom et nom, pronom, téléphone, photo et ce que tu écris dans ta fiche pour mieux se connaître. L'email et le téléphone sont lus par la coordination seulement ; la fiche est visible des autres bénévoles une fois validée",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/5/children/7",
+                          "type": "item",
+                          "content": "Lire et étudier les idées envoyées depuis /vos-idees (un atelier pour un public précis, un contenu, un format, un lieu) : le type d'idée, pour qui, et ton message ; ton prénom ou nom, ton e-mail et ton accord pour être recontacté·e sont facultatifs et ne servent qu'à te répondre. Lues par la coordination seulement",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/6",
+                      "type": "text",
+                      "content": "tes droits",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/0",
+                          "type": "text",
+                          "content": "Conformément au RGPD et à la loi Informatique et Libertés, tu disposes des droits suivants :",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1",
+                          "type": "list",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/0",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/0/children/0",
+                                  "type": "text",
+                                  "content": "Droit d'accès :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/0/children/1",
+                                  "type": "text",
+                                  "content": " Tu peux demander l'accès aux données personnelles que nous détenons sur toi",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/1",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/1/children/0",
+                                  "type": "text",
+                                  "content": "Droit de rectification :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/1/children/1",
+                                  "type": "text",
+                                  "content": " Tu peux demander la correction de données inexactes ou incomplètes",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/2",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/2/children/0",
+                                  "type": "text",
+                                  "content": "Droit à l'effacement :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/2/children/1",
+                                  "type": "text",
+                                  "content": " Tu peux demander la suppression de tes données personnelles",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/3",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/3/children/0",
+                                  "type": "text",
+                                  "content": "Droit à la limitation du traitement :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/3/children/1",
+                                  "type": "text",
+                                  "content": " Tu peux demander la limitation du traitement de tes données",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/4",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/4/children/0",
+                                  "type": "text",
+                                  "content": "Droit à la portabilité :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/4/children/1",
+                                  "type": "text",
+                                  "content": " Tu peux demander de recevoir tes données dans un format structuré",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/5",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/5/children/0",
+                                  "type": "text",
+                                  "content": "Droit d'opposition :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/1/children/5/children/1",
+                                  "type": "text",
+                                  "content": " Tu peux t'opposer au traitement de tes données",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/2",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/2/children/0",
+                              "type": "text",
+                              "content": "Pour exercer ces droits, contacte-nous à : ",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/2/children/1",
+                              "type": "link",
+                              "content": "mercipourtonnon@gmail.com",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/3",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/3/children/0",
+                              "type": "text",
+                              "content": "Si tu estimes que tes droits ne sont pas respectés, tu peux déposer une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) : ",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/7/children/3/children/1",
+                              "type": "link",
+                              "content": "www.cnil.fr",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/8",
+                      "type": "text",
+                      "content": "durée de conservation",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/9",
+                      "type": "text",
+                      "content": "Tes données personnelles sont conservées uniquement le temps nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées, conformément aux obligations légales applicables.",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/10",
+                      "type": "text",
+                      "content": "Pour le suivi des ateliers, ton nom, ton email et ton téléphone sont effacés de notre outil interne 12 mois après l'atelier. Nous ne gardons ensuite que des chiffres anonymes (nombre d'inscrit·es, de présent·es, dons éventuels).",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/11",
+                      "type": "text",
+                      "content": "Pour l'espace bénévole, ton compte et ta fiche sont conservés tant que tu fais partie de l'équipe. Quand tu la quittes, la coordination archive ta fiche et ferme ton accès ; compte et fiche sont supprimés sur simple demande à mercipourtonnon@gmail.com.",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/4/children/12",
+                      "type": "text",
+                      "content": "Pour les idées envoyées depuis /vos-idees, le message et les coordonnées facultatives sont conservés 24 mois au plus, le temps de les étudier et de te répondre, puis supprimés — ou plus tôt, sur simple demande à mercipourtonnon@gmail.com.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/5",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/0",
+                      "type": "text",
+                      "content": "cookies",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/0",
+                          "type": "text",
+                          "content": "Notre site n'utilise aucun cookie publicitaire ni de suivi. Les seuls cookies sont techniques :",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/1",
+                          "type": "list",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/1/children/0",
+                              "type": "item",
+                              "content": "Le cookie de session de l'espace facilitateur·ices : posé uniquement quand une personne se connecte, il la garde connectée. Il n'est lisible que par le serveur (httpOnly) et disparaît à la déconnexion ou à son expiration.",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/1/children/1",
+                              "type": "item",
+                              "content": "Le formulaire d'inscription à la newsletter (Brevo) peut utiliser des cookies techniques nécessaires à son fonctionnement.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/2",
+                          "type": "text",
+                          "content": "Nos statistiques de visite ne posent aucun cookie : elles comptent les visites de façon anonyme, sans identifier personne. C'est pourquoi le site n'affiche pas de bandeau de consentement.",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/5/children/1/children/3",
+                          "type": "text",
+                          "content": "Tu peux néanmoins désactiver les cookies dans les paramètres de ton navigateur si tu le souhaites. Note que la connexion à l'espace facilitateur·ices ne fonctionnera plus.",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/6",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/0",
+                      "type": "text",
+                      "content": "propriété intellectuelle",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1/children/0",
+                          "type": "text",
+                          "content": "L'ensemble du contenu présent sur ce site (textes, images, graphismes, logo, icônes, etc.) est la propriété exclusive de l'association Merci pour ton non, sauf mention contraire.",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1/children/1",
+                          "type": "text",
+                          "content": "Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de l'association.",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/6/children/1/children/2",
+                          "type": "text",
+                          "content": "Toute exploitation non autorisée du site ou de l'un des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/7",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/0",
+                      "type": "text",
+                      "content": "limitation de responsabilité",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/0",
+                          "type": "text",
+                          "content": "L'association Merci pour ton non s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, elle ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/1",
+                          "type": "text",
+                          "content": "L'association ne saurait être tenue responsable :",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2",
+                          "type": "list",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2/children/0",
+                              "type": "item",
+                              "content": "Des dommages directs ou indirects résultant de l'accès au site ou de son utilisation",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2/children/1",
+                              "type": "item",
+                              "content": "Des interruptions temporaires d'accès au site pour des opérations de maintenance ou pour toute autre raison",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/7/children/1/children/2/children/2",
+                              "type": "item",
+                              "content": "Du contenu des sites externes vers lesquels le site renvoie par des liens hypertextes",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/8",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/0",
+                      "type": "text",
+                      "content": "liens hypertextes",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/0",
+                          "type": "text",
+                          "content": "Le site peut contenir des liens hypertextes vers d'autres sites. L'association Merci pour ton non n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou à leur politique de confidentialité.",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/1",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/1/children/0",
+                              "type": "text",
+                              "content": "La mise en place de liens hypertextes vers le site mercipourtonnon.fr nécessite une autorisation préalable. Pour toute demande, contacte-nous à : ",
+                              "children": []
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/8/children/1/children/1/children/1",
+                              "type": "link",
+                              "content": "mercipourtonnon@gmail.com",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/9",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/9/children/0",
+                      "type": "text",
+                      "content": "droit applicable et juridiction compétente",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/9/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/9/children/1/children/0",
+                          "type": "text",
+                          "content": "Les présentes mentions légales sont régies par le droit français. En cas de litige et à défaut d'accord amiable, le tribunal compétent sera celui du ressort du siège social de l'association.",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/10",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/0",
+                      "type": "text",
+                      "content": "contact",
+                      "children": []
+                    },
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1",
+                      "type": "container",
+                      "children": [
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/0",
+                          "type": "text",
+                          "content": "Pour toute question concernant ces mentions légales ou l'utilisation de tes données personnelles, tu peux nous contacter :",
+                          "children": []
+                        },
+                        {
+                          "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1",
+                          "type": "list",
+                          "children": [
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0/children/0",
+                                  "type": "text",
+                                  "content": "Email :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0/children/1",
+                                  "type": "text",
+                                  "content": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/0/children/2",
+                                  "type": "link",
+                                  "content": "mercipourtonnon@gmail.com",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/1",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/1/children/0",
+                                  "type": "text",
+                                  "content": "Adresse postale :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/1/children/1",
+                                  "type": "text",
+                                  "content": " 249 avenue de Colmar, 67100 Strasbourg",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2",
+                              "type": "item",
+                              "children": [
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2/children/0",
+                                  "type": "text",
+                                  "content": "Site web :",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2/children/1",
+                                  "type": "text",
+                                  "content": " ",
+                                  "children": []
+                                },
+                                {
+                                  "id": "mentions-legales:/components/0/children/1/children/0/children/10/children/1/children/1/children/2/children/2",
+                                  "type": "link",
+                                  "content": "https://mercipourtonnon.fr",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "mentions-legales:/components/0/children/1/children/0/children/11",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "mentions-legales:/components/0/children/1/children/0/children/11/children/0",
+                      "type": "text",
+                      "content": "Dernière mise à jour : 10 octobre 2026",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mentions-legales:/components/0/children/2",
+          "type": "container",
+          "locked": "template",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

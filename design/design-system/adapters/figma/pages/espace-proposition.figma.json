@@ -1,0 +1,2013 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-proposition",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-proposition:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-proposition:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 32,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/0/children/0",
+                                "type": "link"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "← Mes propositions",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/0/children/1",
+                                "type": "link"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "← À valider",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 8,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "proposition de date",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/1/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Atelier de consentement, niveau 1, 3h, prix libre.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/2",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Ta proposition attend la relecture de l'équipe. Tu peux la modifier ou la supprimer d'ici là.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/3",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Proposition validée. La création de l'événement sur HelloAsso est en cours, ça prend quelques secondes. Recharge la page pour voir la suite.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/4",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Proposition validée. L'équipe prépare la page d'inscription sur HelloAsso ; la date apparaîtra sur le site dès qu'elle sera prête.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/5",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Cette date est en ligne sur le site, les inscriptions sont ouvertes.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/6",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Cette proposition n'a pas été retenue. La note de relecture ci-dessous t'explique pourquoi ; n'hésite pas à proposer une autre date.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/7",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Cette proposition a été retirée.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "description-list",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/8",
+                            "type": "description-list"
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/9",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Facilitation",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/1",
+                                "type": "container"
+                              },
+                              "children": [
+                                {
+                                  "name": "container",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/9/children/1/children/0",
+                                    "type": "container"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "container",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/9/children/1/children/1",
+                                    "type": "container"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/2",
+                                "type": "text"
+                              },
+                              "characters": "Lieu",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/3",
+                                "type": "container"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/4",
+                                "type": "text"
+                              },
+                              "characters": "Choisi par l'équipe à la relecture.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "description-list",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/10",
+                            "type": "description-list"
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "description-list",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/11",
+                            "type": "description-list"
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/12",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 16,
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/12/children/0",
+                                "type": "text"
+                              },
+                              "characters": "modifier ma proposition",
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/12/children/1",
+                                "type": "form"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            },
+                            {
+                              "name": "button",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/12/children/2",
+                                "type": "button"
+                              },
+                              "componentProperties": {
+                                "variant": "outline"
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "alert-dialog",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/12/children/3",
+                                "type": "alert-dialog"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "La proposition disparaît de ta liste et l'équipe ne la verra plus. Tu pourras toujours proposer une nouvelle date.",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/13",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 20,
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/0",
+                                "type": "text"
+                              },
+                              "characters": "validation par le cercle gardien",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Vérifie la date, l'heure, les facilitateur·ices, le lieu et le nombre de places. Approuver crée tout de suite un vrai événement sur HelloAsso.",
+                                  "children": []
+                                },
+                                {
+                                  "name": "alert",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/1",
+                                    "type": "alert"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "Choisis d'abord un lieu dans « Relecture et détails » ci-dessous, puis enregistre. Le bouton d'approbation apparaît ensuite.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "container",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/2",
+                                    "type": "container"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "button",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/2/children/0",
+                                        "type": "button"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/2",
+                                "type": "text"
+                              },
+                              "characters": "La création sur HelloAsso est en cours. Recharge la page dans quelques secondes.",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/3",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 16,
+                              "children": [
+                                {
+                                  "name": "alert",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/0",
+                                    "type": "alert"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "L'événement existe sur HelloAsso mais n'est pas encore prêt. Termine ces étapes dans le back-office HelloAsso avant de le publier sur le site.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/1",
+                                    "type": "link"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "Ouvrir l'événement sur HelloAsso (nouvel onglet)",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "list",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2",
+                                    "type": "list"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "item",
+                                      "nodeType": "FRAME",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0",
+                                        "type": "item"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "text",
+                                          "nodeType": "TEXT",
+                                          "sovrium": {
+                                            "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/0",
+                                            "type": "text"
+                                          },
+                                          "characters": "Ajoute les 6 questions du formulaire d'inscription, mot pour mot :",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "list",
+                                          "nodeType": "FRAME",
+                                          "sovrium": {
+                                            "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1",
+                                            "type": "list"
+                                          },
+                                          "children": [
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/0",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Email (obligatoire, format email)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/1",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Numéro de téléphone (pour te prévenir en cas d'imprévu ou d'information importante avant l'atelier) (obligatoire, format téléphone)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/2",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Comment j'ai entendu parler de cet événement (obligatoire)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/3",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Qu'est-ce qui me motive, me donne envie de participer ? (obligatoire)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/4",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "J'autorise l'association à me photographier/filmer lors de l'événement et à utiliser ces images sur ses supports de communication. Consentement retirable à tout moment : mercipourtonnon@gmail.com (obligatoire, choix Oui / Non)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/5",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Veux-tu nous laisser un petit mot ? (facultatif)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "item",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/1",
+                                        "type": "item"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "Vérifie le tarif « Prix libre » à 0 €, les dons ouverts, le nombre de places et la bannière.",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "item",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/2",
+                                        "type": "item"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "Publie l'événement sur HelloAsso.",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "item",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/3",
+                                        "type": "item"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "Reviens ici et appuie sur « Publier sur le site ».",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/3",
+                                    "type": "button"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/4",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "children": [
+                                {
+                                  "name": "alert",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/0",
+                                    "type": "alert"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "La création sur HelloAsso a échoué. Aucun événement en double n'a été créé : avant de recréer, la relance cherche d'abord un événement du même titre.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "description-list",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/1",
+                                    "type": "description-list"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/2",
+                                    "type": "button"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/14",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 16,
+                          "paddingTop": 20,
+                          "paddingRight": 20,
+                          "paddingBottom": 20,
+                          "paddingLeft": 20,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/14/children/0",
+                                "type": "text"
+                              },
+                              "characters": "relecture et détails",
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/14/children/1",
+                                "type": "form"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "breakpoint": "sm",
+      "width": 640,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-proposition:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-proposition:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 32,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "link",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/0/children/0",
+                                "type": "link"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "← Mes propositions",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "link",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/0/children/1",
+                                "type": "link"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "← À valider",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/1",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 8,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/1/children/0",
+                                "type": "text"
+                              },
+                              "characters": "proposition de date",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/1/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Atelier de consentement, niveau 1, 3h, prix libre.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/2",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Ta proposition attend la relecture de l'équipe. Tu peux la modifier ou la supprimer d'ici là.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/3",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Proposition validée. La création de l'événement sur HelloAsso est en cours, ça prend quelques secondes. Recharge la page pour voir la suite.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/4",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Proposition validée. L'équipe prépare la page d'inscription sur HelloAsso ; la date apparaîtra sur le site dès qu'elle sera prête.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/5",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Cette date est en ligne sur le site, les inscriptions sont ouvertes.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/6",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Cette proposition n'a pas été retenue. La note de relecture ci-dessous t'explique pourquoi ; n'hésite pas à proposer une autre date.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/7",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Cette proposition a été retirée.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "description-list",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/8",
+                            "type": "description-list"
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/9",
+                            "type": "container"
+                          },
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/0",
+                                "type": "text"
+                              },
+                              "characters": "Facilitation",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/1",
+                                "type": "container"
+                              },
+                              "children": [
+                                {
+                                  "name": "container",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/9/children/1/children/0",
+                                    "type": "container"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                },
+                                {
+                                  "name": "container",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/9/children/1/children/1",
+                                    "type": "container"
+                                  },
+                                  "locked": true,
+                                  "layoutMode": "VERTICAL",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/2",
+                                "type": "text"
+                              },
+                              "characters": "Lieu",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/3",
+                                "type": "container"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/9/children/4",
+                                "type": "text"
+                              },
+                              "characters": "Choisi par l'équipe à la relecture.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "description-list",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/10",
+                            "type": "description-list"
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "description-list",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/11",
+                            "type": "description-list"
+                          },
+                          "children": []
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/12",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 16,
+                          "paddingTop": 24,
+                          "paddingRight": 24,
+                          "paddingBottom": 24,
+                          "paddingLeft": 24,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/12/children/0",
+                                "type": "text"
+                              },
+                              "characters": "modifier ma proposition",
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/12/children/1",
+                                "type": "form"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            },
+                            {
+                              "name": "button",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/12/children/2",
+                                "type": "button"
+                              },
+                              "componentProperties": {
+                                "variant": "outline"
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "alert-dialog",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/12/children/3",
+                                "type": "alert-dialog"
+                              },
+                              "children": [
+                                {
+                                  "name": "label",
+                                  "nodeType": "TEXT",
+                                  "characters": "La proposition disparaît de ta liste et l'équipe ne la verra plus. Tu pourras toujours proposer une nouvelle date.",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/13",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 20,
+                          "paddingTop": 24,
+                          "paddingRight": 24,
+                          "paddingBottom": 24,
+                          "paddingLeft": 24,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/0",
+                                "type": "text"
+                              },
+                              "characters": "validation par le cercle gardien",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/1",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "children": [
+                                {
+                                  "name": "text",
+                                  "nodeType": "TEXT",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/0",
+                                    "type": "text"
+                                  },
+                                  "characters": "Vérifie la date, l'heure, les facilitateur·ices, le lieu et le nombre de places. Approuver crée tout de suite un vrai événement sur HelloAsso.",
+                                  "children": []
+                                },
+                                {
+                                  "name": "alert",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/1",
+                                    "type": "alert"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "Choisis d'abord un lieu dans « Relecture et détails » ci-dessous, puis enregistre. Le bouton d'approbation apparaît ensuite.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "container",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/2",
+                                    "type": "container"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "button",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/2/children/0",
+                                        "type": "button"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/2",
+                                "type": "text"
+                              },
+                              "characters": "La création sur HelloAsso est en cours. Recharge la page dans quelques secondes.",
+                              "children": []
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/3",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 16,
+                              "children": [
+                                {
+                                  "name": "alert",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/0",
+                                    "type": "alert"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "L'événement existe sur HelloAsso mais n'est pas encore prêt. Termine ces étapes dans le back-office HelloAsso avant de le publier sur le site.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "link",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/1",
+                                    "type": "link"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "Ouvrir l'événement sur HelloAsso (nouvel onglet)",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "list",
+                                  "nodeType": "FRAME",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2",
+                                    "type": "list"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "item",
+                                      "nodeType": "FRAME",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0",
+                                        "type": "item"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "text",
+                                          "nodeType": "TEXT",
+                                          "sovrium": {
+                                            "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/0",
+                                            "type": "text"
+                                          },
+                                          "characters": "Ajoute les 6 questions du formulaire d'inscription, mot pour mot :",
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "list",
+                                          "nodeType": "FRAME",
+                                          "sovrium": {
+                                            "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1",
+                                            "type": "list"
+                                          },
+                                          "children": [
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/0",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Email (obligatoire, format email)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/1",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Numéro de téléphone (pour te prévenir en cas d'imprévu ou d'information importante avant l'atelier) (obligatoire, format téléphone)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/2",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Comment j'ai entendu parler de cet événement (obligatoire)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/3",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Qu'est-ce qui me motive, me donne envie de participer ? (obligatoire)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/4",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "J'autorise l'association à me photographier/filmer lors de l'événement et à utiliser ces images sur ses supports de communication. Consentement retirable à tout moment : mercipourtonnon@gmail.com (obligatoire, choix Oui / Non)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "item",
+                                              "nodeType": "INSTANCE",
+                                              "sovrium": {
+                                                "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/5",
+                                                "type": "item"
+                                              },
+                                              "children": [
+                                                {
+                                                  "name": "label",
+                                                  "nodeType": "TEXT",
+                                                  "characters": "Veux-tu nous laisser un petit mot ? (facultatif)",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "item",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/1",
+                                        "type": "item"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "Vérifie le tarif « Prix libre » à 0 €, les dons ouverts, le nombre de places et la bannière.",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "item",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/2",
+                                        "type": "item"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "Publie l'événement sur HelloAsso.",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "item",
+                                      "nodeType": "INSTANCE",
+                                      "sovrium": {
+                                        "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/3",
+                                        "type": "item"
+                                      },
+                                      "children": [
+                                        {
+                                          "name": "label",
+                                          "nodeType": "TEXT",
+                                          "characters": "Reviens ici et appuie sur « Publier sur le site ».",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/3",
+                                    "type": "button"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "container",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/13/children/4",
+                                "type": "container"
+                              },
+                              "layoutMode": "VERTICAL",
+                              "itemSpacing": 12,
+                              "children": [
+                                {
+                                  "name": "alert",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/0",
+                                    "type": "alert"
+                                  },
+                                  "children": [
+                                    {
+                                      "name": "label",
+                                      "nodeType": "TEXT",
+                                      "characters": "La création sur HelloAsso a échoué. Aucun événement en double n'a été créé : avant de recréer, la relance cherche d'abord un événement du même titre.",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "description-list",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/1",
+                                    "type": "description-list"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "name": "button",
+                                  "nodeType": "INSTANCE",
+                                  "sovrium": {
+                                    "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/2",
+                                    "type": "button"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-proposition:/components/0/children/0/children/14",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 16,
+                          "paddingTop": 24,
+                          "paddingRight": 24,
+                          "paddingBottom": 24,
+                          "paddingLeft": 24,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/14/children/0",
+                                "type": "text"
+                              },
+                              "characters": "relecture et détails",
+                              "children": []
+                            },
+                            {
+                              "name": "form",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-proposition:/components/0/children/0/children/14/children/1",
+                                "type": "form"
+                              },
+                              "locked": true,
+                              "layoutMode": "VERTICAL",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-proposition:/components/0",
+      "contentHash": "9043f2f7035c386e8b0302ccf31d3395c24dbe4f33faa7dd4fae850156bfe216"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0",
+      "contentHash": "bf08754dda23bd71023b8c32c6940fa9e26261853249050d06d495f896cf5d51"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/0",
+      "contentHash": "d45a8bf67b7fb2087850e0dad2b959b62b4cc53e1c7dd2f4a2a779ac0e0af94d"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/0/children/0",
+      "contentHash": "66dd0073bbba2f8b8ea1729aff69a0a5f4852300ba7848a6bfe54dea0cd1998c"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/0/children/1",
+      "contentHash": "751f193022460cafe89375dbb0ae59cd0f3b6ad73f94ec2d63cee04ffd66416c"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/1",
+      "contentHash": "234d56fc1ff20efcfd52a6f7e0533ec09b4499a31d5b51dfc23fccdea4176fd3"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/1/children/0",
+      "contentHash": "4c64ffecad84e8309a111bd362a6d88ac1de824417beb95a13eb1f0859dc27d1"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/1/children/1",
+      "contentHash": "4e180eb100dc0c0c8cc4ecbc39abcb02145d06fe409e005017ca84f5729c517a"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/2",
+      "contentHash": "d2d98c5c494defe7df099f628b7f0c3fa97eb4f3dede846babc086b7ef1eb69a"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/3",
+      "contentHash": "3d988a7ce2a5ae9ce210578cb978eb1354ca8a6469f3e7343f2098ff5ca75415"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/4",
+      "contentHash": "d5685fa1af2fd2674d09aa29920780af883aaa4281a035b4156245b7f60a3790"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/5",
+      "contentHash": "1ca49bb155e029c407c735ec3b900f6e817f919245b64ffd5ef231b3b2196e8c"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/6",
+      "contentHash": "de73b0131e974aebc4930ee6287e78c592bddcef413aa618279ba6fb21369407"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/7",
+      "contentHash": "5f2e7672c49da16094fc86899f250d5db12eb97b3b0d790a9ed3e390bd1a39df"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/8",
+      "contentHash": "2e7b9b4276534014a9e059bd0dded4b84ebb2d18836266babf37d5343a676ca4"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/9",
+      "contentHash": "01b15a590cb53f9ff3810bd11f8953be7d381a543455069f77a08279811c5e04"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/9/children/0",
+      "contentHash": "c99a92e98ddf557729513b10fa7394ef410d6d5c09fc227d616e512f69ac4065"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/9/children/1",
+      "contentHash": "cf0778286d6058b130adc8dfd12925432386d6e852de1502694ce64a585d1b4d"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/9/children/1/children/0",
+      "contentHash": "a896faa48a87aebfb91530731fe185d6f3cf1da039bd7b176e2c7b0218c3c05e"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/9/children/1/children/1",
+      "contentHash": "c8c9a7bb5a944373538f4d4e3b092aceddfce7f62578d3fd46bff2e2f90be1a7"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/9/children/2",
+      "contentHash": "515cfb22d92b63db9f5b2a82cde156b1b7f04c1f7c9de9e4ce67bf3a5f8bc568"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/9/children/3",
+      "contentHash": "80fc5efc260eb4808fcfc1d66f2bfc8fea48c49cbe12804ba3b886d4f8ab4dfe"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/9/children/4",
+      "contentHash": "1bbdded919fdad03a588473120440313f95c194953ff78808af49f30b817bb7d"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/10",
+      "contentHash": "f557f16427d09759777d43a7e4e76d750a854d9395a3debea82cdf43d0e44dcf"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/11",
+      "contentHash": "b272aad28e86b631f44c2db6204f192ba6fcb6da9dc721da4eadfe53e17c914f"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/12",
+      "contentHash": "14611359d244664ea59323d1044020ee506cc9f826b070ecdf292ee290bb3779"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/12/children/0",
+      "contentHash": "16380b558badf9045f2b1a72411d987a498d882c05452ece44af53396e0ebe59"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/12/children/1",
+      "contentHash": "551a355764d09a2389ca1210ac31376a6100e4ff85b4677f62f05f9a2e2ba1d1"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/12/children/2",
+      "contentHash": "67398dddd79e7be90af6838624b9a902979014e4fc953cca5a1551367a97fca0"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/12/children/3",
+      "contentHash": "5e3801db3053cb3fc357fee49edcccf83b6e47217e02beb9a2188a586a74302a"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13",
+      "contentHash": "940976a7b536d100b539791716fe6f1f580e78f8f18a94ebe27aed89d8bef243"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/0",
+      "contentHash": "8469c3ada8a2fc30f0530468c0bae708395149e5dd4b23ba1f75b0da45eea602"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/1",
+      "contentHash": "ece253b8fb2287da083b75c8e9bd21baf966724f3c3277bdf17982e3748abf78"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/0",
+      "contentHash": "12716d1c94bbffcb872977f43b4e1048bd1bd03ce317523ce4757d67c4d8ec4a"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/1",
+      "contentHash": "e3ae3921f41d68fb3a9cb7dcef4caea5316af8c7332a2c7d39092a096c654c4f"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/2",
+      "contentHash": "5c261376b4a4ab0fa7e1d2987b8226f2f33cedb858f1bce7cd63eca5da02f63f"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/1/children/2/children/0",
+      "contentHash": "c35825d84f856d3beafc4af138d9871c0d26c784e5c7e205e52fa7cb10ec5b46"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/2",
+      "contentHash": "1513e513f28cf8a288b5860a31acfef850be49e86e38ebf8c62bbdf5ca3d72c9"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3",
+      "contentHash": "b793e93b40c490c803a1e0d935c24ea9f5af38e6af4dac7ed2ab93558dd43e82"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/0",
+      "contentHash": "dd2718821f18b62e6475d63ebd209c534318b667c35cc3bea9a82a847e95b836"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/1",
+      "contentHash": "6ecddb1cf4300e389d9be0161040038f50d49e95f2b7a748bb347b6363ab2e42"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2",
+      "contentHash": "f603eaebe8b516eb0d8fff8283fb701383df047a3ff7a516bb910e08b6b27e53"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0",
+      "contentHash": "09b5b41a65e4b0bde7ff5bc61b6b1171ae5bbd47429f40596654a8988c7844f0"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/0",
+      "contentHash": "a84ef9949e9314c43fd960cdb37362a1ad1665becbb8d6cbb177a16fc21a9f89"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1",
+      "contentHash": "49a2535dbc54296686e410a69eedd3a4308c713ff39ae47d53746f5a81e0c232"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/0",
+      "contentHash": "ff62b7a5dc7f521fe91f18a4eb75f0372ec0e810c8a2939f850293b292ad638f"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/1",
+      "contentHash": "1777bf57e27eb2f600347ad6c524daed7a82375d62fc83d5a7e130f0f661c4ec"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/2",
+      "contentHash": "42a2a4e4d1fcb539a8806c96c0234fa4a1c80fe9ecf16812e02fa7f516e29d76"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/3",
+      "contentHash": "ad085049a206d04c58175c68ec832604dfa1094df497800f41036d2153877573"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/4",
+      "contentHash": "117c3967295b5b28b277a380931709486b9adf0efa456c4c353569c5e8d8c0ab"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/0/children/1/children/5",
+      "contentHash": "0a57cf133762befd95b58a22ffac42a9ab7e378bb6d45c1822145edd4d18e37e"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/1",
+      "contentHash": "c8fdf60c129ad48507d84016d8fe32ee5d87e03bbde6794c8c7178071c59be7f"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/2",
+      "contentHash": "36dbb31fc3912fd713012a79f27527c72ae0a1ebadaf86ba679e009bd7d5fcef"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/2/children/3",
+      "contentHash": "0d4021e58a0fa402b7f0b503d55dabd4b4f2cd1963ef91f80f4cdce3a8a1febd"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/3/children/3",
+      "contentHash": "988160ef4c3d19641dc645aa3f9595073e1cf74877b6c4754ef3c606f487a8b9"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/4",
+      "contentHash": "03beefaeaea4d8f7af6a6fdc18cc4a72a4e64c786f2640757afbba0f3c1635c3"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/0",
+      "contentHash": "ef1f9ef3899cf71a3a09a6d3ebb8332699d0a3ad1b06739c59b5cad4f954ecc2"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/1",
+      "contentHash": "9ef0ee0ac2c45e1acb03ff21acf4bbd1887e0e05cb05eb144ee36f0ea1fc74ca"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/13/children/4/children/2",
+      "contentHash": "e8f91575dca8a15e69b3c561e0b99f0f6981bb40cb512e17334bd2b60488b5b5"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/14",
+      "contentHash": "02bf6a86b9a33240639a812bd2be7bf2dfad271e6244a44f57f3664cdb4b94ca"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/14/children/0",
+      "contentHash": "a8eb74ae8264375b735746edb4af0e1122a193d08ee951c822431dcfa5e03c44"
+    },
+    {
+      "id": "espace-proposition:/components/0/children/0/children/14/children/1",
+      "contentHash": "06533634147050f77dc4f3ee4cd23406ada14193d4e826115f12434f5b322c06"
+    }
+  ]
+}

@@ -1,0 +1,452 @@
+{
+  "format": "sovrium.figma.page",
+  "version": 1,
+  "page": "espace-coordination-actualites",
+  "variables": [
+    "light.tokens.json",
+    "dark.tokens.json"
+  ],
+  "boards": [
+    {
+      "breakpoint": "base",
+      "width": 375,
+      "nodes": [
+        {
+          "name": "container",
+          "nodeType": "INSTANCE",
+          "sovrium": {
+            "id": "espace-coordination-actualites:/components/0",
+            "type": "container"
+          },
+          "locked": true,
+          "componentProperties": {},
+          "children": [
+            {
+              "name": "container",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "link",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "image",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "text",
+                      "nodeType": "TEXT",
+                      "characters": "Espace bénévole",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "link",
+                      "nodeType": "TEXT",
+                      "characters": "Voir le site",
+                      "children": []
+                    },
+                    {
+                      "name": "button",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "flex",
+              "nodeType": "FRAME",
+              "children": [
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    },
+                    {
+                      "name": "sidebar",
+                      "nodeType": "FRAME",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "container",
+                  "nodeType": "FRAME",
+                  "children": [
+                    {
+                      "name": "container",
+                      "nodeType": "FRAME",
+                      "sovrium": {
+                        "id": "espace-coordination-actualites:/components/0/children/0",
+                        "type": "container"
+                      },
+                      "layoutMode": "VERTICAL",
+                      "itemSpacing": 32,
+                      "children": [
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-coordination-actualites:/components/0/children/0/children/0",
+                            "type": "container"
+                          },
+                          "layoutMode": "VERTICAL",
+                          "itemSpacing": 4,
+                          "children": [
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-coordination-actualites:/components/0/children/0/children/0/children/0",
+                                "type": "text"
+                              },
+                              "characters": "actualités à publier",
+                              "children": []
+                            },
+                            {
+                              "name": "text",
+                              "nodeType": "TEXT",
+                              "sovrium": {
+                                "id": "espace-coordination-actualites:/components/0/children/0/children/0/children/1",
+                                "type": "text"
+                              },
+                              "characters": "Écris une actualité en brouillon, coche « Envoyer par email » si elle doit partir dans les boîtes mail, puis passe-la en « Publiée ». L'email ne part qu'une fois.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "alert",
+                          "nodeType": "INSTANCE",
+                          "sovrium": {
+                            "id": "espace-coordination-actualites:/components/0/children/0/children/1",
+                            "type": "alert"
+                          },
+                          "children": [
+                            {
+                              "name": "label",
+                              "nodeType": "TEXT",
+                              "characters": "Publier avec « Envoyer par email » coché envoie tout de suite une campagne à toute la liste des bénévoles. Relis le titre, le chapô et l'article avant de changer le statut.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "container",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-coordination-actualites:/components/0/children/0/children/2",
+                            "type": "container"
+                          },
+                          "layoutMode": "NONE",
+                          "itemSpacing": 8,
+                          "counterAxisAlignItems": "CENTER",
+                          "children": [
+                            {
+                              "name": "search-input",
+                              "nodeType": "FRAME",
+                              "sovrium": {
+                                "id": "espace-coordination-actualites:/components/0/children/0/children/2/children/0",
+                                "type": "search-input"
+                              },
+                              "layoutMode": "NONE",
+                              "children": []
+                            },
+                            {
+                              "name": "filter-bar",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-coordination-actualites:/components/0/children/0/children/2/children/1",
+                                "type": "filter-bar"
+                              },
+                              "children": []
+                            },
+                            {
+                              "name": "button",
+                              "nodeType": "INSTANCE",
+                              "sovrium": {
+                                "id": "espace-coordination-actualites:/components/0/children/0/children/2/children/2",
+                                "type": "button"
+                              },
+                              "componentProperties": {
+                                "variant": "outline",
+                                "size": "sm"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "table",
+                          "nodeType": "FRAME",
+                          "sovrium": {
+                            "id": "espace-coordination-actualites:/components/0/children/0/children/3",
+                            "type": "table"
+                          },
+                          "locked": true,
+                          "layoutMode": "VERTICAL",
+                          "children": [
+                            {
+                              "name": "header",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Titre",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Statut",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Publiée le",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Envoyer par email",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Envoi email",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Erreur d'envoi",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "row 1",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Sample title 1",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "draft",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Yes",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "sending",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Sample send error 1",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "row 2",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Sample title 2",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "published",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Yes",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "sent",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Sample send error 2",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "row 3",
+                              "nodeType": "FRAME",
+                              "layoutMode": "HORIZONTAL",
+                              "children": [
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Sample title 3",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "draft",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Yes",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "failed",
+                                  "children": []
+                                },
+                                {
+                                  "name": "cell",
+                                  "nodeType": "TEXT",
+                                  "characters": "Sample send error 3",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exported": [
+    {
+      "id": "espace-coordination-actualites:/components/0",
+      "contentHash": "6ba3da7721b8eed9df8fa09739f34a393b44dce1d0a224a63cd6219f57cd1c34"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0",
+      "contentHash": "54ad8013e24505001ade8c666b8f57427edc67a1e7fffb93aa0ddbce277493f6"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0/children/0",
+      "contentHash": "de9cd0c7be991ef9e122adc704cf51727050b2eb4bbe811dcc480c5f89219761"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0/children/0/children/0",
+      "contentHash": "7748f9f4bd27f05ef940fe12edee44b80220aae2482cce3ba67928ce8b3f640e"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0/children/0/children/1",
+      "contentHash": "ca2cf8b73df10635dee9db49ae60f7f5beeff59b1953004cab91f12caceba590"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0/children/1",
+      "contentHash": "67823aef99cd41631edeb96190b01a3f9eede909334d4e258934919bfce9d8dd"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0/children/2",
+      "contentHash": "c73ac8e8e706cc4a3bf2ae1eecba3e651f79f2889f44fba95f2623c00202bc1a"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0/children/2/children/0",
+      "contentHash": "132e1f912243f36603f8404e77eb4e64165b6b58c78643dfed86994190385500"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0/children/2/children/1",
+      "contentHash": "f01ca91be89900523606f845c25aebbd0e4a003bdaee85fafca8b4e1a6042064"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0/children/2/children/2",
+      "contentHash": "48e611b2856e77abbbd98c9f88ef681691ece8960188e7168509bdd1f6d1ed25"
+    },
+    {
+      "id": "espace-coordination-actualites:/components/0/children/0/children/3",
+      "contentHash": "26a99e4a884eaff288a2298cc91dffef5eb9d7f7bab69744b7aef947a5795e32"
+    }
+  ]
+}

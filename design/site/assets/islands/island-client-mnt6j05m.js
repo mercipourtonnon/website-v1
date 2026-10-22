@@ -1,0 +1,2 @@
+function Oy(e){if(typeof window>"u")return!1;return!window.dispatchEvent(new CustomEvent("sovrium:admin-navigate",{detail:{url:e},cancelable:!0}))}function Cy(e){if(typeof window>"u")return()=>{return};let n=(t)=>{let{detail:i}=t;if(!i?.url)return;t.preventDefault(),e(i.url)};return window.addEventListener("sovrium:admin-navigate",n),()=>window.removeEventListener("sovrium:admin-navigate",n)}
+export{Oy,Cy};

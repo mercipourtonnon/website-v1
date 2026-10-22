@@ -1,0 +1,20 @@
+{
+  "source": [
+    "../../tokens/dark.tokens.json"
+  ],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "build/css/",
+      "files": [
+        {
+          "destination": "variables.dark.css",
+          "format": "css/variables",
+          "options": {
+            "selector": ".dark"
+          }
+        }
+      ]
+    }
+  }
+}

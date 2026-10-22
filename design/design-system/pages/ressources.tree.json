@@ -1,0 +1,898 @@
+{
+  "format": "sovrium.design-system.page-tree",
+  "version": 1,
+  "page": "ressources",
+  "nodes": [
+    {
+      "id": "ressources:/components/0",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    },
+    {
+      "id": "ressources:/components/1",
+      "type": "container",
+      "children": [
+        {
+          "id": "ressources:/components/1/children/0",
+          "type": "container",
+          "children": [
+            {
+              "id": "ressources:/components/1/children/0/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                },
+                "align": {
+                  "value": "center"
+                }
+              },
+              "children": [
+                {
+                  "id": "ressources:/components/1/children/0/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "1.5rem"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "ressources:/components/1/children/0/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Ressources",
+                      "children": []
+                    },
+                    {
+                      "id": "ressources:/components/1/children/0/children/0/children/0/children/1",
+                      "type": "text",
+                      "content": "nos ressources",
+                      "children": []
+                    },
+                    {
+                      "id": "ressources:/components/1/children/0/children/0/children/0/children/2",
+                      "type": "text",
+                      "content": "Des numéros si tu as besoin d'aide, nos affiches, et les livres, films, podcasts, jeux et textes qui nourrissent nos ateliers.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "ressources:/components/1/children/0/children/0/children/1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "ressources:/components/1/children/0/children/0/children/1/children/0",
+                      "type": "image",
+                      "variant": "hero",
+                      "layout": {
+                        "width": {
+                          "value": "100%"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ressources:/components/1/children/1",
+          "type": "container",
+          "children": [
+            {
+              "id": "ressources:/components/1/children/1/children/0",
+              "type": "container",
+              "locked": "template",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "ressources:/components/1/children/2",
+          "type": "container",
+          "children": [
+            {
+              "id": "ressources:/components/1/children/2/children/0",
+              "type": "container",
+              "layout": {
+                "gap": {
+                  "value": "3rem"
+                }
+              },
+              "children": [
+                {
+                  "id": "ressources:/components/1/children/2/children/0/children/0",
+                  "type": "container",
+                  "layout": {
+                    "padding": {
+                      "value": "1.25rem"
+                    },
+                    "direction": {
+                      "value": "column"
+                    },
+                    "gap": {
+                      "value": "0.75rem"
+                    }
+                  },
+                  "responsive": {
+                    "lg": {
+                      "padding": {
+                        "value": "0rem"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "ressources:/components/1/children/2/children/0/children/0/children/0",
+                      "type": "text",
+                      "content": "Sur cette page",
+                      "children": []
+                    },
+                    {
+                      "id": "ressources:/components/1/children/2/children/0/children/0/children/1",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "0.25rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/0/children/1/children/0",
+                          "type": "link",
+                          "content": "Besoin d'aide maintenant ?",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/0/children/1/children/1",
+                          "type": "link",
+                          "content": "Nos supports",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/0/children/1/children/2",
+                          "type": "link",
+                          "content": "Nos incontournables",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/0/children/1/children/3",
+                          "type": "link",
+                          "content": "Lire, regarder, écouter",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/0/children/1/children/4",
+                          "type": "link",
+                          "content": "Jouer et pratiquer",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/0/children/1/children/5",
+                          "type": "link",
+                          "content": "Enfants et parents",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/0/children/1/children/6",
+                          "type": "link",
+                          "content": "Textes et recherche",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "ressources:/components/1/children/2/children/0/children/1",
+                  "type": "container",
+                  "layout": {
+                    "direction": {
+                      "value": "column"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "ressources:/components/1/children/2/children/0/children/1/children/0",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/0",
+                          "type": "text",
+                          "content": "nos supports",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/1",
+                          "type": "text",
+                          "content": "Affiches et visuels à imprimer, afficher et partager, en libre accès — ils sont faits pour circuler.",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/2",
+                          "type": "container",
+                          "layout": {
+                            "gap": {
+                              "value": "1.5rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/2/children/0",
+                              "type": "container",
+                              "locked": "template",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/2/children/1",
+                              "type": "container",
+                              "layout": {
+                                "align": {
+                                  "value": "center"
+                                },
+                                "gap": {
+                                  "value": "0.75rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/2/children/1/children/0",
+                                  "type": "icon",
+                                  "children": []
+                                },
+                                {
+                                  "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/2/children/1/children/1",
+                                  "type": "text",
+                                  "children": [
+                                    {
+                                      "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/2/children/1/children/1/children/0",
+                                      "type": "text",
+                                      "content": "En préparation : ",
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/2/children/1/children/1/children/1",
+                                      "type": "text",
+                                      "content": "le flyer RÈGLES, puis le kit pédagogique libre.",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/3",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/3/children/0",
+                              "type": "text",
+                              "content": "Besoin d'un autre format ou de supports imprimés ? ",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/3/children/1",
+                              "type": "link",
+                              "content": "Écris-nous",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/0/children/3/children/2",
+                              "type": "text",
+                              "content": ".",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ressources:/components/1/children/2/children/0/children/1/children/1",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/1/children/0",
+                          "type": "text",
+                          "content": "nos incontournables",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/1/children/1",
+                          "type": "text",
+                          "content": "Pour commencer : une vidéo, un podcast, un jeu, des livres et la loi — ce qu'on recommande d'abord. Tu les retrouves aussi dans leur rubrique.",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/1/children/2",
+                          "type": "list",
+                          "layout": {
+                            "padding": {
+                              "value": "0rem"
+                            },
+                            "direction": {
+                              "value": "column"
+                            }
+                          },
+                          "locked": "island",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ressources:/components/1/children/2/children/0/children/1/children/2",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "2rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/0",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/0/children/0",
+                              "type": "text",
+                              "content": "lire, regarder, écouter",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/0/children/1",
+                              "type": "text",
+                              "content": "Les livres, les films et les podcasts qui nourrissent nos ateliers — et nos conversations.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/1/children/0",
+                              "type": "text",
+                              "content": "lire",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/1/children/1",
+                              "type": "list",
+                              "layout": {
+                                "padding": {
+                                  "value": "0rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                }
+                              },
+                              "locked": "island",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/2",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/2/children/0",
+                              "type": "text",
+                              "content": "regarder",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/2/children/1",
+                              "type": "list",
+                              "layout": {
+                                "padding": {
+                                  "value": "0rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                }
+                              },
+                              "locked": "island",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/3",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/3/children/0",
+                              "type": "text",
+                              "content": "écouter",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/2/children/3/children/1",
+                              "type": "list",
+                              "layout": {
+                                "padding": {
+                                  "value": "0rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                }
+                              },
+                              "locked": "island",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ressources:/components/1/children/2/children/0/children/1/children/3",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "2rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/3/children/0",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/3/children/0/children/0",
+                              "type": "text",
+                              "content": "jouer et pratiquer",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/3/children/0/children/1",
+                              "type": "text",
+                              "content": "Des jeux et des outils pour s'exercer à demander, à dire non et à l'entendre — et les pratiques dont nos exercices s'inspirent.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/3/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/3/children/1/children/0",
+                              "type": "text",
+                              "content": "jouer",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/3/children/1/children/1",
+                              "type": "list",
+                              "layout": {
+                                "padding": {
+                                  "value": "0rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                }
+                              },
+                              "locked": "island",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/3/children/2",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/3/children/2/children/0",
+                              "type": "text",
+                              "content": "pratiques voisines",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/3/children/2/children/1",
+                              "type": "list",
+                              "layout": {
+                                "padding": {
+                                  "value": "0rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                }
+                              },
+                              "locked": "island",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ressources:/components/1/children/2/children/0/children/1/children/4",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/4/children/0",
+                          "type": "text",
+                          "content": "enfants et parents",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/4/children/1",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/4/children/1/children/0",
+                              "type": "text",
+                              "content": "Pour parler du consentement dès le plus jeune âge, à la maison ou à l'école. Nos ateliers sont réservés aux adultes pour l'instant — ",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/4/children/1/children/1",
+                              "type": "link",
+                              "content": "voir pour qui",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/4/children/1/children/2",
+                              "type": "text",
+                              "content": ".",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/4/children/2",
+                          "type": "list",
+                          "layout": {
+                            "padding": {
+                              "value": "0rem"
+                            },
+                            "direction": {
+                              "value": "column"
+                            }
+                          },
+                          "locked": "island",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ressources:/components/1/children/2/children/0/children/1/children/5",
+                      "type": "container",
+                      "layout": {
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "2rem"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/5/children/0",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/5/children/0/children/0",
+                              "type": "text",
+                              "content": "textes et recherche",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/5/children/0/children/1",
+                              "type": "text",
+                              "content": "La loi, les études et les institutions sur lesquelles on s'appuie, et les associations vers qui on oriente.",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/5/children/1",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/5/children/1/children/0",
+                              "type": "text",
+                              "content": "recherche",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/5/children/1/children/1",
+                              "type": "list",
+                              "layout": {
+                                "padding": {
+                                  "value": "0rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                }
+                              },
+                              "locked": "island",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/5/children/2",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "0.75rem"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/5/children/2/children/0",
+                              "type": "text",
+                              "content": "institutions et associations",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/5/children/2/children/1",
+                              "type": "list",
+                              "layout": {
+                                "padding": {
+                                  "value": "0rem"
+                                },
+                                "direction": {
+                                  "value": "column"
+                                }
+                              },
+                              "locked": "island",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ressources:/components/1/children/2/children/0/children/1/children/6",
+                      "type": "container",
+                      "layout": {
+                        "padding": {
+                          "value": "2rem"
+                        },
+                        "direction": {
+                          "value": "column"
+                        },
+                        "gap": {
+                          "value": "1.5rem"
+                        }
+                      },
+                      "responsive": {
+                        "md": {
+                          "padding": {
+                            "value": "3rem"
+                          }
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/0",
+                          "type": "text",
+                          "content": "et maintenant ?",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/1",
+                          "type": "text",
+                          "content": "Lire, c'est un début. S'exercer à dire non et à l'entendre, ça se fait en groupe — c'est ce qu'on propose.",
+                          "children": []
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/2",
+                          "type": "container",
+                          "layout": {
+                            "direction": {
+                              "value": "column"
+                            },
+                            "gap": {
+                              "value": "1rem"
+                            }
+                          },
+                          "responsive": {
+                            "sm": {
+                              "direction": {
+                                "value": "row"
+                              },
+                              "align": {
+                                "value": "center"
+                              }
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/2/children/0",
+                              "type": "link",
+                              "layout": {
+                                "align": {
+                                  "value": "center"
+                                },
+                                "justify": {
+                                  "value": "center"
+                                },
+                                "gap": {
+                                  "value": "0.5rem"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/2/children/0/children/0",
+                                  "type": "text",
+                                  "content": "Venir à un atelier",
+                                  "children": []
+                                },
+                                {
+                                  "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/2/children/0/children/1",
+                                  "type": "icon",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/2/children/1",
+                              "type": "link",
+                              "content": "Organiser un atelier dans ta structure",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/3",
+                          "type": "text",
+                          "children": [
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/3/children/0",
+                              "type": "text",
+                              "content": "Une référence à nous proposer ? ",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/3/children/1",
+                              "type": "link",
+                              "content": "Partage-la",
+                              "children": []
+                            },
+                            {
+                              "id": "ressources:/components/1/children/2/children/0/children/1/children/6/children/3/children/2",
+                              "type": "text",
+                              "content": ".",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ressources:/components/2",
+      "type": "container",
+      "locked": "template",
+      "children": []
+    }
+  ]
+}
