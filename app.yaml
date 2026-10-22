@@ -217,9 +217,10 @@ forms:
   - $ref: ./config/forms/prix-libre-sur-place.yaml
   # Public: anyone can send an idea (embedded on /vos-idees, also at /forms/idees).
   - $ref: ./config/forms/idees.yaml
-  # CRM: add an activity (deal page, à faire) and a contact (organisation page, contacts).
+  # CRM: add an activity (deal page, à faire), a contact (organisation page, contacts) and a deal (pipeline).
   - $ref: ./config/forms/crm-nouvelle-activite.yaml
   - $ref: ./config/forms/crm-nouveau-contact.yaml
+  - $ref: ./config/forms/crm-nouvelle-affaire.yaml
 
 # Old .html URLs of the retired static export (the site before Sovrium Cloud).
 redirects:

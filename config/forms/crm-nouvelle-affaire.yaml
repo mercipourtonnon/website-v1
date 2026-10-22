@@ -1,0 +1,25 @@
+# CRM: add a deal. Embedded in the « Nouvelle affaire » dialog of
+# /espace/crm/affaires and /espace/crm/organisations/:id (which locks
+# `organisation`). A form, not a create sheet: in Sovrium 0.41 a create sheet
+# sends `owner`'s default `$currentUser` as the literal string and the save is
+# refused; the form resolves it server-side. The deal lands in « À contacter »
+# (the stage default).
+id: 9
+name: crm-nouvelle-affaire
+title: Nouvelle affaire
+access:
+  require: [gardien, admin]
+  redirectTo: /connexion
+submitTo:
+  table: crm_deals
+display:
+  submitLabel: Ajouter l'affaire
+fields:
+  - { kind: table-field, column: title, label: Affaire, required: true, placeholder: Intervention au collège Pasteur }
+  - { kind: table-field, column: type, label: Type }
+  - { kind: table-field, column: organisation, label: Organisation }
+  - { kind: table-field, column: contact, label: Contact }
+  - { kind: table-field, column: amount, label: Montant }
+  - { kind: table-field, column: expected_close, label: Échéance prévue }
+  - { kind: table-field, column: owner, label: Suivie par, helpText: 'Toi, si tu ne choisis personne.' }
+  - { kind: table-field, column: notes, label: Notes }
