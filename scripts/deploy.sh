@@ -36,5 +36,5 @@ fi
 echo "▸ Validating configuration…"
 sovrium validate app.yaml
 
-echo "▸ Deploying '$APP' to $HOST…"
+echo "▸ Deploying '$APP' to ${HOST}…"
 sovrium deploy app.yaml --host "$HOST" --app "$APP" "$@"

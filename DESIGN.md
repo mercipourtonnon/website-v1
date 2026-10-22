@@ -82,14 +82,14 @@ The Light column is the default scheme; the Dark column is what the app paints u
 | primary-fg | #FFFFFF | #FFFFFF |  |  |
 | primary-subtle | #E6E0FF | #E6E0FF |  |  |
 | primary-subtle-fg | #130077 | #130077 |  |  |
-| warning | #FFF8E6 | #FFF8E6 |  |  |
+| warning | #8F5200 | #8F5200 |  |  |
 | warning-fg | #130077 | #130077 |  |  |
-| warning-foreground | #130077 | #130077 |  |  |
+| warning-foreground | #FFFFFF | #FFFFFF |  |  |
 | warning-bg | #FFF8E6 | #FFF8E6 |  |  |
 | warning-border | #FFAF00 | #FFAF00 |  |  |
-| success | #E6F9F8 | #E6F9F8 |  |  |
+| success | #0B6E6B | #0B6E6B |  |  |
 | success-fg | #130077 | #130077 |  |  |
-| success-foreground | #130077 | #130077 |  |  |
+| success-foreground | #FFFFFF | #FFFFFF |  |  |
 | success-bg | #E6F9F8 | #E6F9F8 |  |  |
 | success-border | #12A19D | #12A19D |  |  |
 
@@ -209,7 +209,7 @@ Every component type this build ships. A row carrying a reason is NOT drawn — 
 | Type | Category | Variants | Not drawn because |
 | --- | --- | --- | --- |
 | alert | interactive | default, destructive, warning, info, success |  |
-| badge | interactive | default, secondary, destructive, outline, ghost, link |  |
+| badge | interactive | default, secondary, destructive, outline, ghost, link, success, warning, info |  |
 | button | interactive | default, destructive, outline, secondary, ghost, link, fab |  |
 | button-group | interactive |  |  |
 | link | interactive |  |  |
