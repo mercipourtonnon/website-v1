@@ -72,7 +72,7 @@ components:
                 caption: Rendez-vous
                 classes: { parts: { caption: sr-only } }
                 # phoneLayout rows drops the « Nouvelle ligne » entry and the empty
-                # message on a phone in Sovrium 0.41 (issue pending); scroll keeps both (remove once fixed).
+                # message on a phone in Sovrium 0.41 (sovrium/sovrium#436); scroll keeps both (remove once fixed).
                 phoneLayout: scroll
                 dataSource:
                   bindTo: espace-coordination-agenda-events-1
@@ -141,7 +141,7 @@ components:
                 caption: Besoins
                 classes: { parts: { caption: sr-only } }
                 # phoneLayout rows drops the « Nouvelle ligne » entry and the empty
-                # message on a phone in Sovrium 0.41 (issue pending); scroll keeps both (remove once fixed).
+                # message on a phone in Sovrium 0.41 (sovrium/sovrium#436); scroll keeps both (remove once fixed).
                 phoneLayout: scroll
                 dataSource:
                   bindTo: espace-coordination-agenda-event_needs-2
