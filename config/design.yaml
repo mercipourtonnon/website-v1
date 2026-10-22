@@ -52,8 +52,9 @@ colors:
   # Status roles. The bare `warning` / `success` are the INK: grid cellStyle
   # tones write the value in `text-warning` / `text-success` and status dots
   # fill with `bg-*`, so they are the encre tokens (a light tint here made the
-  # coordination grids' status chips invisible). Tinted chips and alerts use
-  # the `-bg` / `-fg` / `-border` trio.
+  # coordination grids' status chips invisible; with the default palette the
+  # tones draw no colour at all in Sovrium 0.41, sovrium/sovrium#438). Tinted
+  # chips and alerts use the `-bg` / `-fg` / `-border` trio.
   warning: '#8F5200' # orange-ink — 6.2:1 on white
   warning-fg: '#130077'
   warning-foreground: '#FFFFFF' # text on a solid warning — 6.2:1
@@ -118,7 +119,7 @@ elevation:
 # only uses it for prose bullets (mentions légales, proposal checklist), so
 # it keeps the plain list row it had before: a bullet, body size, ink colour
 # (classes merged over the recipe; `replace: true` is not honoured on item in
-# Sovrium 0.41).
+# Sovrium 0.41, sovrium/sovrium#437).
 components:
   item:
     parts:
