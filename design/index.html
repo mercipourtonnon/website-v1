@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merci pour ton non</title>
+<meta name="description" content="Le design system et les pages publiques du site Merci pour ton non, exportés depuis la configuration Sovrium.">
+<link rel="icon" href="pages/favicon/favicon-32x32.png">
+<link rel="stylesheet" href="design-system/css/theme.css">
+<link rel="stylesheet" href="design-system/css/brand-fonts.css">
+<style>
+  :root {
+    --ink: var(--bleu-fonce, #130077);
+    --ink-soft: var(--bleu-fonce-70, rgba(19, 0, 119, 0.7));
+    --page: #ffffff;
+    --tint: var(--bleu-fonce-light, #E6E0FF);
+    --line: rgba(19, 0, 119, 0.12);
+    --card: #ffffff;
+    --font-title: "Bely Display", "Archivo Black", cursive;
+    --font-body: "Neue Machina", "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #F3F0FF;
+      --ink-soft: rgba(243, 240, 255, 0.72);
+      --page: #0C004F;
+      --tint: #1C0A86;
+      --line: rgba(243, 240, 255, 0.16);
+      --card: #130077;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #F3F0FF;
+    --ink-soft: rgba(243, 240, 255, 0.72);
+    --page: #0C004F;
+    --tint: #1C0A86;
+    --line: rgba(243, 240, 255, 0.16);
+    --card: #130077;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid var(--mauve, #7B01FE); outline-offset: 3px; border-radius: 6px; }
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 768px) { .wrap { padding: 0 32px; } }
+
+  header { padding: 48px 0 32px; }
+  .logo { display: block; width: 180px; height: auto; margin: 0 0 32px; background: #fff; border-radius: 16px; padding: 12px; }
+  .overline {
+    font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--pourpre, #F5004F); margin: 0 0 8px;
+  }
+  h1, h2 {
+    font-family: var(--font-title); font-weight: normal; text-transform: lowercase;
+    letter-spacing: 0.05em; margin: 0;
+  }
+  h1 { font-size: 2.375rem; line-height: 1.1; }
+  @media (min-width: 768px) { h1 { font-size: 3.25rem; line-height: 1; } }
+  h2 { font-size: 1.75rem; line-height: 1.15; margin-bottom: 8px; }
+  .lead { font-size: 1.25rem; line-height: 1.6; color: var(--ink-soft); max-width: 44rem; margin: 16px 0 0; }
+
+  .stripe { display: flex; height: 6px; border-radius: 3px; overflow: hidden; margin: 32px 0 0; max-width: 16rem; }
+  .stripe span { flex: 1; }
+
+  section { padding: 32px 0; border-top: 1px solid var(--line); }
+  .section-intro { color: var(--ink-soft); margin: 0 0 24px; max-width: 44rem; }
+
+  .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .card {
+    display: flex; flex-direction: column; gap: 4px;
+    padding: 20px; border: 1px solid var(--line); border-radius: 16px;
+    background: var(--card); text-decoration: none;
+    transition: border-color 160ms ease, transform 160ms ease;
+  }
+  .card:hover { border-color: var(--accent-c, var(--mauve, #7B01FE)); transform: translateY(-2px); }
+  .card strong { font-weight: 800; font-size: 1.0625rem; line-height: 1.4; }
+  .card span { font-size: 0.9375rem; line-height: 1.6; color: var(--ink-soft); }
+  .card code { font-size: 0.8125rem; color: var(--ink-soft); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .card::before {
+    content: ""; display: block; width: 28px; height: 4px; border-radius: 2px;
+    background: var(--accent-c, var(--mauve, #7B01FE)); margin-bottom: 8px;
+  }
+  .c-pourpre { --accent-c: var(--pourpre, #F5004F); }
+  .c-orange { --accent-c: var(--orange, #FFAF00); }
+  .c-mauve { --accent-c: var(--mauve, #7B01FE); }
+  .c-cyan { --accent-c: var(--cyan, #12A19D); }
+
+  .note {
+    background: var(--tint); border-radius: 16px; padding: 20px; font-size: 0.9375rem; line-height: 1.6;
+  }
+  .note ul { margin: 8px 0 0; padding-left: 20px; }
+  footer { padding: 32px 0 48px; font-size: 0.875rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="pages/logo.svg" alt="Merci pour ton non">
+    <p class="overline">Design system et pages</p>
+    <h1>Le site, tel qu'il est construit</h1>
+    <p class="lead">Tout ce qui fait l'identité de Merci pour ton non : la charte, les jetons de design, la bibliothèque de composants et les pages publiques du site, exportées depuis la configuration Sovrium.</p>
+    <div class="stripe" aria-hidden="true">
+      <span style="background: var(--pourpre, #F5004F)"></span>
+      <span style="background: var(--orange, #FFAF00)"></span>
+      <span style="background: var(--mauve, #7B01FE)"></span>
+      <span style="background: var(--cyan, #12A19D)"></span>
+    </div>
+  </header>
+
+  <section aria-labelledby="ds">
+    <h2 id="ds">Design system</h2>
+    <p class="section-intro">La charte de marque (principes, voix, couleurs, typographie) et les composants dessinés avec nos jetons, en clair et en sombre.</p>
+    <div class="grid">
+      <a class="card c-pourpre" href="design-system/components/index.html">
+        <strong>Bibliothèque de composants</strong>
+        <span>Chaque type de composant, rendu avec nos couleurs, en mode clair et sombre.</span>
+        <code>design-system/components/</code>
+      </a>
+      <a class="card c-orange" href="design-system/DESIGN.md">
+        <strong>Charte de marque</strong>
+        <span>Principes, logo, voix, couleurs et leurs rôles, échelle typographique.</span>
+        <code>DESIGN.md</code>
+      </a>
+      <a class="card c-mauve" href="design-system/tokens/base.tokens.json">
+        <strong>Jetons, mode clair</strong>
+        <span>Les valeurs au format DTCG, pour les outils de design.</span>
+        <code>tokens/base.tokens.json</code>
+      </a>
+      <a class="card c-cyan" href="design-system/tokens.dark.json">
+        <strong>Jetons, mode sombre</strong>
+        <span>La palette sombre complète, au format DTCG.</span>
+        <code>tokens.dark.json</code>
+      </a>
+      <a class="card c-pourpre" href="design-system/css/theme.css">
+        <strong>Thème CSS</strong>
+        <span>Les variables de couleur et de rayon, prêtes à brancher.</span>
+        <code>css/theme.css</code>
+      </a>
+      <a class="card c-orange" href="design-system/llms.txt">
+        <strong>Index pour les agents</strong>
+        <span>Le point d'entrée à lire en premier pour une IA.</span>
+        <code>llms.txt</code>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="pages">
+    <h2 id="pages">Pages du site</h2>
+    <p class="section-intro">Les pages publiques, rendues en HTML statique avec leurs images et leurs polices.</p>
+    <div class="grid">
+      <a class="card c-pourpre" href="pages/index.html"><strong>Accueil</strong><span>La porte d'entrée : qui on est, nos ateliers, comment nous rejoindre.</span><code>/</code></a>
+      <a class="card c-orange" href="pages/nos-ateliers.html"><strong>Nos ateliers</strong><span>Les ateliers de consentement gratuits à Strasbourg.</span><code>/nos-ateliers</code></a>
+      <a class="card c-mauve" href="pages/nos-stands.html"><strong>Nos stands</strong><span>Notre stand de sensibilisation, en festival, en soirée ou en événement associatif.</span><code>/nos-stands</code></a>
+      <a class="card c-cyan" href="pages/nos-interventions.html"><strong>Nos interventions</strong><span>Ce qu'on propose aux associations, aux petites structures et aux entreprises.</span><code>/nos-interventions</code></a>
+      <a class="card c-pourpre" href="pages/notre-mission.html"><strong>Notre mission</strong><span>Pourquoi l'association existe, et l'équipe qui la fait vivre.</span><code>/notre-mission</code></a>
+      <a class="card c-orange" href="pages/le-consentement.html"><strong>Le consentement</strong><span>Notre vision du consentement et les notions partagées en atelier.</span><code>/le-consentement</code></a>
+      <a class="card c-mauve" href="pages/ressources.html"><strong>Ressources</strong><span>Numéros d'aide, nos affiches, et des livres, films, podcasts et jeux pour aller plus loin.</span><code>/ressources</code></a>
+      <a class="card c-cyan" href="pages/devenir-benevole.html"><strong>Devenir bénévole</strong><span>Comment rejoindre l'équipe et ce qu'on y fait ensemble.</span><code>/devenir-benevole</code></a>
+      <a class="card c-pourpre" href="pages/vos-idees.html"><strong>Vos idées</strong><span>Le formulaire pour proposer une idée à l'association.</span><code>/vos-idees</code></a>
+      <a class="card c-orange" href="pages/newsletter.html"><strong>Newsletter</strong><span>L'inscription à la lettre d'information.</span><code>/newsletter</code></a>
+      <a class="card c-mauve" href="pages/mentions-legales.html"><strong>Mentions légales</strong><span>L'éditeur du site et les informations légales de l'association.</span><code>/mentions-legales</code></a>
+      <a class="card c-cyan" href="pages/connexion.html"><strong>Connexion</strong><span>L'entrée de l'espace bénévole.</span><code>/connexion</code></a>
+      <a class="card c-pourpre" href="pages/inscription.html"><strong>Inscription bénévole</strong><span>La création de compte pour rejoindre l'équipe.</span><code>/inscription</code></a>
+      <a class="card c-orange" href="pages/accept-invitation.html"><strong>Invitation</strong><span>La page d'acceptation d'invitation, ici dans son état « lien indisponible ».</span><code>/accept-invitation</code></a>
+    </div>
+  </section>
+
+  <section aria-labelledby="absent">
+    <h2 id="absent">Ce qui n'est pas ici</h2>
+    <div class="note">
+      Ces pages ne peuvent pas être rendues en statique :
+      <ul>
+        <li><strong>L'espace bénévole</strong> (<code>/espace/…</code>, 20 pages) : réservé aux membres connecté·es, et construit à partir des données de l'association.</li>
+        <li><strong>La fiche d'un atelier</strong> (<code>/ateliers/:slug</code>) : une page par atelier, générée depuis la base de données.</li>
+      </ul>
+      Les formulaires et la connexion ne fonctionnent pas dans cet aperçu : ils ont besoin du serveur.
+    </div>
+  </section>
+
+  <footer>Exporté depuis la configuration Sovrium 0.40 avec <code>scripts/export-design.sh</code>.</footer>
+</div>
+</body>
+</html>

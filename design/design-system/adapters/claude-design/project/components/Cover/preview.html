@@ -1,0 +1,19 @@
+<!-- @dsCard height=320 -->
+<div id="root" style="position:relative;width:960px;height:320px;overflow:hidden;font-family:var(--font-sans, system-ui, sans-serif);color:var(--foreground);background:var(--background)">
+  <svg xmlns="http://www.w3.org/2000/svg" width="960" height="112" viewBox="0 0 960 112" style="position:absolute;top:0;left:0;display:block" role="img" aria-label="mercipourtonnon">
+    <!--
+      blocks: primary, pourpre, pourpre-hover, foreground
+      arrangement: top band; the blocks one full-width band 112 px tall, the primary over five eighths of it, the name beneath it
+      pattern: halving steps along the band, one half then two quarters of the rest
+      scales: 960 x 112 band in a 320 px card; widths 600, 180, 90 and 90; name 64 px on 1 line(s), inset 32
+    -->
+    <rect x="0" y="0" width="600" height="112" style="fill:var(--primary)"/>
+    <rect x="600" y="0" width="180" height="112" style="fill:var(--pourpre)"/>
+    <rect x="780" y="0" width="90" height="112" style="fill:var(--pourpre-hover)"/>
+    <rect x="870" y="0" width="90" height="112" style="fill:var(--foreground)"/>
+  </svg>
+  <div style="position:absolute;left:32px;bottom:32px;max-width:896px">
+    <p style="margin:0;font-size:64px;line-height:0.92;font-weight:600;letter-spacing:-0.02em">mercipourtonnon</p>
+    <p style="margin:8px 0 0;font-size:13px;line-height:20px;color:var(--muted-foreground);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">The design system of mercipourtonnon, exported from its Sovrium config.</p>
+  </div>
+</div>

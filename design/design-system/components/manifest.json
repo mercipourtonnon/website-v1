@@ -1,0 +1,1943 @@
+{
+  "index": "components/index.html",
+  "stylesheet": "components/kit.css",
+  "types": [
+    {
+      "type": "alert",
+      "category": "interactive",
+      "purpose": "A message the reader must see before going on, set in an alert: what changed, what it costs, what to do.",
+      "slots": [
+        "alert",
+        "alert-title",
+        "alert-description"
+      ],
+      "variants": [
+        "default",
+        "destructive",
+        "warning",
+        "info",
+        "success"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/alert.html"
+    },
+    {
+      "type": "badge",
+      "category": "interactive",
+      "purpose": "A Badge: a short status word pinned to a thing, never a sentence.",
+      "slots": [
+        "badge"
+      ],
+      "variants": [
+        "default",
+        "secondary",
+        "destructive",
+        "outline",
+        "ghost",
+        "link",
+        "success",
+        "warning",
+        "info"
+      ],
+      "guidance": {
+        "do": [
+          "Give it the two colours as token names or as literals — hex, `rgb()`, `oklch()`, `white`, `black` — and it reports the contrast ratio with its grade."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/badge.html"
+    },
+    {
+      "type": "button",
+      "category": "interactive",
+      "purpose": "One action, stated as a verb. A link when href is set, a button otherwise.",
+      "slots": [
+        "button"
+      ],
+      "variants": [
+        "default",
+        "destructive",
+        "outline",
+        "secondary",
+        "ghost",
+        "link",
+        "fab"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "A button has no form, so its `onSuccess.type` can only be `navigate`, and its `onError` only a `toast`; anything else is refused when the configuration is read.",
+          "It applies to a `button` placed on a record of a table — in a list's row template, or in a single-record container or a page bound to one record — and is refused at startup outside any record binding; the same pair is accepted by a button field and by a table's row actions.",
+          "The record must be a row of a declared table: a `disabledWhen` on a button or row action whose rows come from a `system` source or a `collection` page, one in the page `layout`, and one inside a template placed from `app.components` would never be judged, so each is refused at startup too.",
+          "`disabledReason`, which accepts `$record.<field>` and a `$t:` key, shows in a tooltip on hover and on focus and is announced as the button's description; without it the button is disabled with no explanation, and a `disabledReason` without `disabledWhen` is refused.",
+          "An automation a disabled control would start is refused with 409 `ACTION_DISABLED` and the reason when the press names its record; a hidden one answers 404, as an absent one does.",
+          "It is refused at startup anywhere else.",
+          "What a control cannot do is refused rather than ignored.",
+          "A button, a table row action or a menu item has no form, so its `onSuccess.type` can only be `navigate`, and the keys that describe a form — `preserveFields`, `title`, `message`, `actions`, `showSummary`, `redirect` — are refused there.",
+          "An `onSuccess.navigate` naming another site (`https://…`) is refused on every control — a button, a row action, a menu item, an endpoint form, a file upload and a form alike — because an answered action moves the reader within the app; a link sends them elsewhere."
+        ]
+      },
+      "renders": true,
+      "page": "components/button.html"
+    },
+    {
+      "type": "button-group",
+      "category": "interactive",
+      "purpose": "A Button Group: several exclusive actions of equal weight, joined so they read as one control.",
+      "slots": [
+        "button"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/button-group.html"
+    },
+    {
+      "type": "link",
+      "category": "interactive",
+      "purpose": "Navigation inside a run of text, underlined so it reads as a link at a glance.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "The two keys are useless apart and are refused apart at startup, as is a comparison between two literals — it answers the same on every render, so either every item of the set is current or none is."
+        ]
+      },
+      "renders": true,
+      "page": "components/link.html"
+    },
+    {
+      "type": "theme-toggle",
+      "category": "interactive",
+      "purpose": "The one control that flips the colour scheme and remembers the choice.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/theme-toggle.html"
+    },
+    {
+      "type": "calendar",
+      "category": "form-controls",
+      "purpose": "A calendar: a month of days to pick one date, a range, or several, inline on the page.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "It was named `calendar`; a config still writing `type: calendar` is refused with a message naming `event-calendar`, and renaming the `type` is the whole migration.",
+          "An event takes one colour, from one option, so `colorField` must name a `single-select`: a `multi-select` is refused when the config is read, naming the field."
+        ]
+      },
+      "renders": true,
+      "page": "components/calendar.html"
+    },
+    {
+      "type": "checkbox",
+      "category": "form-controls",
+      "purpose": "A yes or no the reader sets in a checkbox, with room for several in a list.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "usage": "Use `switch` when the change takes effect immediately, and `checkbox` when it takes effect on submit — the two look similar and read very differently to someone deciding whether to press Save.",
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/checkbox.html"
+    },
+    {
+      "type": "code-editor",
+      "category": "form-controls",
+      "purpose": "Source text the reader edits, highlighted by language and indented to your width.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "`maxLines` must not be below it: the two bound the same box from opposite sides, so an inverted pair is refused at boot."
+        ]
+      },
+      "renders": true,
+      "page": "components/code-editor.html"
+    },
+    {
+      "type": "combobox",
+      "category": "form-controls",
+      "purpose": "One choice found by typing into a combobox, from a list that narrows with each keystroke.",
+      "slots": [
+        "native-select-wrapper",
+        "native-select",
+        "native-select-option",
+        "native-select-icon"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "`chips` requires `multiple: true` and is refused without it, and on a `select`.",
+          "`searchable` and `native` are refused (the browser's own control is `native-select`)."
+        ]
+      },
+      "renders": true,
+      "page": "components/combobox.html"
+    },
+    {
+      "type": "date-picker",
+      "category": "form-controls",
+      "purpose": "A Date Picker: a calendar date, typed or picked, in the reader's locale.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/date-picker.html"
+    },
+    {
+      "type": "date-range-picker",
+      "category": "form-controls",
+      "purpose": "A period rather than a date: two months side by side, and presets that resolve against today.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Reach for `date-picker` with `datePickerMode: range` when you want a range in one calendar and no presets; reach for this when the period is the point — a reporting window, a stay, a billing month."
+        ],
+        "dont": [
+          "`value` takes that same notation, and a **preset name is refused there by pattern**."
+        ]
+      },
+      "renders": true,
+      "page": "components/date-range-picker.html"
+    },
+    {
+      "type": "field",
+      "category": "form-controls",
+      "purpose": "A labelled control with its help and its error, laid out the same way in every field.",
+      "slots": [
+        "field",
+        "field-label",
+        "input",
+        "field-description"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/field.html"
+    },
+    {
+      "type": "input",
+      "category": "form-controls",
+      "purpose": "A single line of text, typed by the reader into an input.",
+      "slots": [
+        "input"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "A one-time code is its own type, [`input-otp`](#input-otp); `inputType: one-time-code` is refused with a message naming it."
+        ]
+      },
+      "renders": true,
+      "page": "components/input.html"
+    },
+    {
+      "type": "input-group",
+      "category": "form-controls",
+      "purpose": "One input with a fixed prefix, suffix or action fused to its edge, in one input group.",
+      "slots": [
+        "field-label",
+        "input-group",
+        "input-group-addon",
+        "input-group-control"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/input-group.html"
+    },
+    {
+      "type": "input-otp",
+      "category": "form-controls",
+      "purpose": "A short verification code typed into an input OTP, one character per box, pasted or autofilled.",
+      "slots": [
+        "input-otp",
+        "input-otp-group",
+        "input-otp-slot"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "`inputType` is refused: an `input-otp` is always a one-time code."
+        ]
+      },
+      "renders": true,
+      "page": "components/input-otp.html"
+    },
+    {
+      "type": "label",
+      "category": "form-controls",
+      "purpose": "The label of one form control, wired to it so a click on the name focuses the control.",
+      "slots": [
+        "label",
+        "label-required"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/label.html"
+    },
+    {
+      "type": "native-select",
+      "category": "form-controls",
+      "purpose": "One choice in a native select, the browser's own dropdown, with no script to load.",
+      "slots": [
+        "native-select-wrapper",
+        "native-select",
+        "native-select-option",
+        "native-select-icon"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Keep `select` on a marketing page or a public form, where the control carries your design."
+        ],
+        "dont": [
+          "`searchable`, `searchPlaceholder` and `allowCustomValue` are refused (type-ahead is [`combobox`](#combobox)), and so is an option `icon`, which an `<option>` element cannot paint."
+        ]
+      },
+      "renders": true,
+      "page": "components/native-select.html"
+    },
+    {
+      "type": "radio-group",
+      "category": "form-controls",
+      "purpose": "One choice among a few in a radio group, all visible at once.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "usage": "Use `switch` when the change takes effect immediately, and `checkbox` when it takes effect on submit — the two look similar and read very differently to someone deciding whether to press Save.",
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/radio-group.html"
+    },
+    {
+      "type": "rating",
+      "category": "form-controls",
+      "purpose": "A row of stars that reads a rating, and writes a whole one inside a form.",
+      "slots": [
+        "rating",
+        "rating-item"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/rating.html"
+    },
+    {
+      "type": "record-picker",
+      "category": "form-controls",
+      "purpose": "One row of another table, found by typing its name and linked.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Reach for `record-picker` when the page has no such column to dispatch from — a filter bar, a panel, a step that writes somewhere else."
+        ],
+        "dont": []
+      },
+      "renders": false,
+      "reason": "Searches a table of yours and links the row it finds. This page is bound to no table — and binding it to one of yours is what the confidentiality bound forbids — so there are no candidates for it to offer. Its states, its paging and its create path are drawn as authored option sections on its own page."
+    },
+    {
+      "type": "rich-text-editor",
+      "category": "form-controls",
+      "purpose": "Formatted prose, written in place, with only the marks you allow.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "The toolbar vocabulary is closed — `bold`, `italic`, `strike`, `heading`, `list`, `ordered-list`, `code-block`, `blockquote`, `link`, `image`, `table`, `horizontal-rule` — so a typo is refused when the config is decoded rather than dropped silently at mount."
+        ]
+      },
+      "renders": true,
+      "page": "components/rich-text-editor.html"
+    },
+    {
+      "type": "select",
+      "category": "form-controls",
+      "purpose": "One choice among many in a select, folded until opened.",
+      "slots": [
+        "native-select-wrapper",
+        "native-select",
+        "native-select-option",
+        "native-select-icon"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "`searchable`, `searchPlaceholder` and `allowCustomValue` are refused on a `select`, each with a message naming `combobox`, and `native` with one naming `native-select`.",
+          "`options` and `dataSource` are **mutually exclusive** — both answer \"what are the choices\", so declaring the two together is refused at startup.",
+          "The table-backed and endpoint-backed forms are alternatives, not a pair: a binding declaring both `table` and `system` is refused at startup.",
+          "Both keys are required, and the field must be one of the three choice types; a table or field the app does not declare, or a field of another type, is refused at startup."
+        ]
+      },
+      "renders": true,
+      "page": "components/select.html"
+    },
+    {
+      "type": "signature-pad",
+      "category": "form-controls",
+      "purpose": "A well to sign in, or a typed name, stored once with the statement agreed to.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": false,
+      "reason": "A well to sign in, or a name to type, under the statement being agreed to. Pressing Sign uploads the mark and writes it onto the record the page is bound to, so the pad is a write path of its own, and a read-only console may carry none. Once signed it reads \"Signed by … on …\" from that record. See it on a data-bound page."
+    },
+    {
+      "type": "slider",
+      "category": "form-controls",
+      "purpose": "A number in a range, dragged along a slider rather than typed.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/slider.html"
+    },
+    {
+      "type": "switch",
+      "category": "form-controls",
+      "purpose": "A setting that applies as soon as its switch flips.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "usage": "Use `switch` when the change takes effect immediately, and `checkbox` when it takes effect on submit — the two look similar and read very differently to someone deciding whether to press Save.",
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/switch.html"
+    },
+    {
+      "type": "textarea",
+      "category": "form-controls",
+      "purpose": "Several lines of text in a textarea, growing with what is written.",
+      "slots": [
+        "textarea"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/textarea.html"
+    },
+    {
+      "type": "toggle",
+      "category": "form-controls",
+      "purpose": "A pressed or released toggle that holds its state.",
+      "slots": [],
+      "variants": [
+        "default",
+        "outline"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/toggle.html"
+    },
+    {
+      "type": "toggle-group",
+      "category": "form-controls",
+      "purpose": "A toggle group: a row of toggles where one, or several, stay pressed.",
+      "slots": [],
+      "variants": [
+        "default",
+        "outline"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/toggle-group.html"
+    },
+    {
+      "type": "carousel",
+      "category": "data",
+      "purpose": "A Carousel: slides on one track, moved through one at a time with arrows, dots or a swipe.",
+      "slots": [
+        "card",
+        "skeleton"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "`layout` is refused (a `carousel` is always one track), and `gridColumns` and `featured` are refused because they belong to a grid, which stays a `gallery`.",
+          "A `gallery` with `layout: carousel` is refused with a message naming `carousel`."
+        ]
+      },
+      "renders": true,
+      "page": "components/carousel.html"
+    },
+    {
+      "type": "chart",
+      "category": "data",
+      "purpose": "A Chart over rows: bars, lines, areas or a donut, one series per colour.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "A second `series` entry has nothing to draw and is refused at boot, naming `series` and `chartAggregate`."
+        ]
+      },
+      "renders": true,
+      "page": "components/chart.html"
+    },
+    {
+      "type": "event-calendar",
+      "category": "data",
+      "purpose": "Records on a month or week grid, placed by their date field.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/event-calendar.html"
+    },
+    {
+      "type": "filter-bar",
+      "category": "data",
+      "purpose": "One set of conditions, published to every data component bound to the same channel.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/filter-bar.html"
+    },
+    {
+      "type": "form",
+      "category": "data",
+      "purpose": "The fields you declare, written to the table it binds or posted to an endpoint you name.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Use a top-level `forms[]` entry when the form **takes something in**: a submission that deserves its own address, a record in the Submissions inbox, protection against spam, an opening window or a cap, its own access rule, a one-question or multi-step layout, or an automation that starts when it is submitted.",
+          "Use the page `form` component when the form **works on data already inside the app**: editing the record the page shows, posting to an endpoint of your own, or signing someone in or up."
+        ],
+        "dont": [
+          "A name the form does not draw, or one listed in two sections, is refused when the config loads."
+        ]
+      },
+      "renders": false,
+      "reason": "Renders a live submit control — over the fields you declare on it, or writing a record back to the table it binds; a preview frame may carry no write path (ADR-022 A3 clause 2)."
+    },
+    {
+      "type": "gallery",
+      "category": "data",
+      "purpose": "Records as cards with an image, in a responsive grid.",
+      "slots": [
+        "card",
+        "skeleton"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "One walkable track is its own type, [`carousel`](#carousel); `layout: carousel` is refused with a message naming it.",
+          "Any other action is refused when the config is decoded.",
+          "`layout` is refused (a `carousel` is always one track), and `gridColumns` and `featured` are refused because they belong to a grid, which stays a `gallery`.",
+          "A `gallery` with `layout: carousel` is refused with a message naming `carousel`."
+        ]
+      },
+      "renders": true,
+      "page": "components/gallery.html"
+    },
+    {
+      "type": "graph",
+      "category": "data",
+      "purpose": "Nodes in ordered columns with the edges between them: the things the system read `dataSource` names, laid out left to right by kind, so an operator can follow a path rather than look a pair up.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "usage": "Reach for it when the question is _how_ something is reached rather than _whether_ it is — a path a reader can follow with a finger, through whatever stands in the middle.",
+        "do": [
+          "Reach for a `matrix` when the answer is a lookup, and for a `chart` when the answer is a quantity: no `chartType` draws nodes and edges, because every one of them plots a value against an axis."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/graph.html"
+    },
+    {
+      "type": "kanban",
+      "category": "data",
+      "purpose": "Records as cards in columns, one column per value of a select field.",
+      "slots": [
+        "kanban-column",
+        "skeleton"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "Any other action is refused when the config is decoded — put richer behaviour on the drawer's footer actions instead.",
+          "The lane field is checked against the bound table, so a typo is refused by `sovrium validate` rather than drawing one lane per record."
+        ]
+      },
+      "renders": true,
+      "page": "components/kanban.html"
+    },
+    {
+      "type": "kpi",
+      "category": "data",
+      "purpose": "One number that matters, with its label and its movement.",
+      "slots": [
+        "card",
+        "card-header",
+        "card-description",
+        "skeleton"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/kpi.html"
+    },
+    {
+      "type": "list",
+      "category": "data",
+      "purpose": "Records as rows with a title, a subtitle and a trailing value.",
+      "slots": [
+        "skeleton"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/list.html"
+    },
+    {
+      "type": "map",
+      "category": "data",
+      "purpose": "Records placed as pins at their location, with a list twin a keyboard can use.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/map.html"
+    },
+    {
+      "type": "matrix",
+      "category": "data",
+      "purpose": "Two sets of things crossed, each intersection a glyph rather than a word: rows and columns are nodes of the graph `dataSource` names, and a cell is the edge between them.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "usage": "Reach for it when the question is _which of these reach which of those, and how strongly_ — permissions across roles, features across plans, coverage across teams.",
+        "do": [
+          "Reach for a `table` instead when the cells are values a reader needs to read word by word."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/matrix.html"
+    },
+    {
+      "type": "questionnaire",
+      "category": "data",
+      "purpose": "A questionnaire: one question per screen, answered by choosing, with a count of how many remain.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": false,
+      "reason": "Submits each answer through the form it names; a preview frame may carry no write path (ADR-022 A3 clause 2)."
+    },
+    {
+      "type": "table",
+      "category": "data",
+      "purpose": "A Data Table: the records of a table as a grid — sorting, filtering, grouping, selection, paging — or the rows you write in the config.",
+      "slots": [
+        "table-container",
+        "table",
+        "table-header",
+        "table-row",
+        "table-head",
+        "table-body",
+        "table-cell"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Use a `sheet` with `dataSource.system` and its own `recordFields`, opened with `onRowClick: { action: openSheet, component }`.",
+          "Use it for a summary grid — the latest orders on a dashboard — whose rows are edited elsewhere."
+        ],
+        "dont": [
+          "Bind it to a table or to a read endpoint with `dataSource`, or omit the binding and it draws the `tableHeaders` and `tableRows` you author; declaring both is refused.",
+          "A `toolbar` or a `search` key on a `table` is refused at load, naming that replacement, and a refresh button becomes `dataSource.refreshMode`.",
+          "**`rowExpand` and `onRowClick` cannot both be declared.** A row has one click, and two answers to what it does is a config whose halves cannot both apply — so it is refused rather than one silently winning.",
+          "A rule with neither is refused.",
+          "`tableColumns` belongs to written tables only: declared beside a `dataSource` it is refused, as `tableRows` is.",
+          "When a bulk action or a row action is refused because the reader's writes were too many, the grid shows a toast saying so and in how many seconds to retry, in the page's language, whatever `onError` declares; the rows, the selection and the buttons stay as they were.",
+          "A grid must start with at least one field column drawn, or the config is refused when it loads.",
+          "Naming the same field at two levels is refused at validation: every record in a group already shares the value that group was formed on, so a repeated level puts exactly one sub-group inside each group and partitions nothing.",
+          "The view owns the filter, the sort, the grouping and the visible fields, so a view-bound grid may not repeat them: a `dataSource.filter`, `dataSource.sort` or `dataSource.fields` beside `view` is refused when the config loads, with a message naming the view.",
+          "No page size may exceed 100, the rows per page the records API serves: a larger `pageSize` or `pageSizeOptions` entry is refused at validation, naming the number and the ceiling, rather than failing the first time a reader picks it."
+        ]
+      },
+      "renders": true,
+      "page": "components/table.html"
+    },
+    {
+      "type": "tree",
+      "category": "data",
+      "purpose": "The records of one table nested under their parents, opened branch by branch.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "A batch update is judged as if all its moves had landed, so two moves that close a loop only together are refused, and the whole batch with them."
+        ]
+      },
+      "renders": true,
+      "page": "components/tree.html"
+    },
+    {
+      "type": "aspect-ratio",
+      "category": "layout",
+      "purpose": "An aspect ratio frame: one image, video or map held at a fixed width-to-height shape, whatever the screen.",
+      "slots": [
+        "aspect-ratio",
+        "qr-code"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/aspect-ratio.html"
+    },
+    {
+      "type": "card",
+      "category": "layout",
+      "purpose": "A Card: a bounded surface for one thing, on the page background.",
+      "slots": [
+        "card"
+      ],
+      "variants": [],
+      "guidance": {
+        "usage": "Use it when one page has to show two design systems at once.",
+        "do": [],
+        "dont": [
+          "`variant: bubble` and `side` are refused on a `card`, each with a message naming `bubble`."
+        ]
+      },
+      "renders": true,
+      "page": "components/card.html"
+    },
+    {
+      "type": "container",
+      "category": "layout",
+      "purpose": "A box that gives its children padding and a width.",
+      "slots": [
+        "card"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/container.html"
+    },
+    {
+      "type": "flex",
+      "category": "layout",
+      "purpose": "Children in a row or a column, spaced by one gap.",
+      "slots": [
+        "card"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/flex.html"
+    },
+    {
+      "type": "grid",
+      "category": "layout",
+      "purpose": "Children in equal columns, collapsing to one on a narrow screen.",
+      "slots": [
+        "card"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/grid.html"
+    },
+    {
+      "type": "message-scroller",
+      "category": "layout",
+      "purpose": "A message scroller: the scroll frame of a conversation, opening at the latest turn and keeping its place.",
+      "slots": [
+        "message-scroller",
+        "marker",
+        "marker-content",
+        "message",
+        "message-content",
+        "message-header"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/message-scroller.html"
+    },
+    {
+      "type": "resizable",
+      "category": "layout",
+      "purpose": "Resizable panels: two side by side, with a draggable handle between them.",
+      "slots": [
+        "card"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "It was named `split-pane`; a config still writing `type: split-pane` is refused with a message naming `resizable`, and renaming the `type` is the whole migration."
+        ]
+      },
+      "renders": true,
+      "page": "components/resizable.html"
+    },
+    {
+      "type": "sidebar",
+      "category": "layout",
+      "purpose": "The Sidebar: the left rail of grouped navigation, with an active entry.",
+      "slots": [
+        "sidebar",
+        "sidebar-inner",
+        "card"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/sidebar.html"
+    },
+    {
+      "type": "attachment",
+      "category": "content",
+      "purpose": "An attachment chip: one file drawn by its icon or thumbnail, its name and size, and a way to open it.",
+      "slots": [
+        "attachment",
+        "attachment-media",
+        "attachment-content",
+        "attachment-title",
+        "attachment-description"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/attachment.html"
+    },
+    {
+      "type": "audio",
+      "category": "content",
+      "purpose": "An audio file with play, progress and duration.",
+      "slots": [
+        "audio"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "A `target` naming no `video` or `audio` on its page is refused at startup, unless it is built from the record (`clip-$record.id`)."
+        ]
+      },
+      "renders": true,
+      "page": "components/audio.html"
+    },
+    {
+      "type": "code",
+      "category": "content",
+      "purpose": "A Code Block: source text in a monospace frame, highlighted by language, with a copy button.",
+      "slots": [
+        "code-block",
+        "code-block-header",
+        "code-block-title",
+        "code-block-filename",
+        "code-block-actions",
+        "code-block-copy-button",
+        "code-block-content",
+        "code-block-code",
+        "code-block-line",
+        "code-block-line-content"
+      ],
+      "variants": [
+        "default",
+        "destructive"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/code.html"
+    },
+    {
+      "type": "file-preview",
+      "category": "content",
+      "purpose": "A stored file shown inline: a PDF in its viewer, an image with zoom, else a download.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": false,
+      "reason": "Shows a stored file inline: an image with zoom, a PDF in its viewer, anything else as a download. Every face is drawn from a file signed for the reader, and the only files this instance holds are in your buckets, which this console may not read. See it on a data-bound page."
+    },
+    {
+      "type": "icon",
+      "category": "content",
+      "purpose": "One glyph from the app's icon set, sized and coloured by the text around it.",
+      "slots": [
+        "icon"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/icon.html"
+    },
+    {
+      "type": "iframe",
+      "category": "content",
+      "purpose": "Another page embedded at a fixed height.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": false,
+      "reason": "Not drawn here, and this is a refusal rather than a gap: this console renders every specimen flat, in one document, because a design system inside a nested scrolling document is not one a reader can read. Drawing an iframe specimen would put the frame back. Look at the page you embedded it on."
+    },
+    {
+      "type": "image",
+      "category": "content",
+      "purpose": "A picture with its alt text, lazy unless it is above the fold.",
+      "slots": [
+        "image"
+      ],
+      "variants": [
+        "default",
+        "avatar",
+        "thumbnail",
+        "hero"
+      ],
+      "guidance": {
+        "do": [
+          "Give every image `width` and `height`: the browser then reserves its box before the file arrives and nothing below it moves — layout shift is the second of those metrics.",
+          "Give every image that carries meaning a real `alt`."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/image.html"
+    },
+    {
+      "type": "kbd",
+      "category": "content",
+      "purpose": "The keys a reader is meant to press, drawn as Kbd keycaps.",
+      "slots": [
+        "kbd-group",
+        "kbd"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/kbd.html"
+    },
+    {
+      "type": "qr-code",
+      "category": "content",
+      "purpose": "A value drawn as a scannable code.",
+      "slots": [
+        "qr-code"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Give every symbol an `aria-label`."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/qr-code.html"
+    },
+    {
+      "type": "search-input",
+      "category": "content",
+      "purpose": "Search within the page, or filter a bound list as you type.",
+      "slots": [
+        "search-input",
+        "input-group",
+        "input-group-control",
+        "input-group-addon"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "A box declaring neither, or both, is refused at load.",
+          "`scope: subscribers`, where a sibling named this box's id, was removed in 0.39 and is refused at load, naming `publishes`."
+        ]
+      },
+      "renders": true,
+      "page": "components/search-input.html"
+    },
+    {
+      "type": "text",
+      "category": "content",
+      "purpose": "Typography: a run of prose at one step of the type scale.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/text.html"
+    },
+    {
+      "type": "toc",
+      "category": "content",
+      "purpose": "The headings of the page as a list that follows the reader.",
+      "slots": [
+        "toc",
+        "toc-list",
+        "toc-link"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/toc.html"
+    },
+    {
+      "type": "video",
+      "category": "content",
+      "purpose": "A video file with a poster, play and progress.",
+      "slots": [
+        "video"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/video.html"
+    },
+    {
+      "type": "accordion",
+      "category": "display",
+      "purpose": "An Accordion: stacked sections that open one at a time.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/accordion.html"
+    },
+    {
+      "type": "avatar",
+      "category": "display",
+      "purpose": "An Avatar: a person or a thing as a small round mark — a picture, initials, or nothing at all.",
+      "slots": [
+        "avatar-group",
+        "avatar",
+        "avatar-fallback"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "`size` is `default` (32px) by default, with `sm` at 24px and `lg` at 40px — `md` is refused with a message naming `default`; `shape` is `circle` for people and `square` for a record or an organisation."
+        ]
+      },
+      "renders": true,
+      "page": "components/avatar.html"
+    },
+    {
+      "type": "bubble",
+      "category": "display",
+      "purpose": "A Bubble: the surface of one chat turn, set to its side of the thread.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/bubble.html"
+    },
+    {
+      "type": "collapsible",
+      "category": "display",
+      "purpose": "A collapsible region behind one trigger, shown or hidden in place, with no siblings to close.",
+      "slots": [
+        "collapsible",
+        "collapsible-trigger",
+        "collapsible-content"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/collapsible.html"
+    },
+    {
+      "type": "description-list",
+      "category": "display",
+      "purpose": "Pairs of a term and its detail, read down rather than across.",
+      "slots": [
+        "description-list",
+        "description-list-item",
+        "description-list-term",
+        "description-list-detail",
+        "description-list-action"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/description-list.html"
+    },
+    {
+      "type": "empty",
+      "category": "display",
+      "purpose": "An Empty state: what a view says when it has nothing to show, and what to do about it.",
+      "slots": [
+        "empty",
+        "empty-header",
+        "empty-title",
+        "empty-description"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "It was named `empty-state`; a config still writing `type: empty-state` is refused with a message naming `empty`, and renaming the `type` is the whole migration."
+        ]
+      },
+      "renders": true,
+      "page": "components/empty.html"
+    },
+    {
+      "type": "item",
+      "category": "display",
+      "purpose": "An Item: one row of a list — a leading mark, a title, a subtitle, a trailing value.",
+      "slots": [
+        "item"
+      ],
+      "variants": [
+        "default",
+        "outline",
+        "muted"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "It was named `list-item`; a config still writing `type: list-item` is refused with a message naming `item`, and renaming the `type` is the whole migration."
+        ]
+      },
+      "renders": true,
+      "page": "components/item.html"
+    },
+    {
+      "type": "marker",
+      "category": "display",
+      "purpose": "A marker line inside a thread or a list: a status, a system note, a labelled break.",
+      "slots": [
+        "marker",
+        "marker-content"
+      ],
+      "variants": [
+        "default",
+        "border",
+        "separator"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/marker.html"
+    },
+    {
+      "type": "marquee",
+      "category": "display",
+      "purpose": "A strip of logos or words that scrolls sideways.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Use it to show more items than fit on screen — a row of screenshots, a set of logos — as a demonstration rather than a static grid."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/marquee.html"
+    },
+    {
+      "type": "message",
+      "category": "display",
+      "purpose": "A message: one turn of a conversation — who said it, when, on which side — around the bubble that holds it.",
+      "slots": [
+        "message",
+        "message-avatar",
+        "avatar",
+        "avatar-fallback",
+        "message-content",
+        "message-header"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/message.html"
+    },
+    {
+      "type": "record-field",
+      "category": "display",
+      "purpose": "One field of one record, drawn read-only in its own format.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "usage": "Reach for it inside a record-bound region when the value should carry its field type's formatting — a currency as currency, a relation as a link, a status as its coloured chip.",
+        "do": [],
+        "dont": []
+      },
+      "renders": false,
+      "reason": "Draws ONE field of the record the page it sits on is bound to. This page is bound to no record — and binding it to one of yours is what the confidentiality bound forbids — so there is nothing for it to read. The field CONTROLS it draws from are in the composed form below."
+    },
+    {
+      "type": "scroll-area",
+      "category": "display",
+      "purpose": "A Scroll Area: a region that scrolls inside the page with a thin scrollbar.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/scroll-area.html"
+    },
+    {
+      "type": "stepper",
+      "category": "display",
+      "purpose": "One task split into ordered steps, each a body of its own, with a rail that shows progress.",
+      "slots": [
+        "stepper",
+        "stepper-list",
+        "stepper-item",
+        "stepper-indicator",
+        "stepper-title",
+        "stepper-description",
+        "stepper-separator",
+        "stepper-content",
+        "stepper-actions",
+        "button"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/stepper.html"
+    },
+    {
+      "type": "swatch",
+      "category": "display",
+      "purpose": "One colour drawn as a filled square with its value and its name.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Give it the token by **name** — a custom property under the name your stylesheet reads it by, such as `--primary`, `--background`, `--muted-foreground`, `--chart-1` or `--sidebar-primary`, or a step from a design ramp such as `neutral-500`.",
+          "Use it for a role token, which is redeclared per scheme."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/swatch.html"
+    },
+    {
+      "type": "tabs",
+      "category": "display",
+      "purpose": "Tabs: a short list of views, one visible at a time.",
+      "slots": [],
+      "variants": [
+        "default",
+        "line"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "**`panels` and `children` must be the same length** when both are present; a different number of each is refused at startup by name."
+        ]
+      },
+      "renders": true,
+      "page": "components/tabs.html"
+    },
+    {
+      "type": "timeline",
+      "category": "display",
+      "purpose": "Events on a line: declared in the config, or every record of a table between two dates.",
+      "slots": [
+        "timeline",
+        "timeline-item",
+        "timeline-marker",
+        "timeline-connector"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "The change is one ordinary record update, so the table's field rules, automations and webhooks apply; the bar moves at once and goes back if the update is refused.",
+          "**`children` and `dataSource` are mutually exclusive.** A timeline declaring both is refused at validation."
+        ]
+      },
+      "renders": true,
+      "page": "components/timeline.html"
+    },
+    {
+      "type": "breadcrumb",
+      "category": "navigation",
+      "purpose": "A Breadcrumb: where the reader is, as a path they can climb back up.",
+      "slots": [
+        "breadcrumb",
+        "breadcrumb-list",
+        "breadcrumb-item",
+        "breadcrumb-link",
+        "breadcrumb-separator",
+        "breadcrumb-page"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "Declaring `breadcrumbItems` and `derive` together is refused at startup — there is no defensible precedence between an authored trail and a derived one.",
+          "`home` on an enumerated trail is refused at startup, because such a trail already states its own first item.",
+          "Like `labels`, `unlinked` requires `derive` and is refused at startup without it — on an enumerated trail, leave `href` off the item instead."
+        ]
+      },
+      "renders": true,
+      "page": "components/breadcrumb.html"
+    },
+    {
+      "type": "command",
+      "category": "navigation",
+      "purpose": "A Command palette: search everything from anywhere, opened with a keyboard shortcut.",
+      "slots": [
+        "command",
+        "command-input",
+        "command-list",
+        "command-group",
+        "command-item"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "It was named `command-palette`; a config still writing `type: command-palette` is refused with a message naming `command`, and renaming the `type` is the whole migration."
+        ]
+      },
+      "renders": true,
+      "page": "components/command.html"
+    },
+    {
+      "type": "context-menu",
+      "category": "navigation",
+      "purpose": "A Context Menu of actions on the thing under the pointer, opened on right click.",
+      "slots": [
+        "context-menu-trigger"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/context-menu.html"
+    },
+    {
+      "type": "dropdown-menu",
+      "category": "navigation",
+      "purpose": "A Dropdown Menu of actions gathered behind one button, opened on click.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Give it `toggle: checked` or `toggle: unchecked` and it renders as a two-state row — label on the left, switch on the right — that a reader can flip without the menu closing."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/dropdown-menu.html"
+    },
+    {
+      "type": "menubar",
+      "category": "navigation",
+      "purpose": "A Menubar: a row of menus, as in a desktop application.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/menubar.html"
+    },
+    {
+      "type": "navigation-menu",
+      "category": "navigation",
+      "purpose": "A Navigation Menu: the top navigation of a site, with menus that open on hover.",
+      "slots": [
+        "navigation-menu",
+        "navigation-menu-link"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/navigation-menu.html"
+    },
+    {
+      "type": "pagination",
+      "category": "navigation",
+      "purpose": "Pagination: move between the pages of a long list.",
+      "slots": [
+        "pagination",
+        "pagination-content",
+        "pagination-item",
+        "pagination-link",
+        "icon",
+        "pagination-ellipsis"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/pagination.html"
+    },
+    {
+      "type": "alert-dialog",
+      "category": "overlays",
+      "purpose": "An Alert Dialog asking the reader to confirm an action that loses data.",
+      "slots": [
+        "overlay-frame",
+        "alert-dialog-overlay",
+        "alert-dialog-content",
+        "alert-dialog-header",
+        "alert-dialog-title",
+        "alert-dialog-description",
+        "alert-dialog-footer"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Use it for what cannot be undone — deleting an account or everything in a workspace — and make it something the reader knows, such as `$session.email` or `$record.name`, rather than a fixed word."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/alert-dialog.html"
+    },
+    {
+      "type": "dialog",
+      "category": "overlays",
+      "purpose": "A Dialog holding a focused task over the page, dismissed by the overlay or a button.",
+      "slots": [
+        "overlay-frame",
+        "dialog-overlay",
+        "dialog-content",
+        "dialog-header",
+        "dialog-title",
+        "dialog-description"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "`component` must name a `dialog` declared on the same page; an id no dialog carries is refused when the config loads.",
+          "**Migrating from `modal`.** The `modal` component type has been removed, and a config still naming it is refused at startup with a message pointing here."
+        ]
+      },
+      "renders": true,
+      "page": "components/dialog.html"
+    },
+    {
+      "type": "drawer",
+      "category": "overlays",
+      "purpose": "A drawer: a panel that rises from the bottom edge and is dragged down to dismiss.",
+      "slots": [
+        "overlay-frame",
+        "drawer-overlay",
+        "drawer-popup",
+        "drawer-handle",
+        "drawer-content",
+        "drawer-header",
+        "drawer-title",
+        "drawer-description"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/drawer.html"
+    },
+    {
+      "type": "hover-card",
+      "category": "overlays",
+      "purpose": "A Hover Card: a preview that opens when the pointer rests on a name.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/hover-card.html"
+    },
+    {
+      "type": "popover",
+      "category": "overlays",
+      "purpose": "A Popover: a small panel anchored to its trigger, opened on click.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/popover.html"
+    },
+    {
+      "type": "sheet",
+      "category": "overlays",
+      "purpose": "A Sheet: a panel that slides in from an edge and keeps the page visible behind it.",
+      "slots": [
+        "overlay-frame",
+        "sheet-overlay",
+        "sheet-content",
+        "sheet-header",
+        "sheet-title",
+        "sheet-description"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Give a sheet a `dataSource` and it becomes record-bound: it fetches one record, renders a control per field, and — unless you turn editing off — saves back through the record API."
+        ],
+        "dont": [
+          "A sheet bound to a system detail endpoint whose read is refused or fails says the same, without Retry: a refused read is not asked again.",
+          "`operation: create` is refused when the config is read, because a footer has no form to fill and acts on a record that already exists; put a form in a dialog instead.",
+          "A `visibleWhen.field` the sheet's table does not have is refused when the config is read.",
+          "These shapes are refused when the app boots, each because the failure would otherwise be silent:"
+        ]
+      },
+      "renders": true,
+      "page": "components/sheet.html"
+    },
+    {
+      "type": "toast",
+      "category": "overlays",
+      "purpose": "A Toast, drawn by Sonner: a short confirmation that leaves on its own.",
+      "slots": [],
+      "variants": [
+        "success",
+        "error",
+        "warning",
+        "info",
+        "loading"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/toast.html"
+    },
+    {
+      "type": "tooltip",
+      "category": "overlays",
+      "purpose": "A Tooltip: one line of help on hover or focus.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/tooltip.html"
+    },
+    {
+      "type": "progress",
+      "category": "feedback",
+      "purpose": "A Progress bar: how far a known task has run.",
+      "slots": [
+        "progress",
+        "progress-track",
+        "progress-indicator",
+        "progress-value"
+      ],
+      "variants": [
+        "bar",
+        "circle",
+        "steps"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/progress.html"
+    },
+    {
+      "type": "skeleton",
+      "category": "feedback",
+      "purpose": "A Skeleton: the shape of content that is still loading.",
+      "slots": [
+        "skeleton"
+      ],
+      "variants": [
+        "text",
+        "circular",
+        "rectangular"
+      ],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/skeleton.html"
+    },
+    {
+      "type": "spinner",
+      "category": "feedback",
+      "purpose": "A Spinner: waiting, when nothing else can be shown.",
+      "slots": [
+        "spinner"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Reach for `skeleton` rather than `spinner` when you know the shape of what is loading: a placeholder that matches the eventual layout does not make the page jump when the content lands."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/spinner.html"
+    },
+    {
+      "type": "separator",
+      "category": "structural",
+      "purpose": "A Separator: a hairline between two things that are not the same thing.",
+      "slots": [
+        "separator"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "It was named `divider`; a config still writing `type: divider` is refused with a message naming `separator`, and renaming the `type` is the whole migration."
+        ]
+      },
+      "renders": true,
+      "page": "components/separator.html"
+    },
+    {
+      "type": "spacer",
+      "category": "structural",
+      "purpose": "Empty room, sized from the spacing ladder.",
+      "slots": [
+        "spacer"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/spacer.html"
+    },
+    {
+      "type": "comments",
+      "category": "specialty",
+      "purpose": "The thread of comments on a record, with replies, sorting and a composer.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "A parent that does not exist, or that belongs to another record — top-level or not — is refused with the same `404`, and nothing is stored; a parent on the same record that is itself a reply is refused with `422`.",
+          "A config still saying `type: commentCount` is refused at startup with that instruction."
+        ]
+      },
+      "renders": false,
+      "reason": "Hydrates a comment composer — a form with a live submit control that posts a comment onto a record. A read-only console may carry no write path, so it is named here rather than drawn. It renders on your own pages."
+    },
+    {
+      "type": "field-specimen",
+      "category": "specialty",
+      "purpose": "One field type drawn in every state the console documents it in.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": false,
+      "reason": "Has no appearance of its own: it draws whatever control the fieldType you name gets, so a card here would document one field type instead of this component. The field types are all drawn, in every state, in the field catalogue."
+    },
+    {
+      "type": "file-upload",
+      "category": "specialty",
+      "purpose": "Files into a bucket, dropped or picked.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "A compact upload takes no drop zone, and `compact: true` together with `dropZone: true` is refused when the config loads."
+        ]
+      },
+      "renders": true,
+      "page": "components/file-upload.html"
+    },
+    {
+      "type": "language-switcher",
+      "category": "specialty",
+      "purpose": "Change the language of the page.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": false,
+      "reason": "Draws the languages an app declares in languages[]. This console’s own surface app declares none — it carries your design system and deliberately nothing else — so the component has no list to draw. It renders on your pages."
+    },
+    {
+      "type": "number-input",
+      "category": "specialty",
+      "purpose": "A number, typed or stepped one unit at a time.",
+      "slots": [
+        "field",
+        "field-label",
+        "input-group",
+        "input-group-addon",
+        "input-group-button",
+        "input-group-control"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [
+          "Prefer `number-input` over an `input` with `inputType: number` when the value is genuinely counted — it gives keyboard and pointer affordances a text box does not."
+        ],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/number-input.html"
+    },
+    {
+      "type": "preview",
+      "category": "specialty",
+      "purpose": "One option of one type, drawn at the value you name, so a setting can be seen rather than described.",
+      "slots": [
+        "badge"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "An option path the type does not publish is refused, naming the paths it does publish."
+        ]
+      },
+      "renders": true,
+      "page": "components/preview.html"
+    },
+    {
+      "type": "reorderable-list",
+      "category": "specialty",
+      "purpose": "Rows the reader can drag into a new order.",
+      "slots": [
+        "reorderable-list",
+        "item",
+        "reorderable-list-handle",
+        "item-content"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/reorderable-list.html"
+    },
+    {
+      "type": "specimen",
+      "category": "specialty",
+      "purpose": "One component drawn as an exhibit, framed and labelled for the catalogue.",
+      "slots": [],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": [
+          "Both are refused when the config is read, so the failure names the reason instead of silently drawing nothing."
+        ]
+      },
+      "renders": false,
+      "reason": "A frame around a drawn component and the config that produced it. It refuses to hold another one — each level would print the level below, with no bottom — so it cannot be drawn inside this page. Every card here is one."
+    },
+    {
+      "type": "time-picker",
+      "category": "specialty",
+      "purpose": "A time of day, typed or picked.",
+      "slots": [
+        "field",
+        "field-label",
+        "input-group",
+        "input-group-control",
+        "input-group-addon"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/time-picker.html"
+    },
+    {
+      "type": "ai-chat",
+      "category": "ai",
+      "purpose": "A thread with an agent declared in agents[].",
+      "slots": [
+        "message-scroller",
+        "input-group",
+        "input-group-control",
+        "input-group-addon",
+        "input-group-button"
+      ],
+      "variants": [],
+      "guidance": {
+        "do": [],
+        "dont": []
+      },
+      "renders": true,
+      "page": "components/ai-chat.html"
+    }
+  ]
+}

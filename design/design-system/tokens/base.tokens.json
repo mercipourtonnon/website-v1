@@ -1,0 +1,1766 @@
+{
+  "$description": "The design system of mercipourtonnon, as it actually ships.",
+  "color": {
+    "background": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "foreground": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.145,
+          0,
+          0
+        ]
+      }
+    },
+    "card": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "card-foreground": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.145,
+          0,
+          0
+        ]
+      }
+    },
+    "popover": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "popover-foreground": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.145,
+          0,
+          0
+        ]
+      }
+    },
+    "primary": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451,
+          0,
+          0.466667
+        ],
+        "hex": "#130077"
+      }
+    },
+    "primary-foreground": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "hex": "#FFFFFF"
+      }
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.97,
+          0,
+          0
+        ]
+      }
+    },
+    "secondary-foreground": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.205,
+          0,
+          0
+        ]
+      }
+    },
+    "muted": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.97,
+          0,
+          0
+        ]
+      }
+    },
+    "muted-foreground": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.52,
+          0,
+          0
+        ]
+      }
+    },
+    "accent": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.97,
+          0,
+          0
+        ]
+      }
+    },
+    "accent-foreground": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.205,
+          0,
+          0
+        ]
+      }
+    },
+    "destructive": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.5,
+          0.245,
+          27.325
+        ]
+      }
+    },
+    "border": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.922,
+          0,
+          0
+        ]
+      }
+    },
+    "input": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.65,
+          0,
+          0
+        ]
+      }
+    },
+    "ring": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "oklch",
+        "components": [
+          0.708,
+          0,
+          0
+        ]
+      }
+    },
+    "pourpre": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.960784,
+          0,
+          0.309804
+        ],
+        "hex": "#F5004F"
+      },
+      "$description": "Émotion, authenticité, découverte. Témoignages, sections émotionnelles. Jamais en fond de grande section : utiliser pourpre-light."
+    },
+    "pourpre-hover": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.819608,
+          0,
+          0.258824
+        ],
+        "hex": "#D10042"
+      }
+    },
+    "pourpre-light": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.941176,
+          0.960784
+        ],
+        "hex": "#FFF0F5"
+      }
+    },
+    "pourpre-lighter": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.878431,
+          0.917647
+        ],
+        "hex": "#FFE0EA"
+      }
+    },
+    "orange": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.686275,
+          0
+        ],
+        "hex": "#FFAF00"
+      },
+      "$description": "Action, engagement, chaleur. Boutons d'inscription, CTAs principaux, liens actifs — en fond, toujours avec un texte bleu-fonce (8,8:1), jamais blanc (1,8:1). Jamais pour une action contradictoire (annuler ET confirmer)."
+    },
+    "orange-hover": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.901961,
+          0.619608,
+          0
+        ],
+        "hex": "#E69E00"
+      }
+    },
+    "orange-light": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.972549,
+          0.901961
+        ],
+        "hex": "#FFF8E6"
+      }
+    },
+    "orange-lighter": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.941176,
+          0.819608
+        ],
+        "hex": "#FFF0D1"
+      }
+    },
+    "orange-ink": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.560784,
+          0.321569,
+          0
+        ],
+        "hex": "#8F5200"
+      },
+      "$description": "Version texte de l'orange : petits libellés, liens et sur-titres orange sur fond blanc ou clair. L'orange vif n'est jamais du texte (1,8:1)."
+    },
+    "orange-vif": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.439216,
+          0
+        ],
+        "hex": "#FF7000"
+      },
+      "$description": "Variante chaude, en opposition au violet. Accent ponctuel uniquement."
+    },
+    "orange-vif-light": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.956863,
+          0.901961
+        ],
+        "hex": "#FFF4E6"
+      }
+    },
+    "mauve": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.482353,
+          0.003922,
+          0.996078
+        ],
+        "hex": "#7B01FE"
+      },
+      "$description": "Exploration, apprentissage, créativité. Sections pédagogiques, titres secondaires, invitations à la réflexion."
+    },
+    "mauve-hover": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.415686,
+          0.003922,
+          0.858824
+        ],
+        "hex": "#6A01DB"
+      }
+    },
+    "mauve-light": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.952941,
+          0.901961,
+          1
+        ],
+        "hex": "#F3E6FF"
+      }
+    },
+    "mauve-lighter": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.901961,
+          0.819608,
+          1
+        ],
+        "hex": "#E6D1FF"
+      }
+    },
+    "cyan": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.070588,
+          0.631373,
+          0.615686
+        ],
+        "hex": "#12A19D"
+      },
+      "$description": "Validation, calme, ressources. Confirmations, ressources, sections factuelles. Pas en petit texte sur fond blanc (contraste) : utiliser cyan-ink."
+    },
+    "cyan-hover": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.058824,
+          0.541176,
+          0.529412
+        ],
+        "hex": "#0F8A87"
+      }
+    },
+    "cyan-light": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.901961,
+          0.976471,
+          0.972549
+        ],
+        "hex": "#E6F9F8"
+      }
+    },
+    "cyan-lighter": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.819608,
+          0.94902,
+          0.941176
+        ],
+        "hex": "#D1F2F0"
+      }
+    },
+    "cyan-ink": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.043137,
+          0.431373,
+          0.419608
+        ],
+        "hex": "#0B6E6B"
+      },
+      "$description": "Version texte du cyan : libellés, liens et titres de cartes cyan sur fond blanc ou cyan-light."
+    },
+    "bleu-fonce": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451,
+          0,
+          0.466667
+        ],
+        "hex": "#130077"
+      },
+      "$description": "Texte principal et titres ; remplace le noir partout."
+    },
+    "bleu-fonce-light": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.901961,
+          0.878431,
+          1
+        ],
+        "hex": "#E6E0FF"
+      }
+    },
+    "bleu-fonce-50": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451,
+          0,
+          0.466667
+        ],
+        "alpha": 0.501961,
+        "hex": "#130077"
+      }
+    },
+    "bleu-fonce-70": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451,
+          0,
+          0.466667
+        ],
+        "alpha": 0.701961,
+        "hex": "#130077"
+      }
+    },
+    "primary-hover": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.141176,
+          0.062745,
+          0.603922
+        ],
+        "hex": "#24109A"
+      }
+    },
+    "primary-active": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.047059,
+          0,
+          0.309804
+        ],
+        "hex": "#0C004F"
+      }
+    },
+    "primary-fg": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          1,
+          1
+        ],
+        "hex": "#FFFFFF"
+      }
+    },
+    "primary-subtle": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.901961,
+          0.878431,
+          1
+        ],
+        "hex": "#E6E0FF"
+      }
+    },
+    "primary-subtle-fg": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451,
+          0,
+          0.466667
+        ],
+        "hex": "#130077"
+      }
+    },
+    "warning": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.972549,
+          0.901961
+        ],
+        "hex": "#FFF8E6"
+      }
+    },
+    "warning-fg": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451,
+          0,
+          0.466667
+        ],
+        "hex": "#130077"
+      }
+    },
+    "warning-foreground": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451,
+          0,
+          0.466667
+        ],
+        "hex": "#130077"
+      }
+    },
+    "warning-bg": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.972549,
+          0.901961
+        ],
+        "hex": "#FFF8E6"
+      }
+    },
+    "warning-border": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.686275,
+          0
+        ],
+        "hex": "#FFAF00"
+      }
+    },
+    "success": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.901961,
+          0.976471,
+          0.972549
+        ],
+        "hex": "#E6F9F8"
+      }
+    },
+    "success-fg": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451,
+          0,
+          0.466667
+        ],
+        "hex": "#130077"
+      }
+    },
+    "success-foreground": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.07451,
+          0,
+          0.466667
+        ],
+        "hex": "#130077"
+      }
+    },
+    "success-bg": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.901961,
+          0.976471,
+          0.972549
+        ],
+        "hex": "#E6F9F8"
+      }
+    },
+    "success-border": {
+      "$type": "color",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.070588,
+          0.631373,
+          0.615686
+        ],
+        "hex": "#12A19D"
+      }
+    }
+  },
+  "spacing": {
+    "band": {
+      "$type": "dimension",
+      "$value": {
+        "value": 6,
+        "unit": "rem"
+      }
+    },
+    "band-sm": {
+      "$type": "dimension",
+      "$value": {
+        "value": 4,
+        "unit": "rem"
+      }
+    },
+    "block": {
+      "$type": "dimension",
+      "$value": {
+        "value": 3,
+        "unit": "rem"
+      }
+    }
+  },
+  "radius": {
+    "none": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0,
+        "unit": "px"
+      }
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.375,
+        "unit": "rem"
+      }
+    },
+    "base": {
+      "$type": "dimension",
+      "$value": {
+        "value": 4,
+        "unit": "px"
+      }
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.5,
+        "unit": "rem"
+      }
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.625,
+        "unit": "rem"
+      }
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.875,
+        "unit": "rem"
+      }
+    },
+    "2xl": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.125,
+        "unit": "rem"
+      }
+    },
+    "3xl": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.375,
+        "unit": "rem"
+      }
+    },
+    "4xl": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.625,
+        "unit": "rem"
+      }
+    },
+    "full": {
+      "$type": "dimension",
+      "$value": {
+        "value": 9999,
+        "unit": "px"
+      }
+    },
+    "control": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0.75,
+        "unit": "rem"
+      }
+    },
+    "card": {
+      "$type": "dimension",
+      "$value": {
+        "value": 1.5,
+        "unit": "rem"
+      }
+    },
+    "media": {
+      "$type": "dimension",
+      "$value": {
+        "value": 2,
+        "unit": "rem"
+      }
+    },
+    "pill": {
+      "$type": "dimension",
+      "$value": {
+        "value": 9999,
+        "unit": "px"
+      }
+    }
+  },
+  "breakpoint": {
+    "sm": {
+      "$type": "dimension",
+      "$value": {
+        "value": 40,
+        "unit": "rem"
+      }
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": {
+        "value": 48,
+        "unit": "rem"
+      }
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": {
+        "value": 64,
+        "unit": "rem"
+      }
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": {
+        "value": 80,
+        "unit": "rem"
+      }
+    },
+    "2xl": {
+      "$type": "dimension",
+      "$value": {
+        "value": 96,
+        "unit": "rem"
+      }
+    }
+  },
+  "font": {
+    "sans": {
+      "$type": "fontFamily",
+      "$value": [
+        "Geist Variable",
+        "sans-serif"
+      ]
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$value": [
+        "Geist Mono Variable",
+        "monospace"
+      ]
+    },
+    "title": {
+      "$type": "fontFamily",
+      "$value": [
+        "Bely Display",
+        "Archivo Black",
+        "cursive"
+      ]
+    },
+    "body": {
+      "$type": "fontFamily",
+      "$value": [
+        "Neue Machina",
+        "Space Grotesk",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "sans-serif"
+      ]
+    }
+  },
+  "typography": {
+    "display": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Bely Display",
+          "Archivo Black",
+          "cursive"
+        ],
+        "fontSize": {
+          "value": 4.5,
+          "unit": "rem"
+        },
+        "lineHeight": 0.95
+      }
+    },
+    "h1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Bely Display",
+          "Archivo Black",
+          "cursive"
+        ],
+        "fontSize": {
+          "value": 3.25,
+          "unit": "rem"
+        },
+        "lineHeight": 1
+      }
+    },
+    "h2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Bely Display",
+          "Archivo Black",
+          "cursive"
+        ],
+        "fontSize": {
+          "value": 2.375,
+          "unit": "rem"
+        },
+        "lineHeight": 1.1
+      }
+    },
+    "h3": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Bely Display",
+          "Archivo Black",
+          "cursive"
+        ],
+        "fontSize": {
+          "value": 1.75,
+          "unit": "rem"
+        },
+        "lineHeight": 1.15
+      }
+    },
+    "h4": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Bely Display",
+          "Archivo Black",
+          "cursive"
+        ],
+        "fontSize": {
+          "value": 1.375,
+          "unit": "rem"
+        },
+        "lineHeight": 1.25
+      }
+    },
+    "lead": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Neue Machina",
+          "Space Grotesk",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif"
+        ],
+        "fontSize": {
+          "value": 1.25,
+          "unit": "rem"
+        },
+        "fontWeight": 400,
+        "lineHeight": 1.6
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Neue Machina",
+          "Space Grotesk",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif"
+        ],
+        "fontSize": {
+          "value": 1.0625,
+          "unit": "rem"
+        },
+        "fontWeight": 400,
+        "lineHeight": 1.7
+      }
+    },
+    "bodySmall": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Neue Machina",
+          "Space Grotesk",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif"
+        ],
+        "fontSize": {
+          "value": 0.9375,
+          "unit": "rem"
+        },
+        "fontWeight": 400,
+        "lineHeight": 1.6
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Neue Machina",
+          "Space Grotesk",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif"
+        ],
+        "fontSize": {
+          "value": 0.875,
+          "unit": "rem"
+        },
+        "fontWeight": 400,
+        "lineHeight": 1.5
+      }
+    },
+    "overline": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": [
+          "Neue Machina",
+          "Space Grotesk",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif"
+        ],
+        "fontSize": {
+          "value": 0.8125,
+          "unit": "rem"
+        },
+        "fontWeight": 800,
+        "lineHeight": 1.4
+      }
+    }
+  },
+  "duration": {
+    "fast": {
+      "$type": "duration",
+      "$value": {
+        "value": 120,
+        "unit": "ms"
+      }
+    },
+    "base": {
+      "$type": "duration",
+      "$value": {
+        "value": 180,
+        "unit": "ms"
+      }
+    },
+    "slow": {
+      "$type": "duration",
+      "$value": {
+        "value": 260,
+        "unit": "ms"
+      }
+    }
+  },
+  "easing": {
+    "default": {
+      "$type": "cubicBezier",
+      "$value": [
+        0.2,
+        0,
+        0,
+        1
+      ]
+    },
+    "enter": {
+      "$type": "cubicBezier",
+      "$value": [
+        0,
+        0,
+        0.2,
+        1
+      ]
+    },
+    "exit": {
+      "$type": "cubicBezier",
+      "$value": [
+        0.4,
+        0,
+        1,
+        1
+      ]
+    }
+  },
+  "$extensions": {
+    "com.sovrium.design-system": {
+      "principles": [
+        "Authenticité — design sincère et transparent, pas de surenchère visuelle ni de promesses exagérées.",
+        "Respect et accessibilité — hiérarchie claire, contrastes élevés, espaces généreux pour tou·tes.",
+        "Dialogue et ouverture — un ton chaleureux qui invite à l'échange plutôt qu'à la performance.",
+        "Simplicité engagée — épuré sans être froid, chaleureux sans être infantilisant ; associatif assumé, loin des codes startup et corporate."
+      ],
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Merci pour ton non",
+        "misuse": [
+          "Ne jamais recolorer le logo : chaque mot garde sa couleur (pourpre merci, orange pour, mauve ton, cyan non).",
+          "Ne jamais l'étirer, le tourner ou lui ajouter des effets.",
+          "Le poser uniquement sur fond blanc, fond coloré clair ou fond sombre."
+        ]
+      },
+      "imagery": {
+        "principles": [
+          "Des photos de vrais ateliers, jamais d'illustrations génériques ; mieux vaut attendre une vraie photo qu'un visuel qui ne nous représente pas.",
+          "Les couleurs de marque sont réservées aux éléments stratégiques : logo, titres, boutons, icônes.",
+          "Hiérarchie : icônes colorées pour les concepts et actions, photos authentiques pour les personnes."
+        ],
+        "photography": [
+          "Tout visuel est consenti : accord explicite avant d'utiliser une photo de personne identifiable.",
+          "Moments spontanés ; mains, gestes, interactions non verbales, expressions sincères.",
+          "Lumière naturelle, tons chauds ; proximité, cercles, petits groupes.",
+          "Représentation variée des âges, origines, corps et genres.",
+          "À éviter : stock lisse, esthétique corporate, postures figées, groupes homogènes, éclairage dur."
+        ],
+        "iconSet": "lucide",
+        "patterns": [
+          "Icônes Lucide (trait 2px, 16/24/32–48px) dans les 4 couleurs de marque, pour l'humain et les émotions (heart, ear, shield, hands) — jamais d'emojis, pas de look SaaS.",
+          "Cercles qui se chevauchent (rencontres, co-construction) en fond subtil.",
+          "Lignes ondulées (fluidité, respect des limites) en filigrane très léger.",
+          "Formes géométriques colorées et dégradés clairs (pourpre-light, orange-light, mauve-light, cyan-light) comme fonds ; jamais les teintes vives en fond de section.",
+          "Photos en cadre arrondi (rounded-media) avec un cercle de couleur de marque décalé derrière ; jamais en pleine largeur façon stock, jamais de flou ni de blob animé.",
+          "Une couleur d'accent par section, choisie selon son rôle (colorRoles) ; fonds de section en blanc ou en une seule teinte -light."
+        ]
+      },
+      "voice": {
+        "personality": [
+          "Bienveillant mais pas moralisateur.",
+          "Pédagogue mais pas condescendant.",
+          "Engagé mais pas militant.",
+          "Accessible mais pas simpliste."
+        ],
+        "pronoun": "tu",
+        "prefer": [
+          "Tutoyer systématiquement et utiliser l'écriture inclusive (·e, ·es).",
+          "Vocabulaire : consentement, limites, authenticité, écoute, co-construction ; poser ses limites, accueillir le non, explorer, construire ensemble.",
+          "Formuler comme une invitation : « Rejoins-nous pour explorer… », « Cet atelier t'invite à… », « Ensemble, on construit… ».",
+          "Privilégier la clarté à l'effet de style."
+        ],
+        "avoid": [
+          "Jargon corporate : solution, optimisation, performance, ROI, levier.",
+          "Ton marketing : révolutionnaire, unique, certifiant, garantie, « maximisez votre potentiel », « devenez un expert ».",
+          "Vocabulaire thérapeutique : guérison, trauma, diagnostic.",
+          "Vouvoiement, ton moralisateur, promesses de résultat."
+        ]
+      },
+      "colorRoles": {
+        "pourpre": {
+          "usage": "Émotion, authenticité, découverte. Témoignages, sections émotionnelles. Jamais en fond de grande section : utiliser pourpre-light.",
+          "pairsWith": "pourpre-light"
+        },
+        "orange": {
+          "usage": "Action, engagement, chaleur. Boutons d'inscription, CTAs principaux, liens actifs — en fond, toujours avec un texte bleu-fonce (8,8:1), jamais blanc (1,8:1). Jamais pour une action contradictoire (annuler ET confirmer).",
+          "pairsWith": "orange-light"
+        },
+        "orange-ink": {
+          "usage": "Version texte de l'orange : petits libellés, liens et sur-titres orange sur fond blanc ou clair. L'orange vif n'est jamais du texte (1,8:1).",
+          "pairsWith": "orange-light"
+        },
+        "orange-vif": {
+          "usage": "Variante chaude, en opposition au violet. Accent ponctuel uniquement.",
+          "pairsWith": "orange-vif-light"
+        },
+        "mauve": {
+          "usage": "Exploration, apprentissage, créativité. Sections pédagogiques, titres secondaires, invitations à la réflexion.",
+          "pairsWith": "mauve-light"
+        },
+        "cyan": {
+          "usage": "Validation, calme, ressources. Confirmations, ressources, sections factuelles. Pas en petit texte sur fond blanc (contraste) : utiliser cyan-ink.",
+          "pairsWith": "cyan-light"
+        },
+        "cyan-ink": {
+          "usage": "Version texte du cyan : libellés, liens et titres de cartes cyan sur fond blanc ou cyan-light.",
+          "pairsWith": "cyan-light"
+        },
+        "bleu-fonce": {
+          "usage": "Texte principal et titres ; remplace le noir partout.",
+          "pairsWith": "pourpre-light"
+        }
+      },
+      "shadows": {
+        "sm": {
+          "value": "0 1px 2px rgb(0 0 0 / 0.08)",
+          "provenance": "inherited"
+        },
+        "md": {
+          "value": "0 4px 12px rgb(0 0 0 / 0.06)",
+          "provenance": "inherited"
+        },
+        "lg": {
+          "value": "0 8px 24px rgb(0 0 0 / 0.12)",
+          "provenance": "inherited"
+        },
+        "card": {
+          "value": "0 1px 2px rgb(19 0 119 / 0.04), 0 12px 32px -12px rgb(19 0 119 / 0.14)",
+          "provenance": "declared"
+        },
+        "raised": {
+          "value": "0 2px 4px rgb(19 0 119 / 0.05), 0 24px 48px -16px rgb(19 0 119 / 0.22)",
+          "provenance": "declared"
+        }
+      },
+      "catalogue": [
+        {
+          "type": "alert",
+          "category": "interactive",
+          "variants": [
+            "default",
+            "destructive",
+            "warning",
+            "info",
+            "success"
+          ]
+        },
+        {
+          "type": "badge",
+          "category": "interactive",
+          "variants": [
+            "default",
+            "secondary",
+            "destructive",
+            "outline",
+            "ghost",
+            "link",
+            "success",
+            "warning",
+            "info"
+          ]
+        },
+        {
+          "type": "button",
+          "category": "interactive",
+          "variants": [
+            "default",
+            "destructive",
+            "outline",
+            "secondary",
+            "ghost",
+            "link",
+            "fab"
+          ]
+        },
+        {
+          "type": "button-group",
+          "category": "interactive"
+        },
+        {
+          "type": "link",
+          "category": "interactive"
+        },
+        {
+          "type": "theme-toggle",
+          "category": "interactive"
+        },
+        {
+          "type": "calendar",
+          "category": "form-controls"
+        },
+        {
+          "type": "checkbox",
+          "category": "form-controls"
+        },
+        {
+          "type": "code-editor",
+          "category": "form-controls"
+        },
+        {
+          "type": "combobox",
+          "category": "form-controls"
+        },
+        {
+          "type": "date-picker",
+          "category": "form-controls"
+        },
+        {
+          "type": "date-range-picker",
+          "category": "form-controls"
+        },
+        {
+          "type": "field",
+          "category": "form-controls"
+        },
+        {
+          "type": "input",
+          "category": "form-controls"
+        },
+        {
+          "type": "input-group",
+          "category": "form-controls"
+        },
+        {
+          "type": "input-otp",
+          "category": "form-controls"
+        },
+        {
+          "type": "label",
+          "category": "form-controls"
+        },
+        {
+          "type": "native-select",
+          "category": "form-controls"
+        },
+        {
+          "type": "radio-group",
+          "category": "form-controls"
+        },
+        {
+          "type": "rating",
+          "category": "form-controls"
+        },
+        {
+          "type": "record-picker",
+          "category": "form-controls",
+          "excludedReason": "Searches a table of yours and links the row it finds. This page is bound to no table — and binding it to one of yours is what the confidentiality bound forbids — so there are no candidates for it to offer. Its states, its paging and its create path are drawn as authored option sections on its own page."
+        },
+        {
+          "type": "rich-text-editor",
+          "category": "form-controls"
+        },
+        {
+          "type": "select",
+          "category": "form-controls"
+        },
+        {
+          "type": "signature-pad",
+          "category": "form-controls",
+          "excludedReason": "A well to sign in, or a name to type, under the statement being agreed to. Pressing Sign uploads the mark and writes it onto the record the page is bound to, so the pad is a write path of its own, and a read-only console may carry none. Once signed it reads \"Signed by … on …\" from that record. See it on a data-bound page."
+        },
+        {
+          "type": "slider",
+          "category": "form-controls"
+        },
+        {
+          "type": "switch",
+          "category": "form-controls"
+        },
+        {
+          "type": "textarea",
+          "category": "form-controls"
+        },
+        {
+          "type": "toggle",
+          "category": "form-controls",
+          "variants": [
+            "default",
+            "outline"
+          ]
+        },
+        {
+          "type": "toggle-group",
+          "category": "form-controls",
+          "variants": [
+            "default",
+            "outline"
+          ]
+        },
+        {
+          "type": "carousel",
+          "category": "data"
+        },
+        {
+          "type": "chart",
+          "category": "data"
+        },
+        {
+          "type": "event-calendar",
+          "category": "data"
+        },
+        {
+          "type": "filter-bar",
+          "category": "data"
+        },
+        {
+          "type": "form",
+          "category": "data",
+          "excludedReason": "Renders a live submit control — over the fields you declare on it, or writing a record back to the table it binds; a preview frame may carry no write path (ADR-022 A3 clause 2)."
+        },
+        {
+          "type": "gallery",
+          "category": "data"
+        },
+        {
+          "type": "graph",
+          "category": "data"
+        },
+        {
+          "type": "kanban",
+          "category": "data"
+        },
+        {
+          "type": "kpi",
+          "category": "data"
+        },
+        {
+          "type": "list",
+          "category": "data"
+        },
+        {
+          "type": "map",
+          "category": "data"
+        },
+        {
+          "type": "matrix",
+          "category": "data"
+        },
+        {
+          "type": "questionnaire",
+          "category": "data",
+          "excludedReason": "Submits each answer through the form it names; a preview frame may carry no write path (ADR-022 A3 clause 2)."
+        },
+        {
+          "type": "table",
+          "category": "data"
+        },
+        {
+          "type": "tree",
+          "category": "data"
+        },
+        {
+          "type": "aspect-ratio",
+          "category": "layout"
+        },
+        {
+          "type": "card",
+          "category": "layout"
+        },
+        {
+          "type": "container",
+          "category": "layout"
+        },
+        {
+          "type": "flex",
+          "category": "layout"
+        },
+        {
+          "type": "grid",
+          "category": "layout"
+        },
+        {
+          "type": "message-scroller",
+          "category": "layout"
+        },
+        {
+          "type": "resizable",
+          "category": "layout"
+        },
+        {
+          "type": "sidebar",
+          "category": "layout"
+        },
+        {
+          "type": "attachment",
+          "category": "content"
+        },
+        {
+          "type": "audio",
+          "category": "content"
+        },
+        {
+          "type": "code",
+          "category": "content",
+          "variants": [
+            "default",
+            "destructive"
+          ]
+        },
+        {
+          "type": "file-preview",
+          "category": "content",
+          "excludedReason": "Shows a stored file inline: an image with zoom, a PDF in its viewer, anything else as a download. Every face is drawn from a file signed for the reader, and the only files this instance holds are in your buckets, which this console may not read. See it on a data-bound page."
+        },
+        {
+          "type": "icon",
+          "category": "content"
+        },
+        {
+          "type": "iframe",
+          "category": "content",
+          "excludedReason": "Not drawn here, and this is a refusal rather than a gap: this console renders every specimen flat, in one document, because a design system inside a nested scrolling document is not one a reader can read. Drawing an iframe specimen would put the frame back. Look at the page you embedded it on."
+        },
+        {
+          "type": "image",
+          "category": "content",
+          "variants": [
+            "default",
+            "avatar",
+            "thumbnail",
+            "hero"
+          ]
+        },
+        {
+          "type": "kbd",
+          "category": "content"
+        },
+        {
+          "type": "qr-code",
+          "category": "content"
+        },
+        {
+          "type": "search-input",
+          "category": "content"
+        },
+        {
+          "type": "text",
+          "category": "content"
+        },
+        {
+          "type": "toc",
+          "category": "content"
+        },
+        {
+          "type": "video",
+          "category": "content"
+        },
+        {
+          "type": "accordion",
+          "category": "display"
+        },
+        {
+          "type": "avatar",
+          "category": "display"
+        },
+        {
+          "type": "bubble",
+          "category": "display"
+        },
+        {
+          "type": "collapsible",
+          "category": "display"
+        },
+        {
+          "type": "description-list",
+          "category": "display"
+        },
+        {
+          "type": "empty",
+          "category": "display"
+        },
+        {
+          "type": "item",
+          "category": "display",
+          "variants": [
+            "default",
+            "outline",
+            "muted"
+          ]
+        },
+        {
+          "type": "marker",
+          "category": "display",
+          "variants": [
+            "default",
+            "border",
+            "separator"
+          ]
+        },
+        {
+          "type": "marquee",
+          "category": "display"
+        },
+        {
+          "type": "message",
+          "category": "display"
+        },
+        {
+          "type": "record-field",
+          "category": "display",
+          "excludedReason": "Draws ONE field of the record the page it sits on is bound to. This page is bound to no record — and binding it to one of yours is what the confidentiality bound forbids — so there is nothing for it to read. The field CONTROLS it draws from are in the composed form below."
+        },
+        {
+          "type": "scroll-area",
+          "category": "display"
+        },
+        {
+          "type": "stepper",
+          "category": "display"
+        },
+        {
+          "type": "swatch",
+          "category": "display"
+        },
+        {
+          "type": "tabs",
+          "category": "display",
+          "variants": [
+            "default",
+            "line"
+          ]
+        },
+        {
+          "type": "timeline",
+          "category": "display"
+        },
+        {
+          "type": "breadcrumb",
+          "category": "navigation"
+        },
+        {
+          "type": "command",
+          "category": "navigation"
+        },
+        {
+          "type": "context-menu",
+          "category": "navigation"
+        },
+        {
+          "type": "dropdown-menu",
+          "category": "navigation"
+        },
+        {
+          "type": "menubar",
+          "category": "navigation"
+        },
+        {
+          "type": "navigation-menu",
+          "category": "navigation"
+        },
+        {
+          "type": "pagination",
+          "category": "navigation"
+        },
+        {
+          "type": "alert-dialog",
+          "category": "overlays",
+          "excludedReason": "Opens as a blocking confirmation that holds focus until it is answered, so there is nothing of it to draw until a reader has already been interrupted. It portals outside this preview’s theme scope, so an opened one resolves the console’s tokens rather than yours. Look at it on the page you put it on."
+        },
+        {
+          "type": "dialog",
+          "category": "overlays",
+          "excludedReason": "Opens as a modal panel over the whole page and makes the rest of the document inert while it is open, so it has no resting appearance to document. It portals outside this preview’s theme scope, so an opened one resolves the console’s tokens rather than yours. Look at it on the page you put it on."
+        },
+        {
+          "type": "drawer",
+          "category": "overlays",
+          "excludedReason": "Rises from the bottom edge over the page for as long as it is open, so it would cover the kit rather than sit in it. It portals outside this preview’s theme scope, so an opened one resolves the console’s tokens rather than yours. Look at it on the page you put it on."
+        },
+        {
+          "type": "hover-card",
+          "category": "overlays"
+        },
+        {
+          "type": "popover",
+          "category": "overlays"
+        },
+        {
+          "type": "sheet",
+          "category": "overlays",
+          "excludedReason": "Slides in from an edge and covers the page for as long as it is open, so it would cover the kit rather than sit in it. It portals outside this preview’s theme scope, so an opened one resolves the console’s tokens rather than yours. Look at it on the page you put it on."
+        },
+        {
+          "type": "toast",
+          "category": "overlays",
+          "variants": [
+            "success",
+            "error",
+            "warning",
+            "info",
+            "loading"
+          ]
+        },
+        {
+          "type": "tooltip",
+          "category": "overlays"
+        },
+        {
+          "type": "progress",
+          "category": "feedback",
+          "variants": [
+            "bar",
+            "circle",
+            "steps"
+          ]
+        },
+        {
+          "type": "skeleton",
+          "category": "feedback",
+          "variants": [
+            "text",
+            "circular",
+            "rectangular"
+          ]
+        },
+        {
+          "type": "spinner",
+          "category": "feedback"
+        },
+        {
+          "type": "separator",
+          "category": "structural"
+        },
+        {
+          "type": "spacer",
+          "category": "structural"
+        },
+        {
+          "type": "comments",
+          "category": "specialty",
+          "excludedReason": "Hydrates a comment composer — a form with a live submit control that posts a comment onto a record. A read-only console may carry no write path, so it is named here rather than drawn. It renders on your own pages."
+        },
+        {
+          "type": "field-specimen",
+          "category": "specialty",
+          "excludedReason": "Has no appearance of its own: it draws whatever control the fieldType you name gets, so a card here would document one field type instead of this component. The field types are all drawn, in every state, in the field catalogue."
+        },
+        {
+          "type": "file-upload",
+          "category": "specialty"
+        },
+        {
+          "type": "language-switcher",
+          "category": "specialty",
+          "excludedReason": "Draws the languages an app declares in languages[]. This console’s own surface app declares none — it carries your design system and deliberately nothing else — so the component has no list to draw. It renders on your pages."
+        },
+        {
+          "type": "number-input",
+          "category": "specialty"
+        },
+        {
+          "type": "preview",
+          "category": "specialty"
+        },
+        {
+          "type": "reorderable-list",
+          "category": "specialty"
+        },
+        {
+          "type": "specimen",
+          "category": "specialty",
+          "excludedReason": "A frame around a drawn component and the config that produced it. It refuses to hold another one — each level would print the level below, with no bottom — so it cannot be drawn inside this page. Every card here is one."
+        },
+        {
+          "type": "time-picker",
+          "category": "specialty"
+        },
+        {
+          "type": "ai-chat",
+          "category": "ai"
+        }
+      ],
+      "unmappable": {
+        "design.typeScale.overline.letterSpacing": "0.06em",
+        "design.typeScale.families.title.transform": "lowercase",
+        "design.typeScale.families.title.letterSpacing": "0.05em",
+        "design.typeScale.families.title.url": "/assets/site.css",
+        "design.elevation.card": "0 1px 2px rgb(19 0 119 / 0.04), 0 12px 32px -12px rgb(19 0 119 / 0.14)",
+        "design.elevation.raised": "0 2px 4px rgb(19 0 119 / 0.05), 0 24px 48px -16px rgb(19 0 119 / 0.22)"
+      }
+    }
+  }
+}

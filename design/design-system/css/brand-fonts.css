@@ -1,0 +1,33 @@
+/* Brand @font-face rules, copied from pages/assets/site.css (sovrium#434 workaround). */
+@font-face {
+  font-family: "Bely Display";
+  src: url("../../pages/fonts/BelyDisplay/BelyDisplay-Regular.eot");
+  src: url("../../pages/fonts/BelyDisplay/BelyDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+       url("../../pages/fonts/BelyDisplay/BelyDisplay-Regular.woff2") format("woff2"),
+       url("../../pages/fonts/BelyDisplay/BelyDisplay-Regular.woff") format("woff"),
+       url("../../pages/fonts/BelyDisplay/BelyDisplay-Regular.svg#BelyDisplay") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../../pages/fonts/NeueMachina/NeueMachina-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../../pages/fonts/NeueMachina/NeueMachina-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Machina";
+  src: url("../../pages/fonts/NeueMachina/NeueMachina-Ultrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

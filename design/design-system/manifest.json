@@ -1,0 +1,2322 @@
+{
+  "format": "sovrium.design-system.bundle",
+  "version": 1,
+  "app": {
+    "name": "mercipourtonnon"
+  },
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "files": [
+    {
+      "path": "DESIGN.md",
+      "mediaType": "text/markdown",
+      "bytes": 19187,
+      "sha256": "93a16de7ce88b8aec15c5924ecf958a77035f366e530d7c54b8ba26663eea8d8",
+      "role": "brief"
+    },
+    {
+      "path": "adapters/claude-design/project/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 11767,
+      "sha256": "dea3d7ef42f0c2e10445f06dd97c1bcb922db1316d454fe3b559ff99a3b9a9de",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Accordion/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 116,
+      "sha256": "166b93a642fb7f827152f43e02ad29dc05a242c604ecf0a1e8e08da5a984acb6",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Accordion/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2516,
+      "sha256": "e305e9673c7f7f920fb21a723cc55ae68b213be5b3ebf32749fa57ae03f27cbf",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/AiChat/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 219,
+      "sha256": "7789774f474547258ee7147700d76dcffb87ef480aebbbeac82dc86bc52e34b0",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/AiChat/preview.html",
+      "mediaType": "text/html",
+      "bytes": 8973,
+      "sha256": "1e84dec712146baf3a9e0d8f17b49ac79cdda3b685ab7da3baf96731e675fbc2",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Alert/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 293,
+      "sha256": "425ac50a9421b1f8b95e9e215fc86fb4aaa4b9c1dc73b86501a94ee33f8b969f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Alert/preview.html",
+      "mediaType": "text/html",
+      "bytes": 15554,
+      "sha256": "aa8c9feac561dd918d25f795810d2b1c0270c0f26a8a52abfd72a70ca63bdb4e",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/AlertDialog/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 528,
+      "sha256": "ff320632579ee3e87b21ccae6b88799f7b6613e3cfb6dff74f3bbc28928ddb70",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/AlertDialog/preview.html",
+      "mediaType": "text/html",
+      "bytes": 8783,
+      "sha256": "d66c5619d64fc829c38e51f167300f4547674d9213103a63c5923f5f819ba27f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/AspectRatio/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 214,
+      "sha256": "b2d099f075f726072d76dc1c3853444f3a26fd77054617f58b261dfee69d42f3",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/AspectRatio/preview.html",
+      "mediaType": "text/html",
+      "bytes": 6821,
+      "sha256": "1468f62296d6a1a5de0b6e28e00e9ddcae80f51952a37c877b069c572f600382",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Attachment/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 284,
+      "sha256": "770020cba40774c927fa0824b6f30cf128f2c311c7f5fac84486d437b83502cb",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Attachment/preview.html",
+      "mediaType": "text/html",
+      "bytes": 5648,
+      "sha256": "a9ddee17c210ed7000d5d52a92f6a04978086bfa20d2f50c47f30d03aecedea9",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Audio/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 267,
+      "sha256": "6f84ee00dbb6094c1d684e05d560acbd7f2fa13538db0169bee16428e54a1b5b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Audio/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1510,
+      "sha256": "70420d2b1a7bec67539c9f42d9e28ac8873df9b658bf7f5c2d3009e083ea4562",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Avatar/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 429,
+      "sha256": "f2f38fe6541d6b4df71267b6cd45c4287327945ffd62d4fc1ff77906fbc9f1a7",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Avatar/preview.html",
+      "mediaType": "text/html",
+      "bytes": 5470,
+      "sha256": "0b0a89f51f4f19e76d3de9fff905a39a0f6ac2f51c275c2ec42b832f57225e30",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Badge/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 425,
+      "sha256": "753a8e856dc8b2c0b6a3c2f11e46baaf061778765d832f8e82985051c539dd8b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Badge/preview.html",
+      "mediaType": "text/html",
+      "bytes": 17124,
+      "sha256": "30dcc6ebda81829071da7f92e4ed1ac85562d5f856803e18ca6a328d14627177",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Breadcrumb/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 689,
+      "sha256": "af1fcc518920e0cbefa897d637a07a939f1fff0b5f83290a52c073f66f890cc4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Breadcrumb/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3247,
+      "sha256": "dfbc439447d67ef11cd341efa59271ed6e53c3985c0f3118a4ee3fe832857879",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Bubble/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 125,
+      "sha256": "18a9bf367259efd1d13db0795bb63549ac0a7207bc227f0b779b54aa3a2fc8ce",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Bubble/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1812,
+      "sha256": "03ed83a4a99919ddabe80dee922f1ca2e02cc7e51e729b09dfe11746936c4672",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Button/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 2064,
+      "sha256": "c30ba70e2ec4d7650eb9e2c1b68391d0a63b561b0452925b1634cf549b76dac9",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Button/preview.html",
+      "mediaType": "text/html",
+      "bytes": 17752,
+      "sha256": "ec6073d156bc495311c49e53bfc9b9c14c15f256c69d757aa215c212436ebc85",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ButtonGroup/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 184,
+      "sha256": "b81f815fbb7f7e00d52ba3a3f136f69aee0697215258bf5a868e013c9b21802f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ButtonGroup/preview.html",
+      "mediaType": "text/html",
+      "bytes": 5658,
+      "sha256": "5ef81f71f65e355da18162aec1e30f5fd0d5e6df0b2ab502d13f7deb20b2a4b2",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Calendar/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 484,
+      "sha256": "ac14d135d1b2ca0fb23d572e78cd5dad135dfe165f8c4e9a2aedce73baf1e788",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Calendar/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1540,
+      "sha256": "c1d017044c483875331ea4e1445d460111f5c0180f75d1ae685e705e7f5c46a1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Card/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 319,
+      "sha256": "6bc7a9313bdfa93f501132e3b9799306591180af98b1e278b670031c3ad303fa",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Card/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2399,
+      "sha256": "f2b9f26f633147b8d8f6a931dbce56aaaed38b7000eb488c1c061601e8f962f1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Carousel/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 437,
+      "sha256": "31d4331554368eaa7aa306f2cb65dbfad51f2bb1734af3dc178c680b19ae54de",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Carousel/preview.html",
+      "mediaType": "text/html",
+      "bytes": 9221,
+      "sha256": "1eb05db7060d23ce83dedcbd6c1abfd9d879854ace9ca74c4818b9b798e4ba01",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Chart/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 244,
+      "sha256": "fe7edb64290eb158e6733c60aa2cb0c1ea120d7fe195edcffb03b17bc4824376",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Chart/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3463,
+      "sha256": "e4e801dad9c3edba8db75e0da251c38c94d531684e1a3954bfdd1188f530faec",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Checkbox/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 346,
+      "sha256": "4826320fe9f11c0d7ba8f96a4f41ec448b760c142c3e6c97d92ae4bcec62c082",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Checkbox/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1712,
+      "sha256": "ee158778f3a9fc7dd1e0331eb92212bf2569af7f4c3dfec2db968ffa59fa6fa6",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Code/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 421,
+      "sha256": "860d2a09729a92b0e7e833e66ca3e2bc714b6f28fa5943fb45ea8810061e320b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Code/preview.html",
+      "mediaType": "text/html",
+      "bytes": 18580,
+      "sha256": "18302e91a97504c8c146636bff8abe483f7986b5f11de3fa7aa787da20799df6",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/CodeEditor/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 279,
+      "sha256": "412d646c7d2ebd271aa676d81a76d41204b0eb62030189b47c6e36df497f3c8a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/CodeEditor/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1966,
+      "sha256": "c6779daaa056f26e14bf08e5ded619e60e670aa725d168f80b9906b32170784a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Collapsible/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 235,
+      "sha256": "c9d32c652d63ed88d56ca388622258cf40a2c5390bbf1e5928f1baa3fb14a8a1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Collapsible/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3012,
+      "sha256": "c60688a014cbf9784eff94e426ae88d87ab692c4e39750eed0a1e50e05a8c101",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Combobox/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 434,
+      "sha256": "ff77faf72a4502e9ea4fddcf6e5e9545ccbdcb3f0641a2925d9a675b31507293",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Combobox/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4648,
+      "sha256": "024609bd17d09195f59f39d27b798c4f579d2ab9ac056d08b9397ad76067ec88",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Command/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 420,
+      "sha256": "83ae04828e0f21f88fb257fac9d7f9e482b16c2a7b8aaf74b7908ec860ebb65d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Command/preview.html",
+      "mediaType": "text/html",
+      "bytes": 7497,
+      "sha256": "af3d618ecac805e76532628008c87d23cfee9358473de1c17fd4b9400b9b4a60",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Container/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 133,
+      "sha256": "2558a66f95fc7fd9efb12ed9d34ea23c853fb0486f13121ed155f8b4cef7e59e",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Container/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2603,
+      "sha256": "5862f6f96a83d68c3c61de8809a97bfe23c62c984b180349597a062b95abc2d6",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ContextMenu/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 184,
+      "sha256": "5fc60c63d96b9c92257ff38446efda83d067782280db65740883901eb9817553",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ContextMenu/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2177,
+      "sha256": "5e0b6840737ecc7f698070efe6929b4ae77043816ae465ceedc9ac2a3950725a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Cover/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1556,
+      "sha256": "b1a7306bc84334eb19a78b53414c2b3275351137c62dd453810673b81934e586",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/DatePicker/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 136,
+      "sha256": "9fee42175466e8d07b8261fe8295549f5085877bfe6798655e2b133a4a0eab07",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/DatePicker/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2604,
+      "sha256": "532473d630a4e83681e2f063e6edffbc8ef68effad6cb902fe68d6e5859112b1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/DateRangePicker/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 476,
+      "sha256": "4006dd88c74ebafa0874d92302ccc2b57c486444bc7894db0305b1343fb25f3a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/DateRangePicker/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2026,
+      "sha256": "9bf53b9ed9003c1211c5cab74b3081a38aee846d98f696ffc2cd17bf7b7bfe6d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/DescriptionList/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 277,
+      "sha256": "facc1efac781386e8f84c94e481223447a82991da8b347d68e29c93a17e037c5",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/DescriptionList/preview.html",
+      "mediaType": "text/html",
+      "bytes": 5964,
+      "sha256": "6c82e200ad99af9503e4db1b1ed3789c4437a4e8118f53287b7af1b7bcc2560f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Dialog/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 553,
+      "sha256": "f50fa8ee6752c12973926ec690e4b884f5c7de52669abb79a4c2a904855b9c03",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Dialog/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3751,
+      "sha256": "61018e06fc061fac2d425656a8e6576039208a80cef700489eef6c735402e234",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Drawer/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 298,
+      "sha256": "e424a85120d0a134b2fc18f58420ee96799cb0ce91abab93c57f9d731e1ec41b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Drawer/preview.html",
+      "mediaType": "text/html",
+      "bytes": 12435,
+      "sha256": "7854a1ef7580e2a1a6ba6a577e717a9d5beb9a5a2f932dc6c3d6f113d3fed5e0",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/DropdownMenu/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 328,
+      "sha256": "039dd2493123935ea514922b75d26b5bdcf9ce92386f72f65c4d6d51befc551b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/DropdownMenu/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4275,
+      "sha256": "9caca411a25084fec994e50cc7d8dfe399f5df53d8dea9a1ea964a31aef07e9e",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Empty/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 391,
+      "sha256": "3aa3ce24f3c5e03dcdc9f507de4b9a143256ec2eecc19253fc077692c6a45fd8",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Empty/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2242,
+      "sha256": "5bf4515a9246862028326d32c532aa07ad2fc3886aef27858cc87cfed0f0f325",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/EventCalendar/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 130,
+      "sha256": "02f1684d2050c3903edd9db9c2078e40f17bd9b268f8b2a69f31b171ae4635ad",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/EventCalendar/preview.html",
+      "mediaType": "text/html",
+      "bytes": 13195,
+      "sha256": "5c070499985ff952f13959f27dd6b9e8e3e71395cee3465624d0ce45fb81ef73",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Field/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 209,
+      "sha256": "24e960f51d18b108531334c05a42e388615699830fc5352589f3d3a9a81f0e15",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Field/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4746,
+      "sha256": "46d8fe9d1762280ff80e667075dca7e851e91ee2a4ddc1fdeee569c7ee4a18d1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/FileUpload/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 238,
+      "sha256": "fd2014a151c440e3be1d56ef982c90dd30ee6a5624c3424cf87c3377266e2a19",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/FileUpload/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3194,
+      "sha256": "9b1db62368e284989e714ece6f35a5628e71f812581cd259d8ea390a1c82746a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/FilterBar/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 145,
+      "sha256": "1e568ceaf4412eccb176c0de446e39787abea3ba070f8be69c6c0a0e654962bb",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/FilterBar/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3249,
+      "sha256": "12a1fac9f82d379f8c2c48c0895c0b3b5e522eaa784324dae0b15b41cc67bf5b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Flex/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 122,
+      "sha256": "6cbeeedfeeaf434105ed688b1b15f2e301f76c110404792a202a27991eff63fe",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Flex/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3913,
+      "sha256": "1b1333effb2a89318129048c12ff447c3bfd9bc51bfabc7fd472078e56003079",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Gallery/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 575,
+      "sha256": "daf9636a45a86e974ab081c2d5206348ecff5ec7887bb34dedc9d44db9223631",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Gallery/preview.html",
+      "mediaType": "text/html",
+      "bytes": 9351,
+      "sha256": "658fd9edfa1d92e17f5a6670542ae3df6d1704d8ca30e2509358e13650982d02",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Graph/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 641,
+      "sha256": "e15b409b0cc680e1a39cf0e5315df6d4b5d8d7946905a8e37bb8013271cf9c0f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Graph/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1465,
+      "sha256": "6fb4d4b7e4776a327abb9d67c18e9dce9b80142eb108f634dfa849cf9fd4e80f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Grid/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 137,
+      "sha256": "8d21755d6cc832b474d2f04f1eb80431d0038b85a41ab8d4786e8c8c8a9f9563",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Grid/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3937,
+      "sha256": "44a50f295d1f9aec84ef156bf979b4d2a4d59ea17ee430f7dbb94706cd27fad4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/HoverCard/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 130,
+      "sha256": "414859b828734f245a7702873bc0dc38bf30d7495e9eb46643dcb3b8442d582a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/HoverCard/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1975,
+      "sha256": "d4cd7508e7ec4b4e6de5050dca8b6feacbb437d79c992f0605d67f48f554e416",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Icon/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 149,
+      "sha256": "7fe212fc448db30325822bd00e1093d941b145843a156fe4ecd4051f6a89689d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Icon/preview.html",
+      "mediaType": "text/html",
+      "bytes": 5430,
+      "sha256": "958d248d25d414adc1ca3e5e08f90369de946d2ff627d02bf2f516c3bd1175fb",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Image/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 435,
+      "sha256": "0b1836d436fdfc854c7f28bb98e8e41ffe82a6490d5c9ae11905dfb5bbd7c9b8",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Image/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4270,
+      "sha256": "b1f5823ce0131abe16b96f0f8f1e299499030c41ff7719d332a9f41998283b26",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Input/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 270,
+      "sha256": "3ec4e28e42d1399abeaa467dd8780ff9d63bd3eeae5590bdb7d6ca66d108bb90",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Input/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2656,
+      "sha256": "55868bc8aa53940a15f8ff0de3df07042c936b6638ca74f8ca78e2330e1fb043",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/InputGroup/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 241,
+      "sha256": "d7401e023d19c91725d8342be1265e358d8575432bc889245527d616ebab9b08",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/InputGroup/preview.html",
+      "mediaType": "text/html",
+      "bytes": 6100,
+      "sha256": "6b2e3a0368c270ef80e4b5b3c8bc7247a1876e1c3b423b8dea714edde15d90ab",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/InputOtp/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 300,
+      "sha256": "5d6bd519fa4eae029beb3f0ea4d994e068a45304717ec25cae037b590d8af0fe",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/InputOtp/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4368,
+      "sha256": "ba4c75e050285aef1a9538f80b02cff4b47d059e0e04edcf5e994af9479395c4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Item/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 375,
+      "sha256": "a6c1c1896570b7f26a83ac25bf8afcdcc1370690479f93bfe5d3f1cd8ad89844",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Item/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4562,
+      "sha256": "5247435521f7ebc72123b413d1c892eb2bada1ad762dc44de453ae49a5ea0322",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Kanban/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 437,
+      "sha256": "d97b54dee67244e4c4815a765574a0892ecef3040096cc324df1fbcdc2c438ab",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Kanban/preview.html",
+      "mediaType": "text/html",
+      "bytes": 5015,
+      "sha256": "b08ec02ab228374cd00f4844a5d670d60503bc307112754562c87599d2a289b1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Kbd/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 142,
+      "sha256": "8211af68ad906bb1907331ad2f4a0cb66ef46e712b8efef74f85e9b906b0ca76",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Kbd/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2952,
+      "sha256": "4469c331878539e54458b5d5474da9a8bcbe2425d2155a6caff3495a85b278d5",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Kpi/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 178,
+      "sha256": "924001708b1e259021dc0f3be6c3cafe53d1a349bb86d220be4883c61a6d039d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Kpi/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3959,
+      "sha256": "cfeacaf9a2edf5fe552774a654eac9f9e0afe35b7184a33c9afe63dc7873f9f3",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Label/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 181,
+      "sha256": "36e0d9746ca8615e03f0cb7ce589b4f24e8b3d4cf4b520463fc312cf0003f65f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Label/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1894,
+      "sha256": "563b031014cb63e924b4083c7638d66e50d7a590ece9961e0c2a454463a55b58",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Link/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 343,
+      "sha256": "ddfa66e318573bf7e3bb6ee5d93cb0824ebbd56dbe753d678c45903ca03b6dad",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Link/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1676,
+      "sha256": "8af75f9a91da3ae13a04d6962ecf79372e52334398aa65d3b18006fb9ddbaa39",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/List/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 139,
+      "sha256": "8143b12f266b4ffdf53aca369a31d569892a9b8b1256fc0ba1ad9a2507f12cd9",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/List/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3097,
+      "sha256": "8dc748db385b2877f580c85869f756b81c0cbf3a38e1ad906fac145b654b19ed",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Map/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 127,
+      "sha256": "d8f9c88bef964cf6c4be4d03a84b214954492315e29303b751b48fffa75bb053",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Map/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1905,
+      "sha256": "9ebf413afde440c5fa922a876a4b002c6bd72f66199396aa3dcf7a4986f45732",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Marker/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 232,
+      "sha256": "e3f6f1341e4768315714d100e23c55881d8b09499abd7e0f00fbb44b80a0aa8b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Marker/preview.html",
+      "mediaType": "text/html",
+      "bytes": 5586,
+      "sha256": "26e43e6f30f86159cf69d6d1544be2319409d11753297f9a3c79277fdc4164e5",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Marquee/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 251,
+      "sha256": "bb0968cdd1e51c932b39f73bbc1aa4d3fb6ac69d7079dcab490d543eaa1fece8",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Marquee/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1964,
+      "sha256": "cdf545f9198c432c31a41f80c936e202d04aa06d190f2341f39a4548026144d9",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Matrix/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 509,
+      "sha256": "ad3197b2326e54bd3a23bcfa03f6fccfd6442cc44f2382f747ebf738445879df",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Matrix/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1497,
+      "sha256": "83f71c132c4b2bff86063746941d54080d2f45f4d593eacaf4696ab1d70f09a5",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Menubar/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 112,
+      "sha256": "05bf4c6ba58d35536edb1122881c4ae53c03f422c981f6af1cc3bb83556a186b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Menubar/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2105,
+      "sha256": "31c475264f26bd13d3b512ddc00ed16220fba05edb071d1110d583bb29d1de97",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Message/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 282,
+      "sha256": "15b1857676726edb5c91c6c9de6df9100c58d84f0b6905175320dd1d10cd2515",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Message/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4528,
+      "sha256": "7051021da3fa4cb86a6f69f0ab7d028183c10aac18880052611c2a39f271fdaf",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/MessageScroller/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 294,
+      "sha256": "9bb735d5e7778c4ffb842c6bf625db74a2baa4533e08d0df3af1a9b123d3c6c4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/MessageScroller/preview.html",
+      "mediaType": "text/html",
+      "bytes": 7017,
+      "sha256": "25bc2dfbc7eafc8edf62520fb038b3e697d1b38bb854d004dcb2ef7d6cb8b4b2",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/NativeSelect/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 549,
+      "sha256": "40906a92e54be87983f97061fe3477863f79a376aec58c06953d4480801da239",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/NativeSelect/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4002,
+      "sha256": "f5d39ebab5fd7ea673889e3193208a98ed683b390df973c8d0e5405e3c0b2b70",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/NavigationMenu/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 209,
+      "sha256": "4c3582ef22b7de9444530eae6ad0717576da2c37c96a9d35ab629a2b2e8c7602",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/NavigationMenu/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3663,
+      "sha256": "1a17692a319db5734d5bd7c25ff9c61834656889d060cb7deaa614252d2ea2c1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/NumberInput/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 412,
+      "sha256": "30214a23daea774c27d35f87c76bf1318b46b35a54007a978b3b44df39f3affd",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/NumberInput/preview.html",
+      "mediaType": "text/html",
+      "bytes": 12330,
+      "sha256": "f352bd3cd26dcef01e1eccbbd8aac36c3d6845fce90bfdf01da12c8fe49668d6",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Pagination/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 237,
+      "sha256": "381af1b9c633a5ea17989e3861441b25ea82e857e53ca851cc89c82773170c8b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Pagination/preview.html",
+      "mediaType": "text/html",
+      "bytes": 13045,
+      "sha256": "948190d06e699bb81e4b14afc732ff5ae37580b6c0298c0fe0201f06a9dab017",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Popover/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 123,
+      "sha256": "8befdf7a2492261b6f6cbd9899afb7d1fe0a0adbd748302577cccf371f4415a8",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Popover/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4681,
+      "sha256": "ded3eaaf1643c3d71feff0a9d4849df6c3ab3f23f64dc976677d8023e4180c0a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Preview/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 280,
+      "sha256": "11d994533c16438bcf0e30d4fe328cd09eedc4b5d21a3b6bfb0c0f327f053ec3",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Preview/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3556,
+      "sha256": "eeabd4a86236bb3043207262f31850cfd116ec1d46d6846e8a698e8d324d2215",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Progress/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 234,
+      "sha256": "90dc65b3ce0fa184482b47f4d1ade88bbc251ab22d52c2570f3fa9a5f62b8f3a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Progress/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4899,
+      "sha256": "e4f363049d2e2253c0736cc2288b24e54acec2c8fe8b056d22d232f428851958",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/QrCode/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 160,
+      "sha256": "a2ec877ee52de854a49d865b9e0c1662da4aab54f4bd4217a27fd502f792c1f8",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/QrCode/preview.html",
+      "mediaType": "text/html",
+      "bytes": 6416,
+      "sha256": "99c9d94448f02cb7735923c2f985066cb8b0c471dd5f91fee779fb08f33e2128",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/RadioGroup/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 337,
+      "sha256": "0ad8289c4a2f01cc978341e0cf02a2193e1625b2b22e6ecd7aabfadef534777b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/RadioGroup/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1998,
+      "sha256": "0f6bcc81e866cecfbf79a17f265ffff246e8f418540a8c8c7497455ed32ddf67",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Rating/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 168,
+      "sha256": "9fe9b6ddb86850748f4c6e00389e21c76fb0acb7dd7382d5b6a933a086b0f72c",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Rating/preview.html",
+      "mediaType": "text/html",
+      "bytes": 13218,
+      "sha256": "3d5688ce306d749b7444a17c88832410d3c7ec572870750433e0e7a185404492",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ReorderableList/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 204,
+      "sha256": "ac25495c146508acdfcac1dbb6ecebdc7ba183ba8825fd8b6808901a859efcd1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ReorderableList/preview.html",
+      "mediaType": "text/html",
+      "bytes": 10488,
+      "sha256": "fbcc655a6100931789af3dd5ed5bc49ea110870dde93d390b38096021cbffd98",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Resizable/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 332,
+      "sha256": "669fb77addcfd4195fa3173fa0a96a340bb692b513a12ed06cf7fcddc55fc119",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Resizable/preview.html",
+      "mediaType": "text/html",
+      "bytes": 5539,
+      "sha256": "e0de24ac2fdec722bf4f03807a44e18890146e5f46b0d2ad3fcd6afca9794992",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/RichTextEditor/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 414,
+      "sha256": "893b8c5e934aebb55aa8de2c266f4b2b3a2e6e647315efb8c7d8bc8d4d18cb05",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/RichTextEditor/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2052,
+      "sha256": "9199aa85e89bbe18df62b33c7031ccf4829bba16e263081578b59882d541ac38",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ScrollArea/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 139,
+      "sha256": "2d9d0f02625f56950e2271e02fbaba3f55cd96e1ccb1294ff55813955df82a9b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ScrollArea/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3728,
+      "sha256": "04ad2eba160d3d6572c1c7ff79d46d51fb447e28737cdcebd9ee8679a05974ee",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/SearchInput/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 409,
+      "sha256": "5d651857c11c9e493dd54c9b656d4da167ffac64a2d83a3218a5d1e892d7b2c5",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/SearchInput/preview.html",
+      "mediaType": "text/html",
+      "bytes": 6332,
+      "sha256": "3847b3d9367c07ffefd900d83ae71e998d2f047f910fc8f623849aaeb96958e0",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Select/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 863,
+      "sha256": "a7507c9c7d00719f18d5f7cc981f181760c3b0c198497dca5ff1e3ec98a804f8",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Select/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4580,
+      "sha256": "fe05233a88b898135261f1e977cba38747d82f8f80b1596a20ee03a514dd0c98",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Separator/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 329,
+      "sha256": "6df493bce8fe337348ec980d10ffc8f1564b19dcec3f400f875d2b401d5456ce",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Separator/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1443,
+      "sha256": "3cbb57f7553cb4dce64c7a0883f143d2172b96af3ac4b90899bf6126c1e349c4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Sheet/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 962,
+      "sha256": "2de335af1ef7f9aca073d1114df8e3c5cee5e371d66c4aaea40e05100089df00",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Sheet/preview.html",
+      "mediaType": "text/html",
+      "bytes": 5073,
+      "sha256": "dbcb063505300301262c64a0e2b1cb716eb1992fb37f88bb2752dde0c2c1feba",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Sidebar/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 180,
+      "sha256": "281a8111e9323e5efca6814c8d1490a504858e5f1d15e9e23920b1f12fe0dd07",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Sidebar/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3963,
+      "sha256": "6ec6d48997e8197fca307c318bcd77b53d7c426dda33b3e7fbdd0204867a6abe",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Skeleton/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 192,
+      "sha256": "81ce322474a37de80357896793b103c14496396422fd434796eecd2ccffa776c",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Skeleton/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3261,
+      "sha256": "ebd39228f2609cde3808228789c4ef03396cdfc478eaf10ae5ae57d7a35f50d5",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Slider/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 117,
+      "sha256": "349d77b78a9942c7d304b8be6b2e4bdad0366719368e8b09fdc7c9f5f6272f2b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Slider/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1504,
+      "sha256": "9fbf305c7efd3601c19031f828c738e178b52fd064edb5517e24a956e476960d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Spacer/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 121,
+      "sha256": "a9c1658f54b06911cde10169e366e42cbcea17dcd447f0d12a516a30f4a92c04",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Spacer/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1147,
+      "sha256": "1d23285ee2c5db25a5da12954797d514a0ca32bfd24a9da84013084ebab43ba3",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Spinner/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 329,
+      "sha256": "8293051fa2f6fbe2f2336b35dcf842612328a74b1ff4c735c369370f135a8a9f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Spinner/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2093,
+      "sha256": "f542aa0cad37ca757fc013f64f05de1ec54636eeaf413000ab2fcaa3c8be7549",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Stepper/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 344,
+      "sha256": "c6d0279aa8852aa39a01144e1a665b1c5ef9ad13d4253535bbe6ca091bbc32e2",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Stepper/preview.html",
+      "mediaType": "text/html",
+      "bytes": 21186,
+      "sha256": "6209cb522aaf6ca1e03e2c4ead10838ca2adc33210fcafc27abd1dfd8e6786c7",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Swatch/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 431,
+      "sha256": "246e394fd91a76fb060308e61a49d59da0934c601034f3ae80e785da71dbd22a",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Swatch/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1756,
+      "sha256": "f8998a0b56457e21d9f02f2c32d059c4234c89d1b795efa588a152acd1895560",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Switch/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 318,
+      "sha256": "3d90e2fe7b3f4a379f78c9b2fe68fbefcf70584ba55fa43c60f15bb9fe173639",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Switch/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1770,
+      "sha256": "e685adfc13478e990ab83f15a3926f1055f837d1ff23fd458110be0548dd303f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Table/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 2326,
+      "sha256": "29885545fe8e6267586d374ae363851a96a229d67d752bb0a704cfdfd14ee507",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Table/preview.html",
+      "mediaType": "text/html",
+      "bytes": 18097,
+      "sha256": "45f9aebc63e7dfdd19d5bd11a8ce2a54b9ce8d8273018c4c8af6dd4dcb51d1d2",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Tabs/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 283,
+      "sha256": "acca6d4dbe4421f49148a07980c33b46707333e333678ebb31068734f9bfc982",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Tabs/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4772,
+      "sha256": "642740fd212f504af58382a51ac9a149709e367c7965b5801ae3324d391ee1e5",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Text/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 108,
+      "sha256": "b0158dc5c81cf6196977b12600d8128ec53f35746a8df0ba0f81cc83f798838e",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Text/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1634,
+      "sha256": "4ecaeac91f272b85e23f81c07dcde244420182aa1822921c83c5943b752f6044",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Textarea/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 151,
+      "sha256": "fbe81367109533cadb6bacebc90ae99aa626f4c7ac9d7650b25969e2c577381b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Textarea/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2446,
+      "sha256": "a0a6477904d68b7de03d4f5980a9dd6b4e685021206f70d60af196980b509a4d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ThemeToggle/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 136,
+      "sha256": "56c77f5811d265b130083ea496158e418db13ef57364b2cd77e93f5cc9a015ee",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ThemeToggle/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1336,
+      "sha256": "88e9112d69b8ab7ecd132ab5f1eae5856875f4fde9783a01875eab88e42a00b8",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/TimePicker/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 196,
+      "sha256": "32eff2ae4c68a8334956ead6b924dd89d560b30064c3c8b76184ca288e3d8912",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/TimePicker/preview.html",
+      "mediaType": "text/html",
+      "bytes": 7216,
+      "sha256": "e600962844050b40a38957d67ad97c3b346bf882d1f97979ba2146791174ca5c",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Timeline/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 520,
+      "sha256": "5b50009aaf9bc3cdbb8afc3b2eabf4d9cd48454ce645b222476b423f8b39a7f0",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Timeline/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3048,
+      "sha256": "8284f6a92ccc06850f39501cb421f06f1b22c0e9b5d785decb4873a4c8250080",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Toast/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 192,
+      "sha256": "65ddfa2a0c43bcfb08ae9ea57a1760820ed72123ee69eae3f5c989aa150fd909",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Toast/preview.html",
+      "mediaType": "text/html",
+      "bytes": 4883,
+      "sha256": "8a391cbb35ecee27ac3446c5553b231d1dc130f92ccb7af1a97c7b5ab289bf5f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Toc/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 155,
+      "sha256": "bc490fea10f95c73d89b20b9c3e4459f92aa20ff45634962f855afef9eb2063f",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Toc/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2353,
+      "sha256": "35853552731f3910be2f01ec8de3cd113b8570e443620c5112f49520c33d69fd",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Toggle/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 143,
+      "sha256": "8fa03f42459196d3d4775ae13759a23254f897da4d670ddfe746d3be8de2bb70",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Toggle/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2946,
+      "sha256": "f6c23ecb8fb2f399df3fb53bc79e9ad818c5a3826ba54fceb83e7f73b8071112",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ToggleGroup/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 173,
+      "sha256": "41fafda915404f287b5e9aa8a79bde0059f7d14b31436d6da6a55ee0d44ba62d",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/ToggleGroup/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3498,
+      "sha256": "074cfa1df4c50856f1ab244ddeb9113254afe3e5c6eb079e5476c308e496db79",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Tooltip/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 103,
+      "sha256": "881b35a5b425f840c19f7811a8714cc3e540bbbf5b8815533205e58d733e99f4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Tooltip/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2005,
+      "sha256": "554e1d5b5310dba96d3c6cf7c861e51d87e7bb627e6abd52c0c6748647192829",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Tree/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 287,
+      "sha256": "23afdae08884e4ddc16907c41b6e0983c88d3b1408312a966d88ab9a864de3b4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Tree/preview.html",
+      "mediaType": "text/html",
+      "bytes": 2587,
+      "sha256": "95292405e04da1e268c73ef43280b112104dab336170502b3600714542f3f68c",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Video/README.md",
+      "mediaType": "text/markdown",
+      "bytes": 122,
+      "sha256": "82dffe905e857eb279a1a07d26e8155b639b3a2c7b235830701939ee72f45a95",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/Video/preview.html",
+      "mediaType": "text/html",
+      "bytes": 1762,
+      "sha256": "8044ec09127b2ab05143b0b8b6c24b5014d6f2940eb2973b53209cbfbfd2a75e",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/bundle.css",
+      "mediaType": "text/css",
+      "bytes": 347942,
+      "sha256": "36a29d1ee00c2a139abb85468f960cca569fbbd609ee40c45da0a0f38a7fc022",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/components/bundle.js",
+      "mediaType": "application/octet-stream",
+      "bytes": 5076,
+      "sha256": "dd5af785d40239b7c50bcff590b3efafc41bc63e6cd9c026300169897d728073",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/design-system.json",
+      "mediaType": "application/json",
+      "bytes": 330,
+      "sha256": "874e1b0a8061e9799ec1d91585ba75dab00afe593aa5198df230e1c6c139f201",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/fonts/geist-19f9c925.woff2",
+      "mediaType": "font/woff2",
+      "bytes": 29400,
+      "sha256": "19f9c92546aa300c312235e3125af1b81394d8db9a4bc4a425cd5b641d2d54e1",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/fonts/geist-mono-684ad5b5.woff2",
+      "mediaType": "font/woff2",
+      "bytes": 23128,
+      "sha256": "684ad5b531f81d43c1e8c7038262d5db7cdc1f68006e04d6c7769efa8d33c8cc",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/claude-design/project/tokens.json",
+      "mediaType": "application/json",
+      "bytes": 17913,
+      "sha256": "1f145af8ed8b9b3a7a881cd2ebc604034ff02500765a5c2ec72bc882713c0311",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/dark.tokens.json",
+      "mediaType": "application/json",
+      "bytes": 18090,
+      "sha256": "70620aec7e787ae7b459f5b2ba3e170d6d25f82741408acab9555bd29a570ea2",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/figma/light.tokens.json",
+      "mediaType": "application/json",
+      "bytes": 18077,
+      "sha256": "41a2c809689d2059e89fcda1c861f64b2e1af0f9e87ece24b5a3ea0c99c82c5b",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/style-dictionary/config.dark.json",
+      "mediaType": "application/json",
+      "bytes": 359,
+      "sha256": "be9ae267d353e330c3c8cfe38b52ac55af351c3a60f1c810f062b5357f8831e4",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/style-dictionary/config.json",
+      "mediaType": "application/json",
+      "bytes": 286,
+      "sha256": "72c877650ea56cad8c61a8fee187801277877729020c53a900749e0811f4f964",
+      "role": "adapter"
+    },
+    {
+      "path": "adapters/tokens-studio/tokens.json",
+      "mediaType": "application/json",
+      "bytes": 14049,
+      "sha256": "243bb00c8c54d6fbcb3fec726f91261843e5253dbb17e23ead5b62716e6a2f52",
+      "role": "adapter"
+    },
+    {
+      "path": "assets/logo.svg",
+      "mediaType": "image/svg+xml",
+      "bytes": 18304,
+      "sha256": "7c38d7a6a1a6365ec709badf054b66cb208a42aea9ff8b0605a347f58942e64e",
+      "role": "asset"
+    },
+    {
+      "path": "assets/sample-chime.mp3",
+      "mediaType": "audio/mpeg",
+      "bytes": 24493,
+      "sha256": "1019cdf5154dcab82cd4b1bd3bad9aceb753df9ff64609017826dd93bec2dad9",
+      "role": "asset"
+    },
+    {
+      "path": "assets/sample-motion.webm",
+      "mediaType": "video/webm",
+      "bytes": 18665,
+      "sha256": "0ab58bf491cd6620dffe2486d2c8791337be5f5b3891fb3a685e4017cca73d27",
+      "role": "asset"
+    },
+    {
+      "path": "assets/sample-still.avif",
+      "mediaType": "image/avif",
+      "bytes": 764,
+      "sha256": "0b1956dec8191f08b7ed80bf8f4cccfd7f71dc93709c911d60f6a816c4591302",
+      "role": "asset"
+    },
+    {
+      "path": "components/accordion.html",
+      "mediaType": "text/html",
+      "bytes": 2763,
+      "sha256": "7988174825116582e5471279709b415c7fdd3894b85760fd7042716bd9d89757",
+      "role": "kit"
+    },
+    {
+      "path": "components/ai-chat.html",
+      "mediaType": "text/html",
+      "bytes": 9223,
+      "sha256": "d14c45b664e4cd2daa1990ffd4b103887b2ec46f60fa8c6e6fee28ee7245d255",
+      "role": "kit"
+    },
+    {
+      "path": "components/alert-dialog.html",
+      "mediaType": "text/html",
+      "bytes": 9032,
+      "sha256": "2b9d2f65dbb484a507fdb53e0937f03ff2b10e3fdb7f308654f9e71be1d8307d",
+      "role": "kit"
+    },
+    {
+      "path": "components/alert.html",
+      "mediaType": "text/html",
+      "bytes": 15793,
+      "sha256": "1148687f421061b1789468f4a8070f9ab4ce944c3b55120570c111784e0d6a9e",
+      "role": "kit"
+    },
+    {
+      "path": "components/aspect-ratio.html",
+      "mediaType": "text/html",
+      "bytes": 7072,
+      "sha256": "8cf978f7d884ea0d635c82b7149da821bde95c56601c9b5df082446cf89480e5",
+      "role": "kit"
+    },
+    {
+      "path": "components/attachment.html",
+      "mediaType": "text/html",
+      "bytes": 5896,
+      "sha256": "f0368481812a8b199e779c0378ac906f3c0a6a9a4a117b5bb99460653f7a6871",
+      "role": "kit"
+    },
+    {
+      "path": "components/audio.html",
+      "mediaType": "text/html",
+      "bytes": 1819,
+      "sha256": "b36db463576894738df8e05c463d53de0ba4c1c135d2a05455a7bbe2ded5811e",
+      "role": "kit"
+    },
+    {
+      "path": "components/avatar.html",
+      "mediaType": "text/html",
+      "bytes": 5714,
+      "sha256": "dfc94dc7838e312771848d9ec47a1889644e884f8479812c47da69cf6f6666e4",
+      "role": "kit"
+    },
+    {
+      "path": "components/badge.html",
+      "mediaType": "text/html",
+      "bytes": 17363,
+      "sha256": "8681d40569f1412c155ec355edf6c9e8fa9aebfcf704dd5cea2144c134f985ff",
+      "role": "kit"
+    },
+    {
+      "path": "components/breadcrumb.html",
+      "mediaType": "text/html",
+      "bytes": 3492,
+      "sha256": "b7b4e57fc014a02032e17ffa4287b86e8f9ef868963673611242d3271542d694",
+      "role": "kit"
+    },
+    {
+      "path": "components/bubble.html",
+      "mediaType": "text/html",
+      "bytes": 2056,
+      "sha256": "8f7a8e95f9cb49863bc690bc1ca39456e8809cc1858b075395106335bfa6f298",
+      "role": "kit"
+    },
+    {
+      "path": "components/button-group.html",
+      "mediaType": "text/html",
+      "bytes": 5904,
+      "sha256": "1a7bde52c766857bce3af4e31c076e6f4ed90e80db3b34f03cd0ddcc3c4a8735",
+      "role": "kit"
+    },
+    {
+      "path": "components/button.html",
+      "mediaType": "text/html",
+      "bytes": 17992,
+      "sha256": "e2a4daf41c880ec3f2f7e52b59abc979ebef40dc776ae79c6a99f368e15ad576",
+      "role": "kit"
+    },
+    {
+      "path": "components/calendar.html",
+      "mediaType": "text/html",
+      "bytes": 1780,
+      "sha256": "ebed0792fcae98e6cedc2ee9e874e10104248a8fa1e9c09e588376dd8e86afcc",
+      "role": "kit"
+    },
+    {
+      "path": "components/card.html",
+      "mediaType": "text/html",
+      "bytes": 2642,
+      "sha256": "ace31e393ae03bd622505b58e9b46e298743aaeb8d5f8dd9ae56ec342882ec83",
+      "role": "kit"
+    },
+    {
+      "path": "components/carousel.html",
+      "mediaType": "text/html",
+      "bytes": 9470,
+      "sha256": "89e2f5420fe08248ec7c84ca0f89fe568831692ce0e85739c92b95f54de28c97",
+      "role": "kit"
+    },
+    {
+      "path": "components/chart.html",
+      "mediaType": "text/html",
+      "bytes": 3709,
+      "sha256": "97d4a07f5107719fe83998117862c9fcac62a25e31cc737447db33d545adb77e",
+      "role": "kit"
+    },
+    {
+      "path": "components/checkbox.html",
+      "mediaType": "text/html",
+      "bytes": 1952,
+      "sha256": "324939afac4edaba308bfa29004ecf8a5e2fecbdbe3ceb7bf325e6796fdaf8db",
+      "role": "kit"
+    },
+    {
+      "path": "components/code-editor.html",
+      "mediaType": "text/html",
+      "bytes": 2209,
+      "sha256": "56747187b7ddbd91a5da507d1474041dc0fc7455d3ff814e0e6dcbec37207c79",
+      "role": "kit"
+    },
+    {
+      "path": "components/code.html",
+      "mediaType": "text/html",
+      "bytes": 18822,
+      "sha256": "5957b7b4e635b15b30680528673b46b02f3d09bbe1715031ba7c417acfc8c88e",
+      "role": "kit"
+    },
+    {
+      "path": "components/collapsible.html",
+      "mediaType": "text/html",
+      "bytes": 3261,
+      "sha256": "9c523a8e369ae16f9ce546cc384cf83f17e4fbb8996578fa5dd76ce699b84a2d",
+      "role": "kit"
+    },
+    {
+      "path": "components/combobox.html",
+      "mediaType": "text/html",
+      "bytes": 4888,
+      "sha256": "1c41aabd45ad701611a83f2bfc976f99aa4111f1ea382bf5434c3719b7d307ff",
+      "role": "kit"
+    },
+    {
+      "path": "components/command.html",
+      "mediaType": "text/html",
+      "bytes": 7739,
+      "sha256": "2d802190375d6d0bd40419e021aba1d21e73c4d861d00e29c15df9f3c17f1544",
+      "role": "kit"
+    },
+    {
+      "path": "components/container.html",
+      "mediaType": "text/html",
+      "bytes": 2851,
+      "sha256": "a50bab8742e1d90fa0cf19f2ef14743e2951822496955ade146dc54395dcbdf2",
+      "role": "kit"
+    },
+    {
+      "path": "components/context-menu.html",
+      "mediaType": "text/html",
+      "bytes": 2424,
+      "sha256": "7c06969f355bab3698af5c0e0fabe8f050b12e519d24f96bd46bf21f511a0b6d",
+      "role": "kit"
+    },
+    {
+      "path": "components/date-picker.html",
+      "mediaType": "text/html",
+      "bytes": 2847,
+      "sha256": "b9c8f55e1179e1dc39c1b7d0c232534464e503743d16a36063ff66cb251781de",
+      "role": "kit"
+    },
+    {
+      "path": "components/date-range-picker.html",
+      "mediaType": "text/html",
+      "bytes": 2275,
+      "sha256": "8f578d8ff58ac7147a1f0ef9550c206adb230b97308812e9d4850c87ad593fb4",
+      "role": "kit"
+    },
+    {
+      "path": "components/description-list.html",
+      "mediaType": "text/html",
+      "bytes": 6218,
+      "sha256": "a9eeb5b6368ebfcf649f4f197ba9a606a5d7d32e4d04e067592df3becc24107d",
+      "role": "kit"
+    },
+    {
+      "path": "components/dialog.html",
+      "mediaType": "text/html",
+      "bytes": 3994,
+      "sha256": "0d58df40943b4a90c5236306749399b214da78e35798d9ddfc17e1ab5f97a93d",
+      "role": "kit"
+    },
+    {
+      "path": "components/drawer.html",
+      "mediaType": "text/html",
+      "bytes": 12678,
+      "sha256": "4b2f89052038951b94195139f823be363a1d506014576bdcd6f085dc443f0262",
+      "role": "kit"
+    },
+    {
+      "path": "components/dropdown-menu.html",
+      "mediaType": "text/html",
+      "bytes": 4523,
+      "sha256": "ca3177c8d10c123d798db455e7286cbd1893baedcd117ed7c1e6dc859f134f01",
+      "role": "kit"
+    },
+    {
+      "path": "components/empty.html",
+      "mediaType": "text/html",
+      "bytes": 2485,
+      "sha256": "853e719e07cee582e7285f3183841589b6ba0b595fd646f748444d8233b0ac14",
+      "role": "kit"
+    },
+    {
+      "path": "components/event-calendar.html",
+      "mediaType": "text/html",
+      "bytes": 13450,
+      "sha256": "dd0b4edb0ce74b439a422935273c59c2dc8aca6bc799926ec6cb663417b5b470",
+      "role": "kit"
+    },
+    {
+      "path": "components/field.html",
+      "mediaType": "text/html",
+      "bytes": 4983,
+      "sha256": "247b323a04e70ea924205b3cbcf50a7193535b65aae2d270c65e344384092c28",
+      "role": "kit"
+    },
+    {
+      "path": "components/file-upload.html",
+      "mediaType": "text/html",
+      "bytes": 3441,
+      "sha256": "a150e51b1bd752b7faa0b4771981cd7a05bfa094e9b53541764269e50c9d6492",
+      "role": "kit"
+    },
+    {
+      "path": "components/filter-bar.html",
+      "mediaType": "text/html",
+      "bytes": 3500,
+      "sha256": "804e7b81650bad3d5357dc6ed1fcbd567de57bece9bbb01e672ddb3d83942eb5",
+      "role": "kit"
+    },
+    {
+      "path": "components/flex.html",
+      "mediaType": "text/html",
+      "bytes": 4156,
+      "sha256": "fcd5d2624fbda64457e5c53ac606aa2da8ab9ab244711d2d828288607dcdf215",
+      "role": "kit"
+    },
+    {
+      "path": "components/gallery.html",
+      "mediaType": "text/html",
+      "bytes": 9599,
+      "sha256": "52280da71a4ad7deee7fdee2e716a0fc154d1a7f7d3831e3fb20130edd4c4200",
+      "role": "kit"
+    },
+    {
+      "path": "components/graph.html",
+      "mediaType": "text/html",
+      "bytes": 1711,
+      "sha256": "d67087c85a6c152b17be0becc14dced3778a0ddd302ef149876391879a9e38b3",
+      "role": "kit"
+    },
+    {
+      "path": "components/grid.html",
+      "mediaType": "text/html",
+      "bytes": 4180,
+      "sha256": "fc3bf81e1c391c26bcacfe00b94cee736e24d435be695438e88e5a62c46bf9af",
+      "role": "kit"
+    },
+    {
+      "path": "components/hover-card.html",
+      "mediaType": "text/html",
+      "bytes": 2222,
+      "sha256": "7c0ef29a33a01b7c76da1ece6b6fd5f2d76e52eb04bd1055e416d327c905183b",
+      "role": "kit"
+    },
+    {
+      "path": "components/icon.html",
+      "mediaType": "text/html",
+      "bytes": 5672,
+      "sha256": "0f0414d63201de2698e54f5350488838bf4d9272eac72f191ed6fff3855ad9fc",
+      "role": "kit"
+    },
+    {
+      "path": "components/image.html",
+      "mediaType": "text/html",
+      "bytes": 4785,
+      "sha256": "7d5ce7653fde7dc52a180cfa12bc059f6663b57c0db8069f10682a8d2db92526",
+      "role": "kit"
+    },
+    {
+      "path": "components/index.html",
+      "mediaType": "text/html",
+      "bytes": 16142,
+      "sha256": "51e570aae77e96f2d561d3518f9cb31fe881b6624bcbefb62e1c0e6918a6826a",
+      "role": "kit"
+    },
+    {
+      "path": "components/input-group.html",
+      "mediaType": "text/html",
+      "bytes": 6343,
+      "sha256": "8851b98783d6e1465bfb99530fd31a66058d3d85568d1af1128ba56f83b992e0",
+      "role": "kit"
+    },
+    {
+      "path": "components/input-otp.html",
+      "mediaType": "text/html",
+      "bytes": 4609,
+      "sha256": "574f44f85de4c5242f198101890a531e05bb7d996c71399469684e5a3471f3cf",
+      "role": "kit"
+    },
+    {
+      "path": "components/input.html",
+      "mediaType": "text/html",
+      "bytes": 2893,
+      "sha256": "0be9a144f45311fb5f3690be2bfbcefc31b9b5d307e987bd74d10b401f576051",
+      "role": "kit"
+    },
+    {
+      "path": "components/item.html",
+      "mediaType": "text/html",
+      "bytes": 4804,
+      "sha256": "2cd6525424d32d7c46687500669906337f03f14ed23f32e3dfeea676dda8f278",
+      "role": "kit"
+    },
+    {
+      "path": "components/kanban.html",
+      "mediaType": "text/html",
+      "bytes": 5262,
+      "sha256": "57b651957df5c14c56f040e9a7d6d58da42cedb3af9e7c4b9c7309962ebc75c6",
+      "role": "kit"
+    },
+    {
+      "path": "components/kbd.html",
+      "mediaType": "text/html",
+      "bytes": 3193,
+      "sha256": "140ad155a8d42f9c215447439ca4f6cd89aad35345b49494a56e7d630d1af5e1",
+      "role": "kit"
+    },
+    {
+      "path": "components/kit.css",
+      "mediaType": "text/css",
+      "bytes": 348306,
+      "sha256": "301de8228404940d4337425824ca206ffd07c8c429a7d2eddbc3b198b5b2a679",
+      "role": "kit"
+    },
+    {
+      "path": "components/kpi.html",
+      "mediaType": "text/html",
+      "bytes": 4203,
+      "sha256": "83738a5fb5e379f6add92f7bbecc8dd93683d585dd956bb428296e54a61a3522",
+      "role": "kit"
+    },
+    {
+      "path": "components/label.html",
+      "mediaType": "text/html",
+      "bytes": 2131,
+      "sha256": "991a522a4304fa62876159cdabbeb10045410786e68252265bad2780d6fb8627",
+      "role": "kit"
+    },
+    {
+      "path": "components/link.html",
+      "mediaType": "text/html",
+      "bytes": 1914,
+      "sha256": "1ad606f76867ff67edc0250f53897dff515258832cdcbf70d90c622bf958caa2",
+      "role": "kit"
+    },
+    {
+      "path": "components/list.html",
+      "mediaType": "text/html",
+      "bytes": 3342,
+      "sha256": "a3e8ce6c5724550ec76e5e4cd528d3804c621c588d377b7cfd51703783ae0e2f",
+      "role": "kit"
+    },
+    {
+      "path": "components/manifest.json",
+      "mediaType": "application/json",
+      "bytes": 62915,
+      "sha256": "e63d5dd7cb878661e96eb797e5e6c266a2ec57a41725264c097d81036fc320be",
+      "role": "kit"
+    },
+    {
+      "path": "components/map.html",
+      "mediaType": "text/html",
+      "bytes": 2149,
+      "sha256": "ee6d5cf5050d41a9446f2daa07e77ad3bc1e14cc4b569ba66f4d30cfe470b034",
+      "role": "kit"
+    },
+    {
+      "path": "components/marker.html",
+      "mediaType": "text/html",
+      "bytes": 5830,
+      "sha256": "a55d51fdee1510dbfe2339f843f915f0b9b8c147c5a23f654c95af3256b4e384",
+      "role": "kit"
+    },
+    {
+      "path": "components/marquee.html",
+      "mediaType": "text/html",
+      "bytes": 2209,
+      "sha256": "5e53f824a18d680c8f4948d4c5c988ccae322f3ee3bd4285e563f0aae1509a63",
+      "role": "kit"
+    },
+    {
+      "path": "components/matrix.html",
+      "mediaType": "text/html",
+      "bytes": 1744,
+      "sha256": "86179272775b55dbd2f0890e0eec6065b81c5a311bf92346726b7fe777a23baa",
+      "role": "kit"
+    },
+    {
+      "path": "components/menubar.html",
+      "mediaType": "text/html",
+      "bytes": 2347,
+      "sha256": "64d741c5a9c0d53a1805508363acf2f314f2c07dd38f340373b8cf075709bc40",
+      "role": "kit"
+    },
+    {
+      "path": "components/message-scroller.html",
+      "mediaType": "text/html",
+      "bytes": 7272,
+      "sha256": "0687e7f2c89dbc8c337fac09e5f6138d7dbca85a6ea565fb54153cfbae1777e7",
+      "role": "kit"
+    },
+    {
+      "path": "components/message.html",
+      "mediaType": "text/html",
+      "bytes": 4773,
+      "sha256": "a02867558d3644156f10539081742e36e2b986a7dbc931400e84051a9f1ec0fc",
+      "role": "kit"
+    },
+    {
+      "path": "components/native-select.html",
+      "mediaType": "text/html",
+      "bytes": 4247,
+      "sha256": "bde6650db8bc9072de72629adf9087263a1781e475bc6883d5a19430aa80be21",
+      "role": "kit"
+    },
+    {
+      "path": "components/navigation-menu.html",
+      "mediaType": "text/html",
+      "bytes": 3913,
+      "sha256": "b1baffe5024146bf12048ebe5be43879e2df5799cb84b5a9b4b6d273dad61e74",
+      "role": "kit"
+    },
+    {
+      "path": "components/number-input.html",
+      "mediaType": "text/html",
+      "bytes": 12578,
+      "sha256": "229d8904311dab56014357a9bed9233580bb9f4fa71a5f9d582ced36191e8673",
+      "role": "kit"
+    },
+    {
+      "path": "components/pagination.html",
+      "mediaType": "text/html",
+      "bytes": 13290,
+      "sha256": "6863901cbaed306907f5a586f788d998f88aac7124d3d72969bf4cc5cc3d173d",
+      "role": "kit"
+    },
+    {
+      "path": "components/popover.html",
+      "mediaType": "text/html",
+      "bytes": 4925,
+      "sha256": "10816e502e69c247a67cc34f78466ae673483dbd43f45da3f7de0966155fcdd8",
+      "role": "kit"
+    },
+    {
+      "path": "components/preview.html",
+      "mediaType": "text/html",
+      "bytes": 3799,
+      "sha256": "2984e1a787760d5a1b13a9a26f71bea37b190683f3ba0b968a1d888de500db01",
+      "role": "kit"
+    },
+    {
+      "path": "components/progress.html",
+      "mediaType": "text/html",
+      "bytes": 5144,
+      "sha256": "15d852fa4f6bde2baebfcb4af272e4eefa59f700d58ddefd12acfe8388177949",
+      "role": "kit"
+    },
+    {
+      "path": "components/qr-code.html",
+      "mediaType": "text/html",
+      "bytes": 6661,
+      "sha256": "185152c0a254da2d589307330e98030eb68ecb711b84c990ecc5c6e97c589839",
+      "role": "kit"
+    },
+    {
+      "path": "components/radio-group.html",
+      "mediaType": "text/html",
+      "bytes": 2241,
+      "sha256": "eebea6635bc4d84a43ca4476579ad5864130f6b3e13cac0f8395d930e217ac97",
+      "role": "kit"
+    },
+    {
+      "path": "components/rating.html",
+      "mediaType": "text/html",
+      "bytes": 13456,
+      "sha256": "08008c11ff1d2601b83a781f215095ffe1454051865f2c456c05fb39c3341261",
+      "role": "kit"
+    },
+    {
+      "path": "components/reorderable-list.html",
+      "mediaType": "text/html",
+      "bytes": 10740,
+      "sha256": "54e000c3dd32ccd1f5b37ebf9e17e9492eed726f91398655a46272dc717d0153",
+      "role": "kit"
+    },
+    {
+      "path": "components/resizable.html",
+      "mediaType": "text/html",
+      "bytes": 5787,
+      "sha256": "ea9315e5b181ab3a0b9a06b21103023936324f25d91d1ba531882626b5cfbcc7",
+      "role": "kit"
+    },
+    {
+      "path": "components/rich-text-editor.html",
+      "mediaType": "text/html",
+      "bytes": 2300,
+      "sha256": "cb4f084950151de5839c6760b8d4d0121d8268ea3fdfcac8652b0446509f00af",
+      "role": "kit"
+    },
+    {
+      "path": "components/scroll-area.html",
+      "mediaType": "text/html",
+      "bytes": 3977,
+      "sha256": "90b33e48a6ca63def94fb1689da7e9c8960cb26c217cea042bfe310b81e1304a",
+      "role": "kit"
+    },
+    {
+      "path": "components/search-input.html",
+      "mediaType": "text/html",
+      "bytes": 6582,
+      "sha256": "c558b785fd4c785dad37143a26190a496fd469d53a7a46b71cebf95adc5e1830",
+      "role": "kit"
+    },
+    {
+      "path": "components/select.html",
+      "mediaType": "text/html",
+      "bytes": 4818,
+      "sha256": "4b0d25903a96f2a7ee398ab10db5e8042a524db2bc10e98edadc0d7d317b4a70",
+      "role": "kit"
+    },
+    {
+      "path": "components/separator.html",
+      "mediaType": "text/html",
+      "bytes": 1687,
+      "sha256": "13a1ea56d2ead7ecd0382d0cf1f44f274fa5e9f0048a367ba3dcae58f9a26cb6",
+      "role": "kit"
+    },
+    {
+      "path": "components/sheet.html",
+      "mediaType": "text/html",
+      "bytes": 5315,
+      "sha256": "184b40212bbfa9eb14c55aaacd5679f9e94d0a3e33e640c5e96bd0510d47757a",
+      "role": "kit"
+    },
+    {
+      "path": "components/sidebar.html",
+      "mediaType": "text/html",
+      "bytes": 4209,
+      "sha256": "942161e68346a26fe3b4bd62ef6eae4cab2b4dba1f3a37306f0c38831429888a",
+      "role": "kit"
+    },
+    {
+      "path": "components/skeleton.html",
+      "mediaType": "text/html",
+      "bytes": 3506,
+      "sha256": "0e926fe7e892f57705281f5624e7356f116c9a7684b015ba48a883779050d039",
+      "role": "kit"
+    },
+    {
+      "path": "components/slider.html",
+      "mediaType": "text/html",
+      "bytes": 1742,
+      "sha256": "c559d9c4d44a7631d2f0ae0a2e0008800cbda2d5ec0ffdc6261607af2d1b23ff",
+      "role": "kit"
+    },
+    {
+      "path": "components/spacer.html",
+      "mediaType": "text/html",
+      "bytes": 1388,
+      "sha256": "925f0f3a66119967c0ee61291fafbfdddf9f6c4364299d72ae0c3441a10dbf26",
+      "role": "kit"
+    },
+    {
+      "path": "components/spinner.html",
+      "mediaType": "text/html",
+      "bytes": 2337,
+      "sha256": "70cf096fa2862778231b9ca936c99fd15347196636d4bc0eb5e692efd2925b54",
+      "role": "kit"
+    },
+    {
+      "path": "components/stepper.html",
+      "mediaType": "text/html",
+      "bytes": 21431,
+      "sha256": "96d3f7213a8769c78101619822478fcfc929097c9cfacd4491cda791fb2fe726",
+      "role": "kit"
+    },
+    {
+      "path": "components/swatch.html",
+      "mediaType": "text/html",
+      "bytes": 2000,
+      "sha256": "1dcddb81504ed926b113fa0eda9c8b7837e6d978823d0ee1af07be89444e636a",
+      "role": "kit"
+    },
+    {
+      "path": "components/switch.html",
+      "mediaType": "text/html",
+      "bytes": 2008,
+      "sha256": "dbce430dc9ed80035fe5133f3f42d09961c057c5d3be664f64340baaf94fa83d",
+      "role": "kit"
+    },
+    {
+      "path": "components/table.html",
+      "mediaType": "text/html",
+      "bytes": 18343,
+      "sha256": "b943d5062a673850d44f94cf22355ac95dfc693f9546ec28e40912ea3ad3a48c",
+      "role": "kit"
+    },
+    {
+      "path": "components/tabs.html",
+      "mediaType": "text/html",
+      "bytes": 5014,
+      "sha256": "f6fdd5e538df5d558d3a83a03d8020274dc36374c4acc707ccd3c62a2e6ee546",
+      "role": "kit"
+    },
+    {
+      "path": "components/text.html",
+      "mediaType": "text/html",
+      "bytes": 1876,
+      "sha256": "358dc018c6eefc6c20be573f39bf48359ee58172d231e54d79d78f5ae15c1c2d",
+      "role": "kit"
+    },
+    {
+      "path": "components/textarea.html",
+      "mediaType": "text/html",
+      "bytes": 2686,
+      "sha256": "2e84f081c121d71c119160f02b014af38d3d5d90bc53c94389d63d618943da1b",
+      "role": "kit"
+    },
+    {
+      "path": "components/theme-toggle.html",
+      "mediaType": "text/html",
+      "bytes": 1582,
+      "sha256": "6feedc4fef2b883da4c7def6ad13e241b13e6cc8b71d9b9181dbb1207902231b",
+      "role": "kit"
+    },
+    {
+      "path": "components/time-picker.html",
+      "mediaType": "text/html",
+      "bytes": 7463,
+      "sha256": "997956b88a9c45c0f345979db78bad9639184fcb47adee55b469eeaa50acac9c",
+      "role": "kit"
+    },
+    {
+      "path": "components/timeline.html",
+      "mediaType": "text/html",
+      "bytes": 3294,
+      "sha256": "e8f2bd2bc3476ac90b13d301605a478649371d6a293624a7a7a5da7820ff0fab",
+      "role": "kit"
+    },
+    {
+      "path": "components/toast.html",
+      "mediaType": "text/html",
+      "bytes": 5125,
+      "sha256": "0ae9e2da7ad5f1c3287b3b1cf192fa6c0c3ed689984636bc5e8cfabd7aab77bf",
+      "role": "kit"
+    },
+    {
+      "path": "components/toc.html",
+      "mediaType": "text/html",
+      "bytes": 2594,
+      "sha256": "61df3c98ea4513e71bb5df0b7b2c9c901468aaa7af2ef80f2eb6e22549b7703d",
+      "role": "kit"
+    },
+    {
+      "path": "components/toggle-group.html",
+      "mediaType": "text/html",
+      "bytes": 3742,
+      "sha256": "09efaf867df147583c72c70f664b9d612388f9b3ee620e6dc3b2e33b26f8e91f",
+      "role": "kit"
+    },
+    {
+      "path": "components/toggle.html",
+      "mediaType": "text/html",
+      "bytes": 3184,
+      "sha256": "3976023796875204ebb37998847eb05d264dfeb75d0ffd157fc93b4f93e952fd",
+      "role": "kit"
+    },
+    {
+      "path": "components/tooltip.html",
+      "mediaType": "text/html",
+      "bytes": 2249,
+      "sha256": "9cd189b2ecda314117fd2ba9ec52bda84a9b090e823d165a231c9d2a937f8de7",
+      "role": "kit"
+    },
+    {
+      "path": "components/tree.html",
+      "mediaType": "text/html",
+      "bytes": 2832,
+      "sha256": "5deee6f7c9d5db82252f315884ebc2212215e559b385375c3947f425a2a288cb",
+      "role": "kit"
+    },
+    {
+      "path": "components/video.html",
+      "mediaType": "text/html",
+      "bytes": 2075,
+      "sha256": "904598eae485aa7f82162329ae9d080b5b7ad08df4662e113ff9b1348fbd699c",
+      "role": "kit"
+    },
+    {
+      "path": "css/tailwind.css",
+      "mediaType": "text/css",
+      "bytes": 2733,
+      "sha256": "9336cbebb89eb0fe1734b740e15a163347a273e076039940ae8b47026a553ce0",
+      "role": "css"
+    },
+    {
+      "path": "css/theme.css",
+      "mediaType": "text/css",
+      "bytes": 3532,
+      "sha256": "443ca774d201bd2170ed7cf9476090de72dbcf2f98ea1f0b5585bdb8a49a36ac",
+      "role": "css"
+    },
+    {
+      "path": "fonts/geist-19f9c925.woff2",
+      "mediaType": "font/woff2",
+      "bytes": 29400,
+      "sha256": "19f9c92546aa300c312235e3125af1b81394d8db9a4bc4a425cd5b641d2d54e1",
+      "role": "font"
+    },
+    {
+      "path": "fonts/geist-mono-684ad5b5.woff2",
+      "mediaType": "font/woff2",
+      "bytes": 23128,
+      "sha256": "684ad5b531f81d43c1e8c7038262d5db7cdc1f68006e04d6c7769efa8d33c8cc",
+      "role": "font"
+    },
+    {
+      "path": "llms.txt",
+      "mediaType": "text/plain",
+      "bytes": 1304,
+      "sha256": "6be863a698d30b5c02e1cc8cca051d7e57be6fa4882890f1b0a942577e9c3401",
+      "role": "index"
+    },
+    {
+      "path": "tokens/base.tokens.json",
+      "mediaType": "application/json",
+      "bytes": 43185,
+      "sha256": "65251c5b0d79d90da4ffa7f99a947e1e27adc72c8474bef8ea9f5410a0aa3886",
+      "role": "tokens"
+    },
+    {
+      "path": "tokens/dark.tokens.json",
+      "mediaType": "application/json",
+      "bytes": 43240,
+      "sha256": "e4f8ff11f59667c619c55e66a42e49ed30468336b4fa5d5eaafb1c331b1f1460",
+      "role": "tokens"
+    },
+    {
+      "path": "tokens/sovrium.resolver.json",
+      "mediaType": "application/json",
+      "bytes": 762,
+      "sha256": "a4a0ae1725f5728bd1a5174dfbb5eae7ecbaf887373fc7c991da955f7fd4def6",
+      "role": "resolver"
+    }
+  ],
+  "adapters": [
+    "claude-design",
+    "figma",
+    "style-dictionary",
+    "tokens-studio"
+  ]
+}

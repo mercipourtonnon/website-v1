@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html
+  lang="fr-FR"
+  dir="ltr"
+  data-timezone="UTC"
+  data-density="compact"
+  data-features="{}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter - Merci pour ton non</title>
+    <meta
+      name="description"
+      content="Inscris-toi à la newsletter de Merci pour ton non pour recevoir nos actualités, nos prochains ateliers et nos ressources sur le consentement."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://mercipourtonnon.fr/newsletter" />
+    <meta property="og:title" content="Newsletter | Merci pour ton non" />
+    <meta
+      property="og:description"
+      content="Inscris-toi pour suivre nos actualités, nos prochains ateliers et nos ressources sur le consentement."
+    />
+    <meta property="og:image" content="https://mercipourtonnon.fr/social.png" />
+    <meta property="og:url" content="https://mercipourtonnon.fr/newsletter" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Merci pour ton non" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="theme-color" content="#7B01FE" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="icon" href="favicon/favicon-32x32.png" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      href="favicon/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="favicon/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <script>
+      (function () {
+        "use strict";
+        function wake() {
+          var h = document.querySelector("[data-island-deferred]");
+          if (!h) return;
+          h.setAttribute("data-island", h.getAttribute("data-island-deferred"));
+          h.removeAttribute("data-island-deferred");
+          var t = document.querySelector("template[data-island-entry]");
+          if (t) {
+            var s = document.createElement("script");
+            s.type = "module";
+            s.src = t.getAttribute("data-island-entry");
+            t.remove();
+            document.head.appendChild(s);
+          } else {
+            document.dispatchEvent(new CustomEvent("sovrium:mount-islands"));
+          }
+        }
+        function open() {
+          window.__sovriumOpenCommandPalette = true;
+          wake();
+          document.dispatchEvent(
+            new CustomEvent("sovrium:open-command-palette"),
+          );
+        }
+        document.addEventListener(
+          "keydown",
+          function (e) {
+            if (
+              (e.metaKey || e.ctrlKey) &&
+              e.key &&
+              e.key.toLowerCase() === "k"
+            ) {
+              e.preventDefault();
+              open();
+            }
+          },
+          true,
+        );
+        document.addEventListener(
+          "click",
+          function (e) {
+            var t = e.target;
+            if (t && t.closest && t.closest("[data-command-palette-trigger]")) {
+              e.preventDefault();
+              open();
+            }
+          },
+          true,
+        );
+      })();
+    </script>
+    <script>
+      (function () {
+        try {
+          var stored = window.localStorage.getItem("theme");
+          var dark;
+          if (stored === "dark") {
+            dark = true;
+          } else if (stored === "light") {
+            dark = false;
+          } else {
+            var configured = "light";
+            if (configured === "dark") {
+              dark = true;
+            } else if (configured === "light") {
+              dark = false;
+            } else {
+              dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            }
+          }
+          var root = document.documentElement;
+          if (dark) {
+            root.classList.add("dark");
+          } else {
+            root.classList.remove("dark");
+          }
+          if (
+            stored !== "dark" &&
+            stored !== "light" &&
+            configured === "system"
+          ) {
+            window
+              .matchMedia("(prefers-color-scheme: dark)")
+              .addEventListener("change", function (event) {
+                var now = window.localStorage.getItem("theme");
+                if (now !== "dark" && now !== "light") {
+                  root.classList.toggle("dark", event.matches);
+                }
+              });
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+    />
+    <style>
+      .sib-form {
+        padding: 0 !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        max-width: none !important;
+      }
+    </style>
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/output-6283eb67.css" />
+    <style>
+      html[lang="fr-FR"] {
+        direction: ltr;
+      }
+      html[lang="fr-FR"] body {
+        direction: ltr;
+      }
+    </style>
+</head>
+  <body
+    style="
+      font-family:
+        Neue Machina,
+        Space Grotesk,
+        -apple-system,
+        BlinkMacSystemFont,
+        Segoe UI,
+        sans-serif;
+    "
+  >
+    <a
+      href="#main-content"
+      class="text-md bg-primary text-primary-foreground ring-ring sr-only z-50 rounded-md px-4 py-2 font-medium focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus-visible:ring-2 focus-visible:outline-none"
+      >Aller au contenu principal</a
+    ><span id="sovrium-new-tab-notice" hidden=""
+      >(s’ouvre dans un nouvel onglet)</span
+    >
+    <main
+      id="main-content"
+      tabindex="-1"
+      data-testid="page-newsletter"
+      data-page-name="newsletter"
+      data-sovrium-search-body="true"
+      style="min-height: 1px"
+    >
+      <div
+        class="min-h-screen text-bleu-fonce bg-mauve-light"
+        data-testid="container"
+        data-component-type="container"
+        role="group"
+      >
+        <header
+          class="bg-white shadow-sm"
+          data-testid="child-0"
+          data-component-type="container"
+        >
+          <div
+            class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+            data-testid="child-0"
+            data-component-type="container"
+            role="group"
+          >
+            <a
+              href="index.html"
+              class="text-primary hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 flex items-center"
+              data-testid="child-0"
+              data-component-type="link"
+              ><img
+                src="logo-without-marging.svg"
+                alt="Merci pour ton non"
+                class="rounded-lg object-cover h-12 sm:h-14 w-auto"
+                data-testid="child-0"
+                data-component-type="image"
+                loading="lazy"
+                data-slot="image" /></a
+            ><a
+              href="index.html"
+              class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 duration-150 text-sm text-gray-600 hover:text-mauve font-medium transition-colors flex items-center gap-1"
+              data-testid="child-1"
+              data-component-type="link"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-left size-4 shrink-0 text-current w-4 h-4"
+                data-testid="icon-chevron-left"
+                style="display: inline-block; min-height: 1px; min-width: 1px"
+                data-component-type="icon"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path d="m15 18-6-6 6-6"></path></svg
+              ><span data-testid="child-1" data-component-type="text"
+                >Retour au site</span
+              ></a
+            >
+          </div>
+        </header>
+        <main
+          class="flex items-center justify-center px-6 py-16 min-h-[calc(100vh-140px)]"
+          data-testid="child-1"
+          data-component-type="container"
+        >
+          <div
+            class="max-w-lg w-full"
+            data-testid="child-0"
+            data-component-type="container"
+            role="group"
+          >
+            <div
+              class="bg-white rounded-2xl shadow-sm w-full p-8 sm:p-10"
+              data-testid="child-0"
+              data-component-type="container"
+              role="group"
+            >
+              <div
+                class="text-center mb-8"
+                data-testid="child-0"
+                data-component-type="container"
+                role="group"
+              >
+                <h1
+                  class="text-3xl md:text-4xl title-font text-mauve mb-4"
+                  data-testid="child-0"
+                  data-component-type="text"
+                >
+                  reste informé·e
+                </h1>
+                <p
+                  class="text-base text-gray-600"
+                  data-testid="child-1"
+                  data-component-type="text"
+                >
+                  Inscris-toi pour suivre nos actualités, nos prochains ateliers
+                  et nos ressources sur le consentement.
+                </p>
+              </div>
+              <div
+                id="newsletter-embed"
+                data-testid="child-1"
+                style="display: inline-block; min-height: 1px; min-width: 1px"
+                data-component-type="container"
+              ></div>
+            </div>
+          </div>
+        </main>
+        <footer
+          class="text-center py-8 px-6"
+          data-testid="child-2"
+          data-component-type="container"
+        >
+          <a
+            href="index.html"
+            class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 duration-150 text-sm text-gray-500 hover:text-mauve transition-colors"
+            data-testid="child-0"
+            data-component-type="link"
+            >← Retour sur mercipourtonnon.fr</a
+          >
+          <p
+            class="text-xs text-gray-400 mt-2"
+            data-testid="child-1"
+            data-component-type="text"
+          >
+            © 2026 Merci pour ton non. Tous droits réservés.
+          </p>
+        </footer>
+      </div>
+      <script type="application/json" data-command-palette-config="true">
+        {
+          "tables": [
+            {
+              "name": "facilitators",
+              "label": "facilitators",
+              "labelPlural": "facilitators",
+              "fields": [
+                { "name": "display_name", "label": "Nom affiché" },
+                { "name": "short_name", "label": "Prénom" }
+              ]
+            },
+            {
+              "name": "venues",
+              "label": "venues",
+              "labelPlural": "venues",
+              "fields": [
+                { "name": "name", "label": "Nom du lieu" },
+                { "name": "zip_code", "label": "Code postal" },
+                { "name": "city", "label": "Ville" },
+                { "name": "country", "label": "Pays" }
+              ]
+            },
+            {
+              "name": "workshops",
+              "label": "workshops",
+              "labelPlural": "workshops",
+              "fields": [
+                { "name": "slug", "label": "Slug" },
+                { "name": "date_label", "label": "Date (texte)" },
+                { "name": "time_label", "label": "Heure (texte)" },
+                { "name": "booking_url", "label": "Lien de réservation" }
+              ]
+            },
+            {
+              "name": "ressources",
+              "label": "ressources",
+              "labelPlural": "ressources",
+              "fields": [
+                { "name": "title", "label": "Titre" },
+                { "name": "author", "label": "Auteur·ice / éditeur" },
+                { "name": "url", "label": "Lien" },
+                { "name": "note", "label": "Pourquoi c'est utile" }
+              ]
+            }
+          ],
+          "pages": [
+            {
+              "name": "home",
+              "path": "/",
+              "title": "Merci pour ton non - Consentement à Strasbourg"
+            },
+            {
+              "name": "notre-mission",
+              "path": "/notre-mission",
+              "title": "Notre mission et l'équipe - Merci pour ton non"
+            },
+            {
+              "name": "nos-ateliers",
+              "path": "/nos-ateliers",
+              "title": "Atelier de consentement à Strasbourg - Merci pour ton non"
+            },
+            {
+              "name": "nos-stands",
+              "path": "/nos-stands",
+              "title": "Nos stands de sensibilisation - Merci pour ton non"
+            },
+            {
+              "name": "nos-interventions",
+              "path": "/nos-interventions",
+              "title": "Interventions pour les structures - Merci pour ton non"
+            },
+            {
+              "name": "mentions-legales",
+              "path": "/mentions-legales",
+              "title": "Mentions légales - Merci pour ton non"
+            },
+            {
+              "name": "newsletter",
+              "path": "/newsletter",
+              "title": "Newsletter - Merci pour ton non"
+            },
+            {
+              "name": "le-consentement",
+              "path": "/le-consentement",
+              "title": "Notre vision du consentement - Merci pour ton non"
+            },
+            {
+              "name": "ressources",
+              "path": "/ressources",
+              "title": "Ressources sur le consentement - Merci pour ton non"
+            },
+            {
+              "name": "devenir-benevole",
+              "path": "/devenir-benevole",
+              "title": "Devenir bénévole - Merci pour ton non"
+            },
+            {
+              "name": "vos-idees",
+              "path": "/vos-idees",
+              "title": "Vos idées pour l'association - Merci pour ton non"
+            },
+            {
+              "name": "espace-connexion",
+              "path": "/connexion",
+              "title": "Connexion - Espace bénévole"
+            },
+            {
+              "name": "espace-inscription",
+              "path": "/inscription",
+              "title": "Rejoindre l'équipe bénévole - Merci pour ton non"
+            }
+          ],
+          "strings": {
+            "createTitle": "Nouvel enregistrement dans {table}",
+            "create": "Créer",
+            "cancel": "Annuler",
+            "search": "Rechercher",
+            "searchPlaceholder": "Rechercher…",
+            "quickActions": "Actions rapides",
+            "pages": "Pages",
+            "createIn": "Créer un enregistrement dans {table}",
+            "goTo": "Aller à {page}",
+            "toggleDarkMode": "Basculer le mode sombre",
+            "darkModeOn": "Mode sombre activé",
+            "lightModeOn": "Mode clair activé"
+          }
+        }
+      </script>
+      <div
+        data-island-deferred="command"
+        data-component-type="command"
+        data-island-props='{"hints":{"navigate":"naviguer","open":"ouvrir","close":"fermer","title":"Palette de commandes","search":"Rechercher","searchAll":"Rechercher dans toutes vos données","commandPlaceholder":"Saisissez une commande ou recherchez…","commandLabel":"Rechercher des commandes","empty":"Aucun résultat.","startTyping":"Commencez à taper pour rechercher des enregistrements, des réponses, des fichiers, des automatisations et des utilisateurs.","searching":"Recherche en cours…","noResultsFor":"Aucun résultat pour « {query} »"}}'
+        class="hidden"
+      >
+        <span class="sr-only"></span>
+      </div>
+    </main>
+    <script src="assets/brevo-embed.js" defer=""></script>
+    <script
+      src="https://sibforms.com/forms/end-form/build/main.js"
+      defer=""
+    ></script>
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = "Veuillez choisir un code pays";
+      window.LOCALE = "fr";
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE =
+        "Les informations fournies ne sont pas valides.";
+      window.REQUIRED_ERROR_MESSAGE = "Ce champ est requis.";
+      window.GENERIC_INVALID_MESSAGE =
+        "Les informations fournies ne sont pas valides.";
+      window.translation = {
+        common: {
+          selectedList: "{quantity} liste sélectionnée",
+          selectedLists: "{quantity} listes sélectionnées",
+        },
+      };
+      var AUTOHIDE = Boolean(0);
+    </script>
+    <script src="assets/scroll-animation-52188b8a.js" defer=""></script>
+    <script>
+      !(function () {
+        function openModal(id) {
+          window.__sovriumOpenModals = window.__sovriumOpenModals || {};
+          window.__sovriumOpenModals[id] = true;
+          var c = document.getElementById(id);
+          if (!c) return;
+          c.style.display = "";
+          var d = c.querySelector('[role="dialog"]');
+          if (d) {
+            d.removeAttribute("hidden");
+            d.setAttribute("aria-hidden", "false");
+            d.focus();
+          }
+        }
+        function closeModal(c) {
+          if (c.querySelector('[data-pending="true"]')) return;
+          c.style.display = "none";
+        }
+        document.addEventListener("click", function (t) {
+          var e = t.target.closest(
+            "[data-click-animation], [data-click-navigate], [data-click-open-url], [data-click-scroll-to], [data-click-toggle-element], [data-click-submit-form], [data-click-modal], [data-modal-close], [data-backdrop]",
+          );
+          if (!e) return;
+          if (e.hasAttribute("data-modal-close")) {
+            var mc = e.closest("[data-modal-container]");
+            if (mc) closeModal(mc);
+            return;
+          }
+          if (e.hasAttribute("data-backdrop") && t.target === e) {
+            var mc2 = e.closest("[data-modal-container]");
+            if (mc2) closeModal(mc2);
+            return;
+          }
+          var n = e.getAttribute("data-click-animation"),
+            a = e.getAttribute("data-click-navigate"),
+            c = e.getAttribute("data-click-open-url"),
+            i = e.getAttribute("data-click-open-in-new-tab") === "true",
+            o = e.getAttribute("data-click-scroll-to"),
+            l = e.getAttribute("data-click-toggle-element"),
+            r = e.getAttribute("data-click-submit-form"),
+            m = e.getAttribute("data-click-modal"),
+            s = c || a,
+            d = !!c;
+          if (m) {
+            openModal(m);
+          } else if (r) {
+            var f = document.querySelector(r),
+              b = f && f.querySelector("[type=submit]");
+            f &&
+              "FORM" === f.tagName &&
+              !(b && b.disabled) &&
+              f.requestSubmit();
+          } else if (l) {
+            var g = document.querySelector(l);
+            if (g) {
+              var h = "none" === window.getComputedStyle(g).display;
+              g.style.display = h ? "" : "none";
+            }
+          } else if (o) {
+            var j = document.querySelector(o);
+            j && j.scrollIntoView({ behavior: "smooth", block: "start" });
+          } else if (n && "none" !== n) {
+            var k = "animate-click-" + n;
+            if ((e.classList.add(k), s)) {
+              var done = !1;
+              var cb = function () {
+                done ||
+                  ((done = !0),
+                  e.classList.remove(k),
+                  d && i
+                    ? window.open(s, "_blank", "noopener,noreferrer")
+                    : (window.location.href = s));
+              };
+              e.addEventListener("animationend", cb, { once: !0 });
+              setTimeout(cb, 300);
+            } else {
+              var cb2 = function () {
+                e.classList.remove(k);
+              };
+              e.addEventListener("animationend", cb2, { once: !0 });
+              setTimeout(cb2, 300);
+            }
+          } else
+            s &&
+              (d && i
+                ? window.open(s, "_blank", "noopener,noreferrer")
+                : (window.location.href = s));
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            var open = document.querySelector(
+              '[data-modal-container]:not([style*="display: none"])',
+            );
+            if (!open) {
+              var all = document.querySelectorAll("[data-modal-container]");
+              for (var i = 0; i < all.length; i++) {
+                if (all[i].style.display !== "none") {
+                  open = all[i];
+                  break;
+                }
+              }
+            }
+            if (open) closeModal(open);
+          }
+        });
+      })();
+      !(function () {
+        function grow(el) {
+          el.style.height = "auto";
+          el.style.height = el.scrollHeight + "px";
+        }
+        var els = document.querySelectorAll("textarea[data-auto-resize]");
+        for (var i = 0; i < els.length; i++) {
+          (function (el) {
+            el.style.overflow = "hidden";
+            el.style.resize = "none";
+            el.addEventListener("input", function () {
+              grow(el);
+            });
+            grow(el);
+          })(els[i]);
+        }
+      })();
+      !(function () {
+        var root = document.documentElement,
+          mq = window.matchMedia("(prefers-color-scheme: dark)"),
+          follow = !1;
+        document.addEventListener("click", function (t) {
+          var e = t.target.closest("[data-theme-toggle], [data-theme-set]");
+          if (!e) return;
+          var v = e.getAttribute("data-theme-set"),
+            dark =
+              v === null
+                ? !root.classList.contains("dark")
+                : v === "system"
+                  ? mq.matches
+                  : v === "dark";
+          root.classList.toggle("dark", dark);
+          try {
+            if (v === "system") {
+              window.localStorage.removeItem("theme");
+              if (!follow) {
+                follow = !0;
+                mq.addEventListener("change", function (m) {
+                  var s = window.localStorage.getItem("theme");
+                  if (s !== "dark" && s !== "light")
+                    root.classList.toggle("dark", m.matches);
+                });
+              }
+            } else {
+              window.localStorage.setItem("theme", dark ? "dark" : "light");
+            }
+          } catch (err) {}
+        });
+      })();
+      !(function () {
+        document.addEventListener("click", function (t) {
+          var b = t.target.closest("[data-copy-code]");
+          if (!b) return;
+          var s = b.closest("[data-code-copy-scope]");
+          if (!s) return;
+          var p =
+            s.querySelector("[data-copy-target]") ||
+            s.querySelector("[data-code-command]") ||
+            s.querySelector("pre:not([data-code-output])");
+          if (!p) return;
+          var c = p.querySelector("code") || p;
+          var text = c.textContent || "";
+          if (!text) return;
+          var st = s.querySelector("[data-copy-status]");
+          var done = function () {
+            var copied = b.getAttribute("data-copied-label") || "Copied";
+            b.setAttribute("data-copied", "true");
+            if (st) st.textContent = copied;
+            setTimeout(function () {
+              b.removeAttribute("data-copied");
+              if (st) st.textContent = "";
+            }, 2000);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard
+              .writeText(text)
+              .then(done)
+              .catch(function () {});
+          } else {
+            try {
+              var ta = document.createElement("textarea");
+              ta.value = text;
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand("copy");
+              document.body.removeChild(ta);
+              done();
+            } catch (err) {}
+          }
+        });
+      })();
+      !(function () {
+        document.addEventListener("click", function (t) {
+          var b = t.target.closest("[data-marquee-pause]");
+          if (!b) return;
+          var m = b.closest("[data-marquee]");
+          if (!m) return;
+          if (m.getAttribute("data-marquee-paused") === "true") {
+            m.removeAttribute("data-marquee-paused");
+            b.textContent =
+              b.getAttribute("data-marquee-pause-label") || "Pause";
+          } else {
+            m.setAttribute("data-marquee-paused", "true");
+            b.textContent =
+              b.getAttribute("data-marquee-resume-label") || "Resume";
+          }
+        });
+      })();
+      !(function () {
+        var takeCarriedToast = function (n = Date.now()) {
+          var t = function (k) {
+            var m = k.message,
+              v = k.variant,
+              d = k.duration,
+              a = k.at;
+            if (
+              !(typeof a === "number" && n >= a && n - a <= 60000) ||
+              typeof m !== "string" ||
+              m === ""
+            )
+              return;
+            return {
+              message: m,
+              variant:
+                [
+                  "default",
+                  "success",
+                  "info",
+                  "warning",
+                  "error",
+                  "destructive",
+                ].indexOf(v) !== -1
+                  ? v
+                  : void 0,
+              duration:
+                typeof d === "number" && isFinite(d) && d > 0 ? d : void 0,
+            };
+          };
+          try {
+            var s = sessionStorage,
+              r = s.getItem("sovrium:flash-toast");
+            if (r === null) return;
+            s.removeItem("sovrium:flash-toast");
+            return t(JSON.parse(r));
+          } catch (e) {}
+        };
+        function raiseCarriedToast() {
+          var TOAST_DEFAULT_DURATION_MS = 5000;
+          var TOAST_PERSISTENT_VARIANTS = ["error", "destructive"];
+          var TOAST_ASSERTIVE_VARIANTS = ["error", "destructive"];
+          var TOAST_DISMISS_LABEL_FALLBACK = "Dismiss";
+          function resolveToastDismissal(duration, variant) {
+            if (typeof duration === "number" && duration > 0) return duration;
+            if (variant && TOAST_PERSISTENT_VARIANTS.indexOf(variant) !== -1)
+              return null;
+            return TOAST_DEFAULT_DURATION_MS;
+          }
+          function ensureToastContainer() {
+            var existing = document.querySelector("[data-sonner-toaster]");
+            if (existing) return existing;
+            var container = document.createElement("div");
+            container.setAttribute("data-sonner-toaster", "");
+            container.setAttribute("data-toast-container", "");
+            container.style.position = "fixed";
+            container.style.right = "16px";
+            container.style.zIndex = "9999";
+            container.style.display = "flex";
+            container.style.flexDirection = "column";
+            container.style.gap = "8px";
+            document.body.appendChild(container);
+            return container;
+          }
+          function installToastEscapeDismiss() {
+            if (document.body.hasAttribute("data-toast-escape-bound")) return;
+            document.body.setAttribute("data-toast-escape-bound", "true");
+            document.addEventListener("keydown", function (event) {
+              if (event.key !== "Escape") return;
+              var toasts = document.querySelectorAll("[data-toast]");
+              var target = null;
+              for (var i = 0; i < toasts.length; i++) {
+                if (toasts[i].querySelector("[data-toast-dismiss]"))
+                  target = toasts[i];
+              }
+              if (target) target.remove();
+            });
+          }
+          function appendToastDismissControl(toast, container) {
+            var declared = container.getAttribute("data-dismiss-label");
+            var label =
+              declared && declared.trim() !== ""
+                ? declared
+                : TOAST_DISMISS_LABEL_FALLBACK;
+            var button = document.createElement("button");
+            button.setAttribute("type", "button");
+            button.setAttribute("data-toast-dismiss", "");
+            button.setAttribute("aria-label", label);
+            button.textContent = "\u00d7";
+            button.addEventListener("click", function () {
+              toast.remove();
+            });
+            toast.appendChild(button);
+            installToastEscapeDismiss();
+          }
+          function showToast(message, variant, duration) {
+            if (!message) return;
+            var container = ensureToastContainer();
+            var toast = document.createElement("div");
+            toast.setAttribute("data-toast", "");
+            if (variant) toast.setAttribute("data-variant", variant);
+            if (variant && TOAST_ASSERTIVE_VARIANTS.indexOf(variant) !== -1) {
+              toast.setAttribute("role", "alert");
+            } else {
+              toast.setAttribute("role", "status");
+              toast.setAttribute("aria-live", "polite");
+            }
+            var messageSpan = document.createElement("span");
+            messageSpan.setAttribute("data-toast-message", "");
+            messageSpan.textContent = message;
+            toast.appendChild(messageSpan);
+            var dismissAfter = resolveToastDismissal(duration, variant);
+            if (dismissAfter === null) {
+              appendToastDismissControl(toast, container);
+              container.appendChild(toast);
+              return;
+            }
+            container.appendChild(toast);
+            setTimeout(function () {
+              toast.remove();
+            }, dismissAfter);
+          }
+          var carried = takeCarriedToast();
+          if (carried)
+            showToast(carried.message, carried.variant, carried.duration);
+        }
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", raiseCarriedToast);
+        } else {
+          raiseCarriedToast();
+        }
+      })();
+    </script>
+    <template
+      data-island-entry="/assets/islands/island-entry-520865bd.js"
+    ></template>
+  </body>
+</html>

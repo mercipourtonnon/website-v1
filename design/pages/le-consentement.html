@@ -1,0 +1,3412 @@
+<!DOCTYPE html>
+<html
+  lang="fr-FR"
+  dir="ltr"
+  data-timezone="UTC"
+  data-density="compact"
+  data-features="{}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href="logo-without-marging.svg" />
+    <link
+      rel="preload"
+      as="image"
+      href="pictures/stand/table-cartes-stand.webp"
+      imagesizes="(min-width: 1024px) 420px, 90vw"
+      fetchpriority="high"
+    />
+    <title>Notre vision du consentement - Merci pour ton non</title>
+    <meta
+      name="description"
+      content="Notre vision du consentement - définitions, l&#x27;acronyme RÈGLES, dire et remercier le non, changer d&#x27;avis, les biais qui poussent à dire oui. En libre accès."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://mercipourtonnon.fr/le-consentement" />
+    <meta
+      property="og:title"
+      content="Notre vision du consentement | Merci pour ton non"
+    />
+    <meta
+      property="og:description"
+      content="Les notions partagées dans nos ateliers de consentement à Strasbourg, en libre accès."
+    />
+    <meta property="og:image" content="https://mercipourtonnon.fr/social.png" />
+    <meta
+      property="og:image:alt"
+      content="Merci pour ton non — notre vision du consentement"
+    />
+    <meta
+      property="og:url"
+      content="https://mercipourtonnon.fr/le-consentement"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Merci pour ton non" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Notre vision du consentement | Merci pour ton non"
+    />
+    <meta
+      name="twitter:description"
+      content="Les notions partagées dans nos ateliers de consentement, en libre accès."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mercipourtonnon.fr/social.png"
+    />
+    <link
+      rel="preload"
+      href="fonts/NeueMachina/NeueMachina-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/BelyDisplay/BelyDisplay-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <meta name="theme-color" content="#7B01FE" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="icon" href="favicon/favicon-32x32.png" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      href="favicon/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="favicon/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <script>
+      (function () {
+        "use strict";
+        function wake() {
+          var h = document.querySelector("[data-island-deferred]");
+          if (!h) return;
+          h.setAttribute("data-island", h.getAttribute("data-island-deferred"));
+          h.removeAttribute("data-island-deferred");
+          var t = document.querySelector("template[data-island-entry]");
+          if (t) {
+            var s = document.createElement("script");
+            s.type = "module";
+            s.src = t.getAttribute("data-island-entry");
+            t.remove();
+            document.head.appendChild(s);
+          } else {
+            document.dispatchEvent(new CustomEvent("sovrium:mount-islands"));
+          }
+        }
+        function open() {
+          window.__sovriumOpenCommandPalette = true;
+          wake();
+          document.dispatchEvent(
+            new CustomEvent("sovrium:open-command-palette"),
+          );
+        }
+        document.addEventListener(
+          "keydown",
+          function (e) {
+            if (
+              (e.metaKey || e.ctrlKey) &&
+              e.key &&
+              e.key.toLowerCase() === "k"
+            ) {
+              e.preventDefault();
+              open();
+            }
+          },
+          true,
+        );
+        document.addEventListener(
+          "click",
+          function (e) {
+            var t = e.target;
+            if (t && t.closest && t.closest("[data-command-palette-trigger]")) {
+              e.preventDefault();
+              open();
+            }
+          },
+          true,
+        );
+      })();
+    </script>
+    <script>
+      (function () {
+        try {
+          var stored = window.localStorage.getItem("theme");
+          var dark;
+          if (stored === "dark") {
+            dark = true;
+          } else if (stored === "light") {
+            dark = false;
+          } else {
+            var configured = "light";
+            if (configured === "dark") {
+              dark = true;
+            } else if (configured === "light") {
+              dark = false;
+            } else {
+              dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            }
+          }
+          var root = document.documentElement;
+          if (dark) {
+            root.classList.add("dark");
+          } else {
+            root.classList.remove("dark");
+          }
+          if (
+            stored !== "dark" &&
+            stored !== "light" &&
+            configured === "system"
+          ) {
+            window
+              .matchMedia("(prefers-color-scheme: dark)")
+              .addEventListener("change", function (event) {
+                var now = window.localStorage.getItem("theme");
+                if (now !== "dark" && now !== "light") {
+                  root.classList.toggle("dark", event.matches);
+                }
+              });
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Notre vision du consentement",
+        "description": "Définitions, l'acronyme RÈGLES, dire et remercier le non, changer d'avis et les biais qui poussent à dire oui.",
+        "inLanguage": "fr-FR",
+        "url": "https://mercipourtonnon.fr/le-consentement",
+        "image": "https://mercipourtonnon.fr/pictures/stand/table-cartes-stand.webp",
+        "author": {
+          "@type": "Organization",
+          "name": "Merci pour ton non",
+          "url": "https://mercipourtonnon.fr"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Merci pour ton non",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://mercipourtonnon.fr/logo.svg"
+          }
+        },
+        "about": ["Consentement", "Limites", "Biais cognitifs"]
+      }
+    </script>
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/output-6283eb67.css" />
+    <style>
+      html[lang="fr-FR"] {
+        direction: ltr;
+      }
+      html[lang="fr-FR"] body {
+        direction: ltr;
+      }
+    </style>
+</head>
+  <body
+    style="
+      font-family:
+        Neue Machina,
+        Space Grotesk,
+        -apple-system,
+        BlinkMacSystemFont,
+        Segoe UI,
+        sans-serif;
+    "
+  >
+    <a
+      href="#main-content"
+      class="text-md bg-primary text-primary-foreground ring-ring sr-only z-50 rounded-md px-4 py-2 font-medium focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus-visible:ring-2 focus-visible:outline-none"
+      >Aller au contenu principal</a
+    ><span id="sovrium-new-tab-notice" hidden=""
+      >(s’ouvre dans un nouvel onglet)</span
+    >
+    <main
+      id="main-content"
+      tabindex="-1"
+      data-testid="page-le-consentement"
+      data-page-name="le-consentement"
+      data-sovrium-search-body="true"
+      style="min-height: 1px"
+    >
+      <header
+        class="sticky top-0 z-50 w-full bg-white/95 border-b border-bleu-fonce-light backdrop-blur-sm"
+        data-testid="component-site-header"
+        data-component="site-header"
+        data-type="container"
+        data-component-type="container"
+      >
+        <a
+          href="#contenu"
+          class="text-primary hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 skip-link"
+          data-testid="child-0"
+          data-component-type="link"
+          >Aller au contenu</a
+        >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 h-16 lg:h-20 flex items-center justify-between gap-6"
+          data-testid="child-1"
+          data-component-type="container"
+          role="group"
+        >
+          <a
+            href="index.html"
+            aria-label="Merci pour ton non — accueil"
+            class="text-primary hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 flex items-center shrink-0"
+            data-testid="child-0"
+            data-component-type="link"
+            ><img
+              src="logo-without-marging.svg"
+              alt=""
+              loading="eager"
+              class="rounded-lg object-cover h-10 lg:h-12 w-auto"
+              data-testid="child-0"
+              data-loading="eager"
+              data-component-type="image"
+              data-slot="image"
+          /></a>
+          <nav
+            aria-label="Navigation principale"
+            class="hidden lg:flex items-center gap-4 xl:gap-6"
+            data-testid="child-1"
+            data-component-type="container"
+          >
+            <div
+              data-island="navigation-menu"
+              data-slot="navigation-menu"
+              data-component-type="navigation-menu"
+              data-island-props='{"navItems":[{"label":"Nos actions","children":[{"label":"Nos ateliers","href":"/nos-ateliers","description":"3 heures pour explorer le consentement, gratuitement"},{"label":"Nos stands de sensibilisation","href":"/nos-stands","description":"Des cartes et des échanges, en festival ou en événement"},{"label":"Nos interventions","href":"/nos-interventions","description":"Pour ta structure, ton équipe, ton établissement"}]},{"label":"Comprendre","children":[{"label":"Le consentement","href":"/le-consentement","description":"Deux définitions, RÈGLES, les biais — nos notions en libre accès"},{"label":"Ressources","href":"/ressources","description":"Numéros d&#x27;aide, nos affiches, livres, films et podcasts"}]},{"label":"L&#x27;association","href":"/notre-mission"},{"label":"S&#x27;engager","children":[{"label":"Adhérer","href":"https://www.helloasso.com/associations/merci-pour-ton-non/adhesions/adhesion-a-l-association-merci-pour-ton-non","description":"Cotisation 5, 20 ou 50 € — tu votes à l&#x27;AG","target":"_blank","rel":"noopener noreferrer"},{"label":"Devenir bénévole","href":"/devenir-benevole","description":"Stands, ateliers, facilitation — à ton rythme"},{"label":"Proposer une idée","href":"/vos-idees","description":"Un atelier, un contenu, un format : dis-nous"},{"label":"Faire un don","href":"https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1","description":"Chaque don finance un atelier gratuit","target":"_blank","rel":"noopener noreferrer"}]}],"openOnHover":true,"triggerClassName":"inline-flex items-center gap-1 whitespace-nowrap rounded-control px-2 py-1 type-small font-medium text-bleu-fonce hover:text-mauve transition-colors","className":"flex items-center gap-1 xl:gap-3","data-testid":"child-0"}'
+              data-testid="child-0"
+              class="flex items-center gap-1 xl:gap-3"
+            >
+              <button
+                type="button"
+                disabled=""
+                data-slot="navigation-menu-trigger"
+                class="group inline-flex items-center gap-1 whitespace-nowrap rounded-control px-2 py-1 type-small font-medium text-bleu-fonce hover:text-mauve transition-colors"
+              >
+                Nos actions<svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                  class="transition-transform group-data-[popup-open]:rotate-180"
+                >
+                  <path
+                    d="M4 6l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg></button
+              ><button
+                type="button"
+                disabled=""
+                data-slot="navigation-menu-trigger"
+                class="group inline-flex items-center gap-1 whitespace-nowrap rounded-control px-2 py-1 type-small font-medium text-bleu-fonce hover:text-mauve transition-colors"
+              >
+                Comprendre<svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                  class="transition-transform group-data-[popup-open]:rotate-180"
+                >
+                  <path
+                    d="M4 6l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg></button
+              ><a
+                href="notre-mission.html"
+                data-slot="navigation-menu-link"
+                class="group inline-flex items-center gap-1 whitespace-nowrap rounded-control px-2 py-1 type-small font-medium text-bleu-fonce hover:text-mauve transition-colors"
+                >L&#x27;association</a
+              ><button
+                type="button"
+                disabled=""
+                data-slot="navigation-menu-trigger"
+                class="group inline-flex items-center gap-1 whitespace-nowrap rounded-control px-2 py-1 type-small font-medium text-bleu-fonce hover:text-mauve transition-colors"
+              >
+                S&#x27;engager<svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                  class="transition-transform group-data-[popup-open]:rotate-180"
+                >
+                  <path
+                    d="M4 6l4 4 4-4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <a
+              href="https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Nous faire un don sur HelloAsso (nouvel onglet) (s’ouvre dans un nouvel onglet)"
+              class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 duration-150 inline-flex items-center gap-2 whitespace-nowrap border-2 border-bleu-fonce text-bleu-fonce px-2.5 xl:px-4 py-2 rounded-pill font-bold type-small hover:bg-bleu-fonce hover:text-white transition-colors"
+              data-testid="child-1"
+              data-target="_blank"
+              data-rel="noopener noreferrer"
+              data-component-type="link"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-heart shrink-0 text-current"
+                aria-hidden="true"
+                data-testid="icon-heart"
+                style="display: inline-block; min-height: 1px; min-width: 1px"
+                data-component-type="icon"
+                data-slot="icon"
+              >
+                <path
+                  d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                ></path></svg
+              ><span
+                class="sr-only xl:not-sr-only"
+                data-testid="child-1"
+                data-component-type="text"
+                >Nous faire un don</span
+              ></a
+            ><a
+              href="nos-ateliers.html#events"
+              class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 duration-150 inline-flex items-center gap-2 whitespace-nowrap bg-orange text-bleu-fonce px-5 py-2.5 rounded-pill font-bold type-small hover:bg-orange-hover transition-colors"
+              data-testid="child-2"
+              data-component-type="link"
+              >Je réserve ma place</a
+            >
+          </nav>
+          <button
+            data-slot="button"
+            data-variant="default"
+            id="mobile-menu-button"
+            aria-label="Ouvrir le menu"
+            aria-controls="mobile-menu"
+            class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 rounded-lg text-sm [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 btn icon-btn lg:hidden"
+            data-testid="child-2"
+            data-component-type="button"
+            data-size="default"
+            data-click-toggle-element="#mobile-menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-menu shrink-0 text-current"
+              data-testid="icon-menu"
+              style="display: inline-block; min-height: 1px; min-width: 1px"
+              data-component-type="icon"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path d="M4 5h16"></path>
+              <path d="M4 12h16"></path>
+              <path d="M4 19h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="fixed inset-0 z-50"
+          data-testid="child-2"
+          style="display: none"
+          data-component-type="container"
+          role="group"
+        >
+          <div
+            id="menu-overlay"
+            class="fixed inset-0 bg-bleu-fonce-50"
+            data-testid="child-0"
+            style="display: inline-block; min-height: 1px; min-width: 1px"
+            data-component-type="container"
+          ></div>
+          <nav
+            id="menu-sidebar"
+            aria-label="Menu"
+            class="fixed right-0 top-0 h-dvh w-80 max-w-[85%] bg-white shadow-raised flex flex-col rounded-l-card"
+            data-testid="child-1"
+            data-component-type="container"
+          >
+            <div
+              class="flex items-center justify-between px-5 h-16 border-b border-bleu-fonce-light"
+              data-testid="child-0"
+              data-component-type="container"
+              role="group"
+            >
+              <img
+                src="logo-without-marging.svg"
+                alt="Merci pour ton non"
+                class="rounded-lg object-cover h-9 w-auto"
+                data-testid="child-0"
+                data-component-type="image"
+                loading="lazy"
+                data-slot="image"
+              /><button
+                data-slot="button"
+                data-variant="default"
+                id="close-menu-button"
+                aria-label="Fermer le menu"
+                class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 rounded-lg text-sm [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 btn icon-btn"
+                data-testid="child-1"
+                data-component-type="button"
+                data-size="default"
+                data-click-toggle-element="#mobile-menu"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-x shrink-0 text-current"
+                  data-testid="icon-x"
+                  style="display: inline-block; min-height: 1px; min-width: 1px"
+                  data-component-type="icon"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex-1 overflow-y-auto px-3 py-4 flex flex-col gap-1"
+              data-testid="child-1"
+              data-component-type="container"
+              role="group"
+            >
+              <p
+                id="drawer-actions"
+                class="px-4 pt-3 pb-1 type-overline text-bleu-fonce-70"
+                data-testid="child-0"
+                data-component-type="text"
+              >
+                Nos actions
+              </p>
+              <div
+                role="group"
+                aria-labelledby="drawer-actions"
+                class="ml-4 pl-2 border-l-2 border-mauve-lighter flex flex-col gap-1"
+                data-testid="child-1"
+                data-component-type="container"
+              >
+                <a
+                  href="nos-ateliers.html"
+                  class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light"
+                  data-testid="child-0"
+                  data-component-type="link"
+                  >Nos ateliers</a
+                ><a
+                  href="nos-stands.html"
+                  class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light"
+                  data-testid="child-1"
+                  data-component-type="link"
+                  >Nos stands de sensibilisation</a
+                ><a
+                  href="nos-interventions.html"
+                  class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light"
+                  data-testid="child-2"
+                  data-component-type="link"
+                  >Nos interventions</a
+                >
+              </div>
+              <p
+                id="drawer-comprendre"
+                class="px-4 pt-3 pb-1 type-overline text-bleu-fonce-70"
+                data-testid="child-2"
+                data-component-type="text"
+              >
+                Comprendre
+              </p>
+              <div
+                role="group"
+                aria-labelledby="drawer-comprendre"
+                class="ml-4 pl-2 border-l-2 border-mauve-lighter flex flex-col gap-1"
+                data-testid="child-3"
+                data-component-type="container"
+              >
+                <a
+                  href="le-consentement.html"
+                  class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light"
+                  data-testid="child-0"
+                  data-component-type="link"
+                  >Le consentement</a
+                ><a
+                  href="ressources.html"
+                  class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light"
+                  data-testid="child-1"
+                  data-component-type="link"
+                  >Ressources</a
+                >
+              </div>
+              <a
+                href="notre-mission.html"
+                class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link block rounded-control px-4 py-3 type-lead text-bleu-fonce hover:bg-mauve-light"
+                data-testid="child-4"
+                data-component-type="link"
+                >L&#x27;association</a
+              >
+              <p
+                id="drawer-engager"
+                class="px-4 pt-3 pb-1 type-overline text-bleu-fonce-70"
+                data-testid="child-5"
+                data-component-type="text"
+              >
+                S&#x27;engager
+              </p>
+              <div
+                role="group"
+                aria-labelledby="drawer-engager"
+                class="ml-4 pl-2 border-l-2 border-mauve-lighter flex flex-col gap-1"
+                data-testid="child-6"
+                data-component-type="container"
+              >
+                <a
+                  href="https://www.helloasso.com/associations/merci-pour-ton-non/adhesions/adhesion-a-l-association-merci-pour-ton-non"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Adhérer sur HelloAsso (nouvel onglet) (s’ouvre dans un nouvel onglet)"
+                  class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link flex items-center gap-2 rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light"
+                  data-testid="child-0"
+                  data-target="_blank"
+                  data-rel="noopener noreferrer"
+                  data-component-type="link"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-user-plus shrink-0 text-current"
+                    aria-hidden="true"
+                    data-testid="icon-user-plus"
+                    style="
+                      display: inline-block;
+                      min-height: 1px;
+                      min-width: 1px;
+                    "
+                    data-component-type="icon"
+                    data-slot="icon"
+                  >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <line x1="19" x2="19" y1="8" y2="14"></line>
+                    <line x1="22" x2="16" y1="11" y2="11"></line></svg
+                  ><span data-testid="child-1" data-component-type="text"
+                    >Adhérer</span
+                  ></a
+                ><a
+                  href="devenir-benevole.html"
+                  class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light"
+                  data-testid="child-1"
+                  data-component-type="link"
+                  >Devenir bénévole</a
+                ><a
+                  href="vos-idees.html"
+                  class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link block rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light"
+                  data-testid="child-2"
+                  data-component-type="link"
+                  >Proposer une idée</a
+                ><a
+                  href="https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Nous faire un don sur HelloAsso (nouvel onglet) (s’ouvre dans un nouvel onglet)"
+                  class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 mobile-nav-link flex items-center gap-2 rounded-control px-4 py-2.5 text-bleu-fonce hover:bg-mauve-light"
+                  data-testid="child-3"
+                  data-target="_blank"
+                  data-rel="noopener noreferrer"
+                  data-component-type="link"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-heart shrink-0 text-current"
+                    aria-hidden="true"
+                    data-testid="icon-heart"
+                    style="
+                      display: inline-block;
+                      min-height: 1px;
+                      min-width: 1px;
+                    "
+                    data-component-type="icon"
+                    data-slot="icon"
+                  >
+                    <path
+                      d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                    ></path></svg
+                  ><span data-testid="child-1" data-component-type="text"
+                    >Faire un don</span
+                  ></a
+                >
+              </div>
+            </div>
+            <div
+              class="p-5 border-t border-bleu-fonce-light"
+              data-testid="child-2"
+              data-component-type="container"
+              role="group"
+            >
+              <a
+                href="nos-ateliers.html#events"
+                class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 duration-150 mobile-nav-link block w-full text-center bg-orange text-bleu-fonce px-6 py-4 rounded-pill font-bold hover:bg-orange-hover transition-colors"
+                data-testid="child-0"
+                data-component-type="link"
+                >Je réserve ma place</a
+              >
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div
+        id="contenu"
+        class="bg-white overflow-x-clip"
+        data-testid="container"
+        data-component-type="container"
+        role="group"
+      >
+        <section
+          class="px-4 sm:px-6 pt-10 md:pt-16 pb-band-sm md:pb-band bg-mauve-light"
+          data-testid="child-0"
+          data-component-type="container"
+          role="region"
+        >
+          <div
+            class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center"
+            data-testid="child-0"
+            data-component-type="container"
+            role="group"
+          >
+            <div
+              class="lg:col-span-7 flex flex-col gap-6"
+              data-testid="child-0"
+              data-component-type="container"
+              role="group"
+            >
+              <p
+                class="type-overline text-mauve"
+                data-testid="child-0"
+                data-component-type="text"
+              >
+                Notre vision · Atelier niveau 1
+              </p>
+              <h1
+                class="type-page text-bleu-fonce"
+                data-testid="child-1"
+                data-component-type="text"
+              >
+                notre vision du consentement
+              </h1>
+              <p
+                class="type-lead text-bleu-fonce max-w-2xl"
+                data-testid="child-2"
+                data-component-type="text"
+              >
+                En atelier, on partage des notions qui changent la façon de
+                demander, de dire non et d&#x27;accueillir le non des autres. On
+                les met ici en libre accès, parce que le consentement ne devrait
+                jamais dépendre d&#x27;un ticket d&#x27;entrée : relis-les à ton
+                rythme, partage-les, discutes-en autour de toi. Elles ne
+                remplacent pas le fait de s&#x27;entraîner ensemble, mais elles
+                t&#x27;en ouvrent la porte.
+              </p>
+              <div
+                class="flex flex-wrap items-center gap-4"
+                data-testid="child-3"
+                data-component-type="container"
+                role="group"
+              >
+                <a
+                  href="ressources.html"
+                  class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 font-bold text-mauve underline underline-offset-4 hover:text-mauve-hover py-2"
+                  data-testid="child-0"
+                  data-component-type="link"
+                  >Voir les ressources</a
+                >
+              </div>
+            </div>
+            <div
+              class="lg:col-span-5 photo-frame frame-orange max-w-md lg:max-w-none"
+              data-testid="child-1"
+              data-component-type="container"
+              role="group"
+            >
+              <img
+                src="pictures/stand/table-cartes-stand.webp"
+                srcset="pictures/stand/table-cartes-stand-sm.webp 533w, pictures/stand/table-cartes-stand.webp 1066w"
+                sizes="(min-width: 1024px) 420px, 90vw"
+                alt="Sur notre stand, une bénévole montre du doigt l&#x27;affiche « On peut changer de disque ! » posée parmi les cartes du jeu"
+                class="rounded-xl w-full h-auto rounded-media shadow-raised object-cover aspect-[4/5]"
+                data-testid="child-0"
+                data-srcset="pictures/stand/table-cartes-stand-sm.webp 533w, pictures/stand/table-cartes-stand.webp 1066w"
+                data-sizes="(min-width: 1024px) 420px, 90vw"
+                data-component-type="image"
+                loading="eager"
+                fetchpriority="high"
+                data-slot="image"
+              />
+            </div>
+          </div>
+        </section>
+        <div
+          class="px-4 sm:px-6 py-band-sm md:py-band"
+          data-testid="child-1"
+          data-component-type="container"
+          role="group"
+        >
+          <div
+            class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12"
+            data-testid="child-0"
+            data-component-type="container"
+            role="group"
+          >
+            <nav
+              aria-label="Sur cette page"
+              class="lg:col-span-3 lg:sticky lg:top-28 self-start bg-mauve-light lg:bg-white rounded-card p-5 lg:p-0 flex flex-col gap-3"
+              data-testid="child-0"
+              data-component-type="container"
+            >
+              <p
+                class="type-overline text-mauve"
+                data-testid="child-0"
+                data-component-type="text"
+              >
+                Sur cette page
+              </p>
+              <div
+                class="flex flex-col gap-1 type-small lg:border-l-2 lg:border-mauve-lighter lg:pl-4"
+                data-testid="child-1"
+                data-component-type="container"
+                role="group"
+              >
+                <a
+                  href="#definitions"
+                  class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve"
+                  data-testid="child-0"
+                  data-component-type="link"
+                  >Deux définitions</a
+                ><a
+                  href="#regles"
+                  class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve"
+                  data-testid="child-1"
+                  data-component-type="link"
+                  >RÈGLES, six lettres</a
+                ><a
+                  href="#dire-non"
+                  class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve"
+                  data-testid="child-2"
+                  data-component-type="link"
+                  >Dire non, remercier le non</a
+                ><a
+                  href="#changer-d-avis"
+                  class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve"
+                  data-testid="child-3"
+                  data-component-type="link"
+                  >Changer d&#x27;avis</a
+                ><a
+                  href="#biais"
+                  class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve"
+                  data-testid="child-4"
+                  data-component-type="link"
+                  >Les biais</a
+                >
+              </div>
+            </nav>
+            <article
+              class="lg:col-span-9 flex flex-col gap-band-sm md:gap-band min-w-0"
+              data-testid="child-1"
+              data-component-type="container"
+            >
+              <section
+                id="definitions"
+                class="flex flex-col gap-6"
+                data-testid="child-0"
+                data-component-type="container"
+                role="region"
+              >
+                <h2
+                  class="type-section text-bleu-fonce"
+                  data-testid="child-0"
+                  data-component-type="text"
+                >
+                  deux définitions
+                </h2>
+                <p
+                  class="type-lead text-bleu-fonce-70 max-w-3xl"
+                  data-testid="child-1"
+                  data-component-type="text"
+                >
+                  Le dictionnaire et la loi ne disent pas la même chose — et
+                  l&#x27;écart est parlant.
+                </p>
+                <div
+                  class="grid md:grid-cols-2 gap-6 items-start"
+                  data-testid="child-2"
+                  data-component-type="container"
+                  role="group"
+                >
+                  <div
+                    class="bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3"
+                    data-testid="child-0"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      le dictionnaire
+                    </h3>
+                    <blockquote
+                      class="type-body text-bleu-fonce border-l-4 border-mauve-lighter pl-4"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      « Action de donner son accord à une action, un projet ;
+                      acquiescement, approbation, assentiment. »
+                    </blockquote>
+                    <p
+                      class="type-caption text-bleu-fonce-70"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Larousse. Une définition courte, qui dit peu de ce que
+                      demande un vrai oui.
+                    </p>
+                  </div>
+                  <div
+                    class="bg-white rounded-card shadow-card border border-mauve-lighter p-6 flex flex-col gap-3"
+                    data-testid="child-1"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      la loi
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      Depuis la loi du 6 novembre 2025, le Code pénal (article
+                      222-22) définit l&#x27;agression sexuelle à partir du
+                      non-consentement.
+                    </p>
+                    <blockquote
+                      class="type-body text-bleu-fonce border-l-4 border-mauve pl-4"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      « Constitue une agression sexuelle tout acte sexuel non
+                      consenti commis sur la personne d&#x27;autrui ou sur la
+                      personne de l&#x27;auteur. »
+                    </blockquote>
+                    <blockquote
+                      class="type-body text-bleu-fonce border-l-4 border-mauve pl-4"
+                      data-testid="child-3"
+                      data-component-type="text"
+                    >
+                      « Le consentement est libre et éclairé, spécifique,
+                      préalable et révocable. Il est apprécié au regard des
+                      circonstances. Il ne peut être déduit du seul silence ou
+                      de la seule absence de réaction de la victime. »
+                    </blockquote>
+                    <blockquote
+                      class="type-body text-bleu-fonce border-l-4 border-mauve pl-4"
+                      data-testid="child-4"
+                      data-component-type="text"
+                    >
+                      « Il n&#x27;y a pas de consentement si l&#x27;acte à
+                      caractère sexuel est commis avec violence, contrainte,
+                      menace ou surprise, quelle que soit leur nature. »
+                    </blockquote>
+                    <p
+                      class="type-small text-bleu-fonce"
+                      data-testid="child-5"
+                      data-component-type="text"
+                    >
+                      Concrètement : quelqu&#x27;un d&#x27;endormi·e,
+                      d&#x27;inconscient·e, sous emprise ou en état de
+                      sidération ne consent pas.
+                    </p>
+                    <a
+                      href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052535583"
+                      target="_blank"
+                      rel="noopener"
+                      class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 self-start inline-flex items-center gap-1.5 type-caption font-bold text-mauve underline underline-offset-4"
+                      data-testid="child-6"
+                      data-target="_blank"
+                      data-rel="noopener"
+                      data-component-type="link"
+                      ><span data-testid="child-0" data-component-type="text"
+                        >Lire l&#x27;article 222-22 sur Légifrance</span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-arrow-up-right shrink-0 text-current"
+                        data-testid="icon-arrow-up-right"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path d="M7 7h10v10"></path>
+                        <path d="M7 17 17 7"></path></svg
+                      ><span class="sr-only" data-new-tab-notice="">
+                        (s’ouvre dans un nouvel onglet)</span
+                      ></a
+                    >
+                  </div>
+                </div>
+              </section>
+              <section
+                id="regles"
+                class="flex flex-col gap-6"
+                data-testid="child-1"
+                data-component-type="container"
+                role="region"
+              >
+                <h2
+                  class="type-section text-bleu-fonce"
+                  data-testid="child-0"
+                  data-component-type="text"
+                >
+                  <span data-testid="child-0" data-component-type="text"
+                    >six lettres pour s&#x27;en souvenir : </span
+                  ><span
+                    class="normal-case"
+                    data-testid="child-1"
+                    data-component-type="text"
+                    >RÈGLES</span
+                  >
+                </h2>
+                <p
+                  class="type-lead text-bleu-fonce-70 max-w-3xl"
+                  data-testid="child-1"
+                  data-component-type="text"
+                >
+                  L&#x27;acronyme qu&#x27;on te propose pour vérifier qu&#x27;un
+                  oui en est vraiment un.
+                </p>
+                <div
+                  class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"
+                  data-testid="child-2"
+                  data-component-type="container"
+                  role="group"
+                >
+                  <article
+                    class="bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-4 h-full"
+                    data-testid="component-knowledge-card"
+                    data-component="knowledge-card"
+                    data-type="container"
+                    data-component-type="container"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                      data-testid="child-0"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="chip-pourpre w-14 h-14 rounded-pill flex items-center justify-center title-font normal-case type-h3"
+                        data-testid="child-0"
+                        data-component-type="text"
+                        >R</span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-rotate-ccw shrink-0 text-mauve"
+                        data-testid="icon-rotate-ccw"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path
+                          d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                        ></path>
+                        <path d="M3 3v5h5"></path>
+                      </svg>
+                    </div>
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      révocable
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Tu as le droit de changer d&#x27;avis, aussi souvent que
+                      tu le sens — un consentement peut être retiré à tout
+                      moment. Vérifie régulièrement, avec des mots ou sans, que
+                      c&#x27;est toujours bon pour toi et pour l&#x27;autre.
+                    </p>
+                  </article>
+                  <article
+                    class="bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-4 h-full"
+                    data-testid="component-knowledge-card"
+                    data-component="knowledge-card"
+                    data-type="container"
+                    data-component-type="container"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                      data-testid="child-0"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="chip-orange w-14 h-14 rounded-pill flex items-center justify-center title-font normal-case type-h3"
+                        data-testid="child-0"
+                        data-component-type="text"
+                        >É</span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-lightbulb shrink-0 text-mauve"
+                        data-testid="icon-lightbulb"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path
+                          d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"
+                        ></path>
+                        <path d="M9 18h6"></path>
+                        <path d="M10 22h4"></path>
+                      </svg>
+                    </div>
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      éclairé
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Consentir, c&#x27;est avoir toutes les infos sur la
+                      proposition : les personnes impliquées, les modalités,
+                      l&#x27;état émotionnel de chacun·e, les infos de santé
+                      sexuelle… Et être éveillé·e, hors état de conscience
+                      modifiée (alcool, drogues, hypnose).
+                    </p>
+                  </article>
+                  <article
+                    class="bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-4 h-full"
+                    data-testid="component-knowledge-card"
+                    data-component="knowledge-card"
+                    data-type="container"
+                    data-component-type="container"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                      data-testid="child-0"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="chip-mauve w-14 h-14 rounded-pill flex items-center justify-center title-font normal-case type-h3"
+                        data-testid="child-0"
+                        data-component-type="text"
+                        >G</span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-handshake shrink-0 text-mauve"
+                        data-testid="icon-handshake"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path d="m11 17 2 2a1 1 0 1 0 3-3"></path>
+                        <path
+                          d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"
+                        ></path>
+                        <path d="m21 3 1 11h-2"></path>
+                        <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path>
+                        <path d="M3 4h8"></path>
+                      </svg>
+                    </div>
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      gagnant-gagnant
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Un rapport d&#x27;égal·e à égal·e, où la négociation a sa
+                      place et où chacun·e en retire quelque chose de positif,
+                      aligné avec soi. Chacun·e reste libre de sortir de
+                      l&#x27;interaction dès qu&#x27;elle ne lui semble plus
+                      juste. Pas de domination non consentie.
+                    </p>
+                  </article>
+                  <article
+                    class="bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-4 h-full"
+                    data-testid="component-knowledge-card"
+                    data-component="knowledge-card"
+                    data-type="container"
+                    data-component-type="container"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                      data-testid="child-0"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="chip-cyan w-14 h-14 rounded-pill flex items-center justify-center title-font normal-case type-h3"
+                        data-testid="child-0"
+                        data-component-type="text"
+                        >L</span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-feather shrink-0 text-mauve"
+                        data-testid="icon-feather"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path
+                          d="M14.086 18.412A2 2 0 0112.67 19H5v-7.672a2 2 0 01.586-1.414L11.75 3.75a6 6 0 118.49 8.49z"
+                        ></path>
+                        <path d="M16 8 2 22"></path>
+                        <path d="M17.488 15H9"></path>
+                      </svg>
+                    </div>
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      libre
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Un oui ne vaut que s&#x27;il est donné sans pression, sans
+                      violence ni contrainte, et sans être soumis à un biais
+                      dont on n&#x27;a pas conscience : dynamique de pouvoir,
+                      pression du groupe, rareté de l&#x27;occasion, attentes…
+                      On y revient plus bas.
+                    </p>
+                  </article>
+                  <article
+                    class="bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-4 h-full"
+                    data-testid="component-knowledge-card"
+                    data-component="knowledge-card"
+                    data-type="container"
+                    data-component-type="container"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                      data-testid="child-0"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="chip-pourpre w-14 h-14 rounded-pill flex items-center justify-center title-font normal-case type-h3"
+                        data-testid="child-0"
+                        data-component-type="text"
+                        >E</span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-message-circle shrink-0 text-mauve"
+                        data-testid="icon-message-circle"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path
+                          d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      explicite
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Enthousiaste, franc, sincère — consentir, ce n&#x27;est
+                      pas céder. Si tu penses « peut-être », si tu ne sais pas,
+                      si tu n&#x27;es pas sûr·e ou si tu te sens obligé·e,
+                      c&#x27;est non. Le signal doit être assez clair pour ne
+                      pas laisser de place au doute, y compris dans le
+                      non-verbal.
+                    </p>
+                  </article>
+                  <article
+                    class="bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-4 h-full"
+                    data-testid="component-knowledge-card"
+                    data-component="knowledge-card"
+                    data-type="container"
+                    data-component-type="container"
+                  >
+                    <div
+                      class="flex items-center justify-between"
+                      data-testid="child-0"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="chip-orange w-14 h-14 rounded-pill flex items-center justify-center title-font normal-case type-h3"
+                        data-testid="child-0"
+                        data-component-type="text"
+                        >S</span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-crosshair shrink-0 text-mauve"
+                        data-testid="icon-crosshair"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="22" x2="18" y1="12" y2="12"></line>
+                        <line x1="6" x2="2" y1="12" y2="12"></line>
+                        <line x1="12" x2="12" y1="6" y2="2"></line>
+                        <line x1="12" x2="12" y1="22" y2="18"></line>
+                      </svg>
+                    </div>
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      spécifique
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Un consentement vaut pour une action précise, avec une
+                      personne, à un moment donné. Quand l&#x27;action change et
+                      qu&#x27;elle n&#x27;a pas été discutée avant, on
+                      redemande.
+                    </p>
+                  </article>
+                </div>
+                <div
+                  class="grid md:grid-cols-12 gap-6 items-center"
+                  data-testid="child-3"
+                  data-component-type="container"
+                  role="group"
+                >
+                  <div
+                    class="md:col-span-8 bg-mauve-light rounded-card p-6 md:p-8 flex flex-col gap-4"
+                    data-testid="child-0"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      entre le oui et le non, tout un spectre
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      « Je ne sais pas trop si je vais aimer, mais j&#x27;ai
+                      envie d&#x27;essayer » ou « ça me fait un peu peur, mais
+                      je me sens assez en sécurité pour oser » ne ressemblent
+                      pas à « je ne me sens pas assez en sécurité pour dire non
+                      », « j&#x27;ai peur des conséquences si je dis non » ou «
+                      d&#x27;habitude j&#x27;aime bien, donc aujourd&#x27;hui je
+                      suis censé·e aimer aussi ».
+                    </p>
+                    <p
+                      class="type-small text-bleu-fonce"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Attention aussi à l&#x27;injonction à la joie —
+                      l&#x27;enthousiasme ne se force pas.
+                    </p>
+                    <p
+                      class="type-caption text-bleu-fonce-70"
+                      data-testid="child-3"
+                      data-component-type="text"
+                    >
+                      D&#x27;autres acronymes disent la même chose autrement :
+                      RÉELS, RELIÉS, CALIBRES, PALIERS.
+                    </p>
+                  </div>
+                  <div
+                    class="md:col-span-4 photo-frame frame-mauve max-w-xs mx-auto md:max-w-none"
+                    data-testid="child-1"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <img
+                      src="pictures/atelier/flyer-regles-sm.webp"
+                      alt="Le flyer « Le consentement, ça te parle ? » qui présente l&#x27;acronyme RÈGLES, posé sur une table d&#x27;atelier"
+                      loading="lazy"
+                      class="rounded-lg w-full h-auto rounded-media shadow-card object-cover aspect-[2/3]"
+                      data-testid="child-0"
+                      data-loading="lazy"
+                      data-component-type="image"
+                      data-slot="image"
+                    />
+                  </div>
+                </div>
+              </section>
+              <section
+                id="dire-non"
+                class="flex flex-col gap-6"
+                data-testid="child-2"
+                data-component-type="container"
+                role="region"
+              >
+                <h2
+                  class="type-section text-bleu-fonce"
+                  data-testid="child-0"
+                  data-component-type="text"
+                >
+                  dire non, remercier le non
+                </h2>
+                <p
+                  class="type-lead text-bleu-fonce-70 max-w-3xl"
+                  data-testid="child-1"
+                  data-component-type="text"
+                >
+                  Culturellement, on vit souvent mal le fait de recevoir un non,
+                  et on peut avoir du mal à en dire un. Pourtant, un non peut
+                  être joyeux — il ouvre une relation plus franche et plus
+                  transparente, où chacun·e pose ses limites et laisse à
+                  l&#x27;autre la possibilité de poser les siennes.
+                </p>
+                <div
+                  class="grid md:grid-cols-2 gap-6"
+                  data-testid="child-2"
+                  data-component-type="container"
+                  role="group"
+                >
+                  <div
+                    class="bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3"
+                    data-testid="child-0"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-hand shrink-0 text-mauve"
+                      data-testid="icon-hand"
+                      style="
+                        display: inline-block;
+                        min-height: 1px;
+                        min-width: 1px;
+                      "
+                      data-component-type="icon"
+                      aria-hidden="true"
+                      data-slot="icon"
+                    >
+                      <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"></path>
+                      <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"></path>
+                      <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path>
+                      <path
+                        d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"
+                      ></path>
+                    </svg>
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      poser son non
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Pas besoin de faire l&#x27;anguille. Pose ton non
+                      franchement, sans en avoir peur — tu es légitime à
+                      refuser. Tu peux te justifier si tu en as envie, mais
+                      garde ton refus clair.
+                    </p>
+                  </div>
+                  <div
+                    class="bg-white rounded-card shadow-card border border-bleu-fonce-light p-6 flex flex-col gap-3"
+                    data-testid="child-1"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-heart-handshake shrink-0 text-mauve"
+                      data-testid="icon-heart-handshake"
+                      style="
+                        display: inline-block;
+                        min-height: 1px;
+                        min-width: 1px;
+                      "
+                      data-component-type="icon"
+                      aria-hidden="true"
+                      data-slot="icon"
+                    >
+                      <path
+                        d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"
+                      ></path>
+                    </svg>
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      remercier le non
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      Dire merci à un non, c&#x27;est encourager l&#x27;autre à
+                      en redire, et montrer que tu l&#x27;as écouté·e et
+                      accueilli·e. Une preuve d&#x27;empathie visible, et un
+                      soin porté à la relation. Et quand quelqu&#x27;un te
+                      demande ton consentement avant d&#x27;agir, tu peux
+                      l&#x27;en remercier aussi.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-3 bg-orange-light rounded-card p-5 max-w-3xl"
+                  data-testid="child-3"
+                  data-component-type="container"
+                  role="group"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-square-quote shrink-0 text-orange-ink mt-0.5"
+                    data-testid="icon-message-square-quote"
+                    style="
+                      display: inline-block;
+                      min-height: 1px;
+                      min-width: 1px;
+                    "
+                    data-component-type="icon"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path d="M14 14a2 2 0 0 0 2-2V8h-2"></path>
+                    <path
+                      d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+                    ></path>
+                    <path d="M8 14a2 2 0 0 0 2-2V8H8"></path>
+                  </svg>
+                  <p
+                    class="text-bleu-fonce"
+                    data-testid="child-1"
+                    data-component-type="text"
+                  >
+                    <span
+                      class="font-bold"
+                      data-testid="child-0"
+                      data-component-type="text"
+                      >Une phrase pour demander : </span
+                    ><span data-testid="child-1" data-component-type="text"
+                      >« Tu peux me dire non, et je voulais te demander… »</span
+                    >
+                  </p>
+                </div>
+              </section>
+              <section
+                id="changer-d-avis"
+                class="flex flex-col gap-6"
+                data-testid="child-3"
+                data-component-type="container"
+                role="region"
+              >
+                <h2
+                  class="type-section text-bleu-fonce"
+                  data-testid="child-0"
+                  data-component-type="text"
+                >
+                  changer d&#x27;avis, c&#x27;est OK
+                </h2>
+                <p
+                  class="type-lead text-bleu-fonce-70 max-w-3xl"
+                  data-testid="child-1"
+                  data-component-type="text"
+                >
+                  Le consentement est révocable. Avant de répondre, et après,
+                  prends le temps de te sonder. Retirer un oui déjà donné peut
+                  réveiller des tensions ou des automatismes — culpabilité,
+                  frustration, peur de blesser — qui rendent plus difficile de
+                  revenir sur sa décision, ou d&#x27;accueillir le changement
+                  d&#x27;avis de l&#x27;autre.
+                </p>
+                <div
+                  class="grid md:grid-cols-2 gap-6"
+                  data-testid="child-2"
+                  data-component-type="container"
+                  role="group"
+                >
+                  <div
+                    class="bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3"
+                    data-testid="child-0"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      quand c&#x27;est toi qui changes d&#x27;avis
+                    </h3>
+                    <div
+                      role="list"
+                      class="flex flex-col gap-2 type-small text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="container"
+                    >
+                      <div
+                        role="listitem"
+                        class="flex items-start gap-2"
+                        data-testid="child-0"
+                        data-component-type="container"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-check shrink-0 mt-1 text-mauve"
+                          data-testid="icon-check"
+                          style="
+                            display: inline-block;
+                            min-height: 1px;
+                            min-width: 1px;
+                          "
+                          data-component-type="icon"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path></svg
+                        ><span data-testid="child-1" data-component-type="text"
+                          >Ce n&#x27;est pas une trahison, c&#x27;est un
+                          ajustement à toi.</span
+                        >
+                      </div>
+                      <div
+                        role="listitem"
+                        class="flex items-start gap-2"
+                        data-testid="child-1"
+                        data-component-type="container"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-check shrink-0 mt-1 text-mauve"
+                          data-testid="icon-check"
+                          style="
+                            display: inline-block;
+                            min-height: 1px;
+                            min-width: 1px;
+                          "
+                          data-component-type="icon"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path></svg
+                        ><span data-testid="child-1" data-component-type="text"
+                          >C&#x27;est OK de temporiser.</span
+                        >
+                      </div>
+                      <div
+                        role="listitem"
+                        class="flex items-start gap-2"
+                        data-testid="child-2"
+                        data-component-type="container"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-check shrink-0 mt-1 text-mauve"
+                          data-testid="icon-check"
+                          style="
+                            display: inline-block;
+                            min-height: 1px;
+                            min-width: 1px;
+                          "
+                          data-component-type="icon"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path></svg
+                        ><span data-testid="child-1" data-component-type="text"
+                          >Tu n&#x27;as pas à te justifier si on te demande
+                          pourquoi.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white rounded-card border border-bleu-fonce-light p-6 flex flex-col gap-3"
+                    data-testid="child-1"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <h3
+                      class="type-h4 text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      quand c&#x27;est l&#x27;autre qui change d&#x27;avis
+                    </h3>
+                    <div
+                      role="list"
+                      class="flex flex-col gap-2 type-small text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="container"
+                    >
+                      <div
+                        role="listitem"
+                        class="flex items-start gap-2"
+                        data-testid="child-0"
+                        data-component-type="container"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-check shrink-0 mt-1 text-mauve"
+                          data-testid="icon-check"
+                          style="
+                            display: inline-block;
+                            min-height: 1px;
+                            min-width: 1px;
+                          "
+                          data-component-type="icon"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path></svg
+                        ><span data-testid="child-1" data-component-type="text"
+                          >Accueillir un retrait n&#x27;est pas un rejet
+                          personnel : c&#x27;est respecter la relation.</span
+                        >
+                      </div>
+                      <div
+                        role="listitem"
+                        class="flex items-start gap-2"
+                        data-testid="child-1"
+                        data-component-type="container"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-check shrink-0 mt-1 text-mauve"
+                          data-testid="icon-check"
+                          style="
+                            display: inline-block;
+                            min-height: 1px;
+                            min-width: 1px;
+                          "
+                          data-component-type="icon"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path></svg
+                        ><span data-testid="child-1" data-component-type="text"
+                          >Il y a sans doute des raisons que tu ne connais
+                          pas.</span
+                        >
+                      </div>
+                      <div
+                        role="listitem"
+                        class="flex items-start gap-2"
+                        data-testid="child-2"
+                        data-component-type="container"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-check shrink-0 mt-1 text-mauve"
+                          data-testid="icon-check"
+                          style="
+                            display: inline-block;
+                            min-height: 1px;
+                            min-width: 1px;
+                          "
+                          data-component-type="icon"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path d="M20 6 9 17l-5-5"></path></svg
+                        ><span data-testid="child-1" data-component-type="text"
+                          >Tu peux demander « pourquoi as-tu changé d&#x27;avis
+                          ? » — et l&#x27;autre peut choisir de ne pas
+                          répondre.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-3 bg-orange-light rounded-card p-5 max-w-3xl"
+                  data-testid="child-3"
+                  data-component-type="container"
+                  role="group"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-square-quote shrink-0 text-orange-ink mt-0.5"
+                    data-testid="icon-message-square-quote"
+                    style="
+                      display: inline-block;
+                      min-height: 1px;
+                      min-width: 1px;
+                    "
+                    data-component-type="icon"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path d="M14 14a2 2 0 0 0 2-2V8h-2"></path>
+                    <path
+                      d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+                    ></path>
+                    <path d="M8 14a2 2 0 0 0 2-2V8H8"></path>
+                  </svg>
+                  <div
+                    class="flex flex-col gap-1 text-bleu-fonce"
+                    data-testid="child-1"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <p
+                      class="font-bold"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      Des phrases pour revenir sur un oui :
+                    </p>
+                    <p data-testid="child-1" data-component-type="text">
+                      « En prenant du recul, j&#x27;ai décidé que… »
+                    </p>
+                    <p data-testid="child-2" data-component-type="text">
+                      « En y réfléchissant mieux, je vais… »
+                    </p>
+                    <p data-testid="child-3" data-component-type="text">
+                      « Finalement, j&#x27;ai changé d&#x27;avis… »
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section
+                id="biais"
+                class="flex flex-col gap-6"
+                data-testid="child-4"
+                data-component-type="container"
+                role="region"
+              >
+                <h2
+                  class="type-section text-bleu-fonce"
+                  data-testid="child-0"
+                  data-component-type="text"
+                >
+                  les biais qui nous poussent à dire oui
+                </h2>
+                <div
+                  class="grid md:grid-cols-12 gap-6 items-center"
+                  data-testid="child-1"
+                  data-component-type="container"
+                  role="group"
+                >
+                  <div
+                    class="md:col-span-8 flex flex-col gap-4"
+                    data-testid="child-0"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <p
+                      class="type-lead text-bleu-fonce-70"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      Des biais cognitifs, liés au fonctionnement automatique de
+                      notre cerveau, des dynamiques affectives et des structures
+                      sociales, éducatives ou économiques réduisent notre marge
+                      de manœuvre pour dire un vrai non.
+                    </p>
+                    <p
+                      class="text-bleu-fonce"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      S&#x27;en libérer complètement est impossible ; les
+                      connaître aide déjà à les repérer et à faire avec. Et tout
+                      ne dépend pas de nous individuellement — la société, et
+                      même notre biologie, ont leur part dans les défauts et les
+                      bris de consentement.
+                    </p>
+                    <p
+                      class="text-bleu-fonce"
+                      data-testid="child-2"
+                      data-component-type="text"
+                    >
+                      <span data-testid="child-0" data-component-type="text"
+                        >« Libre », c&#x27;est un bien grand mot. Disons déjà : </span
+                      ><span
+                        class="font-bold"
+                        data-testid="child-1"
+                        data-component-type="text"
+                        >sans pression, menaces, intimidation ni chantage</span
+                      ><span data-testid="child-2" data-component-type="text">
+                        — et avec une meilleure conscience des biais, des
+                        dynamiques et des structures en jeu.</span
+                      >
+                    </p>
+                  </div>
+                  <div
+                    class="md:col-span-4 photo-frame frame-cyan max-w-xs mx-auto md:max-w-none"
+                    data-testid="child-1"
+                    data-component-type="container"
+                    role="group"
+                  >
+                    <img
+                      src="pictures/atelier/cartes-biais-sm.webp"
+                      alt="Une main dispose sur une table des feuilles portant des noms de biais — « Patriarcat », « Chantage », « Dette psychologique »"
+                      loading="lazy"
+                      class="rounded-lg w-full h-auto rounded-media shadow-card object-cover aspect-[2/3]"
+                      data-testid="child-0"
+                      data-loading="lazy"
+                      data-component-type="image"
+                      data-slot="image"
+                    />
+                  </div>
+                </div>
+                <p
+                  class="font-bold text-bleu-fonce"
+                  data-testid="child-2"
+                  data-component-type="text"
+                >
+                  Six exemples, parmi tous ceux qu&#x27;on explore en atelier.
+                </p>
+                <div
+                  class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4"
+                  data-testid="child-3"
+                  data-component-type="container"
+                  role="group"
+                >
+                  <div
+                    class="term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2"
+                    data-testid="component-term-card"
+                    data-component="term-card"
+                    data-type="container"
+                    role="group"
+                    data-component-type="container"
+                  >
+                    <h3
+                      class="type-lead font-extrabold text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      Autorité
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      Tendance à accorder plus de poids aux opinions ou demandes
+                      de figures qui ont du pouvoir (supérieur·e hiérarchique,
+                      médecin, prof…).
+                    </p>
+                    <div
+                      class="flex items-start gap-2 type-small text-mauve"
+                      data-testid="child-2"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-corner-down-right text-current shrink-0 mt-1"
+                        data-testid="icon-corner-down-right"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path d="m15 10 5 5-5 5"></path>
+                        <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                      </svg>
+                      <p data-testid="child-1" data-component-type="text">
+                        Le consentement peut venir de la soumission plutôt que
+                        de la conviction.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2"
+                    data-testid="component-term-card"
+                    data-component="term-card"
+                    data-type="container"
+                    role="group"
+                    data-component-type="container"
+                  >
+                    <h3
+                      class="type-lead font-extrabold text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      Conformité
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      Tendance à adopter l&#x27;avis ou le comportement du
+                      groupe, même s&#x27;il contredit ton propre jugement.
+                    </p>
+                    <div
+                      class="flex items-start gap-2 type-small text-mauve"
+                      data-testid="child-2"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-corner-down-right text-current shrink-0 mt-1"
+                        data-testid="icon-corner-down-right"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path d="m15 10 5 5-5 5"></path>
+                        <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                      </svg>
+                      <p data-testid="child-1" data-component-type="text">
+                        On peut consentir par peur d&#x27;être exclu·e ou
+                        jugé·e.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2"
+                    data-testid="component-term-card"
+                    data-component="term-card"
+                    data-type="container"
+                    role="group"
+                    data-component-type="container"
+                  >
+                    <h3
+                      class="type-lead font-extrabold text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      Culpabilité anticipée
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      J&#x27;imagine que mon refus va faire de la peine,
+                      blesser, gêner ou casser le lien.
+                    </p>
+                    <div
+                      class="flex items-start gap-2 type-small text-mauve"
+                      data-testid="child-2"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-corner-down-right text-current shrink-0 mt-1"
+                        data-testid="icon-corner-down-right"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path d="m15 10 5 5-5 5"></path>
+                        <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                      </svg>
+                      <p data-testid="child-1" data-component-type="text">
+                        Je dis oui pour éviter cette charge émotionnelle.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2"
+                    data-testid="component-term-card"
+                    data-component="term-card"
+                    data-type="container"
+                    role="group"
+                    data-component-type="container"
+                  >
+                    <h3
+                      class="type-lead font-extrabold text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      Engagement
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      Besoin de rester cohérent·e avec ses engagements passés,
+                      même s&#x27;ils ne sont plus pertinents.
+                    </p>
+                    <div
+                      class="flex items-start gap-2 type-small text-mauve"
+                      data-testid="child-2"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-corner-down-right text-current shrink-0 mt-1"
+                        data-testid="icon-corner-down-right"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path d="m15 10 5 5-5 5"></path>
+                        <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                      </svg>
+                      <p data-testid="child-1" data-component-type="text">
+                        On renouvelle un consentement par loyauté, ou pour « ne
+                        pas revenir en arrière ».
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2"
+                    data-testid="component-term-card"
+                    data-component="term-card"
+                    data-type="container"
+                    role="group"
+                    data-component-type="container"
+                  >
+                    <h3
+                      class="type-lead font-extrabold text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      Effet de script
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      Application automatique de scénarios sociaux appris, sans
+                      se poser de questions (le déroulé d&#x27;un acte sexuel ou
+                      d&#x27;une relation amoureuse, par exemple).
+                    </p>
+                    <div
+                      class="flex items-start gap-2 type-small text-mauve"
+                      data-testid="child-2"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-corner-down-right text-current shrink-0 mt-1"
+                        data-testid="icon-corner-down-right"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path d="m15 10 5 5-5 5"></path>
+                        <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                      </svg>
+                      <p data-testid="child-1" data-component-type="text">
+                        Ça limite l&#x27;espace de choix réel, en imposant un
+                        déroulé implicite.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="term-card bg-white rounded-card border border-bleu-fonce-light p-5 flex flex-col gap-2"
+                    data-testid="component-term-card"
+                    data-component="term-card"
+                    data-type="container"
+                    role="group"
+                    data-component-type="container"
+                  >
+                    <h3
+                      class="type-lead font-extrabold text-bleu-fonce"
+                      data-testid="child-0"
+                      data-component-type="text"
+                    >
+                      Rapports de pouvoir inégaux
+                    </h3>
+                    <p
+                      class="type-small text-bleu-fonce-70"
+                      data-testid="child-1"
+                      data-component-type="text"
+                    >
+                      Des écarts de hiérarchie, d&#x27;âge, de prestige ou de
+                      situation économique entre les personnes.
+                    </p>
+                    <div
+                      class="flex items-start gap-2 type-small text-mauve"
+                      data-testid="child-2"
+                      data-component-type="container"
+                      role="group"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-corner-down-right text-current shrink-0 mt-1"
+                        data-testid="icon-corner-down-right"
+                        style="
+                          display: inline-block;
+                          min-height: 1px;
+                          min-width: 1px;
+                        "
+                        data-component-type="icon"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path d="m15 10 5 5-5 5"></path>
+                        <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                      </svg>
+                      <p data-testid="child-1" data-component-type="text">
+                        Ils pèsent sur la liberté de dire non.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </article>
+          </div>
+        </div>
+        <section
+          class="px-4 sm:px-6 pb-band-sm md:pb-band"
+          data-testid="child-2"
+          data-component-type="container"
+          role="region"
+        >
+          <div
+            class="max-w-7xl mx-auto bg-orange-light rounded-media p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center"
+            data-testid="child-0"
+            data-component-type="container"
+            role="group"
+          >
+            <div
+              class="md:col-span-8 flex flex-col gap-4"
+              data-testid="child-0"
+              data-component-type="container"
+              role="group"
+            >
+              <h2
+                class="type-section text-bleu-fonce"
+                data-testid="child-0"
+                data-component-type="text"
+              >
+                envie d&#x27;aller plus loin ?
+              </h2>
+              <p
+                class="type-lead text-bleu-fonce"
+                data-testid="child-1"
+                data-component-type="text"
+              >
+                Ces notions prennent tout leur sens quand on les pratique
+                ensemble, dans un cadre bienveillant. Rejoins-nous pour 3 heures
+                d&#x27;atelier, gratuites, à Strasbourg.
+              </p>
+            </div>
+            <div
+              class="md:col-span-4 flex flex-col gap-3 md:items-end"
+              data-testid="child-1"
+              data-component-type="container"
+              role="group"
+            >
+              <a
+                href="nos-ateliers.html#events"
+                class="hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 duration-150 inline-flex items-center justify-center gap-2 whitespace-nowrap bg-orange text-bleu-fonce px-7 py-4 rounded-pill font-bold type-lead hover:bg-orange-hover transition-colors shadow-card"
+                data-testid="child-0"
+                data-component-type="link"
+                ><span data-testid="child-0" data-component-type="text"
+                  >Je réserve ma place</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-right shrink-0 text-current"
+                  data-testid="icon-arrow-right"
+                  style="display: inline-block; min-height: 1px; min-width: 1px"
+                  data-component-type="icon"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path></svg></a
+              ><a
+                href="nos-ateliers.html#programme"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 font-bold text-bleu-fonce underline underline-offset-4 hover:text-mauve py-2"
+                data-testid="child-1"
+                data-component-type="link"
+                >Voir ce qu&#x27;on pratique en atelier</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer
+        class="bg-mauve-light border-t border-mauve-lighter"
+        data-testid="component-site-footer"
+        data-component="site-footer"
+        data-type="container"
+        data-component-type="container"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid gap-12 md:grid-cols-12"
+          data-testid="child-0"
+          data-component-type="container"
+          role="group"
+        >
+          <div
+            class="md:col-span-5 flex flex-col gap-4"
+            data-testid="child-0"
+            data-component-type="container"
+            role="group"
+          >
+            <a
+              href="index.html"
+              aria-label="Merci pour ton non — accueil"
+              class="text-primary hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 self-start"
+              data-testid="child-0"
+              data-component-type="link"
+              ><img
+                src="logo.svg"
+                alt=""
+                class="rounded-lg object-cover h-16 md:h-20 w-auto"
+                data-testid="child-0"
+                data-component-type="image"
+                loading="lazy"
+                data-slot="image"
+            /></a>
+            <p
+              class="type-small text-bleu-fonce-70 max-w-sm"
+              data-testid="child-1"
+              data-component-type="text"
+            >
+              On anime des ateliers de consentement gratuits à Strasbourg. En
+              3h, on apprend à poser ses limites, à dire non et à accueillir
+              celui des autres — dans un cadre bienveillant, ouvert à tou·te·s.
+            </p>
+            <a
+              href="mailto:mercipourtonnon@gmail.com"
+              class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 self-start type-small font-bold text-mauve underline underline-offset-4 hover:text-pourpre-hover"
+              data-testid="child-2"
+              data-component-type="link"
+              >mercipourtonnon@gmail.com</a
+            >
+          </div>
+          <nav
+            aria-label="Plan du site"
+            class="md:col-span-4 flex flex-col gap-3"
+            data-testid="child-1"
+            data-component-type="container"
+          >
+            <p
+              class="type-overline text-bleu-fonce-70"
+              data-testid="child-0"
+              data-component-type="text"
+            >
+              Le site
+            </p>
+            <div
+              class="grid grid-cols-2 gap-x-6 gap-y-2 type-small"
+              data-testid="child-1"
+              data-component-type="container"
+              role="group"
+            >
+              <a
+                href="notre-mission.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-0"
+                data-component-type="link"
+                >Notre mission</a
+              ><a
+                href="nos-ateliers.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-1"
+                data-component-type="link"
+                >Nos ateliers</a
+              ><a
+                href="nos-stands.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-2"
+                data-component-type="link"
+                >Nos stands</a
+              ><a
+                href="nos-interventions.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-3"
+                data-component-type="link"
+                >Nos interventions</a
+              ><a
+                href="le-consentement.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-4"
+                data-component-type="link"
+                >Le consentement</a
+              ><a
+                href="ressources.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-5"
+                data-component-type="link"
+                >Ressources</a
+              ><a
+                href="notre-mission.html#equipe"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-6"
+                data-component-type="link"
+                >L&#x27;équipe</a
+              ><a
+                href="newsletter.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-7"
+                data-component-type="link"
+                >Newsletter</a
+              ><a
+                href="devenir-benevole.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-8"
+                data-component-type="link"
+                >Devenir bénévole</a
+              ><a
+                href="vos-idees.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-9"
+                data-component-type="link"
+                >Proposer une idée</a
+              ><a
+                href="https://www.helloasso.com/associations/merci-pour-ton-non/adhesions/adhesion-a-l-association-merci-pour-ton-non"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Adhérer sur HelloAsso (nouvel onglet) (s’ouvre dans un nouvel onglet)"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-10"
+                data-target="_blank"
+                data-rel="noopener noreferrer"
+                data-component-type="link"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-user-plus shrink-0 text-current"
+                  aria-hidden="true"
+                  data-testid="icon-user-plus"
+                  style="display: inline-block; min-height: 1px; min-width: 1px"
+                  data-component-type="icon"
+                  data-slot="icon"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <line x1="19" x2="19" y1="8" y2="14"></line>
+                  <line x1="22" x2="16" y1="11" y2="11"></line></svg
+                ><span data-testid="child-1" data-component-type="text"
+                  >Adhérer</span
+                ></a
+              ><a
+                href="https://www.helloasso.com/associations/merci-pour-ton-non/formulaires/1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nous faire un don sur HelloAsso (nouvel onglet) (s’ouvre dans un nouvel onglet)"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-11"
+                data-target="_blank"
+                data-rel="noopener noreferrer"
+                data-component-type="link"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart shrink-0 text-current"
+                  aria-hidden="true"
+                  data-testid="icon-heart"
+                  style="display: inline-block; min-height: 1px; min-width: 1px"
+                  data-component-type="icon"
+                  data-slot="icon"
+                >
+                  <path
+                    d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                  ></path></svg
+                ><span data-testid="child-1" data-component-type="text"
+                  >Nous faire un don</span
+                ></a
+              ><a
+                href="mentions-legales.html"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-12"
+                data-component-type="link"
+                >Mentions légales</a
+              ><a
+                href="#" data-unexported="/espace"
+                class="decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 py-1 text-bleu-fonce hover:text-mauve underline-offset-4 hover:underline"
+                data-testid="child-13"
+                data-component-type="link"
+                >Espace bénévole</a
+              >
+            </div>
+          </nav>
+          <div
+            class="md:col-span-3 flex flex-col gap-3"
+            data-testid="child-2"
+            data-component-type="container"
+            role="group"
+          >
+            <p
+              class="type-overline text-bleu-fonce-70"
+              data-testid="child-0"
+              data-component-type="text"
+            >
+              Nous suivre
+            </p>
+            <div
+              class="flex flex-col gap-1 type-small"
+              data-testid="child-1"
+              data-component-type="container"
+              role="group"
+            >
+              <a
+                href="https://www.instagram.com/mercipourtonnon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram (nouvel onglet) (s’ouvre dans un nouvel onglet)"
+                class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve"
+                data-testid="child-0"
+                data-target="_blank"
+                data-rel="noopener noreferrer"
+                data-component-type="link"
+                ><span data-testid="child-0" data-component-type="text"
+                  >Instagram</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up-right shrink-0 text-current"
+                  data-testid="icon-arrow-up-right"
+                  style="display: inline-block; min-height: 1px; min-width: 1px"
+                  data-component-type="icon"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path d="M7 7h10v10"></path>
+                  <path d="M7 17 17 7"></path></svg></a
+              ><a
+                href="https://www.facebook.com/mercipourtonnon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook (nouvel onglet) (s’ouvre dans un nouvel onglet)"
+                class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve"
+                data-testid="child-1"
+                data-target="_blank"
+                data-rel="noopener noreferrer"
+                data-component-type="link"
+                ><span data-testid="child-0" data-component-type="text"
+                  >Facebook</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up-right shrink-0 text-current"
+                  data-testid="icon-arrow-up-right"
+                  style="display: inline-block; min-height: 1px; min-width: 1px"
+                  data-component-type="icon"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path d="M7 7h10v10"></path>
+                  <path d="M7 17 17 7"></path></svg></a
+              ><a
+                href="https://www.linkedin.com/company/merci-pour-ton-non"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn (nouvel onglet) (s’ouvre dans un nouvel onglet)"
+                class="underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 inline-flex items-center gap-1.5 py-1 text-bleu-fonce hover:text-mauve"
+                data-testid="child-2"
+                data-target="_blank"
+                data-rel="noopener noreferrer"
+                data-component-type="link"
+                ><span data-testid="child-0" data-component-type="text"
+                  >LinkedIn</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up-right shrink-0 text-current"
+                  data-testid="icon-arrow-up-right"
+                  style="display: inline-block; min-height: 1px; min-width: 1px"
+                  data-component-type="icon"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path d="M7 7h10v10"></path>
+                  <path d="M7 17 17 7"></path></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-mauve-lighter"
+          data-testid="child-1"
+          data-component-type="container"
+          role="group"
+        >
+          <p
+            class="max-w-7xl mx-auto px-4 sm:px-6 py-6 type-caption text-bleu-fonce-70"
+            data-testid="child-0"
+            data-component-type="text"
+          >
+            © 2026 Merci pour ton non. Tous droits réservés.
+          </p>
+        </div>
+      </footer>
+      <script type="application/json" data-command-palette-config="true">
+        {
+          "tables": [
+            {
+              "name": "facilitators",
+              "label": "facilitators",
+              "labelPlural": "facilitators",
+              "fields": [
+                { "name": "display_name", "label": "Nom affiché" },
+                { "name": "short_name", "label": "Prénom" }
+              ]
+            },
+            {
+              "name": "venues",
+              "label": "venues",
+              "labelPlural": "venues",
+              "fields": [
+                { "name": "name", "label": "Nom du lieu" },
+                { "name": "zip_code", "label": "Code postal" },
+                { "name": "city", "label": "Ville" },
+                { "name": "country", "label": "Pays" }
+              ]
+            },
+            {
+              "name": "workshops",
+              "label": "workshops",
+              "labelPlural": "workshops",
+              "fields": [
+                { "name": "slug", "label": "Slug" },
+                { "name": "date_label", "label": "Date (texte)" },
+                { "name": "time_label", "label": "Heure (texte)" },
+                { "name": "booking_url", "label": "Lien de réservation" }
+              ]
+            },
+            {
+              "name": "ressources",
+              "label": "ressources",
+              "labelPlural": "ressources",
+              "fields": [
+                { "name": "title", "label": "Titre" },
+                { "name": "author", "label": "Auteur·ice / éditeur" },
+                { "name": "url", "label": "Lien" },
+                { "name": "note", "label": "Pourquoi c'est utile" }
+              ]
+            }
+          ],
+          "pages": [
+            {
+              "name": "home",
+              "path": "/",
+              "title": "Merci pour ton non - Consentement à Strasbourg"
+            },
+            {
+              "name": "notre-mission",
+              "path": "/notre-mission",
+              "title": "Notre mission et l'équipe - Merci pour ton non"
+            },
+            {
+              "name": "nos-ateliers",
+              "path": "/nos-ateliers",
+              "title": "Atelier de consentement à Strasbourg - Merci pour ton non"
+            },
+            {
+              "name": "nos-stands",
+              "path": "/nos-stands",
+              "title": "Nos stands de sensibilisation - Merci pour ton non"
+            },
+            {
+              "name": "nos-interventions",
+              "path": "/nos-interventions",
+              "title": "Interventions pour les structures - Merci pour ton non"
+            },
+            {
+              "name": "mentions-legales",
+              "path": "/mentions-legales",
+              "title": "Mentions légales - Merci pour ton non"
+            },
+            {
+              "name": "newsletter",
+              "path": "/newsletter",
+              "title": "Newsletter - Merci pour ton non"
+            },
+            {
+              "name": "le-consentement",
+              "path": "/le-consentement",
+              "title": "Notre vision du consentement - Merci pour ton non"
+            },
+            {
+              "name": "ressources",
+              "path": "/ressources",
+              "title": "Ressources sur le consentement - Merci pour ton non"
+            },
+            {
+              "name": "devenir-benevole",
+              "path": "/devenir-benevole",
+              "title": "Devenir bénévole - Merci pour ton non"
+            },
+            {
+              "name": "vos-idees",
+              "path": "/vos-idees",
+              "title": "Vos idées pour l'association - Merci pour ton non"
+            },
+            {
+              "name": "espace-connexion",
+              "path": "/connexion",
+              "title": "Connexion - Espace bénévole"
+            },
+            {
+              "name": "espace-inscription",
+              "path": "/inscription",
+              "title": "Rejoindre l'équipe bénévole - Merci pour ton non"
+            }
+          ],
+          "strings": {
+            "createTitle": "Nouvel enregistrement dans {table}",
+            "create": "Créer",
+            "cancel": "Annuler",
+            "search": "Rechercher",
+            "searchPlaceholder": "Rechercher…",
+            "quickActions": "Actions rapides",
+            "pages": "Pages",
+            "createIn": "Créer un enregistrement dans {table}",
+            "goTo": "Aller à {page}",
+            "toggleDarkMode": "Basculer le mode sombre",
+            "darkModeOn": "Mode sombre activé",
+            "lightModeOn": "Mode clair activé"
+          }
+        }
+      </script>
+      <div
+        data-island-deferred="command"
+        data-component-type="command"
+        data-island-props='{"hints":{"navigate":"naviguer","open":"ouvrir","close":"fermer","title":"Palette de commandes","search":"Rechercher","searchAll":"Rechercher dans toutes vos données","commandPlaceholder":"Saisissez une commande ou recherchez…","commandLabel":"Rechercher des commandes","empty":"Aucun résultat.","startTyping":"Commencez à taper pour rechercher des enregistrements, des réponses, des fichiers, des automatisations et des utilisateurs.","searching":"Recherche en cours…","noResultsFor":"Aucun résultat pour « {query} »"}}'
+        class="hidden"
+      >
+        <span class="sr-only"></span>
+      </div>
+    </main>
+    <script src="assets/site.js" defer=""></script>
+    <script src="assets/scroll-animation-52188b8a.js" defer=""></script>
+    <script>
+      !(function () {
+        function openModal(id) {
+          window.__sovriumOpenModals = window.__sovriumOpenModals || {};
+          window.__sovriumOpenModals[id] = true;
+          var c = document.getElementById(id);
+          if (!c) return;
+          c.style.display = "";
+          var d = c.querySelector('[role="dialog"]');
+          if (d) {
+            d.removeAttribute("hidden");
+            d.setAttribute("aria-hidden", "false");
+            d.focus();
+          }
+        }
+        function closeModal(c) {
+          if (c.querySelector('[data-pending="true"]')) return;
+          c.style.display = "none";
+        }
+        document.addEventListener("click", function (t) {
+          var e = t.target.closest(
+            "[data-click-animation], [data-click-navigate], [data-click-open-url], [data-click-scroll-to], [data-click-toggle-element], [data-click-submit-form], [data-click-modal], [data-modal-close], [data-backdrop]",
+          );
+          if (!e) return;
+          if (e.hasAttribute("data-modal-close")) {
+            var mc = e.closest("[data-modal-container]");
+            if (mc) closeModal(mc);
+            return;
+          }
+          if (e.hasAttribute("data-backdrop") && t.target === e) {
+            var mc2 = e.closest("[data-modal-container]");
+            if (mc2) closeModal(mc2);
+            return;
+          }
+          var n = e.getAttribute("data-click-animation"),
+            a = e.getAttribute("data-click-navigate"),
+            c = e.getAttribute("data-click-open-url"),
+            i = e.getAttribute("data-click-open-in-new-tab") === "true",
+            o = e.getAttribute("data-click-scroll-to"),
+            l = e.getAttribute("data-click-toggle-element"),
+            r = e.getAttribute("data-click-submit-form"),
+            m = e.getAttribute("data-click-modal"),
+            s = c || a,
+            d = !!c;
+          if (m) {
+            openModal(m);
+          } else if (r) {
+            var f = document.querySelector(r),
+              b = f && f.querySelector("[type=submit]");
+            f &&
+              "FORM" === f.tagName &&
+              !(b && b.disabled) &&
+              f.requestSubmit();
+          } else if (l) {
+            var g = document.querySelector(l);
+            if (g) {
+              var h = "none" === window.getComputedStyle(g).display;
+              g.style.display = h ? "" : "none";
+            }
+          } else if (o) {
+            var j = document.querySelector(o);
+            j && j.scrollIntoView({ behavior: "smooth", block: "start" });
+          } else if (n && "none" !== n) {
+            var k = "animate-click-" + n;
+            if ((e.classList.add(k), s)) {
+              var done = !1;
+              var cb = function () {
+                done ||
+                  ((done = !0),
+                  e.classList.remove(k),
+                  d && i
+                    ? window.open(s, "_blank", "noopener,noreferrer")
+                    : (window.location.href = s));
+              };
+              e.addEventListener("animationend", cb, { once: !0 });
+              setTimeout(cb, 300);
+            } else {
+              var cb2 = function () {
+                e.classList.remove(k);
+              };
+              e.addEventListener("animationend", cb2, { once: !0 });
+              setTimeout(cb2, 300);
+            }
+          } else
+            s &&
+              (d && i
+                ? window.open(s, "_blank", "noopener,noreferrer")
+                : (window.location.href = s));
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            var open = document.querySelector(
+              '[data-modal-container]:not([style*="display: none"])',
+            );
+            if (!open) {
+              var all = document.querySelectorAll("[data-modal-container]");
+              for (var i = 0; i < all.length; i++) {
+                if (all[i].style.display !== "none") {
+                  open = all[i];
+                  break;
+                }
+              }
+            }
+            if (open) closeModal(open);
+          }
+        });
+      })();
+      !(function () {
+        function grow(el) {
+          el.style.height = "auto";
+          el.style.height = el.scrollHeight + "px";
+        }
+        var els = document.querySelectorAll("textarea[data-auto-resize]");
+        for (var i = 0; i < els.length; i++) {
+          (function (el) {
+            el.style.overflow = "hidden";
+            el.style.resize = "none";
+            el.addEventListener("input", function () {
+              grow(el);
+            });
+            grow(el);
+          })(els[i]);
+        }
+      })();
+      !(function () {
+        var root = document.documentElement,
+          mq = window.matchMedia("(prefers-color-scheme: dark)"),
+          follow = !1;
+        document.addEventListener("click", function (t) {
+          var e = t.target.closest("[data-theme-toggle], [data-theme-set]");
+          if (!e) return;
+          var v = e.getAttribute("data-theme-set"),
+            dark =
+              v === null
+                ? !root.classList.contains("dark")
+                : v === "system"
+                  ? mq.matches
+                  : v === "dark";
+          root.classList.toggle("dark", dark);
+          try {
+            if (v === "system") {
+              window.localStorage.removeItem("theme");
+              if (!follow) {
+                follow = !0;
+                mq.addEventListener("change", function (m) {
+                  var s = window.localStorage.getItem("theme");
+                  if (s !== "dark" && s !== "light")
+                    root.classList.toggle("dark", m.matches);
+                });
+              }
+            } else {
+              window.localStorage.setItem("theme", dark ? "dark" : "light");
+            }
+          } catch (err) {}
+        });
+      })();
+      !(function () {
+        document.addEventListener("click", function (t) {
+          var b = t.target.closest("[data-copy-code]");
+          if (!b) return;
+          var s = b.closest("[data-code-copy-scope]");
+          if (!s) return;
+          var p =
+            s.querySelector("[data-copy-target]") ||
+            s.querySelector("[data-code-command]") ||
+            s.querySelector("pre:not([data-code-output])");
+          if (!p) return;
+          var c = p.querySelector("code") || p;
+          var text = c.textContent || "";
+          if (!text) return;
+          var st = s.querySelector("[data-copy-status]");
+          var done = function () {
+            var copied = b.getAttribute("data-copied-label") || "Copied";
+            b.setAttribute("data-copied", "true");
+            if (st) st.textContent = copied;
+            setTimeout(function () {
+              b.removeAttribute("data-copied");
+              if (st) st.textContent = "";
+            }, 2000);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard
+              .writeText(text)
+              .then(done)
+              .catch(function () {});
+          } else {
+            try {
+              var ta = document.createElement("textarea");
+              ta.value = text;
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand("copy");
+              document.body.removeChild(ta);
+              done();
+            } catch (err) {}
+          }
+        });
+      })();
+      !(function () {
+        document.addEventListener("click", function (t) {
+          var b = t.target.closest("[data-marquee-pause]");
+          if (!b) return;
+          var m = b.closest("[data-marquee]");
+          if (!m) return;
+          if (m.getAttribute("data-marquee-paused") === "true") {
+            m.removeAttribute("data-marquee-paused");
+            b.textContent =
+              b.getAttribute("data-marquee-pause-label") || "Pause";
+          } else {
+            m.setAttribute("data-marquee-paused", "true");
+            b.textContent =
+              b.getAttribute("data-marquee-resume-label") || "Resume";
+          }
+        });
+      })();
+      !(function () {
+        var takeCarriedToast = function (n = Date.now()) {
+          var t = function (k) {
+            var m = k.message,
+              v = k.variant,
+              d = k.duration,
+              a = k.at;
+            if (
+              !(typeof a === "number" && n >= a && n - a <= 60000) ||
+              typeof m !== "string" ||
+              m === ""
+            )
+              return;
+            return {
+              message: m,
+              variant:
+                [
+                  "default",
+                  "success",
+                  "info",
+                  "warning",
+                  "error",
+                  "destructive",
+                ].indexOf(v) !== -1
+                  ? v
+                  : void 0,
+              duration:
+                typeof d === "number" && isFinite(d) && d > 0 ? d : void 0,
+            };
+          };
+          try {
+            var s = sessionStorage,
+              r = s.getItem("sovrium:flash-toast");
+            if (r === null) return;
+            s.removeItem("sovrium:flash-toast");
+            return t(JSON.parse(r));
+          } catch (e) {}
+        };
+        function raiseCarriedToast() {
+          var TOAST_DEFAULT_DURATION_MS = 5000;
+          var TOAST_PERSISTENT_VARIANTS = ["error", "destructive"];
+          var TOAST_ASSERTIVE_VARIANTS = ["error", "destructive"];
+          var TOAST_DISMISS_LABEL_FALLBACK = "Dismiss";
+          function resolveToastDismissal(duration, variant) {
+            if (typeof duration === "number" && duration > 0) return duration;
+            if (variant && TOAST_PERSISTENT_VARIANTS.indexOf(variant) !== -1)
+              return null;
+            return TOAST_DEFAULT_DURATION_MS;
+          }
+          function ensureToastContainer() {
+            var existing = document.querySelector("[data-sonner-toaster]");
+            if (existing) return existing;
+            var container = document.createElement("div");
+            container.setAttribute("data-sonner-toaster", "");
+            container.setAttribute("data-toast-container", "");
+            container.style.position = "fixed";
+            container.style.right = "16px";
+            container.style.zIndex = "9999";
+            container.style.display = "flex";
+            container.style.flexDirection = "column";
+            container.style.gap = "8px";
+            document.body.appendChild(container);
+            return container;
+          }
+          function installToastEscapeDismiss() {
+            if (document.body.hasAttribute("data-toast-escape-bound")) return;
+            document.body.setAttribute("data-toast-escape-bound", "true");
+            document.addEventListener("keydown", function (event) {
+              if (event.key !== "Escape") return;
+              var toasts = document.querySelectorAll("[data-toast]");
+              var target = null;
+              for (var i = 0; i < toasts.length; i++) {
+                if (toasts[i].querySelector("[data-toast-dismiss]"))
+                  target = toasts[i];
+              }
+              if (target) target.remove();
+            });
+          }
+          function appendToastDismissControl(toast, container) {
+            var declared = container.getAttribute("data-dismiss-label");
+            var label =
+              declared && declared.trim() !== ""
+                ? declared
+                : TOAST_DISMISS_LABEL_FALLBACK;
+            var button = document.createElement("button");
+            button.setAttribute("type", "button");
+            button.setAttribute("data-toast-dismiss", "");
+            button.setAttribute("aria-label", label);
+            button.textContent = "\u00d7";
+            button.addEventListener("click", function () {
+              toast.remove();
+            });
+            toast.appendChild(button);
+            installToastEscapeDismiss();
+          }
+          function showToast(message, variant, duration) {
+            if (!message) return;
+            var container = ensureToastContainer();
+            var toast = document.createElement("div");
+            toast.setAttribute("data-toast", "");
+            if (variant) toast.setAttribute("data-variant", variant);
+            if (variant && TOAST_ASSERTIVE_VARIANTS.indexOf(variant) !== -1) {
+              toast.setAttribute("role", "alert");
+            } else {
+              toast.setAttribute("role", "status");
+              toast.setAttribute("aria-live", "polite");
+            }
+            var messageSpan = document.createElement("span");
+            messageSpan.setAttribute("data-toast-message", "");
+            messageSpan.textContent = message;
+            toast.appendChild(messageSpan);
+            var dismissAfter = resolveToastDismissal(duration, variant);
+            if (dismissAfter === null) {
+              appendToastDismissControl(toast, container);
+              container.appendChild(toast);
+              return;
+            }
+            container.appendChild(toast);
+            setTimeout(function () {
+              toast.remove();
+            }, dismissAfter);
+          }
+          var carried = takeCarriedToast();
+          if (carried)
+            showToast(carried.message, carried.variant, carried.duration);
+        }
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", raiseCarriedToast);
+        } else {
+          raiseCarriedToast();
+        }
+      })();
+    </script>
+</body>
+</html>

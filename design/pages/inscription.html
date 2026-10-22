@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr" data-timezone="UTC" data-density="compact">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rejoindre l&#x27;équipe bénévole - Merci pour ton non</title>
+    <meta
+      name="description"
+      content="Crée ton compte pour rejoindre l&#x27;équipe bénévole de Merci pour ton non."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="./favicon/favicon-32x32.png" />
+    <link
+      rel="modulepreload"
+      href="assets/client-chunks/client-core-runtime-k9ev2980.js"
+    />
+    <script>
+      (function () {
+        "use strict";
+        function wake() {
+          var h = document.querySelector("[data-island-deferred]");
+          if (!h) return;
+          h.setAttribute("data-island", h.getAttribute("data-island-deferred"));
+          h.removeAttribute("data-island-deferred");
+          var t = document.querySelector("template[data-island-entry]");
+          if (t) {
+            var s = document.createElement("script");
+            s.type = "module";
+            s.src = t.getAttribute("data-island-entry");
+            t.remove();
+            document.head.appendChild(s);
+          } else {
+            document.dispatchEvent(new CustomEvent("sovrium:mount-islands"));
+          }
+        }
+        function open() {
+          window.__sovriumOpenCommandPalette = true;
+          wake();
+          document.dispatchEvent(
+            new CustomEvent("sovrium:open-command-palette"),
+          );
+        }
+        document.addEventListener(
+          "keydown",
+          function (e) {
+            if (
+              (e.metaKey || e.ctrlKey) &&
+              e.key &&
+              e.key.toLowerCase() === "k"
+            ) {
+              e.preventDefault();
+              open();
+            }
+          },
+          true,
+        );
+        document.addEventListener(
+          "click",
+          function (e) {
+            var t = e.target;
+            if (t && t.closest && t.closest("[data-command-palette-trigger]")) {
+              e.preventDefault();
+              open();
+            }
+          },
+          true,
+        );
+      })();
+    </script>
+    <script>
+      (function () {
+        try {
+          var stored = window.localStorage.getItem("theme");
+          var dark;
+          if (stored === "dark") {
+            dark = true;
+          } else if (stored === "light") {
+            dark = false;
+          } else {
+            var configured = "light";
+            if (configured === "dark") {
+              dark = true;
+            } else if (configured === "light") {
+              dark = false;
+            } else {
+              dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            }
+          }
+          var root = document.documentElement;
+          if (dark) {
+            root.classList.add("dark");
+          } else {
+            root.classList.remove("dark");
+          }
+          if (
+            stored !== "dark" &&
+            stored !== "light" &&
+            configured === "system"
+          ) {
+            window
+              .matchMedia("(prefers-color-scheme: dark)")
+              .addEventListener("change", function (event) {
+                var now = window.localStorage.getItem("theme");
+                if (now !== "dark" && now !== "light") {
+                  root.classList.toggle("dark", event.matches);
+                }
+              });
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/output-6283eb67.css" />
+    <style>
+      html[lang="fr-FR"] {
+        direction: ltr;
+      }
+      html[lang="fr-FR"] body {
+        direction: ltr;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      font-family:
+        Neue Machina,
+        Space Grotesk,
+        -apple-system,
+        BlinkMacSystemFont,
+        Segoe UI,
+        sans-serif;
+    "
+  >
+    <a
+      href="#main-content"
+      class="text-md bg-primary text-primary-foreground ring-ring sr-only z-50 rounded-md px-4 py-2 font-medium focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus-visible:ring-2 focus-visible:outline-none"
+      >Aller au contenu principal</a
+    ><span id="sovrium-new-tab-notice" hidden=""
+      >(s’ouvre dans un nouvel onglet)</span
+    >
+    <main
+      id="main-content"
+      tabindex="-1"
+      data-testid="page-espace-inscription"
+      data-page-name="espace-inscription"
+      data-sovrium-search-body="true"
+      style="min-height: 1px"
+    >
+      <div
+        class="flex min-h-screen justify-center bg-orange-lighter px-4 pt-10 pb-12 sm:items-center sm:px-6"
+        data-testid="container"
+        data-component-type="container"
+        role="group"
+      >
+        <div
+          class="flex w-full max-w-md flex-col gap-6 self-start sm:self-auto sm:rounded-lg sm:border sm:border-mauve-lighter sm:bg-white sm:p-8"
+          data-testid="child-0"
+          data-component-type="container"
+          role="group"
+        >
+          <a
+            href="index.html"
+            class="text-primary hover:text-[var(--sv-primary-hover,oklch(0.272_0_0))] underline-offset-4 decoration-2 focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 self-start"
+            data-testid="child-0"
+            data-component-type="link"
+            ><img
+              src="logo-without-marging.svg"
+              alt="Merci pour ton non, retour au site"
+              class="rounded-lg object-cover h-12 w-auto"
+              data-testid="child-0"
+              data-component-type="image"
+              loading="lazy"
+              data-slot="image"
+          /></a>
+          <p
+            class="text-sm text-bleu-fonce-70"
+            data-testid="child-1"
+            data-component-type="text"
+          >
+            <span data-testid="child-0" data-component-type="text"
+              >Tu veux d&#x27;abord savoir ce qu&#x27;on fait ensemble ? </span
+            ><a
+              href="devenir-benevole.html"
+              class="focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve"
+              data-testid="child-1"
+              data-component-type="link"
+              >Devenir bénévole</a
+            >
+          </p>
+          <div
+            class="flex flex-col gap-6"
+            data-testid="child-2"
+            data-component-type="container"
+            role="group"
+          >
+            <div
+              class="flex flex-col gap-3"
+              data-testid="child-0"
+              data-component-type="container"
+              role="group"
+            >
+              <h1
+                class="text-3xl title-font text-bleu-fonce"
+                data-testid="child-0"
+                data-component-type="text"
+              >
+                rejoindre l&#x27;équipe bénévole
+              </h1>
+              <p
+                class="text-bleu-fonce"
+                data-testid="child-1"
+                data-component-type="text"
+              >
+                Crée ton compte, puis remplis ta fiche bénévole. Elle sera
+                visible par les autres bénévoles de Merci pour ton non (MPTN) et
+                contient ce qu&#x27;il faut pour mieux se connaître. Le Cercle
+                Gardien la relit et t&#x27;ouvre l&#x27;espace bénévole.
+              </p>
+              <p
+                class="text-sm text-bleu-fonce-70"
+                data-testid="child-2"
+                data-component-type="text"
+              >
+                Ton email et ton téléphone restent réservés au Cercle Gardien.
+                En créant ton compte, tu acceptes qu&#x27;ils servent à
+                t&#x27;inviter dans notre communauté WhatsApp.
+              </p>
+            </div>
+            <div
+              data-island="auth-form"
+              data-island-props='{"method":"signup","strategy":"email","uiStrings":{"auth.fixErrors":"Corrigez les erreurs suivantes :","auth.required":"Le champ {label} est obligatoire","auth.invalidEmail":"Saisissez une adresse e-mail valide dans le champ {label}"},"fields":[{"name":"email","label":"Adresse email","required":true,"inputType":"email","placeholder":"toi@exemple.fr","autoComplete":"email","errorId":"signup-email-email-error"},{"name":"password","label":"Mot de passe","required":true,"inputType":"password","autoComplete":"new-password","errorId":"signup-email-password-error","rule":"Au moins 8 caractères"}],"submitLabel":"Créer mon compte","pendingLabel":"Création…","redirectUrl":"/espace/arrivee","data-testid":"child-1","className":"[&amp;_input:not([type=checkbox]):not([type=radio])]:bg-white [&amp;_textarea]:bg-white [&amp;_button[role=combobox]]:bg-white"}'
+              data-component-type="form"
+              data-testid="child-1"
+              style="
+                min-height: 1px;
+                min-width: 1px;
+                display: block;
+                width: 100%;
+              "
+            >
+              <form
+                class="flex w-full flex-col gap-3.5 [&amp;_input:not([type=checkbox]):not([type=radio])]:bg-white [&amp;_textarea]:bg-white [&amp;_button[role=combobox]]:bg-white"
+                data-testid="child-1"
+                style="min-height: 1px; min-width: 1px"
+                data-action-type="auth"
+                data-action-method="signup"
+                data-on-success-redirect="/espace/arrivee"
+                novalidate=""
+                method="post"
+              >
+                <div data-field="email">
+                  <label class="flex w-full flex-col gap-1"
+                    ><span
+                      class="text-foreground text-sm leading-[19px] font-medium"
+                      >Adresse email</span
+                    ><input
+                      id="signup-email-email-error-control"
+                      type="email"
+                      data-component-type="input"
+                      autocomplete="email"
+                      aria-invalid="false"
+                      aria-required="true"
+                      aria-describedby="signup-email-email-error"
+                      class="h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40"
+                      placeholder="toi@exemple.fr"
+                      name="email"
+                  /></label>
+                  <div id="signup-email-email-error" hidden=""></div>
+                </div>
+                <div data-field="password">
+                  <label class="flex w-full flex-col gap-1"
+                    ><span
+                      class="text-foreground text-sm leading-[19px] font-medium"
+                      >Mot de passe</span
+                    ><input
+                      id="signup-email-password-error-control"
+                      type="password"
+                      data-component-type="input"
+                      autocomplete="new-password"
+                      aria-invalid="false"
+                      aria-required="true"
+                      aria-describedby="signup-email-password-error-rule signup-email-password-error"
+                      class="h-8 w-full min-w-0 rounded-lg border border-input bg-transparent px-2.5 py-1 text-base transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40"
+                      name="password" /></label
+                  ><small
+                    id="signup-email-password-error-rule"
+                    class="text-muted-foreground text-xs"
+                    >Au moins 8 caractères</small
+                  >
+                  <div id="signup-email-password-error" hidden=""></div>
+                </div>
+                <div data-error-summary="" hidden=""></div>
+                <div data-error="" hidden=""></div>
+                <button
+                  type="submit"
+                  disabled=""
+                  data-component-type="button"
+                  class="group/button inline-flex shrink-0 items-center justify-center border bg-clip-padding font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 rounded-lg text-sm [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 w-full"
+                >
+                  Créer mon compte
+                </button>
+              </form>
+            </div>
+            <div
+              class="flex flex-wrap gap-1 border-t border-mauve-lighter pt-4 text-sm text-bleu-fonce"
+              data-testid="child-2"
+              data-component-type="container"
+              role="group"
+            >
+              <span data-testid="child-0" data-component-type="text"
+                >Déjà un compte ?</span
+              ><a
+                href="connexion.html"
+                class="focus-visible:outline-none focus-visible:underline focus-visible:decoration-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 transition-colors duration-150 font-bold text-bleu-fonce underline decoration-orange decoration-2 underline-offset-4 hover:text-mauve"
+                data-testid="child-1"
+                data-component-type="link"
+                >Me connecter</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type="application/json" data-command-palette-config="true">
+        {
+          "tables": [
+            {
+              "name": "facilitators",
+              "label": "facilitators",
+              "labelPlural": "facilitators",
+              "fields": [
+                { "name": "display_name", "label": "Nom affiché" },
+                { "name": "short_name", "label": "Prénom" }
+              ]
+            },
+            {
+              "name": "venues",
+              "label": "venues",
+              "labelPlural": "venues",
+              "fields": [
+                { "name": "name", "label": "Nom du lieu" },
+                { "name": "zip_code", "label": "Code postal" },
+                { "name": "city", "label": "Ville" },
+                { "name": "country", "label": "Pays" }
+              ]
+            },
+            {
+              "name": "workshops",
+              "label": "workshops",
+              "labelPlural": "workshops",
+              "fields": [
+                { "name": "slug", "label": "Slug" },
+                { "name": "date_label", "label": "Date (texte)" },
+                { "name": "time_label", "label": "Heure (texte)" },
+                { "name": "booking_url", "label": "Lien de réservation" }
+              ]
+            },
+            {
+              "name": "ressources",
+              "label": "ressources",
+              "labelPlural": "ressources",
+              "fields": [
+                { "name": "title", "label": "Titre" },
+                { "name": "author", "label": "Auteur·ice / éditeur" },
+                { "name": "url", "label": "Lien" },
+                { "name": "note", "label": "Pourquoi c'est utile" }
+              ]
+            }
+          ],
+          "pages": [
+            {
+              "name": "home",
+              "path": "/",
+              "title": "Merci pour ton non - Consentement à Strasbourg"
+            },
+            {
+              "name": "notre-mission",
+              "path": "/notre-mission",
+              "title": "Notre mission et l'équipe - Merci pour ton non"
+            },
+            {
+              "name": "nos-ateliers",
+              "path": "/nos-ateliers",
+              "title": "Atelier de consentement à Strasbourg - Merci pour ton non"
+            },
+            {
+              "name": "nos-stands",
+              "path": "/nos-stands",
+              "title": "Nos stands de sensibilisation - Merci pour ton non"
+            },
+            {
+              "name": "nos-interventions",
+              "path": "/nos-interventions",
+              "title": "Interventions pour les structures - Merci pour ton non"
+            },
+            {
+              "name": "mentions-legales",
+              "path": "/mentions-legales",
+              "title": "Mentions légales - Merci pour ton non"
+            },
+            {
+              "name": "newsletter",
+              "path": "/newsletter",
+              "title": "Newsletter - Merci pour ton non"
+            },
+            {
+              "name": "le-consentement",
+              "path": "/le-consentement",
+              "title": "Notre vision du consentement - Merci pour ton non"
+            },
+            {
+              "name": "ressources",
+              "path": "/ressources",
+              "title": "Ressources sur le consentement - Merci pour ton non"
+            },
+            {
+              "name": "devenir-benevole",
+              "path": "/devenir-benevole",
+              "title": "Devenir bénévole - Merci pour ton non"
+            },
+            {
+              "name": "vos-idees",
+              "path": "/vos-idees",
+              "title": "Vos idées pour l'association - Merci pour ton non"
+            },
+            {
+              "name": "espace-connexion",
+              "path": "/connexion",
+              "title": "Connexion - Espace bénévole"
+            },
+            {
+              "name": "espace-inscription",
+              "path": "/inscription",
+              "title": "Rejoindre l'équipe bénévole - Merci pour ton non"
+            }
+          ],
+          "strings": {
+            "createTitle": "Nouvel enregistrement dans {table}",
+            "create": "Créer",
+            "cancel": "Annuler",
+            "search": "Rechercher",
+            "searchPlaceholder": "Rechercher…",
+            "quickActions": "Actions rapides",
+            "pages": "Pages",
+            "createIn": "Créer un enregistrement dans {table}",
+            "goTo": "Aller à {page}",
+            "toggleDarkMode": "Basculer le mode sombre",
+            "darkModeOn": "Mode sombre activé",
+            "lightModeOn": "Mode clair activé"
+          }
+        }
+      </script>
+      <div
+        data-island-deferred="command"
+        data-component-type="command"
+        data-island-props='{"hints":{"navigate":"naviguer","open":"ouvrir","close":"fermer","title":"Palette de commandes","search":"Rechercher","searchAll":"Rechercher dans toutes vos données","commandPlaceholder":"Saisissez une commande ou recherchez…","commandLabel":"Rechercher des commandes","empty":"Aucun résultat.","startTyping":"Commencez à taper pour rechercher des enregistrements, des réponses, des fichiers, des automatisations et des utilisateurs.","searching":"Recherche en cours…","noResultsFor":"Aucun résultat pour « {query} »"}}'
+        class="hidden"
+      >
+        <span class="sr-only"></span>
+      </div>
+    </main>
+    <script src="assets/scroll-animation-52188b8a.js" defer=""></script>
+    <script>
+      !(function () {
+        function openModal(id) {
+          window.__sovriumOpenModals = window.__sovriumOpenModals || {};
+          window.__sovriumOpenModals[id] = true;
+          var c = document.getElementById(id);
+          if (!c) return;
+          c.style.display = "";
+          var d = c.querySelector('[role="dialog"]');
+          if (d) {
+            d.removeAttribute("hidden");
+            d.setAttribute("aria-hidden", "false");
+            d.focus();
+          }
+        }
+        function closeModal(c) {
+          if (c.querySelector('[data-pending="true"]')) return;
+          c.style.display = "none";
+        }
+        document.addEventListener("click", function (t) {
+          var e = t.target.closest(
+            "[data-click-animation], [data-click-navigate], [data-click-open-url], [data-click-scroll-to], [data-click-toggle-element], [data-click-submit-form], [data-click-modal], [data-modal-close], [data-backdrop]",
+          );
+          if (!e) return;
+          if (e.hasAttribute("data-modal-close")) {
+            var mc = e.closest("[data-modal-container]");
+            if (mc) closeModal(mc);
+            return;
+          }
+          if (e.hasAttribute("data-backdrop") && t.target === e) {
+            var mc2 = e.closest("[data-modal-container]");
+            if (mc2) closeModal(mc2);
+            return;
+          }
+          var n = e.getAttribute("data-click-animation"),
+            a = e.getAttribute("data-click-navigate"),
+            c = e.getAttribute("data-click-open-url"),
+            i = e.getAttribute("data-click-open-in-new-tab") === "true",
+            o = e.getAttribute("data-click-scroll-to"),
+            l = e.getAttribute("data-click-toggle-element"),
+            r = e.getAttribute("data-click-submit-form"),
+            m = e.getAttribute("data-click-modal"),
+            s = c || a,
+            d = !!c;
+          if (m) {
+            openModal(m);
+          } else if (r) {
+            var f = document.querySelector(r),
+              b = f && f.querySelector("[type=submit]");
+            f &&
+              "FORM" === f.tagName &&
+              !(b && b.disabled) &&
+              f.requestSubmit();
+          } else if (l) {
+            var g = document.querySelector(l);
+            if (g) {
+              var h = "none" === window.getComputedStyle(g).display;
+              g.style.display = h ? "" : "none";
+            }
+          } else if (o) {
+            var j = document.querySelector(o);
+            j && j.scrollIntoView({ behavior: "smooth", block: "start" });
+          } else if (n && "none" !== n) {
+            var k = "animate-click-" + n;
+            if ((e.classList.add(k), s)) {
+              var done = !1;
+              var cb = function () {
+                done ||
+                  ((done = !0),
+                  e.classList.remove(k),
+                  d && i
+                    ? window.open(s, "_blank", "noopener,noreferrer")
+                    : (window.location.href = s));
+              };
+              e.addEventListener("animationend", cb, { once: !0 });
+              setTimeout(cb, 300);
+            } else {
+              var cb2 = function () {
+                e.classList.remove(k);
+              };
+              e.addEventListener("animationend", cb2, { once: !0 });
+              setTimeout(cb2, 300);
+            }
+          } else
+            s &&
+              (d && i
+                ? window.open(s, "_blank", "noopener,noreferrer")
+                : (window.location.href = s));
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            var open = document.querySelector(
+              '[data-modal-container]:not([style*="display: none"])',
+            );
+            if (!open) {
+              var all = document.querySelectorAll("[data-modal-container]");
+              for (var i = 0; i < all.length; i++) {
+                if (all[i].style.display !== "none") {
+                  open = all[i];
+                  break;
+                }
+              }
+            }
+            if (open) closeModal(open);
+          }
+        });
+      })();
+      !(function () {
+        function grow(el) {
+          el.style.height = "auto";
+          el.style.height = el.scrollHeight + "px";
+        }
+        var els = document.querySelectorAll("textarea[data-auto-resize]");
+        for (var i = 0; i < els.length; i++) {
+          (function (el) {
+            el.style.overflow = "hidden";
+            el.style.resize = "none";
+            el.addEventListener("input", function () {
+              grow(el);
+            });
+            grow(el);
+          })(els[i]);
+        }
+      })();
+      !(function () {
+        var root = document.documentElement,
+          mq = window.matchMedia("(prefers-color-scheme: dark)"),
+          follow = !1;
+        document.addEventListener("click", function (t) {
+          var e = t.target.closest("[data-theme-toggle], [data-theme-set]");
+          if (!e) return;
+          var v = e.getAttribute("data-theme-set"),
+            dark =
+              v === null
+                ? !root.classList.contains("dark")
+                : v === "system"
+                  ? mq.matches
+                  : v === "dark";
+          root.classList.toggle("dark", dark);
+          try {
+            if (v === "system") {
+              window.localStorage.removeItem("theme");
+              if (!follow) {
+                follow = !0;
+                mq.addEventListener("change", function (m) {
+                  var s = window.localStorage.getItem("theme");
+                  if (s !== "dark" && s !== "light")
+                    root.classList.toggle("dark", m.matches);
+                });
+              }
+            } else {
+              window.localStorage.setItem("theme", dark ? "dark" : "light");
+            }
+          } catch (err) {}
+        });
+      })();
+      !(function () {
+        document.addEventListener("click", function (t) {
+          var b = t.target.closest("[data-copy-code]");
+          if (!b) return;
+          var s = b.closest("[data-code-copy-scope]");
+          if (!s) return;
+          var p =
+            s.querySelector("[data-copy-target]") ||
+            s.querySelector("[data-code-command]") ||
+            s.querySelector("pre:not([data-code-output])");
+          if (!p) return;
+          var c = p.querySelector("code") || p;
+          var text = c.textContent || "";
+          if (!text) return;
+          var st = s.querySelector("[data-copy-status]");
+          var done = function () {
+            var copied = b.getAttribute("data-copied-label") || "Copied";
+            b.setAttribute("data-copied", "true");
+            if (st) st.textContent = copied;
+            setTimeout(function () {
+              b.removeAttribute("data-copied");
+              if (st) st.textContent = "";
+            }, 2000);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard
+              .writeText(text)
+              .then(done)
+              .catch(function () {});
+          } else {
+            try {
+              var ta = document.createElement("textarea");
+              ta.value = text;
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand("copy");
+              document.body.removeChild(ta);
+              done();
+            } catch (err) {}
+          }
+        });
+      })();
+      !(function () {
+        document.addEventListener("click", function (t) {
+          var b = t.target.closest("[data-marquee-pause]");
+          if (!b) return;
+          var m = b.closest("[data-marquee]");
+          if (!m) return;
+          if (m.getAttribute("data-marquee-paused") === "true") {
+            m.removeAttribute("data-marquee-paused");
+            b.textContent =
+              b.getAttribute("data-marquee-pause-label") || "Pause";
+          } else {
+            m.setAttribute("data-marquee-paused", "true");
+            b.textContent =
+              b.getAttribute("data-marquee-resume-label") || "Resume";
+          }
+        });
+      })();
+      !(function () {
+        var takeCarriedToast = function (n = Date.now()) {
+          var t = function (k) {
+            var m = k.message,
+              v = k.variant,
+              d = k.duration,
+              a = k.at;
+            if (
+              !(typeof a === "number" && n >= a && n - a <= 60000) ||
+              typeof m !== "string" ||
+              m === ""
+            )
+              return;
+            return {
+              message: m,
+              variant:
+                [
+                  "default",
+                  "success",
+                  "info",
+                  "warning",
+                  "error",
+                  "destructive",
+                ].indexOf(v) !== -1
+                  ? v
+                  : void 0,
+              duration:
+                typeof d === "number" && isFinite(d) && d > 0 ? d : void 0,
+            };
+          };
+          try {
+            var s = sessionStorage,
+              r = s.getItem("sovrium:flash-toast");
+            if (r === null) return;
+            s.removeItem("sovrium:flash-toast");
+            return t(JSON.parse(r));
+          } catch (e) {}
+        };
+        function raiseCarriedToast() {
+          var TOAST_DEFAULT_DURATION_MS = 5000;
+          var TOAST_PERSISTENT_VARIANTS = ["error", "destructive"];
+          var TOAST_ASSERTIVE_VARIANTS = ["error", "destructive"];
+          var TOAST_DISMISS_LABEL_FALLBACK = "Dismiss";
+          function resolveToastDismissal(duration, variant) {
+            if (typeof duration === "number" && duration > 0) return duration;
+            if (variant && TOAST_PERSISTENT_VARIANTS.indexOf(variant) !== -1)
+              return null;
+            return TOAST_DEFAULT_DURATION_MS;
+          }
+          function ensureToastContainer() {
+            var existing = document.querySelector("[data-sonner-toaster]");
+            if (existing) return existing;
+            var container = document.createElement("div");
+            container.setAttribute("data-sonner-toaster", "");
+            container.setAttribute("data-toast-container", "");
+            container.style.position = "fixed";
+            container.style.right = "16px";
+            container.style.zIndex = "9999";
+            container.style.display = "flex";
+            container.style.flexDirection = "column";
+            container.style.gap = "8px";
+            document.body.appendChild(container);
+            return container;
+          }
+          function installToastEscapeDismiss() {
+            if (document.body.hasAttribute("data-toast-escape-bound")) return;
+            document.body.setAttribute("data-toast-escape-bound", "true");
+            document.addEventListener("keydown", function (event) {
+              if (event.key !== "Escape") return;
+              var toasts = document.querySelectorAll("[data-toast]");
+              var target = null;
+              for (var i = 0; i < toasts.length; i++) {
+                if (toasts[i].querySelector("[data-toast-dismiss]"))
+                  target = toasts[i];
+              }
+              if (target) target.remove();
+            });
+          }
+          function appendToastDismissControl(toast, container) {
+            var declared = container.getAttribute("data-dismiss-label");
+            var label =
+              declared && declared.trim() !== ""
+                ? declared
+                : TOAST_DISMISS_LABEL_FALLBACK;
+            var button = document.createElement("button");
+            button.setAttribute("type", "button");
+            button.setAttribute("data-toast-dismiss", "");
+            button.setAttribute("aria-label", label);
+            button.textContent = "\u00d7";
+            button.addEventListener("click", function () {
+              toast.remove();
+            });
+            toast.appendChild(button);
+            installToastEscapeDismiss();
+          }
+          function showToast(message, variant, duration) {
+            if (!message) return;
+            var container = ensureToastContainer();
+            var toast = document.createElement("div");
+            toast.setAttribute("data-toast", "");
+            if (variant) toast.setAttribute("data-variant", variant);
+            if (variant && TOAST_ASSERTIVE_VARIANTS.indexOf(variant) !== -1) {
+              toast.setAttribute("role", "alert");
+            } else {
+              toast.setAttribute("role", "status");
+              toast.setAttribute("aria-live", "polite");
+            }
+            var messageSpan = document.createElement("span");
+            messageSpan.setAttribute("data-toast-message", "");
+            messageSpan.textContent = message;
+            toast.appendChild(messageSpan);
+            var dismissAfter = resolveToastDismissal(duration, variant);
+            if (dismissAfter === null) {
+              appendToastDismissControl(toast, container);
+              container.appendChild(toast);
+              return;
+            }
+            container.appendChild(toast);
+            setTimeout(function () {
+              toast.remove();
+            }, dismissAfter);
+          }
+          var carried = takeCarriedToast();
+          if (carried)
+            showToast(carried.message, carried.variant, carried.duration);
+        }
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", raiseCarriedToast);
+        } else {
+          raiseCarriedToast();
+        }
+      })();
+    </script>
+    <script
+      type="module"
+      src="assets/client-985286d3.js"
+      data-sovrium-runtime="core"
+    ></script>
+    </body>
+</html>
