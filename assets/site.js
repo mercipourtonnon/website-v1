@@ -10,7 +10,9 @@
   // hero's "Prochaine session le …" line only; the #events section lists each
   // workshop explicitly with its own HelloAsso registration link.
   var workshopDates = [
-    new Date('2026-07-16T18:30:00')
+    new Date('2026-11-28T14:00:00'),
+    new Date('2026-12-12T14:00:00'),
+    new Date('2026-12-17T18:30:00')
   ];
 
   function getNextWorkshop() {
